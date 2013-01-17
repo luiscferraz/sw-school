@@ -69,6 +69,11 @@ td, th {
 	border-right: 1px solid #C1DAD7;
 	border-bottom: 1px solid #C1DAD7;
 	border-top: 1px solid #C1DAD7;
+
+}
+tr{
+	vertical-align: middle;
+	text-align: center;
 }
 
 div{
@@ -87,7 +92,7 @@ th {
 	sans-serif;
 	color: black;
 	text-transform: uppercase;
-	text-align: left;
+	text-align: center;
 	padding: 6px 6px 6px 12px;
 	background: #CAE8EA;
 }
@@ -171,6 +176,9 @@ p span {
 .tabela-vazia{
 	margin-right: 22px;
 	margin-left: 5px;
+}
+.cpf{
+	width: 150px;
 }
 
 
@@ -350,6 +358,9 @@ p span {
 
 #consultantImg{
 	margin-bottom: -20px;
+}
+#link{
+	text-decoration: none;
 }
 
 /* =======================
@@ -536,6 +547,7 @@ p {
 }
 
 #tableProject{
+	text-align: center;
 	width: 100%;
 }
 
