@@ -56,7 +56,7 @@ class AppController extends Controller {
     );
 
     function beforeFilter() {
-        
+
     }
 	
 }
