@@ -8,7 +8,7 @@
  
  class Consultant extends AppModel{
  	public $name = 'Consultant';
- 	var $hasOne = array('Address');
+ 	var $hasOne = array('Address', 'User');
  	public $validate = array(
     'cpf' => array(
         'rule'    => 'isUnique',
