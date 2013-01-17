@@ -14,13 +14,7 @@ class User extends AppModel {
                 'message' => 'A password is required'
             )
         ),
-        'role' => array(
-            'valid' => array(
-                'rule' => array('inList', array('adm', 'cons')),
-                'message' => 'Please enter a valid role',
-                'allowEmpty' => false
-            )
-        )
+
     );
 	
 	public function beforeSave($options = array()) {
