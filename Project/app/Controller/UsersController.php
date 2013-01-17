@@ -23,7 +23,6 @@ class UsersController extends AppController {
     public function add() {
         if ($this->request->is('post')) {
             $this->User->create();
-			$this->Session->setFlash($this->request->data['User']['type']);
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved'));
                 $this->redirect(array('action' => 'index'));
@@ -69,6 +68,8 @@ class UsersController extends AppController {
 
 
 	public function login() {
+		$this -> layout = 'login';
+	
 		if ($this->Auth->login()) {
 			$this->redirect($this->Auth->redirect());
 		} else {
