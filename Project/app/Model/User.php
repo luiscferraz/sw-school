@@ -13,7 +13,7 @@ class User extends AppModel {
                 'rule' => array('notEmpty'),
                 'message' => 'A password is required'
             )
-
+		),
         
     );
 	
