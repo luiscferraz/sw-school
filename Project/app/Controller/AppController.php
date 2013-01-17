@@ -46,4 +46,17 @@ class AppController extends Controller {
 	public function flashInfo($msg){
 		return '<div class="info flash">'.$msg.'</div>';
 	}
+	
+	public $components = array(
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'home', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+        )
+    );
+
+    function beforeFilter() {
+        $this->Auth->allow('index', 'view');
+    }
+	
 }
