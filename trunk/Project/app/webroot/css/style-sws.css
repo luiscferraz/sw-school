@@ -34,12 +34,12 @@ body {
 
 h1 {
 	clear:both;
-    color: #008B8B; 
+    color: #5F9EA0; 
 	padding-top: 14px;
     padding-bottom: 10px;
 	margin-bottom: 40px;
 	margin-left: 2px;
-	border-bottom:3px solid #008B8B;
+	border-bottom:3px solid #5F9EA0;
 }
 
 body {
@@ -54,7 +54,7 @@ table {
 	margin-right: 22px;
 	margin-top: -10px;
 	padding: 2px;
-	background-color: #008B8B;
+	background-color: #5F9EA0;
 	border-radius: 8px 8px 8px 8px;
 }
 
@@ -78,7 +78,7 @@ div{
 td {
 	font-size:12px;
 	color: #ffffff;
-	background-color: #008B8B;
+	background-color: #5F9EA0; 
 	padding: 2px 2px 6px 12px;
 }
 
@@ -359,7 +359,7 @@ p span {
 ==========================*/
 
 .tituloCompanyView{
-	color: #008B8B; 
+	color: #5F9EA0;
 }
 
 
@@ -517,12 +517,22 @@ p {
 
 
 .sigla{
-	width: 180px;
+	width: 70px;
+	height: 10px;
+}
+
+.horas{
+	width: 50px;
+}
+
+.empresa{
+	width: 100px;
 }
 
 #actionsProject{
-	padding-left: 50px;
-	padding-top: 8px;
+	width: 60px;
+	padding-left: 40px;
+	height: 10px;
 }
 
 #tableProject{
@@ -580,8 +590,8 @@ p {
 	position: absolute
 }
 
-#titulodados, #tituloendereco{
-	color: #008B8B;
+#titulodados, #titulohoras, #tituloendereco{
+	color: #5F9EA0; 
 	text-align: center;
 }
 
@@ -640,19 +650,25 @@ p {
 }
 
 #dadosProjetoView{
-	padding-left: 20px;
+	padding-bottom: 20px;
 	float: left;
 	border-width: 30px;
-	width: 600px;
+	width: 400px;
 	border: 30px;
-	border-color: #bcdae0;
 	background-color: #bcdae0;
 	margin-left: -40px;
 }
 
-.legenda{
-	color: #008B8B;
+#horasProjetoView{
+	padding-bottom: 85px;
+	float: right;
+	border-width: 30px;
+	width: 400px;
+	border: 30px;
+	background-color: #bcdae0;
+	margin-right: 170px;
 }
+
 
 
 #state{
