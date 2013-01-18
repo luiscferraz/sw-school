@@ -238,11 +238,11 @@ DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`projects_consultants`
+-- Table `swsdb`.`project_consultants`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `swsdb`.`projects_consultants`;
+DROP TABLE IF EXISTS `swsdb`.`project_consultants`;
 
-CREATE  TABLE IF NOT EXISTS `swsdb`.`projects_consultants` (
+CREATE  TABLE IF NOT EXISTS `swsdb`.`project_consultants` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `project_id` INT NOT NULL ,
   `consultant_id` INT NOT NULL ,
@@ -251,14 +251,14 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`projects_consultants` (
   `value_hour_c` DECIMAL(16, 2) NULL ,
   `value_hour_group` DECIMAL(16, 2) NULL ,
   PRIMARY KEY (`id`) ,
-  INDEX `fk_projects_consultants_projects` (`project_id` ASC) ,
-  INDEX `fk_projects_consultants_consultants` (`consultant_id` ASC) ,
-  CONSTRAINT `fk_projects_consultants_consultants`
+  INDEX `fk_project_consultants_projects` (`project_id` ASC) ,
+  INDEX `fk_project_consultants_consultants` (`consultant_id` ASC) ,
+  CONSTRAINT `fk_project_consultants_consultants`
     FOREIGN KEY (`consultant_id`)
     REFERENCES `swsdb`.`consultants` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_projects_consultants_projects`
+  CONSTRAINT `fk_project_consultants_projects`
     FOREIGN KEY (`project_id`)
     REFERENCES `swsdb`.`projects` (`id`)
     ON DELETE NO ACTION
