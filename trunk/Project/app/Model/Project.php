@@ -14,6 +14,7 @@
 	         'conditions' => array(),         
 	         'dependent' => true
 		));
+	var $hasMany = array('Consultant', 'ProjectConsultant');
 	
  }
 ?>

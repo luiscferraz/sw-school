@@ -9,6 +9,7 @@
  class Consultant extends AppModel{
  	public $name = 'Consultant';
  	var $hasOne = array('Address', 'User');
+	var $belongsTo = array('Project');
  	public $validate = array(
     'cpf' => array(
         'rule'    => 'isUnique',
