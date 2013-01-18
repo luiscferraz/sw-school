@@ -569,6 +569,72 @@ p {
 	padding-left: 35px;
 }
 
+/*=====Abas=======*/
+.TabControl{ 
+    padding-left: 20px;
+	float: left;
+	border-width: 30px;
+	width: 46%;
+	margin-left: 0px;
+	padding-bottom: 30px;
+    overflow:hidden;
+    height:500px;
+}
+.TabControl #header{  
+    overflow:hidden; 
+    cursor:hand;
+}
+.TabControl #content{ 
+    
+    overflow:hidden; 
+     
+}
+.TabControl .abas{
+    display:inline;
+}
+.TabControl .abas li{
+	list-style-type:none;
+    float:left;
+}
+.aba{
+    width:100px; 
+    height:30px;
+    background-color: #5f999b; 
+    border:solid 1px; 
+    border-radius:5px 5px 0 0; 
+    text-align:center; 
+    padding-top:5px; 
+
+}
+
+.ativa{
+
+    border:solid 1px; 
+    border-radius:5px 5px 0 0; 
+    text-align:center; 
+    padding-top:5px; 
+ 
+}
+.ativa span, .selected span{
+    color:#fff;
+}
+.TabControl #content{
+	border-top: 10px;
+	background-color: #bcdae0;
+}
+.TabControl .conteudo{
+ 	width: 92%; 
+    display:none;
+    background-color: #bcdae0; 
+}
+.selected{
+
+    border:solid 1px; 
+    border-radius:5px 5px 0 0; 
+    text-align:center; 
+    padding-top:5px; 
+}
+
 
 /*========View=========*/
 .icon-action{
