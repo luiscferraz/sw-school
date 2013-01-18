@@ -31,6 +31,22 @@ DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
 
 -- -----------------------------------------------------
+-- Table `swsdb`.`users`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `swsdb`.`users` ;
+
+CREATE  TABLE IF NOT EXISTS `swsdb`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `username` VARCHAR(20) NOT NULL ,
+  `password` VARCHAR(40) NOT NULL ,
+  `type` ENUM('cons', 'adm') NOT NULL ,
+  `consultant_id` INT NULL ,
+  PRIMARY KEY (`id`, `username`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+-- -----------------------------------------------------
 -- Table `swsdb`.`companies`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `swsdb`.`companies` ;
@@ -215,6 +231,36 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants_has_activities` (
   CONSTRAINT `fk_consultants_has_activities_activities`
     FOREIGN KEY (`activity_id`)
     REFERENCES `swsdb`.`activities` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+-- -----------------------------------------------------
+-- Table `swsdb`.`projects_consultants`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `swsdb`.`projects_consultants`;
+
+CREATE  TABLE IF NOT EXISTS `swsdb`.`projects_consultants` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `project_id` INT NOT NULL ,
+  `consultant_id` INT NOT NULL ,
+  `value_hour_a` DECIMAL(16, 2) NULL ,
+  `value_hour_b` DECIMAL(16, 2) NULL ,
+  `value_hour_c` DECIMAL(16, 2) NULL ,
+  `value_hour_group` DECIMAL(16, 2) NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_projects_consultants_projects` (`project_id` ASC) ,
+  INDEX `fk_projects_consultants_consultants` (`consultant_id` ASC) ,
+  CONSTRAINT `fk_projects_consultants_consultants`
+    FOREIGN KEY (`consultant_id`)
+    REFERENCES `swsdb`.`consultants` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_projects_consultants_projects`
+    FOREIGN KEY (`project_id`)
+    REFERENCES `swsdb`.`projects` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
