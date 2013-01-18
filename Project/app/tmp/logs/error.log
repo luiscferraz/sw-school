@@ -2001,3 +2001,17 @@
 2013-01-15 21:49:09 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-18 00:54:50 Error: Fatal Error (4): syntax error, unexpected ''options'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\site\sws\sw-project\Project\app\View\Consultants\add.ctp, line 37]
+2013-01-18 00:54:50 Error: [FatalErrorException] syntax error, unexpected ''options'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\site\sws\sw-project\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\site\sws\sw-...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\site\sws\sw-...', 37, Array)
+#2 C:\site\sws\sw-project\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\site\sws\sw-...', 37, Array)
+#3 C:\site\sws\sw-project\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-18 00:54:50 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 00:54:50 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

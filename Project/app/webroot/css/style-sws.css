@@ -349,7 +349,6 @@ p span {
 }
 
 
-
 /*========View=========*/
 
 .consultantindex{
@@ -593,6 +592,27 @@ p {
 	margin-top: 20px;
 	width: 380px;
 	margin-left: 140px;
+}
+
+#usuario{
+	background: #bcdae0;
+	border: none;
+	width: 468px;
+}
+
+#tipousuario{
+	height: 25px;
+	width: 200px;
+}
+
+#campo_usuario{
+	width: 196px;
+	height: 20px;
+}
+
+#senha{
+	width: 208px;
+	height: 20px;
 }
 
 #consultant{
