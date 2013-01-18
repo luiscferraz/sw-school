@@ -119,5 +119,9 @@
 			return false;
 		}
 	}
+	public function AjaxListConsultant(){
+		$name = $this->Project->Consultant->findAll();
+		return $name['Consultant'];
+	}
  }
 ?>
