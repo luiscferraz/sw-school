@@ -30,11 +30,12 @@
 
 <fieldset id='usuario'>
         			<legend>Usuário</legend>
-        			<?php echo $this->Form->input('User.username',array('label' => 'Usuário: ', 'id' => 'campo_usuario')); ?>
+					<?php echo $this->Form->input('User.id', array('type' => 'hidden')); ?>
+        			<?php echo $this->Form->input('User.username',array('label' => 'Usuário: ', 'id' => 'campo_usuario','required'=>'required')); ?>
         			<p></p>
-        			<?php echo $this->Form->input('User.password', array('label' => 'Senha: ', 'id' => 'senha')); ?>
+        			<?php echo $this->Form->input('User.password', array('label' => 'Senha: ', 'id' => 'senha','required'=>'required')); ?>
         			<p></p>
-        			<?php echo $this->Form->input('User.type', array('label' => 'Usuário: ', 'id' => 'tipousuario',
+        			<?php echo $this->Form->input('User.type', array('label' => 'Usuário: ','required'=>'required', 'empty' => 'Selecione', 'id' => 'tipousuario',
             		'options' => array('adm' => 'Admin', 'cons' => 'Consultor'))); ?>
  
     </fieldset>
