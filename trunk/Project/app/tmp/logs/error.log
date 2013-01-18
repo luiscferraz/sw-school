@@ -2015,3 +2015,71 @@
 2013-01-18 00:54:50 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-18 21:21:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 22:19:06 Error: Fatal Error (4): syntax error, unexpected ''required'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\site\sws\sw-project\Project\app\View\Projects\add.ctp, line 48]
+2013-01-18 22:19:06 Error: [FatalErrorException] syntax error, unexpected ''required'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\site\sws\sw-project\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\site\sws\sw-...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\site\sws\sw-...', 48, Array)
+#2 C:\site\sws\sw-project\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\site\sws\sw-...', 48, Array)
+#3 C:\site\sws\sw-project\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-18 22:19:07 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 22:19:07 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 22:38:04 Error: [MissingTableException] Table project_consultants for model ProjectConsultant was not found in datasource default.
+#0 C:\site\sws\sw-project\Project\lib\Cake\Model\Model.php(3186): Model->setSource('project_consult...')
+#1 C:\site\sws\sw-project\Project\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\site\sws\sw-project\Project\lib\Cake\Model\Model.php(2637): DboSource->read(Object(Project), Array)
+#3 C:\site\sws\sw-project\Project\app\Controller\ProjectsController.php(39): Model->find('all')
+#4 [internal function]: ProjectsController->add()
+#5 C:\site\sws\sw-project\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#6 C:\site\sws\sw-project\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#7 C:\site\sws\sw-project\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-01-18 22:38:04 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 22:38:04 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 22:38:11 Error: [MissingTableException] Table project_consultants for model ProjectConsultant was not found in datasource default.
+#0 C:\site\sws\sw-project\Project\lib\Cake\Model\Model.php(3186): Model->setSource('project_consult...')
+#1 C:\site\sws\sw-project\Project\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\site\sws\sw-project\Project\lib\Cake\Model\Model.php(2637): DboSource->read(Object(Project), Array)
+#3 C:\site\sws\sw-project\Project\app\Controller\ProjectsController.php(39): Model->find('all')
+#4 [internal function]: ProjectsController->add()
+#5 C:\site\sws\sw-project\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#6 C:\site\sws\sw-project\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#7 C:\site\sws\sw-project\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-01-18 22:38:11 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 22:38:11 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 22:38:53 Error: [MissingTableException] Table project_consultants for model ProjectConsultant was not found in datasource default.
+#0 C:\site\sws\sw-project\Project\lib\Cake\Model\Model.php(3186): Model->setSource('project_consult...')
+#1 C:\site\sws\sw-project\Project\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\site\sws\sw-project\Project\lib\Cake\Model\Model.php(2637): DboSource->read(Object(Project), Array)
+#3 C:\site\sws\sw-project\Project\app\Controller\ProjectsController.php(39): Model->find('all')
+#4 [internal function]: ProjectsController->add()
+#5 C:\site\sws\sw-project\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#6 C:\site\sws\sw-project\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#7 C:\site\sws\sw-project\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-01-18 22:38:53 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 22:38:53 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -540,7 +540,7 @@ p {
 }
 
 #actionsProject{
-	width: 60px;
+	width: 80px;
 	padding-left: 40px;
 	height: 10px;
 }
@@ -571,7 +571,7 @@ p {
 
 /*=====Abas=======*/
 .TabControl{ 
-    padding-left: 20px;
+    padding-left: 30px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -591,10 +591,12 @@ p {
 }
 .TabControl .abas{
     display:inline;
+    background-color: #bcdae0;
 }
 .TabControl .abas li{
 	list-style-type:none;
     float:left;
+    background-color: #bcdae0;
 }
 .aba{
     width:100px; 
@@ -604,6 +606,7 @@ p {
     border-radius:5px 5px 0 0; 
     text-align:center; 
     padding-top:5px; 
+    background-color: #bcdae0;
 
 }
 
@@ -613,6 +616,7 @@ p {
     border-radius:5px 5px 0 0; 
     text-align:center; 
     padding-top:5px; 
+    background-color: #bcdae0;
  
 }
 .ativa span, .selected span{
@@ -623,9 +627,12 @@ p {
 	background-color: #bcdae0;
 }
 .TabControl .conteudo{
- 	width: 92%; 
+ 	width: 60%; 
     display:none;
     background-color: #bcdae0; 
+    margin-top: -0.5px;
+    margin-left: -472px;
+    padding-bottom: 10px;
 }
 .selected{
 
@@ -735,6 +742,19 @@ p {
 	padding-bottom: 30px;
 }
 
+#Dados_projeto{
+	padding-left: 20px;
+	float: left;
+	border-width: 30px;
+	width: 46%;
+	border: 30px;
+	border-color: #bcdae0;
+	background-color: #bcdae0;
+	margin-left: 0px;
+	padding-bottom: 30px;
+	margin-top: 20px;
+}
+
 #horas{
 	padding-left: 20px;
 	float: left;
@@ -787,3 +807,9 @@ p {
 #horas{
 	padding-bottom: 
 }
+
+#gerente{
+	height: 25px;
+	width: 235px;
+}
+
