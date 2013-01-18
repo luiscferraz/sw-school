@@ -38,7 +38,6 @@
     <div id="content">
         <div class="conteudo">
             <fieldset id="Dados_projeto">
-                <legend>Dados do Projeto</legend>
                     <form>
                         <label for="nome">Nome:</label><br>
                         <input name="nome" type="text" maxlength='45' required><br>
@@ -51,8 +50,8 @@
 
                         <label for="horas_grupo">Horas Grupo:</label><br>
                         <input name="horas_grupo" type="text"><br>
-                        <div class="submit"><input type="submit" value="Confirmar Cadastro">
-                        </div>
+                        <p></p>
+                        <input id="gerente" type="submit" value="Gerente de projeto">
                         
                     </form>
             </fieldset>
@@ -60,7 +59,6 @@
         </div>
         <div class="conteudo">
             <fieldset id="Dados_projeto">
-                <legend>Dados do Projeto</legend>
                     <form>
                         <label for="nome">Nome:</label><br>
                         <input name="nome" type="text" maxlength='45' required><br>
@@ -81,7 +79,6 @@
 
                         <label for="empresa">Empresa:</label><br>
                         <input name="empresa" type="text"><br>
-                       
                         
                     </form>
             </fieldset>

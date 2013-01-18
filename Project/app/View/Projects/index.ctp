@@ -33,6 +33,9 @@
 			<td>
 				<div id="actionsProject">
 					<?php echo $this->Html->link(
+					$this->Html->image("consultor.png", array('alt' => 'Consultor_projeto')), array('action' => '', $project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
+
+					<?php echo $this->Html->link(
 					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
 
 					<?php echo $this->Html->link(
