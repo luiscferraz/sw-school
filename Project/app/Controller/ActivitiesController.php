@@ -17,5 +17,24 @@
 		$name = $this->Activity->Consultant->findAll();
 		return $name['Consultant'];
 	}
- }
+	
+	 public function add(){
+	 	$this->layout = 'base';
+	 	if($this->request->is('post')){
+	 		if($this->Activity->saveAll($this->request->data)){
+	 			$this->Session->setFlash('A atividade foi adicionada com sucesso.');
+          		$this->redirect(array('action' => 'index'));
+	 		}
+	 		else{
+				$this->Session->setFlash($this->flashError('Erro ao cadastrar atividade!'));
+			}				
+	 	}	 	
+		else{			
+			$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
+		}
+	 	
+	 }
+	 
+	 	
+}
 ?>

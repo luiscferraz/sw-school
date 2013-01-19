@@ -2001,6 +2001,49 @@
 2013-01-15 21:49:09 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< .mine
+2013-01-18 00:44:43 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 C:\sw-school\Project\lib\Cake\Model\Model.php(3186): Model->setSource('users')
+#1 C:\sw-school\Project\lib\Cake\Model\Model.php(1305): Model->getDataSource()
+#2 C:\sw-school\Project\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#3 C:\sw-school\Project\lib\Cake\View\Helper\FormHelper.php(443): FormHelper->_introspectModel('User', 'fields')
+#4 C:\sw-school\Project\app\View\Users\login.ctp(3): FormHelper->create('User')
+#5 C:\sw-school\Project\lib\Cake\View\View.php(923): include('C:\sw-school\Pr...')
+#6 C:\sw-school\Project\lib\Cake\View\View.php(886): View->_evaluate('C:\sw-school\Pr...', Array)
+#7 C:\sw-school\Project\lib\Cake\View\View.php(476): View->_render('C:\sw-school\Pr...')
+#8 C:\sw-school\Project\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#9 C:\sw-school\Project\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#10 C:\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-01-18 00:44:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 00:44:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 00:49:21 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 00:49:21 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 01:26:28 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 01:26:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 01:28:35 Error: [MissingControllerException] Controller class CheckoutController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 01:28:35 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 01:28:35 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+=======
 2013-01-18 00:54:50 Error: Fatal Error (4): syntax error, unexpected ''options'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\site\sws\sw-project\Project\app\View\Consultants\add.ctp, line 37]
 2013-01-18 00:54:50 Error: [FatalErrorException] syntax error, unexpected ''options'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
 #0 C:\site\sws\sw-project\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\site\sws\sw-...', 37)
@@ -2015,6 +2058,9 @@
 2013-01-18 00:54:50 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< .mine
+>>>>>>> .r17
+=======
 2013-01-18 21:21:37 Error: [MissingControllerException] Controller class ImgController could not be found.
 #0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
@@ -2082,4 +2128,37 @@
 #1 {main}
 2013-01-18 22:38:53 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\site\sws\sw-project\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+>>>>>>> .r23
+2013-01-19 01:15:16 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Consultant.project_id' in 'on clause'
+#0 C:\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Consult...', Array)
+#2 C:\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Consult...', Array, Array)
+#3 C:\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Consult...', false)
+#4 C:\sw-school\Project\lib\Cake\Model\Model.php(2637): DboSource->read(Object(Consultant), Array)
+#5 C:\sw-school\Project\app\Controller\ConsultantsController.php(19): Model->find('all', Array)
+#6 [internal function]: ConsultantsController->index()
+#7 C:\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConsultantsController), Array)
+#8 C:\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConsultantsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-01-19 01:15:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Consultant.project_id' in 'on clause'
+#0 C:\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Consult...', Array)
+#2 C:\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Consult...', Array, Array)
+#3 C:\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Consult...', false)
+#4 C:\sw-school\Project\lib\Cake\Model\Model.php(2637): DboSource->read(Object(Consultant), Array)
+#5 C:\sw-school\Project\app\Controller\ConsultantsController.php(19): Model->find('all', Array)
+#6 [internal function]: ConsultantsController->index()
+#7 C:\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConsultantsController), Array)
+#8 C:\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConsultantsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-01-19 01:15:18 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-19 01:15:18 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
