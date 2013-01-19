@@ -37,7 +37,7 @@
     </div>
     <div id="content">
         <div class="conteudo">
-            <fieldset id="Dados_projeto">
+            <fieldset id="Dados_projeto_pai">
                     <form>
                         <label for="nome">Nome:</label><br>
                         <input name="nome" type="text" maxlength='45' required><br>
@@ -50,10 +50,13 @@
 
                         <label for="horas_grupo">Horas Grupo:</label><br>
                         <input name="horas_grupo" type="text"><br>
-                        <p></p>
-                        <input id="gerente" type="submit" value="Gerente de projeto">
-                        
+                      </form>
+            </fieldset>
+            <fieldset id="botaoGerente">
+                    <form>
+                       <input id="gerente" type="submit" value="Gerente de projeto"> 
                     </form>
+
             </fieldset>
 
         </div>
@@ -62,29 +65,33 @@
                     <form>
                         <label for="nome">Nome:</label><br>
                         <input name="nome" type="text" maxlength='45' required><br>
+                        
                         <label for="sigla">Sigla:</label><br>
                         <input name="sigla" type="text"><br>
                         
                         <label for="decricao">Descrição:</label><br>
                         <input name="descricao" type="text"><br>
                         
-                        <label for="hora_a">Hora A:</label><br>
-                        <input name="hora_a" type="text"><br>
-                        
-                        <label for="hora_b">Hora B:</label><br>
-                        <input name="hora_b" type="text"><br>
-                        
-                        <label for="hora_c">Hora C:</label><br>
-                        <input name="hora_c" type="text"><br>
-
                         <label for="empresa">Empresa:</label><br>
-                        <input name="empresa" type="text"><br>
-                        
+                        <select id='selectEmpresa' name="empresa"></select>
                     </form>
             </fieldset>
+           	<fieldset id="horas">
+           		<form>
+                    <label for="hora_a">Hora A:</label><br>
+                    <input name="hora_a" type="text"><br>
+                        
+                    <label for="hora_b">Hora B:</label><br>
+                    <input name="hora_b" type="text"><br>
+                        
+                    <label for="hora_c">Hora C:</label><br>
+                    <input name="hora_c" type="text"><br>
+                </form>
+            </fieldset>           
+        
         </div>
     </div>
 </div>
-<div class="submit"><input type="submit" value="Confirmar Cadastro"></div>
+<div id="botaoAddProjeto"><input type="submit" value="Confirmar Cadastro"></div>
 
 		
