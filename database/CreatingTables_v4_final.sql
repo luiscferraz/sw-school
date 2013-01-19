@@ -206,6 +206,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
   `date` DATE NOT NULL ,
   `observations` MEDIUMTEXT NULL ,
   `type` VARCHAR(1) NOT NULL ,
+  `status` ENUM('initiated', 'in progress', 'completed', 'canceled') NOT NULL ,
   `hours_worked` TIME NOT NULL ,
   `project_id` INT NOT NULL ,
   `removed` TINYINT(1) NOT NULL ,
