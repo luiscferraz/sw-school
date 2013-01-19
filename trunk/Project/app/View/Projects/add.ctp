@@ -1,5 +1,23 @@
 
-<script type="text/javascript">
+<?php 
+                        foreach ($projects as $project) 
+                            {
+                                $list_projects[$project['Project']['id']] =$project['Project']['name'];
+                            };
+                    
+                        foreach ($companies as $company) 
+                            {
+                                $list_companies[$company['Company']['id']] =$company['Company']['name'];
+                            };
+                        if (!isset($list_projects)){
+                            $list_projects['none'] = 'Nenhum Projeto Cadastrado';
+                        }
+                        if(!isset($list_companies)){
+                            $list_companies['none'] = 'Nenhuma Empresa Cadastrada';
+                        }
+                    ?>
+
+        <script type="text/javascript">
         $(document).ready(function(){
             $("#content div:nth-child(1)").show();
             $(".abas li:first div").addClass("selected");      
@@ -39,17 +57,12 @@
         <div class="conteudo">
             <fieldset id="Dados_projeto_pai">
                     <form>
-                        <label for="nome">Nome:</label><br>
-                        <input name="nome" type="text" maxlength='45' required><br>
+                        <?php echo $this->Form->input('Project.name', array('label' => 'Nome: ','required'=>'required', 'id'=>'nameProject')); ?>
+                        <?php echo $this->Form->input('Project.description', array('label' => 'Descrição: ', 'id'=>'description')); ?>
+                        <?php echo $this->Form->input('Project.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronymProject')); ?>
+                        <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: ', 'id' => 'parent_project')); ?>
+                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa: ', 'id' => 'company', 'required'=>'required')); ?>
                         
-                        <label for="decricao">Descrição:</label><br>
-                        <input name="descricao" type="text"><br>
-                        
-                        <label for="abreviacao_nome">Abreviação do Nome:</label><br>
-                        <input name="abreviacao_nome" type="text"><br>
-
-                        <label for="horas_grupo">Horas Grupo:</label><br>
-                        <input name="horas_grupo" type="text"><br>
                       </form>
             </fieldset>
             <fieldset id="botaoGerente">
@@ -61,31 +74,26 @@
 
         </div>
         <div class="conteudo">
-            <fieldset id="Dados_projeto">
+            <fieldset id="Dados_projeto_filho">
                     <form>
-                        <label for="nome">Nome:</label><br>
-                        <input name="nome" type="text" maxlength='45' required><br>
-                        
-                        <label for="sigla">Sigla:</label><br>
-                        <input name="sigla" type="text"><br>
-                        
-                        <label for="decricao">Descrição:</label><br>
-                        <input name="descricao" type="text"><br>
-                        
-                        <label for="empresa">Empresa:</label><br>
-                        <select id='selectEmpresa' name="empresa"></select>
+                         <?php echo $this->Form->input('Project.name', array('label' => 'Nome: ','required'=>'required', 'id'=>'nameProject')); ?>
+                        <?php echo $this->Form->input('Project.description', array('label' => 'Descrição: ', 'id'=>'description')); ?>
+                        <?php echo $this->Form->input('Project.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronymProject')); ?>
+                        <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: ', 'id' => 'parent_project')); ?>
+                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa: ', 'id' => 'company', 'required'=>'required')); ?>
                     </form>
             </fieldset>
-           	<fieldset id="horas">
-           		<form>
-                    <label for="hora_a">Hora A:</label><br>
-                    <input name="hora_a" type="text"><br>
+            <fieldset id="horas">
+                <form>
+                 <legend class="legenda">Horas</legend>
+                    <?php echo $this->Form->input('Project.a_hours', array('min'=>"1", 'max'=>"999",'label' => 'Horas A: ','required'=>'required','id'=>'hora_a',)); ?>
                         
-                    <label for="hora_b">Hora B:</label><br>
-                    <input name="hora_b" type="text"><br>
-                        
-                    <label for="hora_c">Hora C:</label><br>
-                    <input name="hora_c" type="text"><br>
+                    <?php echo $this->Form->input('Project.b_hours', array('min'=>"1", 'max'=>"999",'label' => 'Horas B: ', 'id'=>'hora_b')); ?>
+                    
+                    <?php echo $this->Form->input('Project.c_hours', array('min'=>"1", 'max'=>"999",'label' => 'Horas C: ', 'id'=>'hora_c')); ?>
+                    <p> </p>
+                    <p> </p>
+                    <div id="total-de-horas">Total de horas : <p style="color:#000"></p></div>
                 </form>
             </fieldset>           
         
@@ -94,4 +102,3 @@
 </div>
 <div id="botaoAddProjeto"><input type="submit" value="Confirmar Cadastro"></div>
 
-		
