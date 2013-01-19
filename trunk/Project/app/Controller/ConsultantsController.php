@@ -39,7 +39,7 @@
       {
          if($this->Consultant->saveAll($this->request->data))
          {
-           $this->Session->setFlash('O usuário foi adicionado.');
+           $this->Session->setFlash($this->flashSuccess('O usuário foi adicionado.'));
            $this->redirect(array('action' => 'index'));
          } 
       }
@@ -63,7 +63,7 @@
 			$this->Consultant->id = $id;
 			if ($this->Consultant->saveAll($this->request->data)) {
 				
-				$this->Session->setFlash('Consultor foi editado.');
+				$this->Session->setFlash($this->flashSuccess('Consultor foi editado.'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}
@@ -72,7 +72,7 @@
    {
 		$this->Consultant->id = $id;
 		if($this->Consultant->saveField("removed", "true")){
-			$this->Session->setFlash('O consultor foi deletado!');
+			$this->Session->setFlash($this->flashSuccess('O consultor foi deletado!'));
 			$this->redirect(array('action' => 'index'));
 		}
    }

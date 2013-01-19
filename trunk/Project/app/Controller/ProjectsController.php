@@ -120,8 +120,19 @@
 		}
 	}
 	public function AjaxListConsultant(){
-		$name = $this->Project->Consultant->findAll();
-		return $name['Consultant'];
+		$this->layout = 'ajax';
+		$consultants = $this->Project->Consultant->find('all');
+		$this-> set('consultants', $consultants);
+	}
+	public function AjaxListConsultantNome($name){
+		$this->layout = 'ajax';
+		$consultants = $this->Project->Consultant->query("SELECT * FROM consultants WHERE LOWER(name) like LOWER('%" . $name . "%')");
+		$this-> set('consultants', $consultants);
+	}
+	public function AjaxListConsultantCpf($cpf){
+		$this->layout = 'ajax';
+		$consultants = $this->Project->Consultant->query("SELECT * FROM consultants WHERE cpf like '%" . $cpf . "%'");
+		$this-> set('consultants', $consultants);
 	}
  }
 ?>

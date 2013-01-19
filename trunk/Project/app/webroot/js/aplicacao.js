@@ -117,3 +117,30 @@ function SomarHorasProjeto(){
 	 $('#total-de-horas p').html(total);
 };
 
+
+
+//Funções para pesquisa do consultor gerente, na tela de projetos
+function AddGerente(key){
+	$.get("AjaxListConsultant",null,
+			function(data) {   
+				$.fancybox(data);
+		});
+}
+function ListGerenteNome(key){
+	var name =  $(key).val();
+	if (name != '') {
+		$.get("AjaxListConsultantNome/"+name,null,
+				function(data) {   
+					$('#tabela-pesquisa').html(data);
+			});
+	}
+}
+function ListGerenteCPF(key){
+	var cpf =  $(key).val();
+	if (cpf != '') {
+		$.get("AjaxListConsultantCpf/"+cpf,null,
+				function(data) {   
+					$('#tabela-pesquisa').html(data);
+			});
+	}
+}
