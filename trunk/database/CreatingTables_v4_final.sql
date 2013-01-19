@@ -166,12 +166,20 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`projects` (
   `a_hours` INT NULL ,
   `b_hours` INT NULL ,
   `c_hours` INT NULL ,
+  `group_hours` INT NULL ,
+  `consultant_id` INT NOT NULL , 
   `parent_project_id` INT NULL ,
   `company_id` INT NULL ,
   `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`) ,
+  INDEX `fk_projects_consultants` (`consultant_id` ASC) ,
   INDEX `fk_projects_projects` (`parent_project_id` ASC) ,
   INDEX `fk_projects_companies` (`company_id` ASC) ,
+  CONSTRAINT `fk_projects_consultants`
+    FOREIGN KEY (`consultant_id`)
+	REFERENCES `swsdb`.`consultants` (`id`)
+	ON DELETE NO ACTION
+	ON UPDATE CASCADE,
   CONSTRAINT `fk_projects_projects`
     FOREIGN KEY (`parent_project_id`)
     REFERENCES `swsdb`.`projects` (`id`)
