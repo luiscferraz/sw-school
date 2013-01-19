@@ -13,8 +13,7 @@
 	         'fields' => array('id', 'name'),
 	         'conditions' => array(),         
 	         'dependent' => true
-		));
-	var $hasMany = array('Consultant', 'ProjectConsultant');
+		), 'Consultant' );
 	
  }
 ?>
