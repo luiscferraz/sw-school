@@ -28,10 +28,12 @@
 	 		else{
 				$this->Session->setFlash($this->flashError('Erro ao cadastrar atividade!'));
 			}				
+	 	}
+	 	else{
+	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
+		
 	 	}	 	
-		else{			
-			$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
-		}
+		
 	 	
 	 }
 	 
@@ -42,6 +44,37 @@
 			$this->redirect(array('action' => 'index'));
 		}
 	}
+	
+	public function edit($id = NULL){
+		$this->layout = 'base';
+		$this->Activity->id = $id;
+		
+		if (!$id) {
+        	throw new NotFoundException(__('Invalid post'));
+	    }
+	    
+	    $activity = $this->Activity->findById($id);
+	    
+	    if (!$activity) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		
+		if ($this->request->is('get')) {
+			$this->request->data = $this->Activity->read();
+		}
+		else{
+			$this->Activity->id = $id;
+			if ($this->Activity->saveAll($this->request->data)) {
+				
+				$this->Session->setFlash($this->flashSuccess('A atividade foi editada.'));
+				$this->redirect(array('action' => 'index'));
+			}
+		}
+		
+	   
+	}
+	
+	
 	 
 	 	
 }
