@@ -71,9 +71,8 @@
             </fieldset>
             <fieldset id="botaoGerente">
                     
-                       <input id="gerente" type="button" value="Gerente de projeto" onclick='AddGerente();'> 
-                    
-
+            	<label>Gerente de Projeto: </label>
+                <input id="bt-add-gerente" type="button" value="Escolher Gerente de Projeto" onclick='ListGerentes();'> 
             </fieldset>
             <?php echo $this->Form->end('Confirmar Cadastro'); ?>
 

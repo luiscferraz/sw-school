@@ -9,11 +9,13 @@
 	public $name = 'Project';
 	public $belongsTo = array(
 		'Company'=> array(
-			'className' => 'Company',
+			 'className' => 'Company',
 	         'fields' => array('id', 'name'),
 	         'conditions' => array(),         
 	         'dependent' => true
-		), 'Consultant' );
+		), 
+		'Consultant' );
+	public $hasMany = array('ProjectConsultant');
 	
  }
 ?>

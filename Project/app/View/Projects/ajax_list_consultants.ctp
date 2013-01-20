@@ -18,7 +18,7 @@
 				'</td>'.
 				'<td>'.
 				
-					$this->Html->image("test-pass-icon.png", array('alt' => 'Editar','onclick'=>'addConsultorGerente('.$consultant['Consultant']['id'].',"'.$consultant['Consultant']['name'].'")'))
+					$this->Html->image("test-pass-icon.png", array('alt' => 'Editar','onclick'=>'addConsultorAlocado('.$consultant['Consultant']['id'].',"'.$consultant['Consultant']['name'].'")'))
 					.
 				'</td>'.
 			'</tr>';			
