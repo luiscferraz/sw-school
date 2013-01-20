@@ -18,7 +18,7 @@
 		return $name['Consultant'];
 	}
 	
-	 public function add(){
+	public function add(){
 	 	$this->layout = 'base';
 	 	if($this->request->is('post')){
 	 		if($this->Activity->saveAll($this->request->data)){
@@ -34,6 +34,14 @@
 		}
 	 	
 	 }
+	 
+	public function delete($id = NULL){
+		$this->Activity->id = $id;
+		if($this->Activity->saveField("removed", "true")){
+			$this->Session->setFlash('A atividade foi removida com sucesso!');
+			$this->redirect(array('action' => 'index'));
+		}
+	}
 	 
 	 	
 }
