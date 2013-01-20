@@ -97,18 +97,34 @@
         $this ->set('project',$Projects);
  	}
  	
+ 	public function alocados($id=null){
+ 		$this -> layout = 'base';
+ 		$this-> set('consultants',$this->Project->ProjectConsultant->find('all',array('conditions'=> array('project_id =' => $id))));
+ 		$this -> set('nameProject',$this->GetNameProjectFather($id));
+ 		
+ 	}
  	
+ 	
+ 	//retorna em string nome da empresa
  	private function GetNameCompany($id){
  		$name = $this->Project->Company->findById($id);
  		return $name['Company']['name'];
  		
  	}
+ 	
+ 	//Retornar em string nome do projeto pai
  	private function GetNameProjectFather($id){
- 		$name = $this->Project->findById($id);
- 		return $name['Project']['name'];
+ 		if ($this->Project->findById($id)){
+ 			$name = $this->Project->findById($id);
+ 			return $name['Project']['name'];
+ 		}
+ 		else{
+ 			return '';
+ 		}
  		
  	}
  	
+ 	//verificar se existe um projeto cadastrado com a mesmo nome e empresa.
  	private function exist($nome, $idEmpresa){
 		$foundProject = $this->Project->find('first',array('conditions'=> array('Project.name =' => $nome,'Project.company_id =' => $idEmpresa)));
 		if (count($foundProject) == 0){
@@ -119,6 +135,9 @@
 			return false;
 		}
 	}
+	
+	//Funções em para respostas ajax
+	//lista de consultores para ser gerente
 	public function AjaxListConsultant(){
 		$this->layout = 'ajax';
 		$consultants = $this->Project->Consultant->find('all');
@@ -132,6 +151,13 @@
 	public function AjaxListConsultantCpf($cpf){
 		$this->layout = 'ajax';
 		$consultants = $this->Project->Consultant->query("SELECT * FROM consultants WHERE cpf like '%" . $cpf . "%'");
+		$this-> set('consultants', $consultants);
+	}
+	//fim
+	//lista de consultores para ser alocados
+	public function AjaxListConsultants(){
+		$this->layout = 'ajax';
+		$consultants = $this->Project->Consultant->find('all');
 		$this-> set('consultants', $consultants);
 	}
  }

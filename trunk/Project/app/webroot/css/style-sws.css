@@ -127,7 +127,16 @@ p span {
 ==========================*/
 
 
-
+.load {
+	position:absolute;
+	z-index:999999;
+	width: 40px;
+	height: 40px;
+	left:50%;
+	top:50%;
+	margin-left:-20px;
+	margin-top:-20px;
+}
 
 .info, .success, .warning, .error, .validation {
     border: 1px solid;
@@ -870,4 +879,13 @@ p {
 #selectEmpresa{
 	height: 25px;
 	width: 280px;
+}
+
+#bt-alocar-consultor {
+	margin:20px 0px;
+	padding:20px 10px;
+	height:60px;
+	display:block;
+	line-height: 25px;
+	
 }

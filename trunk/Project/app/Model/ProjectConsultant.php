@@ -8,6 +8,7 @@
  
  class ProjectConsultant extends AppModel{
  	public $name = 'ProjectConsultant';
+ 	var $useTable = 'projects_consultants';
 	var $belongsTo = array('Project');
  }
 ?>
