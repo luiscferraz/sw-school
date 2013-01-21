@@ -69,9 +69,18 @@
 				$this->Session->setFlash($this->flashSuccess('A atividade foi editada.'));
 				$this->redirect(array('action' => 'index'));
 			}
-		}
-		
+		}		
 	   
+	}
+	
+	public function view($id){
+
+		$this->Activity->id = $id;
+		$this->layout = 'base';
+		
+	    if ($this->request->is('get')) {
+	        $this->set('activities', $this->Activity->read());
+	    }
 	}
 	
 	
