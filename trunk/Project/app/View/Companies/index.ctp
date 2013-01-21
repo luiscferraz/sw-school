@@ -28,7 +28,7 @@
 
 		<tr <?php echo $class; ?>>
 			<td class="nome"><?php echo $company['Company']['name']; ?></td>
-			<td class="sigla responsive"><?php echo $company['Company']['alphanumeric_code']; ?></td>
+			<td class="sigla responsive"><?php echo $company['Company']['acronym']; ?></td>
 			<td class="cnpj responsive"><?php echo $company['Company']['cnpj']; ?></td>
 			<td class="telefone1 responsive"><?php echo $company['Company']['phone1']; ?></td>
 
