@@ -1,3 +1,18 @@
+$('document').ready(function(){
+	$('.edit').live('click',function(e){
+		//$(this).html(createInput($(this).parent('p').html()));
+		$('.edit p').show();
+		$('.edit textarea').hide();
+		$(this).children('p').hide();
+		$(this).children('textarea').show();
+	});
+})
+
+function createInput(html){
+	html ='<textarea> '+html+' </textarea>'
+	return html;
+}
+
 
 //------------------
 //=====Funções para pesquisa do consultor gerente, na tela de projetos
@@ -53,10 +68,10 @@ function addConsultorGerente(id,name){
 function addConsultorAlocado(id,name){
 	var html = 	'<tr>'+
 				'<td id="nameTableProject">'+name+'</td>'+
-				'<td class=""><input type="text" /></td>'+
-				'<td class=""><input type="text" /></td>'+
-				'<td class=""><input type="text" /></td>'+
-				'<td class=""><input type="text" /></td>'+
+				'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
+				'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
+				'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
+				'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
 				'<td>'+
 					'<div id="actionsProject">'+
 					'<img src="'+limparUrl('img/save.png')+'" alt="Salvar Consultor" title="Salvar Consultor" onclick="deleteGerente()"/>'+

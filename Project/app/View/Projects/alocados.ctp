@@ -24,14 +24,37 @@
 		?>
 
 		<tr>
-			<td id="nameTableProject"><?php echo $consultant['ProjectConsultant']['consultant_id']; ?></td>
-			<td class="sigla"><?php echo $consultant['ProjectConsultant']['value_hour_a']; ?></td>
-			<td class="empresa"><?php echo $consultant['ProjectConsultant']['value_hour_b']; ?></td>
-			<td class="horas"><?php echo $consultant['ProjectConsultant']['value_hour_c'];  ?></td>
-			<td class="horas"><?php echo $consultant['ProjectConsultant']['value_hour_group'];  ?></td>
+			<td id="nameTableProject">
+				<?php echo $this->Form->create('Projects', array('action' => 'alocados')); ?>
+				<?php echo $this->Form->input('ProjectConsultant.id', array('type'=>'hidden')); ?>
+				<?php echo $this->Form->input('ProjectConsultant.consultant_id', array('type'=>'hidden')); ?>
+				<?php echo $this->Form->input('ProjectConsultant.project_id', array('type'=>'hidden')); ?>
+				<?php echo $consultant['ProjectConsultant']['consultant_id']; ?>
+				<?php echo $this->Form->end('Salvar'); ?>
+			</td>
+			<td class="edit">
+				<?php echo $this->Form->input('ProjectConsultant.value_hour_a', array('type'=>'hidden')); ?>
+				<p><?php echo $consultant['ProjectConsultant']['value_hour_a']; ?></p>
+				<textarea style="display:none"><?php echo $consultant['ProjectConsultant']['value_hour_a']; ?></textarea>
+			</td>
+			<td class="edit">
+				<?php echo $this->Form->input('ProjectConsultant.value_hour_b', array('type'=>'hidden')); ?>
+				<p><?php echo $consultant['ProjectConsultant']['value_hour_b']; ?></p>
+				<textarea style="display:none"><?php echo $consultant['ProjectConsultant']['value_hour_b']; ?></textarea>	
+			</td>
+			<td class="edit">
+			<?php echo $this->Form->input('ProjectConsultant.value_hour_c', array('type'=>'hidden')); ?>
+				<p><?php echo $consultant['ProjectConsultant']['value_hour_c'];  ?></p>
+				<textarea style="display:none"><?php echo $consultant['ProjectConsultant']['value_hour_c']; ?></textarea>
+			</td>
+			<td class="edit">
+			<?php echo $this->Form->input('ProjectConsultant.value_hour_group', array('type'=>'hidden')); ?>
+				<p><?php echo $consultant['ProjectConsultant']['value_hour_group'];  ?></p>
+				<textarea style="display:none"><?php echo $consultant['ProjectConsultant']['value_hour_group']; ?></textarea>	
+			</td>
 			<td>
 				<div id="actionsProject">
-					
+					<?php echo $this->Form->end('Salvar'); ?>
 					<?php echo $this->Html->link(
 					$this->Html->image("delete.png", array('alt' => 'Remover','title' => 'Remover Consultor')), array('action' => 'delete', ''),
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do projeto ?");
