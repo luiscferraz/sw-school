@@ -8,7 +8,7 @@ class EntriesController extends AppController{
  	public function index(){
 		$this->set('title_for_layout', 'Entries');
  		$this -> layout = 'index';
- 		$this -> set ('entries', $this-> Pointing->find('all', array('conditions'=> array('Entry.removed !=' => 1)))); 				 
+ 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1)))); 				 
  	}
  	
  	public function add(){
@@ -34,6 +34,44 @@ class EntriesController extends AppController{
 			$this->Session->setFlash('O apontamento foi removido com sucesso!');
 			$this->redirect(array('action' => 'index'));
 		}
+	}
+	
+	public function edit($id = NULL){
+		$this->layout = 'base';
+		$this->Entry->id = $id;
+		
+		if (!$id) {
+        	throw new NotFoundException(__('Invalid post'));
+	    }
+	    
+	    $entry = $this->Entry->findById($id);
+	    
+	    if (!$entry) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		
+		if ($this->request->is('get')) {
+			$this->request->data = $this->Entry->read();
+		}
+		else{
+			$this->Entry->id = $id;
+			if ($this->Entry->saveAll($this->request->data)) {
+				
+				$this->Session->setFlash($this->flashSuccess('O apontamento foi editado.'));
+				$this->redirect(array('action' => 'index'));
+			}
+		}		
+	   
+	}
+	
+	public function view($id){
+
+		$this->Entry->id = $id;
+		$this->layout = 'base';
+		
+	    if ($this->request->is('get')) {
+	        $this->set('entries', $this->Activity->read());
+	    }
 	}	 	
  	
 }
