@@ -5,8 +5,8 @@ class Activity extends AppModel{
 	public $name = 'Activity';
 	public $useTable = 'activities';
 	var $belongsTo = array('Project');   //Várias atividades pertencem a um projeto
-	public $hasMany = array('Pointing'); //Uma atividade pode ter vários apontamentos
-   public $hasAndBelongsToMany = array('Consultant'); //Uma atividade pode ser executada por vários
+	public $hasMany = array('Entry'); //Uma atividade pode ter vários apontamentos
+   	public $hasAndBelongsToMany = array('Consultant'); //Uma atividade pode ser executada por vários
    													  //consultores, e um consultor pode executar
    													  //várias atividades
     

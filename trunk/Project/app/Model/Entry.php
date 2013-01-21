@@ -1,9 +1,9 @@
 <?php
 
-class Pointing extends AppModel{
+class Entry extends AppModel{
 	
-	public $name = 'Pointing';
-	public $useTable = 'pointings';
+	public $name = 'Entry';
+	public $useTable = 'entries';
 	var $belongsTo = array('Activity');   //Vários apontamentos para uma atividade
 
     
