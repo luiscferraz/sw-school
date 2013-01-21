@@ -7,13 +7,10 @@
 */
 
 body {
-	background: url(../img/background.png) fixed 50% no-repeat white;
+	background: url(../img/light_noise_diagonal.png);
 	font-family: Helvetica;
 }
 
-h2 {
-	color: #a6a6a6;
-}
 
 /* NAVIGATION */
 
@@ -43,9 +40,9 @@ nav a.focus {
 
 form {
 	width: 280px;
-	height: 260px;
+	height: 310px;
 	margin: 200px auto 50px;
-	background: white;
+	background: #262626;
 	border-radius: 3px;
 	box-shadow: 0 0 10px rgba(0,0,0, .4); 
 	text-align: center;
