@@ -5,9 +5,9 @@
 	<table cellpadding="0" cellspacing="0">
 		<tr>
 			<th>Nome</th>
-			<th>Sigla</th>
-			<th>CNPJ</th>
-			<th>Telefone</th>
+			<th class="responsive">Sigla</th>
+			<th class="responsive">CNPJ</th>
+			<th class="responsive">Telefone</th>
 			<th class="actions">Ações</th>
 		</tr>
 
@@ -28,9 +28,9 @@
 
 		<tr <?php echo $class; ?>>
 			<td class="nome"><?php echo $company['Company']['name']; ?></td>
-			<td class="sigla"><?php echo $company['Company']['alphanumeric_code']; ?></td>
-			<td class="cnpj"><?php echo $company['Company']['cnpj']; ?></td>
-			<td class="telefone1"><?php echo $company['Company']['phone1']; ?></td>
+			<td class="sigla responsive"><?php echo $company['Company']['alphanumeric_code']; ?></td>
+			<td class="cnpj responsive"><?php echo $company['Company']['cnpj']; ?></td>
+			<td class="telefone1 responsive"><?php echo $company['Company']['phone1']; ?></td>
 
 			<div class="actions">
 				<td>

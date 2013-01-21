@@ -4,11 +4,11 @@
 	<table class="tabela-vazia" cellpadding="0" cellspacing="0">
 		<tr>
 			<th>Nome</th>
-			<th>CPF</th>
-			<th>Email</th>
-			<th>Telefone 1</th>
-			<th>Telefone 2</th>
-			<th>Cor-Sigla</th>
+			<th class="cpf responsive">CPF</th>
+			<th class="email responsive">Email</th>
+			<th class="telefone responsive">Telefone 1</th>
+			<th class="telefone2 responsive">Telefone 2</th>
+			<th class="corsigla responsive">Cor-Sigla</th>
 			<th class="actions">Ações</th>
 		</tr>
 
@@ -29,11 +29,11 @@
 
 		<tr <?php echo $class; ?>>
 			<td class="nome"><?php echo $consul['Consultant']['name']; ?></td>
-			<td class="cpf"><?php echo $consul['Consultant']['cpf']; ?></td>
-			<td class="email"><?php echo $consul['Consultant']['email']; ?></td>
-			<td class="telefone"><?php echo $consul['Consultant']['phone1']; ?></td>
-			<td class="telefone"><?php echo $consul['Consultant']['phone2']; ?>
-			<td class="cor" style="background-color:<?php echo $consul['Consultant']['acronym_color']; ?>"><?php echo $consul['Consultant']['acronym_color']; ?>
+			<td class="cpf responsive"><?php echo $consul['Consultant']['cpf']; ?></td>
+			<td class="email responsive"><?php echo $consul['Consultant']['email']; ?></td>
+			<td class="telefone responsive"><?php echo $consul['Consultant']['phone1']; ?></td>
+			<td class="telefone responsive"><?php echo $consul['Consultant']['phone2']; ?>
+			<td class="cor responsive" style="background-color:<?php echo $consul['Consultant']['acronym_color']; ?>"><?php echo $consul['Consultant']['acronym_color']; ?>
 			<div>
 				<td class="actions">
 					<?php echo $this->Html->link(
