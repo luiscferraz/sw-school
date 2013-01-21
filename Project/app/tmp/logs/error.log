@@ -2335,3 +2335,23 @@
 #1 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-01-21 23:55:27 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`swsdb`.`projects`, CONSTRAINT `fk_projects_consultants` FOREIGN KEY (`consultant_id`) REFERENCES `consultants` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+#0 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `sw...', Array)
+#2 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `sw...')
+#3 C:\site\sws\Project\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Project), Array, Array)
+#4 C:\site\sws\Project\lib\Cake\Model\Model.php(2229): Model->save(Array, Array)
+#5 C:\site\sws\Project\lib\Cake\Model\Model.php(2035): Model->saveAssociated(Array, Array)
+#6 C:\site\sws\Project\app\Controller\ProjectsController.php(27): Model->saveAll(Array)
+#7 [internal function]: ProjectsController->add()
+#8 C:\site\sws\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#9 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-01-21 23:55:27 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-21 23:55:27 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
