@@ -99,8 +99,21 @@
  	
  	public function alocados($id=null){
  		$this -> layout = 'base';
- 		$this-> set('consultants',$this->Project->ProjectConsultant->find('all',array('conditions'=> array('project_id =' => $id))));
- 		$this -> set('nameProject',$this->GetNameProjectFather($id));
+ 		if($this->request->is('post')){
+	 			if($this->Project->saveAll($this->request->data)){
+	 				$this->Session->setFlash($this->flashSuccess('Projeto adicionado com sucesso.'));
+	           		$this->redirect(array('action' => 'index'));
+	 			}
+ 			
+ 		}
+ 		else {
+ 			
+	 		$this-> set('consultants',$this->Project->ProjectConsultant->find('all',array('conditions'=> array('project_id =' => $id))));
+	 		$this -> set('nameProject',$this->GetNameProjectFather($id));
+ 		}	
+ 	}
+ 	
+ 	public function saveProjectConsultant(){
  		
  	}
  	
