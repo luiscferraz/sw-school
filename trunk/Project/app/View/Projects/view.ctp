@@ -21,10 +21,7 @@
 		<h2 id="titulodados"> Dados Projeto </h2>
 		<p><span>Nome: </span> <?php echo $project['Project']['name']; ?></p>
 		<p><span>Descrição: </span><?php echo $project['Project']['description']; ?></p>
-		<p><span>Abreviação: </span><?php echo $project['Project']['acronym']; ?></p>
-		<p><span>Hora A: </span><?php echo $project['Project']['a_hours']; ?> hrs</span></p>
-		<p><span>Hora B: </span><?php echo $project['Project']['b_hours']; ?> hrs</p>
-		<p><span>Hora C: </span><?php echo $project['Project']['c_hours']; ?> hrs</p>
+		<p><span>Abreviação: </span><?php echo $project['Project']['acronym']; ?></p>	
 		<p><span>Projeto Pai: </span><?php echo $nameProjectFather; ?></p>
 		<p><span>Empresa: </span><?php echo $nameCompany; ?>
 		<?php echo $this->Html->link(
@@ -32,4 +29,19 @@
 	
 		</p>
 	</fieldset>
+"
+	<fieldset id="ViewhoraIndiv">
+		<h2 id="titulodados"> Hora Individual </h2>
+		<p><span>Hora A: </span><?php echo $project['Project']['value_hour_a_individual']; ?></span></p>
+		<p><span>Hora B: </span><?php echo $project['Project']['value_hour_b_individual']; ?></p>
+		<p><span>Hora C: </span><?php echo $project['Project']['value_hour_c_individual']; ?></p>
+	</fieldset>
+
+	<fieldset id="ViewhoraGrupo">
+		<h2 id="titulodados"> Hora em grupo </h2>
+		<p><span>Hora A: </span><?php echo $project['Project']['value_hour_a_group']; ?></span></p>
+		<p><span>Hora B: </span><?php echo $project['Project']['value_hour_b_group']; ?></p>
+		<p><span>Hora C: </span><?php echo $project['Project']['value_hour_c_group']; ?></p>
+	</fieldset>
+
 </div>

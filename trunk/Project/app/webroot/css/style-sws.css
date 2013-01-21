@@ -776,16 +776,14 @@ p {
 }
 
 #horasProjetoView{
-	padding-bottom: 85px;
-	float: right;
-	border-width: 30px;
-	width: 400px;
-	border: 30px;
 	background-color: #bcdae0;
-	margin-right: 170px;
+	border-color: #bcdae0;
+	border: 0px;
+	width: 48%;
+	height: 390px;
+	padding-bottom: 32px;
+	float:left;
 }
-
-
 
 #state{
 	width:463px;
@@ -854,7 +852,7 @@ p {
 	float:left;
 }
 
-#horaIndiv,#horaGrupo{
+#horaIndiv,#horaGrupo, #ViewhoraGrupo, #ViewhoraIndiv{
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
