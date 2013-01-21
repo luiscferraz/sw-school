@@ -1,3 +1,12 @@
+<?php 
+    foreach ($projects as $project) {        
+        $list_projects[$project['Project']['id']] =$project['Project']['name'];
+        };                    
+    if (!isset($list_projects)){
+		$list_projects['none'] = 'Nenhum Projeto Cadastrado';
+    }
+?>
+
 <h1>Cadastrar Atividade</h1>
     <div id="content">
         <div class="conteudo">
@@ -14,7 +23,8 @@
                 <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final: ','required'=>'required', 'id'=>'actvEndHour')); ?>
                 <?php echo $this->Form->input('Activity.date', array('type'=>'text','label' => 'Data: ', 'id'=>'actvDate')); ?>
                 <?php echo $this->Form->input('Activity.hours_worked', array('type'=>'text', 'label' => 'Horas Trabalhadas: ','required'=>'required', 'id'=>'actvHourWorked')); ?>
-                <?php echo $this->Form->input('Activity.project_id', array('type'=>'text','label' => 'ID Projeto', 'id'=>'actvID')); ?>
+                <?php echo $this->Form->input('Activity.project_id', array('options' => $list_projects,'empty' => 'Selecione', 'type'=>'select','label' => 'ID Projeto', 'id'=>'actvID')); ?>
+
             </fieldset>
         
             <?php echo $this->Form->end('Confirmar Cadastro'); ?>
