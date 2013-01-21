@@ -28,21 +28,27 @@
                         <?php echo $this->Form->input('Project.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronymProject')); ?>
                         <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: ', 'id' => 'parent_project')); ?>
                         <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa: ', 'id' => 'company', 'required'=>'required')); ?><br>
-                        <input id="bt-add-gerente" type="button" value="Gerente de Projeto" onclick='ListGerentes();'> 
+                        <div id="botaoGerente">
+                    
+                            <label>Gerente de Projeto: </label>
+                            <input id="bt-add-gerente" type="button" value="Escolher Gerente de Projeto" onclick='ListGerentes();'> 
+                        </div>
             </fieldset>
 
             <fieldset id="horaIndiv">
                  <legend class="legenda">Hora Individual</legend>
-                    <?php echo $this->Form->input('Project.a_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora A: ','required'=>'required','id'=>'hora_a',)); ?>
-                    <?php echo $this->Form->input('Project.b_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora B: ', 'id'=>'hora_b')); ?>
-                    <?php echo $this->Form->input('Project.c_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora C: ', 'id'=>'hora_c')); ?>
+                    <?php echo $this->Form->input('Project.a_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora A: ','required'=>'required','id'=>'hora_a', 'onblur'=>'SomarHorasProjeto()')); ?>
+                    <?php echo $this->Form->input('Project.b_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora B: ', 'id'=>'hora_b', 'onblur'=>'SomarHorasProjeto()')); ?>
+                    <?php echo $this->Form->input('Project.c_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora C: ', 'id'=>'hora_c', 'onblur'=>'SomarHorasProjeto()')); ?>
+                     <span id="total-de-horas">Total de horas : <p style="color:#000"></p></span>
             </fieldset>           
 
             <fieldset id="horaGrupo">
                 <legend class="legenda">Hora em grupo</legend>
-                <?php echo $this->Form->input('Project.a_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora A: ','required'=>'required','id'=>'hora_a',)); ?>
-                    <?php echo $this->Form->input('Project.b_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora B: ', 'id'=>'hora_b')); ?>
-                    <?php echo $this->Form->input('Project.c_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora C: ', 'id'=>'hora_c')); ?>
+                    <?php echo $this->Form->input('Project.a_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora A: ','required'=>'required','id'=>'hora_a_group', 'onblur'=>'SomarHorasGrupoProjeto()')); ?>
+                    <?php echo $this->Form->input('Project.b_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora B: ', 'id'=>'hora_b_group', 'onblur'=>'SomarHorasGrupoProjeto()')); ?>
+                    <?php echo $this->Form->input('Project.c_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora C: ', 'id'=>'hora_c_group', 'onblur'=>'SomarHorasGrupoProjeto()')); ?>
+                    <span id="total-de-horas-grupo">Total de horas : <p style="color:#000"></p> </span>
             </fieldset>
             
         	<?php echo $this->Form->end('Confirmar Cadastro'); ?>

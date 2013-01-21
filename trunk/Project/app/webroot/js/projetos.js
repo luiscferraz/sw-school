@@ -58,7 +58,7 @@ function addConsultorGerente(id,name){
 				'<input style="display:none" name="data[Project][consultant_id]" id="consultantProject" value='+id+' maxlength="15" type="text">'+
 				
 				'</div>';
-	$('fieldset#botaoGerente').append(html);
+	$('#botaoGerente').append(html);
 	$('.fancybox-wrap').remove();
 	$('#fancybox-overlay').remove();	
 	$('#bt-add-gerente').hide();
