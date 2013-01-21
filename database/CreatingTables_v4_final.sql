@@ -260,9 +260,10 @@ COLLATE = utf8_general_ci;
 DROP TABLE IF EXISTS `swsdb`.`activities_consultants` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`activities_consultants` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
   `consultant_id` INT NOT NULL ,
   `activity_id` INT NOT NULL ,
-  PRIMARY KEY (`consultant_id`, `activity_id`) ,
+   PRIMARY KEY (`id`),
   INDEX `fk_activities_consultants_consultants` (`consultant_id` ASC) ,
   INDEX `fk_activities_consultants_activities` (`activity_id` ASC) ,
   CONSTRAINT `fk_activities_consultants_consultants`
