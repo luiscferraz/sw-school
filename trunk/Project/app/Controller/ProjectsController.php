@@ -173,5 +173,27 @@
 		$consultants = $this->Project->Consultant->find('all');
 		$this-> set('consultants', $consultants);
 	}
+	public function AjaxAddConsultant($project_id,
+										$consultant_id,
+										$value_hour_a_individual, $value_hour_b_individual, $value_hour_c_individual,
+										$value_hour_a_group, $value_hour_b_group, $value_hour_c_group){
+		$this->layout = 'ajax';
+		$this->Project->ProjectConsultant->query("INSERT INTO project_consultants VALUES ('" . $project_id . "', '" . $consultant_id . "', 
+		'" . $value_hour_a_individual . "', '" . $value_hour_b_individual . "', '" . $value_hour_c_individual . "',
+		'" . $value_hour_a_group . "', '" . $value_hour_b_group . "', '" . $value_hour_c_group . "')");
+		
+	}
+	public function AjaxEditConsultant($id,
+										$project_id,
+										$consultant_id,
+										$value_hour_a_individual, $value_hour_b_individual, $value_hour_c_individual,
+										$value_hour_a_group, $value_hour_b_group, $value_hour_c_group){
+		$this->layout = 'ajax';
+		$this->Project->ProjectConsultant->query("UPDATE project_consultants SET project_id = '" . $project_id . "', consultant_id = '" . $consultant_id . "',
+												value_hour_a_individual = '" . $value_hour_a_individual . "', value_hour_b_individual = '" . $value_hour_b_individual . "',
+												value_hour_c_individual = '" . $value_hour_c_individual . "', value_hour_a_group = '" . $value_hour_a_group . "',
+												value_hour_b_group = '" . $value_hour_b_group . "', value_hour_c_group = '" . $value_hour_c_group . "'
+												WHERE id = '" . $id . "' ");
+	}
  }
 ?>
