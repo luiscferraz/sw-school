@@ -39,7 +39,7 @@
                     <?php echo $this->Form->input('Project.a_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora A: ','required'=>'required','id'=>'hora_a', 'onblur'=>'SomarHorasProjeto()')); ?>
                     <?php echo $this->Form->input('Project.b_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora B: ', 'id'=>'hora_b', 'onblur'=>'SomarHorasProjeto()')); ?>
                     <?php echo $this->Form->input('Project.c_hours', array('min'=>"1", 'max'=>"999",'label' => 'Hora C: ', 'id'=>'hora_c', 'onblur'=>'SomarHorasProjeto()')); ?>
-                     <span id="total-de-horas">Total de horas : <p style="display:inline"></p> </span>
+                     <span id="total-de-horas">Total de horas : <p style= display:inline></p> </span>
             </fieldset>           
 
             <fieldset id="horaGrupo">
