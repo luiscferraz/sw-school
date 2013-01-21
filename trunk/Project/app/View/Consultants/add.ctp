@@ -31,11 +31,9 @@
 						
     			<fieldset id='usuario'>
         			<legend>Usuário</legend>
-        			<?php echo $this->Form->input('User.username',array('label' => 'Usuário: ', 'required'=>'required','id' => 'campo_usuario')); ?>
-        			<p></p>
-        			<?php echo $this->Form->input('User.password', array('label' => 'Senha: ','required'=>'required', 'id' => 'senha')); ?>
-        			<p></p>
-        			<?php echo $this->Form->input('User.type', array('label' => 'Usuário: ', 'empty' => 'Selecione','required'=>'required', 'id' => 'tipousuario',
+        			<?php echo $this->Form->input('User.username',array('label' => 'Nome de usuário: <br>', 'required'=>'required','id' => 'campo_usuario')); ?>
+        			<?php echo $this->Form->input('User.password', array('label' => 'Senha: <br>','required'=>'required', 'id' => 'senha')); ?>
+        			<?php echo $this->Form->input('User.type', array('label' => 'Tipo de usuário: <br>', 'empty' => 'Selecione','required'=>'required', 'id' => 'tipousuario',
             		'options' => array('adm' => 'Admin', 'cons' => 'Consultor'))); ?>
  
     </fieldset>

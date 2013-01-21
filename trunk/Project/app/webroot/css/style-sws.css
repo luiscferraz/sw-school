@@ -683,18 +683,8 @@ p {
 }
 
 #tipousuario{
+	width: 471px;
 	height: 25px;
-	width: 200px;
-}
-
-#campo_usuario{
-	width: 196px;
-	height: 20px;
-}
-
-#senha{
-	width: 208px;
-	height: 20px;
 }
 
 #consultant{
@@ -812,10 +802,6 @@ p {
 	height: 25px;
 }
 
-#horas{
-	padding-bottom: 
-}
-
 #gerente{
 	height: 25px;
 	width: 235px;
@@ -857,10 +843,6 @@ p {
 	height:60px;
 	display:block;
 	line-height: 25px;
-}
-
-#conteudoAddProjeto{
-
 }
 
 #dadosProjeto{
