@@ -224,6 +224,37 @@ DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
 
 -- -----------------------------------------------------
+-- Table `swsdb`.`entries`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `swsdb`.`entries` ;
+
+CREATE  TABLE IF NOT EXISTS `swsdb`.`entries` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `date` DATE NOT NULL ,
+  `type_consulting` VARCHAR(1) NOT NULL, 
+  `hours_worked` TIME NOT NULL ,
+  `observations` MEDIUMTEXT NULL ,
+  `consultant_id` INT  NOT NULL ,
+  `activity_id` INT  NOT NULL ,
+  `inactive` TINYINT(1) NOT NULL ,
+  PRIMARY KEY (`id`),
+  INDEX `fk_entries_consultants` (`consultant_id` ASC) ,
+  INDEX `fk_entries_activities` (`activity_id` ASC) ,
+  CONSTRAINT `fk_entries_consultants`
+    FOREIGN KEY (`consultant_id`)
+	REFERENCES `swsdb`.`consultants` (`id`)
+	ON DELETE NO ACTION
+	ON UPDATE CASCADE,
+  CONSTRAINT `fk_entries_activities`
+    FOREIGN KEY (`activity_id`)
+    REFERENCES `swsdb`.`activities` (`id`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+-- -----------------------------------------------------
 -- Table `swsdb`.`consultants_has_activities`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `swsdb`.`consultants_has_activities` ;
