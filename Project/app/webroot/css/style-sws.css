@@ -824,8 +824,7 @@ p {
 	border-width: 30px;
 	border: 30px;
 	border-color: #bcdae0;
-	margin-top: 42px;
-	padding-left: 22px;
+
 }
 
 #botaoAddProjeto input:hover{
@@ -849,32 +848,22 @@ p {
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
-	width: 50%;
+	width: 48%;
 	padding-bottom: 32px;
+	float:left;
 }
 
-#horaIndiv{
+#horaIndiv,#horaGrupo{
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
 	width: 42.5%;
 	height: 25%;
-	float: right;
-	margin-top: -380px;
+	float: left;
 	margin-right: 14px;
 }
 
 
-#horaGrupo{
-	background-color: #bcdae0;
-	border-color: #bcdae0;
-	border: 0px;
-	width: 42.5%;
-	height: 25%;
-	float: right;
-	margin-right: 14px;
-	margin-top: -190px;
-}
 
 #bt-add-gerente{
 	height: 40px;

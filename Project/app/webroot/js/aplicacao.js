@@ -75,8 +75,7 @@ $('document').ready(function(){
 	 
 	 //total de horas
 	 SomarHorasProjeto();
-	 $('#horas input').blur(function(){SomarHorasProjeto()});
-	
+	 SomarHorasGrupoProjeto();
 	 
 	
 	
@@ -87,6 +86,7 @@ setTimeout(
 			$('.flash').fadeOut('fast');
 			}, 
 		4000);
+
 //Checar se abreviação já é utilizada
 function checkAcronym(src){
 	d = src;
@@ -115,6 +115,19 @@ function SomarHorasProjeto(){
 	 total = total + parseInt($('#hora_c').val());
 	 }
 	 $('#total-de-horas p').html(total);
+};
+function SomarHorasGrupoProjeto(){
+	 var total = 0;
+	 if($('#hora_a_group').val() != ''){
+	 total = parseInt($('#hora_a_group').val());
+	 }
+	 if($('#hora_b_group').val() != ''){
+	 total = total + parseInt($('#hora_b_group').val());
+	 }
+	 if($('#hora_c_group').val() != ''){
+	 total = total + parseInt($('#hora_c_group').val());
+	 }
+	 $('#total-de-horas-grupo p').html(total);
 };
 
 
