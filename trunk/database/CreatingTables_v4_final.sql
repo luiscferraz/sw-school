@@ -255,22 +255,22 @@ DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`consultants_has_activities`
+-- Table `swsdb`.`activities_consultants`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `swsdb`.`consultants_has_activities` ;
+DROP TABLE IF EXISTS `swsdb`.`activities_consultants` ;
 
-CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants_has_activities` (
+CREATE  TABLE IF NOT EXISTS `swsdb`.`activities_consultants` (
   `consultant_id` INT NOT NULL ,
   `activity_id` INT NOT NULL ,
   PRIMARY KEY (`consultant_id`, `activity_id`) ,
-  INDEX `fk_consultants_has_activities_consultants` (`consultant_id` ASC) ,
-  INDEX `fk_consultants_has_activities_activities` (`activity_id` ASC) ,
-  CONSTRAINT `fk_consultants_has_activities_consultants`
+  INDEX `fk_activities_consultants_consultants` (`consultant_id` ASC) ,
+  INDEX `fk_activities_consultants_activities` (`activity_id` ASC) ,
+  CONSTRAINT `fk_activities_consultants_consultants`
     FOREIGN KEY (`consultant_id`)
     REFERENCES `swsdb`.`consultants` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_consultants_has_activities_activities`
+  CONSTRAINT `fk_activities_consultants_activities`
     FOREIGN KEY (`activity_id`)
     REFERENCES `swsdb`.`activities` (`id`)
     ON DELETE NO ACTION
