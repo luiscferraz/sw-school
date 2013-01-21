@@ -13,7 +13,7 @@ array('escape'=>false),"Você quer excluir realmente ?");?>
 	<div class='dadosEmpresa'>
 		<p><?php 
 				echo 'Sigla: ';
-				echo $company['Company']['alphanumeric_code'];
+				echo $company['Company']['acronym'];
 			?></p>
 		<p><?php 
 				echo 'CNPJ: ';
