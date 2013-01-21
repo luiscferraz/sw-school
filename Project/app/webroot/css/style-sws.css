@@ -304,9 +304,9 @@ p span {
 }
 .conteudo {
 	position: absolute;
-	width: 1000px;
+	width: 80%;
 	left:50%;
-	margin-left:-500px;
+	margin-left:-40%;
 	padding-bottom:60px;
 	margin-top: 15px;
 }
@@ -892,3 +892,26 @@ p {
 	width: 99%;
 	height: 66px;
 }
+
+
+
+
+
+
+/*Layout responsivo ;)*/
+
+
+@media all and (max-width: 480px)  {
+	/* -- tabela - projetos --- */
+	 .responsive {
+		display: none;
+	}
+}
+
+@media all and (max-width: 768px)  {
+	/* -- tabela - projetos --- */
+	 .responsive {
+		display: none;
+	}
+}
+

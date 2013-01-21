@@ -4,9 +4,9 @@
 	<table id="tableProject" cellpadding="0" cellspacing="0">
 		<tr>
 			<th id="nameProject">Nome</th>
-			<th>Abreviação</th>
-			<th>Empresa</th>
-			<th>Horas</th>
+			<th class="sigla responsive">Abreviação</th>
+			<th class="empresa responsive">Empresa</th>
+			<th class="horas responsive">Horas</th>
 			<th class="actions">Ações</th>
 		</tr>
 
@@ -27,9 +27,9 @@
 
 		<tr <?php echo $class; ?>>
 			<td id="nameTableProject"><?php echo $project['Project']['name']; ?></td>
-			<td class="sigla"><?php echo $project['Project']['acronym']; ?></td>
-			<td class="empresa"><?php echo $project['Company']['name']; ?></td>
-			<td class="horas"><?php  echo $project['Project']['a_hours']+$project['Project']['b_hours']+$project['Project']['c_hours']; ?></td>
+			<td class="sigla responsive"><?php echo $project['Project']['acronym']; ?></td>
+			<td class="empresa responsive"><?php echo $project['Company']['name']; ?></td>
+			<td class=" horas responsive"><?php  echo $project['Project']['a_hours']+$project['Project']['b_hours']+$project['Project']['c_hours']; ?></td>
 			<td>
 				<div id="actionsProject">
 					<?php echo $this->Html->link(
