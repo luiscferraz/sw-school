@@ -6,10 +6,10 @@
 		$list_projects['none'] = 'Nenhum Projeto Cadastrado';
     }
 ?>					
-<h1>Editar Projeto</h1>
+<h1>Editar Atividade</h1>
 
         <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
-		echo $this->Form->create('Projects', array('action' => 'edit')); ?>
+		echo $this->Form->create('Activities', array('action' => 'edit')); ?>
             <fieldset id="Dados_projeto_pai">
                 <?php echo $this->Form->input('Activity.type', array('label' => 'Tipo: ', 'id'=>'actvType')); ?>        
                 <?php echo $this->Form->input('Activity.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
