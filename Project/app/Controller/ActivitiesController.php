@@ -53,16 +53,6 @@
 		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
 		$this->Activity->id = $id;
 		
-		if (!$id) {
-        	throw new NotFoundException(__('Invalid post'));
-	    }
-	    
-	    $activity = $this->Activity->findById($id);
-	    
-	    if (!$activity) {
-			throw new NotFoundException(__('Invalid post'));
-		}
-		
 		if ($this->request->is('get')) {
 			$this->request->data = $this->Activity->read();
 		}
@@ -70,10 +60,14 @@
 			$this->Activity->id = $id;
 			if ($this->Activity->saveAll($this->request->data)) {
 				
-				$this->Session->setFlash($this->flashSuccess('A atividade foi editada.'));
+				$this->Session->setFlash($this->flashSuccess('Atividade foi editada.'));
 				$this->redirect(array('action' => 'index'));
 			}
-		}		
+			else {
+				$this->redirect(array('action' => 'index'));
+			}
+			
+		}
 	   
 	}
 	
