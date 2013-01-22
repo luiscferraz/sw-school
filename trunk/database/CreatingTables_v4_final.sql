@@ -6,7 +6,6 @@ DROP SCHEMA IF EXISTS `swsdb` ;
 CREATE SCHEMA IF NOT EXISTS `swsdb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
 USE `swsdb` ;
 
-
 -- -----------------------------------------------------
 -- Table `swsdb`.`consultants`
 -- -----------------------------------------------------
@@ -14,16 +13,14 @@ DROP TABLE IF EXISTS `swsdb`.`consultants` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `cpf` VARCHAR(14) NOT NULL ,
+  `cpf` VARCHAR(14) NULL ,
   `name` VARCHAR(45) NOT NULL ,
-  `acronym` VARCHAR(2) NOT NULL ,
-  `acronym_color` VARCHAR(7) NOT NULL ,
-  `phone1` VARCHAR(13) NOT NULL ,
+  `acronym_color` VARCHAR(7) NULL ,
+  `phone1` VARCHAR(13) NULL ,
   `phone2` VARCHAR(13) NULL ,
-  `email` VARCHAR(45) NOT NULL ,
+  `email` VARCHAR(45) NULL ,
   `removed` TINYINT(1) NOT NULL ,
   UNIQUE INDEX `acronym_color_UNIQUE` (`acronym_color` ASC) ,
-  UNIQUE INDEX `acronym_UNIQUE` (`acronym` ASC) ,
   UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) ,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -53,13 +50,14 @@ DROP TABLE IF EXISTS `swsdb`.`companies` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`companies` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `cnpj` VARCHAR(18) NOT NULL ,
+  `cnpj` VARCHAR(18) NULL ,
   `name` VARCHAR(45) NOT NULL ,
   `acronym` VARCHAR(45) NOT NULL ,
-  `phone1` VARCHAR(13) NOT NULL ,
+  `phone1` VARCHAR(13) NULL ,
   `phone2` VARCHAR(13) NULL ,
+  `logo` VARCHAR(45) NULL ,
   `removed` TINYINT(1) NOT NULL ,
-  UNIQUE INDEX `cnpj_UNIQUE` (`cnpj` ASC) ,
+  UNIQUE INDEX `acronym_UNIQUE` (`acronym` ASC) ,
   PRIMARY KEY (`id`)) 
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
@@ -72,13 +70,13 @@ DROP TABLE IF EXISTS `swsdb`.`addresses` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`addresses` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `address` VARCHAR(45) NOT NULL ,
-  `number` VARCHAR(5) NOT NULL ,
+  `address` VARCHAR(45) NULL ,
+  `number` VARCHAR(5) NULL ,
   `neighborhood` VARCHAR(45) NULL ,
-  `city` VARCHAR(45) NOT NULL ,
-  `state` VARCHAR(45) NOT NULL ,
+  `city` VARCHAR(45) NULL ,
+  `state` VARCHAR(45) NULL ,
   `complement` VARCHAR(45) NULL ,
-  `zip_code` VARCHAR(10) NOT NULL ,
+  `zip_code` VARCHAR(10) NULL ,
   `consultant_id` INT NOT NULL,
   `company_id` INT NOT NULL,
   PRIMARY KEY (`id`))
@@ -93,12 +91,13 @@ DROP TABLE IF EXISTS `swsdb`.`sepgs` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`sepgs` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(45) NOT NULL ,
+  `name` VARCHAR(45) NULL ,
   `phone` VARCHAR(13) NULL ,
+  `cellular_telephone` VARCHAR(13) NULL ,
   `email` VARCHAR(45) NULL ,
   `company_id` INT NULL ,
-    INDEX `fk_sepgs_companies` (`company_id` ASC) ,
-    CONSTRAINT `fk_sepgs_companies`
+  INDEX `fk_sepgs_companies` (`company_id` ASC) ,
+  CONSTRAINT `fk_sepgs_companies`
     FOREIGN KEY (`company_id` )
     REFERENCES `swsdb`.`companies` (`id` )
     ON DELETE NO ACTION
@@ -116,12 +115,13 @@ DROP TABLE IF EXISTS `swsdb`.`financials` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`financials` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(45) NOT NULL ,
+  `name` VARCHAR(45) NULL ,
   `phone` VARCHAR(13) NULL ,
+  `cellular_telephone` VARCHAR(13) NULL ,
   `email` VARCHAR(45) NULL ,
   `company_id` INT NULL ,
-    INDEX `fk_financials_companies` (`company_id` ASC) ,
-    CONSTRAINT `fk_financials_companies`
+   INDEX `fk_financials_companies` (`company_id` ASC) ,
+   CONSTRAINT `fk_financials_companies`
     FOREIGN KEY (`company_id` )
     REFERENCES `swsdb`.`companies` (`id` )
     ON DELETE NO ACTION
@@ -138,12 +138,13 @@ DROP TABLE IF EXISTS `swsdb`.`sponsors` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`sponsors` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(45) NOT NULL ,
+  `name` VARCHAR(45) NULL ,
   `phone` VARCHAR(13) NULL ,
+  `cellular_telephone` VARCHAR(13) NULL ,
   `email` VARCHAR(45) NULL ,
   `company_id` INT NULL ,
-    INDEX `fk_sponsors_companies` (`company_id` ASC) ,
-    CONSTRAINT `fk_sponsors_companies`
+  INDEX `fk_sponsors_companies` (`company_id` ASC) ,
+  CONSTRAINT `fk_sponsors_companies`
     FOREIGN KEY (`company_id` )
     REFERENCES `swsdb`.`companies` (`id` )
     ON DELETE NO ACTION
@@ -169,9 +170,9 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`projects` (
   `a_hours_group` INT NULL ,
   `b_hours_group` INT NULL ,
   `c_hours_group` INT NULL ,
-  `consultant_id` INT NOT NULL , 
+  `consultant_id` INT NULL , 
   `parent_project_id` INT NULL ,
-  `company_id` INT NULL ,
+  `company_id` INT NOT NULL ,
   `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_projects_consultants` (`consultant_id` ASC) ,
