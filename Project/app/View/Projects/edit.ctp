@@ -29,10 +29,6 @@
                         <?php echo $this->Form->input('Project.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronymProject')); ?>
                         <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: ', 'id' => 'parent_project')); ?>
                         <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa: ', 'id' => 'company', 'required'=>'required')); ?><br>
-                        <div id="botaoGerente">
-                            <label>Gerente de projeto:</label>
-                            <input id="bt-add-gerente" type="button" value="Selecionar Gerente" onclick='ListGerentes();'> 
-                        </div>
             </fieldset>
 
             <fieldset id="horaGrupo">
@@ -58,8 +54,8 @@
                             <input id="bt-add-gerente" type="button" value="Selecionar Gerente" onclick='ListGerentes();'> 
                     </div>
                     <div>
-                        <label>Consultores</label>
-                        <input id="bt-add-consultores" type="button" value="Selecionar Gerente">
+                        <label>Consultores: </label>
+                        <input id="bt-add-consultores" type="button" value="Selecionar Consultores">
                    </div>  
             </fieldset>
             
