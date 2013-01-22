@@ -88,9 +88,12 @@
 
 		 private function Nome_Consultor($id){
 			$name = $this->Activity->Consultant->findById($id);
+				if ($name){
 				return $name['Consultant']['name'];
- 		 	}
-	
+ 		 	}else{
+			return '';
+			}
+		}
 	 
 	 	
 }
