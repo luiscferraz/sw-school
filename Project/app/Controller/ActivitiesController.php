@@ -21,6 +21,7 @@
 	public function add(){
 	 	$this->layout = 'base';
 		$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
+		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
 	 	if($this->request->is('post')){
 	 		if($this->Activity->saveAll($this->request->data)){
 	 			$this->Session->setFlash('A atividade foi adicionada com sucesso.');

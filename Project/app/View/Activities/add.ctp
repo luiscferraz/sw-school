@@ -6,6 +6,14 @@
 		$list_projects['none'] = 'Nenhum Projeto Cadastrado';
     }
 ?>
+<?php 
+    foreach ($consultants as $consultant) {        
+        $list_consultants[$consultant['Consultant']['id']] =$consultant['Consultant']['name'];
+        };                    
+    if (!isset($list_consultants)){
+		$list_consultants['none'] = 'Nenhum Consultor Cadastrado';
+    }
+?>
 <h1>Cadastrar Atividade</h1>
     <div id="content">
         <div class="conteudo">
@@ -15,7 +23,7 @@
                 <?php echo $this->Form->input('Activity.type', array('label' => 'Tipo: ', 'id'=>'actvType')); ?>        
                 <?php echo $this->Form->input('Activity.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
                 <?php echo $this->Form->input('Activity.status', array('options' => array("initiated"=>"Iniciada","in progress"=>"Em desenvolvimento", "completed"=>"Concluída"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Status: ', 'id'=>'actvStatus')); ?>
-                <?php echo $this->Form->input('Activity.consultant_id',array('empty' => 'Selecione','label' => 'Consultor: ', 'id' => 'actvConsultant', 'required'=>'required')); ?>
+                <?php echo $this->Form->input('Activity.consultant_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor', 'id'=>'actvID')); ?>
             </fieldset>
             <fieldset id="Dados_projeto_pai">
                 <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial: ','required'=>'required', 'id'=>'actvStartHour')); ?>
