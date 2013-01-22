@@ -2355,3 +2355,17 @@
 2013-01-21 23:55:27 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-22 03:44:36 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`swsdb`.`project_consultants`, CONSTRAINT `fk_project_consultants_projects` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO pro...', Array)
+#2 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('INSERT INTO pro...', Array, Array)
+#3 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(538): DboSource->fetchAll('INSERT INTO pro...')
+#4 [internal function]: DboSource->query('INSERT INTO pro...')
+#5 C:\site\sws\Project\lib\Cake\Model\Model.php(3003): call_user_func_array(Array, Array)
+#6 C:\site\sws\Project\app\Controller\ProjectsController.php(174): Model->query('INSERT INTO pro...')
+#7 [internal function]: ProjectsController->AjaxAddConsultant('1', '2')
+#8 C:\site\sws\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#9 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

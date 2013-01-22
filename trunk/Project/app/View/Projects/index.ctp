@@ -6,8 +6,8 @@
 			<th id="nameProject">Nome</th>
 			<th class="sigla responsive">Abreviação</th>
 			<th class="empresa responsive">Empresa</th>
-			<th class="horas responsive">Hora Individual</th>
-			<th class="horas responsive">Hora em Grupo</th>
+			<th class="horas responsive">Horas Individuais</th>
+			<th class="horas responsive">Horas em Grupo</th>
 			<th class="actions">Ações</th>
 		</tr>
 
@@ -30,8 +30,8 @@
 			<td id="nameTableProject"><?php echo $project['Project']['name']; ?></td>
 			<td class="sigla responsive"><?php echo $project['Project']['acronym']; ?></td>
 			<td class="empresa responsive"><?php echo $project['Company']['name']; ?></td>
-			<td class=" horas responsive"><?php  echo $project['Project']['a_hours_individual']+$project['Project']['b_hours_individual']+$project['Project']['c_hours_individual']; ?></td>
-			<td class=" horas responsive"><?php  echo $project['Project']['b_hours_group']+$project['Project']['b_hours_group']+$project['Project']['c_hours_group']; ?></td>
+			<td class=" horas responsive"><?php  echo $project['Project']['a_hours_individual']+$project['Project']['b_hours_individual']+$project['Project']['c_hours_individual']; ?>h</td>
+			<td class=" horas responsive"><?php  echo $project['Project']['b_hours_group']+$project['Project']['b_hours_group']+$project['Project']['c_hours_group']; ?>h</td>
 			<td>
 				<div id="actionsProject">
 					<?php echo $this->Html->link(
