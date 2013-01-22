@@ -8,9 +8,14 @@ $('document').ready(function(){
 		$(this).children('p').hide();
 		$(this).children('textarea').show();
 		$(this).children('textarea').focus();
-		$('.edit p').html($('.edit p ~ textarea').val());
 	});
+	$('.edit textarea').keyup(function(){
+			var hr = $(this).val();
+			$(this).siblings('p').html(hr);
+		})
 })
+
+
 
 function createInput(html){
 	html ='<textarea> '+html+' </textarea>'
@@ -70,12 +75,15 @@ function addConsultorGerente(id,name){
 
 //adicionar consultor alocado
 function addConsultorAlocado(id,name){
-	$.get('../AjaxAddConsultant/'+1+'/'+2,null,
+	var idprojeto = $('table').attr('id');
+	var idconsultor = id;
+	$.get('../AjaxAddConsultant/'+idprojeto+'/'+idconsultor,null,
 		function(data) {   
-			$.fancybox(data);
 			$('.load').remove();
 			var html = 	'<tr>'+
 					'<td id="nameTableProject">'+name+' <span id="id-projectconsultant">'+data+'</span></td>'+
+					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
+					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
 					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
 					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
 					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
@@ -146,6 +154,21 @@ function listConsultores (){
 		$.get('../AjaxListConsultants',null,
 				function(data) {   
 					$.fancybox(data);
+					$('.load').remove();
+			})
+}
+
+function salvar (obj) {
+	var id = $(obj).attr('id');
+	var classe = $(obj).attr('class');
+	var horaa = $('#'+id+' .hora-a').children('textarea').val();
+	var horab = $('#'+id+' .hora-b').children('textarea').val();
+	var horac = $('#'+id+' .hora-c').children('textarea').val();
+	var grupoa = $('#'+id+' .grupo-a').children('textarea').val();
+	var grupob= $('#'+id+' .grupo-b').children('textarea').val();
+	var grupoc = $('#'+id+' .grupo-c').children('textarea').val();
+	$.get('../AjaxEditConsultant/'+classe+'/'+horaa+'/'+horab+'/'+horac+'/'+grupoa+'/'+grupob+'/'+grupoc,null,
+				function(data) {   
 					$('.load').remove();
 			})
 }
