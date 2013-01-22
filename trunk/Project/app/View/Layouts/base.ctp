@@ -7,13 +7,16 @@
 	<?php echo $this->Html->css('style-sws'); ?>
 	<?php echo $this->Html->css('colorpicker'); ?>
 	<?php echo $this->Html->css('jquery.fancybox'); ?>
+	<?php echo $this->Html->css('jquery-ui.css'); ?>	
 	<?php echo $this->Html->script('jquery-1.7.1.min'); ?>
 	<?php echo $this->Html->script('jquery.maskedinput-1.1.4.pack'); ?>
+	<?php echo $this->Html->script('jquery-ui'); ?>	
 	<?php echo $this->Html->script('validacoes'); ?>
 	<?php echo $this->Html->script('buscacep'); ?>
 	<?php echo $this->Html->script('colorpicker'); ?>
 	<?php echo $this->Html->script('jquery.fancybox'); ?>
 	<?php echo $this->Html->script('projetos'); ?>
+	
 
 	<?php echo $this->Html->script('aplicacao'); ?>
 </head>

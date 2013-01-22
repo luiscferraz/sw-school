@@ -77,6 +77,13 @@ $('document').ready(function(){
 	 SomarHorasProjeto();
 	 SomarHorasGrupoProjeto();
 	 
+
+	 //calendario no campo data na tela de atividades
+	$(function() {
+	$( "#datepicker" ).datepicker();
+	});
+
+	 
 	
 	
 });
