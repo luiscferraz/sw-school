@@ -26,7 +26,7 @@
 
 <div id="dados"> 
 	<h2 id="titulodados"> Dados </h2>
-	<p><span>Consultor: </span><?php echo $entries['Entry']['consultant_id']; ?></p>
-	<p><span>Atividade: </span><?php echo $entries['Entry']['activity_id']; ?></p>
+	<p><span>Consultor: </span><?php echo $nome_consultor_logado; ?></p>
+	<p><span>Atividade: </span><?php echo $nome_atividade; ?></p>
 </div>
 
