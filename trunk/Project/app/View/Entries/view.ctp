@@ -13,7 +13,7 @@
 
 <div id="dados"> 
 	<h2 id="titulodados"> Informações </h2>
-	<p><span>Tipo: </span><?php echo $entries['Entry']['type']; ?></p>
+	<p><span>Tipo: </span><?php echo $entries['Entry']['type_consulting']; ?></p>
 	<p><span>Observações: </span><?php echo $entries['Entry']['observations']; ?></p>
 </div>
 
@@ -24,4 +24,9 @@
 </div>
 
 
+<div id="dados"> 
+	<h2 id="titulodados"> Dados </h2>
+	<p><span>Consultor: </span><?php echo $entries['Entry']['consultant_id']; ?></p>
+	<p><span>Atividade: </span><?php echo $entries['Entry']['activity_id']; ?></p>
+</div>
 
