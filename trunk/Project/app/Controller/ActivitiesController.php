@@ -75,12 +75,21 @@
 
 		$this->Activity->id = $id;
 		$this->layout = 'base';
+		$Atividade =  $this->Activity->findById($id);
+		$this -> set ('consultor1', $this-> Nome_Consultor($Atividade['Activity']['consultant1_id']));
+		$this -> set ('consultor2', $this-> Nome_Consultor($Atividade['Activity']['consultant2_id']));
+		$this -> set ('consultor3', $this-> Nome_Consultor($Atividade['Activity']['consultant3_id']));
+		$this -> set ('consultor4', $this-> Nome_Consultor($Atividade['Activity']['consultant4_id']));
 		
 	    if ($this->request->is('get')) {
 	        $this->set('activities', $this->Activity->read());
 	    }
 	}
-	
+
+		 private function Nome_Consultor($id){
+			$name = $this->Activity->Consultant->findById($id);
+				return $name['Consultant']['name'];
+ 		 	}
 	
 	 
 	 	
