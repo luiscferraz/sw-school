@@ -32,16 +32,16 @@
 
 	<fieldset id="ViewhoraIndiv">
 		<h2 id="titulodados"> Hora Individual </h2>
-		<p><span>Hora A: </span><?php echo $project['Project']['a_hours_individual']; ?></span></p>
-		<p><span>Hora B: </span><?php echo $project['Project']['b_hours_individual']; ?></p>
-		<p><span>Hora C: </span><?php echo $project['Project']['c_hours_individual']; ?></p>
+		<p><span>Hora A: </span><?php echo $project['Project']['a_hours_individual']; ?>h</span></p>
+		<p><span>Hora B: </span><?php echo $project['Project']['b_hours_individual']; ?>h</p>
+		<p><span>Hora C: </span><?php echo $project['Project']['c_hours_individual']; ?>h</p>
 	</fieldset>
 
 	<fieldset id="ViewhoraGrupo">
 		<h2 id="titulodados"> Hora em grupo </h2>
-		<p><span>Hora A: </span><?php echo $project['Project']['a_hours_group']; ?></span></p>
-		<p><span>Hora B: </span><?php echo $project['Project']['b_hours_group']; ?></p>
-		<p><span>Hora C: </span><?php echo $project['Project']['c_hours_group']; ?></p>
+		<p><span>Hora A: </span><?php echo $project['Project']['a_hours_group']; ?>h</span></p>
+		<p><span>Hora B: </span><?php echo $project['Project']['b_hours_group']; ?>h</p>
+		<p><span>Hora C: </span><?php echo $project['Project']['c_hours_group']; ?>h</p>
 	</fieldset>
 
 </div>
