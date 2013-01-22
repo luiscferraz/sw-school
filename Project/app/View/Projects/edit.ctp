@@ -20,7 +20,7 @@
     <h1>Cadastrar Projeto</h1>
 
     <div id="conteudoAddProjeto">
-        <?php echo $this->Form->create('Projects', array('action' => 'add')); ?>
+        <?php echo $this->Form->create('Projects', array('action' => 'edit')); ?>
             <fieldset id="dadosProjeto">
             <legend class="legenda">Dados</legend>
                         <?php echo $this->Form->input('Project.name', array('label' => 'Nome: ','required'=>'required', 'id'=>'nameProject')); ?>
