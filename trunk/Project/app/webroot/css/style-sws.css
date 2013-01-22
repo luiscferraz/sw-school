@@ -843,14 +843,33 @@ p {
 	float:left;
 }
 
-#horaIndiv,#horaGrupo{
+#horaGrupo, #horaIndiv{
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
-	width: 45.5%;
+	width: 20.5%;
 	height: 25%;
 	float: left;
-	margin-right: 14px;
+	margin-right: -5px;
+	margin-left: 15px;
+}
+
+#botoesGerenteConsultor{
+	width: 44%;
+	height: 174px;
+	background-color: #bcdae0;
+	border-color: #bcdae0;
+	border: 0px;
+	float: left;
+	margin-left: 15px;
+}
+
+#horaA, #horaB, #horaC{
+	width: 40%;
+}
+
+#description{
+	width: 99%;
 }
 
 #ViewhoraGrupo{
@@ -876,7 +895,8 @@ p {
 }
 
 
-#bt-add-gerente{
+#bt-add-gerente, #bt-add-consultores{
+	width: 163px;
 	height: 40px;
 	margin-top: 20px;
 }
