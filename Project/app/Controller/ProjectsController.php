@@ -43,14 +43,8 @@
 	public function edit($id = NULL){
 		$this->layout = 'base';
 		$this->Project->id = $id;
-		if (!$id) {
-        	throw new NotFoundException(__('Invalid post'));
-	    }
+		
 	
-	    $consult = $this->Project->findById($id);
-	    if (!$consult) {
-	        throw new NotFoundException(__('Invalid post'));
-	    }
 		if ($this->request->is('get')) {
 			$this->request->data = $this->Project->read();
 			$this-> set ('projects',$this->Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.id !=' => $id))));
@@ -59,12 +53,14 @@
 		else{
 			$this->Project->id = $id;
 			if ($this->Project->saveAll($this->request->data)) {
-				$this->Session->setFlash($this->flashSuccess('Projeto editado com sucesso.'));
+				
+				$this->Session->setFlash($this->flashSuccess('Projeto foi editado.'));
 				$this->redirect(array('action' => 'index'));
 			}
-			else{
-				$this->Session->setFlash($this->flashError('Erro ao editar projeto.'));
+			else {
+				$this->redirect(array('action' => 'index'));
 			}
+			
 		}
 	}
 	
@@ -173,15 +169,12 @@
 		$consultants = $this->Project->Consultant->find('all');
 		$this-> set('consultants', $consultants);
 	}
-	public function AjaxAddConsultant($project_id,
-										$consultant_id,
-										$value_hour_a_individual, $value_hour_b_individual, $value_hour_c_individual,
-										$value_hour_a_group, $value_hour_b_group, $value_hour_c_group){
+	public function AjaxAddConsultant($project_id = null,$consultant_id = null){
 		$this->layout = 'ajax';
-		$this->Project->ProjectConsultant->query("INSERT INTO project_consultants VALUES ('" . $project_id . "', '" . $consultant_id . "', 
-		'" . $value_hour_a_individual . "', '" . $value_hour_b_individual . "', '" . $value_hour_c_individual . "',
-		'" . $value_hour_a_group . "', '" . $value_hour_b_group . "', '" . $value_hour_c_group . "')");
-		
+		$this->Project->ProjectConsultant->query("INSERT INTO project_consultants  (project_id,consultant_id) VALUES ('" . $project_id . "', '" . $consultant_id. "')");
+		$query = $this->Project->ProjectConsultant->find('all',array('conditions'=> array('project_id =' => $project_id)));
+		$this->set('retorno', $query);
+
 	}
 	public function AjaxEditConsultant($id,
 										$project_id,

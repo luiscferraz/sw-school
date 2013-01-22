@@ -1,10 +1,14 @@
+
 $('document').ready(function(){
+	
 	$('.edit').live('click',function(e){
 		//$(this).html(createInput($(this).parent('p').html()));
 		$('.edit p').show();
 		$('.edit textarea').hide();
 		$(this).children('p').hide();
 		$(this).children('textarea').show();
+		$(this).children('textarea').focus();
+		$('.edit p').html($('.edit p ~ textarea').val());
 	});
 })
 
@@ -66,25 +70,30 @@ function addConsultorGerente(id,name){
 
 //adicionar consultor alocado
 function addConsultorAlocado(id,name){
-	var html = 	'<tr>'+
-				'<td id="nameTableProject">'+name+'</td>'+
-				'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-				'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-				'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-				'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-				'<td>'+
-					'<div id="actionsProject">'+
-					'<img src="'+limparUrl('img/save.png')+'" alt="Salvar Consultor" title="Salvar Consultor" onclick="deleteGerente()"/>'+
-					'<img src="'+limparUrl('img/delete.png')+'" alt="Deletar consultor" title="Deletar Consultor" onclick="deleteGerente()"/>'+
-					'</div>'+
-				'</td>'+
-				
-				'</tr>'
-				
-	$('table').append(html);
-	$('.fancybox-wrap').remove();
-	$('#fancybox-overlay').remove();	
-	$('#bt-add-gerente').hide();
+	$.get('../AjaxAddConsultant/'+1+'/'+2,null,
+		function(data) {   
+			$.fancybox(data);
+			$('.load').remove();
+			var html = 	'<tr>'+
+					'<td id="nameTableProject">'+name+' <span id="id-projectconsultant">'+data+'</span></td>'+
+					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
+					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
+					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
+					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
+					'<td>'+
+						'<div id="actionsProject">'+
+						'<img src="'+limparUrl('img/save.png')+'" alt="Salvar Consultor" title="Salvar Consultor" onclick="deleteGerente()"/>'+
+						'<img src="'+limparUrl('img/delete.png')+'" alt="Deletar consultor" title="Deletar Consultor" onclick="deleteGerente()"/>'+
+						'</div>'+
+					'</td>'+
+					
+					'</tr>'
+					
+			$('table').append(html);
+			$('.fancybox-wrap').remove();
+			$('#fancybox-overlay').remove();	
+			$('#bt-add-gerente').hide();
+	})
 }
 
 //deletar gerente
