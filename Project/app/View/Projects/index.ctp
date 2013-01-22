@@ -30,8 +30,8 @@
 			<td id="nameTableProject"><?php echo $project['Project']['name']; ?></td>
 			<td class="sigla responsive"><?php echo $project['Project']['acronym']; ?></td>
 			<td class="empresa responsive"><?php echo $project['Company']['name']; ?></td>
-			<td class=" horas responsive"><?php  echo $project['Project']['value_hour_a_individual']+$project['Project']['value_hour_b_individual']+$project['Project']['value_hour_c_individual']; ?></td>
-			<td class=" horas responsive"><?php  echo $project['Project']['value_hour_a_group']+$project['Project']['value_hour_b_group']+$project['Project']['value_hour_c_group']; ?></td>
+			<td class=" horas responsive"><?php  echo $project['Project']['a_hours_individual']+$project['Project']['b_hours_individual']+$project['Project']['c_hours_individual']; ?></td>
+			<td class=" horas responsive"><?php  echo $project['Project']['b_hours_group']+$project['Project']['b_hours_group']+$project['Project']['c_hours_group']; ?></td>
 			<td>
 				<div id="actionsProject">
 					<?php echo $this->Html->link(
