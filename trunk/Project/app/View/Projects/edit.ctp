@@ -23,6 +23,7 @@
         <?php echo $this->Form->create('Projects', array('action' => 'edit')); ?>
             <fieldset id="dadosProjeto">
             <legend class="legenda">Dados</legend>
+                        <?php echo $this->Form->input('Project.id', array('type'=>'hidden')); ?>
                         <?php echo $this->Form->input('Project.name', array('label' => 'Nome: ','required'=>'required', 'id'=>'nameProject')); ?>
                         <?php echo $this->Form->input('Project.description', array('label' => 'Descrição: ', 'id'=>'description')); ?>
                         <?php echo $this->Form->input('Project.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronymProject')); ?>
