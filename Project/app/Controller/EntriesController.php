@@ -13,6 +13,10 @@ class EntriesController extends AppController{
  	
  	public function add(){
 	 	$this->layout = 'base';
+		$this-> set ('activities',$this->Entry->Activity->find('all'), array('conditions'=> array('Activity.removed !=' => 1)));
+		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
+		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
+		
 	 	if($this->request->is('post')){
 	 		if($this->Entry->saveAll($this->request->data)){
 	 			$this->Session->setFlash('O apontamento foi adicionado com sucesso.');
@@ -27,6 +31,17 @@ class EntriesController extends AppController{
 		
 	 	}
  	}
+	
+	 	private function Nome_Consultor_Logado($id){
+			$name = $this->Entry->Consultant->findById($id);
+			return $name['Consultant']['name'];
+ 		 	}
+			
+		private function Nome_Atividade($id){
+			$name = $this->Entry->Activity->findById($id);
+			return $name['Activity']['type'];
+ 		 	}
+			
  	
  	public function delete($id = NULL){
 		$this->Entry->id = $id;
@@ -38,17 +53,10 @@ class EntriesController extends AppController{
 	
 	public function edit($id = NULL){
 		$this->layout = 'base';
+		$this-> set ('activities',$this->Entry->Activity->find('all'), array('conditions'=> array('Activity.removed !=' => 1)));
+		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
+		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
 		$this->Entry->id = $id;
-		
-		if (!$id) {
-        	throw new NotFoundException(__('Invalid post'));
-	    }
-	    
-	    $entry = $this->Entry->findById($id);
-	    
-	    if (!$entry) {
-			throw new NotFoundException(__('Invalid post'));
-		}
 		
 		if ($this->request->is('get')) {
 			$this->request->data = $this->Entry->read();
@@ -57,20 +65,26 @@ class EntriesController extends AppController{
 			$this->Entry->id = $id;
 			if ($this->Entry->saveAll($this->request->data)) {
 				
-				$this->Session->setFlash($this->flashSuccess('O apontamento foi editado.'));
+				$this->Session->setFlash($this->flashSuccess('Atividade foi editada.'));
 				$this->redirect(array('action' => 'index'));
 			}
-		}		
-	   
+			else {
+				$this->redirect(array('action' => 'index'));
+			}
+			
+		}	   
 	}
 	
 	public function view($id){
 
 		$this->Entry->id = $id;
 		$this->layout = 'base';
+		$Apontamento =  $this->Entry->findById($id);
+		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($Apontamento['Entry']['consultant_id']));
+		$this -> set ('nome_atividade', $this-> Nome_Atividade($Apontamento['Entry']['activity_id']));
 		
 	    if ($this->request->is('get')) {
-	        $this->set('entries', $this->Activity->read());
+	        $this->set('entries', $this->Entry->read());
 	    }
 	}	 	
  	
