@@ -134,7 +134,7 @@ COLLATE = utf8_general_ci;
 -- -----------------------------------------------------
 -- Table `swsdb`.`sponsors`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `swsdb`.`Sponsors` ;
+DROP TABLE IF EXISTS `swsdb`.`sponsors` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`sponsors` (
   `id` INT NOT NULL AUTO_INCREMENT ,
@@ -205,20 +205,18 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `start_hours` TIME NOT NULL ,
   `end_hours` TIME NOT NULL ,
-  `date` DATE NOT NULL ,
+  `date` varchar(10) NOT NULL ,
   `observations` MEDIUMTEXT NULL ,
-  `type` VARCHAR(1) NOT NULL ,
+  `type` VARCHAR(100) NOT NULL ,
   `status` ENUM('initiated', 'in progress', 'completed', 'canceled') NOT NULL ,
-  `hours_worked` TIME NOT NULL ,
+  `hours_worked` INT(4) NOT NULL ,
   `project_id` INT NOT NULL ,
+  `consultant1_id` INT  ,
+  `consultant2_id` INT  ,
+  `consultant3_id` INT  ,
+  `consultant4_id` INT  ,
   `removed` TINYINT(1) NOT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_activities_projects` (`project_id` ASC) ,
-  CONSTRAINT `fk_activities_projects`
-    FOREIGN KEY (`project_id`)
-    REFERENCES `swsdb`.`projects` (`id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE)
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
@@ -230,9 +228,9 @@ DROP TABLE IF EXISTS `swsdb`.`entries` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`entries` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `date` DATE NOT NULL ,
+  `date` VARCHAR(12) NOT NULL ,
   `type_consulting` VARCHAR(1) NOT NULL, 
-  `hours_worked` TIME NOT NULL ,
+  `hours_worked` INT(4) NOT NULL ,
   `observations` MEDIUMTEXT NULL ,
   `consultant_id` INT  NOT NULL ,
   `activity_id` INT  NOT NULL ,
