@@ -236,7 +236,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`entries` (
   `observations` MEDIUMTEXT NULL ,
   `consultant_id` INT  NOT NULL ,
   `activity_id` INT  NOT NULL ,
-  `inactive` TINYINT(1) NOT NULL ,
+  `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`),
   INDEX `fk_entries_consultants` (`consultant_id` ASC) ,
   INDEX `fk_entries_activities` (`activity_id` ASC) ,
