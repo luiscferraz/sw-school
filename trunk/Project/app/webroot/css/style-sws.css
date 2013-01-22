@@ -773,16 +773,7 @@ p {
 	border: 30px;
 	background-color: #bcdae0;
 	margin-left: -40px;
-}
-
-#horasProjetoView{
-	background-color: #bcdae0;
-	border-color: #bcdae0;
-	border: 0px;
-	width: 48%;
-	height: 390px;
-	padding-bottom: 32px;
-	float:left;
+	height: 343px;
 }
 
 #state{
@@ -852,7 +843,7 @@ p {
 	float:left;
 }
 
-#horaIndiv,#horaGrupo, #ViewhoraGrupo, #ViewhoraIndiv{
+#horaIndiv,#horaGrupo{
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
@@ -862,6 +853,27 @@ p {
 	margin-right: 14px;
 }
 
+#ViewhoraGrupo{
+	background-color: #bcdae0;
+	border-color: #bcdae0;
+	border: 0px;
+	width: 42.5%;
+	height: 25%;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+#ViewhoraIndiv{
+	background-color: #bcdae0;
+	border-color: #bcdae0;
+	border: 0px;
+	width: 42.5%;
+	height: 25%;
+	float: left;
+	margin-right: 0px;
+	margin-top: 0px;
+}
 
 
 #bt-add-gerente{
