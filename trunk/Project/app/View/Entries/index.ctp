@@ -26,7 +26,7 @@
 		?>
 
 		<tr <?php echo $class; ?>>
-			<td class="tipo"><?php echo $entry['Entry']['type']; ?></td>
+			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
 			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
 			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
 			<td class="atividade"><?php echo $entry['Entry']['activity_id']; ?></td>
