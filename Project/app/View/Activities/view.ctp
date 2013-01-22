@@ -26,8 +26,56 @@
 	<p><span>Horas trabalhadas: </span> <?php echo $activities['Activity']['hours_worked']; ?></p>
 </div>
 
-<div id="dados">
+<div id="dadosApontamentos">
 	<h2 id="titulodados">Apontamentos Existentes</h2>
+
+	<table cellpadding="0" cellspacing="0" id="tabelaApontamentos">
+		<tr>
+			<th>Consultor</th>
+			<th class="responsive">Atividade</th>
+			<th class="responsive">Horas</th>
+			<th class="responsive">Data</th>
+			<th class="actions">Ações</th>
+		</tr>
+
+		<?php
+			
+			$i = 0;
+			foreach ($entries as $entry) 
+			{
+				$class = null;
+				
+				if($i++ % 2 == 0)
+				{
+					$class = 'class="altrow"';
+				}
+					
+							
+		?>
+
+		<tr <?php echo $class; ?>>
+			<td class="consultor"><?php echo $entry['Entry']['consultant_id']; ?></td>
+			<td class="atividade"><?php echo $entry['Entry']['activity_id']; ?></td>
+			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
+			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
+
+			<div class="actions">
+				<td>
+					<?php echo $this->Html->link(
+					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $entry['Entry']['id']), array('escape'=>false, 'id'=>'link'))?>
+
+					<?php echo $this->Html->link(
+					$this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $entry['Entry']['id']),
+					array('escape'=>false, 'id'=>'link'))?>
+
+					<?php echo $this->Html->link(
+					$this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $entry['Entry']['id']),
+					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da atividade?");
+					?></td>
+			</div>
+		</tr>
+		<?php } ?>
+	</table>
 	
 </div>
 

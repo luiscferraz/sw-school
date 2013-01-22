@@ -893,6 +893,15 @@ p {
 	height: 66px;
 }
 
+#dadosApontamentos {
+	float: left;
+	background: #bcdae0;
+	padding-left: 8px;
+	margin-top: 20px;
+	width: 74.5%;
+	margin-left: 140px;
+}
+
 
 
 
