@@ -29,8 +29,8 @@
 			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
 			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
 			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
-			<td class="atividade"><?php echo $entry['Entry']['activity_id']; ?></td>
-			<td class="consultor"><?php echo $entry['Entry']['consultant_id']; ?></td
+			<td class="atividade"><?php echo $entry['Activity']['type']; ?></td>
+			<td class="consultor"><?php echo $entry['Consultant']['name']; ?></td
 
 			<div class="actions">
 				<td>

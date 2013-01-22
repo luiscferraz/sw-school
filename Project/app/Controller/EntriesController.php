@@ -6,9 +6,11 @@ class EntriesController extends AppController{
  	var $scaffold;
  	
  	public function index(){
-		$this->set('title_for_layout', 'Entries');
+		$this->set('title_for_layout', 'Apontamento');
  		$this -> layout = 'index';
- 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1)))); 				 
+ 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1)))); 
+		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
+		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));		 		
  	}
  	
  	public function add(){
