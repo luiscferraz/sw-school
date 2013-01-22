@@ -1,4 +1,4 @@
-<h1 id="titulo">Atividade - <?php echo $activities['Activity']['name']; ?> 
+<h1 id="titulo">Atividade - <?php echo $activities['Activity']['id']; ?> 
 	<span class="icon-action"><?php echo $this->Html->link(
 		$this->Html->image("delete.png", array("alt" => "Deletar")),
 		array('action' => 'delete', $activities['Activity']['id']),
@@ -13,7 +13,6 @@
 
 <div id="dados"> 
 	<h2 id="titulodados"> Informações </h2>
-	<p><span>Nome: </span> <?php echo $activities['Activity']['name']; ?></p>
 	<p><span>Tipo: </span><?php echo $activities['Activity']['type']; ?></p>
 	<p><span>Status: </span><?php echo $activities['Activity']['status']; ?></p>
 	<p><span>Observações: </span><?php echo $activities['Activity']['observations']; ?></p>

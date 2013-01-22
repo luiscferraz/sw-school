@@ -5,6 +5,7 @@
 			<li><?php echo $this->Html->link('Consultor', array('action' =>'../consultants'));?></li>
 			<li><?php echo $this->Html->link('Empresa', array('action' =>'../companies'));?></li>
 			<li><?php echo $this->Html->link('Projeto', array('action' =>'../projects'));?></li>
+			<li><?php echo $this->Html->link('Atividade', array('action' =>'../activities'));?></li>
 			<li><?php echo $this->Html->link('Sair', array('action' =>'../users/logout'));?></li>
 		</ul>
 </div>
