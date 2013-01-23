@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 class EntriesController extends AppController{
 	
 	public $helpers = array ('html','form');
@@ -41,7 +41,7 @@ class EntriesController extends AppController{
 			
 		private function Nome_Atividade($id){
 			$name = $this->Entry->Activity->findById($id);
-			return $name['Activity']['type'];
+			return $name['Activity']['description'];
  		 	}
 			
  	

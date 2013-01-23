@@ -1,7 +1,7 @@
 	
 <?php 
     foreach ($activities as $activity) {        
-        $list_activities[$activity['Activity']['id']] =$activity['Activity']['type'];
+        $list_activities[$activity['Activity']['id']] =$activity['Activity']['description'];
         };                    
     if (!isset($list_activities)){
 		$list_activities['none'] = 'Nenhuma Atividade Cadastrada';
