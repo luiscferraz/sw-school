@@ -2,10 +2,9 @@
 
 	<table cellpadding="0" cellspacing="0">
 		<tr>
-			<th>Tipo</th>
+			<th>Descrição</th>
 			<th class="responsive">Status</th>
 			<th class="responsive">Data</th>
-			<th class="responsive">Horas Trabalhadas</th>
 			<th class="actions">Ações</th>
 		</tr>
 
@@ -28,7 +27,6 @@
 			<td class="tipo"><?php echo $activity['Activity']['type']; ?></td>
 			<td class="status"><?php echo $activity['Activity']['status']; ?></td>
 			<td class="data"><?php echo $activity['Activity']['date']; ?></td>
-			<td class="horas trabalhadas"><?php echo $activity['Activity']['hours_worked']; ?></td>
 
 			<div class="actions">
 				<td>

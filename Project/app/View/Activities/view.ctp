@@ -13,7 +13,7 @@
 
 <div id="dados"> 
 	<h2 id="titulodados"> Informações </h2>
-	<p><span>Tipo: </span><?php echo $activities['Activity']['type']; ?></p>
+	<p><span>Descrição: </span><?php echo $activities['Activity']['type']; ?></p>
 	<p><span>Status: </span><?php echo $activities['Activity']['status']; ?></p>
 	<p><span>Observações: </span><?php echo $activities['Activity']['observations']; ?></p>
 	<p><span>Consultores: </span></p>
@@ -28,6 +28,5 @@
 	<p><span>Hora inicial: </span> <?php echo $activities['Activity']['start_hours']; ?></p>
 	<p><span>Hora final: </span> <?php echo $activities['Activity']['end_hours']; ?></p>
 	<p><span>Data: </span> <?php echo $activities['Activity']['date']; ?></p>
-	<p><span>Horas trabalhadas: </span> <?php echo $activities['Activity']['hours_worked']; ?></p>
 </div>
 
