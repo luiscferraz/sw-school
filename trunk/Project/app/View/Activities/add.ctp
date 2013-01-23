@@ -21,9 +21,9 @@
         <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
 		echo $this->Form->create('Activities', array('action' => 'add')); ?>
             <fieldset id="Dados_projeto_pai">
-                <?php echo $this->Form->input('Activity.type', array('label' => 'Descrição: ', 'id'=>'actvType')); ?>        
+                <?php echo $this->Form->input('Activity.description', array('label' => 'Descrição: ', 'id'=>'actvDesc')); ?>        
                 <?php echo $this->Form->input('Activity.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
-                <?php echo $this->Form->input('Activity.status', array('options' => array("initiated"=>"Iniciada","in progress"=>"Em desenvolvimento", "completed"=>"Concluída"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Status: ', 'id'=>'actvStatus')); ?><br>
+                <?php echo $this->Form->input('Activity.status', array('options' => array("Iniciada","Em desenvolvimento", "Concluída", "Cancelada"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Status: ', 'id'=>'actvStatus')); ?><br>
                 <?php echo $this->Form->input('Activity.consultant1_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 1: ', 'id'=>'actvID')); ?>
 				<?php echo $this->Form->input('Activity.consultant2_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 2: ', 'id'=>'actvID')); ?>
 				<?php echo $this->Form->input('Activity.consultant3_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 3: ', 'id'=>'actvID')); ?>
