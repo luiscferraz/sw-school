@@ -1,4 +1,4 @@
-<div class="activity index">
+﻿<div class="activity index">
 
 	<table cellpadding="0" cellspacing="0">
 		<tr>
@@ -24,7 +24,7 @@
 		?>
 
 		<tr <?php echo $class; ?>>
-			<td class="tipo"><?php echo $activity['Activity']['type']; ?></td>
+			<td class="descrição"><?php echo $activity['Activity']['description']; ?></td>
 			<td class="status"><?php echo $activity['Activity']['status']; ?></td>
 			<td class="data"><?php echo $activity['Activity']['date']; ?></td>
 

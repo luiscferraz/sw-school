@@ -13,7 +13,7 @@
 
 <div id="dados"> 
 	<h2 id="titulodados"> Informações </h2>
-	<p><span>Descrição: </span><?php echo $activities['Activity']['type']; ?></p>
+	<p><span>Descrição: </span><?php echo $activities['Activity']['description']; ?></p>
 	<p><span>Status: </span><?php echo $activities['Activity']['status']; ?></p>
 	<p><span>Observações: </span><?php echo $activities['Activity']['observations']; ?></p>
 	<p><span>Consultores: </span></p>
