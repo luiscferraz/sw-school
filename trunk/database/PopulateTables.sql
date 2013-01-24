@@ -1,11 +1,13 @@
-INSERT INTO `users` (`id`, `username`, `password`, `type`, `consultant_id`) VALUES
-(1, 'admin', 'a759fb1212ff39a9948a0d325d5638d39eb62fa3', 'adm', NULL),
-(2, 'rose', 'f4465763c4eb760d104dc365a6045de47e759ed2', 'cons', 1),
-(3, 'mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 2),
-(4, 'armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 3),
-(5, 'demetria', '1bf62359c19352fd3613f99c88285af4edb96856', 'cons', 4),
-(6, 'winifred', '8d18311af7390e2f5d10c6b09821c14bd2bf03ae', 'cons', 5);
+INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
+('admin', 'a759fb1212ff39a9948a0d325d5638d39eb62fa3', 'adm', 1),
+('rose', 'f4465763c4eb760d104dc365a6045de47e759ed2', 'cons', 2),
+('mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 3),
+('armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 4),
+('demetria', '1bf62359c19352fd3613f99c88285af4edb96856', 'cons',5),
+('winifred', '8d18311af7390e2f5d10c6b09821c14bd2bf03ae', 'cons', 6);
+-- A senha é o nome do consultor
 
+INSERT INTO `swsdb`.`consultants` (`name`) VALUES ('Admin');
 INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES ('041.542.248-59','Rose Farrell Keller','M4H7BJ','(81)5071-4315','(81)1414-1780','dictum.placerat@consequatdolorvitae.edu', '0');
 INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES ('501.556.822-37','Mia Snyder Jennings','P6F0UQ','(81)2551-0791','(81)8979-3850','fermentum.fermentum.arcu@non.ca', '0');
 INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES ('912.683.647-54','Armand Mckay Grimes','I2E2ZE','(81)7877-5995','(81)8998-2956','erat@arcuVestibulumante.edu', '0');
