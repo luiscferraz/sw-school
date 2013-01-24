@@ -32,6 +32,6 @@ INSERT INTO `activities` (`id`, `start_hours`, `end_hours`, `date`, `observation
 (1, '10:00:00', '16:00:00', '15/01/2013', 'Varredura nos servidores e fitas de backups', 'Verificacao da qualidade do armazenamento fisico', 'Iniciada', 1, 1, 2, 3, 5, 0),
 (2, '08:00:00', '10:00:00', '28/01/2013', 'Verificar distancia entre os pontos e as situacoes adversas', 'Estudo de viabilidade de conexao com fibra otica', 'Em desenvolvimento', 3, 1, 4, NULL, NULL, 0);
 
-INSERT INTO `entries` (`id`, `date`, `type_consulting`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `removed`) VALUES
-(1, '10/01/2013', 'A', 10, 'A qualidade estava excelente', 2, 1, 0),
-(2, '19/01/2013', 'C', 5, 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 0);
+INSERT INTO `entries` (`id`, `date`, `type_consulting`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approve`, `removed`) VALUES
+(1, '10/01/2013', 'A', 10, 'A qualidade estava excelente', 2, 1, 0, 0),
+(2, '19/01/2013', 'C', 5, 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 0, 0);
