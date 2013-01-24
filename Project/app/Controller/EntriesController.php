@@ -36,8 +36,13 @@ class EntriesController extends AppController{
 	
 	 	private function Nome_Consultor_Logado($id){
 			$name = $this->Entry->Consultant->findById($id);
+			if (!$name){
+			return '';
+			}
+			else{
 			return $name['Consultant']['name'];
  		 	}
+		}
 			
 		private function Nome_Atividade($id){
 			$name = $this->Entry->Activity->findById($id);
