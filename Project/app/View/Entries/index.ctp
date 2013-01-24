@@ -2,11 +2,11 @@
 
 	<table cellpadding="0" cellspacing="0">
 		<tr>
-			<th>Tipo</th>
-			<th class="responsive">Data</th>
-			<th class="responsive">Horas Trabalhadas</th>
-			<th class="responsive">Consultor</th>
 			<th class="responsive">Atividade</th>
+			<th class="responsive">Consultor</th>
+			<th>Tipo</th>
+			<th class="responsive">Horas Trabalhadas</th>
+			<th class="responsive">Data</th>			
 			<th class="actions">Ações</th>
 		</tr>
 
@@ -26,11 +26,14 @@
 		?>
 
 		<tr <?php echo $class; ?>>
-			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
-			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
-			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
 			<td class="atividade"><?php echo $entry['Activity']['description']; ?></td>
-			<td class="consultor"><?php echo $entry['Consultant']['name']; ?></td
+			<td class="consultor"><?php echo $entry['Consultant']['name']; ?></td>
+			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
+			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
+			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
+			
+			
+			
 
 			<div class="actions">
 				<td>
