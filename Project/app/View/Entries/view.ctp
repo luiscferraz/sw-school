@@ -19,8 +19,9 @@
 
 <div id="dados">
 	<h2 id="titulodados">Horários</h2>
-	<p><span>Data: </span> <?php echo $entries['Entry']['date']; ?></p>
 	<p><span>Horas trabalhadas: </span> <?php echo $entries['Entry']['hours_worked']; ?></p>
+	<p><span>Data: </span> <?php echo $entries['Entry']['date']; ?></p>
+	
 </div>
 
 

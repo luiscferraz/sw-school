@@ -8,7 +8,7 @@ class EntriesController extends AppController{
  	public function index(){
 		$this->set('title_for_layout', 'Apontamento');
  		$this -> layout = 'index';
- 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1)))); 
+ 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1),'order'=>array('Entry.hours_worked')))); 
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));		 		
  	}
@@ -89,6 +89,8 @@ class EntriesController extends AppController{
 		$Apontamento =  $this->Entry->findById($id);
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($Apontamento['Entry']['consultant_id']));
 		$this -> set ('nome_atividade', $this-> Nome_Atividade($Apontamento['Entry']['activity_id']));
+		
+		
 		
 	    if ($this->request->is('get')) {
 	        $this->set('entries', $this->Entry->read());
