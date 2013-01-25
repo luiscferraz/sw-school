@@ -73,9 +73,12 @@ array('escape'=>false),"Você quer excluir realmente ?");?>
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Sponsor']['phone'];
+			echo $company['Sponsor']['phone1'];
 		?></p>
-		
+		<p><?php 
+			echo 'Celular: ';
+			echo $company['Sponsor']['phone2'];
+		?></p>
 		<p><?php 
 			echo 'Email: ';
 			echo $company['Sponsor']['email'];
@@ -95,9 +98,12 @@ array('escape'=>false),"Você quer excluir realmente ?");?>
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Financial']['phone'];
+			echo $company['Financial']['phone1'];
 		?></p>
-		
+		<p><?php 
+			echo 'Celular: ';
+			echo $company['Financial']['phone2'];
+		?></p>
 		<p><?php 
 			echo 'Email: ';
 			echo $company['Financial']['email'];
@@ -117,9 +123,12 @@ array('escape'=>false),"Você quer excluir realmente ?");?>
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Sepg']['phone'];
+			echo $company['Sepg']['phone1'];
 		?></p>
-		
+		<p><?php 
+			echo 'Celular: ';
+			echo $company['Sepg']['phone2'];
+		?></p>
 		<p><?php 
 			echo 'Email: ';
 			echo $company['Sepg']['email'];
