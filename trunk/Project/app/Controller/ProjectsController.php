@@ -19,9 +19,7 @@
  		$this-> set ('companies',$this->Project->Company->find('all', array('conditions'=> array('Company.id =' => 'Project.company_id'))));		 
  	}
  	public function index2(){
- 		$this->set('title_for_layout', 'Projetos NOVO');
- 		$this ->layout='index2';
- 		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
+
  	}
  	
  	private function listProjectActivities($project_id){
