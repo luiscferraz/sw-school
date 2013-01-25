@@ -223,6 +223,23 @@ DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
 
 -- -----------------------------------------------------
+-- Table `swsdb`.`attachments`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `swsdb`.`attachments` ;
+
+CREATE  TABLE IF NOT EXISTS `swsdb`.`attachments` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `activity_id` INT ,
+  `file_name` VARCHAR(20),
+  `file` BLOB,  
+  `removed` TINYINT(1),
+  
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+-- -----------------------------------------------------
 -- Table `swsdb`.`entries`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `swsdb`.`entries` ;
