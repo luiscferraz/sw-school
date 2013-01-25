@@ -19,7 +19,7 @@
  		$this-> set ('companies',$this->Project->Company->find('all', array('conditions'=> array('Company.id =' => 'Project.company_id'))));		 
  	}
  	public function index2(){
-
+ 		$this -> layout = 'base';
  	}
  	
  	private function listProjectActivities($project_id){
