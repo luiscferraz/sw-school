@@ -575,6 +575,26 @@ p {
 	padding-left: 35px;
 }
 
+
+#menuEsquerda {
+	height: 130%;
+	width: 35%;
+	margin-left: -10%;
+	background-color: #cae8ea;
+	font-size: 14px;
+}
+
+#tituloArvore {
+	margin-top: 30%;
+	color: #5f9ea0;
+	margin-bottom: 3%;
+}
+
+.arvore {
+	width: 600px;
+}
+
+
 /*=====Abas=======*/
 .TabControl{ 
     padding-left: 30px;
@@ -900,6 +920,18 @@ p {
 	height: 40px;
 	margin-top: 20px;
 }
+
+#projetosArvore {
+	width: 30%;
+}
+
+#arvoreLateral {
+	float: left;
+	width: 36%;
+	padding: none;
+}
+
+
 
 /* =======================
 ==========================
