@@ -79,28 +79,7 @@ function addConsultorAlocado(id,name){
 	var idconsultor = id;
 	$.get('../AjaxAddConsultant/'+idprojeto+'/'+idconsultor,null,
 		function(data) {   
-			$('.load').remove();
-			var html = 	'<tr>'+
-					'<td id="nameTableProject">'+name+' <span id="id-projectconsultant">'+data+'</span></td>'+
-					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-					'<td class="edit"><p></p> <textarea style="display:none"></textarea></td>'+
-					'<td>'+
-						'<div id="actionsProject">'+
-						'<img src="'+limparUrl('img/save.png')+'" alt="Salvar Consultor" title="Salvar Consultor" onclick="deleteGerente()"/>'+
-						'<img src="'+limparUrl('img/delete.png')+'" alt="Deletar consultor" title="Deletar Consultor" onclick="deleteGerente()"/>'+
-						'</div>'+
-					'</td>'+
-					
-					'</tr>'
-					
-			$('table').append(html);
-			$('.fancybox-wrap').remove();
-			$('#fancybox-overlay').remove();	
-			$('#bt-add-gerente').hide();
+			location.reload();
 	})
 }
 
@@ -160,7 +139,9 @@ function listConsultores (){
 
 function salvar (obj) {
 	var id = $(obj).attr('id');
+
 	var classe = $(obj).attr('class');
+	alert(id+'/'+classe);
 	var horaa = $('#'+id+' .hora-a').children('textarea').val();
 	var horab = $('#'+id+' .hora-b').children('textarea').val();
 	var horac = $('#'+id+' .hora-c').children('textarea').val();

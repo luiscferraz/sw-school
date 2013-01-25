@@ -6,7 +6,7 @@
 	<table cellpadding="0" cellspacing="0" id="<?php echo $id_projeto; ?>">
 		<tr>
 			<th id="nameProject">Nome</th>
-			<th>Valor Horas A </th>
+			<th>Valor Hora A </th>
 			<th>Valor Hora B </th>
 			<th>Valor Hora C </th>
 			<th>Valor Hora A Grupo </th>
@@ -17,10 +17,14 @@
 
 		<?php
 			
+
+			//print_r($nameConsultants);
+
 			$i = 0;
 			foreach ($consultants as $consultant) 
 			{					
 				
+
 		?>
 
 		<tr id="<?php echo $consultant['ProjectConsultant']['consultant_id']; ?>"> 
@@ -61,7 +65,7 @@
 			<td>
 				<div id="actionsProject">
 					<?php //echo $this->Html->link(
-					echo $this->Html->image("save.png", array('alt' => 'Salvar','title' => 'Salvar','id'=>$consultant['ProjectConsultant']['project_id'],'class'=>$consultant['ProjectConsultant']['id'], 'onclick'=>'salvar(this)')) //, array('#'),
+					echo $this->Html->image("save.png", array('alt' => 'Salvar','title' => 'Salvar','id'=>$consultant['ProjectConsultant']['consultant_id'],'class'=>$consultant['ProjectConsultant']['id'], 'onclick'=>'salvar(this)')) //, array('#'),
 					//array('escape'=>false, 'id'=>'link'));
 					?>
 					

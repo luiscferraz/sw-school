@@ -34,6 +34,7 @@ $('document').ready(function(){
 	$("#phone_financial").mask("(99)9999-9999");
 	$("#phone_sponsor").mask("(99)9999-9999");
 	$("#phone_sepg").mask("(99)9999-9999");		
+	$("#hora").mask("99:99");		
 	
 	//end mascaras
 

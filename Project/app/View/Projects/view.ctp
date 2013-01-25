@@ -28,6 +28,7 @@
 					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => '../companies/view', $project['Project']['company_id']), array('escape'=>false, 'id'=>'link'))?>
 	
 		</p>
+		<p><span>Gerente de projeto: </span><?php echo $nameConsultant; ?></p>
 	</fieldset>
 
 	<fieldset id="ViewhoraIndiv">
