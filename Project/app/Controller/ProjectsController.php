@@ -21,8 +21,7 @@
  	public function index2(){
  		$this -> layout = 'base';
  		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
-		$this->listProjectActivities('Project.id');
-		$this->listActivityEntries('Project.id','Activity.id');
+ 		$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
  	}
  	
  	private function listProjectActivities($project_id){
@@ -105,7 +104,6 @@
         
         $this -> set('nameCompany', $this->GetNameCompany($Projects['Project']['company_id']));
         $this -> set('nameProjectFather', $this->GetNameProjectFather($Projects['Project']['parent_project_id']));
-        $this -> set('nameConsultant', $this->GetNameConsultant($Projects['Project']['consultant_id']));
         $this ->set('project',$Projects);
  	}
  	
@@ -123,12 +121,7 @@
 	 		$this-> set('consultants',$this->Project->ProjectConsultant->find('all',array('conditions'=> array('project_id =' => $id))));
 	 		$this -> set('nameProject',$this->GetNameProjectFather($id));
 	 		$this -> set('id_projeto',$id);
-	 		//$this -> set('nameConsultants', $this->Project->Consultant->find('all'));
  		}	
- 	}
-
- 	public function nameConsultants(){
- 		
  	}
  	
  	public function saveProjectConsultant(){
@@ -140,12 +133,6 @@
  	private function GetNameCompany($id){
  		$name = $this->Project->Company->findById($id);
  		return $name['Company']['name'];
- 		
- 	}
- 	//retorna o nome do consultor
- 	private function GetNameConsultant($id){
- 		$name = $this->Project->Consultant->findById($id);
- 		return $name['Consultant']['name'];
  		
  	}
  	
@@ -197,7 +184,7 @@
 		$consultants = $this->Project->Consultant->find('all');
 		$this-> set('consultants', $consultants);
 	}
-
+	
 	public function AjaxAddConsultant($project_id = null,$consultant_id = null){
 		$this->layout = 'ajax';
 		$this->Project->ProjectConsultant->query("INSERT INTO project_consultants  (project_id,consultant_id) VALUES ('" . $project_id . "', '" . $consultant_id. "')");
