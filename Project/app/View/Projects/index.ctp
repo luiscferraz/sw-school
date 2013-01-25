@@ -31,7 +31,7 @@
 			<td class="sigla responsive"><?php echo $project['Project']['acronym']; ?></td>
 			<td class="empresa responsive"><?php echo $project['Company']['name']; ?></td>
 			<td class=" horas responsive"><?php  echo $project['Project']['a_hours_individual']+$project['Project']['b_hours_individual']+$project['Project']['c_hours_individual']; ?>h</td>
-			<td class=" horas responsive"><?php  echo $project['Project']['b_hours_group']+$project['Project']['b_hours_group']+$project['Project']['c_hours_group']; ?>h</td>
+			<td class=" horas responsive"><?php  echo $project['Project']['a_hours_group']+$project['Project']['b_hours_group']+$project['Project']['c_hours_group']; ?>h</td>
 			<td>
 				<div id="actionsProject">
 					<?php echo $this->Html->link(
