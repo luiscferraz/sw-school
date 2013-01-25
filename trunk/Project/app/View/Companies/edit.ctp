@@ -38,7 +38,8 @@
             <?php
                 echo $this->Form->input('Sponsor.id', array('type' => 'hidden'));
                 echo $this->Form->input('Sponsor.name', array('label' => 'Nome:'));
-                echo $this->Form->input('Sponsor.phone', array('label' => 'Telefone:', 'id' => 'phone_sponsor'));
+                echo $this->Form->input('Sponsor.phone1', array('label' => 'Telefone:', 'id' => 'phone_sponsor1'));
+                echo $this->Form->input('Sponsor.phone2', array('label' => 'Celular: ', 'id'=>'phone_sponsor2'));
                 echo $this->Form->input('Sponsor.email', array('label' => 'Email:'));
             ?>
         </fieldset>
@@ -48,7 +49,8 @@
             <?php
                 echo $this->Form->input('Financial.id', array('type' => 'hidden'));
                 echo $this->Form->input('Financial.name', array('label' => 'Nome:'));
-                echo $this->Form->input('Financial.phone', array('label' => 'Telefone:', 'id' => 'phone_financial'));
+                echo $this->Form->input('Financial.phone1', array('label' => 'Telefone:', 'id' => 'phone_financial1'));
+                echo $this->Form->input('Financial.phone2', array('label' => 'Celular: ', 'id'=>'phone_financial2'));
                 echo $this->Form->input('Financial.email', array('label' => 'Email:'));
             ?>
         </fieldset>
@@ -58,7 +60,8 @@
             <?php
                 echo $this->Form->input('Sepg.id', array('type' => 'hidden'));
                 echo $this->Form->input('Sepg.name', array('label' => 'Nome:'));
-                echo $this->Form->input('Sepg.phone', array('label' => 'Telefone:', 'id' => 'phone_sepg'));
+                echo $this->Form->input('Sepg.phone1', array('label' => 'Telefone:', 'id' => 'phone_sepg1'));
+                echo $this->Form->input('Sepg.phone2', array('label' => 'Celular: ', 'id'=>'phone_sepg2'));
                 echo $this->Form->input('Sepg.email', array('label' => 'Email:'));
             ?>
         </fieldset>
