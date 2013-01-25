@@ -36,7 +36,7 @@
         			<?php echo $this->Form->input('User.password', array('label' => 'Senha: ', 'id' => 'senha','required'=>'required')); ?>
         			<p></p>
         			<?php echo $this->Form->input('User.type', array('label' => 'Usuário: ','required'=>'required', 'empty' => 'Selecione', 'id' => 'tipousuario',
-            		'options' => array('adm' => 'Admin', 'cons' => 'Consultor'))); ?>
+            		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
  
     </fieldset>
 

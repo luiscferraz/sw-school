@@ -29,6 +29,7 @@ COLLATE = utf8_general_ci;
 
 -- -----------------------------------------------------
 -- Table `swsdb`.`users`
+-- consultor, admin, gerente financeiro, gerente de consultoria, gerente de relacionamento
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `swsdb`.`users` ;
 
@@ -36,7 +37,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `username` VARCHAR(20) NOT NULL ,
   `password` VARCHAR(40) NOT NULL ,
-  `type` ENUM('cons', 'adm') NOT NULL ,
+  `type` ENUM('cons', 'admin','fin_manager','cons_manager','rel_manager') NOT NULL ,
   `consultant_id` INT NULL ,
   PRIMARY KEY (`id`, `username`))
 ENGINE = InnoDB
