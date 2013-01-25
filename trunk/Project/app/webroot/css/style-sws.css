@@ -42,7 +42,7 @@ body {
 	padding:0px;
     font-family: Verdana;
     background-color: #1fa0b7;
-    background-image:url('../img/light_noise_diagonal.png');
+    background-image:url(../img/light_noise_diagonal.png);
     line-height: 24px; 
 }
 
@@ -461,11 +461,7 @@ submit input{
 	margin-left: 5%;
 	font:normal 20px/1.1em arial;
 }
-div.left {
-}
 
-div.right {
-}
 
 p {
 
@@ -595,83 +591,6 @@ p {
 }
 
 
-/*=====Abas=======*/
-.TabControl{ 
-    padding-left: 30px;
-	float: left;
-	border-width: 30px;
-	width: 46%;
-	margin-left: 0px;
-    overflow:hidden;
-    height:300px;
-}
-.TabControl #header{  
-    overflow:hidden; 
-    cursor:hand;
-}
-.TabControl #content{ 
-    
-    overflow:hidden; 
-     
-}
-.TabControl .abas{
-    display:inline;
-    background-color: #bcdae0;
-}
-.TabControl .abas li{
-	list-style-type:none;
-    float:left;
-    background-color: #bcdae0;
-}
-.aba{
-    width:100px; 
-    height:30px;
-    background-color: #5f999b; 
-    border:solid 1px; 
-    border-radius:5px 5px 0 0; 
-    text-align:center; 
-    padding-top:5px; 
-    background-color: #bcdae0;
-
-}
-
-.ativa{
-
-    border:solid 1px; 
-    border-radius:5px 5px 0 0; 
-    text-align:center; 
-    padding-top:5px; 
-    background-color: #bcdae0;
- 
-}
-.ativa span, .selected span{
-    color:#fff;
-}
-.TabControl #content{
-	border-top: 10px;
-	background-color: #bcdae0;
-}
-.TabControl .conteudo{
- 	width: 60%; 
-    display:none;
-    background-color: #bcdae0; 
-    margin-top: -0.5px;
-    margin-left: -472px;
-    padding-bottom: 10px;
-}
-.selected{
-
-    border:solid 1px; 
-    border-radius:5px 5px 0 0; 
-    text-align:center; 
-    padding-top:5px; 
-}
-
-.pesquisa {
-	width: 45%;
-	margin:0px 10px 30px;
-}
-
 /*========View=========*/
 .icon-action{
 	float: right;
@@ -726,8 +645,6 @@ p {
 #colorview{
 	width:20%;
 }
-
-
 
 #dados_pessoais{
 	padding-left: 20px;
@@ -954,10 +871,6 @@ p {
 	width: 74.5%;
 	margin-left: 140px;
 }
-
-
-
-
 
 
 /*Layout responsivo ;)*/
