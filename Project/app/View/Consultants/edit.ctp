@@ -16,7 +16,7 @@
 			</fieldset>
 			</div>
 			<div class="right">
-			<fieldset id="endereço">
+			<fieldset id="enderecoAddConsultor">
 				<legend class="legenda">Endereço</legend>
 					<?php echo $this->Form->input('Address.id', array('type' => 'hidden')); ?>
 					<?php echo $this->Form->input('Address.address', array('label' => 'Endereço: ','required'=>'required', 'id'=>'address')); ?>

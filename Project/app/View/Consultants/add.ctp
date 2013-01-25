@@ -16,7 +16,7 @@
 				</fieldset>
 			</div>
 			<div class="right">
-				<fieldset id="endereço">
+				<fieldset id="enderecoAddConsultor">
 					<legend class="legenda">Endereço</legend>
 
 
