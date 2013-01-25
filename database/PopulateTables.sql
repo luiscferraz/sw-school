@@ -1,5 +1,5 @@
 INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
-('admin', 'a759fb1212ff39a9948a0d325d5638d39eb62fa3', 'adm', 1),
+('admin', 'a759fb1212ff39a9948a0d325d5638d39eb62fa3', 'admin', 1),
 ('rose', 'f4465763c4eb760d104dc365a6045de47e759ed2', 'cons', 2),
 ('mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 3),
 ('armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 4),
