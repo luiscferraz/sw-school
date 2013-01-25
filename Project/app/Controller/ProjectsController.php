@@ -20,6 +20,9 @@
  	}
  	public function index2(){
  		$this -> layout = 'base';
+ 		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
+		$this->listProjectActivities('Project.id');
+		$this->listActivityEntries('Project.id','Activity.id');
  	}
  	
  	private function listProjectActivities($project_id){
