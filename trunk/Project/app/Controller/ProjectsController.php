@@ -18,6 +18,20 @@
  		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
  		$this-> set ('companies',$this->Project->Company->find('all', array('conditions'=> array('Company.id =' => 'Project.company_id'))));		 
  	}
+ 	public function index2(){
+ 		$this->set('title_for_layout', 'Projetos NOVO');
+ 		$this ->layout='index2';
+ 		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
+ 	}
+ 	
+ 	private function listProjectActivities($project_id){
+ 		$this->set('activities',$this->Project->Activity->find('all',array('conditions'=>array('Activity.project_id =' =>$project_id))));
+ 	}
+ 	
+ 	private function listActivityEntries($project_id,$activity_id){
+ 		$this->set('entries',$this->Project->Activity->Entry->find('all',array('conditions'=>array('Activity.project_id =' =>$project_id,'Entry.activity_id =' => $activity_id))));
+ 		
+ 	}
  	
  	public function add(){
  		$this->layout = 'base';
