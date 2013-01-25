@@ -25,9 +25,8 @@
         <?php echo $this->Form->create('Projects', array('action' => 'add')); ?>
             <fieldset id="dadosProjeto">
             <legend class="legenda">Dados</legend>
-                        <?php echo $this->Form->input('Project.name', array('label' => 'Nome: ','required'=>'required', 'id'=>'nameProject')); ?>
+                        <?php echo $this->Form->input('Project.name', array('label' => 'Sigla: ','required'=>'required', 'id'=>'nameProject')); ?>
                         <?php echo $this->Form->input('Project.description', array('type'=>'textarea', 'label' => 'Descrição: <br>', 'id'=>'description')); ?>
-                        <?php echo $this->Form->input('Project.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronymProject')); ?>
                         <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: ', 'id' => 'parent_project')); ?>
                         <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa: ', 'id' => 'company', 'required'=>'required')); ?><br>
                         
