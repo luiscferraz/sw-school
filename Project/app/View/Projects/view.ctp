@@ -19,9 +19,8 @@
 <div> 
 	<fieldset id="dadosProjetoView">
 		<h2 id="titulodados"> Dados Projeto </h2>
-		<p><span>Nome: </span> <?php echo $project['Project']['name']; ?></p>
-		<p><span>Descrição: </span><?php echo $project['Project']['description']; ?></p>
-		<p><span>Abreviação: </span><?php echo $project['Project']['acronym']; ?></p>	
+		<p><span>Sigla: </span> <?php echo $project['Project']['name']; ?></p>
+		<p><span>Descrição: </span><?php echo $project['Project']['description']; ?></p>	
 		<p><span>Projeto Pai: </span><?php echo $nameProjectFather; ?></p>
 		<p><span>Empresa: </span><?php echo $nameCompany; ?>
 		<?php echo $this->Html->link(
