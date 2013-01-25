@@ -14,14 +14,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-
-/* =======================
-==========================
-===== ESTILOS GERAIS =====
-==========================
-==========================*/
-
-
+/* ===============ESTILOS GERAIS=============*/
 
 *{
 	font-family: Verdana !important;
@@ -59,15 +52,14 @@ fieldset{
 	border-radius: 8px 8px 8px 8px;
 }
 
-
 td, th {
 	letter-spacing: 1px;
 	border-left: 1px solid #C1DAD7;
 	border-right: 1px solid #C1DAD7;
 	border-bottom: 1px solid #C1DAD7;
 	border-top: 1px solid #C1DAD7;
-
 }
+
 tr{
 	vertical-align: middle;
 	text-align: center;
@@ -94,35 +86,31 @@ th {
 	background: #CAE8EA;
 }
 
-
 input{
 	width: 100%;
 	height: 20px;
 }
+
 select{
 	width: 400px;
 	height: 20px;
 	background-color: #FFFFFF;
 }
+
 legend{
 	font-size: 22px;
 }
+
 h2 {
 	color:#CCC;
 }
+
 p span {
 	font-weight: 600;
 	font-size: 80%;
 }
 
-
-
-/* =======================
-==========================
-======== CLASSES =========
-==========================
-==========================*/
-
+/* ================CLASSES=============*/
 
 .load {
 	position:absolute;
@@ -150,20 +138,17 @@ p span {
     font-size:60%;
 }
 
-
 .info {
     color: #00529B;
     background-color: #BDE5F8;
     background-image: url('../img/info.png');
 }
 
-
 .success {
     color: #4F8A10;
     background-color: #DFF2BF;
     background-image:url('../img/success.png');
 }
-
 
 .warning {
     color: #9F6000;
@@ -178,15 +163,14 @@ p span {
     background-image: url('../img/error.png');
 }
 
-
 .tabela-vazia{
 	margin-right: 22px;
 	margin-left: 5px;
 }
+
 .cpf{
 	width: 150px;
 }
-
 
 .botao, #botaoRestaurar{
 	 text-decoration:none;
@@ -209,13 +193,8 @@ p span {
   	 -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.2);
 }
 
+/* ==================MENU PRINCIPAL===============*/
 
-
-/* =======================
-==========================
-==== MENU PRINCIPAL ======
-==========================
-==========================*/
 #Menu_Home{
 	z-index:99999;
     background-color: #010101;
@@ -288,35 +267,9 @@ p span {
 	 margin-right: 5px;
 }
 
+/*==========BOTÕES============*/
 
-/* =======================
-==========================
-====== CONSULTOR =========
-==========================
-==========================*/
-
-
-/*----- Add ------ */
-
-.alert{
-	font-size: 60%;
-	color:red;
-}
-.conteudo {
-	position: absolute;
-	width: 80%;
-	left:50%;
-	margin-left:-40%;
-	padding-bottom:60px;
-	margin-top: 15px;
-}
-
-.telefone{
-	width: 130px;
-}
-
-
-.submit input, #botaoRestaurar{
+.submit input{
 	clear:both;
 	width: 99%;
 	height: 50px;
@@ -346,14 +299,49 @@ p span {
 	color:#1FA0B7;
 }
 
+
+/*========CONSULTOR =========*/
+
+
+/*----- Add ------ */
+
+.alert{
+	font-size: 60%;
+	color:red;
+}
+
+.conteudo {
+	position: absolute;
+	width: 80%;
+	left:50%;
+	margin-left:-40%;
+	padding-bottom:60px;
+	margin-top: 15px;
+}
+
 .actions{
 	width: 80px !important;
 }
 
-.nome{
-	width: 300px;
+#dados_pessoais{
+	padding-left: 20px;
+	float: left;
+	border-width: 30px;
+	width: 46%;
+	border: 30px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
 }
 
+#endereço{
+	padding-left: 20px;
+	float: left;
+	border-width: 30px;
+	width: 46%;
+	border: 30px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
+}
 
 /*========View=========*/
 
@@ -368,16 +356,11 @@ p span {
 	text-decoration: none;
 }
 
-/* =======================
-==========================
-======== EMPRESA =========
-==========================
-==========================*/
+/* ============EMPRESA============*/
 
 .tituloCompanyView{
 	color: #5F9EA0;
 }
-
 
 div.dadosEmpresa {
 	float: left;
@@ -414,16 +397,6 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	position: absolute;
 }
 
-#botaoHome {
-	margin-left: -10px;
-	margin-top: 80px;
-	position: absolute;
-	background-color: #010101;
-	display: block;
-	padding: 10px 10px 10px 20px;
-	border-radius: 0px 22px 22px 0px ;
-}
-
 #botaoEditar{
 	 margin:-20px;
 	 float: right;
@@ -446,15 +419,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 
-/*--- addempresa ---*/
-submit input{
-	float: left;
-	margin-left: 13%;
-	margin-right: 5%;
-	width: 30%;
-	font:normal 20px/1.1em;
-}
-
+/*========ADD EMPRESA=======*/
 
 #botaoRestaurarOLD {
 	width: 30%;
@@ -462,17 +427,9 @@ submit input{
 	font:normal 20px/1.1em arial;
 }
 
-
-p {
-
-	font: 16px "Trebuchet MS", Verdana, Arial, Helvetica,
-	sans-serif;
-}
-
 #companyLogo {
 	margin-bottom: -30px;
 }
-
 
 #dadosEmpresa,#dadosEndereco{
 	padding-left: 20px;
@@ -483,6 +440,7 @@ p {
 	border-color: #000;
 	background-color: #bcdae0;
 }
+
 #dadosSponsor{
 	margin-top: -100px;
 	padding-left: 20px;
@@ -492,8 +450,8 @@ p {
 	border: 30px;
 	border-color: #000;
 	background-color: #bcdae0;
-
 }
+
 #dadosFinanceiros{
 	padding-left: 20px;
 	float: left;
@@ -502,8 +460,8 @@ p {
 	border: 30px;
 	border-color: #000;
 	background-color: #bcdae0;
-
 }
+
 #dadosSepg{
 	margin-top: -100px;
 	padding-left: 20px;
@@ -520,13 +478,7 @@ p {
 	margin-left: 0%;
 }
 
-/* =======================
-==========================
-======== PROJETOS =========
-==========================
-==========================*/
-
-
+/* ===========PROJETOS===========*/
 
 .sigla{
 	width: 70px;
@@ -571,7 +523,6 @@ p {
 	padding-left: 35px;
 }
 
-
 #menuEsquerda {
 	height: 130%;
 	width: 35%;
@@ -592,6 +543,7 @@ p {
 
 
 /*========View=========*/
+
 .icon-action{
 	float: right;
 	padding-left: 1%;
@@ -644,26 +596,6 @@ p {
 
 #colorview{
 	width:20%;
-}
-
-#dados_pessoais{
-	padding-left: 20px;
-	float: left;
-	border-width: 30px;
-	width: 46%;
-	border: 30px;
-	border-color: #FFFFFF;
-	background-color: #bcdae0;
-}
-
-#endereço{
-	padding-left: 20px;
-	float: left;
-	border-width: 30px;
-	width: 46%;
-	border: 30px;
-	border-color: #FFFFFF;
-	background-color: #bcdae0;
 }
 
 #dados_projeto{
@@ -848,14 +780,7 @@ p {
 	padding: none;
 }
 
-
-
-/* =======================
-==========================
-======== ATIVIDADES =========
-==========================
-==========================*/
-
+/* ==================ATIVIDADES================*/
 
 #actvObs  {
 	width: 99%;
@@ -874,7 +799,6 @@ p {
 
 
 /*Layout responsivo ;)*/
-
 
 @media all and (max-width: 480px)  {
 	/* -- tabela - projetos --- */
