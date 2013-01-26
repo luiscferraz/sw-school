@@ -13,6 +13,8 @@ $('document').ready(function(){
 			var hr = $(this).val();
 			$(this).siblings('p').html(hr);
 		})
+
+
 })
 
 
@@ -153,3 +155,20 @@ function salvar (obj) {
 					$('.load').remove();
 			})
 }
+
+
+
+
+//========== nova empresa -=======//
+
+
+function attCompanies(){
+	$.get('AjaxListCompanies',null,
+				function(data) {   
+					$('.load').remove();
+					$('#company').html(data);
+		})
+}
+
+
+
