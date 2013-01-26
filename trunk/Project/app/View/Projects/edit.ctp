@@ -46,6 +46,7 @@
                      <span id="total-de-horas">Total de horas : <p style= display:inline></p> </span><br>
             </fieldset>           
 
+            
          <fieldset id="botoesGerenteConsultor">
                 <legend>Gerente e Consultores</legend>
                     <div id="botaoGerente">
