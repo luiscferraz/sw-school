@@ -567,6 +567,16 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	font-size: 14px;
 }
 
+#frameIndex {
+	float: right;
+	width: 80%;
+	height: 570px;
+	margin-top: -250px;
+	margin-right: -100px;
+	background-color: #1fa0b7;
+    background-image:url(../img/light_noise_diagonal.png);
+}
+
 /*========View=========*/
 
 .icon-action{
