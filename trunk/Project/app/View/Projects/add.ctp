@@ -28,7 +28,9 @@
                         <?php echo $this->Form->input('Project.name', array('label' => 'Sigla: ','required'=>'required', 'id'=>'nameProject')); ?>
                         <?php echo $this->Form->input('Project.description', array('type'=>'textarea', 'label' => 'Descrição: <br>', 'id'=>'description')); ?>
                         <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: ', 'id' => 'parent_project')); ?>
-                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa: ', 'id' => 'company', 'required'=>'required')); ?><br>
+                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa: ', 'id' => 'company')); ?>
+                         <a href="#" onclick="attCompanies()" >Atualizar Empresas </a>
+                        <?php echo $this -> Html -> link ('Nova Empresa', array('action'=> '../companies/add'),array( 'target' => '_blank','onclick'=>'addCompanies()')) ?>
                         
             </fieldset>
 

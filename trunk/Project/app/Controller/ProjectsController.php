@@ -15,7 +15,7 @@
  	public function index(){
 		$this->set('title_for_layout', 'Projetos');
  		$this -> layout = 'index';
- 		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
+ 		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1,'Project.parent_project_id =' => null))));
  		$this-> set ('companies',$this->Project->Company->find('all', array('conditions'=> array('Company.id =' => 'Project.company_id'))));		 
  	}
  	public function index2(){
@@ -96,6 +96,8 @@
         
         $this -> set('nameCompany', $this->GetNameCompany($Projects['Project']['company_id']));
         $this -> set('nameProjectFather', $this->GetNameProjectFather($Projects['Project']['parent_project_id']));
+        $this -> set('nameConsultant', $this->GetNameGerent($Projects['Project']['consultant_id']));
+        $this -> set('projects', $this->Project->find('all',array('conditions' =>array('Project.parent_project_id =' =>$Projects['Project']['company_id']))));
         $this ->set('project',$Projects);
  	}
  	
@@ -125,6 +127,18 @@
  	private function GetNameCompany($id){
  		$name = $this->Project->Company->findById($id);
  		return $name['Company']['name'];
+ 		
+ 	}
+
+ 	//Retornar em string nome do projeto pai
+ 	private function GetNameGerent($id){
+ 		if ($this->Project->Consultant->findById($id)){
+ 			$name = $this->Project->Consultant-> findById($id);
+ 			return $name['Consultant']['name'];
+ 		}
+ 		else{
+ 			return '';
+ 		}
  		
  	}
  	
@@ -192,6 +206,13 @@
 												value_hour_c_individual = '" . $value_hour_c_individual . "', value_hour_a_group = '" . $value_hour_a_group . "',
 												value_hour_b_group = '" . $value_hour_b_group . "', value_hour_c_group = '" . $value_hour_c_group . "'
 												WHERE id = '" . $id . "' ");
+	}
+
+	//lista de consultores para ser alocados
+	public function AjaxListCompanies(){
+		$this->layout = 'ajax';
+		$companies = $this->Project->Company->find('all');
+		$this-> set('companies', $companies);
 	}
  }
 ?>
