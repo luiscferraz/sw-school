@@ -567,14 +567,24 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	font-size: 14px;
 }
 
-#frameIndex {
+.slidingDiv {
 	float: right;
-	width: 80%;
-	height: 570px;
-	margin-top: -250px;
-	margin-right: -100px;
-	background-color: #1fa0b7;
-    background-image:url(../img/light_noise_diagonal.png);
+    height:600px;
+    width: 450px;
+    margin-top: -300px;
+    margin-right: -100px;
+    background-color: #99CCFF;
+    padding:20px;
+    border-bottom:5px solid #3399FF;
+}
+ 
+.show_hide {
+    display:none;
+}
+
+.fieldIndexProject {
+	width: 300px;
+	font-size: 12px;
 }
 
 /*========View=========*/
