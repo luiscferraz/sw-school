@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿dad@charset "utf-8";
 /**
  *
  * CSS Base para o SWS
@@ -605,7 +605,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	border: 30px;
 	background-color: #bcdae0;
 	margin-left: -40px;
-	height: 343px;
+	height: 380px;
 }
 
 #state{
