@@ -36,4 +36,7 @@ INSERT INTO `activities` (`id`, `start_hours`, `end_hours`, `date`, `observation
 
 INSERT INTO `entries` (`id`, `date`, `type_consulting`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approve`, `removed`) VALUES
 (1, '10/01/2013', 'A', '10:00:00', 'A qualidade estava excelente', 2, 1, 0, 0),
-(2, '19/01/2013', 'C', '05:00:00', 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 0, 0);
+(2, '19/01/2013', 'C', '05:00:00', 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 0, 0),
+(3, '25/01/2013', 'B',1, 'Inviabilidade técnica',2,2,0,0 ),
+(4,'13/01/2013','C', 12 , 'Alto custo' , 2 ,2 , 0 ,0 ),
+(5, '05/01/2013' , 'A' , 7 , 'Viabialidade de custo' , 2 , 2 , 0 , 0 );
