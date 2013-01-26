@@ -1,7 +1,26 @@
 ﻿//Quando o documento (pagina) estiver Ready(carregado) ele chama as funções
 
 $('document').ready(function(){
-    
+
+
+    $('.cosultant-atividade').blur(function(){
+    	var selecionado = $(this).val();
+    	
+    	//mostrar todos os options disponiveis
+    	$('.cosultant-atividade').children('option').show();
+    	//esconder o option selecionado nos selects
+    	$('.cosultant-atividade').children('option[value='+selecionado+']').hide();
+    	//mostrar o option selecionado no select usado
+    	$(this).children('option[value='+selecionado+']').show();
+
+	    $(".cosultant-atividade").each(function() {
+	    		var selecionado = $(this).val();
+			    $('.cosultant-atividade').children('option[value='+selecionado+']').hide();
+    			$(this).children('option[value='+selecionado+']').show();
+		});
+    });
+
+
 	//Menu
 	var flag = false;
 	$('#botao_home').click(function(e){
@@ -146,3 +165,9 @@ function SomarHorasGrupoProjeto(){
 };
 
 
+
+
+
+function anularConsultant(obt){
+	$(obt).attr('id')
+}

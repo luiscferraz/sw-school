@@ -17,6 +17,7 @@
 </h1>
 
 <div> 
+	if 
 	<fieldset id="dadosProjetoView">
 		<h2 id="titulodados"> Dados Projeto </h2>
 		<p><span>Sigla: </span> <?php echo $project['Project']['name']; ?></p>
