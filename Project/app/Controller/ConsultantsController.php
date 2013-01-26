@@ -16,7 +16,7 @@
  	public function index(){
  		$this->set('title_for_layout', 'Consultores');
  		$this -> layout = 'index';
- 		$this -> set ('consultants', $this-> Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));
+ 		$this -> set ('consultants', $this-> Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1),'order'=>array('Consultant.name'))));
  	}
  	
  	public function view($id = null){
