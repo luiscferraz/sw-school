@@ -22,15 +22,7 @@
  		$this -> layout = 'base';
  		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
  		$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
- 	}
- 	
- 	private function listProjectActivities($project_id){
- 		$this->set('activities',$this->Project->Activity->find('all',array('conditions'=>array('Activity.project_id =' =>$project_id))));
- 	}
- 	
- 	private function listActivityEntries($project_id,$activity_id){
- 		$this->set('entries',$this->Project->Activity->Entry->find('all',array('conditions'=>array('Activity.project_id =' =>$project_id,'Entry.activity_id =' => $activity_id))));
- 		
+ 		//$this -> set ('entries', $this -> Project->Activity->Entry->find('all', array('conditions' => array('Entry.removed !=' => 1))));
  	}
  	
  	public function add(){

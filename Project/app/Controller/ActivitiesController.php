@@ -18,6 +18,16 @@
 		return $name['Consultant'];
 	}
 	
+	public function AjaxListFiles(){
+		$file = $this->Activity->Attachment->findAll();
+		return $file['file_name'];
+	}
+		
+	public function AjaxAttachFiles(){
+		
+	
+	}
+	
 	public function add(){
 	 	$this->layout = 'base';
 		$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
