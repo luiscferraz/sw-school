@@ -39,4 +39,6 @@ INSERT INTO `entries` (`id`, `date`, `type_consulting`, `hours_worked`, `observa
 (2, '19/01/2013', 'C', '05:00:00', 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 0, 0),
 (3, '25/01/2013', 'B',1, 'Inviabilidade técnica',2,2,0,0 ),
 (4,'13/01/2013','C', 12 , 'Alto custo' , 2 ,2 , 0 ,0 ),
-(5, '05/01/2013' , 'A' , 7 , 'Viabialidade de custo' , 2 , 2 , 0 , 0 );
+(5, '05/01/2013' , 'A' , 7 , 'Viabialidade de custo' , 2 , 2 , 0 , 0 ),
+(6,'12/01/2013','C', 10 , 'Alto custo' , 2 ,2 , 0 ,0 ),
+(7,'11/01/2013','C', 9 , 'Alto custo' , 2 ,2 , 0 ,0 );
