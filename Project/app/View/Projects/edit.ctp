@@ -32,17 +32,17 @@
 
             <fieldset id="horaGrupo">
                 <legend class="legenda">Hora em grupo</legend><br>
-                    <?php echo $this->Form->input('Project.a_hours_group', array('min'=>"1", 'max'=>"999",'label' => 'Hora A: ','id'=>'hora_a_group', 'onblur'=>'SomarHorasGrupoProjeto()', 'id'=>'horaA')); ?><br>
-                    <?php echo $this->Form->input('Project.b_hours_group', array('min'=>"1", 'max'=>"999",'label' => 'Hora B: ', 'id'=>'hora_b_group', 'onblur'=>'SomarHorasGrupoProjeto()', 'id'=>'horaB')); ?><br>
-                    <?php echo $this->Form->input('Project.c_hours_group', array('min'=>"1", 'max'=>"999",'label' => 'Hora C: ', 'id'=>'hora_c_group', 'onblur'=>'SomarHorasGrupoProjeto()', 'id'=>'horaC')); ?><br>
+                    <?php echo $this->Form->input('Project.a_hours_group', array('type'=>'text','label' => 'Hora A: ','id'=>'hora_a_group', 'onblur'=>'SomarHorasGrupoProjeto()', 'class'=>'hora')); ?><br>
+                    <?php echo $this->Form->input('Project.b_hours_group', array('type'=>'text','label' => 'Hora B: ', 'id'=>'hora_b_group', 'onblur'=>'SomarHorasGrupoProjeto()', 'class'=>'hora')); ?><br>
+                    <?php echo $this->Form->input('Project.c_hours_group', array('type'=>'text','label' => 'Hora C: ', 'id'=>'hora_c_group', 'onblur'=>'SomarHorasGrupoProjeto()', 'class'=>'hora')); ?><br>
                     <span id="total-de-horas-grupo">Total de horas : <p style=display:inline></p> </span><br>
             </fieldset>
 
             <fieldset id="horaIndiv">
                  <legend class="legenda">Hora Individual</legend><br>
-                    <?php echo $this->Form->input('Project.a_hours_individual', array('min'=>"1", 'max'=>"999",'label' => 'Hora A: ','id'=>'hora_a', 'onblur'=>'SomarHorasProjeto()', 'id'=>'horaA')); ?><br>
-                    <?php echo $this->Form->input('Project.b_hours_individual', array('min'=>"1", 'max'=>"999",'label' => 'Hora B: ', 'id'=>'hora_b', 'onblur'=>'SomarHorasProjeto()', 'id'=>'horaB')); ?><br>
-                    <?php echo $this->Form->input('Project.c_hours_individual', array('min'=>"1", 'max'=>"999",'label' => 'Hora C: ', 'id'=>'hora_c', 'onblur'=>'SomarHorasProjeto()', 'id'=>'horaC')); ?><br>
+                    <?php echo $this->Form->input('Project.a_hours_individual', array('type'=>'text','label' => 'Hora A: ','id'=>'hora_a', 'onblur'=>'SomarHorasProjeto()', 'class'=>'hora')); ?><br>
+                    <?php echo $this->Form->input('Project.b_hours_individual', array('type'=>'text','label' => 'Hora B: ', 'id'=>'hora_b', 'onblur'=>'SomarHorasProjeto()', 'class'=>'hora')); ?><br>
+                    <?php echo $this->Form->input('Project.c_hours_individual', array('type'=>'text','label' => 'Hora C: ', 'id'=>'hora_c', 'onblur'=>'SomarHorasProjeto()', 'class'=>'hora')); ?><br>
                      <span id="total-de-horas">Total de horas : <p style= display:inline></p> </span><br>
             </fieldset>           
 

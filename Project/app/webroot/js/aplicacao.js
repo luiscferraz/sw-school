@@ -1,4 +1,4 @@
-//Quando o documento (pagina) estiver Ready(carregado) ele chama as funções
+﻿//Quando o documento (pagina) estiver Ready(carregado) ele chama as funções
 
 $('document').ready(function(){
     
@@ -30,11 +30,18 @@ $('document').ready(function(){
 	$("#phone2").mask("(99)9999-9999");
 	$("#zip_code").mask("99.999-999");
 	$('#cnpj').focus();
-    $("#cnpj").mask("99.999.999/9999-99");
+        $("#cnpj").mask("99.999.999/9999-99");
 	$("#phone_financial").mask("(99)9999-9999");
 	$("#phone_sponsor").mask("(99)9999-9999");
 	$("#phone_sepg").mask("(99)9999-9999");		
-	$("#hora").mask("99:99");		
+	$("#hora").mask("99:99");
+	$("#entryHourWorked").mask("99:99");
+	$("#actvStartHour").mask("99:99");
+	$("#actvEndHour").mask("99:99");
+	$(".hora").mask("99:99")
+
+	
+		
 	
 	//end mascaras
 

@@ -668,7 +668,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	margin-left: 15px;
 }
 
-#horaA, #horaB, #horaC{
+.hora{
 	width: 40%;
 }
 
