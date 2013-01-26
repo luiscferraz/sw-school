@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /**
  *
  * CSS Base para o SWS
@@ -613,10 +613,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	border-width: 30px;
 	width: 400px;
 	border: 30px;
-	background-color: #bcdae0;
-	margin-left: -40px;
-	height: 380px;
-}
+	background-color: #bcdae0;}
 
 #state{
 	width:463px;
@@ -700,18 +697,15 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
-	width: 42.5%;
 	height: 25%;
 	float: left;
 	margin-right: 5px;
-	margin-top: 5px;
 }
 
 #ViewhoraIndiv{
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
-	width: 42.5%;
 	height: 25%;
 	float: left;
 	margin-right: 0px;
