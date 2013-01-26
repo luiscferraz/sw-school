@@ -4,7 +4,29 @@ INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
 ('mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 3),
 ('armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 4),
 ('demetria', '1bf62359c19352fd3613f99c88285af4edb96856', 'cons',5),
-('winifred', '8d18311af7390e2f5d10c6b09821c14bd2bf03ae', 'cons', 6);
+('winifred', '8d18311af7390e2f5d10c6b09821c14bd2bf03ae', 'cons', 6),
+('anapaula', '69cc369b8b75286e062194068b2a8668a5316c89', 'cons_manager', 7),
+
+('andreacarolina', '896aa27b5081d0a3133c0009ca80151dd3a4cf13', 'fin_manager', 8),
+
+('nicoleamanda', '6a5a7421043e1dbd4c10cc2afe69f34b3079173a', 'cons', 9),
+
+('gabrielle', '50a56a4567ed81049cea5f07efaece9022b0a9a5', 'cons', 10),
+
+('camila', '61980f5da456f242f7aaf3dc7a7b4f6d6b20fe74', 'cons_manager', 11),
+
+('bruna', 'bca32f42dfad38fe58159b2791864eb151a11592', 'cons', 12),
+
+('arthur', 'c37afbb8923e10e37b3d7c248f79ee96b80184ff', 'cons', 13),
+
+('nicolas', '15bc3210b8f7278d046da9eb9e90c61882790569', 'cons', 14),
+
+('angelo', '72d5d5d0adc3349239f9a2f17dd6018adcb5c9a3', 'cons', 15),
+
+('pedro', 'ad918a1ab9850dc71e4412059624d91d7711bf10', 'rel_manager', 16),
+
+('bruno', '06c5068db7fc9ab9260138fb3697735b97b1ffae', 'cons', 17);
+
 -- A senha é o nome do consultor
 
 INSERT INTO `swsdb`.`consultants` (`name`) VALUES ('Admin');
@@ -13,6 +35,33 @@ INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2
 INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES ('912.683.647-54','Armand Mckay Grimes','I2E2ZE','(81)7877-5995','(81)8998-2956','erat@arcuVestibulumante.edu', '0');
 INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES ('729.557.640-19','Demetria Salas Montgomery','O2Q5GN','(81)7204-2015','(81)2503-2971','eu@augue.com', '0');
 INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES ('552.827.822-86','Winifred Abbott Welch','D7H6VQ','(81)8830-0510','(81)1172-9073','massa.Mauris.vestibulum@Nulla.com', '0');
+INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES
+
+('063.265.175-08', 'Ana Paula Pacheco Lisboa', '#6a6ac4', '(71)3322-4545', '(71)9976-6767', 'anapaulapachecolisboa@gmail.com', 0),
+
+('823.578.345-28', 'Andrea Carolina Costa Fernandes', '#27cf62', '(85)5916-3293', '(85)9977-6655', 'carolinacostafernandes@hotmail.com', 0),
+
+('681.332.244-38', 'Nicole Amanda Rocha Ferreira', '#d9d9e0', '(21)9080-9724', '', 'nicolerferreira@gmail.com', 0),
+
+('126.547.127-45', 'Gabrielle Sousa Rodrigues', '#7a7ac7', '(87)5660-3576', '(87)8867-5654', 'gabriellesousarodrigues@yahoo.com.br', 0),
+
+('043.871.166-17', 'Camila Alves Dias Paes', '#e8e8e8', '(34)5417-3542', '(34)9354-2541', 'camilaalvesdias@gmail.com', 0),
+
+('987.160.128-01', 'Bruna Alves Martins Castro', '#28c0db', '(62)7817-5792', '(62)8817-5792', 'brunaalves@gmail.com', 0),
+
+('623.232.588-50', 'Arthur Correia Dias', '#45e651', '(16)4345-4567', '(16)8822-1345', 'arthurcdias@hotmail.com', 0),
+
+('179.579.373-22', 'Nicolas Silva Pereira Martins', '#0c8196', '(11)7700-1929', '(11)8844-0011', 'nicolassilva@yahoo.com.br', 0),
+
+('587.805.637-24', 'Angelo  Sousa Cunha Alves', '#ed0c3d', '(61)3434-5654', '(61)9441-0100', 'angelocunha@gmail.com', 0),
+
+('187.820.121-21', 'Pedro Cavalcanti Lima', '#7ff0d8', '(18)6654-8052', '', 'pedrocavalcantilima@hotmail.com', 0),
+
+('715.544.793-55', 'Bruno Pereira Sousa Passos', '#bed925', '(71)4333-1000', '(71)9775-5341', 'brunosousa@gmail.com', 0);
+
+
+ 
+
 
 INSERT INTO `swsdb`.`companies` (`cnpj`, `name`, `acronym`, `phone1`, `phone2`, `removed`) VALUES ('65.536.992/0001-11', 'empresa1', 'e1', '(81)5071-4321', '(81)8979-3467', '0');
 INSERT INTO `swsdb`.`companies` (`cnpj`, `name`, `acronym`, `phone1`, `phone2`, `removed`) VALUES ('13.355.633/0001-64', 'empresa2', 'e2', '(81)1454-1780', '(81)7377-5975', '0');
