@@ -2594,3 +2594,75 @@
 2013-01-26 18:13:51 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-27 00:42:19 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\site\sws\Project\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\site\sws\Project\lib\Cake\Model\Model.php(3164): ConnectionManager::getDataSource('default')
+#3 C:\site\sws\Project\lib\Cake\Model\Model.php(1096): Model->setDataSource('default')
+#4 C:\site\sws\Project\lib\Cake\Model\Model.php(3186): Model->setSource('users')
+#5 C:\site\sws\Project\lib\Cake\Model\Model.php(1305): Model->getDataSource()
+#6 C:\site\sws\Project\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#7 C:\site\sws\Project\lib\Cake\View\Helper\FormHelper.php(443): FormHelper->_introspectModel('User', 'fields')
+#8 C:\site\sws\Project\app\View\Users\login.ctp(3): FormHelper->create('User')
+#9 C:\site\sws\Project\lib\Cake\View\View.php(923): include('C:\site\sws\Pro...')
+#10 C:\site\sws\Project\lib\Cake\View\View.php(886): View->_evaluate('C:\site\sws\Pro...', Array)
+#11 C:\site\sws\Project\lib\Cake\View\View.php(476): View->_render('C:\site\sws\Pro...')
+#12 C:\site\sws\Project\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#13 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#14 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-01-27 00:42:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 00:42:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 00:53:10 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\site\sws\Project\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\site\sws\Project\lib\Cake\Model\Model.php(3164): ConnectionManager::getDataSource('default')
+#3 C:\site\sws\Project\lib\Cake\Model\Model.php(1096): Model->setDataSource('default')
+#4 C:\site\sws\Project\lib\Cake\Model\Model.php(3186): Model->setSource('users')
+#5 C:\site\sws\Project\lib\Cake\Model\Model.php(1305): Model->getDataSource()
+#6 C:\site\sws\Project\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#7 C:\site\sws\Project\lib\Cake\View\Helper\FormHelper.php(443): FormHelper->_introspectModel('User', 'fields')
+#8 C:\site\sws\Project\app\View\Users\login.ctp(3): FormHelper->create('User')
+#9 C:\site\sws\Project\lib\Cake\View\View.php(923): include('C:\site\sws\Pro...')
+#10 C:\site\sws\Project\lib\Cake\View\View.php(886): View->_evaluate('C:\site\sws\Pro...', Array)
+#11 C:\site\sws\Project\lib\Cake\View\View.php(476): View->_render('C:\site\sws\Pro...')
+#12 C:\site\sws\Project\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#13 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#14 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-01-27 00:53:11 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 00:53:11 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 01:56:53 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 C:\site\sws\Project\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\site\sws\Project\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\site\sws\Project\lib\Cake\Model\Model.php(3164): ConnectionManager::getDataSource('default')
+#3 C:\site\sws\Project\lib\Cake\Model\Model.php(1096): Model->setDataSource('default')
+#4 C:\site\sws\Project\lib\Cake\Model\Model.php(3186): Model->setSource('users')
+#5 C:\site\sws\Project\lib\Cake\Model\Model.php(1305): Model->getDataSource()
+#6 C:\site\sws\Project\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#7 C:\site\sws\Project\lib\Cake\View\Helper\FormHelper.php(443): FormHelper->_introspectModel('User', 'fields')
+#8 C:\site\sws\Project\app\View\Users\login.ctp(3): FormHelper->create('User')
+#9 C:\site\sws\Project\lib\Cake\View\View.php(923): include('C:\site\sws\Pro...')
+#10 C:\site\sws\Project\lib\Cake\View\View.php(886): View->_evaluate('C:\site\sws\Pro...', Array)
+#11 C:\site\sws\Project\lib\Cake\View\View.php(476): View->_render('C:\site\sws\Pro...')
+#12 C:\site\sws\Project\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#13 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#14 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-01-27 01:56:54 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 01:56:54 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
