@@ -11,7 +11,7 @@
 			<th class="horas responsive">Hora Individual C</th>
 			<th class="horas responsive">Hora em Grupo A</th>
 			<th class="horas responsive">Hora em Grupo B</th>
-			<th class="horas responsive">Hora em Grupo B</th>
+			<th class="horas responsive">Hora em Grupo C</th>
 
 			<th class="actions">Ações</th>
 		</tr>
