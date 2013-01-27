@@ -19,6 +19,7 @@
 	}
 	
 	public function AjaxListFiles(){
+		$this->layout = 'ajax';
 		$file = $this->Activity->Attachment->findAll();
 		return $file['file_name'];
 	}
