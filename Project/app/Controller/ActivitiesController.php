@@ -8,7 +8,7 @@
  	
  	public function index(){
 		$this->set('title_for_layout', 'Activities');
- 		$this -> layout = 'index';
+ 		$this -> layout = 'base';
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
  				 
  	}
@@ -19,7 +19,7 @@
 	}
 	
 	public function AjaxListFiles(){
-		//$this->layout = 'ajax';
+		$this->layout = 'ajax';
 		$file = $this->Activity->Attachment->findAll();
 		return $file['Attachment'];
 	}
