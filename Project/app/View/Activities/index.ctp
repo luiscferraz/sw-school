@@ -39,8 +39,8 @@
 					
                  							
 					<?php echo $this->Html->link(
-					$this->Html->image("attachment.png", array('alt' => 'Anexar','onClick' => 'ListAttachments('.$activity['Activity']['id'].')')));
-					?> 
+					$this->Html->image("attachment.png", array('alt' => 'Anexar')), array('action' => 'ListAttachments('.$activity['Activity']['id'].')'),
+					array('escape'=>false, 'id'=>'link'));?> 
 
 					<?php echo $this->Html->link(
 					$this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $activity['Activity']['id']),
