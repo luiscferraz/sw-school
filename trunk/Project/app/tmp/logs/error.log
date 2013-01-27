@@ -2693,3 +2693,378 @@
 2013-01-27 17:02:21 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-27 19:40:03 Error: Fatal Error (64): Cannot redeclare ProjectsController::view() in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 106]
+2013-01-27 19:40:03 Error: [FatalErrorException] Cannot redeclare ProjectsController::view()
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:40:03 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:40:03 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:40:31 Error: Fatal Error (64): Cannot redeclare ProjectsController::view() in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 106]
+2013-01-27 19:40:31 Error: [FatalErrorException] Cannot redeclare ProjectsController::view()
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:40:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:40:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:40:33 Error: Fatal Error (64): Cannot redeclare ProjectsController::view() in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 106]
+2013-01-27 19:40:33 Error: [FatalErrorException] Cannot redeclare ProjectsController::view()
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:40:33 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:40:33 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:57:15 Error: Fatal Error (64): Cannot redeclare ProjectsController::view() in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 106]
+2013-01-27 19:57:15 Error: [FatalErrorException] Cannot redeclare ProjectsController::view()
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:57:15 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:57:15 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:57:17 Error: Fatal Error (64): Cannot redeclare ProjectsController::view() in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 106]
+2013-01-27 19:57:17 Error: [FatalErrorException] Cannot redeclare ProjectsController::view()
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:57:18 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:57:18 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:57:38 Error: Fatal Error (64): Cannot redeclare ProjectsController::view() in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 106]
+2013-01-27 19:57:38 Error: [FatalErrorException] Cannot redeclare ProjectsController::view()
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\Users\Isabel...', 106, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:57:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:57:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:29 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 117]
+2013-01-27 19:58:29 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 117)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 117, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 117, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:58:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:30 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 117]
+2013-01-27 19:58:30 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 117)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 117, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 117, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:58:30 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:30 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:31 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 117]
+2013-01-27 19:58:31 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 117)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 117, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 117, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:58:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:53 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 115]
+2013-01-27 19:58:53 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 115, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 115, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:58:53 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:53 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:53 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 115]
+2013-01-27 19:58:53 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 115, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 115, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:58:54 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:54 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:58 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 115]
+2013-01-27 19:58:58 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 115, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 115, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 19:58:58 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 19:58:58 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:01:03 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 116]
+2013-01-27 20:01:03 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 116)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 116, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 116, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 20:01:03 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:01:03 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:01:04 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 116]
+2013-01-27 20:01:04 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 116)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 116, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 116, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 20:01:04 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:01:04 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:11:31 Error: [NotFoundException] Invalid post
+#0 [internal function]: ProjectsController->view()
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-27 20:11:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:11:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:12:12 Error: [NotFoundException] Invalid post
+#0 [internal function]: ProjectsController->view()
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-27 20:12:12 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:12:12 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:19:20 Error: [NotFoundException] Invalid post
+#0 [internal function]: ProjectsController->view()
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-27 20:19:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:19:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:19:24 Error: [NotFoundException] Invalid post
+#0 [internal function]: ProjectsController->view()
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-27 20:19:24 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:19:24 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:19:38 Error: [NotFoundException] Invalid post
+#0 [internal function]: ProjectsController->view()
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-27 20:19:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:19:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:30:23 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 162]
+2013-01-27 20:30:23 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Isabel...', 162)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Isabel...', 162, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Isabel...', 162, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 20:33:29 Error: Fatal Error (4): syntax error, unexpected 'Activity' (T_STRING), expecting ')' in [C:\Users\Isabella\Desktop\sw-school\Project\app\View\Projects\view.ctp, line 90]
+2013-01-27 20:33:29 Error: [FatalErrorException] syntax error, unexpected 'Activity' (T_STRING), expecting ')'
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 90)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 90, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 90, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 20:55:52 Error: Fatal Error (4): syntax error, unexpected '[', expecting variable (T_VARIABLE) or '$' in [C:\Users\Isabella\Desktop\sw-school\Project\app\View\Projects\view.ctp, line 90]
+2013-01-27 20:55:52 Error: [FatalErrorException] syntax error, unexpected '[', expecting variable (T_VARIABLE) or '$'
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 90)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 90, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 90, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 20:55:52 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:55:52 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:56:47 Error: Fatal Error (4): syntax error, unexpected '[', expecting variable (T_VARIABLE) or '$' in [C:\Users\Isabella\Desktop\sw-school\Project\app\View\Projects\view.ctp, line 90]
+2013-01-27 20:56:47 Error: [FatalErrorException] syntax error, unexpected '[', expecting variable (T_VARIABLE) or '$'
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 90)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 90, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 90, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 20:56:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 20:56:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:08:43 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:15:19 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:27:04 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 19]
+2013-01-27 21:27:04 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 19, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 19, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 21:27:04 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:27:04 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:27:11 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 19]
+2013-01-27 21:27:11 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 19, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 19, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 21:27:11 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:27:11 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:28:22 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 21]
+2013-01-27 21:28:22 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 21, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 21, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 21:28:41 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 19]
+2013-01-27 21:28:41 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Isabel...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Isabel...', 19, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Isabel...', 19, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 21:28:41 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:28:41 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:28:59 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php, line 19]
+2013-01-27 21:28:59 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Isabel...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Isabel...', 19, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Isabel...', 19, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-27 21:28:59 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-27 21:28:59 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

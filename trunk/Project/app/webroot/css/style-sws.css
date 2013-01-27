@@ -594,6 +594,14 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	text-align: center;
 }
 
+
+#AtividadesEmProjetoPai{
+	color: #5F9EA0;
+	text-align: left;
+	margin-top: 375px;
+	border-bottom:2px solid #5F9EA0;
+}
+
 #titulo{
 	
 }
