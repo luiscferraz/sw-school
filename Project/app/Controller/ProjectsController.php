@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
  * Created on 08/01/2013
  *
@@ -16,8 +16,9 @@
 		$this->set('title_for_layout', 'Projetos');
  		$this -> layout = 'index';
  		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1,'Project.parent_project_id =' => null))));
- 		$this-> set ('companies',$this->Project->Company->find('all', array('conditions'=> array('Company.id =' => 'Project.company_id'))));		 
- 	}
+		$this -> set ('activities', $this-> Project->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+ }
+
  	public function index2(){
  		$this -> layout = 'base';
  		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
@@ -98,6 +99,7 @@
         $this -> set('nameProjectFather', $this->GetNameProjectFather($Projects['Project']['parent_project_id']));
         $this -> set('nameConsultant', $this->GetNameGerent($Projects['Project']['consultant_id']));
         $this -> set('projects', $this->Project->find('all',array('conditions' =>array('Project.parent_project_id =' =>$id))));
+	$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
         $this ->set('project',$Projects);
  	}
  	
@@ -154,6 +156,7 @@
  		}
  		
  	}
+
  	
  	//verificar se existe um projeto cadastrado com a mesmo nome e empresa.
  	private function exist($nome, $idEmpresa){
