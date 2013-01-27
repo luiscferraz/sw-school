@@ -21,6 +21,7 @@
 	<?php echo $this->Html->script('colorpicker'); ?>
 	<?php echo $this->Html->script('jquery.fancybox'); ?>
 	<?php echo $this->Html->script('projetos'); ?>
+	<?php echo $this->Html->script('anexo'); ?>
 	
 
 	<?php echo $this->Html->script('aplicacao'); ?>
