@@ -8,7 +8,7 @@
 			<th class="responsive">Horas Trabalhadas</th>
 			<th class="responsive">Data</th>			
 			<th class="actions">Ações</th>
-			<th class="approve">Aprovação</th>
+			<th class="responsive">Aprovação</th>
 		</tr>
 
 		<?php
