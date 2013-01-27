@@ -8,6 +8,7 @@
 			<th class="responsive">Horas Trabalhadas</th>
 			<th class="responsive">Data</th>			
 			<th class="actions">Ações</th>
+			<th class="approve">Aprovação</th>
 		</tr>
 
 		<?php
@@ -31,10 +32,6 @@
 			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
 			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
 			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
-			
-			
-			
-
 			<div class="actions">
 				<td>
 					<?php echo $this->Html->link(
@@ -49,6 +46,22 @@
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do apontamento?");
 					?></td>
 			</div>
+			<td class="aprovação"> 
+				<?php 
+				if ( $user == "admin" ) {
+						 if ($entry['Entry']['approve'] == 0) {
+						echo 'link para aprovar';
+						}else {
+						echo 'Aprovado';
+						}
+				}else {
+						if ($entry['Entry']['approve'] == 0) {
+						echo 'Aguardando aprovação';
+						}else {
+						echo 'Aprovado';
+						}
+				} 
+				?></td>
 		</tr>
 		<?php } ?>
 	</table>
