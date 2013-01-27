@@ -1,4 +1,6 @@
 
+
+
 <h1 id="titulo">
 	Projeto - <?php echo $project['Project']['name']; ?> 
 	<span class="icon-action">

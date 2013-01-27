@@ -1,3 +1,5 @@
+
+
 <h1>Consultores Alocados </h1>
 
 <h3>Projeto -  <?php echo $nameProject ?></h2>
@@ -29,8 +31,12 @@
 
 		<tr id="<?php echo $consultant['ProjectConsultant']['consultant_id']; ?>"> 
 			<td id="nameTableProject">
-				<?php echo $consultant['ProjectConsultant']['consultant_id']; ?>
-				
+				<?php 
+				foreach ($nameConsultants as $key) {
+					if ($key['Consultant']['id'] == $consultant['ProjectConsultant']['consultant_id'])
+						echo $key['Consultant']['name'];
+					}				
+				?>
 			</td>
 			<td class="edit hora-a" >
 				

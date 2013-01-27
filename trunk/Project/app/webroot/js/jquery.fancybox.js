@@ -26,7 +26,7 @@
             padding: 15,
             margin: 20,
 
-            width: 800,
+            width: 1800,
             height: 600,
             minWidth: 200,
             minHeight: 200,
@@ -918,6 +918,7 @@
                 top: margin[0] + viewport.y,
                 left: margin[3] + viewport.x
             };
+            alert(F.wrap.width());
 
             if (current.fixed && (!a || a[0] === false) && height <= viewport.h && width <= viewport.w) {
                 rez = {

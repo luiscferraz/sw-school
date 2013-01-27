@@ -97,7 +97,7 @@
         $this -> set('nameCompany', $this->GetNameCompany($Projects['Project']['company_id']));
         $this -> set('nameProjectFather', $this->GetNameProjectFather($Projects['Project']['parent_project_id']));
         $this -> set('nameConsultant', $this->GetNameGerent($Projects['Project']['consultant_id']));
-        $this -> set('projects', $this->Project->find('all',array('conditions' =>array('Project.parent_project_id =' =>$Projects['Project']['company_id']))));
+        $this -> set('projects', $this->Project->find('all',array('conditions' =>array('Project.parent_project_id =' =>$id))));
         $this ->set('project',$Projects);
  	}
  	
@@ -113,6 +113,7 @@
  		else {
  			
 	 		$this-> set('consultants',$this->Project->ProjectConsultant->find('all',array('conditions'=> array('project_id =' => $id))));
+	 		$this -> set('nameConsultants', $this->Project->Consultant->find('all'));
 	 		$this -> set('nameProject',$this->GetNameProjectFather($id));
 	 		$this -> set('id_projeto',$id);
  		}	
