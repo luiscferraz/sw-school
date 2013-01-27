@@ -38,9 +38,11 @@
 					array('escape'=>false, 'id'=>'link'))?>
 					
                  							
-					<?php echo $this->Html->link(
+					<!--<?php echo $this->Html->link(
 					$this->Html->image("attachment.png", array('alt' => 'Anexar')), array('onClick' => 'ListAttachments('.$activity['Activity']['id'].')'),
-					array('escape'=>false, 'id'=>'link'));?> 
+					array('escape'=>false, 'id'=>'link'));?> -->
+					
+					<input id="link" type="button" value="Anexar" onclick='ListAttachments()'>
 
 					<?php echo $this->Html->link(
 					$this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $activity['Activity']['id']),

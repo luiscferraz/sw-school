@@ -19,9 +19,9 @@
 	}
 	
 	public function AjaxListFiles(){
-		$this->layout = 'ajax';
+		//$this->layout = 'ajax';
 		$file = $this->Activity->Attachment->findAll();
-		return $file['file_name'];
+		return $file['Attachment'];
 	}
 		
 	public function AjaxAttachFiles(){
