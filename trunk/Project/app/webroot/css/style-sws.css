@@ -555,22 +555,32 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 #menuEsquerda {
-	height: 130%;
-	width: 35%;
-	margin-left: -10%;
-	background-color: #cae8ea;
+	float: left;
+	width: 400px;
+	margin-top: -20px;
+	padding: 20px;
+	padding-bottom: 100%;
+	padding-top: 3%;
+	background-color: #bad6f3;
 	font-size: 14px;
+	position: fixed;
+}
+
+#tituloArvore {
+	color: #2c4342 !important;
 }
 
 .slidingDiv {
 	float: right;
-    height:600px;
-    width: 450px;
-    margin-top: -300px;
-    margin-right: -100px;
-    background-color: #99CCFF;
-    padding:20px;
+    width: 550px;
+	padding:20px;
     border-bottom:5px solid #3399FF;
+    background-color: #99CCFF;
+    
+}
+
+#direita {
+	float: right;
 }
  
 .show_hide {
