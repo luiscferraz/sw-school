@@ -49,15 +49,12 @@ table {
 }
 
 fieldset{
-	border-radius: 8px 8px 8px 8px;
+	
 }
 
 td, th {
-	letter-spacing: 1px;
 	border-left: 1px solid #C1DAD7;
-	border-right: 1px solid #C1DAD7;
 	border-bottom: 1px solid #C1DAD7;
-	border-top: 1px solid #C1DAD7;
 }
 
 tr{
@@ -66,7 +63,7 @@ tr{
 }
 
 div{
-	border-radius: 8px 8px 8px 8px;
+	
 }
 
 td {
@@ -77,12 +74,10 @@ td {
 }
 
 th {
-	font: bold 13px "Trebuchet MS", Verdana, Arial, Helvetica,
-	sans-serif;
+	font: bold 13px "Trebuchet MS", Verdana, Arial, Helvetica,sans-serif;
 	color: black;
-	text-transform: uppercase;
 	text-align: center;
-	padding: 6px 6px 6px 12px;
+	padding: 6px 6px 6px 6px;
 	background: #CAE8EA;
 }
 
@@ -600,7 +595,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 #titulo{
-	margin-left: -40px;	
+	
 }
 
 #colorview{
