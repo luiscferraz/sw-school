@@ -15,11 +15,13 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `cpf` VARCHAR(14) NULL ,
   `name` VARCHAR(45) NOT NULL ,
+  `acronym` VARCHAR(2) NOT NULL ,
   `acronym_color` VARCHAR(7) NULL ,
   `phone1` VARCHAR(13) NULL ,
   `phone2` VARCHAR(13) NULL ,
   `email` VARCHAR(45) NULL ,
   `removed` TINYINT(1) NOT NULL ,
+  UNIQUE INDEX `acronym_UNIQUE` (`acronym` ASC) ,
   UNIQUE INDEX `acronym_color_UNIQUE` (`acronym_color` ASC) ,
   UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) ,
   PRIMARY KEY (`id`))
