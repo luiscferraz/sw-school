@@ -1,5 +1,4 @@
 INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
-('admin', 'a759fb1212ff39a9948a0d325d5638d39eb62fa3', 'admin', Null),
 ('rose', 'f4465763c4eb760d104dc365a6045de47e759ed2', 'cons', 1),
 ('mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 2),
 ('armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 3),
@@ -16,27 +15,28 @@ INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
 ('angelo', '72d5d5d0adc3349239f9a2f17dd6018adcb5c9a3', 'cons', 14),
 ('pedro', 'ad918a1ab9850dc71e4412059624d91d7711bf10', 'rel_manager', 15),
 ('bruno', '06c5068db7fc9ab9260138fb3697735b97b1ffae', 'cons', 16),
-('mariana', '1027020dd6a4e8f470bccbbac89dce2186c54133', 'rel_manager', 17);
+('mariana', '1027020dd6a4e8f470bccbbac89dce2186c54133', 'rel_manager', 17),
+('admin', 'a759fb1212ff39a9948a0d325d5638d39eb62fa3', 'admin', Null);
 -- A senha é o nome do consultor
 
-INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES 
-('552.827.822-86','Winifred Abbott Welch','#ab3a7a','(81)8830-0510','(81)1172-9073','massa.Mauris.vestibulum@Nulla.com', 0),
-('729.557.640-19','Demetria Salas Montgomery','#ab753a','(81)7204-2015','(81)2503-2971','eu@augue.com', 0),
-('501.556.822-37','Mia Snyder Jennings','#c8d41e','(81)2551-0791','(81)8979-3850','fermentum.fermentum.arcu@non.ca', 0),
-('912.683.647-54','Armand Mckay Grimes','#1ec8d4','(81)7877-5995','(81)8998-2956','erat@arcuVestibulumante.edu', 0),
-('041.542.248-59','Rose Farrell Keller','#ffbdbd','(81)5071-4315','(81)1414-1780','dictum.placerat@consequatdolorvitae.edu', 0),
-('063.265.175-08', 'Ana Paula Pacheco Lisboa', '#6a6ac4', '(71)3322-4545', '(71)9976-6767', 'anapaulapachecolisboa@gmail.com', 0),
-('823.578.345-28', 'Andrea Carolina Costa Fernandes', '#27cf62', '(85)5916-3293', '(85)9977-6655', 'carolinacostafernandes@hotmail.com', 0),
-('681.332.244-38', 'Nicole Amanda Rocha Ferreira', '#d9d9e0', '(21)9080-9724', '', 'nicolerferreira@gmail.com', 0),
-('126.547.127-45', 'Gabrielle Sousa Rodrigues', '#7a7ac7', '(87)5660-3576', '(87)8867-5654', 'gabriellesousarodrigues@yahoo.com.br', 0),
-('043.871.166-17', 'Camila Alves Dias Paes', '#e8e8e8', '(34)5417-3542', '(34)9354-2541', 'camilaalvesdias@gmail.com', 0),
-('987.160.128-01', 'Bruna Alves Martins Castro', '#28c0db', '(62)7817-5792', '(62)8817-5792', 'brunaalves@gmail.com', 0),
-('623.232.588-50', 'Arthur Correia Dias', '#45e651', '(16)4345-4567', '(16)8822-1345', 'arthurcdias@hotmail.com', 0),
-('179.579.373-22', 'Nicolas Silva Pereira Martins', '#0c8196', '(11)7700-1929', '(11)8844-0011', 'nicolassilva@yahoo.com.br', 0),
-('587.805.637-24', 'Angelo  Sousa Cunha Alves', '#ed0c3d', '(61)3434-5654', '(61)9441-0100', 'angelocunha@gmail.com', 0),
-('187.820.121-21', 'Pedro Cavalcanti Lima', '#7ff0d8', '(18)6654-8052', '', 'pedrocavalcantilima@hotmail.com', 0),
-('715.544.793-55', 'Bruno Pereira Sousa Passos', '#bed925', '(71)4333-1000', '(71)9775-5341', 'brunosousa@gmail.com', 0),
-('558.174.932-92', 'Mariana', '#4596b3', '(81)4233-1000', '(81)9075-5341', 'marianasw@gmail.com', 0);
+INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES 
+('041.542.248-59','Rose Farrell Keller','RF','#ffbdbd','(81)5071-4315','(81)1414-1780','dictum.placerat@consequatdolorvitae.edu', 0),
+('501.556.822-37','Mia Snyder Jennings','MS','#c8d41e','(81)2551-0791','(81)8979-3850','fermentum.fermentum.arcu@non.ca', 0),
+('912.683.647-54','Armand Mckay Grimes','AM','#1ec8d4','(81)7877-5995','(81)8998-2956','erat@arcuVestibulumante.edu', 0),
+('729.557.640-19','Demetria Salas Montgomery','DS','#ab753a','(81)7204-2015','(81)2503-2971','eu@augue.com', 0),
+('552.827.822-86','Winifred Abbott Welch','WA','#ab3a7a','(81)8830-0510','(81)1172-9073','massa.Mauris.vestibulum@Nulla.com', 0),
+('063.265.175-08', 'Ana Paula Pacheco Lisboa','AP','#6a6ac4','(71)3322-4545', '(71)9976-6767', 'anapaulapachecolisboa@gmail.com', 0),
+('823.578.345-28', 'Andrea Carolina Costa Fernandes','AC', '#27cf62', '(85)5916-3293', '(85)9977-6655', 'carolinacostafernandes@hotmail.com', 0),
+('681.332.244-38', 'Nicole Amanda Rocha Ferreira','NA', '#d9d9e0', '(21)9080-9724', '', 'nicolerferreira@gmail.com', 0),
+('126.547.127-45', 'Gabrielle Sousa Rodrigues','GS', '#7a7ac7', '(87)5660-3576', '(87)8867-5654', 'gabriellesousarodrigues@yahoo.com.br', 0),
+('043.871.166-17', 'Camila Alves Dias Paes','CA', '#e8e8e8', '(34)5417-3542', '(34)9354-2541', 'camilaalvesdias@gmail.com', 0),
+('987.160.128-01', 'Bruna Alves Martins Castro','BA', '#28c0db', '(62)7817-5792', '(62)8817-5792', 'brunaalves@gmail.com', 0),
+('623.232.588-50', 'Arthur Correia Dias', '#45e651','AD', '(16)4345-4567', '(16)8822-1345', 'arthurcdias@hotmail.com', 0),
+('179.579.373-22', 'Nicolas Silva Pereira Martins','NS', '#0c8196', '(11)7700-1929', '(11)8844-0011', 'nicolassilva@yahoo.com.br', 0),
+('587.805.637-24', 'Angelo  Sousa Cunha Alves','AS', '#ed0c3d', '(61)3434-5654', '(61)9441-0100', 'angelocunha@gmail.com', 0),
+('187.820.121-21', 'Pedro Cavalcanti Lima','PC', '#7ff0d8', '(18)6654-8052', '', 'pedrocavalcantilima@hotmail.com', 0),
+('715.544.793-55', 'Bruno Pereira Sousa Passos','BP', '#bed925', '(71)4333-1000', '(71)9775-5341', 'brunosousa@gmail.com', 0),
+('558.174.932-92', 'Mariana','MA', '#4596b3', '(81)4233-1000', '(81)9075-5341', 'marianasw@gmail.com', 0);
 
 INSERT INTO `swsdb`.`companies` (`cnpj`, `name`, `acronym`, `phone1`, `phone2`, `removed`) VALUES 
 ('65.536.992/0001-11', 'Hoteis Santa Maria', 'NA', '(81)5071-4321', '(81)8979-3467', '0'),
