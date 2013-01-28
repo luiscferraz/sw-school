@@ -17,15 +17,11 @@
 
     <body>
     	<?php echo $this->Session->flash(); ?>
-        
-	<?php //só mostrar o botão cadastrar se for usuário admin
-		if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-			echo '<div id="bt-cadastrar">';	
-			echo $this->Html->link("Cadastrar", array('action' => 'add'),array('class'=>'botao'));
-			echo '</div>';
-		}
-	?>		
-				
+    	
+		<div id="bt-cadastrar">
+		<?php echo $this->Html->link("Cadastrar", array('action' => 'add'),array('class'=>'botao')); ?>
+		</div>
+			
 		<?php include 'includes/menu.php'; ?>
 		
 		<div class="conteudo">

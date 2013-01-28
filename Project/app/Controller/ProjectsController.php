@@ -17,6 +17,7 @@
  		$this -> layout = 'index';
  		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1,'Project.parent_project_id =' => null))));
 		$this -> set ('activities', $this-> Project->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
  }
 
  	public function index2(){
@@ -85,6 +86,7 @@
  	
  	public function view($id = null){
 		$this -> layout = 'base';
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
  		if (!$id) {
             throw new NotFoundException(__('Invalid post'));
         }

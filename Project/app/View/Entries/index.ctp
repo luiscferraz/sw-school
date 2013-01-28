@@ -37,13 +37,18 @@
 					<?php echo $this->Html->link(
 					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $entry['Entry']['id']), array('escape'=>false, 'id'=>'link'))?>
 
-					<?php echo $this->Html->link(
-					$this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $entry['Entry']['id']),
-					array('escape'=>false, 'id'=>'link'))?>
+					<?php 
+					if ((in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) or ($id_consultor_logado === $entry['Entry']['consultant_id'])){
+					echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $entry['Entry']['id']),
+					array('escape'=>false, 'id'=>'link'));
+					}
+					?>
 
-					<?php echo $this->Html->link(
-					$this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $entry['Entry']['id']),
+					<?php 
+					if ((in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) or ($id_consultor_logado === $entry['Entry']['consultant_id'])){
+					echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $entry['Entry']['id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do apontamento?");
+					}
 					?></td>
 			</div>
 			<td class="aprovação"> 

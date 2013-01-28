@@ -1,13 +1,17 @@
 <h1 id="titulo">Atividade - <?php echo $activities['Activity']['id']; ?> 
-	<span class="icon-action"><?php echo $this->Html->link(
-		$this->Html->image("delete.png", array("alt" => "Deletar")),
-		array('action' => 'delete', $activities['Activity']['id']),
-		array('escape'=>false),"Você quer excluir realmente ?");?>
-	</span>
-	<span class="icon-action"> <?php echo $this->Html->link(
-		$this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$activities['Activity']['id'],
-		array('escape'=>false)) ?>
-	</span> 
+
+<?php 
+	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+	
+	echo '<span class="icon-action">';
+	echo $this->Html->link($this->Html->image("delete.png", array("alt" => "Deletar")),array('action' => 'delete', $activities['Activity']['id']),array('escape'=>false),"Você quer excluir realmente ?");
+	echo '</span>';
+	echo '<span class="icon-action">'; 
+	echo $this->Html->link($this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$activities['Activity']['id'],array('escape'=>false));
+	echo '</span>';
+	}
+	?>
+	
 </h1>
 
 

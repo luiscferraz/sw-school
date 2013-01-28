@@ -7,11 +7,12 @@ class EntriesController extends AppController{
  	
  	public function index(){
 		$this->set('title_for_layout', 'Apontamento');
- 		$this -> layout = 'index';
+ 		$this -> layout = 'index_entry';
  		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1),'order'=>array('Activity.description','Consultant.name','Entry.type_consulting','Entry.hours_worked DESC','Entry.date DESC')))); 
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
-		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
+		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));			
  	}
  	
  	public function add(){
@@ -102,8 +103,7 @@ class EntriesController extends AppController{
 		$Apontamento =  $this->Entry->findById($id);
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($Apontamento['Entry']['consultant_id']));
 		$this -> set ('nome_atividade', $this-> Nome_Atividade($Apontamento['Entry']['activity_id']));
-		
-		
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
 		
 	    if ($this->request->is('get')) {
 	        $this->set('entries', $this->Entry->read());
