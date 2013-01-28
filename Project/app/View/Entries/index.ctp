@@ -48,14 +48,16 @@
 			</div>
 			<td class="aprovação"> 
 				<?php 
-				if ( $user == "admin" ) {
-						 if ($entry['Entry']['approve'] == 0) {
-						echo 'link para aprovar';
+				if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) {
+						 if ($entry['Entry']['approved'] == 0) {
+						echo $this->Html->link(
+					$this->Html->image("edit.png", array('alt' => 'Aprovar')), array('action' => 'approve', $entry['Entry']['id']),
+					array('escape'=>false, 'id'=>'link'), "Confirmar aprovar apontamento?");
 						}else {
 						echo 'Aprovado';
 						}
 				}else {
-						if ($entry['Entry']['approve'] == 0) {
+						if ($entry['Entry']['approved'] == 0) {
 						echo 'Aguardando aprovação';
 						}else {
 						echo 'Aprovado';

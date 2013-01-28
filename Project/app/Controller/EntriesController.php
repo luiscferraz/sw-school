@@ -10,7 +10,8 @@ class EntriesController extends AppController{
  		$this -> layout = 'index';
  		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1),'order'=>array('Activity.description','Consultant.name','Entry.type_consulting','Entry.hours_worked DESC','Entry.date DESC')))); 
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
-		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));		 		
+		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
  	}
  	
  	public function add(){
@@ -56,6 +57,14 @@ class EntriesController extends AppController{
 		$this->Entry->id = $id;
 		if($this->Entry->saveField("removed", "true")){
 			$this->Session->setFlash('O apontamento foi removido com sucesso!');
+			$this->redirect(array('action' => 'index'));
+		}
+	}
+
+ 	public function approve($id = NULL){
+		$this->Entry->id = $id;
+		if($this->Entry->saveField("approved",1)){
+			$this->Session->setFlash('O apontamento foi aprovado!');
 			$this->redirect(array('action' => 'index'));
 		}
 	}
