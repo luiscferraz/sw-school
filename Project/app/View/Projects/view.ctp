@@ -63,48 +63,76 @@
 			<th class="actions">Ações</th>
 		</tr>
 
-		<?php
-			
-			$i = 0;
-			foreach ($activities as $activity) 
-			{
-				$class = null;
-				
-				if($i++ % 2 == 0)
-				{
-					$class = 'class="altrow"';
+
+		<td class="descrição"><?php
+		foreach ($activities as $activity) {
+			if ($activity['Activity']['project_id']===$project['Project']['id']) {
+				echo $activity['Activity']['description'];
 				}
-					
-							
+			}
 		?>
 
-		<tr <?php echo $class; ?>>
-			<td class="descrição"><?php echo $activity['Activity']['description']; ?></td>
-			<td class="status"><?php echo $activity['Activity']['status']; ?></td>
-			<td class="data"><?php echo $activity['Activity']['date']; ?></td>
+        </td>
+
+
+			
+			<td class="status"><?php
+				foreach ($activities as $activity) {
+					if ($activity['Activity']['project_id']===$project['Project']['id']) {
+						echo $activity['Activity']['status'];
+						}
+								}
+				?>
+			</td>
+
+			<td class="data"><?php
+				foreach ($activities as $activity) {
+					if ($activity['Activity']['project_id']===$project['Project']['id']) {
+						echo $activity['Activity']['date'];
+						}
+								}
+				?>
+			</td>
+
 
 			<div class="actions">
 				<td>
-					<?php echo $this->Html->link($this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view',$activity['Activity']['id']), array('escape'=>false, 'id'=>'link'))?>
+					<?php 
+						foreach ($activities as $activity) {
+							if ($activity['Activity']['project_id']===$project['Project']['id']) {
+								echo $this->html->link(
+									$this->html->image("view.png", array('alt' => 'Ver')), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+							}
+						}
+					?>
 
-					<?php echo $this->Html->link(
-					$this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $activity['Activity']['id']),
-					array('escape'=>false, 'id'=>'link'))?>
-					
-                 							
+					<?php 
+						foreach ($activities as $activity) {
+							if ($activity['Activity']['project_id']===$project['Project']['id']) {
+								echo $this->html->link(
+									$this->html->image("edit.png", array('alt' => 'Editar')), array('action' => '../activities/edit', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+							}
+						}
+					?>
+
 					<!--<?php echo $this->Html->link(
 					$this->Html->image("attachment.png", array('alt' => 'Anexar')), array('onClick' => 'ListAttachments('.$activity['Activity']['id'].')'),
 					array('escape'=>false, 'id'=>'link'));?> -->
 					
 					<input id="link" type="button" value="Anexar" onclick='ListAttachments();'>
 
-					<?php echo $this->Html->link(
-					$this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $activity['Activity']['id']),
-					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da atividade?");
-					?></td>
+					<!--<?php
+						foreach ($activities as $activity) {
+							if ($activity['Activity']['project_id']===$project['Project']['id']) {
+						echo $this->Html->link(
+						$this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $activity['Activity']['id']),array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da atividade?");
+						}
+							}
+								?> -->
+				</td>
 			</div>
 		</tr>
-		<?php } ?>
+		<?php  ?>
 	</table>
 	
 </div>
