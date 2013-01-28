@@ -17,10 +17,12 @@
  		$this->set('title_for_layout', 'Consultores');
  		$this -> layout = 'index';
  		$this -> set ('consultants', $this-> Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1),'order'=>array('Consultant.name'))));
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
  	}
  	
  	public function view($id = null){
  		 $this -> layout = 'base';
+		 $this-> set ('tipo_usuario',$this->Auth->user('type'));	
  		 if (!$id) {
             throw new NotFoundException(__('Invalid post'));
         }

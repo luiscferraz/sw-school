@@ -49,13 +49,18 @@
 					<?php echo $this->Html->link(
 					$this->Html->image("view.png", array('alt' => 'Ver','title' => 'Ver Projeto')), array('action' => 'view', $project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
 
-					<?php echo $this->Html->link(
-					$this->Html->image("edit.png", array('alt' => 'Editar', 'title'=>'Editar Projeto')), array('action' => 'edit', $project['Project']['id']),
-					array('escape'=>false, 'id'=>'link'))?>
+					<?php 
+					if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+					echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar', 'title'=>'Editar Projeto')), array('action' => 'edit', $project['Project']['id']),
+					array('escape'=>false, 'id'=>'link'));
+					}
+					?>
 
-					<?php echo $this->Html->link(
-					$this->Html->image("delete.png", array('alt' => 'Remover','title' => 'Remover Projeto')), array('action' => 'delete', $project['Project']['id']),
+					<?php 
+					if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+					echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover','title' => 'Remover Projeto')), array('action' => 'delete', $project['Project']['id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do projeto ". $project['Project']['name'] . "?");
+					}
 					?>
 				</div>
 			</td>

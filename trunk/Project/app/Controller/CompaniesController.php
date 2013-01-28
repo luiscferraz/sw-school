@@ -9,13 +9,13 @@ class CompaniesController extends AppController {
 	public function index(){
 		$this->set('title_for_layout', 'Empresas');
 		$this -> layout = 'index';
-		$this->set('companies', $this->Company->find('all', array('conditions'=> array('Company.removed !=' => 1))));		
+		$this->set('companies', $this->Company->find('all', array('conditions'=> array('Company.removed !=' => 1))));
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));				
 	}
 	
 	public function add(){
 		
 		$this -> layout = 'base';
-
 		if($this->request->is('post')){
 			if($this->Company->saveAll($this->request->data)){
 				$this->Session->setFlash($this->flashSuccess('Empresa cadastrada com sucesso!'));
@@ -73,6 +73,7 @@ class CompaniesController extends AppController {
 
 		$this->Company->id = $id;
 		$this->layout = 'base';
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
 		
 	    if ($this->request->is('get')) {
 	        $this->set('company', $this->Company->read());

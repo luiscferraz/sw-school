@@ -31,7 +31,7 @@ INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym`,`acronym_color`,`phone
 ('126.547.127-45', 'Gabrielle Sousa Rodrigues','GS', '#7a7ac7', '(87)5660-3576', '(87)8867-5654', 'gabriellesousarodrigues@yahoo.com.br', 0),
 ('043.871.166-17', 'Camila Alves Dias Paes','CA', '#e8e8e8', '(34)5417-3542', '(34)9354-2541', 'camilaalvesdias@gmail.com', 0),
 ('987.160.128-01', 'Bruna Alves Martins Castro','BA', '#28c0db', '(62)7817-5792', '(62)8817-5792', 'brunaalves@gmail.com', 0),
-('623.232.588-50', 'Arthur Correia Dias', '#45e651','AD', '(16)4345-4567', '(16)8822-1345', 'arthurcdias@hotmail.com', 0),
+('623.232.588-50', 'Arthur Correia Dias','AD', '#45e651', '(16)4345-4567', '(16)8822-1345', 'arthurcdias@hotmail.com', 0),
 ('179.579.373-22', 'Nicolas Silva Pereira Martins','NS', '#0c8196', '(11)7700-1929', '(11)8844-0011', 'nicolassilva@yahoo.com.br', 0),
 ('587.805.637-24', 'Angelo  Sousa Cunha Alves','AS', '#ed0c3d', '(61)3434-5654', '(61)9441-0100', 'angelocunha@gmail.com', 0),
 ('187.820.121-21', 'Pedro Cavalcanti Lima','PC', '#7ff0d8', '(18)6654-8052', '', 'pedrocavalcantilima@hotmail.com', 0),

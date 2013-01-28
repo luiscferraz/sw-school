@@ -33,21 +33,28 @@
 					<?php echo $this->Html->link(
 					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'))?>
 
-					<?php echo $this->Html->link(
-					$this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $activity['Activity']['id']),
-					array('escape'=>false, 'id'=>'link'))?>
+					<?php 
+						if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+							echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $activity['Activity']['id']),
+							array('escape'=>false, 'id'=>'link'));
+						}
+					?>					
+					                							
+					<?php 
+						if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+							echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $activity['Activity']['id']),
+							array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da atividade?");
+						}
+					?>
 					
-                 							
 					<!--<?php echo $this->Html->link(
 					$this->Html->image("attachment.png", array('alt' => 'Anexar')), array('onClick' => 'ListAttachments('.$activity['Activity']['id'].')'),
 					array('escape'=>false, 'id'=>'link'));?> -->
 					
 					<input id="link" type="button" value="Anexar" onclick='ListAttachments();'>
 
-					<?php echo $this->Html->link(
-					$this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $activity['Activity']['id']),
-					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da atividade?");
-					?></td>
+
+				</td>
 			</div>
 		</tr>
 		<?php } ?>

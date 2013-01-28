@@ -8,8 +8,9 @@
  	
  	public function index(){
 		$this->set('title_for_layout', 'Activities');
- 		$this -> layout = 'base';
+ 		$this -> layout = 'index';
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
  				 
  	}
  	
@@ -85,6 +86,7 @@
 	public function view($id){
 
 		$this->Activity->id = $id;
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
 		$this->layout = 'base';
 		$Atividade =  $this->Activity->findById($id);
 		$this -> set ('consultor1', $this-> Nome_Consultor($Atividade['Activity']['consultant1_id']));

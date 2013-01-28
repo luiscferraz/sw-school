@@ -3,19 +3,17 @@
 
 <h1 id="titulo">
 	Projeto - <?php echo $project['Project']['name']; ?> 
-	<span class="icon-action">
-		<?php echo $this->Html->link(
-		$this->Html->image("delete.png", array("alt" => "Deletar")),
-		array('action' => 'delete', $project['Project']['id']),
-		array('escape'=>false),"Você quer excluir realmente ?");?>
-	</span>
+	<?php 
+	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
 	
-	<span class="icon-action"> 
-		<?php echo $this->Html->link(
-		$this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$project['Project']['id'],
-		array('escape'=>false)) ?>
-	</span> 
-	
+	echo '<span class="icon-action">';
+	echo $this->Html->link($this->Html->image("delete.png", array("alt" => "Deletar")),array('action' => 'delete', $project['Project']['id']),array('escape'=>false),"Você quer excluir realmente ?");
+	echo '</span>';
+	echo '<span class="icon-action">'; 
+	echo $this->Html->link($this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$project['Project']['id'],array('escape'=>false));
+	echo '</span>';
+	}
+	?>
 </h1>
 
 <div> 

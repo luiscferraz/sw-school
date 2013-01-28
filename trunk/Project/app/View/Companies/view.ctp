@@ -1,11 +1,16 @@
-<h1> Consultor - <?php echo $company['Company']['name']; ?>
-		<?php echo $this->Html->link(
-$this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$company['Company']['id'],
-array('escape'=>false)) ?> 
-<?php echo $this->Html->link(
-$this->Html->image("delete.png", array("alt" => "Deletar")),
-array('action' => 'delete', $company['Company']['id']),
-array('escape'=>false),"Você quer excluir realmente ?");?>
+<h1> Empresa - <?php echo $company['Company']['name']; ?>
+
+<?php 
+	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+	
+	echo '<span class="icon-action">';
+	echo $this->Html->link($this->Html->image("delete.png", array("alt" => "Deletar")),array('action' => 'delete', $company['Company']['id']),array('escape'=>false),"Você quer excluir realmente ?");
+	echo '</span>';
+	echo '<span class="icon-action">'; 
+	echo $this->Html->link($this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$company['Company']['id'],array('escape'=>false));
+	echo '</span>';
+	}
+	?>
 </h1>
 
 <div class="company view">
@@ -73,11 +78,11 @@ array('escape'=>false),"Você quer excluir realmente ?");?>
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Sponsor']['phone1'];
+			echo $company['Sponsor']['phone'];
 		?></p>
 		<p><?php 
 			echo 'Celular: ';
-			echo $company['Sponsor']['phone2'];
+			echo $company['Sponsor']['cellular_telephone'];
 		?></p>
 		<p><?php 
 			echo 'Email: ';
@@ -98,11 +103,11 @@ array('escape'=>false),"Você quer excluir realmente ?");?>
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Financial']['phone1'];
+			echo $company['Financial']['phone'];
 		?></p>
 		<p><?php 
 			echo 'Celular: ';
-			echo $company['Financial']['phone2'];
+			echo $company['Financial']['cellular_telephone'];
 		?></p>
 		<p><?php 
 			echo 'Email: ';
@@ -123,11 +128,11 @@ array('escape'=>false),"Você quer excluir realmente ?");?>
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Sepg']['phone1'];
+			echo $company['Sepg']['phone'];
 		?></p>
 		<p><?php 
 			echo 'Celular: ';
-			echo $company['Sepg']['phone2'];
+			echo $company['Sepg']['cellular_telephone'];
 		?></p>
 		<p><?php 
 			echo 'Email: ';
