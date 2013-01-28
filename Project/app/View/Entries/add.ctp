@@ -6,17 +6,31 @@
     if (!isset($list_activities)){
 		$list_activities['none'] = 'Nenhuma Atividade Cadastrada';
     }
+?>		
+<?php 
+    foreach ($consultants as $consultant) {        
+        $list_consultants[$consultant['Consultant']['id']] =$consultant['Consultant']['name'];
+        };                    
+    if (!isset($list_consultants)){
+		$list_consultants['none'] = 'Nenhuma Consultor Cadastrado';
+    }
 ?>	
 
 <h1>Cadastrar Apontamento</h1>
     <div id="content">
         <div class="conteudo">
 
-        <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
+        <?php 
 		echo $this->Form->create('Entries', array('action' => 'add')); ?>
             <fieldset id="Dados_projeto_pai">
-				<?php echo 'Consultor logado: ', $nome_consultor_logado ?><br><br>
-				<?php echo $this->Form->input('Entry.consultant_id',array('type'=>'text','default'=>$id_consultor_logado, 'type'=>'hidden'));?>								                
+		<?php //Se for um consultor logado, o apontamento automaticamente é no nome dele, se for admin, aparecerá uma lista de consultores
+		if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+			echo $this->Form->input('Entry.consultant_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor: ', 'id'=>'actvID'));
+		} else {
+			echo 'Consultor logado: ', $nome_consultor_logado;
+			echo $this->Form->input('Entry.consultant_id',array('type'=>'text','default'=>$id_consultor_logado, 'type'=>'hidden'));                                  
+		}
+		?><br>							                
                 <?php echo $this->Form->input('Entry.date', array('type'=>'text','label' => 'Data: ', 'id'=>'datepicker')); ?><br>
                 <?php echo $this->Form->input('Entry.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
             </fieldset>

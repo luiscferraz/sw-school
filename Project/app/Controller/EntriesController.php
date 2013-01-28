@@ -16,8 +16,10 @@ class EntriesController extends AppController{
  	public function add(){
 	 	$this->layout = 'base';
 		$this-> set ('activities',$this->Entry->Activity->find('all'), array('conditions'=> array('Activity.removed !=' => 1)));
+		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));		 
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));
 		
 	 	if($this->request->is('post')){
 	 		if($this->Entry->saveAll($this->request->data)){
@@ -61,8 +63,10 @@ class EntriesController extends AppController{
 	public function edit($id = NULL){
 		$this->layout = 'base';
 		$this-> set ('activities',$this->Entry->Activity->find('all'), array('conditions'=> array('Activity.removed !=' => 1)));
+		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));
 		$this->Entry->id = $id;
 		
 		if ($this->request->is('get')) {
