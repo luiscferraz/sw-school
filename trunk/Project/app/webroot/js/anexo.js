@@ -1,9 +1,10 @@
 function ListAttachments(key){
-	$.get(urlAjax('AjaxListFiles'),null,
-			function(data) {   
-				$.fancybox(data);
-				$('.load').remove();
-		})
+	//$.get(urlAjax('AjaxListFiles'),null,
+	//		function(data) {
+				//alert(data)   ;
+				$.fancybox('erick');
+	//			$('.load').remove();
+	//	})
 }
 
 var input = $("input:file").css({background:"yellow", border:"3px red solid"});

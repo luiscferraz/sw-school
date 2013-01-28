@@ -7,6 +7,7 @@
 		
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<?php echo $this->Html->css('style-sws'); ?>
+		<?php echo $this->Html->css('jquery.fancybox'); ?>
 		<?php echo $this->Html->script('jquery-1.7.1.min'); ?>
 		<?php echo $this->Html->script('aplicacao'); ?>
 		<?php echo $this->Html->script('anexo'); ?>			

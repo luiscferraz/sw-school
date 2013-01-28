@@ -30,7 +30,6 @@
  		 if (!$consultant) {
             throw new NotFoundException(__('Invalid post'));
         }
-        
         $this ->set('consultant',$consultant);
  	}
  	

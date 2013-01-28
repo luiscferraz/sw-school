@@ -62,6 +62,10 @@ tr{
 	text-align: center;
 }
 
+a {
+	text-decoration: none;
+}
+
 div{
 	
 }
@@ -563,7 +567,6 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	padding-top: 3%;
 	background-color: #bad6f3;
 	font-size: 14px;
-	position: fixed;
 }
 
 #tituloArvore {

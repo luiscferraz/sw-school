@@ -1,3 +1,5 @@
+
+<h1>Projetos</h1>
 <div id="menuEsquerda">
 
   
@@ -6,25 +8,21 @@
 $(document).ready(function(){
  
         $(".slidingDiv").hide();
-        $(".show_hide").show();
- 
-    $('.show_hide').click(function(){
-    $(".slidingDiv").slideToggle();
-    });
+        $('.show').click(function(){
+          var id = $(this).attr('id');
+          $(".slidingDiv").hide();
+          $("#div_"+id).slideToggle();
+        });
  
 });
  
 </script>
-
-
-  <h1 id="tituloArvore">Projetos</h1>
-
     <?php
 
     echo '<ul id="red" class="treeview-gray">';
 
     foreach ($projects as $project) {
-      echo '<a href="#" class="show_hide">','<li class="arvore"><span>',$project['Project']['name'],'</span></a>'; 
+      echo '<a href="#" class="show" id="'.$project['Project']['id'].'">','<li class="arvore"><span >',$project['Project']['name'],'</span></a>'; 
         echo '<ul>';
            
            foreach ($activities as $activity) {
@@ -48,25 +46,25 @@ echo '</div>';
 ?>
 
 
-
-
-<div class="slidingDiv">
+<?php foreach ($projects as $project) { ?>
+ 
+<div class="slidingDiv" id="div_<?php echo $project['Project']['id']; ?>">
       <h3>
-      Projeto - <?php echo $project['Project']['name']; ?> 
-      <span class="icon-action">
-        <?php echo $this->Html->link(
-        $this->Html->image("delete.png", array("alt" => "Deletar")),
-        array('action' => 'delete', $project['Project']['id']),
-        array('escape'=>false),"Você quer excluir realmente ?");?>
-      </span>
+        Projeto - <?php echo $project['Project']['name']; ?> 
+        <span class="icon-action">
+          <?php echo $this->Html->link(
+          $this->Html->image("delete.png", array("alt" => "Deletar")),
+          array('action' => 'delete', $project['Project']['id']),
+          array('escape'=>false),"Você quer excluir realmente ?");?>
+        </span>
+        
+        <span class="icon-action"> 
+          <?php echo $this->Html->link(
+          $this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$project['Project']['id'],
+          array('escape'=>false)) ?>
+        </span> 
       
-      <span class="icon-action"> 
-        <?php echo $this->Html->link(
-        $this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$project['Project']['id'],
-        array('escape'=>false)) ?>
-      </span> 
-      
-    </h3>
+      </h3>
 
     <div> 
       <fieldset class='fieldIndexProject'>
@@ -90,66 +88,7 @@ echo '</div>';
       </fieldset>
 
     </div>
-
-    <div id="direita">
-        <h3>Projetos Filhos </h3>
-
-
-        <div class="projectindex">
-
-          <table id="tableProject" cellpadding="0" cellspacing="0">
-            <tr>
-              <th id="nameProject">Nome</th>
-              <th class="sigla responsive">Abreviação</th>
-              <th class="empresa responsive">Empresa</th>
-              <th class="horas responsive">Horas Individuais</th>
-              <th class="horas responsive">Horas em Grupo</th>
-              <th class="actions">Ações</th>
-            </tr>
-
-            <?php
-      
-              $i = 0;
-              foreach ($projects as $project) 
-              {
-                $class = null;
-                
-                if($i++ % 2 == 0)
-                {
-                  $class = 'class="altrow"';
-                }
-                  
-                      
-            ?>
-
-            <tr <?php echo $class; ?>>
-              <td id="nameTableProject"><?php echo $project['Project']['name']; ?></td>
-              <td class="sigla responsive"><?php echo $project['Project']['acronym']; ?></td>
-              <td class="empresa responsive"><?php echo $project['Company']['name']; ?></td>
-              <td class=" horas responsive"><?php  echo $project['Project']['a_hours_individual']+$project['Project']['b_hours_individual']+$project['Project']['c_hours_individual']; ?>h</td>
-              <td class=" horas responsive"><?php  echo $project['Project']['a_hours_group']+$project['Project']['b_hours_group']+$project['Project']['c_hours_group']; ?>h</td>
-              <td>
-                <div id="actionsProject">
-                  <?php echo $this->Html->link(
-                  $this->Html->image("consultor.png", array('alt' => 'Consultores Alocados','title' => 'Consultores Alocados')), array('action' => 'alocados',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
-
-                  <?php echo $this->Html->link(
-                  $this->Html->image("view.png", array('alt' => 'Ver','title' => 'Ver Projeto')), array('action' => 'view', $project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
-
-                  <?php echo $this->Html->link(
-                  $this->Html->image("edit.png", array('alt' => 'Editar', 'title'=>'Editar Projeto')), array('action' => 'edit', $project['Project']['id']),
-                  array('escape'=>false, 'id'=>'link'))?>
-
-                  <?php echo $this->Html->link(
-                  $this->Html->image("delete.png", array('alt' => 'Remover','title' => 'Remover Projeto')), array('action' => 'delete', $project['Project']['id']),
-                  array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do projeto ". $project['Project']['name'] . "?");
-                  ?>
-                </div>
-              </td>
-              
-            </tr>
-
-            <?php } ?>
-      </div>
  </div>
+
+ <?php } ?>
 
