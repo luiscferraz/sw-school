@@ -5,7 +5,7 @@
 <h3>Projeto -  <?php echo $nameProject ?></h2>
 <div class="projectindex">
 	<input type="button" value="Alocar Consultor" id="bt-alocar-consultor"  onclick='listConsultores();' />
-	<table cellpadding="0" cellspacing="0" id="<?php echo $id_projeto; ?>">
+	<table cellpadding="0" cellspacing="0" id=" <?php echo $id_projeto; ?>">
 		<tr>
 			<th id="nameProject">Nome</th>
 			<th>Valor Hora A </th>
@@ -76,7 +76,7 @@
 					?>
 					
 					<?php echo $this->Html->link(
-					$this->Html->image("delete.png", array('alt' => 'Remover','title' => 'Remover Consultor')), array('action' => 'delete', ''),
+					$this->Html->image("delete.png", array('alt' => 'Remover','title' => 'Remover Consultor')), array('action' => 'deleteconsultor', $consultant['ProjectConsultant']['id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do projeto ?");
 					?>
 				</div>

@@ -120,6 +120,13 @@
 	 		$this -> set('id_projeto',$id);
  		}	
  	}
+
+ 	public function deleteconsultor($id){
+ 		$pro = $this->Project->ProjectConsultant->findById($id);
+ 		$this->Project->ProjectConsultant->delete($id);
+ 		$this->Session -> setFlash($this-> flashSuccess('Apagado Com Sucesso'));
+ 		$this->redirect(array('action' => 'alocados/'.$pro['ProjectConsultant']['project_id']));
+ 	}
  	
  	public function saveProjectConsultant(){
  		

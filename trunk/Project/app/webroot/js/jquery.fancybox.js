@@ -918,7 +918,6 @@
                 top: margin[0] + viewport.y,
                 left: margin[3] + viewport.x
             };
-            alert(F.wrap.width());
 
             if (current.fixed && (!a || a[0] === false) && height <= viewport.h && width <= viewport.w) {
                 rez = {
