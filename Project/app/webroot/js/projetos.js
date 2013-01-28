@@ -143,7 +143,6 @@ function salvar (obj) {
 	var id = $(obj).attr('id');
 
 	var classe = $(obj).attr('class');
-	alert(id+'/'+classe);
 	var horaa = $('#'+id+' .hora-a').children('textarea').val();
 	var horab = $('#'+id+' .hora-b').children('textarea').val();
 	var horac = $('#'+id+' .hora-c').children('textarea').val();
