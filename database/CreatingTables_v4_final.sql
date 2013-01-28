@@ -95,8 +95,8 @@ DROP TABLE IF EXISTS `swsdb`.`sepgs` ;
 CREATE  TABLE IF NOT EXISTS `swsdb`.`sepgs` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NULL ,
-  `phone` VARCHAR(13) NULL ,
-  `cellular_telephone` VARCHAR(13) NULL ,
+  `phone1` VARCHAR(13) NULL ,
+  `phone2` VARCHAR(13) NULL ,
   `email` VARCHAR(45) NULL ,
   `company_id` INT NULL ,
   INDEX `fk_sepgs_companies` (`company_id` ASC) ,
@@ -119,8 +119,8 @@ DROP TABLE IF EXISTS `swsdb`.`financials` ;
 CREATE  TABLE IF NOT EXISTS `swsdb`.`financials` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NULL ,
-  `phone` VARCHAR(13) NULL ,
-  `cellular_telephone` VARCHAR(13) NULL ,
+  `phone1` VARCHAR(13) NULL ,
+  `phone2` VARCHAR(13) NULL ,
   `email` VARCHAR(45) NULL ,
   `company_id` INT NULL ,
    INDEX `fk_financials_companies` (`company_id` ASC) ,
@@ -142,8 +142,8 @@ DROP TABLE IF EXISTS `swsdb`.`sponsors` ;
 CREATE  TABLE IF NOT EXISTS `swsdb`.`sponsors` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NULL ,
-  `phone` VARCHAR(13) NULL ,
-  `cellular_telephone` VARCHAR(13) NULL ,
+  `phone1` VARCHAR(13) NULL ,
+  `phone2` VARCHAR(13) NULL ,
   `email` VARCHAR(45) NULL ,
   `company_id` INT NULL ,
   INDEX `fk_sponsors_companies` (`company_id` ASC) ,
@@ -323,6 +323,28 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`project_consultants` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_project_consultants_projects`
+    FOREIGN KEY (`project_id`)
+    REFERENCES `swsdb`.`projects` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+-- -----------------------------------------------------
+-- Table `swsdb`.`expenses`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `swsdb`.`expenses`;
+
+CREATE  TABLE IF NOT EXISTS `swsdb`.`expenses` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `description` VARCHAR(100) NOT NULL ,
+  `value` DECIMAL(16, 2) NOT NULL ,
+  `type` ENUM('e', 's') NOT NULL ,
+  `project_id` INT NOT NULL ,
+  PRIMARY KEY (`id`) ,  
+  INDEX `fk_expenses_projects` (`project_id` ASC) ,
+  CONSTRAINT `fk_expenses_projects`
     FOREIGN KEY (`project_id`)
     REFERENCES `swsdb`.`projects` (`id`)
     ON DELETE NO ACTION
