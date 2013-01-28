@@ -1,7 +1,7 @@
 	
 <?php 
     foreach ($activities as $activity) {        
-        $list_activities[$activity['Activity']['id']] =$activity['Activity']['description'];
+        $list_activities[$activity['Activity']['id']] ='Projeto: '.$activity['Project']['name'].' - Atividade: '.$activity['Activity']['description'];
         };                    
     if (!isset($list_activities)){
 		$list_activities['none'] = 'Nenhuma Atividade Cadastrada';
@@ -33,7 +33,7 @@
                 <?php echo $this->Form->input('Entry.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
             </fieldset>
             <fieldset id="Dados_projeto_pai">
-				<?php echo $this->Form->input('Entry.activity_id', array('options' => $list_activities,'empty' => 'Selecione', 'type'=>'select','label' => 'Atividade: ', 'id'=>'actvID')); ?><br>
+				<?php echo $this->Form->input('Entry.activity_id', array('options' => $list_activities,'empty' => 'Selecione', 'type'=>'select','label' => 'Projeto/Atividade: ', 'id'=>'actvID')); ?><br>
 				<?php echo $this->Form->input('Entry.type_consulting', array('options' => array("A"=>"A","B"=>"B", "C"=>"C"),'label' => 'Tipo de consultoria: ', 'id'=>'entryType')); ?> <br>
                 <?php echo $this->Form->input('Entry.hours_worked', array('type'=>'text', 'label' => 'Horas Trabalhadas: ','required'=>'required', 'id'=>'entryHourWorked')); ?>
 			</fieldset>
