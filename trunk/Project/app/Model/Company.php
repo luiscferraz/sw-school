@@ -17,21 +17,21 @@ class Company extends AppModel {
 	  'Sponsor' => array(
          'className' => 'Sponsor',
          'foreignKey' => 'company_id',
-         'fields' => array('id', 'name', 'phone','email'),
+         'fields' => array('id', 'name', 'phone1', 'phone2','email'),
          'conditions' => array(),       
          'dependent' => true
       ),
 	  'Financial' => array(
          'className' => 'Financial',
          'foreignKey' => 'company_id',
-         'fields' => array('id', 'name', 'phone','email'),
+         'fields' => array('id', 'name', 'phone1','phone2','email'),
          'conditions' => array(),       
          'dependent' => true
       ),
 	  'Sepg' => array(
          'className' => 'Sepg',
          'foreignKey' => 'company_id',
-         'fields' => array('id', 'name', 'phone','email'),
+         'fields' => array('id', 'name', 'phone1','phone2','email'),
          'conditions' => array(),       
          'dependent' => true
       )
