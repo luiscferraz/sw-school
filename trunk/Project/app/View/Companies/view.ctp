@@ -78,11 +78,11 @@
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Sponsor']['phone'];
+			echo $company['Sponsor']['phone1'];
 		?></p>
 		<p><?php 
 			echo 'Celular: ';
-			echo $company['Sponsor']['cellular_telephone'];
+			echo $company['Sponsor']['phone2'];
 		?></p>
 		<p><?php 
 			echo 'Email: ';
@@ -103,11 +103,11 @@
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Financial']['phone'];
+			echo $company['Financial']['phone1'];
 		?></p>
 		<p><?php 
 			echo 'Celular: ';
-			echo $company['Financial']['cellular_telephone'];
+			echo $company['Financial']['phone2'];
 		?></p>
 		<p><?php 
 			echo 'Email: ';
@@ -128,11 +128,11 @@
 		?></p>
 		<p><?php 
 			echo 'Telefone: ';
-			echo $company['Sepg']['phone'];
+			echo $company['Sepg']['phone1'];
 		?></p>
 		<p><?php 
 			echo 'Celular: ';
-			echo $company['Sepg']['cellular_telephone'];
+			echo $company['Sepg']['phone2'];
 		?></p>
 		<p><?php 
 			echo 'Email: ';
