@@ -26,7 +26,11 @@
  		$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
  		//$this -> set ('entries', $this -> Project->Activity->Entry->find('all', array('conditions' => array('Entry.removed !=' => 1))));
  	}
- 	
+
+ 	public function financial(){
+ 		$this -> layout = 'base';
+ 	}
+
  	public function add(){
  		$this->layout = 'base';
  		
