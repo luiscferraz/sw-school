@@ -7,7 +7,7 @@
  	
  	
  	public function index(){
-		$this->set('title_for_layout', 'Activities');
+		$this->set('title_for_layout', 'Atividades');
  		$this -> layout = 'index';
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
