@@ -49,7 +49,7 @@ table {
 }
 
 fieldset{
-	
+	border-radius: 8px 8px 8px 8px;
 }
 
 td, th {
@@ -670,7 +670,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	line-height: 25px;
 }
 
-#dadosProjeto{
+#dadosProjeto, #despesasProjeto{
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
@@ -678,6 +678,20 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	height: 390px;
 	padding-bottom: 32px;
 	float:left;
+}
+
+#despesasProjeto{
+	width: 11% !important;
+	height: 110px !important;
+}
+
+#totalEntrada, #totalSaida, #saldo{
+	width: 120px;
+	height: 20px;
+}
+
+#tabelaDespesas{
+	margin-top: 200px;
 }
 
 #horaGrupo, #horaIndiv{
