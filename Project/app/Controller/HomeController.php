@@ -8,7 +8,8 @@
  
  class HomeController extends AppController{
         public function index () {
-               $this->layout =  'base'; 
+               $this->layout =  'main';
+			   $this-> set ('tipo_usuario',$this->Auth->user('type'));	
         }
  }
 ?>

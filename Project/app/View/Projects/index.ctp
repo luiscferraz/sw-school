@@ -43,8 +43,12 @@
 			<td class=" horas responsive"><?php  echo $project['Project']['c_hours_group']; ?></td>
 			<td>
 				<div id="actionsProject">
-					<?php echo $this->Html->link(
-					$this->Html->image("consultor.png", array('alt' => 'Consultores Alocados','title' => 'Consultores Alocados')), array('action' => 'alocados',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
+					<?php 
+					if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+					echo $this->Html->link(
+					$this->Html->image("consultor.png", array('alt' => 'Consultores Alocados','title' => 'Consultores Alocados')), array('action' => 'alocados',$project['Project']['id']), array('escape'=>false, 'id'=>'link'));
+					}
+					?>
 
 					<?php echo $this->Html->link(
 					$this->Html->image("financial.png", array('alt' => 'Finanças','title' => 'Finanças')), array('action' => 'financial',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
