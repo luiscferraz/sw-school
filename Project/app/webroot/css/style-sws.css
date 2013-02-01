@@ -209,7 +209,7 @@ p span {
 }
 #Menu_Home ul  {
 	margin-top:10px;
-	margin-left:0px;
+	margin-left:170px;
 	padding-left:0px;
 }
 #Menu_Home ul li{
@@ -249,13 +249,13 @@ p span {
 	padding-bottom: 10px;
 }
 #botao_home_img{
-	margin-left:95px;
+	margin-left:45px;
 	margin-bottom:15px;
 	margin-top: 5px;
 }
 
 #logoSw{
-	margin-left:50px;
+	margin-left:230px;
 	margin-top: 5px;
 }
 
