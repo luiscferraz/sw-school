@@ -66,7 +66,9 @@
 				echo $entry['Entry']['type_consulting'];
 				}
 			}
-		?></td>
+		?>
+
+		</td>
 
 		<td class="horas_trabalhadas"><?php
 		foreach ($entries as $entry) {
@@ -74,7 +76,9 @@
 				echo $entry['Entry']['hours_worked'];
 				}
 			}
-		?></td>
+		?>
+
+		</td>
 
 		<td class="datas"><?php
 		foreach ($entries as $entry) {
@@ -82,6 +86,46 @@
 				echo $entry['Entry']['date'];
 				}
 			}
-		?></td>
+		?>
+
+		</td>
+
+		<div class="actions">
+				<td>
+					<?php 
+						foreach ($entries as $entry) {
+							if ($entry['Entry']['activity_id']===$activities['Activity']['id']) {
+								echo $this->html->link(
+									$this->html->image("view.png", array('alt' => 'Ver')), array('action' => '../entries/view', $entry['Entry']['id']), array('escape'=>false, 'id'=>'link'));
+							}
+						}
+					?>
+
+					<?php 
+						foreach ($entries as $entry) {
+							if ($entry['Entry']['activity_id']===$activities['Activity']['id']) {
+								echo $this->html->link(
+									$this->html->image("edit.png", array('alt' => 'Editar')), array('action' => '../entries/edit', $entry['Entry']['id']), array('escape'=>false, 'id'=>'link'));
+							}
+						}
+					?>
+
+					<!--<?php echo $this->Html->link(
+					$this->Html->image("attachment.png", array('alt' => 'Anexar')), array('onClick' => 'ListAttachments('.$activity['Activity']['id'].')'),
+					array('escape'=>false, 'id'=>'link'));?> -->
+					
+					<input id="link" type="button" value="Anexar" onclick='ListAttachments();'>
+
+					<!--<?php
+						foreach ($activities as $activity) {
+							if ($activity['Activity']['project_id']===$project['Project']['id']) {
+						echo $this->Html->link(
+						$this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $activity['Activity']['id']),array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da atividade?");
+						}
+							}
+								?> -->
+				</td>
+			</div>
+
     </table>
 </div>
