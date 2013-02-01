@@ -34,3 +34,54 @@
 	<p><span>Data: </span> <?php echo $activities['Activity']['date']; ?></p>
 </div>
 
+<h2 id="ApontamentosEmAtividades">
+	Apontamentos 
+</h2>
+
+<div class="entry_index">
+
+	<table cellpadding="0" cellspacing="0">
+		<tr>
+			<th class="responsive">Consultor</th>
+			<th>Tipo</th>
+			<th class="responsive">Horas Trabalhadas</th>
+			<th class="responsive">Data</th>			
+			<th class="actions">Ações</th>
+			<th class="responsive">Aprovação</th>
+		</tr>
+
+		<td class="nome"><?php
+		foreach ($entries as $entry) {
+			if ($entry['Entry']['activity_id']===$activities['Activity']['id']) {
+				echo $entry['Consultant']['name'];
+				}
+			}
+		?>
+
+		</td>
+
+		<td class="tipo"><?php
+		foreach ($entries as $entry) {
+			if ($entry['Entry']['activity_id']===$activities['Activity']['id']) {
+				echo $entry['Entry']['type_consulting'];
+				}
+			}
+		?></td>
+
+		<td class="horas_trabalhadas"><?php
+		foreach ($entries as $entry) {
+			if ($entry['Entry']['activity_id']===$activities['Activity']['id']) {
+				echo $entry['Entry']['hours_worked'];
+				}
+			}
+		?></td>
+
+		<td class="datas"><?php
+		foreach ($entries as $entry) {
+			if ($entry['Entry']['activity_id']===$activities['Activity']['id']) {
+				echo $entry['Entry']['date'];
+				}
+			}
+		?></td>
+    </table>
+</div>

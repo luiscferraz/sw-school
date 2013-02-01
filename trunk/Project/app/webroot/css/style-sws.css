@@ -789,6 +789,13 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	height: 66px;
 }
 
+#ApontamentosEmAtividades{
+	color: #5F9EA0;
+	text-align: left;
+	margin-top: 550px;
+	border-bottom:2px solid #5F9EA0;
+}
+
 #Dados_projeto_pai{
 	padding-left: 15px;
 	border-width: 30px;

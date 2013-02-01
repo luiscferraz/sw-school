@@ -49,9 +49,9 @@
 
 
 
-<h1 id="AtividadesEmProjetoPai">
+<h2 id="AtividadesEmProjetoPai">
 	Atividades - <?php echo $project['Project']['name']; ?> 
-</h1>
+</h2>
 
 <div class="activity index">
 
