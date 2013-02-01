@@ -25,7 +25,7 @@ $('document').ready(function(){
 	var flag = false;
 	$('#botao_home').click(function(e){
 		if (flag==false){
-			$('#Menu_Home').animate({'margin-left':'-10px'});	
+			$('#Menu_Home').animate({'margin-left':'-230px'});	
 			flag = true;
 		}
 		else{
