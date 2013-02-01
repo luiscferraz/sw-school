@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
  class ActivitiesController extends AppController{
  	public $helpers = array ('html','form');
@@ -10,6 +10,7 @@
 		$this->set('title_for_layout', 'Atividades');
  		$this -> layout = 'index';
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
  				 
  	}
@@ -94,6 +95,8 @@
 		$this -> set ('consultor2', $this-> Nome_Consultor($Atividade['Activity']['consultant2_id']));
 		$this -> set ('consultor3', $this-> Nome_Consultor($Atividade['Activity']['consultant3_id']));
 		$this -> set ('consultor4', $this-> Nome_Consultor($Atividade['Activity']['consultant4_id']));
+		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
+ 		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
 		
 	    if ($this->request->is('get')) {
 	        $this->set('activities', $this->Activity->read());
