@@ -21,21 +21,50 @@ $(document).ready(function(){
 
     echo '<ul id="red" class="treeview-gray">';
 
-    foreach ($projects as $project) {
-      echo '<a href="#" class="show" id="'.$project['Project']['id'].'">','<li class="arvore"><span >',$project['Project']['name'],'</span></a>'; 
-        echo '<ul>';
-           
-           foreach ($activities as $activity) {
+    #Percorrendo os projetos pais à partir de uma varredura por todos os projetos e a condição se seu id pai é nulo
 
-                   if ($activity['Activity']['project_id']===$project['Project']['id']) {
-                   	echo '<li><span>';
-                   	echo $this->html->link(($activity['Activity']['description']), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
-                   	echo'</span></li>';
-      				}
+    foreach ($projects as $project) {
+      if ($project['Project']['parent_project_id']== null){
+        echo '<a href="#" class="show" id="'.$project['Project']['id'].'">','<li class="arvore"><span >',$project['Project']['name'],'</span></a>'; 
+        echo '<ul>';
+
+        #Percorrendo todas as atividades e usando a condição se o id projeto da atividade é igual ao id do projeto
+
+        foreach ($activities as $activity) {
+           if ($activity['Activity']['project_id']===$project['Project']['id']) {
+            echo '<li><span>';
+            echo $this->html->link(($activity['Activity']['description']), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+            echo'</span></li>';
+            echo '</ul>';
+            echo '</li>'; 
+          }
+        }
+        #Percorrendo todos os projetos novamente e usando a condição se seu id pai é igual ao id do projeto percorrido atualmente
+
+        foreach ($projects as $projectFilho) {
+          if ($project['Project']['id']==$projectFilho['Project']['parent_project_id']){
+            echo '<a href="#" class="show" id="'.$projectFilho['Project']['id'].'">','<li class="arvore"><span >',$projectFilho['Project']['name'],'</span></a>'; 
+            echo '<ul>';
+
+            foreach ($activities as $activity) {
+             if ($activity['Activity']['project_id']===$projectFilho['Project']['id']) {
+              echo '<li><span>';
+              echo $this->html->link(($activity['Activity']['description']), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+              echo'</span></li>';
+              echo '</ul>';
+              echo '</li>'; 
+            }
+          }
+
+
+            }
+        
+    
+        
+  		}
            
            }
-           echo '</ul>';
-           echo '</li>';        
+                  
     }
 
 
