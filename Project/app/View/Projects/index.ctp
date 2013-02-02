@@ -41,7 +41,7 @@
 			<td class=" horas responsive"><?php  echo $project['Project']['a_hours_group']; ?></td>
 			<td class=" horas responsive"><?php  echo $project['Project']['b_hours_group']; ?></td>
 			<td class=" horas responsive"><?php  echo $project['Project']['c_hours_group']; ?></td>
-			<td>
+			<td id="actionsProject">
 				<div id="actionsProject">
 					<?php 
 					if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
