@@ -32,8 +32,8 @@
 			<td class="cnpj responsive"><?php echo $company['Company']['cnpj']; ?></td>
 			<td class="telefone1 responsive"><?php echo $company['Company']['phone1']; ?></td>
 
-			<div class="actions">
-				<td>
+			<div>
+				<td class="actions">
 					<?php echo $this->Html->link(
 					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $company['Company']['id']), array('escape'=>false, 'id'=>'link'))?>
 					
