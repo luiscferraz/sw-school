@@ -1,7 +1,7 @@
-﻿<?php
+<?php
 
  class ActivitiesController extends AppController{
- 	public $helpers = array ('html','form');
+ 	public $helpers = array ('html','form','Js'=>array('Jquery'));
  	public $name = 'Activities';
  	var $scaffold;
  	
@@ -10,6 +10,7 @@
 		$this->set('title_for_layout', 'Atividades');
  		$this -> layout = 'index';
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+ 		$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
  				 
@@ -21,10 +22,14 @@
 	}
 	
 	public function AjaxListFiles(){
-		$this->layout = 'ajax';
+		//$this->layout = 'index';
 		//$file = $this->Activity->Attachment->find('all');
 		//return $file['Attachment'];
-		return  array('erick' => 'iiii' );
+		//return  array('erick' => 'iiii' );
+		$this->layout = 'ajax';
+		$attachments = $this->Activity->Attachment->findAll();
+		$this-> set('attachments', $attachments);
+		#return array($attachments['Attachment']);
 	}
 		
 	public function AjaxAttachFiles(){

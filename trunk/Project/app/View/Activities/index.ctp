@@ -18,6 +18,12 @@
 				if($i++ % 2 == 0)
 				{
 					$class = 'class="altrow"';
+					foreach($attachments as $attachment){
+						
+						$list_attachments[$attachment['Attachment']['id']] = $attachment['Attachment']['file_name'];
+						
+						
+					}
 				}
 					
 							
@@ -51,7 +57,7 @@
 					$this->Html->image("attachment.png", array('alt' => 'Anexar')), array('onClick' => 'ListAttachments('.$activity['Activity']['id'].')'),
 					array('escape'=>false, 'id'=>'link'));?> -->
 					
-					<input id="link" type="button" value="Anexar" onclick='ListAttachments();'>
+					<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input>
 
 
 				</td>

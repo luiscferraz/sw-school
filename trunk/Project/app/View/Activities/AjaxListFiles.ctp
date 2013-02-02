@@ -6,7 +6,7 @@
 		<th class="nome">Arquivo</th>
 		<th class="nome">Adicionar</th>	
 	</tr>
-<?php foreach( $attachments as $attachment) { 
+<?php foreach($attachments as $attachment) { 
 		
 		echo '<tr> ' .
 				'<td>' .
