@@ -7,7 +7,7 @@
 					<legend class="legenda">Dados Pessoais</legend>
 						
 						<?php echo $this->Form->input('Consultant.name', array('label' => 'Nome: ','required'=>'required', 'id'=>'name')); ?>
-						<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF: ','required'=>'required', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
+						<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF: ', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
 						<?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ','required'=>'required', 'id'=>'acronym','onblur'=>'checkAcronym(this)')); ?>
 						<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor: ','required'=>'required', 'value'=>'#000000','id'=>'acronym_color','onblur'=>'checkColor(this)')); ?>
 						<?php echo $this->Form->input('Consultant.phone1', array('label' => 'Telefone: ', 'id'=>'phone1')); ?>
@@ -20,13 +20,13 @@
 					<legend class="legenda">Endereço</legend>
 
 
-						<?php echo $this->Form->input('Address.zip_code', array('label' => 'CEP: ','required'=>'required', 'id'=>'zip_code')); ?>
-						<?php echo $this->Form->input('Address.address', array('label' => 'Endereço: ','required'=>'required', 'id'=>'address')); ?>
-						<?php echo $this->Form->input('Address.number', array('label' => 'Número: ','required'=>'required')); ?>
+						<?php echo $this->Form->input('Address.zip_code', array('label' => 'CEP: ', 'id'=>'zip_code')); ?>
+						<?php echo $this->Form->input('Address.address', array('label' => 'Endereço: ', 'id'=>'address')); ?>
+						<?php echo $this->Form->input('Address.number', array('label' => 'Número: ')); ?>
 						<?php echo $this->Form->input('Address.complement', array('label' => 'Complemento: ')); ?>
-						<?php echo $this->Form->input('Address.neighborhood', array('label' => 'Bairro: ','required'=>'required','id'=>'neighborhood')); ?>
-						<?php echo $this->Form->input('Address.city', array('label' => 'Cidade: ','required'=>'required', 'id'=>'city')); ?>
-						<?php echo $this->Form->input('Address.state', array('options' => array("AC"=>"AC","AL"=>"AL","AP"=>"AP","AM"=>"AM","BA"=>"BA","CE"=>"CE","DF"=>"DF","ES"=>"ES","GO"=>"GO","MA"=>"MA","MG"=>"MG","MT"=>"MT","MS"=>"MS","PA"=>"PA","PB"=>"PB","PE"=>"PE","PI"=>"PI","PR"=>"PR","RJ"=>"RJ","RN"=>"RN","RO"=>"RO","RR"=>"RR","RS"=>"RS","SC"=>"SC","SE"=>"SE","SP"=>"SP","TO"=>"TO"),'type' => 'select', 'empty' => 'Selecione','label' => 'Estado: ','required'=>'required', 'id'=>'state')); ?>
+						<?php echo $this->Form->input('Address.neighborhood', array('label' => 'Bairro: ','id'=>'neighborhood')); ?>
+						<?php echo $this->Form->input('Address.city', array('label' => 'Cidade: ', 'id'=>'city')); ?>
+						<?php echo $this->Form->input('Address.state', array('options' => array("AC"=>"AC","AL"=>"AL","AP"=>"AP","AM"=>"AM","BA"=>"BA","CE"=>"CE","DF"=>"DF","ES"=>"ES","GO"=>"GO","MA"=>"MA","MG"=>"MG","MT"=>"MT","MS"=>"MS","PA"=>"PA","PB"=>"PB","PE"=>"PE","PI"=>"PI","PR"=>"PR","RJ"=>"RJ","RN"=>"RN","RO"=>"RO","RR"=>"RR","RS"=>"RS","SC"=>"SC","SE"=>"SE","SP"=>"SP","TO"=>"TO"),'type' => 'select', 'empty' => 'Selecione','label' => 'Estado: ', 'id'=>'state')); ?>
 						</fieldset>
 						
     			<fieldset id='usuario'>

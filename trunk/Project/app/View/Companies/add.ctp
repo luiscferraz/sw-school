@@ -8,7 +8,7 @@
 		<fieldset id="dadosEmpresa">
 			<legend class="legenda">Dados da Empresa</legend>
 			<?php
-				echo $this->Form->input('cnpj', array('label' => 'CNPJ:', 'id' => 'cnpj', 'required'=>'required', 'onblur' => 'checkCnpj(this)'));				
+				echo $this->Form->input('cnpj', array('label' => 'CNPJ:', 'id' => 'cnpj',  'onblur' => 'checkCnpj(this)'));				
 				echo $this->Form->input('name', array('label' => 'Nome da empresa:', 'required'=>'required'));
 				echo $this->Form->input('acronym', array('label' => 'Sigla:', 'required'=>'required' ));			
 				echo $this->Form->input('phone1', array('label' => 'Telefone:', 'id' => 'phone1'));
@@ -19,13 +19,14 @@
 		<fieldset id="dadosEndereco">
 			<legend class="legenda">Endereço</legend>
 			<?php
-				echo $this->Form->input('Address.zip_code', array('label' => 'CEP:', 'id' => 'zip_code', 'required'=>'required', 'onBlur' => 'getEndereco()'));                
-				echo $this->Form->input('Address.address', array('label' => 'Endereço:', 'id' => 'address', 'required'=>'required'));
-				echo $this->Form->input('Address.number', array('label' => 'Número:', 'required'=>'required'));
-				echo $this->Form->input('Address.neighborhood', array('label' => 'Bairro:', 'id' => 'neighborhood', 'required'=>'required'));
-				echo $this->Form->input('Address.city', array('label' => 'Cidade:', 'id' => 'city', 'required'=>'required'));
-				echo $this->Form->input('Address.state',array('options' => array("AC"=>"AC","AL"=>"AL","AP"=>"AP","AM"=>"AM","BA"=>"BA","CE"=>"CE","DF"=>"DF","ES"=>"ES","GO"=>"GO","MA"=>"MA","MG"=>"MG","MT"=>"MT","MS"=>"MS","PA"=>"PA","PB"=>"PB","PE"=>"PE","PI"=>"PI","PR"=>"PR","RJ"=>"RJ","RN"=>"RN","RO"=>"RO","RR"=>"RR","RS"=>"RS","SC"=>"SC","SE"=>"SE","SP"=>"SP","TO"=>"TO"),'type' => 'select', 'empty' => 'Selecione','label' => 'Estado: ', 'id' => 'state', 'required'=>'required'));
+				echo $this->Form->input('Address.zip_code', array('label' => 'CEP:', 'id' => 'zip_code',  'onBlur' => 'getEndereco()'));                
+				echo $this->Form->input('Address.address', array('label' => 'Endereço:', 'id' => 'address'));
+				echo $this->Form->input('Address.number', array('label' => 'Número:'));
 				echo $this->Form->input('Address.complement', array('label' => 'Complemento:'));
+				echo $this->Form->input('Address.neighborhood', array('label' => 'Bairro:', 'id' => 'neighborhood'));
+				echo $this->Form->input('Address.city', array('label' => 'Cidade:', 'id' => 'city'));
+				echo $this->Form->input('Address.state',array('options' => array("AC"=>"AC","AL"=>"AL","AP"=>"AP","AM"=>"AM","BA"=>"BA","CE"=>"CE","DF"=>"DF","ES"=>"ES","GO"=>"GO","MA"=>"MA","MG"=>"MG","MT"=>"MT","MS"=>"MS","PA"=>"PA","PB"=>"PB","PE"=>"PE","PI"=>"PI","PR"=>"PR","RJ"=>"RJ","RN"=>"RN","RO"=>"RO","RR"=>"RR","RS"=>"RS","SC"=>"SC","SE"=>"SE","SP"=>"SP","TO"=>"TO"),'type' => 'select', 'empty' => 'Selecione','label' => 'Estado: ', 'id' => 'state'));
+				
 				
 			?>
 		</fieldset>
