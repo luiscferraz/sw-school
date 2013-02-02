@@ -529,8 +529,8 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 #actionsProject{
-	width: 96px;
-	padding-left: -5px;
+	width: 98px;
+	margin-left: 8px;
 	height: 10px;
 }
 
