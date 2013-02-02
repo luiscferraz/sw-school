@@ -3689,3 +3689,6 @@
 #0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 >>>>>>> .r175
+2013-02-02 16:44:32 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
