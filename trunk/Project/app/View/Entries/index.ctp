@@ -32,8 +32,8 @@
 			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
 			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
 			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
-			<div class="actions">
-				<td>
+			<div>
+				<td class="actions">
 					<?php echo $this->Html->link(
 					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $entry['Entry']['id']), array('escape'=>false, 'id'=>'link'))?>
 
@@ -51,7 +51,7 @@
 					}
 					?></td>
 			</div>
-			<td class="aprovação"> 
+			<td class="actions"> 
 				<?php 
 				if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) {
 						 if ($entry['Entry']['approved'] == 0) {
