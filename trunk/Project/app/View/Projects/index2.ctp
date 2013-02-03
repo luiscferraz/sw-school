@@ -25,17 +25,20 @@ $(document).ready(function(){
 
   function imprimirFilhos($project, $projectsFilhos, $activities) {
     #Percorrendo os projetos filhos usando a condição se seu id pai é igual ao id do $projeto
-    echo '<ul>';
     
     foreach ($projectsFilhos as $projectFilho) {
 
       if ($project['Project']['id']==$projectFilho['Project']['parent_project_id']) {
+        echo '<ul>';
 
         echo '<a href="#" class="show" id="'.$projectFilho['Project']['id'].'">','<li class="arvore"><span >',$projectFilho['Project']['name'],'</span></a>';
 
-        echo '<ul>';
-        echo '</li>';
+        
+        
         imprimirFilhos($projectFilho, $projectsFilhos, $activities);
+
+        echo '</ul>';
+        echo '</li>';
       }
     }    
   }
@@ -52,10 +55,16 @@ $(document).ready(function(){
   foreach ($projectsPais as $project) {
 
     echo '<a href="#" class="show" id="'.$project['Project']['id'].'">','<li class="arvore"><span >',$project['Project']['name'],'</span></a>';
+
+    imprimirFilhos($project, $projectsFilhos, $activities);
+    
+
   }
 
-  imprimirFilhos($project, $projectsFilhos, $activities);
+  echo '</li>';
   echo '</ul>';
+  
+
   echo '</div>';
 
 ?>
