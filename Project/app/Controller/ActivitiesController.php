@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
  class ActivitiesController extends AppController{
  	public $helpers = array ('html','form','Js'=>array('Jquery'));
