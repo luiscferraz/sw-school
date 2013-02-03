@@ -15,7 +15,7 @@
 	         'dependent' => true
 		), 
 		'Consultant' );
-	public $hasMany = array('ProjectConsultant','Activity');
+	public $hasMany = array('ProjectConsultant','Activity', 'Expense');
 	
  }
 ?>

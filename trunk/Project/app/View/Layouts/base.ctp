@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
-<html >
-	<head>
-		<title>Swschool</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    
+    <head>
+		<title>SWQuality</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<?php echo $this->Html->css('style-sws'); ?>
 		<?php echo $this->Html->css('colorpicker'); ?>
@@ -25,7 +26,7 @@
 	</head>
 	<body>
 		<?php echo $this->Session->flash(); ?>
-		<?php include 'includes/menu.php' ?>
+		<?php include 'includes/menu.php'; ?>
 		
 		<div class="conteudo">
 			<?php echo $this->fetch('content'); ?>
