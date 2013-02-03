@@ -108,13 +108,6 @@
 	    }
 	}
 
-	public function approve($id = NULL){
-		$this->Entry->id = $id;
-		if($this->Entry->saveField("approved",1)){
-			$this->Session->setFlash('O apontamento foi aprovado!');
-			$this->redirect(array('action' => 'index'));
-		}
-	}
 
 	private function Nome_Consultor($id){
 		$name = $this->Activity->Consultant->findById($id);
