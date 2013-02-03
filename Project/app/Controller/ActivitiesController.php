@@ -100,12 +100,20 @@
 		$this -> set ('consultor2', $this-> Nome_Consultor($Atividade['Activity']['consultant2_id']));
 		$this -> set ('consultor3', $this-> Nome_Consultor($Atividade['Activity']['consultant3_id']));
 		$this -> set ('consultor4', $this-> Nome_Consultor($Atividade['Activity']['consultant4_id']));
-		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
+		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1, 'Entry.activity_id = ' => $id))));
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
 		
 	    if ($this->request->is('get')) {
 	        $this->set('activities', $this->Activity->read());
 	    }
+	}
+
+	public function approve($id = NULL){
+		$this->Entry->id = $id;
+		if($this->Entry->saveField("approved",1)){
+			$this->Session->setFlash('O apontamento foi aprovado!');
+			$this->redirect(array('action' => 'index'));
+		}
 	}
 
 	private function Nome_Consultor($id){
