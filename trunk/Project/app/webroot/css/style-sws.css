@@ -570,6 +570,16 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	background-color: #bad6f3;
 	font-size: 14px;
 }
+#AtividadesEmProjetoIndex2{
+	color: #5F9EA0;
+	text-align: left;
+	margin-top: 30px;
+	border-bottom:2px solid #5F9EA0;
+}
+
+.AtividadesEmProjetoIndex2{
+
+}
 
 #tituloArvore {
 	color: #2c4342 !important;
