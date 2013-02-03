@@ -45,11 +45,11 @@ $(document).ready(function(){
 
         echo '</ul>';
         echo '</li>';
-
+        imprimirFilhos($projectFilho, $projectsFilhos, $activities);
       }
     }
 
-    #imprimirFilhos($project, $projectsFilhos, $activities);
+    
   }
 
 ?>
