@@ -21,10 +21,10 @@ $(document).ready(function(){
 
 <?php
 
- #FUN√á√ÉO RECURSIVA PARA IMPRIMIR OS FILHOS DE UM PROJETOS E SUAS RESPECTIVAS ATIVIDADES
+ #FUN«√O RECURSIVA PARA IMPRIMIR OS FILHOS DE UM PROJETOS E SUAS RESPECTIVAS ATIVIDADES
 
   function imprimirFilhos($project, $projectsFilhos, $activities) {
-    #Percorrendo os projetos filhos usando a condi√ß√£o se seu id pai √© igual ao id do $projeto
+    #Percorrendo os projetos filhos usando a condiÁ„o se seu id pai È igual ao id do $projeto
     echo '<ul>';
     
     foreach ($projectsFilhos as $projectFilho) {
@@ -34,22 +34,10 @@ $(document).ready(function(){
         echo '<a href="#" class="show" id="'.$projectFilho['Project']['id'].'">','<li class="arvore"><span >',$projectFilho['Project']['name'],'</span></a>';
 
         echo '<ul>';
-
-        foreach ($activities as $activity) {
-          if ($activity['Activity']['project_id']===$projectFilho['Project']['id']) {
-            echo '<li><span>';
-            echo '<a href="#" class="show" id="'.$projectFilho['Project']['id'].'">','<li class="arvore"><span >',$activity['Activity']['description'],'</span></a>';
-            echo'</span></li>';
-          }
-        }
-
-        echo '</ul>';
         echo '</li>';
         imprimirFilhos($projectFilho, $projectsFilhos, $activities);
       }
-    }
-
-    
+    }    
   }
 
 ?>
@@ -64,22 +52,9 @@ $(document).ready(function(){
   foreach ($projectsPais as $project) {
 
     echo '<a href="#" class="show" id="'.$project['Project']['id'].'">','<li class="arvore"><span >',$project['Project']['name'],'</span></a>';
-    echo '<ul>';
-
-    #Percorrendo todas as atividades e usando a condi√ß√£o se o id projeto da atividade √© igual ao id do projeto
-
-    foreach ($activities as $activity) {
-      if ($activity['Activity']['project_id']===$project['Project']['id']) {
-        echo '<li><span>';
-        echo $this->html->link(($activity['Activity']['description']), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
-        echo'</span></li>';
-      }
-    }
-    echo '</ul>';
   }
 
   imprimirFilhos($project, $projectsFilhos, $activities);
-  echo '</ul>';
   echo '</ul>';
   echo '</div>';
 
@@ -98,7 +73,7 @@ $(document).ready(function(){
           <?php echo $this->Html->link(
           $this->Html->image("delete.png", array("alt" => "Deletar")),
           array('action' => 'delete', $project['Project']['id']),
-          array('escape'=>false),"Voc√™ quer excluir realmente ?");?>
+          array('escape'=>false),"VocÍ quer excluir realmente ?");?>
         </span>
         
         <span class="icon-action"> 
@@ -113,7 +88,7 @@ $(document).ready(function(){
       <fieldset class='fieldIndexProject'>
         <h4> Dados Projeto </h4>
         <p><span>Sigla: </span> <?php echo $project['Project']['name']; ?></p>
-        <p><span>Descri√ß√£o: </span><?php echo $project['Project']['description']; ?></p>  
+        <p><span>DescriÁ„o: </span><?php echo $project['Project']['description']; ?></p>  
       </fieldset>
 
       <fieldset class='fieldIndexProject'>
