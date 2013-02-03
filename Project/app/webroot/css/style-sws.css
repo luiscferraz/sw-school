@@ -695,8 +695,16 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 #tabelaDespesas{
-	margin-top: 130px;
+	margin-top: 20px;
 }
+
+.tr-entrada td {
+	background-color:#cbffad;
+}
+.tr-saida td {
+	background-color: #ff4949;
+}
+
 
 #horaGrupo, #horaIndiv{
 	background-color: #bcdae0;

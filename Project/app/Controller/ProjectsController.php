@@ -29,9 +29,6 @@
  		//$this -> set ('entries', $this -> Project->Activity->Entry->find('all', array('conditions' => array('Entry.removed !=' => 1))));
  	}
 
- 	public function financial(){
- 		$this -> layout = 'base';
- 	}
 
  	public function add(){
  		$this->layout = 'base';
@@ -139,38 +136,6 @@
  	public function saveProjectConsultant(){
  		
  	}
- 	
- 	
- 	//retorna em string nome da empresa
- 	private function GetNameCompany($id){
- 		$name = $this->Project->Company->findById($id);
- 		return $name['Company']['name'];
- 		
- 	}
-
- 	//Retornar em string nome do projeto pai
- 	private function GetNameGerent($id){
- 		if ($this->Project->Consultant->findById($id)){
- 			$name = $this->Project->Consultant-> findById($id);
- 			return $name['Consultant']['name'];
- 		}
- 		else{
- 			return '';
- 		}
- 		
- 	}
- 	
- 	//Retornar em string nome do projeto pai
- 	private function GetNameProjectFather($id){
- 		if ($this->Project->findById($id)){
- 			$name = $this->Project->findById($id);
- 			return $name['Project']['name'];
- 		}
- 		else{
- 			return '';
- 		}
- 		
- 	}
 
  	
  	//verificar se existe um projeto cadastrado com a mesmo nome e empresa.
@@ -233,5 +198,67 @@
 		$companies = $this->Project->Company->find('all');
 		$this-> set('companies', $companies);
 	}
+
+
+
+	//Finanças do projeto
+ 	public function financial($id =  null){
+ 		$this -> layout = 'base';
+
+ 			$this -> set ('financials', $this -> Project -> Expense -> find ('all', array( 'condition' => array ('Expense.project_id =' => $id))));
+ 			$this -> set ('id', $id);
+ 	}
+
+	public function addfinancial(){
+ 		
+ 		if($this->request->is('post')){
+	 			if($this->Project->Expense->saveAll($this->request->data)){
+	 				$this->Session->setFlash($this->flashSuccess('Adicionado com sucesso.'));
+	           		$this->redirect(array('action' => 'financial', $this->request->data['Expense']['project_id']));
+	 			}
+ 			}
+
+ 		
+ 	}
+
+
+
+
+
+	
+ 	//Funções de ajuda
+ 	
+ 	//retorna em string nome da empresa
+ 	private function GetNameCompany($id){
+ 		$name = $this->Project->Company->findById($id);
+ 		return $name['Company']['name'];
+ 		
+ 	}
+
+ 	//Retornar em string nome do projeto pai
+ 	private function GetNameGerent($id){
+ 		if ($this->Project->Consultant->findById($id)){
+ 			$name = $this->Project->Consultant-> findById($id);
+ 			return $name['Consultant']['name'];
+ 		}
+ 		else{
+ 			return '';
+ 		}
+ 		
+ 	}
+ 	
+ 	//Retornar em string nome do projeto pai
+ 	private function GetNameProjectFather($id){
+ 		if ($this->Project->findById($id)){
+ 			$name = $this->Project->findById($id);
+ 			return $name['Project']['name'];
+ 		}
+ 		else{
+ 			return '';
+ 		}
+ 		
+ 	}
+
+
  }
 ?>

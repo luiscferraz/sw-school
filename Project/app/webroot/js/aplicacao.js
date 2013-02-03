@@ -110,6 +110,31 @@ $('document').ready(function(){
 	$( "#datepicker" ).datepicker();
 	});
 
+
+	//Somando as horas das finanças do projeto
+	var totalentrada = 0;
+	$(".entrada").each(function() {
+    		var selecionado = $(this).html();
+		    totalentrada = totalentrada + parseInt(selecionado);
+	});
+
+	var totalsaida = 0;
+	$(".saida").each(function() {
+    		var selecionado = $(this).html();
+		    totalsaida = totalsaida + parseInt(selecionado);
+	});
+
+	$("#total-entrada").val(totalentrada);
+	$("#total-saida").val(totalsaida);
+	$("#total-financas").val( totalentrada - totalsaida );
+
+	if ((totalentrada - totalsaida) >= 0 ) {
+		$("#total-financas").css('backgroundColor', '#cbffad');
+	}
+	else {
+		$("#total-financas").css('backgroundColor', '#ff4949');
+	}
+
 	 
 	
 	
