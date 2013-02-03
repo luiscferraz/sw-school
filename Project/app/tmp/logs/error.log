@@ -3692,3 +3692,29 @@
 2013-02-02 16:44:32 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-02-02 17:00:09 Error: Fatal Error (4): syntax error, unexpected ''alt'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\site\sws\Project\app\View\Layouts\includes\menu.php, line 2]
+2013-02-02 17:00:09 Error: [FatalErrorException] syntax error, unexpected ''alt'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\site\sws\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\site\sws\Pro...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\site\sws\Pro...', 2, Array)
+#2 C:\site\sws\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\site\sws\Pro...', 2, Array)
+#3 C:\site\sws\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-02 17:00:09 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-02 17:00:09 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-02 23:11:59 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-02 23:15:16 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 00:56:01 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:09:31 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
