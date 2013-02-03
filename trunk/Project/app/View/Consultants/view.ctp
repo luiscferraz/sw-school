@@ -39,3 +39,8 @@
 	<?php echo $this->Html->image('consultant.jpg')?>
 </div>
 
+<?php
+	foreach ($projects as $project){
+		echo $project['projects']['id'].' '. $project['projects']['name'].' '. $project['projects']['description'].' '. $project['projects']['acronym'];
+	}
+	?>
