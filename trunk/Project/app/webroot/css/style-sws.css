@@ -67,7 +67,7 @@ a {
 }
 
 div{
-	
+	border-radius: 8px 8px 8px 8px;
 }
 
 td {
@@ -669,11 +669,6 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	color:#1FA0B7;
 }
 
-#selectEmpresa{
-	height: 25px;
-	width: 280px;
-}
-
 #bt-alocar-consultor {
 	margin:20px 0px;
 	padding:20px 10px;
@@ -682,7 +677,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	line-height: 25px;
 }
 
-#dadosProjeto, .despesasProjeto{
+#dadosProjeto, .despesasProjeto, #dadosDespesas{
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
@@ -691,6 +686,8 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	padding-bottom: 32px;
 	float:left;
 }
+
+/*===========Despesas=============*/
 
 .despesasProjeto{
 	width: 11% !important;
@@ -704,6 +701,14 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	height: 20px;
 }
 
+#dadosDespesas{
+	width: 30% !important;
+	height: 45%;
+	padding-bottom: 1%;
+	margin-bottom: 2%;
+	padding-right: 1%;
+}
+
 #tabelaDespesas{
 	margin-top: 20px;
 }
@@ -715,6 +720,16 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	background-color: #ff4949;
 }
 
+#selectEmpresa, #selectTipoDespesa{
+	height: 25px;
+	width: 318px;
+}
+
+#selectValor, #descricaoDespesa{
+	width: 316px;
+}
+
+/*=================================*/
 
 #horaGrupo, #horaIndiv{
 	background-color: #bcdae0;
