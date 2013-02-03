@@ -104,8 +104,54 @@ $(document).ready(function(){
         <p><span>Hora B: </span><?php echo $project['Project']['b_hours_group']; ?>h</p>
         <p><span>Hora C: </span><?php echo $project['Project']['c_hours_group']; ?>h</p>
       </fieldset>
-
     </div>
+
+  <h2 id="AtividadesEmProjetoIndex2">
+    Atividades - <?php echo $project['Project']['name']; ?> 
+  </h2>
+
+    <div class="AtividadesEmProjetoIndex2">
+
+      <table cellpadding="0" cellspacing="0">
+        <tr>
+          <th>Descrição</th>
+          <th class="responsive">Status</th>
+          <th class="responsive">Data</th>
+          <th class="actions">Visualizar Detalhadamente</th>
+        </tr>
+
+        <?php
+          
+          $i = 0;
+          foreach ($activities as $activity){
+            $class = null;
+            if($i++ % 2 == 0){
+              $class = 'class="altrow"';
+            }
+          
+        ?>
+        
+        <tr <?php echo $class; ?>>
+          <td class="descrição"><?php if ($activity['Activity']['project_id']===$project['Project']['id']){echo $activity['Activity']['description'];}?></td>
+          <td class="status"><?php if ($activity['Activity']['project_id']===$project['Project']['id']){echo $activity['Activity']['status'];}?></td>
+          <td class="data"><?php if ($activity['Activity']['project_id']===$project['Project']['id']){echo $activity['Activity']['date'];}?></td>
+
+          <div class="actions">
+
+            <td>
+              <?php
+                if ($activity['Activity']['project_id']===$project['Project']['id']) {
+                  echo $this->html->link(
+                    $this->html->image("view.png", array('alt' => 'Ver')), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+                }
+              ?>
+            </td>
+
+          </div>
+<?php } ?>
+      </table>
+  
+    </div>  
  </div>
 
  <?php } ?>
