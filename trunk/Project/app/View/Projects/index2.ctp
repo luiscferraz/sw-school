@@ -17,62 +17,76 @@ $(document).ready(function(){
 });
  
 </script>
-    <?php
 
-    echo '<ul id="red" class="treeview-gray">';
 
-    #Percorrendo os projetos pais à partir de uma varredura por todos os projetos e a condição se seu id pai é nulo
+<?php
 
-    foreach ($projects as $project) {
-      if ($project['Project']['parent_project_id']== null){
-        echo '<a href="#" class="show" id="'.$project['Project']['id'].'">','<li class="arvore"><span >',$project['Project']['name'],'</span></a>'; 
+ #FUNÇÃO RECURSIVA PARA IMPRIMIR OS FILHOS DE UM PROJETOS E SUAS RESPECTIVAS ATIVIDADES
+
+  function imprimirFilhos($project, $projectsFilhos, $activities) {
+    #Percorrendo os projetos filhos usando a condição se seu id pai é igual ao id do $projeto
+    echo '<ul>';
+    
+    foreach ($projectsFilhos as $projectFilho) {
+
+      if ($project['Project']['id']==$projectFilho['Project']['parent_project_id']) {
+
+        echo '<a href="#" class="show" id="'.$projectFilho['Project']['id'].'">','<li class="arvore"><span >',$projectFilho['Project']['name'],'</span></a>';
+
         echo '<ul>';
 
-        #Percorrendo todas as atividades e usando a condição se o id projeto da atividade é igual ao id do projeto
-
         foreach ($activities as $activity) {
-           if ($activity['Activity']['project_id']===$project['Project']['id']) {
+          if ($activity['Activity']['project_id']===$projectFilho['Project']['id']) {
             echo '<li><span>';
-            echo $this->html->link(($activity['Activity']['description']), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+            echo '<a href="#" class="show" id="'.$projectFilho['Project']['id'].'">','<li class="arvore"><span >',$activity['Activity']['description'],'</span></a>';
             echo'</span></li>';
-            echo '</ul>';
-            echo '</li>'; 
           }
         }
-        #Percorrendo todos os projetos novamente e usando a condição se seu id pai é igual ao id do projeto percorrido atualmente
 
-        foreach ($projects as $projectFilho) {
-          if ($project['Project']['id']==$projectFilho['Project']['parent_project_id']){
-            echo '<a href="#" class="show" id="'.$projectFilho['Project']['id'].'">','<li class="arvore"><span >',$projectFilho['Project']['name'],'</span></a>'; 
-            echo '<ul>';
+        echo '</ul>';
+        echo '</li>';
 
-            foreach ($activities as $activity) {
-             if ($activity['Activity']['project_id']===$projectFilho['Project']['id']) {
-              echo '<li><span>';
-              echo $this->html->link(($activity['Activity']['description']), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
-              echo'</span></li>';
-              echo '</ul>';
-              echo '</li>'; 
-            }
-          }
-
-
-            }
-        
-    
-        
-  		}
-           
-           }
-                  
+      }
     }
 
-
-echo '</div>';
-
-
+    #imprimirFilhos($project, $projectsFilhos, $activities);
+  }
 
 ?>
+
+
+<?php 
+
+  echo '<ul id="red" class="treeview-gray">';
+
+  #Percorrendo os projetos pais
+
+  foreach ($projectsPais as $project) {
+
+    echo '<a href="#" class="show" id="'.$project['Project']['id'].'">','<li class="arvore"><span >',$project['Project']['name'],'</span></a>';
+    echo '<ul>';
+
+    #Percorrendo todas as atividades e usando a condição se o id projeto da atividade é igual ao id do projeto
+
+    foreach ($activities as $activity) {
+      if ($activity['Activity']['project_id']===$project['Project']['id']) {
+        echo '<li><span>';
+        echo $this->html->link(($activity['Activity']['description']), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+        echo'</span></li>';
+      }
+    }
+    echo '</ul>';
+  }
+
+  imprimirFilhos($project, $projectsFilhos, $activities);
+  echo '</ul>';
+  echo '</ul>';
+  echo '</div>';
+
+?>
+
+
+
 
 
 <?php foreach ($projects as $project) { ?>
