@@ -3718,3 +3718,113 @@
 2013-02-03 01:09:31 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-02-03 01:32:56 Error: [NotFoundException] Invalid post
+#0 [internal function]: ProjectsController->view('img', 'attachment.png')
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-03 01:37:46 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\Users\Isabella\Desktop\sw-school\Project\app\View\Projects\view.ctp, line 112]
+2013-02-03 01:37:46 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Isabel...', 112)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Isabel...', 112, Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Isabel...', 112, Array)
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-03 01:37:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:37:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:37:55 Error: [NotFoundException] Invalid post
+#0 [internal function]: ProjectsController->view('img', 'attachment.png')
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-03 01:49:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`swsdb`.`projects`, CONSTRAINT `fk_projects_companies` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON UPDATE CASCADE)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `sw...', Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `sw...')
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Project), Array, Array)
+#4 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Model.php(1586): Model->save(Array, Array)
+#5 C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php(81): Model->saveField('removed', 'true')
+#6 [internal function]: ProjectsController->delete('5')
+#7 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#8 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-03 01:49:58 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:49:58 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:50:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`swsdb`.`projects`, CONSTRAINT `fk_projects_companies` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON UPDATE CASCADE)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `sw...', Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `sw...')
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Project), Array, Array)
+#4 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Model.php(1586): Model->save(Array, Array)
+#5 C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php(81): Model->saveField('removed', 'true')
+#6 [internal function]: ProjectsController->delete('5')
+#7 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#8 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-03 01:50:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:50:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:52:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`swsdb`.`projects`, CONSTRAINT `fk_projects_companies` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON UPDATE CASCADE)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `sw...', Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `sw...')
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Project), Array, Array)
+#4 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Model.php(1586): Model->save(Array, Array)
+#5 C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php(81): Model->saveField('removed', 'true')
+#6 [internal function]: ProjectsController->delete('5')
+#7 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#8 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-03 01:52:52 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:52:52 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:53:07 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`swsdb`.`projects`, CONSTRAINT `fk_projects_companies` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON UPDATE CASCADE)
+#0 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `sw...', Array)
+#2 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `sw...')
+#3 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Project), Array, Array)
+#4 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Model\Model.php(1586): Model->save(Array, Array)
+#5 C:\Users\Isabella\Desktop\sw-school\Project\app\Controller\ProjectsController.php(81): Model->saveField('removed', 'true')
+#6 [internal function]: ProjectsController->delete('5')
+#7 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#8 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Isabella\Desktop\sw-school\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-03 01:53:07 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:53:07 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:54:25 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-03 01:54:33 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Isabella\Desktop\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

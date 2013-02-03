@@ -105,7 +105,7 @@
         $this -> set('nameProjectFather', $this->GetNameProjectFather($Projects['Project']['parent_project_id']));
         $this -> set('nameConsultant', $this->GetNameGerent($Projects['Project']['consultant_id']));
         $this -> set('projects', $this->Project->find('all',array('conditions' =>array('Project.parent_project_id =' =>$id))));
-	$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+	$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1, 'Activity.project_id = ' => $id)))); 
         $this ->set('project',$Projects);
  	}
  	
