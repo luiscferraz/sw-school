@@ -694,6 +694,8 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	height: 35px !important;
 	padding-top: 10px;
 	margin-left: 10px;
+	float: none !important;
+	margin-bottom: 10px;
 }
 
 #totalEntrada, #totalSaida, #saldo{
@@ -707,6 +709,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	padding-bottom: 1%;
 	margin-bottom: 2%;
 	padding-right: 1%;
+	margin-right: 10px;
 }
 
 #tabelaDespesas{
