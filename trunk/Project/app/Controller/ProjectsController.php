@@ -220,6 +220,17 @@
 
  		
  	}
+ 	public function deletefinancial($id){
+
+ 		$project_id = $this->Project->Expense->query('SELECT expenses.project_id FROM expenses WHERE expenses.id = '.$id);
+
+ 		if($this->Project->Expense->delete($id)){
+   			$this->Session->setFlash($this->flashSuccess('Despesa deletada!'));
+   			$this->redirect(array('action' => 'financial/'.$project_id[0]['expenses']['project_id']));
+		}
+		$this->Session->setFlash($this->flashError('Despesa não deletada!'));
+		$this->redirect(array('action' => 'financial/'.$project_id[0]['expenses']['project_id']));
+ 	}
 
 
 
