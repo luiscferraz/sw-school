@@ -55,12 +55,28 @@
                     echo '<td>'.$financial['Expense']['description'].'</td>';
                     echo '<td class="entrada">'.$financial['Expense']['value'].'</td>';
                     echo '<td> Entrada </td>';
+                    echo '<div>';
+                    echo '<td class="actions">';
+                    echo $this->Html->link(
+                    $this->Html->image("delete.png", array('alt' => 'Ver')),
+                    array('action' => 'deletefinancial', $financial['Expense']['id']),
+                    array('escape'=>false, 'class'=>'link'));
+                    echo '</td>';
+                    echo '</div>';
             }
             else {
                  echo '<tr class="tr-saida">';
                     echo '<td>'.$financial['Expense']['description'].'</td>';
                     echo '<td class="saida">'.$financial['Expense']['value'].'</td>';
                     echo '<td> Saida </td>';
+                    echo '<div>';
+                    echo '<td class="actions">';
+                    echo $this->Html->link(
+                    $this->Html->image("delete.png", array('alt' => 'Ver')),
+                    array('action' => 'deletefinancial', $financial['Expense']['id']),
+                    array('escape'=>false, 'class'=>'link'));
+                    echo '</td>';
+                    echo '</div>';
                 
             }
 
