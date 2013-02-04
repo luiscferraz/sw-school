@@ -3989,3 +3989,44 @@
 #4 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
 #5 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2013-02-04 22:25:23 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-04 22:30:15 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-04 22:31:14 Error: Fatal Error (4): syntax error, unexpected '.' in [C:\site\sws\Project\app\View\Projects\ajax_list_consultant.ctp, line 18]
+2013-02-04 22:31:14 Error: [FatalErrorException] syntax error, unexpected '.'
+#0 C:\site\sws\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\site\sws\Pro...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\site\sws\Pro...', 18, Array)
+#2 C:\site\sws\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\site\sws\Pro...', 18, Array)
+#3 C:\site\sws\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-04 22:31:21 Error: Fatal Error (4): syntax error, unexpected '.' in [C:\site\sws\Project\app\View\Projects\ajax_list_consultant.ctp, line 18]
+2013-02-04 22:31:21 Error: [FatalErrorException] syntax error, unexpected '.'
+#0 C:\site\sws\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\site\sws\Pro...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\site\sws\Pro...', 18, Array)
+#2 C:\site\sws\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\site\sws\Pro...', 18, Array)
+#3 C:\site\sws\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-04 22:34:36 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-04 22:35:24 Error: Fatal Error (4): syntax error, unexpected '.' in [C:\site\sws\Project\app\View\Projects\ajax_list_consultant.ctp, line 18]
+2013-02-04 22:35:24 Error: [FatalErrorException] syntax error, unexpected '.'
+#0 C:\site\sws\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\site\sws\Pro...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\site\sws\Pro...', 18, Array)
+#2 C:\site\sws\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\site\sws\Pro...', 18, Array)
+#3 C:\site\sws\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-04 23:04:09 Error: [MissingActionException] Action Projects::ad() could not be found.
+#0 C:\site\sws\Project\lib\Cake\Controller\Scaffold.php(151): Scaffold->_scaffold(Object(CakeRequest))
+#1 C:\site\sws\Project\lib\Cake\Controller\Controller.php(530): Scaffold->__construct(Object(ProjectsController), Object(CakeRequest))
+#2 C:\site\sws\Project\lib\Cake\Controller\Controller.php(489): Controller->_getScaffold(Object(CakeRequest))
+#3 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#4 C:\site\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\site\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

@@ -266,6 +266,13 @@ p span {
 	 margin-right: 5px;
 }
 
+#bt-cadastrar-projeto{
+	margin-top:-140px;
+	float: right;
+	padding:5px 5px;
+	margin-right: -130px;
+}
+
 /*==========BOTÕES============*/
 
 .submit input{
@@ -572,26 +579,26 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 #menuEsquerda {
 	float: left;
 	width: 400px;
-	margin-top: -20px;
+	margin-top: 0px;
 	padding: 20px;
-	padding-bottom: 100%;
+	padding-bottom: 59.5%;
 	padding-top: 3%;
-	background-color: #84cbcd;
+	background-color: #bcdae0;
 	font-size: 14px;
+	text-decoration: none;
 }
 
 #AtividadesEmProjetoIndex2 {
-	color: #2c3938;
+	color: #5F9EA0;
 	text-align: left;
 	margin-top: 50px;
 	border-bottom:2px solid #5F9EA0;
 }
 
 .tituloDadosProjeto {
-	text-align: right;
-	color: #304457 !important;
+	color: #5F9EA0 !important;
 	font-size: 17px;
-	border-bottom:3px solid #173b60;
+	border-bottom:3px solid #5F9EA0;
 }
 
 #tituloArvore {
@@ -603,7 +610,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
     width: 550px;
 	padding:20px;
     border-bottom:5px solid #2b6768;
-    background-color: #96ced2;
+    background-color: #bcdae0;
     font-size: 12px;
     font-family: serif;
 }
@@ -633,7 +640,8 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 .spanArvore {
-	font-size: 15px;	
+	font-size: 15px;
+	color: #000000; 
 }
 
 #horasEsquerda {
@@ -703,7 +711,8 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	border-width: 30px;
 	width: 40%;
 	border: 30px;
-	background-color: #bcdae0;}
+	background-color: #bcdae0;
+}
 
 #state{
 	width:463px;
