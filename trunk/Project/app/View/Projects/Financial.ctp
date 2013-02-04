@@ -43,6 +43,7 @@
             <th>Descrição</th>
             <th>Valor</th>
             <th>Tipo</th>
+            <th>Excluir</th>
         </tr>
 
 
