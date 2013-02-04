@@ -24,6 +24,7 @@
 }
 
 .fancybox-opened {
+    width: 50% !important;
     z-index: 1003;	
 }
 
@@ -34,7 +35,7 @@
 }
 
 .fancybox-inner {
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     padding: 0;
     margin: 0;
