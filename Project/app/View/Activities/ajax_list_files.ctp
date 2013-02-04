@@ -5,8 +5,8 @@
 <table id="tabela-anexos">
 	<tr class="altrow">
 		<th class="nome">Nome </th>
-		<th class="nome">Data de Criação</th>
-		<th class="nome">Remover</th>	
+		<th class="criacao">Data de Criação</th>
+		<th class="acoes">Ações</th>	
 	</tr>
 <?php foreach( $attachments as $attachment) { 
 		
@@ -19,7 +19,8 @@
 				'</td>'.
 				'<td>'.
 				
-					$this->Html->image("delete.png", array('alt' => 'Remover','onclick'=>'removeAttach('.$attachment['Attachment']['id'].',"'.$attachment['Attachment']['file'].'")'))
+					$this->Html->image("delete.png", array('alt' => 'Remover','onclick'=>'removeAttach('.$attachment['Attachment']['id'].')')).
+					$this->Html->image("view.png", array('alt' => 'Abrir Arquivo','onclick'=>'openFile('.$attachment['Attachment']['id'].')'))
 					.
 				'</td>'.
 			'</tr>';			

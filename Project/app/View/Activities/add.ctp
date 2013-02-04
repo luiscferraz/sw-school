@@ -48,7 +48,7 @@
             </fieldset>
         
             <?php echo $this->Form->end('Confirmar Cadastro'); ?>
-            <?php echo '<input id="botaoAnexo" type="button" value="Anexar" onClick="ListAttachments('.$attachment['Attachment']['activity_id'].')" <img src="img/attachment.png" /></input>' ?>
+            
 
         </div>
     </div>
