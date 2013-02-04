@@ -1,7 +1,7 @@
 $('document').ready(function(){
 	
 	$('.edit').live('click',function(e){
-		$(this).html(createInput($(this).parent('p').html()));
+		//$(this).html(createInput($(this).parent('p').html()));
 		$('.edit p').show();
 		$('.edit textarea').hide();
 		$(this).children('p').hide();
@@ -33,33 +33,36 @@ $(document).ajaxStart(function() {
 
 function limparUrl(pag){
 	var url = window.location.toString();
-	n =  url.search('attachments');
-	url = url.slice(0,n);
+	n =  url.search('activities');
+	url = url.slice(0,n-1);
 	return url+'/'+pag;
 	
 }
 
 function ListAttachments(key){
-	$.get(urlAjax('AjaxListFiles'),null,
+	var act = key.val;
+	$.get(urlAjax('AjaxListFiles/'+act),null,
 			function(data) {
-				//alert(data)   ;
+				//alert(data);
 				$.fancybox(data);
+				//$('#tabela-anexos').html(data);
 				$('.load').remove();
-		})
+		});
+	
 }
 
 //evitar erros de url ajax
 function urlAjax(pag){
 	var url = window.location.toString();
 	
-	if (url.search('add') != '-1'){
+	/*if (url.search('add') != '-1'){
 		url = url.replace('add',pag);
 	}
 	else if(url.search('edit') != '-1'){
 		url = url.replace('edit',pag);
-	}
-	else {
-		url = url.replace('alocados',pag);
+	}*/
+	if(url.search('activities')!= '-1') {
+		url = url.replace('activities',pag);
 	}
 	
 	return url;

@@ -53,11 +53,14 @@
 						}
 					?>
 					
-					<!--<?php echo $this->Html->link(
-					$this->Html->image("attachment.png", array('alt' => 'Anexar')), array('onClick' => 'ListAttachments('.$activity['Activity']['id'].')'),
-					array('escape'=>false, 'id'=>'link'));?> -->
 					
-					<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input>
+					<?php /*echo $this->Html->link(
+							$this->Html->image("attachment.png",array('alt'=>'Anexar')),array(),array('escape'=>false,'id'=>'button'),array('onClick'=>'ListAttachments('.$activity['Activity']['id'].')'))*/ ?>
+					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
+					<!-- <?php //echo $this->Html->button("botaoAnexo",array('alt'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
+					//("attachment.png", array('alt' => 'Anexar')), array('onClick' => 'ListAttachments('.$activity['Activity']['id'].')'),array('escape'=>false, 'id'=>'link'));?> -->
+					
+					<!--<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input> -->
 
 
 				</td>
