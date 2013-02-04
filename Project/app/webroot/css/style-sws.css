@@ -590,7 +590,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 .tituloDadosProjeto {
 	text-align: right;
 	color: #304457 !important;
-	font-size: 15px;
+	font-size: 17px;
 	border-bottom:3px solid #173b60;
 }
 
@@ -631,6 +631,19 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	width: 100px;
 	font-size: 12px;
 }
+
+.spanArvore {
+	font-size: 15px;	
+}
+
+#horasEsquerda {
+	float: left;
+}
+
+#horasDireita {
+	float: right;
+}
+
 
 /*==========Janela de alocar consultores em um projeto===========*/
 

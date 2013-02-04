@@ -14,19 +14,21 @@
  	
  	public function index(){
 		$this->set('title_for_layout', 'Projetos');
- 		$this -> layout = 'index';
- 		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1,'Project.parent_project_id =' => null))));
-		$this -> set ('activities', $this-> Project->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
-		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
- }
-
- 	public function index2(){
  		$this -> layout = 'base';
  		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
  		$this -> set ('projectsPais', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id =' => null))));
  		$this -> set ('projectsFilhos', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
  		$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+ 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
  		//$this -> set ('entries', $this -> Project->Activity->Entry->find('all', array('conditions' => array('Entry.removed !=' => 1))));
+ 	}
+ 
+
+ 	public function index2(){
+ 		$this -> layout = 'index';
+ 		$this -> set ('projects', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1,'Project.parent_project_id =' => null))));
+		$this -> set ('activities', $this-> Project->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
  	}
 
 
