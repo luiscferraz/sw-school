@@ -19,7 +19,9 @@
  		$this -> set ('projectsPais', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id =' => null))));
  		$this -> set ('projectsFilhos', $this-> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
  		$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
- 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
+ 		$this -> set ('consultants', $this-> Project-> Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1),'order'=>array('Consultant.name'))));
+ 		$this -> set('companies', $this-> Project-> Company->find('all', array('conditions'=> array('Company.removed !=' => 1))));
+ 		$this -> set ('tipo_usuario',$this-> Auth->user('type'));	
  		//$this -> set ('entries', $this -> Project->Activity->Entry->find('all', array('conditions' => array('Entry.removed !=' => 1))));
  	}
  
