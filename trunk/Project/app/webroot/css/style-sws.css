@@ -347,7 +347,7 @@ p span {
 /*========View=========*/
 
 #consultant{
-	margin-left: -4%;
+	margin-left: 4px;
 	margin-top: 20px;
 	float: left;
 	position: absolute
@@ -359,7 +359,7 @@ p span {
 	padding-left: 8px;
 	margin-top: 20px;
 	width: 450px;
-	margin-bottom: 1000px;
+	margin-bottom: 50px;
 }
 
 #dados {
@@ -368,7 +368,7 @@ p span {
 	padding-left: 8px;
 	margin-top: 20px;
 	width: 380px;
-	margin-left: 140px;
+	margin-left: 200px;
 }
 
 #usuario{

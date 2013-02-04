@@ -24,6 +24,7 @@
 	<p><span>E-mail: </span><?php echo $consultant['Consultant']['email']; ?></p>
 </div>
 
+
 <div id="endereco">
 	<h2 id="tituloendereco">Endereço</h2>
 	<p><span>Endereço: </span><?php echo $consultant['Address']['address']; ?></p>
@@ -39,11 +40,12 @@
 	<?php echo $this->Html->image('consultant.jpg')?>
 </div>
 
-<table class="tabela-vazia" cellpadding="0" cellspacing="0">
+<table id="tabela-projetos" cellpadding="0" cellspacing="0">
 		<tr>
 			<th>Nome</th>
 			<th>Descrição</th>
 			<th>Sigla</th>
+			<th>Visualizar projeto</th>
 		</tr>
 
 		<?php
