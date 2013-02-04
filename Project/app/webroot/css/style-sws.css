@@ -927,6 +927,29 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	margin-left: 140px;
 }
 
+#tabela-anexos{
+	margin-top: 10px;
+}
+
+#bt-anexar-ativ{
+	margin-top: 10px;
+	margin-left: 60px;
+}
+
+#txt-nome-anexo{
+	width: 35%;
+}
+
+#bt-salvar-anexo,#bt-cancelar-anexo{
+	margin-top: 10px;
+	width: 12%;
+	height: 5%;
+}
+
+#bt-salvar-anexo{
+	margin-left: 60px;
+}
+
 /*Layout responsivo ;)*/
 
 @media all and (max-width: 480px)  {

@@ -1,7 +1,11 @@
 <h3>Anexos</h3>
-<input type="file" />
+
+<label>Nome:</label> <input id="txt-nome-anexo" type="field"/>
 <br>
-<input type="field"/>
+<input id="bt-anexar-ativ" type="file">
+<input id="bt-salvar-anexo" type="button" value="Salvar">
+<input id="bt-cancelar-anexo" type="button" value="Cancelar">
+
 <table id="tabela-anexos">
 	<tr class="altrow">
 		<th class="nome">Nome </th>
