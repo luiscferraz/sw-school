@@ -34,14 +34,14 @@ $(document).ajaxStart(function() {
 function limparUrl(pag){
 	var url = window.location.toString();
 	n =  url.search('activities');
-	url = url.slice(0,n-1);
+	url = url.slice(0,n);
 	return url+'/'+pag;
 	
 }
 
 function ListAttachments(key){
-	var act = key.val;
-	$.get(urlAjax('AjaxListFiles/'+act),null,
+	
+	$.get(urlAjax('AjaxListFiles/'+key),null,
 			function(data) {
 				//alert(data);
 				$.fancybox(data);
@@ -54,18 +54,7 @@ function ListAttachments(key){
 //evitar erros de url ajax
 function urlAjax(pag){
 	var url = window.location.toString();
-	
-	/*if (url.search('add') != '-1'){
-		url = url.replace('add',pag);
-	}
-	else if(url.search('edit') != '-1'){
-		url = url.replace('edit',pag);
-	}*/
-	if(url.search('activities')!= '-1') {
-		url = url.replace('activities',pag);
-	}
-	
-	return url;
+	return url+'/'+pag;
 }
 
 
