@@ -205,8 +205,8 @@
  	public function financial($id =  null){
  		$this -> layout = 'base';
 
- 			$this -> set ('financials', $this -> Project -> Expense -> find ('all', array( 'condition' => array ('Expense.project_id =' => $id))));
- 			$this -> set ('id', $id);
+		$this -> set ('financials', $this -> Project -> Expense -> find ('all', array( 'conditions' => array ('Expense.project_id =' => $id))));
+		$this -> set ('id', $id);
  	}
 
 	public function addfinancial(){
