@@ -632,6 +632,23 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	font-size: 12px;
 }
 
+/*==========Janela de alocar consultores em um projeto===========*/
+
+#bt-alocar-consultores{
+	text-decoration: none;
+	color: #1FA0B7;
+	margin-top: 10px;
+}
+
+#pesq-nome{
+	margin-left: 5px;
+	width: 50%;
+}
+
+#tabela-pesquisa{
+	margin-top: 10px;
+}
+
 /*========View=========*/
 
 .icon-action{

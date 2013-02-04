@@ -55,7 +55,7 @@
                 <legend>Gerente e Consultores</legend>
                     <div id="botaoGerente">
                             <label>Gerente de relacionamento:</label>
-                            <input id="bt-add-gerente" type="button" value="Selecionar Gerente" onclick='ListGerentes();'> 
+                            <input id="bt-add-gerente" type="button" value="Selecionar Gerente" onclick='ListGerentes()'> 
                     </div>
                     <div>
                         <label>Consultores: </label>
