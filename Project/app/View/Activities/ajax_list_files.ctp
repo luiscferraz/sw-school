@@ -5,8 +5,8 @@
 <table id="tabela-anexos">
 	<tr class="altrow">
 		<th class="nome">Nome </th>
-		<th class="criacao">Data de Criação</th>
-		<th class="acoes">Ações</th>	
+		<th class="criacao">Data de CriaÃ§Ã£o</th>
+		<th class="acoes">AÃ§Ãµes</th>	
 	</tr>
 <?php foreach( $attachments as $attachment) { 
 		

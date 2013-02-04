@@ -40,8 +40,7 @@ function limparUrl(pag){
 }
 
 function ListAttachments(key){
-	
-	$.get(urlAjax('AjaxListFiles/'+key),null,
+	$.get('activities/AjaxListFiles/'+key,null,
 			function(data) {
 				//alert(data);
 				$.fancybox(data);
