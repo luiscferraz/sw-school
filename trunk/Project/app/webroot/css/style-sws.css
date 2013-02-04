@@ -576,7 +576,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	padding: 20px;
 	padding-bottom: 100%;
 	padding-top: 3%;
-	background-color: #bad6f3;
+	background-color: #84cbcd;
 	font-size: 14px;
 }
 
@@ -602,8 +602,8 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	float: right;
     width: 550px;
 	padding:20px;
-    border-bottom:5px solid #3399FF;
-    background-color: #99CCFF;
+    border-bottom:5px solid #2b6768;
+    background-color: #96ced2;
     font-size: 12px;
     font-family: serif;
 }

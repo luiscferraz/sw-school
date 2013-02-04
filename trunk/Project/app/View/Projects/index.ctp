@@ -108,6 +108,32 @@ $(document).ready(function(){
         <h4 class="tituloDadosProjeto"> Dados Projeto </h4>
         <p><span>Sigla: </span> <?php echo $project['Project']['name']; ?></p>
         <p><span>Descrição: </span><?php echo $project['Project']['description']; ?></p>  
+        <p><span>Projeto Pai: </span>
+        <?php 
+        foreach ($projectsPais as $projectPai) {
+          if ($projectPai['Project']['id'] == $project['Project']['parent_project_id']){
+            echo $projectPai['Project']['name'];
+          }
+        }
+        ?>
+        </p>
+
+        <p><span>Empresa: </span>
+        <?php 
+        foreach ($companies as $company) {
+          if ($project['Project']['company_id'] == $company['Company']['id']) {
+            echo $company['Company']['name'];
+          }
+        } ?>
+        </p>
+
+        <p><span>Gerente de projeto: </span>
+        <?php 
+        foreach ($consultants as $consultant) {
+          if ($project['Project']['consultant_id'] == $consultant['Consultant']['id']) {
+            echo $consultant['Consultant']['name'];
+          }
+        } ?></p>
       
 
 
