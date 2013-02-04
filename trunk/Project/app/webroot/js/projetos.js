@@ -31,7 +31,7 @@ function createInput(html){
 
 //Box com a lista de consultores
 function ListGerentes(key){
-	$.get(urlAjax('AjaxListConsultant'),null,
+	$.get(urlAjax2('AjaxListConsultant'),null,
 			function(data) {   
 				$.fancybox(data);
 				$('.load').remove();
@@ -42,7 +42,7 @@ function ListGerentes(key){
 function ListGerenteNome(key){
 	var name =  $(key).val();
 	if (name != '') {
-		$.get(urlAjax("AjaxListConsultantNome/"+name),null,
+		$.get(urlAjax2("AjaxListConsultantNome/"+name),null,
 				function(data) {   
 					$('#tabela-pesquisa').html(data);
 					$('.load').remove();
@@ -53,7 +53,7 @@ function ListGerenteNome(key){
 function ListGerenteCPF(key){
 	var cpf =  $(key).val();
 	if (cpf != '') {
-		$.get(urlAjax("AjaxListConsultantCpf/"+cpf),null,
+		$.get(urlAjax2("AjaxListConsultantCpf/"+cpf),null,
 				function(data) {   
 					$('#tabela-pesquisa').html(data);
 					$('.load').remove();
@@ -97,7 +97,7 @@ $(document).ajaxStart(function() {
 });
 
 //evitar erros de url ajax
-function urlAjax(pag){
+function urlAjax2(pag){
 	var url = window.location.toString();
 	
 	if (url.search('add') != '-1'){
