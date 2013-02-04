@@ -128,30 +128,38 @@ $(document).ready(function(){
 
         <?php
           
-          $i = 0;
           foreach ($activities as $activity){
-            $class = null;
-            if($i++ % 2 == 0){
-              $class = 'class="altrow"';
-            }
-          
-        ?>
-        
-        <tr <?php echo $class; ?>>
-          <td class="descrição"><?php if ($activity['Activity']['project_id']===$project['Project']['id']){echo $activity['Activity']['description'];}?></td>
-          <td class="status"><?php if ($activity['Activity']['project_id']===$project['Project']['id']){echo $activity['Activity']['status'];}?></td>
-          <td class="data"><?php if ($activity['Activity']['project_id']===$project['Project']['id']){echo $activity['Activity']['date'];}?></td>
+            
+            if ($activity['Activity']['project_id']===$project['Project']['id']) {
+              echo '<tr>';
+              echo '<td class="descrição">';
 
-          <div class="actions">
+              if ($activity['Activity']['project_id']===$project['Project']['id']){
 
-            <td>
-              <?php
-                if ($activity['Activity']['project_id']===$project['Project']['id']) {
-                  echo $this->html->link(
-                    $this->html->image("view.png", array('alt' => 'Ver')), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+                echo $activity['Activity']['description'];}
+
+                echo '</td>';
+                echo '<td class="status">';
+
+                if ($activity['Activity']['project_id']===$project['Project']['id']){
+                  echo $activity['Activity']['status'];
+                }
+
+                echo '</td>';
+                echo '<td class="data">';
+                if ($activity['Activity']['project_id']===$project['Project']['id']){
+                  echo $activity['Activity']['date'];
+                }
+                echo '</td>';
+
+              echo '<div class="actions">';
+              echo '<td>';
+              echo $this->html->link(
+                $this->html->image("view.png", array('alt' => 'Ver')), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
+              echo '</td>';
                 }
               ?>
-            </td>
+            
 
           </div>
 <?php } ?>
