@@ -12,9 +12,9 @@
 				'<td>'.
 				$consultant['Consultant']['name'].
 				'</td>'.
-				'<td>'.
+				'<td><input type="checkbox" name="opcoes[]"/>'.
 				
-					$this->Html->image("test-pass-icon.png", array('alt' => 'Editar','onclick'=>'addConsultorGerente('.$consultant['Consultant']['id'].',"'.$consultant['Consultant']['name'].'")'))
+					// $this->Html->image("test-pass-icon.png", array('alt' => 'Editar','onclick'=>'addConsultorGerente('.$consultant['Consultant']['id'].',"'.$consultant['Consultant']['name'].'")'))
 					.
 				'</td>'.
 			'</tr>';			

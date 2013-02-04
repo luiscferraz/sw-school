@@ -171,3 +171,26 @@ function attCompanies(){
 
 
 
+
+
+
+//*---------- alocar
+
+
+function alocar() {
+	var idprojeto = $('table').attr('id');
+	$("input[name='opcoes[]']:checked").each(function() {
+		
+		var idconsultor = $(this).attr('id');
+
+		$.get('../AjaxAddConsultant/'+idprojeto+'/'+idconsultor,null,
+			function(data) {   
+			//	location.reload();
+		}
+		)
+		});
+
+	location.reload();
+
+
+	}
