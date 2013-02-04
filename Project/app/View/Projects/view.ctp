@@ -49,9 +49,7 @@
 
 
 
-<h2 id="AtividadesEmProjetoPai">
-	Atividades - <?php echo $project['Project']['name']; ?> 
-</h2>
+<h2 id="AtividadesEmProjetoPai">Atividades</h2>
 
 <div class="activity index">
 
@@ -95,7 +93,7 @@
 	
 </div>
 
-<h1>Sub-projetos </h1>
+<h2 id="title-subproj-view">Sub-projetos </h2>
 
 
 <div class="projectindex">

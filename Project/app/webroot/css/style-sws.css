@@ -20,7 +20,7 @@
 	font-family: Verdana !important;
 }
 
-h1 {
+h1{
 	clear:both;
     color: #5F9EA0; 
 	padding-top: 14px;
@@ -28,6 +28,10 @@ h1 {
 	margin-bottom: 40px;
 	margin-left: 2px;
 	border-bottom:3px solid #5F9EA0;
+}
+
+h2{
+	color: #5F9EA0; 
 }
 
 body {
@@ -98,10 +102,6 @@ select{
 
 legend{
 	font-size: 22px;
-}
-
-h2 {
-	color:#CCC;
 }
 
 p span {
@@ -358,17 +358,26 @@ p span {
 	background: #bcdae0;
 	padding-left: 8px;
 	margin-top: 20px;
-	width: 450px;
+	width: 40%;
 	margin-bottom: 50px;
 }
 
-#dados {
+#dados, #hora-view-atividades, #dados-view-atividades {
 	float: left;
 	background: #bcdae0;
 	padding-left: 8px;
 	margin-top: 20px;
-	width: 380px;
+	width: 37%;
 	margin-left: 200px;
+}
+
+#hora-view-atividades{
+	width: 20% !important;
+	margin-left: 20px !important;
+}
+
+#dados-view-atividades{
+	margin-left: 5px !important;
 }
 
 #usuario{
@@ -639,12 +648,19 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 #AtividadesEmProjetoPai{
 	color: #5F9EA0;
 	text-align: left;
-	margin-top: 375px;
-	border-bottom:2px solid #5F9EA0;
+	margin-top: 35%;
+	padding-bottom: 0%;
 }
 
-#titulo{
-	
+#title-subproj-view{
+	color: #5F9EA0;
+	text-align: left;
+	margin-top: 5%;
+	padding-bottom: 1%;
+}
+
+#titulo-ativ-view-proj{
+	color: #5F9EA0; 
 }
 
 #colorview{
@@ -652,10 +668,10 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 #dadosProjetoView{
-	padding-bottom: 20px;
+	padding-bottom: 1%;
 	float: left;
 	border-width: 30px;
-	width: 400px;
+	width: 40%;
 	border: 30px;
 	background-color: #bcdae0;}
 
@@ -699,7 +715,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	border: 0px;
 	width: 48%;
 	height: 390px;
-	padding-bottom: 32px;
+	padding-bottom: 3%;
 	float:left;
 }
 
@@ -707,16 +723,15 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 
 .despesasProjeto{
 	width: 11% !important;
-	height: 35px !important;
-	padding-top: 10px;
-	margin-left: 10px;
+	height: 0% !important;
+	padding-top: 1.58%;
 	float: none !important;
-	margin-bottom: 10px;
+	margin-bottom: 1%;
 }
 
 #totalEntrada, #totalSaida, #saldo{
-	width: 120px;
-	height: 20px;
+	width: 50%;
+	height: 5%;
 }
 
 #dadosDespesas{
@@ -725,11 +740,11 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	padding-bottom: 1%;
 	margin-bottom: 2%;
 	padding-right: 1%;
-	margin-right: 10px;
+	margin-right: 2%;
 }
 
 #tabelaDespesas{
-	margin-top: 20px;
+	margin-top: 4%;
 }
 
 .tr-entrada td {
@@ -741,11 +756,11 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 
 #selectEmpresa, #selectTipoDespesa{
 	height: 25px;
-	width: 318px;
+	width: 98%;
 }
 
 #selectValor, #descricaoDespesa{
-	width: 316px;
+	width: 97%;
 }
 
 /*=================================*/
@@ -794,8 +809,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	border: 0px;
 	height: 25%;
 	float: left;
-	margin-right: 0px;
-	margin-top: 0px;
+	margin-right: 0.2%;
 }
 
 #bt-add-gerente, #bt-add-consultores{

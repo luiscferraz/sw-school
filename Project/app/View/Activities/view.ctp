@@ -15,7 +15,7 @@
 </h1>
 
 
-<div id="dados"> 
+<div id="dados-view-atividades"> 
 	<h2 id="titulodados"> Informações </h2>
 	<p><span>Descrição: </span><?php echo $activities['Activity']['description']; ?></p>
 	<p><span>Status: </span><?php echo $activities['Activity']['status']; ?></p>
@@ -27,7 +27,7 @@
 	<p><?php echo $consultor4 ?></p>
 </div>
 
-<div id="dados">
+<div id="hora-view-atividades">
 	<h2 id="titulodados">Horários</h2>
 	<p><span>Hora inicial: </span> <?php echo $activities['Activity']['start_hours']; ?></p>
 	<p><span>Hora final: </span> <?php echo $activities['Activity']['end_hours']; ?></p>
