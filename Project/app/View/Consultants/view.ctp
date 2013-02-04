@@ -39,8 +39,40 @@
 	<?php echo $this->Html->image('consultant.jpg')?>
 </div>
 
-<?php
-	foreach ($projects as $project){
-		echo $project['projects']['id'].' '. $project['projects']['name'].' '. $project['projects']['description'].' '. $project['projects']['acronym'];
-	}
-	?>
+<table class="tabela-vazia" cellpadding="0" cellspacing="0">
+		<tr>
+			<th>Nome</th>
+			<th>Descrição</th>
+			<th>Sigla</th>
+		</tr>
+
+		<?php
+			
+			$i = 0;
+			foreach ($projects as $project) 
+			{
+				$class = null;
+				
+				if($i++ % 2 == 0)
+				{
+					$class = 'class="altrow"';
+				}
+					
+							
+		?>
+
+		<tr <?php echo $class; ?>>
+			<td><?php echo $project['projects']['name']; ?></td>
+			<td><?php echo $project['projects']['description']; ?></td>
+			<td><?php echo $project['projects']['acronym']; ?></td>
+			<div>
+				<td class="actions">
+					<?php echo $this->Html->link(
+					$this->Html->image("view.png", array('alt' => 'Ver')),
+					array('action' => 'view', $project['projects']['id']),
+					array('escape'=>false, 'class'=>'link'))?>
+				</td>
+			</div>
+		</tr>
+		<?php } ?>
+	</table>
