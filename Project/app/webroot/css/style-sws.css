@@ -570,15 +570,19 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	background-color: #bad6f3;
 	font-size: 14px;
 }
-#AtividadesEmProjetoIndex2{
-	color: #5F9EA0;
+
+#AtividadesEmProjetoIndex2 {
+	color: #2c3938;
 	text-align: left;
-	margin-top: 30px;
+	margin-top: 50px;
 	border-bottom:2px solid #5F9EA0;
 }
 
-.AtividadesEmProjetoIndex2{
-
+.tituloDadosProjeto {
+	text-align: right;
+	color: #304457 !important;
+	font-size: 15px;
+	border-bottom:3px solid #173b60;
 }
 
 #tituloArvore {
@@ -591,7 +595,13 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	padding:20px;
     border-bottom:5px solid #3399FF;
     background-color: #99CCFF;
-    
+    font-size: 12px;
+    font-family: serif;
+}
+
+.tituloProjeto {
+	font-size: 18px;
+	color: #2c3938;
 }
 
 #direita {
@@ -604,6 +614,12 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 
 .fieldIndexProject {
 	width: 300px;
+	font-size: 12px;
+}
+
+#leftFieldIndexProject {
+	float: left;
+	width: 100px;
 	font-size: 12px;
 }
 

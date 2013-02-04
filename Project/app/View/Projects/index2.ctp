@@ -76,7 +76,7 @@ $(document).ready(function(){
 <?php foreach ($projects as $project) { ?>
  
 <div class="slidingDiv" id="div_<?php echo $project['Project']['id']; ?>">
-      <h3>
+      <h3 class="tituloProjeto">
         Projeto - <?php echo $project['Project']['name']; ?> 
         <span class="icon-action">
           <?php echo $this->Html->link(
@@ -93,27 +93,24 @@ $(document).ready(function(){
       
       </h3>
 
-    <div> 
-      <fieldset class='fieldIndexProject'>
-        <h4> Dados Projeto </h4>
+      
+        <h4 class="tituloDadosProjeto"> Dados Projeto </h4>
         <p><span>Sigla: </span> <?php echo $project['Project']['name']; ?></p>
         <p><span>Descrição: </span><?php echo $project['Project']['description']; ?></p>  
-      </fieldset>
+      
 
-      <fieldset class='fieldIndexProject'>
-        <h4> Hora Individual </h4>
+    
+        <h4 class="tituloDadosProjeto"> Hora Individual </h4>
         <p><span>Hora A: </span><?php echo $project['Project']['a_hours_individual']; ?>h</span></p>
         <p><span>Hora B: </span><?php echo $project['Project']['b_hours_individual']; ?>h</p>
         <p><span>Hora C: </span><?php echo $project['Project']['c_hours_individual']; ?>h</p>
-      </fieldset>
 
-      <fieldset class='fieldIndexProject'>
-        <h4> Hora em grupo </h4>
+
+        <h4 class="tituloDadosProjeto"> Hora em grupo </h4>
         <p><span>Hora A: </span><?php echo $project['Project']['a_hours_group']; ?>h</span></p>
         <p><span>Hora B: </span><?php echo $project['Project']['b_hours_group']; ?>h</p>
         <p><span>Hora C: </span><?php echo $project['Project']['c_hours_group']; ?>h</p>
-      </fieldset>
-    </div>
+
 
   <h2 id="AtividadesEmProjetoIndex2">
     Atividades - <?php echo $project['Project']['name']; ?> 
