@@ -69,7 +69,7 @@
 				<td class="actions">
 					<?php echo $this->Html->link(
 					$this->Html->image("view.png", array('alt' => 'Ver')),
-					array('action' => 'view', $project['projects']['id']),
+					array('action' => '../projects/view', $project['projects']['id']),
 					array('escape'=>false, 'class'=>'link'))?>
 				</td>
 			</div>
