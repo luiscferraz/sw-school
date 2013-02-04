@@ -212,7 +212,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
   `date` varchar(10) NOT NULL ,
   `observations` MEDIUMTEXT NULL ,
   `description` VARCHAR(100) NOT NULL ,
-  `status` ENUM('Iniciada', 'Em desenvolvimento', 'Concluída', 'Cancelada') NOT NULL ,
+  `status` ENUM('Iniciada', 'Em desenvolvimento', 'ConcluÃ­da', 'Cancelada') NOT NULL ,
   `project_id` INT NOT NULL ,
   `consultant1_id` INT  ,
   `consultant2_id` INT  ,
@@ -233,7 +233,8 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`attachments` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `activity_id` INT ,
   `file_name` VARCHAR(20),
-  `file` BLOB,  
+  `file` LONGBLOB,  
+  `creation_date` VARCHAR(10),
   `removed` TINYINT(1),
   
   PRIMARY KEY (`id`))

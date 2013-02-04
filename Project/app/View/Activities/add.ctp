@@ -14,6 +14,15 @@
 		$list_consultants['none'] = 'Nenhum Consultor Cadastrado';
     }
 ?>
+<?php 
+	foreach($attachments as $attachment){
+						
+		$list_attachments[$attachment['Attachment']['id']] = $attachment['Attachment']['file_name'];
+	};
+	if (!isset($list_attachments)){
+		$list_attachments['none'] = 'Nenhum anexo';
+	}
+?>
 
 <h1>Cadastrar Atividade</h1>
     <div id="content">
@@ -39,6 +48,7 @@
             </fieldset>
         
             <?php echo $this->Form->end('Confirmar Cadastro'); ?>
+            <?php echo '<input id="botaoAnexo" type="button" value="Anexar" onClick="ListAttachments('.$attachment['Attachment']['activity_id'].')" <img src="img/attachment.png" /></input>' ?>
 
         </div>
     </div>

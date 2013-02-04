@@ -8,7 +8,7 @@
  	
  	public function index(){
 		$this->set('title_for_layout', 'Atividades');
- 		$this -> layout = 'index';
+ 		$this -> layout = 'base';
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
  		$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
@@ -21,15 +21,11 @@
 		return $name['Consultant'];
 	}
 	
-	public function AjaxListFiles(){
-		//$this->layout = 'index';
-		//$file = $this->Activity->Attachment->find('all');
-		//return $file['Attachment'];
-		//return  array('erick' => 'iiii' );
+	public function AjaxListFiles($id){
 		$this->layout = 'ajax';
-		$attachments = $this->Activity->Attachment->findAll();
+		$attachments = $this->Activity->Attachment->find('all',array('conditions' => array('Attachment.activity_id =' =>$id, 'Attachment.removed !='=> 1)));
 		$this-> set('attachments', $attachments);
-		#return array($attachments['Attachment']);
+		
 	}
 		
 	public function AjaxAttachFiles(){
@@ -41,6 +37,7 @@
 	 	$this->layout = 'base';
 		$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
 		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
+	 	$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 	 	if($this->request->is('post')){
 	 		if($this->Activity->saveAll($this->request->data)){
 	 			$this->Session->setFlash('A atividade foi adicionada com sucesso.');
