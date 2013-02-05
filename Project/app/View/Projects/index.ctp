@@ -119,9 +119,9 @@ $(document).ready(function(){
         <p><span>Descrição: </span><?php echo $project['Project']['description']; ?></p>  
         <p><span>Projeto Pai: </span>
         <?php 
-        foreach ($projectsPais as $projectPai) {
+        foreach ($projects as $projectPai) {
           if ($projectPai['Project']['id'] == $project['Project']['parent_project_id']){
-            echo $projectPai['Project']['name'];
+            echo '<a href="#" class="show" id="'.$projectPai['Project']['id'].'">','<span>',$projectPai['Project']['name'],'</span></a>';
           }
         }
         ?>
@@ -131,7 +131,7 @@ $(document).ready(function(){
         <?php 
         foreach ($companies as $company) {
           if ($project['Project']['company_id'] == $company['Company']['id']) {
-            echo $company['Company']['name'];
+            echo '<a href="../companies/view/',$company['Company']['id'],'">','<span>',$company['Company']['name'],'</span></a>';
           }
         } ?>
         </p>
@@ -140,7 +140,7 @@ $(document).ready(function(){
         <?php 
         foreach ($consultants as $consultant) {
           if ($project['Project']['consultant_id'] == $consultant['Consultant']['id']) {
-            echo $consultant['Consultant']['name'];
+            echo '<a href="../consultants/view/',$consultant['Consultant']['id'],'">','<span>',$consultant['Consultant']['name'],'</span></a>';
           }
         } ?></p>
       
