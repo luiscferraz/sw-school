@@ -1,7 +1,7 @@
-
+ï»¿
 <h1>Projetos</h1>
 
-<?php //só mostrar o botão cadastrar se for usuário admin
+<?php //sÃ³ mostrar o botÃ£o cadastrar se for usuÃ¡rio admin
     if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
       echo '<div id="bt-cadastrar-projeto">'; 
       echo $this->Html->link("Cadastrar", array('action' => 'add'),array('class'=>'botao'));
@@ -32,10 +32,10 @@ $(document).ready(function(){
 
 <?php
 
- #FUNÇÃO RECURSIVA PARA IMPRIMIR OS FILHOS DE UM PROJETOS E SUAS RESPECTIVAS ATIVIDADES
+ #FUNÃ‡ÃƒO RECURSIVA PARA IMPRIMIR OS FILHOS DE UM PROJETOS E SUAS RESPECTIVAS ATIVIDADES
 
   function imprimirFilhos($project, $projectsFilhos, $activities) {
-    #Percorrendo os projetos filhos usando a condição se seu id pai é igual ao id do $projeto
+    #Percorrendo os projetos filhos usando a condiÃ§Ã£o se seu id pai Ã© igual ao id do $projeto
     
     foreach ($projectsFilhos as $projectFilho) {
 
@@ -87,10 +87,14 @@ $(document).ready(function(){
       <h3 class="tituloProjeto">
         Projeto - <?php echo $project['Project']['name']; ?> 
         <span class="icon-action">
-          <?php echo $this->Html->link(
+          <?php
+			if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){		  
+			echo $this->Html->link(
           $this->Html->image("delete.png", array("alt" => "Deletar", "title" => "Deletar Projeto")),
           array('action' => 'delete', $project['Project']['id']),
-          array('escape'=>false),"Você quer excluir realmente ?");?>
+          array('escape'=>false),"VocÃª quer excluir realmente ?");
+		  }
+		  ?>
         </span>
         
         <span class="icon-action"> 
@@ -101,12 +105,20 @@ $(document).ready(function(){
           }
           ?>
 
-          <?php echo $this->Html->link(
-          $this->Html->image("financial.png", array('alt' => 'Despesas','title' => 'Despesas')), array('action' => 'financial',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
+          <?php 
+		  if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+		  echo $this->Html->link(
+          $this->Html->image("financial.png", array('alt' => 'Despesas','title' => 'Despesas')), array('action' => 'financial',$project['Project']['id']), array('escape'=>false, 'id'=>'link'));
+		  }
+		  ?>
 
-          <?php echo $this->Html->link(
+          <?php 
+		  if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+		  echo $this->Html->link(
           $this->Html->image("edit.png", array("alt" => "Editar","title" => "Editar Projeto")),'edit/'.$project['Project']['id'],
-          array('escape'=>false)) ?>
+          array('escape'=>false));
+		  }
+		  ?>
 
 
         </span> 
@@ -116,7 +128,7 @@ $(document).ready(function(){
       
         <h4 class="tituloDadosProjeto"> Dados Projeto </h4>
         <p><span>Sigla: </span> <?php echo $project['Project']['name']; ?></p>
-        <p><span>Descrição: </span><?php echo $project['Project']['description']; ?></p>  
+        <p><span>DescriÃ§Ã£o: </span><?php echo $project['Project']['description']; ?></p>  
         <p><span>Projeto Pai: </span>
         <?php 
         foreach ($projects as $projectPai) {
@@ -179,7 +191,7 @@ $(document).ready(function(){
 
       <table cellpadding="0" cellspacing="0">
         <tr>
-          <th>Descrição</th>
+          <th>DescriÃ§Ã£o</th>
           <th class="responsive">Status</th>
           <th class="responsive">Data</th>
           <th class="actions">Visualizar Detalhadamente</th>
@@ -191,7 +203,7 @@ $(document).ready(function(){
             
             if ($activity['Activity']['project_id']===$project['Project']['id']) {
               echo '<tr>';
-              echo '<td class="descrição">';
+              echo '<td class="descriÃ§Ã£o">';
 
               if ($activity['Activity']['project_id']===$project['Project']['id']){
 
