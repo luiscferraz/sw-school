@@ -143,7 +143,7 @@ $(document).ready(function(){
         <?php 
         foreach ($companies as $company) {
           if ($project['Project']['company_id'] == $company['Company']['id']) {
-            echo '<a href="../companies/view/',$company['Company']['id'],'">','<span>',$company['Company']['name'],'</span></a>';
+            echo '<a href="companies/view/',$company['Company']['id'],'">','<span>',$company['Company']['name'],'</span></a>';
           }
         } ?>
         </p>
@@ -152,7 +152,7 @@ $(document).ready(function(){
         <?php 
         foreach ($consultants as $consultant) {
           if ($project['Project']['consultant_id'] == $consultant['Consultant']['id']) {
-            echo '<a href="../consultants/view/',$consultant['Consultant']['id'],'">','<span>',$consultant['Consultant']['name'],'</span></a>';
+            echo '<a href="consultants/view/',$consultant['Consultant']['id'],'">','<span>',$consultant['Consultant']['name'],'</span></a>';
           }
         } ?></p>
       
