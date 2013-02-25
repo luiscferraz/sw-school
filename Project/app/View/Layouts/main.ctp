@@ -28,7 +28,7 @@
 		<?php //só mostrar o botão cadastrar se for usuário admin
 		if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
 			echo '<div id="bt-cadastrar-atividade">';	
-			echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao'));
+			echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
 			echo '</div>';
 		}
 	?>	
