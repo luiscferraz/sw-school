@@ -80,7 +80,6 @@
  * Application wide charset encoding
  */
 	Configure::write('App.encoding', 'UTF-8');
-
 /**
  * To configure CakePHP *not* to use mod_rewrite and to
  * use CakePHP pretty URLs, remove these .htaccess

@@ -8,6 +8,7 @@
 			<li><?php echo $this->Html->link('Projeto', array('action' =>'../projects'));?></li>
 			<li><?php echo $this->Html->link('Atividade', array('action' =>'../activities'));?></li>
 			<li><?php echo $this->Html->link('Apontamento', array('action' =>'../entries'));?></li>
+			<li><?php echo $this->Html->link('Relatórios', array('action' =>'../reports'));?></li>
 			<li><?php echo $this->Html->link('Sair', array('action' =>'../users/logout'));?></li>
 		</ul>
 </div>
