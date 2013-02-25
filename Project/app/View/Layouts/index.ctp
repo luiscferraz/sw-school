@@ -4,8 +4,7 @@
     
     <head>
 		<title><?php echo $title_for_layout; ?></title>
-		
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html" "charset"="UTF-8" />
 		<?php echo $this->Html->css('style-sws'); ?>
 		<?php echo $this->Html->css('colorpicker'); ?>
 		<?php echo $this->Html->css('jquery.fancybox'); ?>

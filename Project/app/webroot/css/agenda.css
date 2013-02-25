@@ -53,7 +53,7 @@ body {
 	opacity:1 !important;
 	color:#000;
 	display:block;
-	padding:20px 0px 20px 100px;
+	padding:15px 0px 15px 100px;
 	margin-top:10px;
 	font-size:26px;
 	color:#FFF;
@@ -115,12 +115,12 @@ body {
 
 /*   Agenda */
 
-#bt-cadastrar-atividade{
-	margin-top: 0px;
-	 margin:-130px;
-	 float: right;
-	 padding:5px 5px;
-	 margin-right: 5px;
+#botao-cadastrar-atividade{
+	margin-top: -100px;
+	margin:-130px;
+	float: right;
+	padding:5px 5px;
+	margin-right: 5px;
 }
 #calendar{
 	margin: 5%;
