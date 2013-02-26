@@ -174,131 +174,59 @@ $(document).ready(function() {
 	var month = new Date().getMonth();
 	var day = new Date().getDate();
 
-	var eventData1 = {
-	    events : [	    
-	    {
-		"id":6,
-		"color":"#072ba0",
-		"sigla":"AN",
-		"start": new Date(year, month, day, 10),
-		"end": new Date(year, month, day, 11),
-		"title":"I'm read-only",
-		readOnly : true
-	    }
-	    ]
-	};
+//	var eventData3 = {
+//	    events : [
+//	    {
+//		'id':1,
+//		"color":"#4325ba",
+//		"sigla":"DV",
+//		'start': new Date(year, month, day, 12),
+//		'end': new Date(year, month, day, 13, 00),
+//		'title':'Lunch with Ashley'
+//	    },
 
-	var eventData2 = {
-	    events : [
-	    {
-		'id':1,
-		"color":"#6dca89",
-		"sigla":"DV",
-		'start': new Date(year, month, day, 12),
-		'end': new Date(year, month, day, 13, 00),
-		'title':'Lunch with Sarah'
-	    },
+//	    {
+//		'id':5,
+//		"color":"#432553",
+//		"sigla":"MD",
+//		'start': new Date(year, month, day + 1, 14),
+//		'end': new Date(year, month, day + 1, 15),
+//		'title':'Product kickoff'
+//	    }
+//	    ]
+//	};
+	
+	//buscar a descricao de uma atividade
+	descricao_atividade = ler_atividades(dataSource);
+	
+	//cria um(ns) evento(s) do calendario, com a descricao achada
+	
+	var eventData1 = {events : 
+	[{
+	'id':1,
+	"color":"#432553",
+	"sigla":"",
+	'start': new Date(year, month, day + 1, 9),
+	'end': new Date(year, month, day + 1, 11),
+	'title':descricao_atividade}]
+	};//aqui poderia continuar outro evento {id...} ou isto estar dentro de um for pra fazer varios
+	//depois que montar o evento, retorna pra a tela
+    return eventData1;
 
-	    {
-		'id':2,
-		"color":"#69afe6",
-		"sigla":"ER",
-		'start': new Date(year, month, day, 14),
-		'end': new Date(year, month, day, 14, 40),
-		'title':'Team Meeting'
-	    },
-
-	    {
-		'id':3,
-		"color":"#6dca89",
-		"sigla":"DV",
-		'start': new Date(year, month, day + 2, 16),
-		'end': new Date(year, month, day + 2, 18, 00),
-		'title':'Meet with Joe'
-	    },
-
-	    {
-		'id':4,
-		"color":"#b2af2e",
-		"sigla":"LA",
-		'start': new Date(year, month, day - 1, 8),
-		'end': new Date(year, month, day - 1, 9, 20),
-		'title':'Coffee with Alison'
-	    },
-
-	    {
-		'id':5,
-		"color":"#4ca64b",
-		"sigla":"AF",
-		'start': new Date(year, month, day + 1, 14),
-		'end': new Date(year, month, day + 1, 15),
-		'title':'Product showcase'
-	    }
-	    ]
-	};
-
-
-	// data set 3 : using event delete features
-	var eventData3 = {
-	    events : [
-	    {
-		'id':1,
-		"color":"#4325ba",
-		"sigla":"DV",
-		'start': new Date(year, month, day, 12),
-		'end': new Date(year, month, day, 13, 00),
-		'title':'Lunch with Ashley'
-	    },
-
-	    {
-		'id':2,
-		"color":"#feab32",
-		"sigla":"NR",
-		'start': new Date(year, month, day, 14),
-		'end': new Date(year, month, day, 14, 40),
-		'title':'Team Picnic'
-	    },
-
-	    {
-		'id':3,
-		"color":"#a5b75a",
-		"sigla":"ZV",
-		'start': new Date(year, month, day + 1, 18),
-		'end': new Date(year, month, day + 1, 18, 40),
-		'title':'Meet with Cathy'
-	    },
-
-	    {
-		'id':4,
-		"color":"#6e8a6a",
-		"sigla":"QW",
-		'start': new Date(year, month, day - 1, 8),
-		'end': new Date(year, month, day - 1, 9, 20),
-		'title':'Coffee with Alyssa'
-	    },
-
-	    {
-		'id':5,
-		"color":"#432553",
-		"sigla":"MD",
-		'start': new Date(year, month, day + 1, 14),
-		'end': new Date(year, month, day + 1, 15),
-		'title':'Product kickoff'
-	    }
-	    ]
-	};
-
-
-	if (dataSource === '1') {
-	    return eventData1;
-	} else if(dataSource === '2') {
-	    return eventData2;
-	} else if(dataSource === '3') {
-	    return eventData3;
-	} else {
-	    return [];
-	}
     }
+
+	function ler_atividades(id_projeto){
+
+	$.ajax({
+		 async: false,
+         url: "http://localhost/Home/atividades_agenda/"+id_projeto, //URL que puxa os dados
+         dataType: "json", //Tipo de Retorno
+         success: function(json){ //Se ocorrer tudo certo   			
+		 descricao = json.descricao;		 		
+         }      
+    });
+	return descricao;
+	}
 
 
     /*

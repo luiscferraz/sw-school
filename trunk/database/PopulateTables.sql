@@ -57,8 +57,8 @@ INSERT INTO `swsdb`.`projects` (`id`, `name`, `description`, `acronym`, `a_hours
 (NULL, 'Sistema de estoque', 'Controlar o estoque', 'SE', '3:00:00', '3:00:00', '3:00:00', '10:00:00', '5:00:00', '5:00:00', '5', '2', '3', '0');
 
 INSERT INTO `activities` (`id`, `start_hours`, `end_hours`, `date`, `observations`, `description`, `status`, `project_id`, `consultant1_id`, `consultant2_id`, `consultant3_id`, `consultant4_id`, `removed`) VALUES
-(1, '10:00:00', '16:00:00', '15/01/2013', 'Varredura nos servidores e fitas de backups', 'Verificacao da qualidade do armazenamento fisico', 'Iniciada', 1, 1, 2, 3, 5, 0),
-(2, '08:00:00', '10:00:00', '28/01/2013', 'Verificar distancia entre os pontos e as situacoes adversas', 'Estudo de viabilidade de conexao com fibra otica', 'Em desenvolvimento', 3, 1, 4, NULL, NULL, 0);
+(1, '10:00:00', '16:00:00', '02/03/2013', 'Varredura nos servidores e fitas de backups', 'Verificacao da qualidade do armazenamento fisico', 'Iniciada', 1, 1, 2, 3, 5, 0),
+(2, '08:00:00', '10:00:00', '03/03/2013', 'Verificar distancia entre os pontos e as situacoes adversas', 'Estudo de viabilidade de conexao com fibra otica', 'Em desenvolvimento', 3, 1, 4, NULL, NULL, 0);
 
 INSERT INTO `entries` (`id`, `date`, `type_consulting`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approved`, `removed`) VALUES
 (1, '10/01/2013', 'A', '10:00:00', 'A qualidade estava excelente', 11, 1, 0, 0),
