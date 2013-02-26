@@ -273,6 +273,10 @@ p span {
 	margin-right: -130px;
 }
 
+#conteudoBtRelatorio{
+	text-align: center;
+}
+
 /*==========BOTÕES============*/
 
 .submit input{
