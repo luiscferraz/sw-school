@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
 <html>
 	<head>
 		<?php echo $this->Html->css('reset'); ?>		
@@ -11,17 +12,30 @@
 	    <?php echo $this->Html->script('jquery.weekcalendar'); ?>
 		<?php echo $this->Html->script('agenda'); ?>	    
 	    <?php echo $this->Html->script('aplicacao'); ?>
+	    
 	</head>
 <body> 
+	<?php 
+                        foreach ($projects as $project) 
+                            {
+                                $list_projects[$project['Project']['id']] =$project['Project']['name'];
+                            };
+                    
+                        if (!isset($list_projects)){
+                            $list_projects['none'] = 'Nenhum Projeto Cadastrado';
+                        }
+    ?>
+	
 	<?php echo $this->Session->flash(); ?>
 	<?php include 'includes/menu.php' ?>
 	<h1>Sws - Agenda</h1>
 	<div id="calendar_selection" class="ui-corner-all">
-			    <select id="projetos" class="round" >				
+				<?php echo $this->Form->input('Project.id', array('options' => $list_projects, 'type'=>'select','label' => 'Projeto: ','required'=>'required', 'id'=>'projetos','class'=>'round')); ?>
+			    <!-- <select id="projetos" class="round" >				
 				<option value="1">Projeto 1</option>
 				<option value="2">Projeto 2</option>
-				<option value="3">Projeto 3</option>
-			    </select>
+				<option value="3">Projeto 3</option> -->
+			    </select> 
 			</div>
 	
 	
