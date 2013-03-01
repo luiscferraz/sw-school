@@ -29,8 +29,9 @@
 	<?php echo $this->Session->flash(); ?>
 	<?php include 'includes/menu.php' ?>
 	<h1>Sws - Agenda</h1>
+
 	<div id="calendar_selection" class="ui-corner-all">
-				<?php echo $this->Form->input('Project.id', array('options' => $list_projects, 'type'=>'select','label' => 'Projeto: ','required'=>'required', 'id'=>'projetos','class'=>'round')); ?>
+				<?php echo $this->Form->input('Project.id', array('options' => $list_projects, 'type'=>'select','label' => 'Selecionar projeto: ','required'=>'required', 'id'=>'projetos','class'=>'round')); ?>
 			    <!-- <select id="projetos" class="round" >				
 				<option value="1">Projeto 1</option>
 				<option value="2">Projeto 2</option>
