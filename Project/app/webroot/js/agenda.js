@@ -217,15 +217,15 @@ $(document).ready(function() {
 
 	function ler_atividades(id_projeto){
 
-	$.ajax({
-		 async: false,
-         url: "http://localhost/Home/atividades_agenda/"+id_projeto, //URL que puxa os dados
-         dataType: "json", //Tipo de Retorno
-         success: function(json){ //Se ocorrer tudo certo   			
-		 descricao = json.descricao;		 		
-         }      
-    });
-	return descricao;
+		$.ajax({
+			 async: false,
+	         url: "http://localhost/Home/atividades_agenda/"+id_projeto, //URL que puxa os dados
+	         dataType: "json", //Tipo de Retorno
+	         success: function(json){ //Se ocorrer tudo certo   			
+			 	descricao = json.descricao;		 		
+	         }      
+	    });
+		//return descricao;
 	}
 
 
