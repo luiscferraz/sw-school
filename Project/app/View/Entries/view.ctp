@@ -15,7 +15,8 @@
 
 <div id="dados"> 
 	<h2 id="titulodados"> Informações </h2>
-	<p><span>Tipo: </span><?php echo $entries['Entry']['type_consulting']; ?></p>
+	<p><span>Tipo consultoria: </span><?php echo $entries['Entry']['type_consulting']; ?></p>
+	<p><span>Tipo: </span><?php echo $entries['Entry']['type']; ?></p>
 	<p><span>Observações: </span><?php echo $entries['Entry']['observations']; ?></p>
 </div>
 
