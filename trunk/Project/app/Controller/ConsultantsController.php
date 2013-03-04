@@ -78,6 +78,16 @@
 			$this->redirect(array('action' => 'index'));
 		}
    }
+
+
+
+   public function ReportPayment(){
+      $this -> layout = 'base';
+      $this -> set ( 'consultants' ,$this-> Consultant -> find('all'));
+   }
+
+
+
    
    //Chamada ajax
    public function ajaxMsg($obj=null){

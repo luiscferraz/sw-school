@@ -6,5 +6,5 @@
 	<a class= 'botao' id='btRelatorioEmpresas' href="#" onclick="" > Empresas </a>
 	<a class= 'botao' id='btRelatorioFinanceiro' href="#" onclick="" > Financeiro </a>
 	<a class= 'botao' id='btRelatorioDesempenho' href="#" onclick="" > Desempenho individual </a>
-	<a class= 'botao' id='btRelatorioPagamento' href="#" onclick="" > Pagamento dos consultores </a>
+	<a class= 'botao' id='btRelatorioPagamento' href="consultants/ReportPayment" onclick="" > Pagamento dos consultores </a>
 </div>
