@@ -250,7 +250,8 @@ DROP TABLE IF EXISTS `swsdb`.`entries` ;
 CREATE  TABLE IF NOT EXISTS `swsdb`.`entries` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `date` VARCHAR(12) NOT NULL ,
-  `type_consulting` VARCHAR(1) NOT NULL, 
+  `type_consulting` VARCHAR(1) NOT NULL,
+  `type` ENUM('Individual', 'Grupo') NOT NULL ,
   `hours_worked` TIME NOT NULL ,
   `observations` MEDIUMTEXT NULL ,
   `consultant_id` INT  NOT NULL ,
