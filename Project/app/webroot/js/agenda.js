@@ -225,7 +225,7 @@ $(document).ready(function() {
 			 	descricao = json.descricao;		 		
 	         }      
 	    });
-		//return descricao;
+		return descricao;
 	}
 
 

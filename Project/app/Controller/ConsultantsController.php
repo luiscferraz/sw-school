@@ -83,7 +83,12 @@
 
    public function ReportPayment(){
       $this -> layout = 'base';
-      $this -> set ( 'consultants' ,$this-> Consultant -> find('all'));
+      if ($this-> request-> is('POST')) {
+        echo 'erick';
+      }
+      else {
+        $this -> set ( 'consultants' ,$this-> Consultant -> find('all'));
+      }
    }
 
 
