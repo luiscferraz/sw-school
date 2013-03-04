@@ -217,9 +217,11 @@ $(document).ready(function() {
 
 	function ler_atividades(id_projeto){
 		var url = window.location.toString();
+		url = limparUrlHome(url);
 		$.ajax({
 			 async: false,
-	         url: url+"/atividades_agenda/"+id_projeto, //URL que puxa os dados
+
+	         url: url+"Home/atividades_agenda/"+id_projeto, //URL que puxa os dados
 	         dataType: "json", //Tipo de Retorno
 	         success: function(json){ //Se ocorrer tudo certo   			
 			 	descricao = json.descricao;		 		
@@ -295,3 +297,9 @@ $(document).ready(function() {
 
     });
 });
+
+function limparUrlHome(url){
+	n =  url.search('home');
+	url = url.slice(0,n);
+	return url;
+}
