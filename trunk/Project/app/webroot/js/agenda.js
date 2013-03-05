@@ -225,6 +225,7 @@ $(document).ready(function() {
 	         	
 	         	//events é igual a uma lista em branco  
 	         	var contador; 			
+ 				var evento = new Array();
 			 	for (i in json){
 			 		
 			 		//pegar url, para evitar erros
@@ -236,7 +237,6 @@ $(document).ready(function() {
 	         			dataType: "json", //Tipo de Retorno
 	         			success: function(json){ //Se ocorrer tudo certo
 	         				//array que sera atribuido os objetos com evento
-	         				var evento = new Array();
 
 	         				//informações
 			 				descricao = json.descricao;
