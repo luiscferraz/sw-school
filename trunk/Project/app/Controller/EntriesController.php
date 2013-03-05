@@ -1,7 +1,7 @@
 ﻿<?php
 class EntriesController extends AppController{
 	
-	public $helpers = array ('html','form');
+	public $helpers = array ('Html','Form');
  	public $name = 'Entries';
  	var $scaffold;
  	

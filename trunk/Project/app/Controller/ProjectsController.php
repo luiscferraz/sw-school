@@ -7,7 +7,7 @@
  */
  
  class ProjectsController extends AppController{
- 	public $helpers = array ('html','form');
+ 	public $helpers = array ('Html','Form');
  	public $name = 'Projects';
  	var $scaffold;
  	
@@ -51,7 +51,7 @@
  		}
  		else{
  				$this-> set ('companies',$this->Project->Company->find('all', array('conditions'=> array('Company.removed !=' => 1))));
- 				$this-> set ('projects',$this->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
+ 				$this-> set ('projects',$this->Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
  		}
  	}
 	
@@ -273,7 +273,23 @@
  		}
  		
  	}
-
+ 	public function financial_all(){
+ 		$financialAll = $this->Project->query('SELECT * FROM expenses JOIN projects WHERE expenses.project_id = projects.id AND projects.removed != 1');
+ 		$this->set('financialAll', $financialAll);
+ 		$sumOutput = array();
+ 		$sumInput = array();
+ 		foreach ($financialAll as $key => $value) {
+ 			$sumOutput[$value['projects']['id']] = $this->Project->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "s" AND expenses.project_id = '.$value['projects']['id']);
+ 			$sumInput[$value['projects']['id']] = $this->Project->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "e" AND expenses.project_id = '.$value['projects']['id']);
+ 		}
+ 		$this->set('sumOutput', $sumOutput);
+ 		$this->set('sumInput', $sumInput);
+ 	}
+ 	public function financial_per_project($id){
+ 		$this->set('financialPerProject', $this->Report->query('SELECT * FROM expenses JOIN projects WHERE expenses.project_id = projects.id AND projects.id = '.$id));
+ 		$this->set('sumOutput', $this->Report->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "s" AND expenses.project_id = '.$id));
+ 		$this->set('sumInput', $this->Report->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "e" AND expenses.project_id = '.$id));
+ 	}
 
  }
 ?>
