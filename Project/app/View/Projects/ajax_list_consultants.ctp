@@ -1,7 +1,7 @@
 <h3>Pesquisa de Consultores</h3>	
 <input id="pesq-nome" type='text' placeholder="Pesquisar por nome" onkeypress='ListGerenteNome(this)'>
 <a href="#" onclick="alocar()" id="bt-alocar-consultores"> Alocar consultores </a>
-<table id="tabela-pesquisa">
+<table  class="zebra" id="tabela-pesquisa">
 
 	<tr class="altrow">
 		<th class="nome">Nome</th>

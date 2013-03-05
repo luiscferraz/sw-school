@@ -5,7 +5,7 @@
 <h3>Projeto -  <?php echo $nameProject ?></h2>
 <div class="projectindex">
 	<input type="button" value="Alocar Consultor" id="bt-alocar-consultor"  onclick='listConsultores();' />
-	<table cellpadding="0" cellspacing="0" id=" <?php echo $id_projeto; ?>">
+	<table   class="zebra" cellpadding="0" cellspacing="0" id=" <?php echo $id_projeto; ?>">
 		<tr>
 			<th id="nameProject">Nome</th>
 			<th>Valor Hora A </th>

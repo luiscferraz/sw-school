@@ -1,6 +1,6 @@
 <div class="entry index">
 
-	<table cellpadding="0" cellspacing="0">
+	<table  class="zebra" cellpadding="0" cellspacing="0">
 		<tr>
 			<th class="responsive">Atividade</th>
 			<th class="responsive">Consultor</th>

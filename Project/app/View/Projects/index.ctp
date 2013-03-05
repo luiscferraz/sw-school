@@ -160,7 +160,7 @@ $(document).ready(function(){
 
         <h4 class="tituloDadosProjeto"> Horas </h4>
 
-        <table cellpadding="0" cellspacing="0">
+        <table class="zebra" cellpadding="0" cellspacing="0">
         <tr>
           <th>Individual</th>
           <th>Em grupo</th>
@@ -189,7 +189,7 @@ $(document).ready(function(){
 
     <div class="AtividadesEmProjetoIndex2">
 
-      <table cellpadding="0" cellspacing="0">
+      <table  class="zebra" cellpadding="0" cellspacing="0">
         <tr>
           <th>Descrição</th>
           <th class="responsive">Status</th>

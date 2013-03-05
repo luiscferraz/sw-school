@@ -1,7 +1,7 @@
 
 <div class="projectindex">
 
-	<table id="tableProject" cellpadding="0" cellspacing="0">
+	<table id="tableProject" class="zebra" cellpadding="0" cellspacing="0">
 		<tr>
 			<th id="nameProject">Nome</th>
 			<th class="sigla responsive">Sigla</th>

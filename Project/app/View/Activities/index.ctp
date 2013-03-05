@@ -1,6 +1,6 @@
 ﻿<div class="activity index">
 
-	<table cellpadding="0" cellspacing="0">
+	<table class="zebra"cellpadding="0" cellspacing="0">
 		<tr>
 			<th>Descrição</th>
 			<th class="responsive">Status</th>

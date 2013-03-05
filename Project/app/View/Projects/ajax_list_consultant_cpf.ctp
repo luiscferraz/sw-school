@@ -1,4 +1,4 @@
-<table id="tabela-pesquisa">
+<table   class="zebra"id="tabela-pesquisa">
 	<tr class="altrow">
 		<th class="nome">CPF </th>
 		<th class="nome">Nome</th>

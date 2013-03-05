@@ -84,7 +84,29 @@
    public function ReportPayment(){
       $this -> layout = 'base';
       if ($this-> request-> is('POST')) {
-        echo 'erick';
+        $id =  $_POST['id'];
+        
+        $this -> set ('consultants', $this-> Consultant -> query('
+              select swsdb.consultants.name AS consultant_name,
+                   swsdb.projects.name AS project_name,
+                     swsdb.project_consultants.value_hour_a_individual,
+                     swsdb.project_consultants.value_hour_b_individual,
+                     swsdb.project_consultants.value_hour_c_individual,
+                     swsdb.project_consultants.value_hour_a_group,
+                     swsdb.project_consultants.value_hour_b_group,
+                     swsdb.project_consultants.value_hour_c_group,
+                   swsdb.entries.type_consulting,
+                   swsdb.entries.type,  
+                   swsdb.entries.hours_worked,
+                   swsdb.entries.date
+              from swsdb.consultants
+              inner join swsdb.project_consultants
+              on swsdb.consultants.id = swsdb.project_consultants.consultant_id
+              left join swsdb.projects
+              on swsdb.projects.id = swsdb.project_consultants.project_id
+              inner join swsdb.entries
+              on swsdb.consultants.id = swsdb.entries.consultant_id
+              where swsdb.consultants.id ='.$id));
       }
       else {
         $this -> set ( 'consultants' ,$this-> Consultant -> find('all'));

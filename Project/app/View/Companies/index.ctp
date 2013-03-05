@@ -2,7 +2,7 @@
 
 <div class="company index">
 
-	<table cellpadding="0" cellspacing="0">
+	<table cellpadding="0" class="zebra" cellspacing="0">
 		<tr>
 			<th>Nome</th>
 			<th class="responsive">Sigla</th>
