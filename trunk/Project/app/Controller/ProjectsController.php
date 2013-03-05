@@ -286,9 +286,9 @@
  		$this->set('sumInput', $sumInput);
  	}
  	public function financial_per_project($id){
- 		$this->set('financialPerProject', $this->Report->query('SELECT * FROM expenses JOIN projects WHERE expenses.project_id = projects.id AND projects.id = '.$id));
- 		$this->set('sumOutput', $this->Report->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "s" AND expenses.project_id = '.$id));
- 		$this->set('sumInput', $this->Report->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "e" AND expenses.project_id = '.$id));
+ 		$this->set('financialPerProject', $this->Project->query('SELECT * FROM expenses JOIN projects WHERE expenses.project_id = projects.id AND projects.id = '.$id));
+ 		$this->set('sumOutput', $this->Project->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "s" AND expenses.project_id = '.$id));
+ 		$this->set('sumInput', $this->Project->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "e" AND expenses.project_id = '.$id));
  	}
 
  }
