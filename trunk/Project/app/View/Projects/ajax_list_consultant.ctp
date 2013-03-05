@@ -1,6 +1,6 @@
 <h3>Pesquisa de Consultores</h3>	
 <input type='text' placeholder="Pesquisar por nome" id="pesq-nome" class="pesquisa"  onkeypress='ListGerenteNome(this)'>
-<table id="tabela-pesquisa">
+<table  class="zebra" id="tabela-pesquisa">
 	<tr class="altrow">
 		<th class="nome">Nome</th>
 		<th class="nome">Add</th>	

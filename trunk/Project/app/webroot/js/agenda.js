@@ -198,17 +198,29 @@ $(document).ready(function() {
 	
 		//buscar a descricao de uma atividade
 		descricao_atividade = ler_atividades(dataSource);
-		
-		//cria um(ns) evento(s) do calendario, com a descricao achada
-		
-		var eventData1 = {events : 
-			[{
+		var evento = new Array();
+		evento.push( {
 			'id':1,
 			"color":"#432553",
 			"sigla":"",
 			'start': new Date(year, month, day + 1, 9),
 			'end': new Date(year, month, day + 1, 11),
-			'title':descricao_atividade}]
+			'title':descricao_atividade
+		})
+		evento.push( 
+			{
+			'id':2,
+			"color":"#FFF",
+			"sigla":"",
+			'start': new Date(year, month, day + 1, 9),
+			'end': new Date(year, month, day + 1, 11),
+			'title':descricao_atividade
+		})
+		alert(evento['id']);
+		//cria um(ns) evento(s) do calendario, com a descricao achada
+		
+		var eventData1 = {events : 
+			evento
 		};//aqui poderia continuar outro evento {id...} ou isto estar dentro de um for pra fazer varios
 		//depois que montar o evento, retorna pra a tela
 	    return eventData1;
@@ -242,7 +254,7 @@ $(document).ready(function() {
 	         				
 			 				descricao = json.descricao;
 			 				data = json.data;
-			 				
+			 				alert(data);
 			 				//construir o envento
 			 					 				
 			 				}

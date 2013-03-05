@@ -1,7 +1,7 @@
 
 <div id="consultantindex">
 
-	<table class="tabela-vazia" cellpadding="0" cellspacing="0">
+	<table class="tabela-vazia zebra" cellpadding="0" cellspacing="0">
 		<tr>
 			<th>Nome</th>
 			<th class="cpf responsive">CPF</th>
