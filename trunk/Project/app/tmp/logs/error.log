@@ -6370,3 +6370,12 @@
 2013-03-05 01:46:38 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-05 03:16:34 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-05 03:16:53 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-05 03:16:53 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
