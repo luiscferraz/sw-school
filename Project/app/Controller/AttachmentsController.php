@@ -1,6 +1,6 @@
 <?php
 class AttachmentsController extends AppController{
- 	public $helpers = array ('html','form','Js'=>array('Jquery'));
+ 	public $helpers = array ('Html','Form','Js'=>array('Jquery'));
  	public $name = 'Attachments';
  	public $useTable = 'attachments';
  	var $scaffold;
