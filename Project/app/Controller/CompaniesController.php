@@ -79,6 +79,13 @@ class CompaniesController extends AppController {
 	        $this->set('company', $this->Company->read());
 	    }
 	}
+	
+	public function report(){
+		$this->set('title_for_layout', 'Empresas');
+		$this -> layout = 'index';
+		$this->set('companies', $this->Company->find('all', array('conditions'=> array('Company.removed !=' => 1))));
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));				
+	}
 
 }
 
