@@ -1,24 +1,30 @@
-<h2 id="titulo">Sub-projetos </h2>
-
+<h2 id="titulo">Relatório Financeiro do Projeto <?php echo $financialPerProject[0]['projects']['name'] ?> </h2>
 
 <div class="projectindex">
 
 	<table id="tableProject" cellpadding="0" cellspacing="0">
 		<tr>
-			<th id="nameProject">Nome</th>
-			<th class="sigla responsive">Abreviação</th>
-			<th class="empresa responsive">Empresa</th>
-			<th class="horas responsive">Horas Individuais</th>
-			<th class="horas responsive">Horas em Grupo</th>
-			<th class="actions">Ações</th>
+			<!-- <th id="nameProject">Projeto</th> -->
+			<th class="description">Descrição</th>
+			<th class="type">Tipo</th>
+			<th class="value">Valor</th>
+			<!-- <th class="resto">Valores que Restaram</th> -->
 		</tr>
 
 		<?php
 			
 			$i = 0;
-			foreach ($projects as $project) 
+			$type = '';
+			foreach ($financialPerProject as $key => $value) 
 			{
 				$class = null;
+
+				if ($value['expenses']['type'] == 'e') {
+					$type = 'Entrada';
+				}
+				else{
+					$type = 'Saída';
+				}
 				
 				if($i++ % 2 == 0)
 				{
@@ -29,32 +35,15 @@
 		?>
 
 		<tr <?php echo $class; ?>>
-			<td id="nameTableProject"><?php echo $project['Project']['name']; ?></td>
-			<td class="sigla responsive"><?php echo $project['Project']['acronym']; ?></td>
-			<td class="empresa responsive"><?php echo $project['Company']['name']; ?></td>
-			<td class=" horas responsive"><?php  echo $project['Project']['a_hours_individual']+$project['Project']['b_hours_individual']+$project['Project']['c_hours_individual']; ?>h</td>
-			<td class=" horas responsive"><?php  echo $project['Project']['a_hours_group']+$project['Project']['b_hours_group']+$project['Project']['c_hours_group']; ?>h</td>
-			<td>
-				<div id="actionsProject">
-					<?php echo $this->Html->link(
-					$this->Html->image("consultor.png", array('alt' => 'Consultores Alocados','title' => 'Consultores Alocados')), array('action' => 'alocados',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
-
-					<?php echo $this->Html->link(
-					$this->Html->image("view.png", array('alt' => 'Ver','title' => 'Ver Projeto')), array('action' => 'view', $project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
-
-					<?php echo $this->Html->link(
-					$this->Html->image("edit.png", array('alt' => 'Editar', 'title'=>'Editar Projeto')), array('action' => 'edit', $project['Project']['id']),
-					array('escape'=>false, 'id'=>'link'))?>
-
-					<?php echo $this->Html->link(
-					$this->Html->image("delete.png", array('alt' => 'Remover','title' => 'Remover Projeto')), array('action' => 'delete', $project['Project']['id']),
-					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do projeto ". $project['Project']['name'] . "?");
-					?>
-				</div>
-			</td>
+			<td class="description"><?php echo $value['expenses']['description']; ?></td>
+			<td class="type"><?php echo $type; ?></td>
+			<td class="value"><?php echo $value['expenses']['value']; ?></td>
 			
 		</tr>
 		<?php } ?>
 	</table>
+	<br>Total Entrada <?php  echo $sumInput[0][0]['SUM(expenses.value)']; ?></br>
+	<br>Total Saída <?php  echo $sumOutput[0][0]['SUM(expenses.value)']; ?></br>
+	<br>Diferença Total <?php  echo $sumInput[0][0]['SUM(expenses.value)'] - $sumOutput[0][0]['SUM(expenses.value)']; ?></br>
 	
 </div>
