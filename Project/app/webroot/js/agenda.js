@@ -170,9 +170,9 @@ $(document).ready(function() {
     }
 
     function getEventData(dataSource) {
-	var year = new Date().getFullYear();
-	var month = new Date().getMonth();
-	var day = new Date().getDate();
+		var year = new Date().getFullYear();
+		var month = new Date().getMonth();
+		var day = new Date().getDate();
 
 //	var eventData3 = {
 //	    events : [
@@ -196,42 +196,64 @@ $(document).ready(function() {
 //	    ]
 //	};
 	
-	//buscar a descricao de uma atividade
-	descricao_atividade = ler_atividades(dataSource);
-	
-	//cria um(ns) evento(s) do calendario, com a descricao achada
-	
-	var eventData1 = {events : 
-	[{
-	'id':1,
-	"color":"#432553",
-	"sigla":"",
-	'start': new Date(year, month, day + 1, 9),
-	'end': new Date(year, month, day + 1, 11),
-	'title':descricao_atividade}]
-	};//aqui poderia continuar outro evento {id...} ou isto estar dentro de um for pra fazer varios
-	//depois que montar o evento, retorna pra a tela
-    return eventData1;
+		//buscar a descricao de uma atividade
+		descricao_atividade = ler_atividades(dataSource);
+		
+		//cria um(ns) evento(s) do calendario, com a descricao achada
+		
+		var eventData1 = {events : 
+			[{
+			'id':1,
+			"color":"#432553",
+			"sigla":"",
+			'start': new Date(year, month, day + 1, 9),
+			'end': new Date(year, month, day + 1, 11),
+			'title':descricao_atividade}]
+		};//aqui poderia continuar outro evento {id...} ou isto estar dentro de um for pra fazer varios
+		//depois que montar o evento, retorna pra a tela
+	    return eventData1;
 
     }
 
 	function ler_atividades(id_projeto){
-		var url = window.location.toString();
-		url = limparUrlHome(url);
+
+		var url = window.location.toString();		
+		url = limparUrlHome(url);			  
 		$.ajax({
 			 async: false,
-
-	         url: url+"Home/atividades_agenda/"+id_projeto, //URL que puxa os dados
+			 url: url+"Home/atividades_agenda/"+id_projeto, //URL que puxa os dados 
+	         //url: "http://localhost/Home/atividades_agenda/"+id_projeto, //URL que puxa os dados
 	         dataType: "json", //Tipo de Retorno
-	         success: function(json){ //Se ocorrer tudo certo   			
-			 	descricao = json.descricao;		 		
+	         success: function(json){ //Se ocorrer tudo certo
+	         	//lista_atividades = json;
+	         	//alert(lista_atividades);
+	         	
+	         	//events é igual a uma lista em branco   			
+			 	for (i in json){
+			 	
+			 		//alert(i);
+			 		var url = window.location.toString();
+					url = limparUrlHome(url);	
+					$.ajax({
+			 			async: false,
+	        			url: url+"Home/mostrar_atividade/"+json[i], //URL que puxa os dados
+	         			dataType: "json", //Tipo de Retorno
+	         			success: function(json){ //Se ocorrer tudo certo
+	         				
+			 				descricao = json.descricao;
+			 				data = json.data;
+			 				
+			 				//construir o envento
+			 					 				
+			 				}
+			 				}); 
+			 		
+			 	}
 	         }      
 	    });
 	    return descricao;
-	    
-		
-	}
 
+	}
 
     /*
     * Sets up the start and end time fields in the calendar event
