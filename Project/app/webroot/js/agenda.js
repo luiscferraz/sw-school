@@ -197,30 +197,11 @@ $(document).ready(function() {
 //	};
 	
 		//buscar a descricao de uma atividade
-		descricao_atividade = ler_atividades(dataSource);
-		var evento = new Array();
-		evento.push( {
-			'id':1,
-			"color":"#432553",
-			"sigla":"",
-			'start': new Date(year, month, day + 1, 9),
-			'end': new Date(year, month, day + 1, 11),
-			'title':descricao_atividade
-		})
-		evento.push( 
-			{
-			'id':2,
-			"color":"#FFF",
-			"sigla":"",
-			'start': new Date(year, month, day + 1, 9),
-			'end': new Date(year, month, day + 1, 11),
-			'title':descricao_atividade
-		})
-		alert(evento['id']);
+		
+		
 		//cria um(ns) evento(s) do calendario, com a descricao achada
 		
-		var eventData1 = {events : 
-			evento
+		var eventData1 = {events :  ler_atividades(dataSource)
 		};//aqui poderia continuar outro evento {id...} ou isto estar dentro de um for pra fazer varios
 		//depois que montar o evento, retorna pra a tela
 	    return eventData1;
@@ -230,7 +211,9 @@ $(document).ready(function() {
 	function ler_atividades(id_projeto){
 
 		var url = window.location.toString();		
-		url = limparUrlHome(url);			  
+		url = limparUrlHome(url);
+
+
 		$.ajax({
 			 async: false,
 			 url: url+"Home/atividades_agenda/"+id_projeto, //URL que puxa os dados 
@@ -240,10 +223,11 @@ $(document).ready(function() {
 	         	//lista_atividades = json;
 	         	//alert(lista_atividades);
 	         	
-	         	//events é igual a uma lista em branco   			
+	         	//events é igual a uma lista em branco  
+	         	var contador; 			
 			 	for (i in json){
-			 	
-			 		//alert(i);
+			 		
+			 		//pegar url, para evitar erros
 			 		var url = window.location.toString();
 					url = limparUrlHome(url);	
 					$.ajax({
@@ -251,13 +235,39 @@ $(document).ready(function() {
 	        			url: url+"Home/mostrar_atividade/"+json[i], //URL que puxa os dados
 	         			dataType: "json", //Tipo de Retorno
 	         			success: function(json){ //Se ocorrer tudo certo
-	         				
+	         				//array que sera atribuido os objetos com evento
+	         				var evento = new Array();
+
+	         				//informações
 			 				descricao = json.descricao;
 			 				data = json.data;
-			 				alert(data);
-			 				//construir o envento
+			 				data = data.split('/');
+			 				start = json.hora_inicio;
+			 				start = start.split(':');
+			 				end = json.hora_final;
+			 				end = end.split(':');
+			 				
+
+			 			// 	var year = new Date().getFullYear();
+							// var month = new Date().getMonth();
+							// var day = new Date().getDate();
+							//alert(day+'/'+month+'/'+year);
+			 				var year = parseInt(data[2]);
+							var month = parseInt(data[1])-1;
+							var day = parseInt(data[0]);
+							///alert(day+'/'+month+'/'+year);
+							
+							evento.push( {
+								'id':contador,
+								"color":"#432553",
+								"sigla":"",
+								'start': new Date(year, month, day + 1, start[0]),
+								'end': new Date(year, month, day + 1, end[0]),
+								'title': descricao
+								})
+							descricao =  evento;
 			 					 				
-			 				}
+			 					}
 			 				}); 
 			 		
 			 	}

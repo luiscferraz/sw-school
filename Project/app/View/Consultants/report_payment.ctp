@@ -5,7 +5,9 @@
 <?php 
 	if($_POST) { 
 		
-?>		<table class="zebra">
+?>		
+		<h1><?php echo $name['Consultant']['name'] ; ?></h1>
+		<table class="zebra">
 			<thead>
 				<tr>
 					<th>Nome do Projeto</th>
@@ -18,7 +20,7 @@
 				</tr>
 			</thead>
 			<tbody>
-
+			<?php $totalvalor = 0; $totalhoras = 0; ?>
 			<?php foreach ($consultants as $consultant) { ?>
 
 					<tr>
@@ -31,18 +33,34 @@
 						<td><?php echo $consultant['entries']['hours_worked'] ?></td>
 						<?php if($consultant['entries']['type'] == 'Individual'){ ?>
 							<td>
-								<?php echo ($consultant['project_consultants']['value_hour_'.strtolower($consultant['entries']['type_consulting']).'_individual'] * $consultant['entries']['hours_worked']);
+								<?php $valor =  ($consultant['project_consultants']['value_hour_'.strtolower($consultant['entries']['type_consulting']).'_individual'] * $consultant['entries']['hours_worked']);
+									echo $valor;
 								?>
 							</td>
 						<?php } else {?>
 							<td>
-								<?php echo ($consultant['project_consultants']['value_hour_'.strtolower($consultant['entries']['type_consulting']).'_group'] * $consultant['entries']['hours_worked']);
+								<?php $valor = ($consultant['project_consultants']['value_hour_'.strtolower($consultant['entries']['type_consulting']).'_group'] * $consultant['entries']['hours_worked']);
+									echo $valor;
 								?>
 							</td>
 						<?php } ?>
 					</tr>
+			<?php 
+				$totalhoras += $consultant['entries']['hours_worked'];
+				$totalvalor += $valor;  ?>
 			<?php } ?>	
 			</tbody>
+			<thead>
+				<tr>
+					<th>Total:</th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th><?php echo $totalhoras ?></th>
+					<th><?php echo $totalvalor ?></th>
+				</tr>
+			</thead>
 		</table>
 <?php	 }
 	else{ ?>
