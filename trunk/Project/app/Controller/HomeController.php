@@ -36,6 +36,8 @@
 			//definindo uma tupla descricao dentro do array ativdade para ser a descricao da primeira atividade que ele encontrou
 			$atividade['descricao'] = $activity['Activity']['description'];
 			$atividade['data'] = $activity['Activity']['date'];
+			$atividade['hora_inicio'] = $activity['Activity']['start_hours'];
+			$atividade['hora_final'] = $activity['Activity']['end_hours'];
 			
 			
 			//retorna o array para o ajax

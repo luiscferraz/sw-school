@@ -85,7 +85,7 @@
       $this -> layout = 'base';
       if ($this-> request-> is('POST')) {
         $id =  $_POST['id'];
-        
+        $this -> set('name', $this->Consultant-> findById($id));
         $this -> set ('consultants', $this-> Consultant -> query('
               select swsdb.consultants.name AS consultant_name,
                    swsdb.projects.name AS project_name,
