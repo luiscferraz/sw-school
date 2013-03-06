@@ -1,4 +1,4 @@
-INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
+﻿INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
 ('rose', 'f4465763c4eb760d104dc365a6045de47e759ed2', 'cons', 1),
 ('mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 2),
 ('armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 3),
@@ -52,9 +52,31 @@ INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `s
 INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua Projetada Oito', '54644', 'Pontezinha', 'Cabo de Santo Agostinho', 'PE', 'Casa', '54.589-260', '5', '0');
 
 INSERT INTO `swsdb`.`projects` (`id`, `name`, `description`, `acronym`, `a_hours_individual`, `b_hours_individual`, `c_hours_individual`, `a_hours_group`, `b_hours_group`, `c_hours_group`, `consultant_id`, `parent_project_id`, `company_id`, `removed`) VALUES 
-(NULL, 'Sistema de Hotel', 'Controle de hotéis', 'SH', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
-(NULL, 'Controle de lanchonete', 'Auxilar nas vendas', 'CL', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', NULL, '3', '0'),
-(NULL, 'Sistema de estoque', 'Controlar o estoque', 'SE', '3:00:00', '3:00:00', '3:00:00', '10:00:00', '5:00:00', '5:00:00', '5', '2', '3', '0');
+(NULL, 'Recife', 'Recife', 'RF', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+(NULL, 'Maringa', 'Maringá', 'MG', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+(NULL, 'Avaliacoes', 'Avaliações', 'AV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+(NULL, 'Aplic', 'Aplic', 'AP', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
+(NULL, 'Banksystem', 'Banksystem', 'BS', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
+(NULL, 'BISA', 'BISA', 'BI', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
+(NULL, 'Capital login', 'Capital login', 'CL', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 5, '1', '0'),
+(NULL, 'Cartello', 'Cartello', 'CT', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 5, '3', '0'),
+(NULL, 'Cittati', 'Cittati', 'CI', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 6, '1', '0'),
+(NULL, 'ESPE', 'ESPE', 'ES', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 8, '3', '0'),
+(NULL, 'GCF', 'GCF', 'GC', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
+(NULL, 'Informata', 'Informata', 'IF', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3',1, '3', '0'),
+(NULL, 'Inhalt', 'Inhalt', 'IN', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 8, '1', '0'),
+(NULL, 'Inove', 'Inove', 'IV', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
+(NULL, 'Mvra', 'Mvra', 'MV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
+(NULL, 'Oncase', 'Oncase', 'OC', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', 8, NULL, '3', '0'),
+(NULL, 'Partec', 'Partec', 'PT', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', 1, NULL, '3', '0'),
+(NULL, 'Alac', 'Alac', 'AL', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
+(NULL, 'Benner', 'Benner', 'BN', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 2, '1', '0'),
+(NULL, 'ID Brasil', 'ID Brasil', 'IB', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
+(NULL, 'HotSoft', 'HotSoft', 'HS', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 14, '1', '0'),
+(NULL, 'Tecnospeed', 'Tecnospeed', 'TS', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
+(NULL, 'Pitang', 'Pitang', 'PT', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 3, '1', '0'),
+(NULL, 'Softex', 'Softex', 'SF', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 3, '3', '0'),
+(NULL, 'Infraero', 'Infraero', 'IR', '3:00:00', '3:00:00', '3:00:00', '10:00:00', '5:00:00', '5:00:00', '5', NULL, '3', '0');
 
 INSERT INTO `activities` (`id`, `start_hours`, `end_hours`, `date`, `observations`, `description`, `status`, `project_id`, `consultant1_id`, `consultant2_id`, `consultant3_id`, `consultant4_id`, `removed`) VALUES
 (1, '10:00:00', '16:00:00', '02/03/2013', 'Varredura nos servidores e fitas de backups', 'Verificacao da qualidade do armazenamento fisico', 'Iniciada', 1, 1, 2, 3, 5, 0),
