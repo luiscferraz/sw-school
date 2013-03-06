@@ -143,7 +143,7 @@ foreach ($projectsPais as $project) {
 				echo '<td colspan="2" bgcolor="gray"></td>';	
 			}else{
 				echo '<td align = center bgcolor="DarkSeaGreen1">';
-				echo "<input type='text' style='width: 12px;background:DarkSeaGreen1;' id='1' value='1'/>";
+				echo "1";
 				echo '</td>';
 			}
 		}
@@ -154,7 +154,7 @@ foreach ($projectsPais as $project) {
 				echo '<td colspan="2" bgcolor="gray"></td>';	
 			}else{
 				echo '<td align = center bgcolor="LightCyan">';
-				echo "<input type='text' style='width: 12px;background:DarkSeaGreen1;' id='1' value='1'/>";
+				echo "2";
 				echo '</td>';
 			}
 		}
@@ -165,7 +165,7 @@ foreach ($projectsPais as $project) {
 				echo '<td colspan="2" bgcolor="gray"></td>';	
 			}else{
 				echo '<td align = center bgcolor="LightYellow">';
-				echo "<input type='text' style='width: 12px;background:LightYellow;' id='1' value='3'/>";
+				echo "3";
 				echo '</td>';
 			}
 		}
@@ -176,7 +176,7 @@ foreach ($projectsPais as $project) {
 				echo '<td colspan="2" bgcolor="gray"></td>';	
 			}else{
 				echo '<td align = center bgcolor="MistyRose">';
-				echo "<input type='text' style='width: 12px;background:MistyRose;' id='1' value='4'/>";
+				echo "4";
 				echo '</td>';
 			}
 		}
@@ -215,7 +215,7 @@ foreach ($projectsPais as $project) {
 							echo '<td colspan="2" bgcolor="gray"></td>';	
 						}else{
 							echo '<td align = center bgcolor="DarkSeaGreen1">';
-							echo "<input type='text' style='width: 12px;background:DarkSeaGreen1;' id='1' value='1'/>";
+							echo "1";
 							echo '</td>';
 						}
 					}
@@ -226,7 +226,7 @@ foreach ($projectsPais as $project) {
 							echo '<td colspan="2" bgcolor="gray"></td>';	
 						}else{
 							echo '<td align = center bgcolor="LightCyan">';
-							echo "<input type='text' style='width: 12px;background:LightCyan;' id='1' value='2'/>";
+							echo "2";
 							echo '</td>';
 						}
 					}
@@ -237,7 +237,7 @@ foreach ($projectsPais as $project) {
 							echo '<td colspan="2" bgcolor="gray"></td>';	
 						}else{
 							echo '<td align = center bgcolor="LightYellow">';
-							echo "<input type='text' style='width: 12px;background:LightYellow;' id='1' value='3'/>";
+							echo "3";
 							echo '</td>';
 						}
 					}
@@ -248,7 +248,7 @@ foreach ($projectsPais as $project) {
 							echo '<td colspan="2" bgcolor="gray"></td>';	
 						}else{
 							echo '<td align = center bgcolor="MistyRose">';
-							echo "<input type='text' style='width: 12px;background:MistyRose;' id='1' value='4'/>";
+							echo "4";
 							echo '</td>';
 						}
 					}
@@ -267,7 +267,7 @@ foreach ($projectsPais as $project) {
 									echo '<td colspan="2" bgcolor="gray"></td>';	
 								}else{
 									echo '<td align = center bgcolor="DarkSeaGreen1">';
-									echo "<input type='text' style='width: 12px;background:DarkSeaGreen1;' id='1' value='1'/>";
+									echo "1";
 									echo '</td>';
 								}
 							}
@@ -279,7 +279,7 @@ foreach ($projectsPais as $project) {
 									echo '<td colspan="2" bgcolor="gray"></td>';	
 								}else{
 									echo '<td align = center bgcolor="LightCyan">';
-									echo "<input type='text' style='width: 12px;background:LightCyan;' id='1' value='2'/>";
+									echo "2";
 									echo '</td>';
 								}
 							}
@@ -290,7 +290,7 @@ foreach ($projectsPais as $project) {
 									echo '<td colspan="2" bgcolor="gray"></td>';	
 								}else{
 									echo '<td align = center bgcolor="LightYellow">';
-									echo "<input type='text' style='width: 12px;background:LightYellow;' id='1' value='3'/>";
+									echo "3";
 									echo '</td>';
 								}
 							}
@@ -301,7 +301,7 @@ foreach ($projectsPais as $project) {
 									echo '<td colspan="2" bgcolor="gray"></td>';	
 								}else{
 									echo '<td align = center bgcolor="MistyRose">';
-									echo "<input type='text' style='width: 12px; background:MistyRose;' id='1' value='4'/>";
+									echo "4";
 									echo '</td>';
 								}
 							}
