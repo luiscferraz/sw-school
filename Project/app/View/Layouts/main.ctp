@@ -138,15 +138,44 @@ foreach ($projectsPais as $project) {
 	if ($mesclar == 0) {
 		//echo '</tr>';
 		//echo '<tr>';
-		for ($n = 1; $n <= 264; $n++) { 
-			if ($n % 11 == 0){	
-				echo '<td colspan="2" bgcolor="gray"></td>';	
-			}else{
-				echo '<td align = center bgcolor="DarkSeaGreen1">';
-				echo "1";
+		$id = '';
+		$turno = 'T';
+		//for ($dia = 1; $dia <= 167; $dia++) {
+			for ($n = 1; $n <= 264; $n++) { 
+				if ($n % 11 == 0){	
+					echo '<td colspan="2" bgcolor="gray"></td>';	
+				}else{
+				
+				
+					echo '<td align = center bgcolor="DarkSeaGreen1">';
+
+					$id = (string)$project['Project']['id'];
+					if ($turno == 'T'){
+						$turno = 'M';
+						$id = $id . '-' . $turno;
+					}
+					else{
+						$turno = 'T';
+						$id = $id . '-' . $turno;
+					}
+
+				
+					//$dataFinal = mktime(24*$dia, 0, 0, 02, 17, 2013);
+					//if (in_array((date('D',$dataFinal)),$final_de_semana)){
+					//	$dia = $dia+1;
+					//} else {
+						
+					//	echo date('dmy',$dataFinal);
+						
+					//}
+				}
+
+				//$id .= '-' . date('dmy',$dataFinal);
+				
+				echo $id;
 				echo '</td>';
 			}
-		}
+		//}
 		echo '</tr>';
 		echo '<tr>';
 		for ($n = 1; $n <= 264; $n++) { 
