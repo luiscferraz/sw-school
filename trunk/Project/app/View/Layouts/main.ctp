@@ -17,7 +17,7 @@
 <body> 
 
 <h2>Agenda</h2>
-
+<?php include 'includes/menu.php'; ?>
 <table border = 2 align=center>
 
 <?php
