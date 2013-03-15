@@ -9,9 +9,10 @@
  	public function index(){
 		$this->set('title_for_layout', 'Atividades');
  		$this -> layout = 'index';
- 		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
+ 		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
  		$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
+		$this-> set ('projects',$this->Activity->Project->find('all', array('conditions'=> array('Project.id =' => 'Activity.project_id'))));	
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));		
  				 
  	}
@@ -99,7 +100,7 @@
 		$this -> set ('consultor4', $this-> Nome_Consultor($Atividade['Activity']['consultant4_id']));
 		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1, 'Entry.activity_id = ' => $id))));
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1))));
-		
+		$this -> set ('nome_projeto', $this-> Nome_Projeto($Atividade['Activity']['project_id']));
 	    if ($this->request->is('get')) {
 	        $this->set('activities', $this->Activity->read());
 	    }
@@ -114,7 +115,11 @@
 				return '';
 			}
 		}
-	 
+	
+	private function Nome_Projeto($id){
+		$name = $this->Activity->Project->findById($id);
+		return $name['Project']['name'];
+ 		}
 	 	
 }
 ?>

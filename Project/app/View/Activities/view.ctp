@@ -18,6 +18,7 @@
 <div id="dados-view-atividades"> 
 	<h2 id="titulodados"> Informações </h2>
 	<p><span>Descrição: </span><?php echo $activities['Activity']['description']; ?></p>
+	<p><span>Projeto: </span><?php echo $nome_projeto; ?></p>
 	<p><span>Status: </span><?php echo $activities['Activity']['status']; ?></p>
 	<p><span>Observações: </span><?php echo $activities['Activity']['observations']; ?></p>
 	<p><span>Consultores: </span></p>
