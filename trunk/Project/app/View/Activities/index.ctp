@@ -2,6 +2,7 @@
 
 	<table class="zebra"cellpadding="0" cellspacing="0">
 		<tr>
+			<th>Projeto</th>
 			<th>Descrição</th>
 			<th class="responsive">Status</th>
 			<th class="responsive">Data</th>
@@ -30,6 +31,7 @@
 		?>
 
 		<tr <?php echo $class; ?>>
+			<td class="projeto"><?php echo $activity['Project']['name']; ?></td>
 			<td class="descrição"><?php echo $activity['Activity']['description']; ?></td>
 			<td class="status"><?php echo $activity['Activity']['status']; ?></td>
 			<td class="data"><?php echo $activity['Activity']['date']; ?></td>
