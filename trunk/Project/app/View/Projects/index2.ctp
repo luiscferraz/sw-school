@@ -51,6 +51,9 @@
 					?>
 
 					<?php echo $this->Html->link(
+					$this->Html->image("rel.png", array('alt' => 'Relatórios','title' => 'Relatórios')), array('action' => 'reports',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
+
+					<?php echo $this->Html->link(
 					$this->Html->image("financial.png", array('alt' => 'Despesas','title' => 'Despesas')), array('action' => 'financial',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
 
 					<?php echo $this->Html->link(
