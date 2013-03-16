@@ -20,7 +20,7 @@
 	font-family: Verdana !important;
 }
 
-h1{
+h1, h2, h3{
 	clear:both;
     color: #5F9EA0; 
 	padding-top: 14px;
@@ -174,10 +174,11 @@ p span {
 }
 
 .botao, #botaoRestaurar{
+	 height: auto;
 	 text-decoration:none;
 	 display: inline-block;
  	 padding: 15px 15px;
-  	 font:normal 20px/1.1em arial;
+  	 font:normal 100%/1.1em arial;
   	 border:1px solid #d0d0d0;
   	 border-top-color:#ececec;
   	 border-bottom-color:#909090;
@@ -328,7 +329,7 @@ p span {
 	left:50%;
 	margin-left:-40%;
 	padding-bottom:60px;
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
 .actions{
@@ -396,11 +397,19 @@ p span {
 #usuario{
 	background: #bcdae0;
 	border: none;
-	width: 468px;
+	width: 96%;
+}
+
+#campo_usuario{
+	width: 25%;
+}
+
+#senha{
+	width: 25%;
 }
 
 #tipousuario{
-	width: 471px;
+	width: 25%;
 	height: 25px;
 }
 
@@ -973,6 +982,14 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 /* ================== RELATÓRIOS ================*/
+
+#botao_relatorio_proj{
+	margin-top: 4%;
+}
+
+#form_relatori_proj{
+	width: 45%;
+}
 
 
 /*================================
