@@ -158,6 +158,7 @@
 	public function Reports($id = null){
 		$this -> layout = 'base';
 		$this -> set( 'idproject', $id);
+		$this -> set('filters', false);
 
 		if ($this -> request -> is('post')) {
 			$report =  $_POST['report'];
@@ -172,9 +173,11 @@
 
 	public function ReportsAll($idProject){
 		echo $idProject;
+		$this -> set('filters', true);
 	}
 	public function ReportsDate($idProject,$dateInit, $dateEnd){
 		echo $idProject."-".$dateInit."-".$dateEnd;
+		$this -> set('filters', true);
 	}
 	
 	//Funções em para respostas ajax

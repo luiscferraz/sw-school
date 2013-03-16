@@ -7,7 +7,14 @@
 	<input type="submit" value="Aplicar" />
 </form>
 
-
+<?php if ($filters) { ?>
+	<select>
+		<option value="membro">Membro</option>
+		<option value="atividade">Atividade</option>
+		<option value="categoria">Categoria</option>
+		<option value="projeto">Projeto</option>
+	</select>
+<?php } ?>
 
 
 

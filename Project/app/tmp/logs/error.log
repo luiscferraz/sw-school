@@ -6980,3 +6980,46 @@
 2013-03-16 16:26:24 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-16 16:32:14 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-16 16:32:53 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-16 16:33:04 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-16 16:34:26 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\Sites\sws\Project\app\Controller\ProjectsController.php, line 163]
+2013-03-16 16:34:26 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+#0 C:\Sites\sws\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 163)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 163, Array)
+#2 C:\Sites\sws\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 163, Array)
+#3 C:\Sites\sws\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-16 16:34:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-16 16:34:39 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\Sites\sws\Project\app\Controller\ProjectsController.php, line 177]
+2013-03-16 16:34:39 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 C:\Sites\sws\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 177)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 177, Array)
+#2 C:\Sites\sws\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 177, Array)
+#3 C:\Sites\sws\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-16 16:34:39 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-16 16:34:39 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-16 16:35:36 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-16 16:40:53 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-16 16:40:56 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
