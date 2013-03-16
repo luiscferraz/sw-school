@@ -153,6 +153,29 @@
 			return false;
 		}
 	}
+
+
+	public function Reports($id = null){
+		$this -> layout = 'base';
+		$this -> set( 'idproject', $id);
+
+		if ($this -> request -> is('post')) {
+			$report =  $_POST['report'];
+			if ($report['time'] == 'all') {
+				$this -> ReportsAll($report['id']);
+			}
+			else {
+				$this -> ReportsDate($report['id'], $report['dateInit'], $report['dateEnd']);
+			}
+		}
+	}
+
+	public function ReportsAll($idProject){
+		echo $idProject;
+	}
+	public function ReportsDate($idProject,$dateInit, $dateEnd){
+		echo $idProject."-".$dateInit."-".$dateEnd;
+	}
 	
 	//Funções em para respostas ajax
 	//lista de consultores para ser gerente

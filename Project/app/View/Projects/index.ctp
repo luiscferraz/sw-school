@@ -98,6 +98,9 @@ $(document).ready(function(){
         </span>
         
         <span class="icon-action"> 
+          <?php echo $this->Html->link(
+          $this->Html->image("rel.png", array('alt' => 'Relatórios','title' => 'Relatórios')), array('action' => 'reports',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
+          
           <?php 
           if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
           echo $this->Html->link(
@@ -107,7 +110,7 @@ $(document).ready(function(){
 
           <?php 
 		  if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-		  echo $this->Html->link(
+		      echo $this->Html->link(
           $this->Html->image("financial.png", array('alt' => 'Despesas','title' => 'Despesas')), array('action' => 'financial',$project['Project']['id']), array('escape'=>false, 'id'=>'link'));
 		  }
 		  ?>
