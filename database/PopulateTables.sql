@@ -1,4 +1,4 @@
-﻿INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
+INSERT INTO `users` (`username`, `password`, `type`, `consultant_id`) VALUES
 ('rose', 'f4465763c4eb760d104dc365a6045de47e759ed2', 'cons', 1),
 ('mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 2),
 ('armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 3),
@@ -53,8 +53,8 @@ INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `s
 
 INSERT INTO `swsdb`.`projects` (`id`, `name`, `description`, `acronym`, `a_hours_individual`, `b_hours_individual`, `c_hours_individual`, `a_hours_group`, `b_hours_group`, `c_hours_group`, `consultant_id`, `parent_project_id`, `company_id`, `removed`) VALUES 
 (NULL, 'Recife', 'Recife', 'RF', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
-(NULL, 'Maringa', 'Maringá', 'MG', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
-(NULL, 'Avaliacoes', 'Avaliações', 'AV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+(NULL, 'Maringá', 'Maringá', 'MG', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+(NULL, 'Avaliações', 'Avaliações', 'AV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
 (NULL, 'Aplic', 'Aplic', 'AP', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
 (NULL, 'Banksystem', 'Banksystem', 'BS', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
 (NULL, 'BISA', 'BISA', 'BI', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
@@ -82,7 +82,7 @@ INSERT INTO `activities` (`id`, `start_hours`, `end_hours`, `date`, `observation
 (1, '10:00:00', '16:00:00', '02/03/2013', 'Varredura nos servidores e fitas de backups', 'Verificacao da qualidade do armazenamento fisico', 'Planejada', 4, 1, 2, 3, 5, 0),
 (2, '08:00:00', '10:00:00', '03/03/2013', 'Verificar distancia entre os pontos e as situacoes adversas', 'Estudo de viabilidade de conexao com fibra otica', 'Em desenvolvimento', 7, 1, 4, NULL, NULL, 0),
 (3, '14:30:00', '18:00:00', '21/03/2013', 'Definição de ferramentas', 'Definição de ferramentas', 'Em desenvolvimento', 4, 17, 12, 14, 10, 0),
-(4, '16:00:00', '18:00:00', '21/03/2013', 'Atualização Layout', 'Atualizacaoo Layout', 'Em desenvolvimento', 9, 15, 1, NULL, NULL, 0),
+(4, '16:00:00', '18:00:00', '21/03/2013', 'Atualizaço Layout', 'Atualizacaoo Layout', 'Em desenvolvimento', 9, 15, 1, NULL, NULL, 0),
 (5, '9:00:00', '12:00:00', '22/03/2013', 'Sistema de busca', 'Sistema de busca', 'Em desenvolvimento', 25, 15, 1, NULL, NULL, 0),
 (6, '15:00:00', '17:00:00', '22/03/2013', 'Modificacoes Banco', 'Modificacoes Banco', 'Planejada', 9, 15, 1, NULL, NULL, 0),
 (7, '9:00:00', '12:00:00', '22/03/2013', 'Sistema de busca', 'Sistema de busca', 'Planejada', 22, 16, 10, 7, NULL, 0),
@@ -106,19 +106,19 @@ INSERT INTO `activities` (`id`, `start_hours`, `end_hours`, `date`, `observation
 (25, '15:00:00', '17:00:00', '28/03/2013', 'Area de pesquisa', 'Area de pesquisa', 'Planejada', 11, 15, 12, NULL, NULL, 0),
 (26, '14:00:00', '17:00:00', '29/03/2013', 'Verificacao de Erros do sistema', 'Verificacao de Erros do sistema', 'Planejada', 11, 6, 8, NULL, NULL, 0),
 (27, '09:00:00', '11:00:00', '03/04/2013', 'Edição de relatorios', 'Edicao de Relatorios', 'Planejada', 12, 9, 7, 10, NULL, 0),
-(28, '09:00:00', '11:30:00', '09/04/2013', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 15, 2, 15, NULL, NULL, 0);
+(28, '09:00:00', '11:30:00', '09/04/2013', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 15, 2, 15, NULL, NULL, 0),
 (29, '10:00:00', '16:00:00', '10/04/2013', 'Gerar recibo de compra', 'Gerar Recibo de Compra', 'Planejada', 5, 9, 7, 10, NULL, 0),
 (30, '14:00:00', '18:00:00', '10/04/2013', 'Modelagem de dados', 'Modelagem de dados', 'Planejada', 16, 4, 16, 10, NULL, 0),
 (31, '08:00:00', '12:00:00', '12/04/2013', 'Validação e verificação de modelos', 'Validação de modelos', 'Planejada', 20, 8, 4, 1, 9, 0),
 (32, '13:00:00', '15:00:00', '18/04/2013', 'Estudo e levantamento de Requisitos', 'Levantamento de Requisitos', 'Planejada', 21, 11, 2, 6, NULL, 0),
 (33, '08:00:00', '11:00:00', '26/04/2013', 'Criação de tabelas no banco de dados', 'Criação de tabelas no banco de dados', 'Planejada', 19, 13, 14, 15, NULL, 0),
 (34, '11:00:00', '12:00:00', '29/04/2013', 'Reestruturação de Layout', 'Reestruturação de Layout', 'Planejada', 18, 12, 6, 8, NULL, 0),
-(35, '15:00:00', '18:00:00', '01/05/2013', 'Edição de menu', 'Edicao de menu', 'Planejada', 21, 9, 7, NULL, NULL, 0),
+(35, '15:00:00', '18:00:00', '01/05/2013', 'Edição de menu', 'Edição de menu', 'Planejada', 21, 9, 7, NULL, NULL, 0),
 (36, '12:00:00', '16:00:00', '10/05/2013', 'Criacao de tela inicial', 'Criacao de tela inicial', 'Em desenvolvimento', 4, 9, NULL, NULL, NULL, 0),
 (37, '10:00:00', '12:00:00', '20/05/2013', 'Definicao de arquitetura', 'Definicao de arquitetura', 'Planejada', 7, 12, 11, 10, NULL, 0),
 (38, '09:00:00', '10:00:00', '30/05/2013', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 11, 1, 3, 4, NULL, 0),
 (39, '10:00:00', '14:00:00', '11/06/2013', 'Teste', 'Teste', 'Planejada', 12, 15, 1, NULL, NULL, 0),
-(40, '14:00:00', '18:00:00', '11/06/2013', 'Teste', 'Teste', 'Planejada', 9, 15, 1, NULL, NULL, 0),
+(40, '14:00:00', '18:00:00', '11/06/2013', 'Teste', 'Teste', 'Planejada', 9, 15, 1, NULL, NULL, 0);
 
 
 
