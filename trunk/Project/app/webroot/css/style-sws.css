@@ -333,9 +333,10 @@ p span {
 }
 
 .actions{
-	width: 80px !important;
+	width: 82px !important;
 	padding-left: 5px;
 	padding-top: 15px;
+	text-align: center;
 }
 
 #dados_pessoais{
@@ -886,6 +887,11 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 /* ==================ATIVIDADES================*/
+
+#tabela_atividades{
+	width: 100%;
+	margin-top: -40%;
+}
 
 #projetosArvore {
 	width: 30%;
