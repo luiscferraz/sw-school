@@ -1,4 +1,4 @@
-<h3>Período</h3>
+<h1>Período</h1>
 
 <form id="form_relatori_proj" method="post" action="">
 	<input type="hiden" value="<?php echo $idproject ?>" name="report[id]" style="display:none">

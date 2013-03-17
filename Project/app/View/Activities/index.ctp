@@ -1,6 +1,5 @@
-﻿<div class="activity index">
-
-	<table class="zebra"cellpadding="0" cellspacing="0">
+﻿
+	<table class="zebra" id="tabela_atividades" cellpadding="0" cellspacing="0">
 		<tr>
 			<th>Projeto</th>
 			<th>Descrição</th>
@@ -68,5 +67,3 @@
 		</tr>
 		<?php } ?>
 	</table>
-	
-</div>
