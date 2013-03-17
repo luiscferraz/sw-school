@@ -1,4 +1,4 @@
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+﻿SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=`TRADITIONAL`;
 
@@ -212,7 +212,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
   `date` varchar(10) NOT NULL ,
   `observations` MEDIUMTEXT NULL ,
   `description` VARCHAR(100) NOT NULL ,
-  `status` ENUM('Iniciada', 'Em desenvolvimento', 'Concluída', 'Cancelada') NOT NULL ,
+  `status` ENUM('Planejada', 'Em desenvolvimento', 'Concluída', 'Cancelada') NOT NULL ,
   `project_id` INT NOT NULL ,
   `consultant1_id` INT  ,
   `consultant2_id` INT  ,
