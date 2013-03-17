@@ -188,11 +188,13 @@ foreach ($projectsPais as $project) {
 		} else {
 			echo '<td align=center bgcolor="DarkSeaGreen1">';
 			//valor da manha do dia
-			echo '1';			
+			$idM = (string)$project['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.1';
+			echo $idM;
 			echo '</td >';
 			echo '<td align=center bgcolor="DarkSeaGreen1">';
 			//valor da tarde do dia
-			echo '1';		
+			$idT = (string)$project['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.1';
+			echo $idT;		
 			echo '</td>';
 		}	
 	}
@@ -209,10 +211,12 @@ foreach ($projectsPais as $project) {
 			echo '</td>';
 		} else {
 			echo '<td align=center bgcolor="LightCyan">';
-			echo '2';			
+			$idM = (string)$project['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.2';
+			echo $idM;			
 			echo '</td >';
 			echo '<td align=center bgcolor="LightCyan">';
-			echo '2';		
+			$idT = (string)$project['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.2';
+			echo $idT;			
 			echo '</td>';
 		}	
 	}
@@ -229,10 +233,12 @@ foreach ($projectsPais as $project) {
 			echo '</td>';
 		} else {
 			echo '<td align=center bgcolor="LightYellow">';
-			echo '3';			
+			$idM = (string)$project['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.3';
+			echo $idM;			
 			echo '</td >';
 			echo '<td align=center bgcolor="LightYellow">';
-			echo '3';		
+			$idT = (string)$project['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.3';
+			echo $idT;			
 			echo '</td>';
 		}	
 	}
@@ -249,10 +255,12 @@ foreach ($projectsPais as $project) {
 			echo '</td>';
 		} else {
 			echo '<td align=center bgcolor="MistyRose">';
-			echo '4';			
+			$idM = (string)$project['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.4';
+			echo $idM;			
 			echo '</td >';
 			echo '<td align=center bgcolor="MistyRose">';
-			echo '4';		
+			$idT = (string)$project['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.4';
+			echo $idT;			
 			echo '</td>';
 		}	
 	}
@@ -298,10 +306,12 @@ foreach ($projectsPais as $project) {
 							echo '</td>';
 						} else {
 							echo '<td align=center bgcolor="DarkSeaGreen1">';
-							echo '1';			
+							$idM = (string)$projectf['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.1';
+							echo $idM;			
 							echo '</td >';
 							echo '<td align=center bgcolor="DarkSeaGreen1">';
-							echo '1';		
+							$idT = (string)$projectf['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.1';
+							echo $idT;			
 							echo '</td>';
 						}	
 					}
@@ -318,10 +328,12 @@ foreach ($projectsPais as $project) {
 							echo '</td>';
 						} else {
 							echo '<td align=center bgcolor="LightCyan">';
-							echo '2';			
+							$idM = (string)$projectf['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.2';
+							echo $idM;			
 							echo '</td >';
 							echo '<td align=center bgcolor="LightCyan">';
-							echo '2';		
+							$idT = (string)$projectf['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.2';
+							echo $idT;			
 							echo '</td>';
 						}	
 					}
@@ -338,10 +350,12 @@ foreach ($projectsPais as $project) {
 							echo '</td>';
 						} else {
 							echo '<td align=center bgcolor="LightYellow">';
-							echo '3';			
+							$idM = (string)$projectf['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.3';
+							echo $idM;			
 							echo '</td >';
 							echo '<td align=center bgcolor="LightYellow">';
-							echo '3';		
+							$idT = (string)$projectf['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.3';
+							echo $idT;			
 							echo '</td>';
 						}	
 					}
@@ -358,10 +372,12 @@ foreach ($projectsPais as $project) {
 							echo '</td>';
 						} else {
 							echo '<td align=center bgcolor="MistyRose">';
-							echo '4';			
+							$idM = (string)$projectf['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.4';
+							echo $idM;			
 							echo '</td >';
 							echo '<td align=center bgcolor="MistyRose">';
-							echo '4';		
+							$idT = (string)$projectf['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.4';
+							echo $idT;			
 							echo '</td>';
 						}	
 					}
@@ -386,10 +402,12 @@ foreach ($projectsPais as $project) {
 									echo '</td>';
 								} else {
 									echo '<td align=center bgcolor="DarkSeaGreen1">';
-									echo '1';			
+									$idM = (string)$projectn['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.1';
+									echo $idM;			
 									echo '</td >';
 									echo '<td align=center bgcolor="DarkSeaGreen1">';
-									echo '1';		
+									$idT = (string)$projectn['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.1';
+									echo $idT;			
 									echo '</td>';
 								}	
 							}
@@ -406,10 +424,12 @@ foreach ($projectsPais as $project) {
 									echo '</td>';
 								} else {
 									echo '<td align=center bgcolor="LightCyan">';
-									echo '2';			
+									$idM = (string)$projectn['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.2';
+									echo $idM;			
 									echo '</td >';
 									echo '<td align=center bgcolor="LightCyan">';
-									echo '2';		
+									$idT = (string)$projectn['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.2';
+									echo $idT;			
 									echo '</td>';
 								}	
 							}
@@ -426,10 +446,12 @@ foreach ($projectsPais as $project) {
 									echo '</td>';
 								} else {
 									echo '<td align=center bgcolor="LightYellow">';
-									echo '3';			
+									$idM = (string)$projectn['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.3';
+									echo $idM;			
 									echo '</td >';
 									echo '<td align=center bgcolor="LightYellow">';
-									echo '3';		
+									$idT = (string)$projectn['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.3';
+									echo $idT;			
 									echo '</td>';
 								}	
 							}
@@ -446,10 +468,12 @@ foreach ($projectsPais as $project) {
 									echo '</td>';
 								} else {
 									echo '<td align=center bgcolor="MistyRose">';
-									echo '4';			
+									$idM = (string)$projectn['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.4';
+									echo $idM;			
 									echo '</td >';
 									echo '<td align=center bgcolor="MistyRose">';
-									echo '4';		
+									$idT = (string)$projectn['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.4';
+									echo $idT;			
 									echo '</td>';
 								}	
 							}
