@@ -299,22 +299,38 @@
  		}
  		
  	}
- 	public function financial_all(){
- 		$financialAll = $this->Project->query('SELECT * FROM expenses JOIN projects WHERE expenses.project_id = projects.id AND projects.removed != 1');
- 		$this->set('financialAll', $financialAll);
- 		$sumOutput = array();
- 		$sumInput = array();
- 		foreach ($financialAll as $key => $value) {
- 			$sumOutput[$value['projects']['id']] = $this->Project->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "s" AND expenses.project_id = '.$value['projects']['id']);
- 			$sumInput[$value['projects']['id']] = $this->Project->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "e" AND expenses.project_id = '.$value['projects']['id']);
+ 	public function report_per_project($id = NULL, $start_date = NULL, $end_date = NULL){
+
+ 		if($start_date == NULL and $end_date == NULL){
+ 			$consulting_A = $this->Project->query('SELECT * FROM activities, projects, consultants, entries WHERE entries.type_consulting = "A" AND entries.activity_id = activities.id AND entries.consultant_id = consultants.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$consulting_B = $this->Project->query('SELECT * FROM activities, projects, consultants, entries WHERE entries.type_consulting = "B" AND entries.activity_id = activities.id AND entries.consultant_id = consultants.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$consulting_C = $this->Project->query('SELECT * FROM activities, projects, consultants, entries WHERE entries.type_consulting = "C" AND entries.activity_id = activities.id AND entries.consultant_id = consultants.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$hours_A_ind = $this->Project->query('SELECT projects.id, projects.a_hours_individual AS hours_a_contracted_individual, SUM(entries.hours_worked) AS hours_a_performed_individual, (projects.a_hours_individual - SUM(entries.hours_worked)) AS balance_hours_a_individual FROM activities ,entries, projects WHERE entries.type = "Individual" AND entries.type_consulting = "A" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$hours_A_group = $this->Project->query('SELECT projects.id, projects.a_hours_group AS hours_a_contracted_group, SUM(entries.hours_worked) AS hours_a_performed_group, (projects.a_hours_group - SUM(entries.hours_worked)) AS balance_hours_a_group FROM activities ,entries, projects WHERE entries.type = "Grupo" AND entries.type_consulting = "A" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$hours_B_ind = $this->Project->query('SELECT projects.id, projects.b_hours_individual AS hours_b_contracted_individual, SUM(entries.hours_worked) AS hours_b_performed_individual, (projects.b_hours_individual - SUM(entries.hours_worked)) AS balance_hours_a_individual FROM activities ,entries, projects WHERE entries.type = "Individual" AND entries.type_consulting = "B" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$hours_B_group = $this->Project->query('SELECT projects.id, projects.b_hours_group AS hours_b_contracted_group, SUM(entries.hours_worked) AS hours_b_performed_group, (projects.b_hours_group - SUM(entries.hours_worked)) AS balance_hours_b_group FROM activities ,entries, projects WHERE entries.type = "Grupo" AND entries.type_consulting = "B" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$hours_C_ind = $this->Project->query('SELECT projects.id, projects.c_hours_individual AS hours_c_contracted_individual, SUM(entries.hours_worked) AS hours_c_performed_individual, (projects.c_hours_individual - SUM(entries.hours_worked)) AS balance_hours_c_individual FROM activities ,entries, projects WHERE entries.type = "Individual" AND entries.type_consulting = "C" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$hours_C_group = $this->Project->query('SELECT projects.id, projects.c_hours_group AS hours_c_contracted_group, SUM(entries.hours_worked) AS hours_c_performed_group, (projects.c_hours_group - SUM(entries.hours_worked)) AS balance_hours_c_group FROM activities ,entries, projects WHERE entries.type = "Grupo" AND entries.type_consulting = "C" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$id);
+ 			$this->set('consulting_A', $consulting_A);
+ 			$this->set('consulting_B', $consulting_B);
+ 			$this->set('consulting_C', $consulting_C);
+ 			$this->set('hours_A_ind', $hours_A_ind);
+ 			$this->set('hours_B_ind', $hours_B_ind);
+ 			$this->set('hours_C_ind', $hours_C_ind);
+ 			$this->set('hours_A_group', $hours_A_group);
+ 			$this->set('hours_B_group', $hours_B_group);
+ 			$this->set('hours_C_group', $hours_C_group);
  		}
- 		$this->set('sumOutput', $sumOutput);
- 		$this->set('sumInput', $sumInput);
- 	}
- 	public function financial_per_project($id){
- 		$this->set('financialPerProject', $this->Project->query('SELECT * FROM expenses JOIN projects WHERE expenses.project_id = projects.id AND projects.id = '.$id));
- 		$this->set('sumOutput', $this->Project->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "s" AND expenses.project_id = '.$id));
- 		$this->set('sumInput', $this->Project->Expense->query('SELECT SUM(expenses.value) FROM expenses WHERE expenses.type = "e" AND expenses.project_id = '.$id));
+ 		elseif ($start_date != NULL and $end_date != NULL) {
+ 			
+ 		}
+ 		elseif ($end_date == NULL) {
+ 			
+ 		}
+ 		elseif ($start_date == NULL) {
+ 			
+ 		}
+
  	}
 
  }
