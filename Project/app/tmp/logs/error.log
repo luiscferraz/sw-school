@@ -7109,3 +7109,60 @@
 2013-03-17 23:29:09 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-18 00:54:21 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:03:54 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:06:07 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:07:42 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:07:49 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:08:34 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:35:02 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/ProjectsController.php(181): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/ProjectsController.php(172): ProjectsController->ReportsAll('')
+#8 [internal function]: ProjectsController->Reports()
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-18 14:35:02 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:35:02 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:37:50 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:38:31 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:38:33 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:39:35 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:39:38 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-18 14:40:05 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -16,6 +16,16 @@
 		<option value="categoria">Categoria</option>
 		<option value="projeto">Projeto</option>
 	</select>
+	<?php print_r($consulting_A); ?>
+	<?php print_r($consulting_B); ?>
+	<?php print_r($consulting_C); ?>
+
+	<?php print_r($hours_A_ind); ?>
+	<?php print_r($hours_A_group); ?>
+	<?php print_r($hours_B_ind); ?>
+	<?php print_r($hours_B_group); ?>
+	<?php print_r($hours_C_ind); ?>
+	<?php print_r($hours_C_group); ?>
 <?php } ?>
 
 
