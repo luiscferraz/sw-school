@@ -189,12 +189,12 @@ foreach ($projectsPais as $project) {
 			echo '<td align=center bgcolor="DarkSeaGreen1">';
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.1';
-			echo $idM;
+			echo buscar_atividade($idM);
 			echo '</td >';
 			echo '<td align=center bgcolor="DarkSeaGreen1">';
 			//valor da tarde do dia
 			$idT = (string)$project['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.1';
-			echo $idT;		
+			echo buscar_atividade($idT);		
 			echo '</td>';
 		}	
 	}
@@ -212,11 +212,11 @@ foreach ($projectsPais as $project) {
 		} else {
 			echo '<td align=center bgcolor="LightCyan">';
 			$idM = (string)$project['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.2';
-			echo $idM;			
+			echo buscar_atividade($idM);			
 			echo '</td >';
 			echo '<td align=center bgcolor="LightCyan">';
 			$idT = (string)$project['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.2';
-			echo $idT;			
+			echo buscar_atividade($idT);			
 			echo '</td>';
 		}	
 	}
@@ -234,11 +234,11 @@ foreach ($projectsPais as $project) {
 		} else {
 			echo '<td align=center bgcolor="LightYellow">';
 			$idM = (string)$project['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.3';
-			echo $idM;			
+			echo buscar_atividade($idM);			
 			echo '</td >';
 			echo '<td align=center bgcolor="LightYellow">';
 			$idT = (string)$project['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.3';
-			echo $idT;			
+			echo buscar_atividade($idT);			
 			echo '</td>';
 		}	
 	}
@@ -256,11 +256,11 @@ foreach ($projectsPais as $project) {
 		} else {
 			echo '<td align=center bgcolor="MistyRose">';
 			$idM = (string)$project['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.4';
-			echo $idM;			
+			echo buscar_atividade($idM);			
 			echo '</td >';
 			echo '<td align=center bgcolor="MistyRose">';
 			$idT = (string)$project['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.4';
-			echo $idT;			
+			echo buscar_atividade($idT);			
 			echo '</td>';
 		}	
 	}
@@ -307,11 +307,11 @@ foreach ($projectsPais as $project) {
 						} else {
 							echo '<td align=center bgcolor="DarkSeaGreen1">';
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.1';
-							echo $idM;			
+							echo buscar_atividade($idM);			
 							echo '</td >';
 							echo '<td align=center bgcolor="DarkSeaGreen1">';
 							$idT = (string)$projectf['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.1';
-							echo $idT;			
+							echo buscar_atividade($idT);			
 							echo '</td>';
 						}	
 					}
@@ -329,11 +329,11 @@ foreach ($projectsPais as $project) {
 						} else {
 							echo '<td align=center bgcolor="LightCyan">';
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.2';
-							echo $idM;			
+							echo buscar_atividade($idM);			
 							echo '</td >';
 							echo '<td align=center bgcolor="LightCyan">';
 							$idT = (string)$projectf['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.2';
-							echo $idT;			
+							echo buscar_atividade($idT);			
 							echo '</td>';
 						}	
 					}
@@ -351,11 +351,11 @@ foreach ($projectsPais as $project) {
 						} else {
 							echo '<td align=center bgcolor="LightYellow">';
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.3';
-							echo $idM;			
+							echo buscar_atividade($idM);			
 							echo '</td >';
 							echo '<td align=center bgcolor="LightYellow">';
 							$idT = (string)$projectf['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.3';
-							echo $idT;			
+							echo buscar_atividade($idT);			
 							echo '</td>';
 						}	
 					}
@@ -373,11 +373,11 @@ foreach ($projectsPais as $project) {
 						} else {
 							echo '<td align=center bgcolor="MistyRose">';
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.4';
-							echo $idM;			
+							echo buscar_atividade($idM);			
 							echo '</td >';
 							echo '<td align=center bgcolor="MistyRose">';
 							$idT = (string)$projectf['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.4';
-							echo $idT;			
+							echo buscar_atividade($idT);			
 							echo '</td>';
 						}	
 					}
@@ -403,11 +403,11 @@ foreach ($projectsPais as $project) {
 								} else {
 									echo '<td align=center bgcolor="DarkSeaGreen1">';
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.1';
-									echo $idM;			
+									echo buscar_atividade($idM);			
 									echo '</td >';
 									echo '<td align=center bgcolor="DarkSeaGreen1">';
 									$idT = (string)$projectn['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.1';
-									echo $idT;			
+									echo buscar_atividade($idT);			
 									echo '</td>';
 								}	
 							}
@@ -425,11 +425,11 @@ foreach ($projectsPais as $project) {
 								} else {
 									echo '<td align=center bgcolor="LightCyan">';
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.2';
-									echo $idM;			
+									echo buscar_atividade($idM);			
 									echo '</td >';
 									echo '<td align=center bgcolor="LightCyan">';
 									$idT = (string)$projectn['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.2';
-									echo $idT;			
+									echo buscar_atividade($idT);			
 									echo '</td>';
 								}	
 							}
@@ -447,11 +447,11 @@ foreach ($projectsPais as $project) {
 								} else {
 									echo '<td align=center bgcolor="LightYellow">';
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.3';
-									echo $idM;			
+									echo buscar_atividade($idM);			
 									echo '</td >';
 									echo '<td align=center bgcolor="LightYellow">';
 									$idT = (string)$projectn['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.3';
-									echo $idT;			
+									echo buscar_atividade($idT);			
 									echo '</td>';
 								}	
 							}
@@ -469,11 +469,11 @@ foreach ($projectsPais as $project) {
 								} else {
 									echo '<td align=center bgcolor="MistyRose">';
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('dmy',$dataFinal) . '.4';
-									echo $idM;			
+									echo buscar_atividade($idM);			
 									echo '</td >';
 									echo '<td align=center bgcolor="MistyRose">';
 									$idT = (string)$projectn['Project']['id'] . '.T.'. date('dmy',$dataFinal) . '.4';
-									echo $idT;			
+									echo buscar_atividade($idT);			
 									echo '</td>';
 								}	
 							}

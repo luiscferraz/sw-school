@@ -14,6 +14,15 @@
 				$this -> set ('projectsFilhos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
 				$this -> set ('projectsNetos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
 
+
+				function buscar_atividade($string) {
+					$stringFatiada = explode('.' , $string);
+					$id_projeto = $stringFatiada[0];
+					$turno = $stringFatiada[1];
+					$data = $stringFatiada[2];
+					$consultor = $stringFatiada[3];
+					return $consultor;
+				}
         }
      		
  }
