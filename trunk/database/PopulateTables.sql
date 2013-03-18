@@ -1,4 +1,4 @@
-﻿INSERT INTO `swsdb`.`users` (`username`, `password`, `type`, `consultant_id`) VALUES
+INSERT INTO `swsdb`.`users` (`username`, `password`, `type`, `consultant_id`) VALUES
 ('rose', 'f4465763c4eb760d104dc365a6045de47e759ed2', 'cons', 1),
 ('mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 2),
 ('armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 3),
