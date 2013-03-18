@@ -1,10 +1,10 @@
-<h1>Período</h1>
+<h1>PerÃ­odo</h1>
 
 <form id="form_relatori_proj" method="post" action="">
 	<input type="hiden" value="<?php echo $idproject ?>" name="report[id]" style="display:none">
-	<input type="radio" name="report[time]" value="all" style="width:auto">Tudo<br>
+	<input type="radio" checked name="report[time]" value="all" style="width:auto">Tudo<br>
 	<input type="radio" name="report[time]" value="date" style="width:auto">De : 
-	<input type="text" style="width:auto" name="report[dateInit]" value="" class="date"> até <input type="text" value="" name="report[dateEnd]" style="width:auto" class="date">
+	<input type="text" style="width:auto" name="report[dateInit]" value="" class="date"> atÃ© <input type="text" value="" name="report[dateEnd]" style="width:auto" class="date">
 	<input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
 </form>
 
@@ -16,17 +16,91 @@
 		<option value="categoria">Categoria</option>
 		<option value="projeto">Projeto</option>
 	</select>
-	<?php print_r($consulting_A); ?>
-	<?php print_r($consulting_B); ?>
-	<?php print_r($consulting_C); ?>
+<?php print_r($consulting_A);
+echo "<br><br><br><br>";?>
 
-	<?php print_r($hours_A_ind); ?>
-	<?php print_r($hours_A_group); ?>
-	<?php print_r($hours_B_ind); ?>
-	<?php print_r($hours_B_group); ?>
-	<?php print_r($hours_C_ind); ?>
-	<?php print_r($hours_C_group); ?>
-<?php } ?>
+ 	<?php print_r($consulting_B);
+echo "<br><br><br><br>";?>
+	<?php print_r($consulting_C);
+echo "<br><br><br><br>";?>
+
+	<?php print_r($hours_A_ind);
+echo "<br><br><br><br>";?>
+	<?php print_r($hours_A_group);
+echo "<br><br><br><br>";?>
+	<?php print_r($hours_B_ind);
+echo "<br><br><br><br>";?>
+	<?php print_r($hours_B_group);
+echo "<br><br><br><br>";?>
+	<?php print_r($hours_C_ind);
+echo "<br><br><br><br>";?>
+	<?php print_r($hours_C_group);
+echo "<br><br><br><br>";?>
+<?php } ?> 
+
+<!-- Zona de teste -->
+
+
+<!-- FIm da zona de teste -->
+
+<!-- Tabela a ser montada -->
+
+<!-- Tabela Consultoria A -->
+<?php
+    for ($na=0; $na<=count($consulting_A)-1; $na++){
+        $ta = ($consulting_A[$na]);
+        echo "<br><br><br><br>";
+     	
+        // print_r($ta);
+        
+
+    }
+?>
+<table width="80%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th colspan="3" rowspan="2" scope="col">Consultoria A</th>
+		<th colspan="3" scope="col">Horas contratadas em grupo</th>
+		<th width="7%" scope="col"><?php echo $ta['projects']['a_hours_group'];?></th>
+	</tr>
+	<tr>
+		<td colspan="3">Horas contratadas Individual</td>
+		<td><?php echo $ta['projects']['a_hours_individual'];?></td>
+	</tr>
+	<tr>
+		<th width="5%" scope="row">ID</th>
+		<td colspan="2">Atividade</td>
+		<td width="20%">Consultor</td>
+		<td width="13%">Data</td>
+		<td width="10%">Tipo</td>
+		<td>Qt Hs</td>
+	</tr>
+	<tr>
+		<th scope="row"><?php echo $ta['activities']['id'] ?></th>
+		<td colspan="2"><?php echo $ta['activities']['description'] ?></td>
+		<td><?php echo $ta['consultants']['name'] ?></td>
+		<td><?php echo $ta['activities']['date'] ?></td>
+		<td><?php echo $ta['entries']['type'] ?></td>
+		<td><?php echo $ta['entries']['hours_worked'] ?></td>
+	</tr>
+	<tr>
+		<th colspan="2" scope="row">Saldo de Horas em Grupo</th>
+		<td width="9%"><?php echo $ta['projects']['balance_hours_a_group'] ?></td>
+		<td colspan="3">Horas Realizadas em Grupo</td>
+		<td>GG</td>
+	</tr>
+	<tr>
+		<th colspan="2" scope="row">Saldo de Horas Individuais</th>
+		<td>KK</td>
+		<td colspan="3">Horas Realizadas Individual</td>
+		<td>HH</td>
+	</tr>
+	<tr>
+		<th colspan="6" scope="row">Total de Horas realizadas na Consultoria A</th>
+		<td>II</td>
+	</tr>
+</table>
+  
+
 
 
 
