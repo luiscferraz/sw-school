@@ -35,15 +35,37 @@
  	}
  	
  	public function add()
-   {
-   	 $this -> layout = 'base';
-      if($this->request->is('post'))
-      {
-         if($this->Consultant->saveAll($this->request->data))
-         {
-           $this->Session->setFlash($this->flashSuccess('O usuário foi adicionado.'));
-           $this->redirect(array('action' => 'index'));
-         } 
+  {
+    $this -> layout = 'base';
+    if($this->request->is('post'))
+    {
+      if ($this->verific($this->request->data)) {
+        if($this->Consultant->saveAll($this->request->data))
+        {
+          $this->Session->setFlash($this->flashSuccess('O usuário foi adicionado.'));
+          $this->redirect(array('action' => 'index'));
+        }
+      } 
+    }
+  }
+
+   public function verific($data){
+      $ctr = 0;
+      $erro ='';
+      //Verificar se já existe Nome, Email e usuario.
+      $name  =  $this -> Consultant -> query ("SELECT * FROM `consultants` WHERE name = '". $data['Consultant']['name']."'");
+      if (empty($name)){} else { $ctr++; $erro = $erro .'Nome já existente.';};
+      $email =  $this -> Consultant -> query ("SELECT * FROM `consultants` WHERE email = '". $data['Consultant']['email']."'");
+      if (empty($email)){} else { $ctr++; $erro = $erro .'E-mail já existente.';};
+      $username =  $this -> Consultant -> query ("SELECT * FROM `consultants` WHERE name = '". $data['User']['username']."'");
+      if (empty($username)){} else { $ctr++; $erro = $erro . 'Nome de Usuário já existente.';};
+
+      if ($ctr > 0) {
+        $this -> Session -> setFlash ($this -> flashError ($erro));
+        return false;
+      }
+      else {
+        return true;
       }
    }
    public function edit($id = NULL)

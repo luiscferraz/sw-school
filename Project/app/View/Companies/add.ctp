@@ -39,7 +39,7 @@
 				echo $this->Form->input('Sponsor.name', array('label' => 'Nome:'));
 				echo $this->Form->input('Sponsor.phone1', array('label' => 'Telefone:', 'id' => 'phone1'));
 				echo $this->Form->input('Sponsor.phone2', array('label' => 'Celular: ', 'id'=>'phone2'));
-				echo $this->Form->input('Sponsor.email', array('label' => 'Email:'));
+				echo $this->Form->input('Sponsor.email', array('type' => 'email','label' => 'Email:'));
 			?>
 		</fieldset>
 
@@ -49,7 +49,7 @@
 				echo $this->Form->input('Financial.name', array('label' => 'Nome:'));
 				echo $this->Form->input('Financial.phone1', array('label' => 'Telefone:', 'id' => 'phone1'));
 				echo $this->Form->input('Financial.phone2', array('label' => 'Celular: ', 'id'=>'phone2'));
-				echo $this->Form->input('Financial.email', array('label' => 'Email:'));
+				echo $this->Form->input('Financial.email', array('type' => 'email','label' => 'Email:'));
 			?>
 		</fieldset>
 
@@ -59,7 +59,7 @@
 				echo $this->Form->input('Sepg.name', array('label' => 'Nome:'));
 				echo $this->Form->input('Sepg.phone1', array('label' => 'Telefone:', 'id' => 'phone1'));
 				echo $this->Form->input('Sepg.phone2', array('label' => 'Celular: ', 'id'=>'phone2'));
-				echo $this->Form->input('Sepg.email', array('label' => 'Email:'));
+				echo $this->Form->input('Sepg.email', array('type' => 'email','label' => 'Email:'));
 			?>
 		</fieldset>
 	

@@ -25,19 +25,19 @@
             <fieldset id="Dados_projeto_pai">
 		<?php //Se for um consultor logado, o apontamento automaticamente é no nome dele, se for admin, aparecerá uma lista de consultores
 		if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-			echo $this->Form->input('Entry.consultant_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor: ', 'id'=>'actvID'));
+			echo $this->Form->input('Entry.consultant_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor: ', 'id'=>'actvID','required'=>'required'));
 		} else {
 			echo 'Consultor logado: ', $nome_consultor_logado;
 			echo $this->Form->input('Entry.consultant_id',array('type'=>'text','default'=>$id_consultor_logado, 'type'=>'hidden'));                                  
 		}
 		?><br>							                
-                <?php echo $this->Form->input('Entry.date', array('type'=>'text','label' => 'Data: ', 'id'=>'datepicker')); ?><br>
+                <?php echo $this->Form->input('Entry.date', array('type'=>'text','label' => 'Data: ', 'id'=>'datepicker','required'=>'required')); ?><br>
                 <?php echo $this->Form->input('Entry.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
             </fieldset>
             <fieldset id="Dados_projeto_pai">
-				<?php echo $this->Form->input('Entry.activity_id', array('options' => $list_activities,'empty' => 'Selecione', 'type'=>'select','label' => 'Projeto/Atividade: ', 'id'=>'actvID')); ?><br>
+				<?php echo $this->Form->input('Entry.activity_id', array('options' => $list_activities,'empty' => 'Selecione', 'type'=>'select','label' => 'Projeto/Atividade: ', 'id'=>'actvID','required'=>'required')); ?><br>
 				<?php echo $this->Form->input('Entry.type_consulting', array('options' => array("A"=>"A","B"=>"B", "C"=>"C"),'label' => 'Tipo de consultoria: ', 'id'=>'entryType')); ?> <br>
-				<?php echo $this->Form->input('Entry.type', array('options' => array("Individual" => "Individual", "Grupo" => "Grupo"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Tipo: ', 'id'=>'actvStatus')); ?><br>
+				<?php echo $this->Form->input('Entry.type', array('options' => array("Individual" => "Individual", "Grupo" => "Grupo"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Tipo: ', 'id'=>'actvStatus', 'required' => 'required')); ?><br>
                 <?php echo $this->Form->input('Entry.hours_worked', array('type'=>'text', 'label' => 'Horas Trabalhadas: ','required'=>'required', 'id'=>'entryHourWorked')); ?>
 
 				</fieldset>

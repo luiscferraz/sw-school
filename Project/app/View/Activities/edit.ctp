@@ -39,3 +39,12 @@
         
             <?php echo $this->Form->end('Salvar Edição'); ?>
 
+<script type="text/javascript">
+//Remover status indevidos
+    var status = $("#actvStatus").val();
+    if (status == 'Em desenvolvimento') {
+        $("#actvStatus option[value='Planejada']").remove();
+    }
+
+
+</script>
