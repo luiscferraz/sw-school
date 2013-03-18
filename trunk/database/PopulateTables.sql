@@ -106,7 +106,19 @@ INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `date`, `obs
 (25, '15:00:00', '17:00:00', '28/03/2013', 'Area de pesquisa', 'Area de pesquisa', 'Planejada', 11, 15, 12, NULL, NULL, 0),
 (26, '14:00:00', '17:00:00', '29/03/2013', 'Verificacao de Erros do sistema', 'Verificacao de Erros do sistema', 'Planejada', 11, 6, 8, NULL, NULL, 0),
 (27, '09:00:00', '11:00:00', '03/04/2013', 'Edição de relatorios', 'Edicao de Relatorios', 'Planejada', 12, 9, 7, 10, NULL, 0),
-(28, '09:00:00', '11:30:00', '09/04/2013', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 15, 2, 15, NULL, NULL, 0);
+(28, '09:00:00', '11:30:00', '09/04/2013', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 15, 2, 15, NULL, NULL, 0),
+(29, '10:00:00', '16:00:00', '10/04/2013', 'Gerar recibo de compra', 'Gerar Recibo de Compra', 'Planejada', 5, 9, 7, 10, NULL, 0),
+(30, '14:00:00', '18:00:00', '10/04/2013', 'Modelagem de dados', 'Modelagem de dados', 'Planejada', 16, 4, 16, 10, NULL, 0),
+(31, '08:00:00', '12:00:00', '12/04/2013', 'Validação e verificação de modelos', 'Validação de modelos', 'Planejada', 20, 8, 4, 1, 9, 0),
+(32, '13:00:00', '15:00:00', '18/04/2013', 'Estudo e levantamento de Requisitos', 'Levantamento de Requisitos', 'Planejada', 21, 11, 2, 6, NULL, 0),
+(33, '08:00:00', '11:00:00', '26/04/2013', 'Criação de tabelas no banco de dados', 'Criação de tabelas no banco de dados', 'Planejada', 19, 13, 14, 15, NULL, 0),
+(34, '11:00:00', '12:00:00', '29/04/2013', 'Reestruturação de Layout', 'Reestruturação de Layout', 'Planejada', 18, 12, 6, 8, NULL, 0),
+(35, '15:00:00', '18:00:00', '01/05/2013', 'Edição de menu', 'Edição de menu', 'Planejada', 21, 9, 7, NULL, NULL, 0),
+(36, '12:00:00', '16:00:00', '10/05/2013', 'Criacao de tela inicial', 'Criacao de tela inicial', 'Em desenvolvimento', 4, 9, NULL, NULL, NULL, 0),
+(37, '10:00:00', '12:00:00', '20/05/2013', 'Definicao de arquitetura', 'Definicao de arquitetura', 'Planejada', 7, 12, 11, 10, NULL, 0),
+(38, '09:00:00', '10:00:00', '30/05/2013', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 11, 1, 3, 4, NULL, 0),
+(39, '10:00:00', '14:00:00', '11/06/2013', 'Teste', 'Teste', 'Planejada', 12, 15, 1, NULL, NULL, 0),
+(40, '14:00:00', '18:00:00', '11/06/2013', 'Teste', 'Teste', 'Planejada', 9, 15, 1, NULL, NULL, 0);
 
 INSERT INTO `swsdb`.`entries` (`id`, `date`, `type_consulting`, `type`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approved`, `removed`) VALUES
 (1, '10/01/2013', 'A', 'Individual', '10:00:00', 'A qualidade estava excelente', 11, 1, 0, 0),
