@@ -35,8 +35,9 @@
 			<td class="status"><?php echo $activity['Activity']['status']; ?></td>
 			<td class="data"><?php echo $activity['Activity']['date']; ?></td>
 
-			<div class="actions">
+			
 				<td>
+					<div class="actions">
 					<?php echo $this->Html->link(
 					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'))?>
 
@@ -61,9 +62,9 @@
 					
 					<!--<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input> -->
 
-
+					</div>
 				</td>
-			</div>
+			
 		</tr>
 		<?php } ?>
 	</table>

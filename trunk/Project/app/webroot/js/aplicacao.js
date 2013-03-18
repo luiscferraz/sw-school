@@ -196,3 +196,36 @@ function SomarHorasGrupoProjeto(){
 function anularConsultant(obt){
 	$(obt).attr('id')
 }
+
+
+
+
+
+
+//Funções para Atividades.
+
+// jQuery(document).ready(function($) {
+// 	var date = new Date();
+// 	//Hora final não pode ser menor que a hora inicial.
+// 	$('#actvEndHour').blur(function(){
+// 		var start = $('#actvStartHour').val();
+// 		var end = $('#actvEndHour').val();
+// 		if (start >= end ) {
+// 			 $('#actvStartHour').val(' ') 
+// 			 $('#actvEndHour').val(' ');
+// 		}
+// 	});
+
+// 	//Se a atividade for 'Em desenvolvimento'  a data não pode ser depois do dia do cadastramento.
+// 	$('#ActivitiesAddForm input').blur(function(){
+// 		var status = $('#actvStatus').val();
+// 		var datenow =  new Date();
+// 		var datepicker = $('#datepicker').val();
+// 		datenow.setFullYear( datepicker.substr(6,4), datepicker.substr(3,2), datepicker.substr(0,2));
+		
+// 		if( date > datenow) {
+// 			alert('er');
+// 		}
+
+// 	});
+// });
