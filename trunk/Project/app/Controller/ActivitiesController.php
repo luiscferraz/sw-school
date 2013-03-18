@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
  class ActivitiesController extends AppController{
  	public $helpers = array ('Html','Form','Js'=>array('Jquery'));
@@ -59,7 +59,6 @@
 	 }
 	 
 	public function verifica($data) {
-		print_r($data) ;
 		$ctr = 0;
 		$strerro = '';
 		//Hora final não pode ser menor que a hora inicial.

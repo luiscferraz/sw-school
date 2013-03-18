@@ -12,7 +12,7 @@
 						<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor: ','required'=>'required', 'value'=>'#000000','id'=>'acronym_color','onblur'=>'checkColor(this)')); ?>
 						<?php echo $this->Form->input('Consultant.phone1', array('label' => 'Telefone: ', 'id'=>'phone1')); ?>
 						<?php echo $this->Form->input('Consultant.phone2', array('label' => 'Celular: ', 'id'=>'phone2')); ?>
-						<?php echo $this->Form->input('Consultant.email', array('label' => 'E-mail: ','required'=>'required', 'id'=>'email')); ?>					
+						<?php echo $this->Form->input('Consultant.email', array('type' => 'email','label' => 'E-mail: ', 'id'=>'email')); ?>					
 				</fieldset>
 			</div>
 			<div class="right">
