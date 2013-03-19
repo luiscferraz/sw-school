@@ -197,18 +197,89 @@
  		$this->set('hours_B_group', $hours_B_group);
  		$this->set('hours_C_group', $hours_C_group);
 
+ 		$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, activities.description AS activity_description,activities.date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id AND projects.id = '.$idProject.' ORDER BY consultants.id');
+ 		$this->set('hours_per_date', $hours_per_date);
+
 		$this -> set('filters', true);
 	}
-	public function ReportsDate($idProject,$dateInit = NULL, $dateEnd = NULL){
+	public function ReportsDate($idProject, $dateInit, $dateEnd){
+
+		$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, activities.description AS activity_description,activities.date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id AND projects.id = '.$idProject.' ORDER BY consultants.id');
+		$dateInit_comparison = substr($dateInit, 6, 4).substr($dateInit, 3, 2).substr($dateInit, 0, 2);
+		$dateEnd_comparison = substr($dateEnd, 6, 4).substr($dateEnd, 3, 2).substr($dateEnd, 0, 2);
 		if ($dateInit != NULL and $dateEnd != NULL) {
- 			$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, projects.description AS projects_description,activities.date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id ORDER BY consultants.id');
+			$new_list_hours = array();
+			$id = $hours_per_date[0]['consultants']['id'];
+			$sum_per_consultant = array();
+			$sum_per_date = array();
+			$sum_all = 0;
+			$month_init = (int)substr($dateInit, 3, 2);
+			$year_init = (int)substr($dateInit, 6, 4);
+			$month_end = (int)substr($dateEnd, 3, 2);
+			$year_end = (int)substr($dateEnd, 6, 4);
+			$month_year = array();
+			$year = $year_init;
+			$month = $month_init;
+			while ($year <= $year_end) {
+				if ($year == $year_end) {
+					while ($month <= $month_end) {
+						$month_year[] = $year.'-'.$month;
+						$month += 1;
+					}
+					$month = 1;
+				}
+				else{
+					while ($month <= 12) {
+						$month_year[] = $year.'-'.$month;
+						$month += 1;
+					}
+					$month = 1;
+				}
+				$year += 1;
+			}
+ 			foreach ($hours_per_date as $value) {
+ 				$new_id = $value['consultants']['id'];
+ 				$activities_date_comparison = substr($value['activities']['date'], 6, 4).substr($value['activities']['date'], 3, 2).substr($value['activities']['date'], 0, 2);
+ 				if (($activities_date_comparison >= $dateInit_comparison) and ($activities_date_comparison <= $dateEnd_comparison)){
+ 					$new_list_hours[$value['consultants']['id']] = $value;
+ 					if(array_key_exists($sum_per_date, $new_id)){	
+ 						if (array_key_exists($sum_per_date[$new_id], substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2))) {
+ 							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2)] += $value['entries']['hours_worked'];
+ 						}
+ 						else{
+ 							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2)] = $value['entries']['hours_worked'];
+ 						}
+ 					}
+ 					else{
+ 						$sum_per_date[$new_id] = array();;
+ 						$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2)] = $value['entries']['hours_worked'];
+ 					}
+
+ 					if (count($sum_per_consultant) == 0) {
+ 						$sum_per_consultant[$id] = $value['entries']['hours_worked'];
+ 					}
+ 					elseif ($id == $new_id) {
+ 						$sum_per_consultant[$id] += $value['entries']['hours_worked'];
+ 					}
+ 					else{
+ 						$sum_per_consultant[$new_id] = $value['entries']['hours_worked'];
+ 						$id = $new_id;
+ 					}
+ 					$sum_all += $value['entries']['hours_worked'];
+ 				}
+ 			}
  		}
- 		elseif ($dateEnd == NULL) {
+ 		$this->set('sum_per_consultant', $sum_per_consultant);
+ 		$this->set('sum_per_date', $sum_per_date);
+ 		$this->set('sum_all', $sum_all);
+ 		$this->set('month_year', $month_year);
+ 		$this->set('list_consultant', $new_list_hours);
+ 		//elseif ($dateEnd == NULL) {
  			
- 		}
- 		elseif ($dateInit == NULL) {
+ 		//}
+ 		//elseif ($dateInit == NULL) {
  			
- 		}
+ 		//}
 		$this -> set('filters', true);
 	}
 	
