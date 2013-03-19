@@ -16,29 +16,35 @@
 		<option value="categoria">Categoria</option>
 		<option value="projeto">Projeto</option>
 	</select>
-<?php print_r($consulting_A);
-echo "<br><br><br><br>";?>
+<!--<?php print_r($consulting_A);
+echo "<br><br><br><br>";?>-->
 
-<!--  	<?php print_r($consulting_B);
-echo "<br><br><br><br>";?>
-	<?php print_r($consulting_C);
+<!-- 	<?php print_r($consulting_B);
+echo "<br><br><br><br>";?>-->
+<!--	<?php print_r($consulting_C);
 echo "<br><br><br><br>";?> -->
 
-<?php print_r($hours_A_ind);
+<!--<?php print_r($hours_A_ind);
 echo "<br><br><br><br>";?>
 		<?php print_r($hours_A_group);
-echo "<br><br><br><br>";?>
-<!-- 	<?php print_r($hours_B_ind);
+echo "<br><br><br><br>";?>-->
+
+<!--	<?php print_r($hours_B_ind);
 echo "<br><br><br><br>";?>
 	<?php print_r($hours_B_group);
-echo "<br><br><br><br>";?>
-	<?php print_r($hours_C_ind);
+echo "<br><br><br><br>";?>-->
+
+<!--	<?php print_r($hours_C_ind);
 echo "<br><br><br><br>";?>
 	<?php print_r($hours_C_group);
 echo "<br><br><br><br>";?>
-<?php } ?> --> 
+<?php } ?>-->
 
 <!-- Zona de teste -->
+
+<!-- Tabela A -->
+<b>tabela A</b>
+<br><br>
 <?php
 		echo "Horas contratadas em grupo: ";
 		echo $consulting_A[0]['projects']['a_hours_group'];
@@ -73,23 +79,151 @@ echo "<br><br><br><br>";?>
         echo "<br><br>";
 
     }
-    	echo "Horas Realizadas em Grupo: ";
-    	echo $consulting_A['projects']['hours_a_performed_group'];
-    	echo "<br><br>";
-    	echo "Saldo de Horas em Grupo: ";
-    	echo $consulting_A['projects']['balance_hours_a_group'];
+    	$horasAG = $hours_A_group[0];
+    	$horasAI = $hours_A_ind[0];
 
     	echo "Horas Realizadas em Grupo: ";
-    	echo $consulting_A['projects']['hours_a_performed_group'];
-    	echo "<br><br>";
-    	echo "Saldo de Horas Individuais: ";
-    	echo $consulting_A['projects']['balance_hours_a_individual'];
+    	echo $horasAG['0']['hours_a_performed_group'];
     	echo "<br><br>";
     	
-    
+    	echo "Saldo de Horas em Grupo: ";
+    	echo $horasAG['0']['balance_hours_a_group'];
+    	echo "<br><br>";
 
+    	echo "<br><br>";
+    	echo "Horas Realizadas individuais: ";
+    	echo $horasAI['0']['hours_a_performed_individual'];
+    	echo "<br><br>";
 
+    	echo "Saldo de Horas Individuais: ";
+    	echo $horasAI['0']['balance_hours_a_individual'];
+    	echo "<br><br>";
+    	
 ?>
+<!-- Fim Tabela A -->
+
+<!-- Tabela B -->
+<b>tabela B</b>
+<br><br>
+<?php
+		echo "Horas contratadas em grupo: ";
+		echo $consulting_B[0]['projects']['b_hours_group'];
+        echo "<br>";
+        echo "Horas contratadas individuais: ";
+        echo $consulting_B[0]['projects']['b_hours_individual'];
+        echo "<br>";
+
+    for ($nb=0; $nb<=count($consulting_B)-1; $nb++){
+        $tb = ($consulting_B[$nb]);
+        echo "<br><br>";
+     	
+        // print_r($ta);
+        echo "Id da atividade: ";
+        echo $tb['activities']['id'];
+        echo "<br>";
+        echo "Atividade: ";
+        echo $tb['activities']['description'];
+        echo "<br>";
+        echo "Consultor: ";
+        echo $tb['consultants']['name'];
+        echo "<br>";
+        echo "Data: ";
+        echo $tb['activities']['date'];
+        echo "<br>";
+        echo "Tipo: ";
+        echo $tb['entries']['type'];
+        echo "<br>";
+        echo "Qtd de Horas: ";
+        echo $tb['entries']['hours_worked'];
+        echo "<br>";
+        echo "<br><br>";
+
+    }
+    	$horasBG = $hours_B_group[0];
+    	$horasBI = $hours_B_ind[0];
+
+    	echo "Horas Realizadas em Grupo: ";
+    	echo $horasBG['0']['hours_b_performed_group'];
+    	echo "<br><br>";
+    	
+    	echo "Saldo de Horas em Grupo: ";
+    	echo $horasBG['0']['balance_hours_b_group'];
+    	echo "<br><br>";
+
+    	echo "<br><br>";
+    	echo "Horas Realizadas individuais: ";
+    	echo $horasBI['0']['hours_b_performed_individual'];
+    	echo "<br><br>";
+
+    	echo "Saldo de Horas Individuais: ";
+    	echo $horasBI['0']['balance_hours_b_individual'];
+    	echo "<br><br>";
+    	
+?>
+
+<!-- Fim Tabela B -->
+
+<!-- Tabela C -->
+<b>tabela C</b>
+<br><br>
+<?php
+		echo "Horas contratadas em grupo: ";
+		echo $consulting_C[0]['projects']['b_hours_group'];
+        echo "<br>";
+        echo "Horas contratadas individuais: ";
+        echo $consulting_C[0]['projects']['b_hours_individual'];
+        echo "<br>";
+
+    for ($nc=0; $nc<=count($consulting_C)-1; $nc++){
+        $tc = ($consulting_C[$nc]);
+        echo "<br><br>";
+     	
+        // print_r($ta);
+        echo "Id da atividade: ";
+        echo $tc['activities']['id'];
+        echo "<br>";
+        echo "Atividade: ";
+        echo $tc['activities']['description'];
+        echo "<br>";
+        echo "Consultor: ";
+        echo $tc['consultants']['name'];
+        echo "<br>";
+        echo "Data: ";
+        echo $tc['activities']['date'];
+        echo "<br>";
+        echo "Tipo: ";
+        echo $tc['entries']['type'];
+        echo "<br>";
+        echo "Qtd de Horas: ";
+        echo $tc['entries']['hours_worked'];
+        echo "<br>";
+        echo "<br><br>";
+
+    }
+    	$horasCG = $hours_C_group[0];
+    	$horasCI = $hours_C_ind[0];
+
+    	echo "Horas Realizadas em Grupo: ";
+    	echo $horasCG['0']['hours_c_performed_group'];
+    	echo "<br><br>";
+    	
+    	echo "Saldo de Horas em Grupo: ";
+    	echo $horasCG['0']['balance_hours_c_group'];
+    	echo "<br><br>";
+
+    	echo "<br><br>";
+    	echo "Horas Realizadas individuais: ";
+    	echo $horasCI['0']['hours_c_performed_individual'];
+    	echo "<br><br>";
+
+    	echo "Saldo de Horas Individuais: ";
+    	echo $horasCI['0']['balance_hours_c_individual'];
+    	echo "<br><br>";
+    	
+?>
+
+
+<!-- Fim Tabela C -->
 
 <!-- FIm da zona de teste -->
 
@@ -101,8 +235,9 @@ echo "<br><br><br><br>";?>
         $ta = ($consulting_A[$na]);
         echo "<br><br><br><br>";
      	
-        // print_r($ta);
+        // echo ($ta);
         
+        // echo "<br><br><br><br>";
 
     }
 ?>
@@ -110,11 +245,11 @@ echo "<br><br><br><br>";?>
 	<tr>
 		<th colspan="3" rowspan="2" scope="col">Consultoria A</th>
 		<th colspan="3" scope="col">Horas contratadas em grupo</th>
-		<th width="7%" scope="col"><?php echo $ta['projects']['a_hours_group'];?></th>
+		<th width="7%" scope="col"><?php echo $consulting_A[0]['projects']['a_hours_group'];?></th>
 	</tr>
 	<tr>
 		<td colspan="3">Horas contratadas Individual</td>
-		<td><?php echo $ta['projects']['a_hours_individual'];?></td>
+		<td><?php echo $consulting_A[0]['projects']['a_hours_individual'];?></td>
 	</tr>
 	<tr>
 		<th width="5%" scope="row">ID</th>
@@ -124,6 +259,7 @@ echo "<br><br><br><br>";?>
 		<td width="10%">Tipo</td>
 		<td>Qt Hs</td>
 	</tr>
+
 	<tr>
 		<th scope="row"><?php echo $ta['activities']['id'] ?></th>
 		<td colspan="2"><?php echo $ta['activities']['description'] ?></td>
@@ -132,6 +268,7 @@ echo "<br><br><br><br>";?>
 		<td><?php echo $ta['entries']['type'] ?></td>
 		<td><?php echo $ta['entries']['hours_worked'] ?></td>
 	</tr>
+
 	<tr>
 		<th colspan="2" scope="row">Saldo de Horas em Grupo</th>
 		<td width="9%"><!--<?php echo $ta['projects']['balance_hours_a_group'] ?>--></td>
