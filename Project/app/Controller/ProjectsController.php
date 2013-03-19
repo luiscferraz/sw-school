@@ -242,8 +242,8 @@
  				$activities_date_comparison = substr($value['activities']['date'], 6, 4).substr($value['activities']['date'], 3, 2).substr($value['activities']['date'], 0, 2);
  				if (($activities_date_comparison >= $dateInit_comparison) and ($activities_date_comparison <= $dateEnd_comparison)){
  					$new_list_hours[$value['consultants']['id']] = $value;
- 					if(array_key_exists($sum_per_date, $new_id)){	
- 						if (array_key_exists($sum_per_date[$new_id], substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2))) {
+ 					if(array_key_exists( $new_id, $sum_per_date )){	
+ 						if (array_key_exists( substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2), $sum_per_date[$new_id] )) {
  							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2)] += $value['entries']['hours_worked'];
  						}
  						else{
@@ -274,12 +274,7 @@
  		$this->set('sum_all', $sum_all);
  		$this->set('month_year', $month_year);
  		$this->set('list_consultant', $new_list_hours);
- 		//elseif ($dateEnd == NULL) {
- 			
- 		//}
- 		//elseif ($dateInit == NULL) {
- 			
- 		//}
+ 		
 		$this -> set('filters', true);
 	}
 	
