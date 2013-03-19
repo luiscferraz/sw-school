@@ -190,8 +190,12 @@ foreach ($projectsPais as $project) {
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.1';
 			echo buscar_atividade($idM);
+			
+			//$cor = (string)buscar_cor($idM);
+			
 			echo '</td >';
 			echo '<td align=center bgcolor="DarkSeaGreen1">';
+			//echo '<td align=center bgcolor=cor>'; 
 			//valor da tarde do dia
 			$idT = (string)$project['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.1';
 			echo buscar_atividade($idT);		
