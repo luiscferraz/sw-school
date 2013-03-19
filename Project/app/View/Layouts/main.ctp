@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<?php echo $this->Html->css('reset'); ?>		
 		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>
 		<?php echo $this->Html->css('jquery.weekcalendar'); ?>
@@ -15,9 +16,14 @@
 	    
 	</head>
 <body> 
-
+<?php
+echo '<div id="bt-cadastrar-atividade">';
+echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
+echo '</div>';
+?>
 <h1>Agenda</h1>
 <?php include 'includes/menu.php'; ?>
+
 <div id = 'tabela'>
 <table border = 2 align=center>
 
@@ -186,20 +192,27 @@ foreach ($projectsPais as $project) {
 			echo '&nbsp;&nbsp;';		
 			echo '</td>';		
 		} else {
-			echo '<td align=center bgcolor="DarkSeaGreen1">';
 			//valor da manha do dia
-			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.1';
-			echo buscar_atividade($idM);
+			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
+			if (array_key_exists($idM, $arrayConsultor1)){
+				echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'">';
+				echo $arrayConsultor1[$idM][0];
+				echo '</td >';
+			}
+			else {
+				echo '<td align=center bgcolor="White">';		
+				echo '</td >';}
 			
-			//$cor = (string)buscar_cor($idM);
-			
-			echo '</td >';
-			echo '<td align=center bgcolor="DarkSeaGreen1">';
-			//echo '<td align=center bgcolor=cor>'; 
 			//valor da tarde do dia
-			$idT = (string)$project['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.1';
-			echo buscar_atividade($idT);		
-			echo '</td>';
+			$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
+			if (array_key_exists($idT, $arrayConsultor1)){
+				echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'">';
+				echo $arrayConsultor1[$idT][0];
+				echo '</td >';
+			}
+			else {
+				echo '<td align=center bgcolor="White">';		
+				echo '</td >';}
 		}	
 	}
 	echo '</tr>';
@@ -210,18 +223,32 @@ foreach ($projectsPais as $project) {
 	for ($dia = 0; $dia <= 180; $dia++) {	
 		$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 		if (in_array((date('D',$dataFinal)),$final_de_semana)){
+		//se for fim de semana fica cinza
 			echo '<td colspan="2" bgcolor="gray" align=center>';
 			echo '&nbsp;&nbsp;';		
-			echo '</td>';
+			echo '</td>';		
 		} else {
-			echo '<td align=center bgcolor="LightCyan">';
-			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.2';
-			echo buscar_atividade($idM);			
-			echo '</td >';
-			echo '<td align=center bgcolor="LightCyan">';
-			$idT = (string)$project['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.2';
-			echo buscar_atividade($idT);			
-			echo '</td>';
+			//valor da manha do dia
+			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
+			if (array_key_exists($idM, $arrayConsultor2)){
+				echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'">';
+				echo $arrayConsultor2[$idM][0];
+				echo '</td >';
+			}
+			else {
+				echo '<td align=center bgcolor="#E0EEE0">';		
+				echo '</td >';}
+			
+			//valor da tarde do dia
+			$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
+			if (array_key_exists($idT, $arrayConsultor2)){
+				echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'">';
+				echo $arrayConsultor2[$idT][0];
+				echo '</td >';
+			}
+			else {
+				echo '<td align=center bgcolor="#E0EEE0">';		
+				echo '</td >';}
 		}	
 	}
 	echo '</tr>';
@@ -229,43 +256,71 @@ foreach ($projectsPais as $project) {
 	//Linha do consultor 3 dos projetos sem filhos
 	echo '<tr>';
 	$final_de_semana = array('Sat','Sun');
-	for ($dia = 0; $dia <= 180; $dia++) {
+	for ($dia = 0; $dia <= 180; $dia++) {	
 		$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 		if (in_array((date('D',$dataFinal)),$final_de_semana)){
+		//se for fim de semana fica cinza
 			echo '<td colspan="2" bgcolor="gray" align=center>';
 			echo '&nbsp;&nbsp;';		
-			echo '</td>';
+			echo '</td>';		
 		} else {
-			echo '<td align=center bgcolor="LightYellow">';
-			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.3';
-			echo buscar_atividade($idM);			
-			echo '</td >';
-			echo '<td align=center bgcolor="LightYellow">';
-			$idT = (string)$project['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.3';
-			echo buscar_atividade($idT);			
-			echo '</td>';
+			//valor da manha do dia
+			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
+			if (array_key_exists($idM, $arrayConsultor3)){
+				echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'">';
+				echo $arrayConsultor3[$idM][0];
+				echo '</td >';
+			}
+			else {
+				echo '<td align=center bgcolor="White">';		
+				echo '</td >';}
+			
+			//valor da tarde do dia
+			$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
+			if (array_key_exists($idT, $arrayConsultor3)){
+				echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'">';
+				echo $arrayConsultor3[$idT][0];
+				echo '</td >';
+			}
+			else {
+				echo '<td align=center bgcolor="White">';		
+				echo '</td >';}
 		}	
 	}
-	echo '</tr>';	
+	echo '</tr>';
 	
 	//Linha do consultor 4 dos projetos sem filhos
 	echo '<tr>';
 	$final_de_semana = array('Sat','Sun');
-	for ($dia = 0; $dia <= 180; $dia++) {
+	for ($dia = 0; $dia <= 180; $dia++) {	
 		$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 		if (in_array((date('D',$dataFinal)),$final_de_semana)){
+		//se for fim de semana fica cinza
 			echo '<td colspan="2" bgcolor="gray" align=center>';
 			echo '&nbsp;&nbsp;';		
-			echo '</td>';
+			echo '</td>';		
 		} else {
-			echo '<td align=center bgcolor="MistyRose">';
-			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.4';
-			echo buscar_atividade($idM);			
-			echo '</td >';
-			echo '<td align=center bgcolor="MistyRose">';
-			$idT = (string)$project['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.4';
-			echo buscar_atividade($idT);			
-			echo '</td>';
+			//valor da manha do dia
+			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
+			if (array_key_exists($idM, $arrayConsultor4)){
+				echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'">';
+				echo $arrayConsultor4[$idM][0];
+				echo '</td >';
+			}
+			else {
+				echo '<td align=center bgcolor="White">';		
+				echo '</td >';}
+			
+			//valor da tarde do dia
+			$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
+			if (array_key_exists($idT, $arrayConsultor4)){
+				echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'">';
+				echo $arrayConsultor4[$idT][0];
+				echo '</td >';
+			}
+			else {
+				echo '<td align=center bgcolor="White">';		
+				echo '</td >';}
 		}	
 	}
 	echo '</tr>';
@@ -305,18 +360,32 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= 180; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 						if (in_array((date('D',$dataFinal)),$final_de_semana)){
+						//se for fim de semana fica cinza
 							echo '<td colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
-							echo '</td>';
+							echo '</td>';		
 						} else {
-							echo '<td align=center bgcolor="DarkSeaGreen1">';
-							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.1';
-							echo buscar_atividade($idM);			
-							echo '</td >';
-							echo '<td align=center bgcolor="DarkSeaGreen1">';
-							$idT = (string)$projectf['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.1';
-							echo buscar_atividade($idT);			
-							echo '</td>';
+							//valor da manha do dia
+							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
+							if (array_key_exists($idM, $arrayConsultor1)){
+								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'">';
+								echo $arrayConsultor1[$idM][0];
+								echo '</td >';
+							}
+							else {
+								echo '<td align=center bgcolor="White">';		
+								echo '</td >';}
+							
+							//valor da tarde do dia
+							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
+							if (array_key_exists($idT, $arrayConsultor1)){
+								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'">';
+								echo $arrayConsultor1[$idT][0];
+								echo '</td >';
+							}
+							else {
+								echo '<td align=center bgcolor="White">';		
+								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
@@ -327,18 +396,32 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= 180; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 						if (in_array((date('D',$dataFinal)),$final_de_semana)){
+						//se for fim de semana fica cinza
 							echo '<td colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
-							echo '</td>';
+							echo '</td>';		
 						} else {
-							echo '<td align=center bgcolor="LightCyan">';
-							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.2';
-							echo buscar_atividade($idM);			
-							echo '</td >';
-							echo '<td align=center bgcolor="LightCyan">';
-							$idT = (string)$projectf['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.2';
-							echo buscar_atividade($idT);			
-							echo '</td>';
+							//valor da manha do dia
+							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
+							if (array_key_exists($idM, $arrayConsultor2)){
+								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'">';
+								echo $arrayConsultor2[$idM][0];
+								echo '</td >';
+							}
+							else {
+								echo '<td align=center bgcolor="#E0EEE0">';		
+								echo '</td >';}
+							
+							//valor da tarde do dia
+							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
+							if (array_key_exists($idT, $arrayConsultor2)){
+								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'">';
+								echo $arrayConsultor2[$idT][0];
+								echo '</td >';
+							}
+							else {
+								echo '<td align=center bgcolor="#E0EEE0">';		
+								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
@@ -346,43 +429,71 @@ foreach ($projectsPais as $project) {
 					//Linha do consultor 3 dos projetos com filhos e sem netos
 					echo '<tr>';
 					$final_de_semana = array('Sat','Sun');
-					for ($dia = 0; $dia <= 180; $dia++) {
+					for ($dia = 0; $dia <= 180; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 						if (in_array((date('D',$dataFinal)),$final_de_semana)){
+						//se for fim de semana fica cinza
 							echo '<td colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
-							echo '</td>';
+							echo '</td>';		
 						} else {
-							echo '<td align=center bgcolor="LightYellow">';
-							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.3';
-							echo buscar_atividade($idM);			
-							echo '</td >';
-							echo '<td align=center bgcolor="LightYellow">';
-							$idT = (string)$projectf['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.3';
-							echo buscar_atividade($idT);			
-							echo '</td>';
+							//valor da manha do dia
+							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
+							if (array_key_exists($idM, $arrayConsultor3)){
+								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'">';
+								echo $arrayConsultor3[$idM][0];
+								echo '</td >';
+							}
+							else {
+								echo '<td align=center bgcolor="White">';		
+								echo '</td >';}
+							
+							//valor da tarde do dia
+							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
+							if (array_key_exists($idT, $arrayConsultor3)){
+								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'">';
+								echo $arrayConsultor3[$idT][0];
+								echo '</td >';
+							}
+							else {
+								echo '<td align=center bgcolor="White">';		
+								echo '</td >';}
 						}	
 					}
-					echo '</tr>';	
+					echo '</tr>';
 	
 					//Linha do consultor 4 dos projetos com filhos e sem netos
 					echo '<tr>';
 					$final_de_semana = array('Sat','Sun');
-					for ($dia = 0; $dia <= 180; $dia++) {
+					for ($dia = 0; $dia <= 180; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 						if (in_array((date('D',$dataFinal)),$final_de_semana)){
+						//se for fim de semana fica cinza
 							echo '<td colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
-							echo '</td>';
+							echo '</td>';		
 						} else {
-							echo '<td align=center bgcolor="MistyRose">';
-							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.4';
-							echo buscar_atividade($idM);			
-							echo '</td >';
-							echo '<td align=center bgcolor="MistyRose">';
-							$idT = (string)$projectf['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.4';
-							echo buscar_atividade($idT);			
-							echo '</td>';
+							//valor da manha do dia
+							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
+							if (array_key_exists($idM, $arrayConsultor4)){
+								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'">';
+								echo $arrayConsultor4[$idM][0];
+								echo '</td >';
+							}
+							else {
+								echo '<td align=center bgcolor="White">';		
+								echo '</td >';}
+							
+							//valor da tarde do dia
+							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
+							if (array_key_exists($idT, $arrayConsultor4)){
+								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'">';
+								echo $arrayConsultor4[$idT][0];
+								echo '</td >';
+							}
+							else {
+								echo '<td align=center bgcolor="White">';		
+								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
@@ -401,18 +512,32 @@ foreach ($projectsPais as $project) {
 							for ($dia = 0; $dia <= 180; $dia++) {	
 								$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 								if (in_array((date('D',$dataFinal)),$final_de_semana)){
+								//se for fim de semana fica cinza
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
-									echo '</td>';
+									echo '</td>';		
 								} else {
-									echo '<td align=center bgcolor="DarkSeaGreen1">';
-									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.1';
-									echo buscar_atividade($idM);			
-									echo '</td >';
-									echo '<td align=center bgcolor="DarkSeaGreen1">';
-									$idT = (string)$projectn['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.1';
-									echo buscar_atividade($idT);			
-									echo '</td>';
+									//valor da manha do dia
+									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
+									if (array_key_exists($idM, $arrayConsultor1)){
+										echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'">';
+										echo $arrayConsultor1[$idM][0];
+										echo '</td >';
+									}
+									else {
+										echo '<td align=center bgcolor="White">';		
+										echo '</td >';}
+									
+									//valor da tarde do dia
+									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
+									if (array_key_exists($idT, $arrayConsultor1)){
+										echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'">';
+										echo $arrayConsultor1[$idT][0];
+										echo '</td >';
+									}
+									else {
+										echo '<td align=center bgcolor="White">';		
+										echo '</td >';}
 								}	
 							}
 							echo '</tr>';
@@ -423,18 +548,32 @@ foreach ($projectsPais as $project) {
 							for ($dia = 0; $dia <= 180; $dia++) {	
 								$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 								if (in_array((date('D',$dataFinal)),$final_de_semana)){
+								//se for fim de semana fica cinza
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
-									echo '</td>';
+									echo '</td>';		
 								} else {
-									echo '<td align=center bgcolor="LightCyan">';
-									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.2';
-									echo buscar_atividade($idM);			
-									echo '</td >';
-									echo '<td align=center bgcolor="LightCyan">';
-									$idT = (string)$projectn['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.2';
-									echo buscar_atividade($idT);			
-									echo '</td>';
+									//valor da manha do dia
+									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
+									if (array_key_exists($idM, $arrayConsultor2)){
+										echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'">';
+										echo $arrayConsultor2[$idM][0];
+										echo '</td >';
+									}
+									else {
+										echo '<td align=center bgcolor="#E0EEE0">';		
+										echo '</td >';}
+									
+									//valor da tarde do dia
+									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
+									if (array_key_exists($idT, $arrayConsultor2)){
+										echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'">';
+										echo $arrayConsultor2[$idT][0];
+										echo '</td >';
+									}
+									else {
+										echo '<td align=center bgcolor="#E0EEE0">';		
+										echo '</td >';}
 								}	
 							}
 							echo '</tr>';
@@ -442,43 +581,71 @@ foreach ($projectsPais as $project) {
 							//Linha do consultor 3 dos projetos com filhos e com netos
 							echo '<tr>';
 							$final_de_semana = array('Sat','Sun');
-							for ($dia = 0; $dia <= 180; $dia++) {
+							for ($dia = 0; $dia <= 180; $dia++) {	
 								$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 								if (in_array((date('D',$dataFinal)),$final_de_semana)){
+								//se for fim de semana fica cinza
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
-									echo '</td>';
+									echo '</td>';		
 								} else {
-									echo '<td align=center bgcolor="LightYellow">';
-									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.3';
-									echo buscar_atividade($idM);			
-									echo '</td >';
-									echo '<td align=center bgcolor="LightYellow">';
-									$idT = (string)$projectn['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.3';
-									echo buscar_atividade($idT);			
-									echo '</td>';
+									//valor da manha do dia
+									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
+									if (array_key_exists($idM, $arrayConsultor3)){
+										echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'">';
+										echo $arrayConsultor3[$idM][0];
+										echo '</td >';
+									}
+									else {
+										echo '<td align=center bgcolor="White">';		
+										echo '</td >';}
+									
+									//valor da tarde do dia
+									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
+									if (array_key_exists($idT, $arrayConsultor3)){
+										echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'">';
+										echo $arrayConsultor3[$idT][0];
+										echo '</td >';
+									}
+									else {
+										echo '<td align=center bgcolor="White">';		
+										echo '</td >';}
 								}	
 							}
-							echo '</tr>';	
+							echo '</tr>';
 							
 							//Linha do consultor 4 dos projetos com filhos e com netos
 							echo '<tr>';
 							$final_de_semana = array('Sat','Sun');
-							for ($dia = 0; $dia <= 180; $dia++) {
+							for ($dia = 0; $dia <= 180; $dia++) {	
 								$dataFinal = mktime(24*$dia, 0, 0, date("m"), date("d"), date("Y"));
 								if (in_array((date('D',$dataFinal)),$final_de_semana)){
+								//se for fim de semana fica cinza
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
-									echo '</td>';
+									echo '</td>';		
 								} else {
-									echo '<td align=center bgcolor="MistyRose">';
-									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/y',$dataFinal) . '.4';
-									echo buscar_atividade($idM);			
-									echo '</td >';
-									echo '<td align=center bgcolor="MistyRose">';
-									$idT = (string)$projectn['Project']['id'] . '.T.'. date('d/m/y',$dataFinal) . '.4';
-									echo buscar_atividade($idT);			
-									echo '</td>';
+									//valor da manha do dia
+									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
+									if (array_key_exists($idM, $arrayConsultor4)){
+										echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'">';
+										echo $arrayConsultor4[$idM][0];
+										echo '</td >';
+									}
+									else {
+										echo '<td align=center bgcolor="White">';		
+										echo '</td >';}
+									
+									//valor da tarde do dia
+									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
+									if (array_key_exists($idT, $arrayConsultor4)){
+										echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'">';
+										echo $arrayConsultor4[$idT][0];
+										echo '</td >';
+									}
+									else {
+										echo '<td align=center bgcolor="White">';		
+										echo '</td >';}
 								}	
 							}
 							echo '</tr>';
