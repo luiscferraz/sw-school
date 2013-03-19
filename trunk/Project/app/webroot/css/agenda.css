@@ -40,7 +40,7 @@ body {
 
 
 #Menu_Home{
-	margin-top: -94px;
+	margin-top: -137px;
 	z-index:99999;
     background-color: #010101;
     width:500px;
@@ -152,3 +152,7 @@ body {
 
 #tabela{
 margin:0px 0px 0px 80px; }
+
+#tabela_agenda{
+	width: 10%;
+}
