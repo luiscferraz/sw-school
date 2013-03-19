@@ -1,4 +1,4 @@
-<h1>PerÃ­odo</h1>
+<h1>Período</h1>
 
 <form id="form_relatori_proj" method="post" action="">
 	<input type="hiden" value="<?php echo $idproject ?>" name="report[id]" style="display:none">
@@ -19,16 +19,16 @@
 <?php print_r($consulting_A);
 echo "<br><br><br><br>";?>
 
- 	<?php print_r($consulting_B);
+<!--  	<?php print_r($consulting_B);
 echo "<br><br><br><br>";?>
 	<?php print_r($consulting_C);
-echo "<br><br><br><br>";?>
+echo "<br><br><br><br>";?> -->
 
-	<?php print_r($hours_A_ind);
+<?php print_r($hours_A_ind);
 echo "<br><br><br><br>";?>
-	<?php print_r($hours_A_group);
+		<?php print_r($hours_A_group);
 echo "<br><br><br><br>";?>
-	<?php print_r($hours_B_ind);
+<!-- 	<?php print_r($hours_B_ind);
 echo "<br><br><br><br>";?>
 	<?php print_r($hours_B_group);
 echo "<br><br><br><br>";?>
@@ -36,10 +36,60 @@ echo "<br><br><br><br>";?>
 echo "<br><br><br><br>";?>
 	<?php print_r($hours_C_group);
 echo "<br><br><br><br>";?>
-<?php } ?> 
+<?php } ?> --> 
 
 <!-- Zona de teste -->
+<?php
+		echo "Horas contratadas em grupo: ";
+		echo $consulting_A[0]['projects']['a_hours_group'];
+        echo "<br>";
+        echo "Horas contratadas individuais: ";
+        echo $consulting_A[0]['projects']['a_hours_individual'];
+        echo "<br>";
 
+    for ($na=0; $na<=count($consulting_A)-1; $na++){
+        $ta = ($consulting_A[$na]);
+        echo "<br><br>";
+     	
+        // print_r($ta);
+        echo "Id da atividade: ";
+        echo $ta['activities']['id'];
+        echo "<br>";
+        echo "Atividade: ";
+        echo $ta['activities']['description'];
+        echo "<br>";
+        echo "Consultor: ";
+        echo $ta['consultants']['name'];
+        echo "<br>";
+        echo "Data: ";
+        echo $ta['activities']['date'];
+        echo "<br>";
+        echo "Tipo: ";
+        echo $ta['entries']['type'];
+        echo "<br>";
+        echo "Qtd de Horas: ";
+        echo $ta['entries']['hours_worked'];
+        echo "<br>";
+        echo "<br><br>";
+
+    }
+    	echo "Horas Realizadas em Grupo: ";
+    	echo $consulting_A['projects']['hours_a_performed_group'];
+    	echo "<br><br>";
+    	echo "Saldo de Horas em Grupo: ";
+    	echo $consulting_A['projects']['balance_hours_a_group'];
+
+    	echo "Horas Realizadas em Grupo: ";
+    	echo $consulting_A['projects']['hours_a_performed_group'];
+    	echo "<br><br>";
+    	echo "Saldo de Horas Individuais: ";
+    	echo $consulting_A['projects']['balance_hours_a_individual'];
+    	echo "<br><br>";
+    	
+    
+
+
+?>
 
 <!-- FIm da zona de teste -->
 
@@ -84,7 +134,7 @@ echo "<br><br><br><br>";?>
 	</tr>
 	<tr>
 		<th colspan="2" scope="row">Saldo de Horas em Grupo</th>
-		<td width="9%"><?php echo $ta['projects']['balance_hours_a_group'] ?></td>
+		<td width="9%"><!--<?php echo $ta['projects']['balance_hours_a_group'] ?>--></td>
 		<td colspan="3">Horas Realizadas em Grupo</td>
 		<td>GG</td>
 	</tr>
@@ -99,10 +149,7 @@ echo "<br><br><br><br>";?>
 		<td>II</td>
 	</tr>
 </table>
-  
-
-
-
+<!-- Fim tabela Consultoria A -->
 
 
 <?php echo $this -> Html -> script ('relatorios') ?>
