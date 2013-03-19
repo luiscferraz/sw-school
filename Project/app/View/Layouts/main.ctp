@@ -16,7 +16,7 @@
 	</head>
 <body> 
 
-<h2>Agenda</h2>
+<h1>Agenda</h1>
 <?php include 'includes/menu.php'; ?>
 <div id = 'tabela'>
 <table border = 2 align=center>

@@ -40,6 +40,7 @@ body {
 
 
 #Menu_Home{
+	margin-top: -94px;
 	z-index:99999;
     background-color: #010101;
     width:500px;
