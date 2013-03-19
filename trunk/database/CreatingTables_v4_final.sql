@@ -3,7 +3,7 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=`TRADITIONAL`;
 
 DROP SCHEMA IF EXISTS `swsdb` ;
-CREATE SCHEMA IF NOT EXISTS `swsdb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+CREATE SCHEMA IF NOT EXISTS `swsdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `swsdb` ;
 
 -- -----------------------------------------------------
@@ -25,9 +25,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants` (
   UNIQUE INDEX `acronym_color_UNIQUE` (`acronym_color` ASC) ,
   UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) ,
   PRIMARY KEY (`id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_general_ci;
+ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- -----------------------------------------------------
 -- Table `swsdb`.`users`
@@ -220,9 +218,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
   `consultant4_id` INT  ,
   `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_general_ci;
+ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- -----------------------------------------------------
 -- Table `swsdb`.`attachments`
