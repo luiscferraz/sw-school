@@ -1,6 +1,6 @@
 <?php 
     foreach ($projects as $project) {        
-        $list_projects[$project['Project']['id']] =$project['Project']['name'];
+        $list_projects[$project['projects']['id']] =$project['projects']['name'];
         };                    
     if (!isset($list_projects)){
 		$list_projects['none'] = 'Nenhum Projeto Cadastrado';

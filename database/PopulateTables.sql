@@ -1,4 +1,4 @@
-INSERT INTO `swsdb`.`users` (`username`, `password`, `type`, `consultant_id`) VALUES
+﻿INSERT INTO `swsdb`.`users` (`username`, `password`, `type`, `consultant_id`) VALUES
 ('rose', 'f4465763c4eb760d104dc365a6045de47e759ed2', 'cons', 1),
 ('mia', '3b45f18e1c0a8ed4d44d886a4b5d6d438693d2fc', 'cons', 2),
 ('armand', 'ffa97a34c064fdf4dc66b6bebed164d67ac40aa6', 'cons', 3),
@@ -17,7 +17,7 @@ INSERT INTO `swsdb`.`users` (`username`, `password`, `type`, `consultant_id`) VA
 ('bruno', '06c5068db7fc9ab9260138fb3697735b97b1ffae', 'cons', 16),
 ('mariana', '1027020dd6a4e8f470bccbbac89dce2186c54133', 'rel_manager', 17),
 ('admin', 'a759fb1212ff39a9948a0d325d5638d39eb62fa3', 'admin', Null);
--- A senha é o nome do consultor
+-- A senha e o nome do consultor
 
 INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES 
 ('041.542.248-59','Rose Farrell Keller','RF','#ffbdbd','(81)5071-4315','(81)1414-1780','dictum.placerat@consequatdolorvitae.edu', 0),
@@ -45,16 +45,16 @@ INSERT INTO `swsdb`.`companies` (`cnpj`, `name`, `acronym`, `phone1`, `phone2`, 
 ('25.648.576/0001-90', 'Fiat', 'FI', '(81)4503-2771', '(81)1453-9034', '0'),
 ('53.254.327/0001-56', 'Oracle Recife', 'OR', '(81)7904-2455', '(81)8090-2310', '0');
 
-INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua Moreno', '14443', 'Morro da Conceição', 'Recife', 'PE', 'Casa', '52.280-033', '1', '0');
-INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua da Saúde', '32342', 'Macaxeira', 'Recife', 'PE', 'Casa', '52.090-513', '0', '4');
+INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua Moreno', '14443', 'Morro da Conceicao', 'Recife', 'PE', 'Casa', '52.280-033', '1', '0');
+INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua da Saude', '32342', 'Macaxeira', 'Recife', 'PE', 'Casa', '52.090-513', '0', '4');
 INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua Rio Douro', '87897', 'Ibura', 'Recife', 'PE', 'Casa', '51.240-020', '0', '3');
-INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Travessa Alto do Pacheco', '23424', 'Tejipió', 'Recife', 'PE', 'Casa', '50.930-301', '0', '2');
+INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Travessa Alto do Pacheco', '23424', 'Tejipio', 'Recife', 'PE', 'Casa', '50.930-301', '0', '2');
 INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua Projetada Oito', '54644', 'Pontezinha', 'Cabo de Santo Agostinho', 'PE', 'Casa', '54.589-260', '5', '0');
 
 INSERT INTO `swsdb`.`projects` (`id`, `name`, `description`, `acronym`, `a_hours_individual`, `b_hours_individual`, `c_hours_individual`, `a_hours_group`, `b_hours_group`, `c_hours_group`, `consultant_id`, `parent_project_id`, `company_id`, `removed`) VALUES 
 (NULL, 'Recife', 'Recife', 'RF', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
-(NULL, 'Maringá', 'Maringá', 'MG', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
-(NULL, 'Avaliações', 'Avaliações', 'AV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+(NULL, 'Maringa', 'Maringa', 'MG', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+(NULL, 'Avaliacoes', 'Avaliacoes', 'AV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
 (NULL, 'Aplic', 'Aplic', 'AP', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
 (NULL, 'Banksystem', 'Banksystem', 'BS', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
 (NULL, 'BISA', 'BISA', 'BI', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
@@ -81,12 +81,12 @@ INSERT INTO `swsdb`.`projects` (`id`, `name`, `description`, `acronym`, `a_hours
 INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `date`, `observations`, `description`, `status`, `project_id`, `consultant1_id`, `consultant2_id`, `consultant3_id`, `consultant4_id`, `removed`) VALUES
 (1, '10:00:00', '16:00:00', '02/03/2013', 'Varredura nos servidores e fitas de backups', 'Verificacao da qualidade do armazenamento fisico', 'Planejada', 4, 1, 2, 3, 5, 0),
 (2, '08:00:00', '10:00:00', '03/03/2013', 'Verificar distancia entre os pontos e as situacoes adversas', 'Estudo de viabilidade de conexao com fibra otica', 'Em desenvolvimento', 7, 1, 4, NULL, NULL, 0),
-(3, '14:30:00', '18:00:00', '21/03/2013', 'Definição de ferramentas', 'Definição de ferramentas', 'Em desenvolvimento', 4, 17, 12, 14, 10, 0),
-(4, '16:00:00', '18:00:00', '21/03/2013', 'Atualização Layout', 'Atualizacaoo Layout', 'Em desenvolvimento', 9, 15, 1, NULL, NULL, 0),
+(3, '14:30:00', '18:00:00', '21/03/2013', 'Definicao de ferramentas', 'Definicao de ferramentas', 'Em desenvolvimento', 4, 17, 12, 14, 10, 0),
+(4, '16:00:00', '18:00:00', '21/03/2013', 'Atualizacao Layout', 'Atualizacaoo Layout', 'Em desenvolvimento', 9, 15, 1, NULL, NULL, 0),
 (5, '9:00:00', '12:00:00', '22/03/2013', 'Sistema de busca', 'Sistema de busca', 'Em desenvolvimento', 25, 15, 1, NULL, NULL, 0),
 (6, '15:00:00', '17:00:00', '22/03/2013', 'Modificacoes Banco', 'Modificacoes Banco', 'Planejada', 9, 15, 1, NULL, NULL, 0),
 (7, '9:00:00', '12:00:00', '22/03/2013', 'Sistema de busca', 'Sistema de busca', 'Planejada', 22, 16, 10, 7, NULL, 0),
-(8, '13:00:00', '15:00:00', '22/03/2013', 'Avaliação do codigo', 'Avaliação do codigo', 'Planejada', 19, 10, 9, NULL, NULL, 0),
+(8, '13:00:00', '15:00:00', '22/03/2013', 'Avaliacao do codigo', 'Avaliacao do codigo', 'Planejada', 19, 10, 9, NULL, NULL, 0),
 (9, '9:00:00', '11:00:00', '22/03/2013', 'Levantamento de Requisitos', 'Levantamento de Requisitos', 'Planejada', 16, 15, 5, 6, NULL, 0),
 (10, '8:00:00', '12:00:00', '25/03/2013', 'Busca de erros', 'Busca de erros', 'Planejada', 15, 11, 2, NULL, NULL, 0),
 (11, '9:00:00', '10:30:00', '25/03/2013', 'Alteracao em cadastro de clientes', 'Alteracao em cadastro de clientes', 'Planejada', 25, 15, 1, 3, 4, 0),
@@ -95,25 +95,25 @@ INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `date`, `obs
 (14, '13:00:00', '16:00:00', '26/03/2013', 'Sistema financeiro', 'Sistema financeiro', 'Em desenvolvimento', 4, 4, 6, NULL, NULL, 0),
 (15, '14:00:00', '15:00:00', '26/03/2013', 'Gerenciamento de clientes', 'Gerenciamento de clientes', 'Planejada', 18, 13, 14, 15, NULL, 0),
 (16, '14:00:00', '18:00:00', '26/03/2013', 'Gerar recibo de compra', 'Gerar recibo de compra', 'Em desenvolvimento', 25, 15, 1, 2, 3, 0),
-(17, '9:00:00', '11:00:00', '27/03/2013', 'Reestruturação de Layout', 'Reestruturação de Layout', 'Planejada', 12, 12, 13, 14, NULL, 0),
+(17, '9:00:00', '11:00:00', '27/03/2013', 'Reestruturacao de Layout', 'Reestruturacao de Layout', 'Planejada', 12, 12, 13, 14, NULL, 0),
 (18, '8:00:00', '12:00:00', '27/03/2013', 'Definicao de arquitetura', 'Definicao de arquitetura', 'Planejada', 16, 16, 10, 14, NULL, 0),
-(19, '10:00:00', '18:00:00', '27/03/2013', 'Validação de modelo', 'Validação de modelo', 'Planejada', 20, 15, 11, 9, NULL, 0),
+(19, '10:00:00', '18:00:00', '27/03/2013', 'Validacao de modelo', 'Validacao de modelo', 'Planejada', 20, 15, 11, 9, NULL, 0),
 (20, '15:00:00', '17:00:00', '27/03/2013', 'Relatorios Periodicos', 'Relatorios Periodicos', 'Planejada', 21, 8, 7, NULL, NULL, 0),
-(21, '14:00:00', '16:00:00', '27/03/2013', 'Gerar relatórios da empresa', 'Gerar relatórios da empresa', 'Planejada', 15, 3, 2, NULL, NULL, 0),
+(21, '14:00:00', '16:00:00', '27/03/2013', 'Gerar relatorios da empresa', 'Gerar relatorios da empresa', 'Planejada', 15, 3, 2, NULL, NULL, 0),
 (22, '8:00:00', '10:00:00', '28/03/2013', 'Gerenciamento de funcionarios', 'Gerenciamento de funcionarios', 'Planejada', 17, 4, 5, NULL, NULL, 0),
 (23, '9:00:00', '10:00:00', '28/03/2013', 'Pesquisa de itens', 'Pesquisa de itens', 'Planejada', 7, 6, 9, NULL, NULL, 0),
-(24, '9:00:00', '12:00:00', '28/03/2013', 'Criar tela de edição de itens', 'Criar tela de edição de itens', 'Planejada', 8, 11, 10, NULL, NULL, 0),
+(24, '9:00:00', '12:00:00', '28/03/2013', 'Criar tela de edicao de itens', 'Criar tela de edicao de itens', 'Planejada', 8, 11, 10, NULL, NULL, 0),
 (25, '15:00:00', '17:00:00', '28/03/2013', 'Area de pesquisa', 'Area de pesquisa', 'Planejada', 11, 15, 12, NULL, NULL, 0),
 (26, '14:00:00', '17:00:00', '29/03/2013', 'Verificacao de Erros do sistema', 'Verificacao de Erros do sistema', 'Planejada', 11, 6, 8, NULL, NULL, 0),
-(27, '09:00:00', '11:00:00', '03/04/2013', 'Edição de relatorios', 'Edicao de Relatorios', 'Planejada', 12, 9, 7, 10, NULL, 0),
+(27, '09:00:00', '11:00:00', '03/04/2013', 'Edicao de relatorios', 'Edicao de Relatorios', 'Planejada', 12, 9, 7, 10, NULL, 0),
 (28, '09:00:00', '11:30:00', '09/04/2013', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 15, 2, 15, NULL, NULL, 0),
 (29, '10:00:00', '16:00:00', '10/04/2013', 'Gerar recibo de compra', 'Gerar Recibo de Compra', 'Planejada', 5, 9, 7, 10, NULL, 0),
 (30, '14:00:00', '18:00:00', '10/04/2013', 'Modelagem de dados', 'Modelagem de dados', 'Planejada', 16, 4, 16, 10, NULL, 0),
-(31, '08:00:00', '12:00:00', '12/04/2013', 'Validação e verificação de modelos', 'Validação de modelos', 'Planejada', 20, 8, 4, 1, 9, 0),
+(31, '08:00:00', '12:00:00', '12/04/2013', 'Validacao e verificacao de modelos', 'Validacao de modelos', 'Planejada', 20, 8, 4, 1, 9, 0),
 (32, '13:00:00', '15:00:00', '18/04/2013', 'Estudo e levantamento de Requisitos', 'Levantamento de Requisitos', 'Planejada', 21, 11, 2, 6, NULL, 0),
-(33, '08:00:00', '11:00:00', '26/04/2013', 'Criação de tabelas no banco de dados', 'Criação de tabelas no banco de dados', 'Planejada', 19, 13, 14, 15, NULL, 0),
-(34, '11:00:00', '12:00:00', '29/04/2013', 'Reestruturação de Layout', 'Reestruturação de Layout', 'Planejada', 18, 12, 6, 8, NULL, 0),
-(35, '15:00:00', '18:00:00', '01/05/2013', 'Edição de menu', 'Edição de menu', 'Planejada', 21, 9, 7, NULL, NULL, 0),
+(33, '08:00:00', '11:00:00', '26/04/2013', 'Criacao de tabelas no banco de dados', 'Criacao de tabelas no banco de dados', 'Planejada', 19, 13, 14, 15, NULL, 0),
+(34, '11:00:00', '12:00:00', '29/04/2013', 'Reestruturacao de Layout', 'Reestruturacao de Layout', 'Planejada', 18, 12, 6, 8, NULL, 0),
+(35, '15:00:00', '18:00:00', '01/05/2013', 'Edicao de menu', 'Edicao de menu', 'Planejada', 21, 9, 7, NULL, NULL, 0),
 (36, '12:00:00', '16:00:00', '10/05/2013', 'Criacao de tela inicial', 'Criacao de tela inicial', 'Em desenvolvimento', 4, 9, NULL, NULL, NULL, 0),
 (37, '10:00:00', '12:00:00', '20/05/2013', 'Definicao de arquitetura', 'Definicao de arquitetura', 'Planejada', 7, 12, 11, 10, NULL, 0),
 (38, '09:00:00', '10:00:00', '30/05/2013', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 11, 1, 3, 4, NULL, 0),
@@ -123,7 +123,7 @@ INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `date`, `obs
 INSERT INTO `swsdb`.`entries` (`id`, `date`, `type_consulting`, `type`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approved`, `removed`) VALUES
 (1, '10/01/2013', 'A', 'Individual', '10:00:00', 'A qualidade estava excelente', 11, 1, 0, 0),
 (2, '19/01/2013', 'C','Individual', '05:00:00', 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 0, 0),
-(3, '25/01/2013', 'B','Grupo','10:00:00', 'Inviabilidade técnica',2,2,0,0 ),
+(3, '25/01/2013', 'B','Grupo','10:00:00', 'Inviabilidade tecnica',2,2,0,0 ),
 (4,'13/01/2013','C','Individual', '12:00:00' , 'Alto custo' , 14 ,2 , 0 ,0 ),
 (5, '05/01/2013' , 'A' ,'Individual', '07:00:00' , 'Viabialidade de custo' , 3 , 1 , 0 , 0 ),
 (6,'12/01/2013','C','Grupo', '10:00:00' , 'Alto custo' , 13 ,1 , 0 ,0 ),
