@@ -151,5 +151,12 @@ echo "<br><br><br><br>";?>
 </table>
 <!-- Fim tabela Consultoria A -->
 
+<br><br>
+		<?php print_r($sum_per_consultant); ?> <br><br>
+ 		<?php print_r($sum_per_date); ?> <br><br>
+ 		<?php print_r($sum_all); ?> <br><br>
+ 		<?php print_r($month_year); ?> <br><br>
+ 		<?php print_r($list_consultant); ?> <br><br>
+
 
 <?php echo $this -> Html -> script ('relatorios') ?>
