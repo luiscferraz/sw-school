@@ -244,15 +244,15 @@
  					$new_list_hours[$value['consultants']['id']] = $value;
  					if(array_key_exists( $new_id, $sum_per_date )){	
  						if (array_key_exists( substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2), $sum_per_date[$new_id] )) {
- 							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2)] += $value['entries']['hours_worked'];
+ 							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.((int)substr($value['activities']['date'], 3, 2))] += $value['entries']['hours_worked'];
  						}
  						else{
- 							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2)] = $value['entries']['hours_worked'];
+ 							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.((int)substr($value['activities']['date'], 3, 2))] = $value['entries']['hours_worked'];
  						}
  					}
  					else{
  						$sum_per_date[$new_id] = array();;
- 						$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2)] = $value['entries']['hours_worked'];
+ 						$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.((int)substr($value['activities']['date'], 3, 2))] = $value['entries']['hours_worked'];
  					}
 
  					if (count($sum_per_consultant) == 0) {
@@ -274,7 +274,7 @@
  		$this->set('sum_all', $sum_all);
  		$this->set('month_year', $month_year);
  		$this->set('list_consultant', $new_list_hours);
- 		
+
 		$this -> set('filters', true);
 	}
 	
