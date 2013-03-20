@@ -16,13 +16,19 @@
 	    
 	</head>
 <body> 
+
 <?php
-echo '<div id="bt-cadastrar-atividade">';
 echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
-echo '</div>';
 ?>
+
 <h1>Agenda</h1>
 <?php include 'includes/menu.php'; ?>
+
+
+<?php echo $this->Form->input('Data-Inicial.date', array('type'=>'text','label' => 'Data: ', 'id'=>'data-inicial-agenda')); ?>
+<?php echo $this->Form->input('Data-Final.date', array('type'=>'text','label' => 'Data: ', 'id'=>'data-final-agenda')); ?>
+<?php echo $this->Html->link("Pesquisar", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-pesquisar-data')); ?>
+<?php echo $this->Html->link("Atualizar", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-atualizar-data')); ?>
 
 <div id = 'tabela'>
 <table border = 2 align=center>
