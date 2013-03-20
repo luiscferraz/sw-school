@@ -142,13 +142,13 @@ label {
 }
 
 
-/* ==================BOTÃO PESQUISAR DATA===============*/
+/* ==================BOTÃO APLICAR DATA===============*/
 
-#botao-pesquisar-data, #bota-atualizar-data{
-	margin:3px;
+#botao-aplicar-data, #botao-hoje-data{
+	margin: 3px;
     float: left;
     padding:10px 5px;
-	margin-left: 300px;
+	margin-left: 110px;
 
 }
 
@@ -161,18 +161,18 @@ label {
 
 }
 
-#data-inicial-agenda {
+#data-agenda {
 	border-radius: 4px 4px 4px 4px;
-	margin:20px;
+	margin:3px;
     float: left;
     padding:10px 5px;
 	margin-left: 100px;
 }
 
-label{
+/*label{
 	margin-left: 150px;
 
-}
+}*/
 
 /*   Agenda */
 

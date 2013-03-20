@@ -7,12 +7,17 @@
  */
  
  class HomeController extends AppController{
+
         public function index () {
                $this->layout =  'main';
 			   $this-> set ('tipo_usuario',$this->Auth->user('type'));			 		
 				$this -> set ('projectsPais', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id =' => null))));
 				$this -> set ('projectsFilhos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
 				$this -> set ('projectsNetos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
+				if ($this -> request -> is('post')) {
+					$date =  $_POST['date_submit'];
+					$this -> set('date_submit', $date);
+				}
 
 				//Tuplas da posicao do consultor 1
 				$consultor1PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant1_id = consultants.id and activities.consultant1_id is not null');			
