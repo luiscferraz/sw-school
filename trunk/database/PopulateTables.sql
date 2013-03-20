@@ -45,38 +45,39 @@ INSERT INTO `swsdb`.`companies` (`cnpj`, `name`, `acronym`, `phone1`, `phone2`, 
 ('25.648.576/0001-90', 'Fiat', 'FI', '(81)4503-2771', '(81)1453-9034', '0'),
 ('53.254.327/0001-56', 'Oracle Recife', 'OR', '(81)7904-2455', '(81)8090-2310', '0');
 
-INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua Moreno', '14443', 'Morro da Conceicao', 'Recife', 'PE', 'Casa', '52.280-033', '1', '0');
-INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua da Saude', '32342', 'Macaxeira', 'Recife', 'PE', 'Casa', '52.090-513', '0', '4');
-INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua Rio Douro', '87897', 'Ibura', 'Recife', 'PE', 'Casa', '51.240-020', '0', '3');
-INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Travessa Alto do Pacheco', '23424', 'Tejipio', 'Recife', 'PE', 'Casa', '50.930-301', '0', '2');
-INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES ('Rua Projetada Oito', '54644', 'Pontezinha', 'Cabo de Santo Agostinho', 'PE', 'Casa', '54.589-260', '5', '0');
+INSERT INTO `swsdb`.`addresses` (`address`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`, `consultant_id`, `company_id`) VALUES 
+('Rua Moreno', '14443', 'Morro da Conceicao', 'Recife', 'PE', 'Casa', '52.280-033', '1', '0'),
+('Rua da Saude', '32342', 'Macaxeira', 'Recife', 'PE', 'Casa', '52.090-513', '0', '4'),
+('Rua Rio Douro', '87897', 'Ibura', 'Recife', 'PE', 'Casa', '51.240-020', '0', '3'),
+('Travessa Alto do Pacheco', '23424', 'Tejipio', 'Recife', 'PE', 'Casa', '50.930-301', '0', '2'),
+('Rua Projetada Oito', '54644', 'Pontezinha', 'Cabo de Santo Agostinho', 'PE', 'Casa', '54.589-260', '5', '0');
 
-INSERT INTO `swsdb`.`projects` (`id`, `name`, `description`, `acronym`, `a_hours_individual`, `b_hours_individual`, `c_hours_individual`, `a_hours_group`, `b_hours_group`, `c_hours_group`, `consultant_id`, `parent_project_id`, `company_id`, `removed`) VALUES 
-(NULL, 'Recife', 'Recife', 'RF', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
-(NULL, 'Maringa', 'Maringa', 'MG', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
-(NULL, 'Avaliacoes', 'Avaliacoes', 'AV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
-(NULL, 'Aplic', 'Aplic', 'AP', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
-(NULL, 'Banksystem', 'Banksystem', 'BS', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
-(NULL, 'BISA', 'BISA', 'BI', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
-(NULL, 'Capital login', 'Capital login', 'CL', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 5, '1', '0'),
-(NULL, 'Cartello', 'Cartello', 'CT', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 5, '3', '0'),
-(NULL, 'Cittati', 'Cittati', 'CI', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 6, '1', '0'),
-(NULL, 'ESPE', 'ESPE', 'ES', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 8, '3', '0'),
-(NULL, 'GCF', 'GCF', 'GC', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
-(NULL, 'Informata', 'Informata', 'IF', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3',1, '3', '0'),
-(NULL, 'Inhalt', 'Inhalt', 'IN', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 8, '1', '0'),
-(NULL, 'Inove', 'Inove', 'IV', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
-(NULL, 'Mvra', 'Mvra', 'MV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
-(NULL, 'Oncase', 'Oncase', 'OC', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', 8, NULL, '3', '0'),
-(NULL, 'Partec', 'Partec', 'PT', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', 1, NULL, '3', '0'),
-(NULL, 'Alac', 'Alac', 'AL', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
-(NULL, 'Benner', 'Benner', 'BN', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 2, '1', '0'),
-(NULL, 'ID Brasil', 'ID Brasil', 'IB', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
-(NULL, 'HotSoft', 'HotSoft', 'HS', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 14, '1', '0'),
-(NULL, 'Tecnospeed', 'Tecnospeed', 'TS', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
-(NULL, 'Pitang', 'Pitang', 'PT', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 3, '1', '0'),
-(NULL, 'Softex', 'Softex', 'SF', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 3, '3', '0'),
-(NULL, 'Infraero', 'Infraero', 'IR', '3:00:00', '3:00:00', '3:00:00', '10:00:00', '5:00:00', '5:00:00', '5', NULL, '3', '0');
+INSERT INTO `swsdb`.`projects` (`name`, `description`, `acronym`, `a_hours_individual`, `b_hours_individual`, `c_hours_individual`, `a_hours_group`, `b_hours_group`, `c_hours_group`, `consultant_id`, `parent_project_id`, `company_id`, `removed`) VALUES 
+('Recife', 'Recife', 'RF', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+('Maringa', 'Maringa', 'MG', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+('Avaliacoes', 'Avaliacoes', 'AV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', NULL, '1', '0'),
+('Aplic', 'Aplic', 'AP', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
+('Banksystem', 'Banksystem', 'BS', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
+('BISA', 'BISA', 'BI', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
+('Capital login', 'Capital login', 'CL', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 5, '1', '0'),
+('Cartello', 'Cartello', 'CT', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 5, '3', '0'),
+('Cittati', 'Cittati', 'CI', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 6, '1', '0'),
+('ESPE', 'ESPE', 'ES', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 8, '3', '0'),
+('GCF', 'GCF', 'GC', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
+('Informata', 'Informata', 'IF', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3',1, '3', '0'),
+('Inhalt', 'Inhalt', 'IN', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 8, '1', '0'),
+('Inove', 'Inove', 'IV', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 1, '3', '0'),
+('Mvra', 'Mvra', 'MV', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 1, '1', '0'),
+('Oncase', 'Oncase', 'OC', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', 8, NULL, '3', '0'),
+('Partec', 'Partec', 'PT', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', 1, NULL, '3', '0'),
+('Alac', 'Alac', 'AL', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
+('Benner', 'Benner', 'BN', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 2, '1', '0'),
+('ID Brasil', 'ID Brasil', 'IB', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
+('HotSoft', 'HotSoft', 'HS', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 14, '1', '0'),
+('Tecnospeed', 'Tecnospeed', 'TS', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 2, '3', '0'),
+('Pitang', 'Pitang', 'PT', '10:00:00', '10:00:00', '10:00:00', '20:00:00', '20:00:00', '20:00:00', '1', 3, '1', '0'),
+('Softex', 'Softex', 'SF', '15:00:00', '10:00:00', '18:00:00', '10:00:00', '7:00:00', '30:00:00', '3', 3, '3', '0'),
+('Infraero', 'Infraero', 'IR', '3:00:00', '3:00:00', '3:00:00', '10:00:00', '5:00:00', '5:00:00', '5', NULL, '3', '0');
 
 INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `date`, `observations`, `description`, `status`, `project_id`, `consultant1_id`, `consultant2_id`, `consultant3_id`, `consultant4_id`, `removed`) VALUES
 (1, '10:00:00', '16:00:00', '02/03/2013', 'Varredura nos servidores e fitas de backups', 'Verificacao da qualidade do armazenamento fisico', 'Planejada', 4, 1, 2, 3, 5, 0),
@@ -120,11 +121,25 @@ INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `date`, `obs
 (39, '10:00:00', '14:00:00', '11/06/2013', 'Teste', 'Teste', 'Planejada', 12, 15, 1, NULL, NULL, 0),
 (40, '14:00:00', '18:00:00', '11/06/2013', 'Teste', 'Teste', 'Planejada', 9, 15, 1, NULL, NULL, 0);
 
-INSERT INTO `swsdb`.`entries` (`id`, `date`, `type_consulting`, `type`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approved`, `removed`) VALUES
-(1, '10/01/2013', 'A', 'Individual', '10:00:00', 'A qualidade estava excelente', 11, 1, 0, 0),
-(2, '19/01/2013', 'C','Individual', '05:00:00', 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 0, 0),
-(3, '25/01/2013', 'B','Grupo','10:00:00', 'Inviabilidade tecnica',2,2,0,0 ),
-(4,'13/01/2013','C','Individual', '12:00:00' , 'Alto custo' , 14 ,2 , 0 ,0 ),
-(5, '05/01/2013' , 'A' ,'Individual', '07:00:00' , 'Viabialidade de custo' , 3 , 1 , 0 , 0 ),
-(6,'12/01/2013','C','Grupo', '10:00:00' , 'Alto custo' , 13 ,1 , 0 ,0 ),
-(7,'11/01/2013','C','Individual', '09:00:00' , 'Alto custo' , 15 ,2 , 0 ,0 );
+INSERT INTO `swsdb`.`entries` (`date`, `type_consulting`, `type`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approved`, `removed`) VALUES
+('10/01/2013', 'A', 'Individual', '10:00:00', 'A qualidade estava excelente', 11, 1, 0, 0),
+('19/01/2013', 'C','Individual', '05:00:00', 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 0, 0),
+('25/01/2013', 'B','Grupo','10:00:00', 'Inviabilidade tecnica',2,2,0,0 ),
+('13/01/2013','C','Individual', '12:00:00' , 'Alto custo' , 14 ,2 , 0 ,0 ),
+('05/01/2013' , 'A' ,'Individual', '07:00:00' , 'Viabialidade de custo' , 3 , 1 , 0 , 0 ),
+('12/01/2013','C','Grupo', '10:00:00' , 'Alto custo' , 13 ,1 , 0 ,0 ),
+('11/01/2013','C','Individual', '09:00:00' , 'Alto custo' , 15 ,2 , 0 ,0 ),
+('26/01/2013', 'A', 'Grupo', '8:00:00', 'A qualidade estava excelente', 4, 4, 0, 0),
+('21/02/2013', 'C', 'Individual', '7:00:00', 'Baixo custo', 4, 11, 0, 0),
+('04/02/2013', 'A', 'Individual', '8:00:00', 'A qualidade estava excelente', 5, 21, 0, 0),
+('05/02/2013', 'B', 'Grupo', '5:00:00', 'Inviabilidade tecnica', 9, 18, 0, 0),
+('05/02/2013', 'A', 'Individual', '10:00:00', 'A qualidade estava excelente', 10, 30, 0, 0),
+('05/02/2013', 'C', 'Individual', '7:00:00', 'Alto custo', 9, 34, 0, 0),
+('05/02/2013', 'C', 'Grupo', '11:00:00', 'Alto custo', 9, 34, 0, 0),
+('05/02/2013', 'A', 'Individual', '7:00:00', 'Alto custo', 12, 34, 0, 0),
+('05/02/2013', 'B', 'Individual', '10:00:00', 'Alto custo', 8, 32, 0, 0),
+('07/02/2013', 'B', 'Individual', '8:00:00', 'Inviabilidade tecnica', 5, 17, 0, 0),
+('07/02/2013', 'B', 'Grupo', '9:00:00', 'Alto custo', 6, 26, 0, 0),
+('08/02/2013', 'C', 'individual', '6:00:00', 'Inviabilidade tecnica', 8, 26, 0, 0),
+('09/02/2013', 'A', 'Individual', '9:00:00', 'Alto custo', 5, 17, 0, 0);
+
