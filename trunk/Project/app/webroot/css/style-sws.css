@@ -86,7 +86,7 @@ div{
 th {
 	font: bold 13px "Trebuchet MS", Verdana, Arial, Helvetica,sans-serif;
 	color: black;
-	text-align: center;
+	text-align: center !important;
 	padding: 6px 6px 6px 6px;
 	background: #CAE8EA;
 }
@@ -1080,6 +1080,10 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 
 .bordaTabela{
 	border: 1px solid #ccc;
+}
+
+#cor_horaGrupo, #cor_horaInd, #cor_consultoria{
+	background: #E0EEEE;
 }
 
 /* =============== FIM TABELAS ===============*/
