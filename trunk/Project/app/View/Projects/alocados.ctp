@@ -71,7 +71,7 @@
 			<td>
 				<div id="actionsProject">
 					<?php //echo $this->Html->link(
-					echo $this->Html->image("save.png", array('alt' => 'Salvar','title' => 'Salvar','id'=>$consultant['ProjectConsultant']['consultant_id'],'class'=>$consultant['ProjectConsultant']['id'], 'onclick'=>'salvar(this)')) //, array('#'),
+					echo $this->Html->image("save.png", array('alt' => 'Salvar','title' => 'Salvar','id'=>$consultant['ProjectConsultant']['consultant_id'],'class'=>$consultant['ProjectConsultant']['id'], 'onclick'=>'salvar(this)')); //, array('#'),
 					//array('escape'=>false, 'id'=>'link'));
 					?>
 					
