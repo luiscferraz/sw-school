@@ -114,7 +114,7 @@ label {
 /* ==================BOTÃO CADASTRAR ATIVIDADE===============*/
 #botao-cadastrar-atividade{
 
-        margin:3px;
+        margin:-4px;
         float: right;
         padding:10px 5px;
         margin-right: 5px;
@@ -145,9 +145,9 @@ label {
 /* ==================BOTÃO APLICAR DATA===============*/
 
 #botao-aplicar-data, #botao-hoje-data{
-	margin: 3px;
+	margin: 0px;
     float: left;
-    padding:10px 5px;
+    padding:10px 10px;
 	margin-left: 2%;
 	cursor : pointer;
 
@@ -164,7 +164,10 @@ label {
 
 #data-agenda {
 	border-radius: 4px 4px 4px 4px;
-	margin:0px 0px 0px 7%;
+	/*margin:0px 0px 0px 7%;*/
+	margin-left: 7%;
+	padding:10px 12px;
+	width: 16%;
     float: left;
 	text-align: center;
 }
