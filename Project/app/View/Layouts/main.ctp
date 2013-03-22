@@ -58,7 +58,7 @@ if( !isset($date_submit)){
 	<!--<input id = "data-inicial-agenda" type="text" style="width:auto" name="report[dateInit]" value="" class="date"> até <input id = "data-final-agenda" type="text" value="" name="report[dateEnd]" style="width:auto" class="date"> -->
 	<?php //echo $this->Form->input('Data-Inicial.date', array('name' =>'date_submit','value'=> $date_submit, 'style'=>'width:auto', 'class'=>'date', 'type'=>'text','label' => 'Data: ', 'id'=>'data-agenda')); ?>
 	<?php //echo $this->Form->input('Data-Final.date', array('value'=> $date_actual, 'style'=>'width:auto', 'class'=>'date', 'type'=>'text','label' => 'Data: ', 'id'=>'data-final-agenda')); ?>
-	<input class="date" id="data-agenda" type="text" value=<?php echo $date_submit; ?> name="date_submit" style= "width:auto" />
+	<input class="date" id="data-agenda" type="text" value=<?php echo $date_submit; ?> name="date_submit" maxlength="10" />
 	<input class="botao" id="botao-aplicar-data" type="submit" value="Aplicar" />
 	<!--<input class="botao" id="botao-hoje-data" type="reset" value="Hojer" /> -->
 	<?php //echo $this->Html->link("Aplicar", array('action' => ''),array('type' =>'submit', 'class'=>'botao', 'id'=>'botao-pesquisar-data')); ?>
@@ -73,9 +73,16 @@ if( !isset($date_submit)){
 $dias = 60;
 $amp = 1; //0 <= amp <= 12
 
-$dia_inicial = (int)substr($date_submit, 0, 2);
-$mes_inicial = (int)substr($date_submit, 3, 2);
-$ano_inicial = (int)substr($date_submit, 6, 4);
+while (1){
+	$dia_inicial = (int)substr($date_submit, 0, 2);
+	$mes_inicial = (int)substr($date_submit, 3, 2);
+	$ano_inicial = (int)substr($date_submit, 6, 4);
+	if (!mktime(0, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial)){
+		$date_submit = date('d/m/Y');
+		continue;
+	}
+	break;
+}
 
 if($mes_inicial == 1){
 	$mes_inicial = 12 -($amp -1);
@@ -93,8 +100,21 @@ else{
 
 ?><br>
 
-<div id = 'tabela'>
-<table border = 2 align=center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id = 'div_tabela_projetos'>
+<table border = 2 align=left id='listaProjetosTabela'>
 
 <?php
 
@@ -106,8 +126,201 @@ echo '<tr>';
 echo '<td colspan="3" rowspan="3" align=center  bgcolor="White">';
 echo 'Projetos:';
 echo '</td>';
+echo '<td align=center bgcolor="White">';
+echo '&nbsp;&nbsp;';
+echo '</td>';
+echo '</tr>';
+echo '<tr>';
+echo '<td align=center bgcolor="White">';
+echo '&nbsp;&nbsp;';
+echo '</td>';
+echo '</tr>';
+echo '<tr>';
+echo '<td align=center bgcolor="White">';
+echo '&nbsp;&nbsp;';
+echo '</td>';
+echo '</tr>';
 
-//perspectiva de 6 meses apartir da data de hoje(180 dias)
+//projetos
+
+foreach ($projectsPais as $project) {
+	//conta filhos pra saber quantas linhas será necessário mesclar abaixo pra o pai ficar do mesmo tamanho dos filhos juntos
+	$conta_filhos = 0;	
+	foreach ($projectsFilhos as $projectcf) {
+		if ($project['Project']['id']==$projectcf['Project']['parent_project_id']){
+			$conta_filhos = $conta_filhos + 1;
+			$conta_netos = 0;
+			foreach ($projectsNetos as $projectcn) {
+				if ($projectcf['Project']['id']==$projectcn['Project']['parent_project_id']){
+					$conta_netos = $conta_netos + 1;
+				if ($conta_netos > 1) {
+				$conta_filhos = $conta_filhos + ($conta_netos - 1);
+				}
+				}
+			}		
+		}
+	}
+	$mesclar = $conta_filhos;
+	//mesclar colunas e linhas do projeto pai de acordo com a quantidade de filhos/netos pra ficar o mesmo tamanho
+	if ($mesclar == 0) {
+		$mesclar_cols = 3;
+		$mesclar_rows = 4;
+	}else{
+		$mesclar_cols = 1;
+		$mesclar = ($mesclar * 4);
+		$mesclar_rows = $mesclar;	
+	}
+	//nome do projeto atual no loop
+	echo '<tr>';
+	echo '<td bgcolor="Lavender" align=center nowrap colspan ="'.$mesclar_cols.'"  rowspan="'.$mesclar_rows.'">';
+	echo $project['Project']['name'];
+	echo '</td>';
+	//se o projeto não tiver filhos/netos, não precisa mesclar abaixo, ja pode imprimir os consultores
+	if ($mesclar == 0) {
+		echo '<td align=center bgcolor="White">';
+		echo '&nbsp;&nbsp;';
+		echo '</td>';
+		echo '</tr>';
+		echo '<tr>';
+		echo '<td align=center bgcolor="White">';
+		echo '&nbsp;&nbsp;';
+		echo '</td>';
+		echo '</tr>';
+		echo '<tr>';
+		echo '<td align=center bgcolor="White">';
+		echo '&nbsp;&nbsp;';
+		echo '</td>';
+		echo '</tr>';
+		echo '<tr>';
+		echo '<td align=center bgcolor="White">';
+		echo '&nbsp;&nbsp;';
+		echo '</td>';
+		echo '</tr>';
+
+	//se o projeto tiver filhos	
+	}else{
+	//conta os filhos dele
+		foreach ($projectsFilhos as $projectf) {
+			$conta_netos2 = 0;
+			foreach ($projectsNetos as $projectcn) {			
+				if ($projectf['Project']['id']==$projectcn['Project']['parent_project_id']){					
+					$conta_netos2 = $conta_netos2 + 1;	
+				}  
+			}
+			//se o projeto filho não tiver filho, mescla 2 colunas pra direita e 4 pra baixo (os 4 consultores)
+			if ($conta_netos2 == 0) {
+				$mesclar_cols2 = 2;
+				$conta_netos2 = 4;
+				$check_conta_netos = 1;
+			}else{
+			//se o projeto filho tiver filho, mescla abaixo a quantidade de filhos * 4 (os 4 consultores de cada filho)
+				$check_conta_netos = 0;
+				$mesclar_cols2 = 1;
+				$conta_netos2 = ($conta_netos2*4);
+			}
+			//nome do projeto atual no loop
+			if ($project['Project']['id']==$projectf['Project']['parent_project_id']){
+				echo '<td bgcolor="LavenderBlush" align=center nowrap colspan="'.$mesclar_cols2.'" rowspan="'.$conta_netos2.'">';	
+				echo $projectf['Project']['name'];
+				echo '</td>';
+				
+				if (($conta_netos2 == 4)and($check_conta_netos == 1)) {		
+				// Caso2 - Projetos com filhos e sem netos
+					echo '<td align=center bgcolor="White">';
+					echo '&nbsp;&nbsp;';
+					echo '</td>';
+					echo '</tr>';
+					echo '<tr>';
+					echo '<td align=center bgcolor="White">';
+					echo '&nbsp;&nbsp;';
+					echo '</td>';
+					echo '</tr>';
+					echo '<tr>';
+					echo '<td align=center bgcolor="White">';
+					echo '&nbsp;&nbsp;';
+					echo '</td>';
+					echo '</tr>';
+					echo '<tr>';
+					echo '<td align=center bgcolor="White">';
+					echo '&nbsp;&nbsp;';
+					echo '</td>';
+					echo '</tr>';
+					
+				} else {
+					foreach ($projectsNetos as $projectn) {				
+						if ($projectf['Project']['id']==$projectn['Project']['parent_project_id']){
+							echo '<td bgcolor="AliceBlue" align=center nowrap rowspan=4>';	
+							echo $projectn['Project']['name'];
+							echo '</td>';
+							echo '<td align=center bgcolor="White">';
+							echo '&nbsp;&nbsp;';
+							echo '</td>';
+							echo '</tr>';
+							echo '<tr>';
+							echo '<td align=center bgcolor="White">';
+							echo '&nbsp;&nbsp;';
+							echo '</td>';
+							echo '</tr>';
+							echo '<tr>';
+							echo '<td align=center bgcolor="White">';
+							echo '&nbsp;&nbsp;';
+							echo '</td>';
+							echo '</tr>';
+							echo '<tr>';
+							echo '<td align=center bgcolor="White">';
+							echo '&nbsp;&nbsp;';
+							echo '</td>';
+							echo '</tr>';
+					
+							//Caso3 - Projetos com filhos e com netos
+							
+						}		
+					}
+				}
+			}
+		}
+	}
+}
+
+//fim projetos
+
+ ?>
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id = 'div_tabela_agenda'>
+<table border = 2 id="tabela_agenda" >
+
+<?php
+
+date_default_timezone_set('America/Recife');
+
+//linha dos meses
+
+echo '<tr>';
+
+//echo '<td colspan="3" rowspan="3" align=center  bgcolor="White">';
+//echo 'Projetos:';
+//echo '</td>';
+
+//perspectiva de 2 meses apartir da data de hoje(60 dias)
 for ($dia = 0; $dia <= $dias; $dia++) {
 	//cria uma data com a data de hoje + (24 horas*contador)
 	$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
@@ -247,9 +460,11 @@ foreach ($projectsPais as $project) {
 	}
 	//nome do projeto atual no loop
 	echo '<tr>';
-	echo '<td bgcolor="Lavender" align=center nowrap colspan ="'.$mesclar_cols.'"  rowspan="'.$mesclar_rows.'">';
-	echo $project['Project']['name'];
-	echo '</td>';
+
+	//echo '<td bgcolor="Lavender" align=center nowrap colspan ="'.$mesclar_cols.'"  rowspan="'.$mesclar_rows.'">';
+	//echo $project['Project']['name'];
+	//echo '</td>';
+
 	//se o projeto não tiver filhos/netos, não precisa mesclar abaixo, ja pode imprimir os consultores
 	if ($mesclar == 0) {
 	//Caso1 - Projetos sem filhos
@@ -420,9 +635,9 @@ foreach ($projectsPais as $project) {
 			}
 			//nome do projeto atual no loop
 			if ($project['Project']['id']==$projectf['Project']['parent_project_id']){
-				echo '<td bgcolor="LavenderBlush" align=center nowrap colspan="'.$mesclar_cols2.'" rowspan="'.$conta_netos2.'">';	
-				echo $projectf['Project']['name'];
-				echo '</td>';
+				//echo '<td bgcolor="LavenderBlush" align=center nowrap colspan="'.$mesclar_cols2.'" rowspan="'.$conta_netos2.'">';	
+				//echo $projectf['Project']['name'];
+				//echo '</td>';
 				
 				if (($conta_netos2 == 4)and($check_conta_netos == 1)) {		
 				// Caso2 - Projetos com filhos e sem netos
@@ -573,9 +788,9 @@ foreach ($projectsPais as $project) {
 				} else {
 					foreach ($projectsNetos as $projectn) {				
 						if ($projectf['Project']['id']==$projectn['Project']['parent_project_id']){
-							echo '<td bgcolor="AliceBlue" align=center nowrap rowspan=4>';	
-							echo $projectn['Project']['name'];
-							echo '</td>';
+							//echo '<td bgcolor="AliceBlue" align=center nowrap rowspan=4>';	
+							//echo $projectn['Project']['name'];
+							//echo '</td>';
 							
 							//Caso3 - Projetos com filhos e com netos
 							//Linha do consultor 1 dos projetos com filhos e com netos
@@ -741,3 +956,4 @@ foreach ($projectsPais as $project) {
 
 </body>
 </html>
+
