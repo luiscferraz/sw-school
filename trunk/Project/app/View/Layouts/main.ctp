@@ -31,10 +31,10 @@ if( !isset($date_submit)){
 
 <form method="post" action="">
 	<input class="date" id="data-agenda" type="text" value=<?php echo $date_submit; ?> name="date_submit" maxlength="10" />
-	<input class="botao" id="botao-aplicar-data" type="submit" value="Aplicar" />
+	<input class="botao" id="botao-aplicar-data" type="submit" value=" Aplicar " />
 </form>
 <form method="post" action="">
-	<input class="botao" id="botao-hoje-data" type="submit" value="Hoje" />
+	<input class="botao" id="botao-hoje-data" type="submit" value="  Hoje  " />
 </form>
 <br>
 <?php 
