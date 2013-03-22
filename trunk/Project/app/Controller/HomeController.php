@@ -15,8 +15,10 @@
 				$this -> set ('projectsFilhos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
 				$this -> set ('projectsNetos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
 				if ($this -> request -> is('post')) {
-					$date =  $_POST['date_submit'];
-					$this -> set('date_submit', $date);
+					if (array_key_exists('date_submit', $_POST)) {
+						$date =  $_POST['date_submit'];
+						$this -> set('date_submit', $date);
+					}
 				}
 
 				//Tuplas da posicao do consultor 1

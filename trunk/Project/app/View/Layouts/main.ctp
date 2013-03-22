@@ -30,16 +30,10 @@ if( !isset($date_submit)){
 	?>
 
 <form method="post" action="">
-	<!--<input id = "data-inicial-agenda" type="text" style="width:auto" name="report[dateInit]" value="" class="date"> até <input id = "data-final-agenda" type="text" value="" name="report[dateEnd]" style="width:auto" class="date"> -->
-	<?php //echo $this->Form->input('Data-Inicial.date', array('name' =>'date_submit','value'=> $date_submit, 'style'=>'width:auto', 'class'=>'date', 'type'=>'text','label' => 'Data: ', 'id'=>'data-agenda')); ?>
-	<?php //echo $this->Form->input('Data-Final.date', array('value'=> $date_actual, 'style'=>'width:auto', 'class'=>'date', 'type'=>'text','label' => 'Data: ', 'id'=>'data-final-agenda')); ?>
 	<input class="date" id="data-agenda" type="text" value=<?php echo $date_submit; ?> name="date_submit" maxlength="10" />
 	<input class="botao" id="botao-aplicar-data" type="submit" value="Aplicar" />
-	<!--<input class="botao" id="botao-hoje-data" type="reset" value="Hojer" /> -->
-	<?php //echo $this->Html->link("Aplicar", array('action' => ''),array('type' =>'submit', 'class'=>'botao', 'id'=>'botao-pesquisar-data')); ?>
-	<?php //echo $this->Html->link("Hoje", array('action' => 'index'),array('class'=>'botao', 'id'=>'botao-hoje-data')); ?>
 </form>
-<form method="get" action="">
+<form method="post" action="">
 	<input class="botao" id="botao-hoje-data" type="submit" value="Hoje" />
 </form>
 <br>
