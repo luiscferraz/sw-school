@@ -193,8 +193,9 @@ label {
 }
 
 #div_tabela_agenda{
-margin:0px 7% 0px 20%; 
+margin:0px 7% 0px 15%; 
 overflow-x:scroll;
+left: 50%;
 }
 #div_tabela_projetos{
 margin:0px 0px 0px 7%; 
