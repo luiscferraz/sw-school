@@ -4,7 +4,7 @@
 	<input type="hiden" value="<?php echo $idproject ?>" name="report[id]" style="display:none">
 	<input type="radio" checked name="report[time]" value="all" style="width:auto">Tudo<br>
 	<input type="radio" name="report[time]" value="date" style="width:auto">De : 
-	<input type="text" style="width:auto" name="report[dateInit]" value="01/01/2010" class="date"> até <input type="text" value="01/01/2014" name="report[dateEnd]" style="width:auto" class="date">
+	<input type="text" style="width:auto" name="report[dateInit]" value="<?php echo (date('d/m/Y')); ?>" class="date"> até <input type="text" value="<?php echo (date('d/m/Y')); ?>" name="report[dateEnd]" style="width:auto" class="date">
 	<input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
 </form>
 
@@ -308,12 +308,66 @@ echo "<br><br><br><br>";?>-->
  echo "<br><br><br>";
 
  ?>
+<!-- Fim Total -->
+<!-- Meses selecionados -->
 
-        <!--  <?php print_r($sum_per_consultant); ?> <br><br> -->
-       <!--  <?php print_r($sum_per_date); ?> <br><br>  -->
-       <!--  <?php print_r($sum_all); ?> <br><br> -->
-        <?php print_r($month_year); ?> <br><br>
-        <?php print_r($list_consultant); ?> <br><br>
+<!-- FIm Meses selecionados -->
+<?php 
+ echo "Meses Buscados: [Ano-Mes]"; 
+echo "<br><br>";
+$mounths = array_values($month_year);
+for ($mz=0; $mz <=count($mounths)-1 ; $mz++) {
+    echo "Mes: ";
+    $mounth = $mounths[$mz];
+    print_r($mounth);
+    echo "<br><br>";
+}
+?>
+    <!--  <?php print_r($sum_per_consultant); ?> <br><br> -->
+    <!--  <?php print_r($sum_per_date); ?> <br><br>  -->
+    <!--  <?php print_r($sum_all); ?> <br><br> -->
+    <!--  <?php print_r($month_year); ?> <br><br>  -->
+        <!-- <?php print_r($list_consultant); ?> <br><br> -->
+        <?php
+        $idcsltr = array_keys($list_consultant);
+        for ($i=0; $i <=count($idcsltr)-1 ; $i++) { 
+            echo "<br>";
+            echo "Lista de Consultores";
+            echo "<br><br>";
+            //print_r ($idcsltr[$i]);
+            // $Arrycnsltrnome = array_keys($idcsltr[$i]);
+            // print_r ($Arrycnsltrnome)
+            // for ($j=0; $j <=(count($arrayconsultorenome)-1 ; $j++) {
+            //     echo "<br>";
+            //     print_r ($arrayconsultorenome[$j]);
+            //     # code...
+            // }
+            foreach ($list_consultant as $key => $value) {
+                //print_r ($value);
+                echo "<br><br>";
+                echo "Id Consultor: ";
+                echo $value['consultants']['id'];
+                echo "<br><br>";
+                echo "Nome Consultor: ";
+                echo $value['consultants']['name'];
+                echo "<br><br>";
+                echo "ID Projeto: ";
+                echo $value['projects']['project_id'];
+                echo "<br><br>";
+                echo "Descrição Atividade: ";
+                echo $value['activities']['activity_description'];
+                echo "<br><br>";
+                echo "Data Atividade: ";
+                echo $value['activities']['date'];
+                echo "<br><br>";
+                echo "Horas Trabalhadas: ";
+                echo $value['entries']['hours_worked'];
+                echo "<br><br><br>";
+                
+                
+                
+        }
+        } ?>
 
 <!-- Fim da area de testes -->
 <?php } ?>
