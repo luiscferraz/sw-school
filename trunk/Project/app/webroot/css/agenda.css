@@ -148,7 +148,8 @@ label {
 	margin: 3px;
     float: left;
     padding:10px 5px;
-	margin-left: 110px;
+	margin-left: 2%;
+	cursor : pointer;
 
 }
 
@@ -163,10 +164,9 @@ label {
 
 #data-agenda {
 	border-radius: 4px 4px 4px 4px;
-	margin:3px;
+	margin:0px 0px 0px 7%;
     float: left;
-    padding:10px 5px;
-	margin-left: 100px;
+	text-align: center;
 }
 
 /*label{
@@ -188,9 +188,18 @@ label {
 	margin-top: -2%;
 }
 
-#tabela{
-margin:0px 0px 0px 80px; }
-
 #tabela_agenda{
+	float: center;
+}
+
+#div_tabela_agenda{
+margin:0px 7% 0px 20%; 
+overflow-x:scroll;
+}
+#div_tabela_projetos{
+margin:0px 0px 0px 7%; 
+}
+
+#tabela{
 	width: 10%;
 }
