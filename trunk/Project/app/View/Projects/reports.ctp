@@ -4,7 +4,7 @@
 	<input type="hiden" value="<?php echo $idproject ?>" name="report[id]" style="display:none">
 	<input type="radio" checked name="report[time]" value="all" style="width:auto">Tudo<br>
 	<input type="radio" name="report[time]" value="date" style="width:auto">De : 
-	<input type="text" style="width:auto" name="report[dateInit]" value="" class="date"> até <input type="text" value="" name="report[dateEnd]" style="width:auto" class="date">
+	<input type="text" style="width:auto" name="report[dateInit]" value="01/01/2010" class="date"> até <input type="text" value="01/01/2014" name="report[dateEnd]" style="width:auto" class="date">
 	<input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
 </form>
 
@@ -16,8 +16,9 @@
 		<option value="categoria">Categoria</option>
 		<option value="projeto">Projeto</option>
 	</select>
-<!--<?php print_r($consulting_A);
-echo "<br><br><br><br>";?>-->
+
+<!-- <?php print_r($consulting_A);
+echo "<br><br><br><br>";?> -->
 
 <!-- 	<?php print_r($consulting_B);
 echo "<br><br><br><br>";?>-->
@@ -37,8 +38,8 @@ echo "<br><br><br><br>";?>-->
 <!--	<?php print_r($hours_C_ind);
 echo "<br><br><br><br>";?>
 	<?php print_r($hours_C_group);
-echo "<br><br><br><br>";?>
-<?php } ?>-->
+echo "<br><br><br><br>";?>-->
+
 
 
 
@@ -108,15 +109,6 @@ echo "<br><br><br><br>";?>
 <!-- Fim tabela Consultoria A -->
 
 <br><br>
-		<?php print_r($sum_per_consultant); ?> <br><br>
- 		<?php print_r($sum_per_date); ?> <br><br>
- 		<?php print_r($sum_all); ?> <br><br>
- 		<?php print_r($month_year); ?> <br><br>
- 		<?php print_r($list_consultant); ?> <br><br>
-
-
-<?php echo $this -> Html -> script ('relatorios') ?>
-
 
 <?php
     for ($nb=0; $nb<=count($consulting_B)-1; $nb++){
@@ -176,16 +168,7 @@ echo "<br><br><br><br>";?>
 </table>
 <!-- Fim tabela Consultoria B -->
 
-<br><br>
-        <?php print_r($sum_per_consultant); ?> <br><br>
-        <?php print_r($sum_per_date); ?> <br><br>
-        <?php print_r($sum_all); ?> <br><br>
-        <?php print_r($month_year); ?> <br><br>
-        <?php print_r($list_consultant); ?> <br><br>
-
-
-<?php echo $this -> Html -> script ('relatorios') ?>
-
+<!-- Tabela Consultoria C -->
 
 <?php
     for ($nc=0; $nc<=count($consulting_C)-1; $nc++){
@@ -246,11 +229,92 @@ echo "<br><br><br><br>";?>
 <!-- Fim tabela Consultoria C -->
 
 <br><br>
-        <?php print_r($sum_per_consultant); ?> <br><br>
-        <?php print_r($sum_per_date); ?> <br><br>
+<!-- Area de Testes -->
+<!-- area de testes soma por consultores -->
+
+      <!--  <?php print_r($sum_per_consultant); ?> <br><br> -->
+       <?php 
+       //print_r(array_keys($sum_per_consultant)); 
+       $ids = (array_keys($sum_per_consultant));
+       echo "<br><br>"; ?>
+       <br><br>
+       <?php 
+       //print_r(array_values($sum_per_consultant)); 
+       $horas = (array_values($sum_per_consultant));
+       ?>
+        
+
+        <!-- <?php print_r($sum_per_date); ?> <br><br>
         <?php print_r($sum_all); ?> <br><br>
+        <?php print_r($month_year); ?> <br><br>
+        <?php print_r($list_consultant); ?> <br><br>  -->
+        <?php
+        $ids = (array_keys($sum_per_consultant));
+        $horas = (array_values($sum_per_consultant));
+        echo "ID Consultor: Soma de horas";
+        for ($idhora=0; $idhora <=count($ids)-1 ; $idhora++) {
+
+            echo "<br><br>";
+            print_r($ids[$idhora]);
+            echo ": ";
+            print_r($horas[$idhora]); 
+    
+        }
+    ?>
+<br><br>
+<!-- teste de soma por datas -->
+  <!--   <?php print_r($sum_per_date); ?> <br><br> -->
+
+    <?php echo "ID / Mes / Data: ";
+        echo "<br>";?>
+
+    <?php
+    $idcons= (array_keys($sum_per_date));
+    $meshr = (array_values($sum_per_date));
+
+
+    for ($idc=0; $idc <=count($idcons)-1 ; $idc++) {
+        
+        $idconsultor = $idcons[$idc];
+        
+        echo "Id: ";
+        print_r($idconsultor);
+        echo "<br>";
+        $mhora = $meshr[$idc];
+        // print_r($mhora);
+        $horas = array_values($mhora);
+        $mezes = array_keys($mhora);
+        for ($ms=0; $ms <=count($mhora)-1 ; $ms++) {
+             $mes =  $mezes[$ms];
+             $hora = $horas[$ms];
+             echo "Mes: ";
+             print_r($mes);
+             echo "<br>";
+             echo "Horas: ";
+             print_r($hora);
+             echo "<br><br>";
+         }
+        echo "<br>";
+    }
+
+    ?>
+
+<!-- Fim de soma por datas -->
+<!-- Total -->
+ <?php 
+ echo "Total de horas: ";
+ $totalHoras = ($sum_all);
+ print_r($sum_all);
+ echo "<br><br><br>";
+
+ ?>
+
+        <!--  <?php print_r($sum_per_consultant); ?> <br><br> -->
+       <!--  <?php print_r($sum_per_date); ?> <br><br>  -->
+       <!--  <?php print_r($sum_all); ?> <br><br> -->
         <?php print_r($month_year); ?> <br><br>
         <?php print_r($list_consultant); ?> <br><br>
 
-
+<!-- Fim da area de testes -->
+<?php } ?>
 <?php echo $this -> Html -> script ('relatorios') ?>
