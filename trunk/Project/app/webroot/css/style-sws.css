@@ -988,8 +988,17 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 
 /* ================== RELATÓRIOS ================*/
 
-#botao_relatorio_proj{
+#botao_relatorio_proj, #botao_imprimir_pdf{
 	margin-top: 4%;
+	width: 20%;
+}
+
+#select_relatorio{
+	margin-top: 2%;
+}
+
+#botao_imprimir_pdf{
+	width: 30%;
 }
 
 #form_relatori_proj{
