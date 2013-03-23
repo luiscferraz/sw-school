@@ -5,40 +5,39 @@
 	<input type="radio" checked name="report[time]" value="all" style="width:auto">Tudo<br>
 	<input type="radio" name="report[time]" value="date" style="width:auto">De : 
 	<input type="text" style="width:auto" name="report[dateInit]" value="<?php echo (date('d/m/Y')); ?>" class="date"> até <input type="text" value="<?php echo (date('d/m/Y')); ?>" name="report[dateEnd]" style="width:auto" class="date">
-    <input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
-    <input class="botao" id="botao_imprimir_pdf" type="submit" value="Gerar relatório" />
+	<input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
 </form>
 
 
 <?php if ($filters) { ?>
-  <select>
-    <option value="membro">Membro</option>
-    <option value="atividade">Atividade</option>
-    <option value="categoria">Categoria</option>
-    <option value="projeto">Projeto</option>
-  </select>
+	<select>
+		<option value="membro">Membro</option>
+		<option value="atividade">Atividade</option>
+		<option value="categoria">Categoria</option>
+		<option value="projeto">Projeto</option>
+	</select>
 
 <!-- <?php print_r($consulting_A);
 echo "<br><br><br><br>";?> -->
 
-<!--  <?php print_r($consulting_B);
+<!-- 	<?php print_r($consulting_B);
 echo "<br><br><br><br>";?>-->
-<!--  <?php print_r($consulting_C);
+<!--	<?php print_r($consulting_C);
 echo "<br><br><br><br>";?> -->
 
 <!--<?php print_r($hours_A_ind);
 echo "<br><br><br><br>";?>
-    <?php print_r($hours_A_group);
+		<?php print_r($hours_A_group);
 echo "<br><br><br><br>";?>-->
 
-<!--  <?php print_r($hours_B_ind);
+<!--	<?php print_r($hours_B_ind);
 echo "<br><br><br><br>";?>
-  <?php print_r($hours_B_group);
+	<?php print_r($hours_B_group);
 echo "<br><br><br><br>";?>-->
 
-<!--  <?php print_r($hours_C_ind);
+<!--	<?php print_r($hours_C_ind);
 echo "<br><br><br><br>";?>
-  <?php print_r($hours_C_group);
+	<?php print_r($hours_C_group);
 echo "<br><br><br><br>";?>-->
 
 
