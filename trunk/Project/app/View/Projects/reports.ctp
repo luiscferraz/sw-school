@@ -328,6 +328,9 @@ for ($mz=0; $mz <=count($mounths)-1 ; $mz++) {
     <!--  <?php print_r($sum_all); ?> <br><br> -->
     <!--  <?php print_r($month_year); ?> <br><br>  -->
         <!-- <?php print_r($list_consultant); ?> <br><br> -->
+    
+
+    <table class="tabela-vazia zebra" cellpadding="0" cellspacing="0">
         <?php
         $idcsltr = array_keys($list_consultant);
         for ($i=0; $i <=count($idcsltr)-1 ; $i++) { 
@@ -342,6 +345,7 @@ for ($mz=0; $mz <=count($mounths)-1 ; $mz++) {
             //     print_r ($arrayconsultorenome[$j]);
             //     # code...
             // }
+
             foreach ($list_consultant as $key => $value) {
                 //print_r ($value);
                 echo "<br><br>";
@@ -363,11 +367,25 @@ for ($mz=0; $mz <=count($mounths)-1 ; $mz++) {
                 echo "Horas Trabalhadas: ";
                 echo $value['entries']['hours_worked'];
                 echo "<br><br><br>";
-                
-                
-                
+
         }
         } ?>
+        <tr>
+            <th>Membro</th>
+            <th><?php echo $value['activities']['date'];?></th>
+        </tr>
+
+        <tr>
+            <td><?php echo $value['consultants']['name']; ?></td>
+            <td><?php echo $value['entries']['hours_worked'];?></td>
+        </tr>
+
+        <tr>
+            <th>Total</th>
+            <td> </td>
+        </tr>
+
+
 
 <!-- Fim da area de testes -->
 <?php } ?>
