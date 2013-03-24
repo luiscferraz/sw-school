@@ -1,3 +1,4 @@
+<div class="none">
 <h1>Período</h1>
 
 <form id="form_relatori_proj" method="post" action="">
@@ -7,14 +8,14 @@
 	<input type="text" style="width:auto" name="report[dateInit]" value="<?php echo (date('d/m/Y')); ?>" class="date"> até <input type="text" value="<?php echo (date('d/m/Y')); ?>" name="report[dateEnd]" style="width:auto" class="date">
 	<input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
 </form>
-
+</div>
 <?php if ($filtersName == 'all') { ?>
 <h1><?php echo $nameCompany; ?></h1>
 
 <!-- Relatório Geral "Tudo" -->
 <!-- Tabela A --> 
 <!-- Teste -->
-<a href="../imprimirpdftudo/4"<?php echo $idproject ?>> Gerar PDF </a>
+<a href="#" onclick="window.print();"> Gerar PDF </a>
   <?php 
   if (empty($consulting_A)) {
     echo '<p>Não houve consultoria A</p>';

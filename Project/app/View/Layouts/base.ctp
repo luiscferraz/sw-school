@@ -9,6 +9,7 @@
 		<?php echo $this->Html->css('jquery.fancybox'); ?>
 		<?php echo $this->Html->css('jquery-ui.css'); ?>	
 		<?php echo $this->Html->css('jquery.treeview'); ?>
+		<?php echo $this->Html->css(array('style-impressao'), 'stylesheet', array('media' => 'print')); ?>
 		<?php echo $this->Html->css('menu_index2_projects'); ?>
 		<?php echo $this->Html->script('jquery-1.7.1.min'); ?>
 		<?php echo $this->Html->script('jquery.maskedinput-1.1.4.pack'); ?>
