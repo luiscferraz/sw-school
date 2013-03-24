@@ -164,9 +164,10 @@
 	public function Reports($id = null){
 		$this -> layout = 'base';
 		$this -> set( 'idproject', $id);
-		$this -> set('filters', false);
+		$this -> set('filtersName', false);
 
 		if ($this -> request -> is('post')) {
+			$this -> set ('nameCompany', $this-> GetNameProjectFather($id));
 			$report =  $_POST['report'];
 			if ($report['time'] == 'all') {
 				$this -> ReportsAll($report['id']);
@@ -201,6 +202,7 @@
  		$this->set('hours_per_date', $hours_per_date);
 
 		$this -> set('filters', true);
+		$this -> set('filtersName', 'all');
 	}
 	public function ReportsDate($idProject, $dateInit, $dateEnd){
 
@@ -276,6 +278,7 @@
  		$this->set('list_consultant', $new_list_hours);
 
 		$this -> set('filters', true);
+		$this -> set('filtersName', 'date');
 	}
 	
 	//Funções em para respostas ajax
@@ -374,6 +377,7 @@
  		
  	}
 
+
  	//Retornar em string nome do projeto pai
  	private function GetNameGerent($id){
  		if ($this->Project->Consultant->findById($id)){
@@ -399,7 +403,12 @@
  	}
 
 	public function imprimirpdf() {
-        $this->layout='pdf';       
+        $this->layout= 'pdf';       
+    }
+    public function imprimirpdftudo($id = null) {
+        $this->layout= 'pdf';   
+        $this -> set ('nameCompany', $this-> GetNameProjectFather($id));
+		$this -> ReportsAll($id);   
     }
  
  
