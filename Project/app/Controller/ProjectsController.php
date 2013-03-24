@@ -398,5 +398,10 @@
  		
  	}
 
+	public function imprimirpdf() {
+        $this->layout='pdf';       
+    }
+ 
+ 
  }
 ?>
