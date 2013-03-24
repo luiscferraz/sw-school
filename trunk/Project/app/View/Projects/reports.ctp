@@ -40,10 +40,7 @@ echo "<br><br><br><br>";?>
 	<?php print_r($hours_C_group);
 echo "<br><br><br><br>";?>-->
 
-
-
-
-<!-- Fim Tabela C -->
+<!-- Relatório Geral "Tudo" -->
 <!-- Tabela A --> 
       <!-- Teste -->
       <br><br>
@@ -65,8 +62,8 @@ echo "<br><br><br><br>";?>-->
         <th class="bordaTabela" width="10%">Tipo</th>
         <th class="bordaTabela">Quant. Horas</th>
     </tr>
-      <!-- FIm hearder -->
- <!--  <b>tabela A</b>   -->   
+      <!-- Fim hearder -->
+ <!--  Tabela A Body   -->   
   <br><br>        
   <?php       
           // echo "Horas contratadas em grupo: ";        
@@ -85,7 +82,9 @@ echo "<br><br><br><br>";?>-->
         <td class="bordaTabela" ><?php echo $ta['activities']['date'] ?></td>
         <td class="bordaTabela" ><?php echo $ta['entries']['type'] ?></td>
         <td class="bordaTabela" ><?php echo $ta['entries']['hours_worked'] ?></td>
-    </tr>    
+    </tr>
+
+<!-- Tabela A Footer -->
           <?php 
           // echo "<br><br>";        
           
@@ -148,10 +147,11 @@ echo "<br><br><br><br>";?>-->
         <td class="bordaTabela"> </td>
     </tr>
 </table>
-      
- <!-- Fim Tabela A -->       
+<!-- Fim Footer Tabela A -->
+<!-- Fim Tabela A -->       
          
- <!-- Tabela B -->       
+<!-- Tabela B -->
+<!-- Tabela B Header -->
  <br><br>
  <table class="zebra" width="80%" border="0" cellspacing="0" cellpadding="0">
     <tr>
@@ -171,8 +171,11 @@ echo "<br><br><br><br>";?>-->
         <th class="bordaTabela" width="10%">Tipo</th>
         <th class="bordaTabela">Quant. Horas</th>
     </tr>     
- <br><br>        
- <?php       
+ <br><br>
+
+<!-- Tabela B Body -->
+ 
+<?php       
          // echo "Horas contratadas em grupo: ";        
          // echo $consulting_B[0]['projects']['b_hours_group'];     
          // echo "<br>";        
@@ -215,7 +218,9 @@ echo "<br><br><br><br>";?>-->
         //  echo "<br><br>";
 
          
-     }       
+     }
+
+ 
         $horasBG = $hours_B_group[0];       
         $horasBI = $hours_B_ind[0];     
          
