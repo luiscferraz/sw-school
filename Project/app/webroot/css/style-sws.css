@@ -1088,11 +1088,34 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 .bordaTabela{
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 }
 
-#cor_horaGrupo, #cor_horaInd, #cor_consultoria{
-	background: #E0EEEE;
+#cor_consultoria, #cor_horaGrupo, #cor_horaInd{
+	background: #191970;
+	color: #fff;
 }
+
+#nome_relatorio{
+	border-bottom:0px solid !important;
+}
+
+#cor_header, #cor_footer{
+	background: #93DB70;
+}
+
+#cor_horas_real{
+	background: #ccc;
+}
+
+#cor_saldo{
+	background: #CAE8EA;
+}
+
+.tabela_relatorio td{
+	background-color: #fff;
+	font-size: 15px;
+}
+
 
 /* =============== FIM TABELAS ===============*/

@@ -1,3 +1,37 @@
 .none {
 	display: none;
 }
+
+#botao_home, #Menu_Home { 
+	display : none 
+}
+
+.bordaTabela{
+	border: 1px solid #000;
+}
+
+#cor_consultoria, #cor_horaGrupo, #cor_horaInd{
+	background: #191970;
+	color: #fff;
+}
+
+#nome_relatorio{
+	border-bottom:0px solid !important;
+}
+
+#cor_header, #cor_footer{
+	background: #93DB70;
+}
+
+#cor_horas_real{
+	background: #ccc;
+}
+
+.tabela_relatorio td{
+	background-color: #fff;
+	font-size: 15px;
+}
+
+#gerar_pdf{
+	display : none 
+}

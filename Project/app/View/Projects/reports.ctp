@@ -10,12 +10,12 @@
 </form>
 </div>
 <?php if ($filtersName == 'all') { ?>
-<h1><?php echo $nameCompany; ?></h1>
+<h2 id="nome_relatorio">Relatório de acompanhamento da consultoria</h2>
 
 <!-- Relatório Geral "Tudo" -->
 <!-- Tabela A --> 
 <!-- Teste -->
-<a href="#" onclick="window.print();"> Gerar PDF </a>
+<a id="gerar_pdf" href="#" onclick="window.print();"> Gerar PDF </a>
   <?php 
   if (empty($consulting_A)) {
     echo '<p>Não houve consultoria A</p>';
@@ -23,23 +23,23 @@
   else {
   ?>
   
-  <table class="zebra" width="80%" border="0" cellspacing="0" cellpadding="0">
+  <table class="tabela_relatorio" width="80%" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <th class="bordaTabela" id="cor_consultoria" colspan="3" rowspan="2" scope="col">Consultoria A</th>
         <th class="bordaTabela" id="cor_horaGrupo" colspan="3" scope="col">Horas contratadas em grupo</th>
-        <th id="cor_horaGrupo" width="7%" scope="col"><?php echo $consulting_A[0]['projects']['a_hours_group'];?></th>
+        <th class="bordaTabela" id="cor_horaGrupo" width="7%" scope="col"><?php echo $consulting_A[0]['projects']['a_hours_group'];?></th>
     </tr>
     <tr>
         <th class="bordaTabela" id="cor_horaInd" colspan="3">Horas contratadas Individuais</th>
         <th class="bordaTabela" id="cor_horaInd"><?php echo $consulting_A[0]['projects']['a_hours_individual'];?></th>
     </tr>
     <tr>
-        <th class="bordaTabela" width="5%" scope="row">ID</th>
-        <th class="bordaTabela" colspan="2">Atividade</th>
-        <th class="bordaTabela" width="20%">Consultor</th>
-        <th class="bordaTabela" width="13%">Data</th>
-        <th class="bordaTabela" width="10%">Tipo</th>
-        <th class="bordaTabela">Quant. Horas</th>
+        <th class="bordaTabela" id="cor_header" width="5%" scope="row">ID</th>
+        <th class="bordaTabela" id="cor_header" colspan="2">Atividade</th>
+        <th class="bordaTabela" id="cor_header" width="20%">Consultor</th>
+        <th class="bordaTabela" id="cor_header" width="13%">Data</th>
+        <th class="bordaTabela" id="cor_header" width="10%">Tipo</th>
+        <th class="bordaTabela" id="cor_header">Quant. Horas</th>
     </tr>
 <!-- Fim hearder -->
  <!--  Tabela A Body   -->   
@@ -67,31 +67,31 @@
 
 <?php if ($filtersName == 'all') {  ?>        
     <tr>
-      <th class="bordaTabela" id="cor_horaGrupo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-      <td class="bordaTabela" id="cor_horaGrupo"width="9%"><?php echo $horasAG['0']['balance_hours_a_group']; ?></td>
-      <th class="bordaTabela" id="cor_horaGrupo" colspan="3">Horas Realizadas em Grupo</th>
-      <td class="bordaTabela" id="cor_horaGrupo">
+      <th class="bordaTabela" colspan="2" scope="row">Saldo de Horas em Grupo</th>
+      <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasAG['0']['balance_hours_a_group']; ?></td>
+      <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
+      <td class="bordaTabela" id="cor_horas_real">
         <?php 
           echo  substr($horasAG['0']['balance_hours_a_group'],0,2).':'.substr($horasAG['0']['balance_hours_a_group'],2,2);
         ?>
       </td>
     </tr>
     <tr>
-      <th class="bordaTabela" id="cor_horaInd" colspan="2" scope="row">Saldo de Horas Individuais</th>
-      <td class="bordaTabela" id="cor_horaInd">
+      <th class="bordaTabela" colspan="2" scope="row">Saldo de Horas Individuais</th>
+      <td class="bordaTabela" id="cor_saldo">
         <?php 
           echo $horasAI['0']['balance_hours_a_individual']; 
           echo substr($horasAI['0']['balance_hours_a_individual'],0,2).':'.substr($horasAI['0']['balance_hours_a_individual'],2,2);
         ?>
       </td>
-      <th  class="bordaTabela" id="cor_horaInd" colspan="3">Horas Realizadas Individuais</th>
-      <td class="bordaTabela" id="cor_horaInd">
+      <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
+      <td class="bordaTabela" id="cor_horas_real">
         <?php 
         echo $horasAI['0']['hours_a_performed_individual'];?></td>
     </tr>
     <tr>
-        <th  class="bordaTabela"colspan="6" scope="row">Total de Horas realizadas na Consultoria A</th>
-        <td class="bordaTabela"> </td>
+        <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria A</th>
+        <td class="bordaTabela" id="cor_footer"> </td>
     </tr>
   </table>
 <!-- Fim Footer Tabela A -->
@@ -107,11 +107,11 @@
   else {
 ?>
 
-<table class="zebra" width="80%" border="0" cellspacing="0" cellpadding="0">
+<table class="tabela_relatorio" width="80%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <th class="bordaTabela" id="cor_consultoria" colspan="3" rowspan="2" scope="col">Consultoria B</th>
     <th class="bordaTabela" id="cor_horaGrupo" colspan="3" scope="col">Horas contratadas em grupo</th>
-    <th id="cor_horaGrupo" width="7%" scope="col">
+    <th class="bordaTabela" id="cor_horaGrupo" width="7%" scope="col">
       <?php echo $consulting_B[0]['projects']['b_hours_group'];?>
     </th>
   </tr>
@@ -120,12 +120,12 @@
     <th class="bordaTabela" id="cor_horaInd"><?php echo $consulting_B[0]['projects']['b_hours_individual'];?></th>
   </tr>
   <tr>
-    <th class="bordaTabela" width="5%" scope="row">ID</th>
-    <th class="bordaTabela" colspan="2">Atividade</th>
-    <th class="bordaTabela" width="20%">Consultor</th>
-    <th class="bordaTabela" width="13%">Data</th>
-    <th class="bordaTabela" width="10%">Tipo</th>
-    <th class="bordaTabela">Quant. Horas</th>
+    <th class="bordaTabela" id="cor_header" width="5%" scope="row">ID</th>
+    <th class="bordaTabela" id="cor_header" colspan="2">Atividade</th>
+    <th class="bordaTabela" id="cor_header" width="20%">Consultor</th>
+    <th class="bordaTabela" id="cor_header" width="13%">Data</th>
+    <th class="bordaTabela" id="cor_header" width="10%">Tipo</th>
+    <th class="bordaTabela" id="cor_header">Quant. Horas</th>
   </tr>     
 
 
@@ -150,20 +150,20 @@
          
 ?>
   <tr>
-    <th class="bordaTabela" id="cor_horaGrupo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-    <td class="bordaTabela" id="cor_horaGrupo"width="9%"><?php echo $horasBG['0']['balance_hours_b_group']; ?></td>
-    <th class="bordaTabela" id="cor_horaGrupo" colspan="3">Horas Realizadas em Grupo</th>
-    <td class="bordaTabela" id="cor_horaGrupo"><?php echo $horasBG['0']['balance_hours_b_group'];?></td>
+    <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
+    <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasBG['0']['balance_hours_b_group']; ?></td>
+    <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
+    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasBG['0']['balance_hours_b_group'];?></td>
   </tr>
   <tr>
-    <th class="bordaTabela" id="cor_horaInd" colspan="2" scope="row">Saldo de Horas Individuais</th>
-    <td class="bordaTabela" id="cor_horaInd"><?php echo $horasBI['0']['balance_hours_b_individual']; ?></td>
-    <th  class="bordaTabela" id="cor_horaInd" colspan="3">Horas Realizadas Individuais</th>
-    <td class="bordaTabela" id="cor_horaInd"><?php echo $horasBI['0']['hours_b_performed_individual'];?></td>
+    <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas Individuais</th>
+    <td class="bordaTabela" id="cor_saldo"><?php echo $horasBI['0']['balance_hours_b_individual']; ?></td>
+    <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
+    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasBI['0']['hours_b_performed_individual'];?></td>
   </tr>
   <tr>
-    <th  class="bordaTabela"colspan="6" scope="row">Total de Horas realizadas na Consultoria B</th>
-    <td class="bordaTabela"> </td>
+    <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria B</th>
+    <td class="bordaTabela" id="cor_footer"> </td>
   </tr>
 </table>       
 <?php } ?> 
@@ -176,11 +176,11 @@
   }
   else {
 ?>
- <table class="zebra" width="80%" border="0" cellspacing="0" cellpadding="0">
+ <table class="tabela_relatorio" width="80%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <th class="bordaTabela" id="cor_consultoria" colspan="3" rowspan="2" scope="col">Consultoria C</th>
       <th class="bordaTabela" id="cor_horaGrupo" colspan="3" scope="col">Horas contratadas em grupo</th>
-      <th id="cor_horaGrupo" width="7%" scope="col"><?php echo $consulting_C[0]['projects']['c_hours_group'];?></th>
+      <th class="bordaTabela" id="cor_horaGrupo" width="7%" scope="col"><?php echo $consulting_C[0]['projects']['c_hours_group'];?></th>
     </tr>
 
     <tr>
@@ -188,12 +188,12 @@
       <th class="bordaTabela" id="cor_horaInd"><?php echo $consulting_C[0]['projects']['c_hours_individual'];?></th>
     </tr>
     <tr>
-      <th class="bordaTabela" width="5%" scope="row">ID</th>
-      <th class="bordaTabela" colspan="2">Atividade</th>
-      <th class="bordaTabela" width="20%">Consultor</th>
-      <th class="bordaTabela" width="13%">Data</th>
-      <th class="bordaTabela" width="10%">Tipo</th>
-      <th class="bordaTabela">Quant. Horas</th>
+      <th class="bordaTabela" id="cor_header" width="5%" scope="row">ID</th>
+      <th class="bordaTabela" id="cor_header" colspan="2">Atividade</th>
+      <th class="bordaTabela" id="cor_header" width="20%">Consultor</th>
+      <th class="bordaTabela" id="cor_header" id="cor_header" width="13%">Data</th>
+      <th class="bordaTabela" id="cor_header" width="10%">Tipo</th>
+      <th class="bordaTabela" id="cor_header">Quant. Horas</th>
     </tr>     
              
     
@@ -216,20 +216,20 @@
 ?>
 
   <tr>
-    <th class="bordaTabela" id="cor_horaGrupo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-    <td class="bordaTabela" id="cor_horaGrupo"width="9%"><?php echo $horasCG['0']['balance_hours_c_group']; ?></td>
-    <th class="bordaTabela" id="cor_horaGrupo" colspan="3">Horas Realizadas em Grupo</th>
-    <td class="bordaTabela" id="cor_horaGrupo"><?php echo $horasCG['0']['balance_hours_c_group'];?></td>
+    <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
+    <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasCG['0']['balance_hours_c_group']; ?></td>
+    <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
+    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasCG['0']['balance_hours_c_group'];?></td>
   </tr>
   <tr>
-    <th class="bordaTabela" id="cor_horaInd" colspan="2" scope="row">Saldo de Horas Individuais</th>
-    <td class="bordaTabela" id="cor_horaInd"><?php echo $horasCI['0']['balance_hours_c_individual']; ?></td>
-    <th  class="bordaTabela" id="cor_horaInd" colspan="3">Horas Realizadas Individuais</th>
-    <td class="bordaTabela" id="cor_horaInd"><?php echo $horasCI['0']['hours_c_performed_individual'];?></td>
+    <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas Individuais</th>
+    <td class="bordaTabela" id="cor_saldo"><?php echo $horasCI['0']['balance_hours_c_individual']; ?></td>
+    <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
+    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasCI['0']['hours_c_performed_individual'];?></td>
   </tr>
   <tr>
-    <th  class="bordaTabela"colspan="6" scope="row">Total de Horas realizadas na Consultoria C</th>
-    <td class="bordaTabela"> </td>
+    <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria C</th>
+    <td class="bordaTabela" id="cor_footer"> </td>
   </tr>
 </table> 
 
