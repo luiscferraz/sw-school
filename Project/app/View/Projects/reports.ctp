@@ -8,7 +8,6 @@
 	<input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
 </form>
 
-
 <?php if ($filtersName == 'all') { ?>
 <h1><?php echo $nameCompany; ?></h1>
 
@@ -325,54 +324,105 @@ for ($mz=0; $mz <=count($mounths)-1 ; $mz++) {
     echo "";
 }
 ?>
-  <table class="tabela-vazia zebra" cellpadding="0" cellspacing="0">
-    <?php
-    $idcsltr = array_keys($list_consultant);
-    for ($i=0; $i <=count($idcsltr)-1 ; $i++) { 
-        echo "";
-        echo "Lista de Consultores";
-        echo "";
-        foreach ($list_consultant as $key => $value) {
-            //print_r ($value);
-            echo "";
-            echo "Id Consultor: ";
-            echo $value['consultants']['id'];
-            echo "";
-            echo "Nome Consultor: ";
-            echo $value['consultants']['name'];
-            echo "";
-            echo "ID Projeto: ";
-            echo $value['projects']['project_id'];
-            echo "";
-            echo "Descrição Atividade: ";
-            echo $value['activities']['activity_description'];
-            echo "";
-            echo "Data Atividade: ";
-            echo $value['activities']['date'];
-            echo "";
-            echo "Horas Trabalhadas: ";
-            echo $value['entries']['hours_worked'];
-            echo "";
 
+<?php
+
+     $idcsltr = array_keys($list_consultant);
+     for ($i=0; $i <=count($idcsltr)-1 ; $i++) {
+         echo "";
+         echo "Lista de Consultores";
+         echo "";
+         foreach ($list_consultant as $key => $value) {
+             //print_r ($value);
+             echo "";
+             echo "Id Consultor: ";
+             echo $value['consultants']['id'];
+             echo "";
+             echo "Nome Consultor: ";
+             echo $value['consultants']['name'];
+             echo "";
+             echo "ID Projeto: ";
+             echo $value['projects']['project_id'];
+             echo "";
+             echo "Descrição Atividade: ";
+             echo $value['activities']['activity_description'];
+             echo "";
+             echo "Data Atividade: ";
+             echo $value['activities']['date'];
+             echo "";
+             echo "Horas Trabalhadas: ";
+             echo $value['entries']['hours_worked'];
+             echo "";
     }
-    } ?>
+  }
+ ?>
+
+<!-- Tabela por membro e data -->
+
+  <table class="tabela-vazia zebra" cellpadding="0" cellspacing="0">
+    
     <tr>
-        <th>Membro</th>
-        <th><?php echo $value['activities']['date'];?></th>
+        <th class="bordaTabela">Membro</th>
+        <th class="bordaTabela"> <!--Data --> </th>
     </tr>
 
     <tr>
-        <td><?php echo $value['consultants']['name']; ?></td>
-        <td><?php echo $value['entries']['hours_worked'];?></td>
+        <td class="bordaTabela"><?php echo $value['consultants']['name']; ?></td>
+        <td class="bordaTabela"><?php echo $value['entries']['hours_worked'];?></td>
     </tr>
 
     <tr>
-        <th>Total</th>
-        <td> </td>
+        <th class="bordaTabela">Total</th>
     </tr>
 
+<!-- Fim da tabela -->
 
+<!-- Tabela por projeto, membro e data -->
+
+<table class="tabela-vazia zebra" cellpadding="0" cellspacing="0">
+
+    <tr>
+        <th class="bordaTabela">Projeto</th>
+        <th class="bordaTabela">Membro</th>
+        <th class="bordaTabela"><!--Data --></th>
+        <th class="bordaTabela">Total</th>
+    </tr>
+
+    <tr>
+        <td class="bordaTabela"><?php echo $value['projects']['name']; ?></td>
+        <td class="bordaTabela"><?php echo $value['consultants']['name']; ?></td>
+        <td class="bordaTabela"><?php echo $value['entries']['hours_worked'];?></td>
+    </tr>
+
+    <tr>
+        <th class="bordaTabela">Total</th>
+    </tr>
+
+<!-- Fim da tabela -->
+
+<!-- Tabela por projeto, atividade e data -->
+<table class="tabela-vazia zebra" cellpadding="0" cellspacing="0">
+
+    <tr>
+        <th class="bordaTabela">Projeto</th>
+        <th class="bordaTabela">Atividade</th>
+        <th class="bordaTabela"><!--Data --></th>
+        <th class="bordaTabela">Total</th>
+    </tr>
+
+    <tr>
+        <td class="bordaTabela" ><?php echo $value['projects']['name']; ?></td>
+        <td class="bordaTabela" ><?php echo $value['activities']['name']; ?></td>
+        <td class="bordaTabela" ><?php echo $value['entries']['hours_worked'];?></td>
+    </tr>
+
+    <tr>
+        <th class="bordaTabela">Total</th>
+    </tr>
+    <!-- Fim da tabela -->
 
 <!-- Fim da area de testes -->
 <?php } ?>
 <?php echo $this -> Html -> script ('relatorios') ?>
+
+
