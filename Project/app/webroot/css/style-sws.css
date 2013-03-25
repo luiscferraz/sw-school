@@ -198,6 +198,13 @@ p span {
 .leve {
 	font-weight: 400;
 }
+
+.form_relatorio {
+	background-color: #F3F3F3;
+	border:1px solid #CCC;
+	padding:10px;
+	border-radius: 0px;
+}
 /* ==================MENU PRINCIPAL===============*/
 
 #Menu_Home{

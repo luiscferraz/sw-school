@@ -1,4 +1,4 @@
-<div class="none">
+<div class="none form_relatorio" >
 <h1>Período</h1>
 
 <form id="form_relatori_proj" method="post" action="">
