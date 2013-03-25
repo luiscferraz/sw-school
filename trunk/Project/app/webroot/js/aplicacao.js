@@ -54,7 +54,6 @@ $('document').ready(function(){
 	$("#phone_sponsor").mask("(99)9999-9999");
 	$("#phone_sepg").mask("(99)9999-9999");		
 	$("#hora").mask("99:99");
-	$("#entryHourWorked").mask("99:99");
 	$("#actvStartHour").mask("99:99");
 	$("#actvEndHour").mask("99:99");
 	
