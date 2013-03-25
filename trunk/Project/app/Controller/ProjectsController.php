@@ -207,76 +207,29 @@
 	}
 	public function ReportsDate($idProject, $dateInit, $dateEnd){
 
-		$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, activities.description AS activity_description,activities.date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id AND projects.id = '.$idProject.' ORDER BY consultants.id');
-		$dateInit_comparison = substr($dateInit, 6, 4).substr($dateInit, 3, 2).substr($dateInit, 0, 2);
-		$dateEnd_comparison = substr($dateEnd, 6, 4).substr($dateEnd, 3, 2).substr($dateEnd, 0, 2);
-		if ($dateInit != NULL and $dateEnd != NULL) {
-			$new_list_hours = array();
-			$id = $hours_per_date[0]['consultants']['id'];
-			$sum_per_consultant = array();
-			$sum_per_date = array();
-			$sum_all = 0;
-			$month_init = (int)substr($dateInit, 3, 2);
-			$year_init = (int)substr($dateInit, 6, 4);
-			$month_end = (int)substr($dateEnd, 3, 2);
-			$year_end = (int)substr($dateEnd, 6, 4);
-			$month_year = array();
-			$year = $year_init;
-			$month = $month_init;
-			while ($year <= $year_end) {
-				if ($year == $year_end) {
-					while ($month <= $month_end) {
-						$month_year[] = $year.'-'.$month;
-						$month += 1;
-					}
-					$month = 1;
-				}
-				else{
-					while ($month <= 12) {
-						$month_year[] = $year.'-'.$month;
-						$month += 1;
-					}
-					$month = 1;
-				}
-				$year += 1;
-			}
- 			foreach ($hours_per_date as $value) {
- 				$new_id = $value['consultants']['id'];
- 				$activities_date_comparison = substr($value['activities']['date'], 6, 4).substr($value['activities']['date'], 3, 2).substr($value['activities']['date'], 0, 2);
- 				if (($activities_date_comparison >= $dateInit_comparison) and ($activities_date_comparison <= $dateEnd_comparison)){
- 					$new_list_hours[$value['consultants']['id']] = $value;
- 					if(array_key_exists( $new_id, $sum_per_date )){	
- 						if (array_key_exists( substr($value['activities']['date'], 6, 4).'-'.substr($value['activities']['date'], 3, 2), $sum_per_date[$new_id] )) {
- 							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.((int)substr($value['activities']['date'], 3, 2))] += $value['entries']['hours_worked'];
- 						}
- 						else{
- 							$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.((int)substr($value['activities']['date'], 3, 2))] = $value['entries']['hours_worked'];
- 						}
- 					}
- 					else{
- 						$sum_per_date[$new_id] = array();;
- 						$sum_per_date[$new_id][substr($value['activities']['date'], 6, 4).'-'.((int)substr($value['activities']['date'], 3, 2))] = $value['entries']['hours_worked'];
- 					}
+		$consulting_A = $this->Project->query('SELECT * FROM activities, projects, consultants, entries WHERE entries.type_consulting = "A" AND entries.activity_id = activities.id AND entries.consultant_id = consultants.id AND activities.project_id = projects.id AND projects.id = '.$idProject.' AND entries.date BETWEEN "'.$dateInit .'" AND "'.$dateEnd.'"');
+ 		$consulting_B = $this->Project->query('SELECT * FROM activities, projects, consultants, entries WHERE entries.type_consulting = "B" AND entries.activity_id = activities.id AND entries.consultant_id = consultants.id AND activities.project_id = projects.id AND projects.id = '.$idProject.' AND entries.date BETWEEN "'.$dateInit .'" AND "'.$dateEnd.'"');
+ 		$consulting_C = $this->Project->query('SELECT * FROM activities, projects, consultants, entries WHERE entries.type_consulting = "C" AND entries.activity_id = activities.id AND entries.consultant_id = consultants.id AND activities.project_id = projects.id AND projects.id = '.$idProject.' AND entries.date BETWEEN "'.$dateInit .'" AND "'.$dateEnd.'"');
+ 		$hours_A_ind = $this->Project->query('SELECT projects.id, projects.a_hours_individual AS hours_a_contracted_individual, SUM(entries.hours_worked) AS hours_a_performed_individual, (projects.a_hours_individual - SUM(entries.hours_worked)) AS balance_hours_a_individual FROM activities ,entries, projects WHERE entries.type = "Individual" AND entries.type_consulting = "A" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$idProject.' AND entries.date BETWEEN "'.$dateInit .'" AND "'.$dateEnd.'"');
+ 		$hours_A_group = $this->Project->query('SELECT projects.id, projects.a_hours_group AS hours_a_contracted_group, SUM(entries.hours_worked) AS hours_a_performed_group, (projects.a_hours_group - SUM(entries.hours_worked)) AS balance_hours_a_group FROM activities ,entries, projects WHERE entries.type = "Grupo" AND entries.type_consulting = "A" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$idProject);
+ 		$hours_B_ind = $this->Project->query('SELECT projects.id, projects.b_hours_individual AS hours_b_contracted_individual, SUM(entries.hours_worked) AS hours_b_performed_individual, (projects.b_hours_individual - SUM(entries.hours_worked)) AS balance_hours_b_individual FROM activities ,entries, projects WHERE entries.type = "Individual" AND entries.type_consulting = "B" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$idProject.' AND entries.date BETWEEN "'.$dateInit .'" AND "'.$dateEnd.'"');
+ 		$hours_B_group = $this->Project->query('SELECT projects.id, projects.b_hours_group AS hours_b_contracted_group, SUM(entries.hours_worked) AS hours_b_performed_group, (projects.b_hours_group - SUM(entries.hours_worked)) AS balance_hours_b_group FROM activities ,entries, projects WHERE entries.type = "Grupo" AND entries.type_consulting = "B" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$idProject);
+ 		$hours_C_ind = $this->Project->query('SELECT projects.id, projects.c_hours_individual AS hours_c_contracted_individual, SUM(entries.hours_worked) AS hours_c_performed_individual, (projects.c_hours_individual - SUM(entries.hours_worked)) AS balance_hours_c_individual FROM activities ,entries, projects WHERE entries.type = "Individual" AND entries.type_consulting = "C" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$idProject.' AND entries.date BETWEEN "'.$dateInit .'" AND "'.$dateEnd.'"');
+ 		$hours_C_group = $this->Project->query('SELECT projects.id, projects.c_hours_group AS hours_c_contracted_group, SUM(entries.hours_worked) AS hours_c_performed_group, (projects.c_hours_group - SUM(entries.hours_worked)) AS balance_hours_c_group FROM activities ,entries, projects WHERE entries.type = "Grupo" AND entries.type_consulting = "C" AND entries.activity_id = activities.id AND activities.project_id = projects.id AND projects.id = '.$idProject);
+ 		$this->set('consulting_A', $consulting_A);
+ 		$this->set('consulting_B', $consulting_B);
+ 		$this->set('consulting_C', $consulting_C);
+ 		$this->set('hours_A_ind', $hours_A_ind);
+ 		$this->set('hours_B_ind', $hours_B_ind);
+ 		$this->set('hours_C_ind', $hours_C_ind);
+ 		$this->set('hours_A_group', $hours_A_group);
+ 		$this->set('hours_B_group', $hours_B_group);
+ 		$this->set('hours_C_group', $hours_C_group);
+ 		$this->set('dateInit', $dateInit);
+ 		$this->set('dateEnd',  $dateEnd);
 
- 					if (count($sum_per_consultant) == 0) {
- 						$sum_per_consultant[$id] = $value['entries']['hours_worked'];
- 					}
- 					elseif ($id == $new_id) {
- 						$sum_per_consultant[$id] += $value['entries']['hours_worked'];
- 					}
- 					else{
- 						$sum_per_consultant[$new_id] = $value['entries']['hours_worked'];
- 						$id = $new_id;
- 					}
- 					$sum_all += $value['entries']['hours_worked'];
- 				}
- 			}
- 		}
- 		$this->set('sum_per_consultant', $sum_per_consultant);
- 		$this->set('sum_per_date', $sum_per_date);
- 		$this->set('sum_all', $sum_all);
- 		$this->set('month_year', $month_year);
- 		$this->set('list_consultant', $new_list_hours);
+ 		$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, activities.description AS activity_description,activities.date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id AND projects.id = '.$idProject.' ORDER BY consultants.id');
+ 		$this->set('hours_per_date', $hours_per_date);
 
 		$this -> set('filters', true);
 		$this -> set('filtersName', 'date');
