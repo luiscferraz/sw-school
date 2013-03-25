@@ -17,7 +17,7 @@ class EntriesController extends AppController{
  	
  	public function add(){
 	 	$this->layout = 'base';
-		$this-> set ('activities',$this->Entry->Activity->find('all'), array('conditions'=> array('Activity.removed !=' => 1)));
+		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));		 
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
@@ -72,7 +72,7 @@ class EntriesController extends AppController{
 	
 	public function edit($id = NULL){
 		$this->layout = 'base';
-		$this-> set ('activities',$this->Entry->Activity->find('all'), array('conditions'=> array('Activity.removed !=' => 1)));
+		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
