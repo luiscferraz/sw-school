@@ -91,7 +91,7 @@ INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `date`, `obs
 (9, '9:00:00', '11:00:00', '22/03/2013', 'Levantamento de Requisitos', 'Levantamento de Requisitos', 'Planejada', 16, 15, 5, 6, NULL, 0),
 (10, '8:00:00', '12:00:00', '25/03/2013', 'Busca de erros', 'Busca de erros', 'Planejada', 15, 11, 2, NULL, NULL, 0),
 (11, '9:00:00', '10:30:00', '25/03/2013', 'Alteracao em cadastro de clientes', 'Alteracao em cadastro de clientes', 'Planejada', 25, 15, 1, 3, 4, 0),
-(12, '8:00:00', '11:00:00', '26/03/2013', 'Janela dinâmica', 'Janela dinâmica', 'Planejada', 11, 10, 5, NULL, NULL, 0),
+(12, '8:00:00', '11:00:00', '26/03/2013', 'Janela dinamica', 'Janela dinamica', 'Planejada', 11, 10, 5, NULL, NULL, 0),
 (13, '10:00:00', '11:00:00', '26/03/2013', 'Relatorio de compra', 'Relatorio de compra', 'Planejada', 7, 7, 6, NULL, NULL, 0),
 (14, '13:00:00', '16:00:00', '26/03/2013', 'Sistema financeiro', 'Sistema financeiro', 'Em desenvolvimento', 4, 4, 6, NULL, NULL, 0),
 (15, '14:00:00', '15:00:00', '26/03/2013', 'Gerenciamento de clientes', 'Gerenciamento de clientes', 'Planejada', 18, 13, 14, 15, NULL, 0),
