@@ -258,6 +258,7 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
 
 <?php if ($filtersName == 'date') { ?>
 <h2 id="nome_relatorio">Relatório de acompanhamento da consultoria</h2>
+<a id="gerar_pdf" href="#" onclick="window.print();"> Imprimir </a>
 <?php 
 $mesnome[1] = "janeiro";
 $mesnome[2] = "fevereiro";
