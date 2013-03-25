@@ -154,8 +154,8 @@
     <td class="bordaTabela" id="cor_horas_real"><?php echo $horasBI['0']['hours_b_performed_individual'];?></td>
   </tr>
   <tr>
-    <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria A</th>
-    <td class="bordaTabela" id="cor_footer"><?php echo $horasBG['0']['hours_b_performed_group']+$horasAI['0']['hours_a_performed_individual'];?></td>
+    <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria B</th>
+    <td class="bordaTabela" id="cor_footer"><?php echo $horasBG['0']['hours_b_performed_group']+$horasBI['0']['hours_b_performed_individual'];?></td>
   </tr>
 </table>    
 <?php } ?> 
