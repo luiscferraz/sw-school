@@ -8831,3 +8831,152 @@
 2013-03-24 17:40:51 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-25 01:17:10 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 01:18:06 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 01:18:10 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 01:18:12 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:03:30 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:04:24 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:04:24 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:04:24 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:04:24 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:04:24 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:04:24 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:04:27 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:55:28 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:55:54 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:55:58 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:57:31 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:57:33 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:58:58 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:58:58 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:58:58 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:58:58 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:58:58 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 02:58:59 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 03:00:12 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 03:34:34 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 04:02:52 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'END 10/01/2013' at line 1
+#0 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 C:\Sites\sws\Project\lib\Cake\Model\Model.php(3003): call_user_func_array(Array, Array)
+#6 C:\Sites\sws\Project\app\Controller\ProjectsController.php(210): Model->query('SELECT * FROM a...')
+#7 C:\Sites\sws\Project\app\Controller\ProjectsController.php(177): ProjectsController->ReportsDate('4', '05/01/2013', '10/01/2013')
+#8 [internal function]: ProjectsController->Reports('4')
+#9 C:\Sites\sws\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#10 C:\Sites\sws\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Sites\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-25 04:02:53 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 04:02:53 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 04:03:57 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'END "10/01/2013"' at line 1
+#0 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 C:\Sites\sws\Project\lib\Cake\Model\Model.php(3003): call_user_func_array(Array, Array)
+#6 C:\Sites\sws\Project\app\Controller\ProjectsController.php(210): Model->query('SELECT * FROM a...')
+#7 C:\Sites\sws\Project\app\Controller\ProjectsController.php(177): ProjectsController->ReportsDate('4', '05/01/2013', '10/01/2013')
+#8 [internal function]: ProjectsController->Reports('4')
+#9 C:\Sites\sws\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#10 C:\Sites\sws\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Sites\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-25 04:03:57 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 04:03:57 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 04:04:14 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'END "10/01/2013"' at line 1
+#0 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 C:\Sites\sws\Project\lib\Cake\Model\Datasource\DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 C:\Sites\sws\Project\lib\Cake\Model\Model.php(3003): call_user_func_array(Array, Array)
+#6 C:\Sites\sws\Project\app\Controller\ProjectsController.php(210): Model->query('SELECT * FROM a...')
+#7 C:\Sites\sws\Project\app\Controller\ProjectsController.php(177): ProjectsController->ReportsDate('4', '05/01/2013', '10/01/2013')
+#8 [internal function]: ProjectsController->Reports('4')
+#9 C:\Sites\sws\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#10 C:\Sites\sws\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Sites\sws\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-25 04:04:14 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 04:07:25 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\Sites\sws\Project\app\View\Projects\reports.ctp, line 523]
+2013-03-25 04:07:25 Error: [FatalErrorException] syntax error, unexpected end of file
+#0 C:\Sites\sws\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 523)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 523, Array)
+#2 C:\Sites\sws\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Sites\sws\Pr...', 523, Array)
+#3 C:\Sites\sws\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-25 04:07:25 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 04:07:25 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
