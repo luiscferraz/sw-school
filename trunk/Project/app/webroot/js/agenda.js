@@ -15,7 +15,7 @@ $('document').ready(function(){
     								});
 
 
-
+    $('.days').tipsy();
 
     $('.days').dblclick(function () {
         var conteudoOriginal = $(this).text();
