@@ -6,11 +6,13 @@
 		<?php echo $this->Html->css('reset'); ?>		
 		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>
 		<?php echo $this->Html->css('jquery.weekcalendar'); ?>
+		<?php echo $this->Html->css('tipsy'); ?>
 		<?php echo $this->Html->css('demo'); ?>		
 		<?php echo $this->Html->css('agenda'); ?>		
 		<?php echo $this->Html->script('jquery-1.7.1.min'); ?>
 	    <?php echo $this->Html->script('jquery-ui-1.8rc3.custom.min'); ?>
 	    <?php echo $this->Html->script('jquery.weekcalendar'); ?>
+	    <?php echo $this->Html->script('jquery.tipsy'); ?>
 		<?php echo $this->Html->script('agenda'); ?>	    
 	    <?php echo $this->Html->script('aplicacao'); ?>
 
@@ -424,7 +426,7 @@ foreach ($projectsPais as $project) {
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
 			if (array_key_exists($idM, $arrayConsultor1)){
-				echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" class="days" id="'.$idM.'">';
+				echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 				echo $arrayConsultor1[$idM][0];
 				echo '</td >';
 			}
@@ -435,7 +437,7 @@ foreach ($projectsPais as $project) {
 			//valor da tarde do dia
 			$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
 			if (array_key_exists($idT, $arrayConsultor1)){
-				echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" class="days" id="'.$idT.'">';
+				echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
 				echo $arrayConsultor1[$idT][0];
 				echo '</td >';
 			}
@@ -460,7 +462,7 @@ foreach ($projectsPais as $project) {
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
 			if (array_key_exists($idM, $arrayConsultor2)){
-				echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" class="days" id="'.$idM.'">';
+				echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
 				echo $arrayConsultor2[$idM][0];
 				echo '</td >';
 			}
@@ -471,7 +473,7 @@ foreach ($projectsPais as $project) {
 			//valor da tarde do dia
 			$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
 			if (array_key_exists($idT, $arrayConsultor2)){
-				echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" class="days" id="'.$idT.'">';
+				echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
 				echo $arrayConsultor2[$idT][0];
 				echo '</td >';
 			}
@@ -496,7 +498,7 @@ foreach ($projectsPais as $project) {
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
 			if (array_key_exists($idM, $arrayConsultor3)){
-				echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" class="days" id="'.$idM.'">';
+				echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
 				echo $arrayConsultor3[$idM][0];
 				echo '</td >';
 			}
@@ -507,7 +509,7 @@ foreach ($projectsPais as $project) {
 			//valor da tarde do dia
 			$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
 			if (array_key_exists($idT, $arrayConsultor3)){
-				echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" class="days" id="'.$idT.'">';
+				echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
 				echo $arrayConsultor3[$idT][0];
 				echo '</td >';
 			}
@@ -532,7 +534,7 @@ foreach ($projectsPais as $project) {
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
 			if (array_key_exists($idM, $arrayConsultor4)){
-				echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" class="days" id="'.$idM.'">';
+				echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
 				echo $arrayConsultor4[$idM][0];
 				echo '</td >';
 			}
@@ -543,7 +545,7 @@ foreach ($projectsPais as $project) {
 			//valor da tarde do dia
 			$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
 			if (array_key_exists($idT, $arrayConsultor4)){
-				echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" class="days" id="'.$idT.'">';
+				echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
 				echo $arrayConsultor4[$idT][0];
 				echo '</td >';
 			}
@@ -597,7 +599,7 @@ foreach ($projectsPais as $project) {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
 							if (array_key_exists($idM, $arrayConsultor1)){
-								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" class="days" id="'.$idM.'">';
+								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 								echo $arrayConsultor1[$idM][0];
 								echo '</td >';
 							}
@@ -608,7 +610,7 @@ foreach ($projectsPais as $project) {
 							//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
 							if (array_key_exists($idT, $arrayConsultor1)){
-								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" class="days" id="'.$idT.'">';
+								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
 								echo $arrayConsultor1[$idT][0];
 								echo '</td >';
 							}
@@ -633,7 +635,7 @@ foreach ($projectsPais as $project) {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
 							if (array_key_exists($idM, $arrayConsultor2)){
-								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" class="days" id="'.$idM.'">';
+								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
 								echo $arrayConsultor2[$idM][0];
 								echo '</td >';
 							}
@@ -644,7 +646,7 @@ foreach ($projectsPais as $project) {
 							//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
 							if (array_key_exists($idT, $arrayConsultor2)){ 
-								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" class="days" id="'.$idT.'">';
+								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
 								echo $arrayConsultor2[$idT][0];
 								echo '</td >';
 							}
@@ -669,7 +671,7 @@ foreach ($projectsPais as $project) {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
 							if (array_key_exists($idM, $arrayConsultor3)){
-								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" class="days" id="'.$idM.'">';
+								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
 								echo $arrayConsultor3[$idM][0];
 								echo '</td >';
 							}
@@ -680,7 +682,7 @@ foreach ($projectsPais as $project) {
 							//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
 							if (array_key_exists($idT, $arrayConsultor3)){
-								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" class="days" id="'.$idT.'">';
+								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
 								echo $arrayConsultor3[$idT][0];
 								echo '</td >';
 							}
@@ -705,7 +707,7 @@ foreach ($projectsPais as $project) {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
 							if (array_key_exists($idM, $arrayConsultor4)){
-								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" class="days" id="'.$idM.'">';
+								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
 								echo $arrayConsultor4[$idM][0];
 								echo '</td >';
 							}
@@ -716,7 +718,7 @@ foreach ($projectsPais as $project) {
 							//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
 							if (array_key_exists($idT, $arrayConsultor4)){
-								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" class="days" id="'.$idT.'">';
+								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
 								echo $arrayConsultor4[$idT][0];
 								echo '</td >';
 							}
@@ -749,7 +751,7 @@ foreach ($projectsPais as $project) {
 									//valor da manha do dia
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
 									if (array_key_exists($idM, $arrayConsultor1)){
-										echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" class="days" id="'.$idM.'">';
+										echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 										echo $arrayConsultor1[$idM][0];
 										echo '</td >';
 									}
@@ -760,7 +762,7 @@ foreach ($projectsPais as $project) {
 									//valor da tarde do dia
 									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
 									if (array_key_exists($idT, $arrayConsultor1)){
-										echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" class="days" id="'.$idT.'">';
+										echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
 										echo $arrayConsultor1[$idT][0];
 										echo '</td >';
 									}
@@ -785,7 +787,7 @@ foreach ($projectsPais as $project) {
 									//valor da manha do dia
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
 									if (array_key_exists($idM, $arrayConsultor2)){
-										echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" class="days" id="'.$idM.'">';
+										echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
 										echo $arrayConsultor2[$idM][0];
 										echo '</td >';
 									}
@@ -796,7 +798,7 @@ foreach ($projectsPais as $project) {
 									//valor da tarde do dia
 									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
 									if (array_key_exists($idT, $arrayConsultor2)){
-										echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" class="days" id="'.$idT.'">';
+										echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
 										echo $arrayConsultor2[$idT][0];
 										echo '</td >';
 									}
@@ -821,7 +823,7 @@ foreach ($projectsPais as $project) {
 									//valor da manha do dia
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
 									if (array_key_exists($idM, $arrayConsultor3)){
-										echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" class="days" id="'.$idM.'">';
+										echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
 										echo $arrayConsultor3[$idM][0];
 										echo '</td >';
 									}
@@ -832,7 +834,7 @@ foreach ($projectsPais as $project) {
 									//valor da tarde do dia
 									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
 									if (array_key_exists($idT, $arrayConsultor3)){
-										echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" class="days" id="'.$idT.'">';
+										echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
 										echo $arrayConsultor3[$idT][0];
 										echo '</td >';
 									}
@@ -857,7 +859,7 @@ foreach ($projectsPais as $project) {
 									//valor da manha do dia
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
 									if (array_key_exists($idM, $arrayConsultor4)){
-										echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" class="days" id="'.$idM.'">';
+										echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
 										echo $arrayConsultor4[$idM][0];
 										echo '</td >';
 									}
@@ -868,7 +870,7 @@ foreach ($projectsPais as $project) {
 									//valor da tarde do dia
 									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
 									if (array_key_exists($idT, $arrayConsultor4)){
-										echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" class="days" id="'.$idT.'">';
+										echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
 										echo $arrayConsultor4[$idT][0];
 										echo '</td >';
 									}
