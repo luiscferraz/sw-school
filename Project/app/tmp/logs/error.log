@@ -9228,3 +9228,883 @@
 2013-03-26 03:58:12 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\Sites\sws\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-26 15:12:28 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 131]
+2013-03-26 15:12:28 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 131)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:12:28 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 131]
+2013-03-26 15:12:28 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 131)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:12:32 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 131]
+2013-03-26 15:12:32 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 131)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:13:25 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 131]
+2013-03-26 15:13:25 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 131)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:13:58 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 131]
+2013-03-26 15:13:58 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 131)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:13:58 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 131]
+2013-03-26 15:13:58 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 131)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:13:58 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 131]
+2013-03-26 15:13:58 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 131)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 131, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:16:16 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 15:17:35 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:17:35 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:23:12 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:23:12 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:23:15 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:23:15 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:25:26 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:25:26 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:25:28 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:25:28 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:29:04 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:29:04 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:29:09 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:29:09 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:30:17 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:30:17 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:30:21 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:30:21 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:30:21 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:30:21 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:30:30 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:30:30 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:30:30 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:30:30 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:32:04 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 15:32:17 Error: [MissingActionException] Action HomeController::tratar_string() could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 15:32:18 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 15:33:23 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 15:33:23 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 15:33:34 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 15:33:35 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 15:33:52 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 15:33:52 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 15:34:33 Error: Fatal Error (4): syntax error, unexpected '{' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 147]
+2013-03-26 15:34:33 Error: [FatalErrorException] syntax error, unexpected '{'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 147)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 147, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 147, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:34:33 Error: Fatal Error (4): syntax error, unexpected '{' in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 147]
+2013-03-26 15:34:33 Error: [FatalErrorException] syntax error, unexpected '{'
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 147)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 147, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 147, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:36:55 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 15:37:03 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 15:37:04 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 15:39:06 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:39:06 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:39:32 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 15:39:32 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 16:29:57 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:33:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:34:16 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 16:34:17 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:34:30 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 16:34:30 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:34:38 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 16:34:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:34:58 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 16:34:58 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:36:28 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 16:36:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:39:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:39:37 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION activities.HOUR does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '13/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 16:39:37 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:41:16 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION activities.HOUR does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '20/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.20-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 16:41:16 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:41:22 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION activities.HOUR does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '20/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.20-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 16:41:22 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:41:28 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION activities.HOUR does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '13/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 16:41:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:44:57 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:45:02 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION activities.HOUR does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '13/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 16:45:03 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:45:11 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:50:27 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:50:31 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 16:50:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:54:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:54:28 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':00:00 AND activities.end_hours >= 12:00:00 AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '13/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 16:54:28 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:58:33 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 16:58:33 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 16:59:03 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:59:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':00:00 AND activities.end_hours >= 12:00:00 AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '13/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 16:59:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 17:00:13 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':00:00 AND activities.end_hours >= 12:00:00 AND activities.project_id = 4' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('4', '12/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('4.M.12-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 17:00:13 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 17:02:02 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 17:08:55 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 17:08:59 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':00:00 AND activities.end_hours >= 12:00:00 AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '13/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 17:09:00 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 17:09:08 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':00:00 AND activities.end_hours >= 12:00:00 AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT * FROM a...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT * FROM a...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('SELECT * FROM a...')
+#4 [internal function]: DboSource->query('SELECT * FROM a...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(176): Model->query('SELECT * FROM a...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(129): HomeController->search_activity('7', '12/03/2013', 'M')
+#8 [internal function]: HomeController->edition_agenda('7.M.12-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 17:09:08 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:02:49 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:02:54 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:02:55 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:03:09 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:03:10 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:05:33 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:05:33 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:07:07 Error: Fatal Error (64): Can't use method return value in write context in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 176]
+2013-03-26 18:07:07 Error: [FatalErrorException] Can't use method return value in write context
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/home/emeson/Do...', 176)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/home/emeson/Do...', 176, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 18:07:35 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:07:41 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:07:42 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:09:54 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:10:00 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:10:07 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:10:07 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:12:15 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:12:25 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:12:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:14:34 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:14:38 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '12:00:00" AND activities.end_hours >= "23:59:59" AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('UPDATE activiti...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('UPDATE activiti...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('UPDATE activiti...')
+#4 [internal function]: DboSource->query('UPDATE activiti...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(199): Model->query('UPDATE activiti...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(130): HomeController->edition_activity('7', 'M', '13/03/2013', '17', '1')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 18:14:39 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:14:44 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '12:00:00" AND activities.end_hours >= "23:59:59" AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('UPDATE activiti...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('UPDATE activiti...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('UPDATE activiti...')
+#4 [internal function]: DboSource->query('UPDATE activiti...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(199): Model->query('UPDATE activiti...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(130): HomeController->edition_activity('7', 'M', '13/03/2013', '17', '1')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 18:14:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:18:21 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:18:25 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '12:00:00" AND activities.end_hours >= "23:59:59" AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('UPDATE activiti...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('UPDATE activiti...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('UPDATE activiti...')
+#4 [internal function]: DboSource->query('UPDATE activiti...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(204): Model->query('UPDATE activiti...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(135): HomeController->edition_activity('7', 'M', '13/03/2013', '17', '1')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 18:18:25 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:18:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:19:05 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:19:21 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:21:13 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 199]
+2013-03-26 18:21:13 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 199)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 199, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 199, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 18:21:15 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in [/home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php, line 199]
+2013-03-26 18:21:15 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/emeson/Do...', 199)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/emeson/Do...', 199, Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/emeson/Do...', 199, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 18:21:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:21:32 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '12:00:00" AND activities.end_hours >= "23:59:59" AND activities.project_id = "7"' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('UPDATE activiti...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('UPDATE activiti...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('UPDATE activiti...')
+#4 [internal function]: DboSource->query('UPDATE activiti...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(199): Model->query('UPDATE activiti...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(130): HomeController->edition_activity('7', 'M', '13/03/2013', '17', '1')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 18:21:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:22:33 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:22:40 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '12:00" AND activities.end_hours >= "23:59" AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('UPDATE activiti...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('UPDATE activiti...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('UPDATE activiti...')
+#4 [internal function]: DboSource->query('UPDATE activiti...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(199): Model->query('UPDATE activiti...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(130): HomeController->edition_activity('7', 'M', '13/03/2013', '17', '1')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 18:22:40 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:27:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:27:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '01:00" AND activities.end_hours >= "12:00" AND activities.project_id = 7' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('UPDATE activiti...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('UPDATE activiti...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('UPDATE activiti...')
+#4 [internal function]: DboSource->query('UPDATE activiti...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(199): Model->query('UPDATE activiti...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(130): HomeController->edition_activity('7', '13/03/2013', 'M', '17', '1')
+#8 [internal function]: HomeController->edition_agenda('7.M.13-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 18:27:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:28:34 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '12:00" AND activities.end_hours >= "23:59" AND activities.project_id = 9' at line 1
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('UPDATE activiti...', Array)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('UPDATE activiti...', Array, Array)
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Datasource/DboSource.php(538): DboSource->fetchAll('UPDATE activiti...')
+#4 [internal function]: DboSource->query('UPDATE activiti...')
+#5 /home/emeson/Documentos/sw-school/Project/lib/Cake/Model/Model.php(3003): call_user_func_array(Array, Array)
+#6 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(199): Model->query('UPDATE activiti...')
+#7 /home/emeson/Documentos/sw-school/Project/app/Controller/HomeController.php(130): HomeController->edition_activity('9', '22/03/2013', 'T', '13', '1')
+#8 [internal function]: HomeController->edition_agenda('9.T.22-03-2013....')
+#9 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-26 18:28:34 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:30:13 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:30:14 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:30:18 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:30:18 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:30:21 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:30:25 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:30:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:31:46 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:31:50 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:31:50 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:34:52 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:34:56 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:34:57 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:37:06 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:37:06 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:37:33 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:37:34 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:38:09 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:38:10 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:40:59 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:40:59 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:44:50 Error: [MissingViewException] View file "/home/emeson/Documentos/sw-school/Project/app/View/Home/edition_agenda.ctp" is missing.
+#0 /home/emeson/Documentos/sw-school/Project/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /home/emeson/Documentos/sw-school/Project/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 18:44:51 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 18:45:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -115,7 +115,7 @@
 	
 	
 	//rodrigo
-	public function edtion_agenda($string){		
+	public function edition_agenda($string){		
 		$stringFatiada = explode('.' , $string);
 		$projeto_id = $stringFatiada[0];
 		$turno = $stringFatiada[1];
@@ -126,11 +126,11 @@
 	
 		if ($this->search_abbreviation($sigla)){
 			//emeson
-			if ($this->search_activity($id_projeto, $data, $turno)){
-				$this->edtion_activity($id_projeto, $turno, $data, $consultor, pesquisar_sigla($sigla))
+			if ($this->search_activity($projeto_id, $data, $turno)){
+				$this->edition_activity($projeto_id, $data, $turno, $this->search_abbreviation($sigla), $consultor);
 			}
 			else{
-				$this->insert_activity($projeto_id, $data, $turno, $this->pesquisar_sigla($sigla), $consultor);
+				$this->insert_activity($projeto_id, $turno, $data, $consultor, $this->search_abbreviation($sigla));
 			}
 			
 		}
@@ -144,10 +144,10 @@
 	//rodrigo
 	private function search_abbreviation($sigla){
 		$consultor = $this->Home->Consultant->query("SELECT * FROM consultants where acronym = '".$sigla."'");
-		if ($consultor != Null){				
+		if ($consultor){				
 			return $consultor[0]['consultants']['id'];
 		}else{		
-			return false;
+			return FALSE;
 		}
 	}
 	
@@ -162,18 +162,18 @@
 	}
 
 		//emeson
-		public function search_activity($project_id, $date, $time){
+		private function search_activity($project_id, $date, $time){
 
         	if ($time == 'M') {
-        		$hours_initial = 6;
-        		$hours_end = 12;
+        		$hours_initial = '01:00';
+        		$hours_end = '12:00';
         	}
         	else{
-        		$hours_initial = 12;
-        		$hours_end = 18;
+        		$hours_initial = '12:00';
+        		$hours_end = '23:59';
         	}
 
-        	if (!empty($this->Home->Activity->query('SELECT * FROM activities WHERE date = '.$date.' AND HOUR(start_hours) <= '.$hours_initial.' AND HOUR(end_hours) >= '.$hours_end.' AND project_id = '.$project_id)) {
+        	if ($this->Home->Activity->query('SELECT * FROM activities WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
         		return TRUE;
         	}
         	else{
@@ -183,27 +183,27 @@
         }
 
         //emeson
-        public function edit_activity($project_id, $date, $time, $abbreviation, $number_consultant){
+        private function edition_activity($project_id, $date, $time, $consultant_id, $number_consultant){
 
         	if ($time == 'M') {
-        		$hours_initial = 6;
-        		$hours_end = 12;
+        		$hours_initial = '01:00';
+        		$hours_end = '12:00';
         	}
         	else{
-        		$hours_initial = 12;
-        		$hours_end = 18;
+        		$hours_initial = '12:00';
+        		$hours_end = '23:59';
         	}
 
-        	$consultant_id = $this->Home->Activity->query('SELECT consultants.id FROM activities, consultants WHERE activities.date = '.$date.' AND activities.consultant'.$number_consultant.'_id = consultants.id AND consultants.acronym = '.$abbreviation.' AND HOUR(start_hours) <= '.$hours_initial.' AND HOUR(end_hours) >= '.$hours_end.' AND project_id = '.$project_id);
+        	//$consultant_id = $this->Home->Activity->query('SELECT consultants.id FROM activities, consultants WHERE activities.date = '.$date.' AND activities.consultant'.$number_consultant.'_id = consultants.id AND consultants.acronym = '.$abbreviation.' AND HOUR(start_hours) <= '.$hours_initial.' AND HOUR(end_hours) >= '.$hours_end.' AND project_id = '.$project_id);
 
-        	if($this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = '.$consultant_id[0]['consultants']['id'].' WHERE activities.date = '.$date.' AND activities.HOUR(start_hours) <= '.$hours_initial.' AND activities.HOUR(end_hours) >= '.$hours_end.' AND activities.project_id = '.$project_id)){
+        	if($this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = '.$consultant_id.' WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)){
         		return TRUE;
         	}
         	else{
         		return FALSE;
         	}
 
-        }
+        } 
      		
  }
 
