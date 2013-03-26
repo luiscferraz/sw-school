@@ -3,7 +3,7 @@
 class Home extends AppModel{
 	
 	public $name = 'Home';
-	public $hasMany = array('Activity','Project');
+	public $hasMany = array('Activity','Project','Consultant');
 
 }
 ?>

@@ -14,32 +14,54 @@ $('document').ready(function(){
     										monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
     								});
 
-    $('.days').dblclick(function(){
-        var id = $(this).attr('id');
-        $(this).html('<input type="text" id="save-calendar" style="width:100%"/>');
-         /* ao pressionar uma tecla em um campo que seja de class="pula" */
-        $(this).keypress(function(e){
-            /*
-             * verifica se o evento é Keycode (para IE e outros browsers)
-             * se não for pega o evento Which (Firefox)
-            */
-            var tecla = (e.keyCode?e.keyCode:e.which);
-            var consult =  $("#save-calendar").val();
 
-            if ( tecla == 13) {
-                $.get("entries/AjaxSalvar",{consultor: consult , info : id },
-                    function(data) {   
-                        if (data) {
-                            location.reload();
-                        }
-                        else {
-                            alert( 'Não foi possivel salvar !' );
-                            location.reload();
-                        }
-                });
+
+
+    $('.days').dblclick(function () {
+        var conteudoOriginal = $(this).text();
+        var string = $(this).attr("id");
+        $(this).addClass("celulaEmEdicao");
+        $(this).html("<input type='text' value='" + conteudoOriginal + "' />");
+        $(this).children().first().focus();		
+        $(this).children().first().keypress(function (e) {
+            if (e.which == 13) {
+                var novoConteudo = $(this).val();
+				string = string+'.'+novoConteudo;							
+                //$(this).parent().text(novoConteudo);				
+                $(this).parent().removeClass("celulaEmEdicao");				
+				string = string.replace("/", "-");
+				string = string.replace("/", "-");				
+				tratar_string(string);	
             }
         });
-    })
+         
+    $(this).children().first().blur(function(){	
+        $(this).parent().text(conteudoOriginal);
+        $(this).parent().removeClass("celulaEmEdicao");
+    });	
+    });
+
+ function tratar_string(string){
+		var url = window.location.toString();
+		url = limparUrlHome(url);
+        $.ajax({
+                 async: false,
+         url: url+"Home/tratar_string/"+string, //URL que puxa os dados
+         dataType: "json", //Tipo de Retorno
+         success: function(json){ //Se ocorrer tudo certo                      
+
+         }      
+    });
+
+	location.reload();
+        
+        }
+		
+function limparUrlHome(url){
+        n =  url.search('home');
+        url = url.slice(0,n);
+        return url;
+}
 
 		
 });

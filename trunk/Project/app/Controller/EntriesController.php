@@ -110,24 +110,7 @@ class EntriesController extends AppController{
 	    }
 	}	 	
 
-	//Função ajax da agenda.
-	public function AjaxSalvar() {
-		$this -> layout = 'ajax';
-		//Recebe as iniciais do consultor.
-		$consultant = $_GET['consultor'];
-		//Informações que vem com id.
-		$info 		= $_GET['info'];
 
-		//Flag para que se possa saber se salvou no banco.
-		$flag = true;
-		//Verificar a flag para setar.
-		if ( $flag ) {
-			$this -> set ('flag', true);
-		}
-		else {
-			$this -> set ('flag', false);
-		}
-	}
  	
 }
 ?>
