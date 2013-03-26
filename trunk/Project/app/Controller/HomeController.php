@@ -126,14 +126,17 @@
 	
 		if ($this->pesquisar_sigla($sigla)){
 			//emeson
-			//if ($this->pesquisar_atividade($id_projeto, $turno, $data)){
-			//	$this->editar_atividade($id_projeto, $turno, $data, $consultor, pesquisar_sigla($sigla))
-			//}else{
-				$this->inserir_atividade($projeto_id, $turno, $data, $consultor, $this->pesquisar_sigla($sigla));
+			if ($this->pesquisar_atividade($id_projeto, $turno, $data)){
+				$this->edtion_activity($id_projeto, $turno, $data, $consultor, pesquisar_sigla($sigla))
+			}
+			else{
+				$this->inserir_atividade($projeto_id, $data, $turno, $this->pesquisar_sigla($sigla), $consultor);
+			}
 			
-		}else{
+		}
+		else{
 			
-			//$this->Session->setFlash($this->flashError('Consultor não encontrado'));
+			$this->Session->setFlash($this->flashError('Consultor não encontrado'));
 			
 		}
 	}
@@ -147,11 +150,6 @@
 			return false;
 		}
 	}
-
-	//emeson	
-	public function pesquisar_atividade($projeto_id, $turno, $data){
-		return true;
-	}
 	
 	//rodrigo
 	private function inserir_atividade($projeto_id, $turno, $data, $consultor, $sigla){
@@ -162,11 +160,51 @@
 			$this->Home->Activity->query("INSERT INTO `activities`(`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('13:00','17:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
 		}
 	}
-	
-	//emeson	
-	private function editar_atividade($id_atividade,$posicao_consultor, $sigla){
-		return true;
-	}
+
+		//emeson
+		public function search_activity($project_id, $date, $time){
+
+        	if ($time == 'M') {
+        		$hours_initial = 6;
+        		$hours_end = 12;
+        	}
+        	else{
+        		$hours_initial = 12;
+        		$hours_end = 18;
+        	}
+
+        	if (!empty($this->Home->Activity->query('SELECT * FROM activities WHERE HOUR(start_hours) <= '.$hours_initial.' AND HOUR(end_hours) >= '.$hours_end.' AND project_id = '.$project_id)) {
+        		return TRUE;
+        	}
+        	else{
+        		return FALSE;
+        	}
+
+        }
+
+        //emeson
+        public function edit_activity($project_id, $date, $time, $abbreviation, $number_consultant){
+
+        	if ($time == 'M') {
+        		$hours_initial = 6;
+        		$hours_end = 12;
+        	}
+        	else{
+        		$hours_initial = 12;
+        		$hours_end = 18;
+        	}
+
+        	$consultant_id = $this->Home->Activity->query('SELECT consultants.id FROM activities, consultants WHERE activities.consultant'.$number_consultant.'_id = consultants.id AND consultants.acronym = '.$abbreviation.' AND HOUR(start_hours) <= '.$hours_initial.' AND HOUR(end_hours) >= '.$hours_end.' AND project_id = '.$project_id);
+
+        	if($this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = '.$consultant_id[0]['consultants']['id'].' WHERE HOUR(start_hours) <= '.$hours_initial.' AND HOUR(end_hours) >= '.$hours_end.' AND project_id = '.$project_id)){
+        		return TRUE;
+        	}
+        	else{
+        		return FALSE;
+        	}
+
+        }
      		
  }
+
 ?>
