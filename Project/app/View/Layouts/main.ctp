@@ -70,18 +70,6 @@ else{
 ?><br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <div id = 'div_tabela_projetos'>
 <table border = 2 align=left id='listaProjetosTabela'>
 
@@ -260,22 +248,8 @@ foreach ($projectsPais as $project) {
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div id = 'div_tabela_agenda'>
-<table border = 2 id="tabela_agenda" >
+<table border = 2 id="tabela_agenda" class="tabelaEditavel" >
 
 <?php
 
@@ -455,7 +429,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
 				echo '</td >';}
 			
 			//valor da tarde do dia
@@ -466,7 +440,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
 				echo '</td >';}
 		}	
 	}
@@ -491,7 +465,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
+				echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
 				echo '</td >';}
 			
 			//valor da tarde do dia
@@ -502,7 +476,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
+				echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
 				echo '</td >';}
 		}	
 	}
@@ -527,7 +501,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
 				echo '</td >';}
 			
 			//valor da tarde do dia
@@ -538,7 +512,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
 				echo '</td >';}
 		}	
 	}
@@ -563,7 +537,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
 				echo '</td >';}
 			
 			//valor da tarde do dia
@@ -574,7 +548,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
 				echo '</td >';}
 		}	
 	}
@@ -628,7 +602,7 @@ foreach ($projectsPais as $project) {
 								echo '</td >';
 							}
 							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
 								echo '</td >';}
 							
 							//valor da tarde do dia
@@ -639,7 +613,7 @@ foreach ($projectsPais as $project) {
 								echo '</td >';
 							}
 							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
 								echo '</td >';}
 						}	
 					}
@@ -664,7 +638,7 @@ foreach ($projectsPais as $project) {
 								echo '</td >';
 							}
 							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
+								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
 								echo '</td >';}
 							
 							//valor da tarde do dia
@@ -675,7 +649,7 @@ foreach ($projectsPais as $project) {
 								echo '</td >';
 							}
 							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
+								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
 								echo '</td >';}
 						}	
 					}
@@ -700,7 +674,7 @@ foreach ($projectsPais as $project) {
 								echo '</td >';
 							}
 							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
 								echo '</td >';}
 							
 							//valor da tarde do dia
@@ -711,7 +685,7 @@ foreach ($projectsPais as $project) {
 								echo '</td >';
 							}
 							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
 								echo '</td >';}
 						}	
 					}
@@ -780,7 +754,7 @@ foreach ($projectsPais as $project) {
 										echo '</td >';
 									}
 									else {
-										echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
 										echo '</td >';}
 									
 									//valor da tarde do dia
@@ -791,7 +765,7 @@ foreach ($projectsPais as $project) {
 										echo '</td >';
 									}
 									else {
-										echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
 										echo '</td >';}
 								}	
 							}
@@ -816,7 +790,7 @@ foreach ($projectsPais as $project) {
 										echo '</td >';
 									}
 									else {
-										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
+										echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
 										echo '</td >';}
 									
 									//valor da tarde do dia
@@ -827,7 +801,7 @@ foreach ($projectsPais as $project) {
 										echo '</td >';
 									}
 									else {
-										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
+										echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
 										echo '</td >';}
 								}	
 							}
@@ -852,7 +826,7 @@ foreach ($projectsPais as $project) {
 										echo '</td >';
 									}
 									else {
-										echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
 										echo '</td >';}
 									
 									//valor da tarde do dia
@@ -863,7 +837,7 @@ foreach ($projectsPais as $project) {
 										echo '</td >';
 									}
 									else {
-										echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
 										echo '</td >';}
 								}	
 							}

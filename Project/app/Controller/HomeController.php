@@ -9,6 +9,8 @@
  class HomeController extends AppController{
 
         public function index () {
+				
+
                $this->layout =  'main';
 			   $this-> set ('tipo_usuario',$this->Auth->user('type'));			 		
 				$this -> set ('projectsPais', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id =' => null))));
@@ -110,6 +112,61 @@
 				$this -> set ('arrayConsultor4',$arrayConsultor4);
 				
         }
+	
+	
+	//rodrigo
+	public function tratar_string($string){		
+		$stringFatiada = explode('.' , $string);
+		$projeto_id = $stringFatiada[0];
+		$turno = $stringFatiada[1];
+		$data = $stringFatiada[2];
+		$data= str_replace("-", "/", $data);
+		$consultor = $stringFatiada[3];
+		$sigla = $stringFatiada[4];
+	
+		if ($this->pesquisar_sigla($sigla)){
+			//emeson
+			//if ($this->pesquisar_atividade($id_projeto, $turno, $data)){
+			//	$this->editar_atividade($id_projeto, $turno, $data, $consultor, pesquisar_sigla($sigla))
+			//}else{
+				$this->inserir_atividade($projeto_id, $turno, $data, $consultor, $this->pesquisar_sigla($sigla));
+			
+		}else{
+			
+			//$this->Session->setFlash($this->flashError('Consultor não encontrado'));
+			
+		}
+	}
+	
+	//rodrigo
+	private function pesquisar_sigla($sigla){
+		$consultor = $this->Home->Consultant->query("SELECT * FROM consultants where acronym = '".$sigla."'");
+		if ($consultor != Null){				
+			return $consultor[0]['consultants']['id'];
+		}else{		
+			return false;
+		}
+	}
+
+	//emeson	
+	public function pesquisar_atividade($projeto_id, $turno, $data){
+		return true;
+	}
+	
+	//rodrigo
+	private function inserir_atividade($projeto_id, $turno, $data, $consultor, $sigla){
+		if ($turno == 'M'){	
+			$this->Home->Activity->query("INSERT INTO `activities`(`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('08:00','12:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
+
+		}else{
+			$this->Home->Activity->query("INSERT INTO `activities`(`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('13:00','17:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
+		}
+	}
+	
+	//emeson	
+	private function editar_atividade($id_atividade,$posicao_consultor, $sigla){
+		return true;
+	}
      		
  }
 ?>
