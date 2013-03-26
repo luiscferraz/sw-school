@@ -46,7 +46,7 @@ $('document').ready(function(){
 		url = limparUrlHome(url);
         $.ajax({
                  async: false,
-         url: url+"Home/tratar_string/"+string, //URL que puxa os dados
+         url: url+"Home/edition_agenda/"+string, //URL que puxa os dados
          dataType: "json", //Tipo de Retorno
          success: function(json){ //Se ocorrer tudo certo                      
 
