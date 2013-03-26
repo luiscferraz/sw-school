@@ -193,8 +193,7 @@
         		$hours_initial = '12:00';
         		$hours_end = '23:59';
         	}
-
-        	//$consultant_id = $this->Home->Activity->query('SELECT consultants.id FROM activities, consultants WHERE activities.date = '.$date.' AND activities.consultant'.$number_consultant.'_id = consultants.id AND consultants.acronym = '.$abbreviation.' AND HOUR(start_hours) <= '.$hours_initial.' AND HOUR(end_hours) >= '.$hours_end.' AND project_id = '.$project_id);
+        	
 
         	if($this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = '.$consultant_id.' WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)){
         		return TRUE;
