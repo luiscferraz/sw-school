@@ -10910,3 +10910,12 @@
 #3 /home/emeson/Documentos/sw-school/Project/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
 #4 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-03-27 21:54:05 Error: [MissingControllerException] Controller class IndexController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-27 21:54:05 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-27 21:54:05 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

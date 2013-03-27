@@ -33,11 +33,11 @@ if( !isset($date_submit)){
 }
 	?>
 
-<form method="post" action="">
+<form method="post" action="home">
 	<input class="date" id="data-agenda" type="text" value=<?php echo $date_submit; ?> name="date_submit" maxlength="10" />
 	<input class="botao" id="botao-aplicar-data" type="submit" value=" Aplicar " />
 </form>
-<form method="post" action="">
+<form method="post" action="home">
 	<input class="botao" id="botao-hoje-data" type="submit" value="  Hoje  " />
 </form>
 <br>
