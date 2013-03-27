@@ -48,18 +48,18 @@ $('document').ready(function(){
 		var url = window.location.toString();
 		url = limparUrlHome(url);
         $.ajax({
-         async: false,
-         url: url+"Home/edition_agenda/"+string, //URL que puxa os dados
-         dataType: "json", //Tipo de Retorno
-         success: function(json){ //Se ocorrer tudo certo                      
-			mensagem = json.mensagem;
-			if (mensagem != 'ok'){
-				alert(mensagem);
-			}
-         }      
-    });
-
-	location.reload();
+            async: false,
+            url: url+"Home/edition_agenda/"+string, //URL que puxa os dados
+            dataType: "json", //Tipo de Retorno
+            success: function(json){ //Se ocorrer tudo certo                      
+			     mensagem = json.mensagem;
+			     if (mensagem != 'ok'){
+				    alert(mensagem);
+			     }
+            }      
+        });
+        //location.reload();
+        $('#botao-aplicar-data').click();
         
         }
 		
