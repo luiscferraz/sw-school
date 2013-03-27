@@ -396,6 +396,10 @@ p span {
 	margin-left: 200px;
 }
 
+#dados{
+	height: 398px;
+}
+
 #hora-view-atividades{
 	width: 20% !important;
 	margin-left: 20px !important;
@@ -405,22 +409,22 @@ p span {
 	margin-left: 5px !important;
 }
 
+#titulodados, #tituloendereco{
+	margin-right: 8px;
+}
+
 #usuario{
 	background: #bcdae0;
 	border: none;
-	width: 96%;
+	width: 30%;
 }
 
-#campo_usuario{
-	width: 25%;
-}
-
-#senha{
-	width: 25%;
+#campo_usuario, #senha{
+	width: 60%;
 }
 
 #tipousuario{
-	width: 25%;
+	width: 60%;
 	height: 25px;
 }
 
@@ -1027,6 +1031,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	border-collapse: 0px;
 }
 .zebra td, .zebra th {
+	text-align: center;
     padding: 10px;
     border-bottom: 1px solid #f2f2f2;  
     
@@ -1042,7 +1047,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 }
 
 .zebra th {
-    text-align: left;
+    text-align: center;
     text-shadow: 0 1px 0 rgba(255,255,255,.5); 
     border-bottom: 1px solid #ccc;
     background-color: #eee;
