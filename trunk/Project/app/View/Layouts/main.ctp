@@ -541,7 +541,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
+				echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
 				echo '</td >';}
 			
 			//valor da tarde do dia
@@ -552,7 +552,7 @@ foreach ($projectsPais as $project) {
 				echo '</td >';
 			}
 			else {
-				echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
+				echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
 				echo '</td >';}
 		}	
 	}
