@@ -21,7 +21,11 @@
 echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
 ?>
 
-<h1>Agenda</h1>
+<h1>
+		_______________ Agenda
+</h1>
+<IMG id="logoAgenda" SRC="./img/logo.gif">
+
 <?php include 'includes/menu.php'; ?>
 <?php 
 if( !isset($date_submit)){
@@ -361,10 +365,10 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		
 	} else {
 		//imprime as 2 colunas Manha e Tarde
-		echo '<td align=center bgcolor="Turquoise">';
+		echo '<td align=center id="tdTurnos" bgcolor="Turquoise">';
 		echo '&nbsp;M&nbsp;';			
 		echo '</td >';
-		echo '<td align=center bgcolor="PaleGreen">';
+		echo '<td align=center id="tdTurnos" bgcolor="PaleGreen">';
 		echo '&nbsp;T&nbsp;';		
 		echo '</td>';
 	}	
