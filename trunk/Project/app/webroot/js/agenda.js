@@ -26,6 +26,9 @@ $('document').ready(function(){
         $(this).children().first().keypress(function (e) {
             if (e.which == 13) {
                 var novoConteudo = $(this).val();
+                if (novoConteudo == '') {
+                    novoConteudo = 'NULO';
+                };
 				string = string+'.'+novoConteudo;							
                 //$(this).parent().text(novoConteudo);				
                 $(this).parent().removeClass("celulaEmEdicao");				
