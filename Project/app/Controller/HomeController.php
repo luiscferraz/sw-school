@@ -121,8 +121,6 @@
 				
         }
 	
-	
-	//rodrigo
 	public function edition_agenda($string){		
 		$stringFatiada = explode('.' , $string);
 		$projeto_id = $stringFatiada[0];
@@ -132,8 +130,8 @@
 		$consultor = $stringFatiada[3];
 		$sigla = $stringFatiada[4];
 	
-		if ($this->search_abbreviation($sigla)){
-			//emeson
+		if ($this->search_abbreviation($sigla)){	
+		
 			if ($this->search_activity($projeto_id, $data, $turno)){
 				$this->edition_activity($projeto_id, $data, $turno, $this->search_abbreviation($sigla), $consultor);
 			}
@@ -149,7 +147,6 @@
 		}
 	}
 	
-	//rodrigo
 	private function search_abbreviation($sigla){
 		$consultor = $this->Home->Consultant->query("SELECT * FROM consultants where acronym = '".$sigla."'");
 		if ($consultor){				
@@ -159,7 +156,6 @@
 		}
 	}
 	
-	//rodrigo
 	private function insert_activity($projeto_id, $turno, $data, $consultor, $sigla){
 		if ($turno == 'M'){	
 			$this->Home->Activity->query("INSERT INTO `activities`(`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('08:00','12:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
@@ -169,7 +165,6 @@
 		}
 	}
 
-		//emeson
 		private function search_activity($project_id, $date, $time){
 
         	if ($time == 'M') {
@@ -190,7 +185,6 @@
 
         }
 
-        //emeson
         private function edition_activity($project_id, $date, $time, $consultant_id, $number_consultant){
 
         	if ($time == 'M') {
