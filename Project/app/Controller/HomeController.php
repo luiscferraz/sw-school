@@ -143,6 +143,15 @@
 			$retorno['mensagem'] = 'ok';
 			echo json_encode($retorno);
 		}
+		elseif ($sigla == 'NULO') {
+			if ($this->search_activity($projeto_id, $data, $turno)){
+				$this->edition_activity($projeto_id, $data, $turno, NULL, $consultor);
+
+				if (!$this->check_consultant($projeto_id, $data, $turno)) {
+					$this->delete_activity($projeto_id, $data, $turno);
+				}
+			}
+		}
 		else{
 			$retorno = array();
 			$retorno['mensagem'] = 'Sigla inexistente!';
@@ -200,15 +209,53 @@
         		$hours_end = '23:59';
         	}
 
+        	if (!$consultant_id) {
+        		$this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = NULL WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id);
+        	}
+        	else{
+        		$this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = '.$consultant_id.' WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id);
+        	}
 
-        	if($this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = '.$consultant_id.' WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)){
+        } 
+
+        private function check_consultant($project_id, $date, $time){
+
+        	if ($time == 'M') {
+        		$hours_initial = '01:00';
+        		$hours_end = '12:00';
+        	}
+        	else{
+        		$hours_initial = '12:00';
+        		$hours_end = '23:59';
+        	}
+
+        	if ($this->Home->Activity->query('SELECT * FROM activities WHERE (activities.consultant1_id IS NOT NULL OR activities.consultant2_id IS NOT NULL OR activities.consultant3_id IS NOT NULL OR activities.consultant4_id IS NOT NULL) AND activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
         		return TRUE;
         	}
         	else{
         		return FALSE;
         	}
 
-        } 
+        }
+
+        private function delete_activity($project_id, $date, $time){
+
+        	if ($time == 'M') {
+        		$hours_initial = '01:00';
+        		$hours_end = '12:00';
+        	}
+        	else{
+        		$hours_initial = '12:00';
+        		$hours_end = '23:59';
+        	}
+
+        	if ($this->Home->Activity->query('DELETE FROM activities WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
+        		return TRUE;
+        	}
+        	else{
+        		return FALSE;
+        	}
+        }
      		
  }
 
