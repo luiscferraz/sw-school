@@ -4,15 +4,11 @@
 	<head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<?php echo $this->Html->css('reset'); ?>		
-		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>
-		<?php echo $this->Html->css('jquery.weekcalendar'); ?>
-		<?php echo $this->Html->css('tipsy'); ?>
+		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>				
 		<?php echo $this->Html->css('demo'); ?>		
 		<?php echo $this->Html->css('agenda'); ?>		
 		<?php echo $this->Html->script('jquery-1.7.1.min'); ?>
 	    <?php echo $this->Html->script('jquery-ui-1.8rc3.custom.min'); ?>
-	    <?php echo $this->Html->script('jquery.weekcalendar'); ?>
-	    <?php echo $this->Html->script('jquery.tipsy'); ?>
 		<?php echo $this->Html->script('agenda'); ?>	    
 	    <?php echo $this->Html->script('aplicacao'); ?>
 
