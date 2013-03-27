@@ -151,6 +151,9 @@
 					$this->delete_activity($projeto_id, $data, $turno);
 				}
 			}
+			$retorno = array();
+			$retorno['mensagem'] = 'ok';
+			echo json_encode($retorno);
 		}
 		else{
 			$retorno = array();
