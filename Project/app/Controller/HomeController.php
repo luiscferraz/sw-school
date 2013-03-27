@@ -121,7 +121,8 @@
 				
         }
 	
-	public function edition_agenda($string){		
+	public function edition_agenda($string){	
+		$this->layout = 'edition_agenda';	
 		$stringFatiada = explode('.' , $string);
 		$projeto_id = $stringFatiada[0];
 		$turno = $stringFatiada[1];
@@ -129,7 +130,7 @@
 		$data= str_replace("-", "/", $data);
 		$consultor = $stringFatiada[3];
 		$sigla = $stringFatiada[4];
-	
+		
 		if ($this->search_abbreviation($sigla)){	
 		
 			if ($this->search_activity($projeto_id, $data, $turno)){
@@ -138,11 +139,14 @@
 			else{
 				$this->insert_activity($projeto_id, $turno, $data, $consultor, $this->search_abbreviation($sigla));
 			}
-			
+			$retorno = array();
+			$retorno['mensagem'] = 'ok';
+			echo json_encode($retorno);
 		}
 		else{
-			
-			$this->Session->setFlash($this->flashError('Consultor não encontrado'));
+			$retorno = array();
+			$retorno['mensagem'] = 'Sigla inexistente!';
+			echo json_encode($retorno);
 			
 		}
 	}
