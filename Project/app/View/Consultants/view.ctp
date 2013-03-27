@@ -17,8 +17,7 @@
 	<h2 id="titulodados"> Dados Pessoais </h2>
 	<p><span>Nome: </span> <?php echo $consultant['Consultant']['name']; ?></p>
 	<p><span>CPF: </span><?php echo $consultant['Consultant']['cpf']; ?></p>
-	<p><span>Abreviação: </span><?php echo $consultant['Consultant']['acronym']; ?></p>
-	<p><span>Cor: </span><spam id="colorview" style="background-color:<?php echo $consultant['Consultant']['acronym_color']; ?>"><?php echo $consultant['Consultant']['acronym_color']; ?></spam></p>
+	<p><span>Cor/Sigla: </span><spam id="colorview" style="background-color:<?php echo $consultant['Consultant']['acronym_color']; ?>"><?php echo $consultant['Consultant']['acronym']; ?></spam></p>
 	<p><span>Telefone: </span><?php echo $consultant['Consultant']['phone1']; ?></p>
 	<p><span>Celular: </span><?php echo $consultant['Consultant']['phone2']; ?></p>
 	<p><span>E-mail: </span><?php echo $consultant['Consultant']['email']; ?></p>
@@ -39,6 +38,8 @@
 <div id='consultant'>
 	<?php echo $this->Html->image('consultant.jpg')?>
 </div>
+
+<h2>Projetos</h2>
 
 <table id="tabela-projetos" cellpadding="0" cellspacing="0">
 		<tr>

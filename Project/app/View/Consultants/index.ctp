@@ -33,7 +33,7 @@
 			<td class="email responsive"><?php echo $consul['Consultant']['email']; ?></td>
 			<td class="telefone responsive"><?php echo $consul['Consultant']['phone1']; ?></td>
 			<td class="telefone responsive"><?php echo $consul['Consultant']['phone2']; ?>
-			<td class="cor responsive" style="background-color:<?php echo $consul['Consultant']['acronym_color']; ?>"><?php echo $consul['Consultant']['acronym_color']; ?>
+			<td class="cor responsive" style="background-color:<?php echo $consul['Consultant']['acronym_color']; ?>"><?php echo $consul['Consultant']['acronym']; ?>
 			<div>
 				<td class="actions">
 					<?php echo $this->Html->link(
