@@ -174,10 +174,10 @@
 	
 	private function insert_activity($projeto_id, $turno, $data, $consultor, $sigla){
 		if ($turno == 'M'){	
-			$this->Home->Activity->query("INSERT INTO `activities`(`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('08:00','12:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
+			$this->Home->Activity->query("INSERT INTO `activities`(`description`,`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('-Indefinida-','08:00','12:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
 
 		}else{
-			$this->Home->Activity->query("INSERT INTO `activities`(`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('13:00','17:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
+			$this->Home->Activity->query("INSERT INTO `activities`(`description`,`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('-Indefinida-','13:00','17:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
 		}
 	}
 
@@ -259,7 +259,18 @@
         		return FALSE;
         	}
         }
-     		
+ 
+	public function AjaxListConsultants(){
+		$this->layout = 'ajax';
+		$this -> set ('consultants', $this->Home->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1),'order'=>array('Consultant.name'))));
+		
+	}
+	
+	public function AjaxListConsultantNome($name){
+		$this->layout = 'ajax';
+		$consultants = $this->Home->Consultant->query("SELECT * FROM consultants WHERE LOWER(name) like LOWER('%" . $name . "%')");
+		$this-> set('consultants', $consultants);
+	}
  }
 
 ?>

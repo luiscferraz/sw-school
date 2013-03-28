@@ -173,6 +173,16 @@ label {
 	text-align: center;
 }
 
+
+/* ==================BOTÃO PESQUISAR CONSULTOR===============*/	
+#botao-pesquisar-consultor{
+
+        margin:-4px;
+        float: right;
+        padding:10px 5px;
+        margin-right: 5px;
+    }
+	
 /*label{
 	margin-left: 100px;
 

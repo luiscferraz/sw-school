@@ -7,12 +7,14 @@
 		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>
 		<?php echo $this->Html->css('tipsy'); ?>
 		<?php echo $this->Html->css('demo'); ?>		
-		<?php echo $this->Html->css('agenda'); ?>		
+		<?php echo $this->Html->css('agenda'); ?>	
+		<?php echo $this->Html->css('jquery.fancybox'); ?>		
 		<?php echo $this->Html->script('jquery-1.7.1.min'); ?>
 	    <?php echo $this->Html->script('jquery-ui-1.8rc3.custom.min'); ?>
 	    <?php echo $this->Html->script('jquery.tipsy'); ?>
 		<?php echo $this->Html->script('agenda'); ?>	    
 	    <?php echo $this->Html->script('aplicacao'); ?>
+		<?php echo $this->Html->script('jquery.fancybox'); ?>
 
 	</head>
 <body> 
@@ -20,7 +22,7 @@
 <?php
 echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
 ?>
-
+<input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
 <h1>
 		_______________ Agenda
 </h1>
@@ -280,7 +282,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '<td colspan="10" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
 		echo '</td>';
-		echo '<td colspan="4" bgcolor="gray" align=center>';
+		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';
 		$dia = $dia+6;
@@ -288,7 +290,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '<td colspan="8" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
 		echo '</td>';
-		echo '<td colspan="4" bgcolor="gray" align=center>';
+		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';
 		$dia = $dia+5;
@@ -296,7 +298,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '<td colspan="6" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
 		echo '</td>';
-		echo '<td colspan="4" bgcolor="gray" align=center>';
+		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';
 		$dia = $dia+4;
@@ -304,7 +306,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '<td colspan="4" ',$bgColorMes,'>';
 		echo date('M',$dataFinal);
 		echo '</td>';
-		echo '<td colspan="4" bgcolor="gray" align=center>';
+		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';
 		$dia = $dia+3;
@@ -312,12 +314,12 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '<td colspan="2" ',$bgColorMes,'>';
 		echo date('M',$dataFinal);
 		echo '</td>';
-		echo '<td colspan="4" bgcolor="gray" align=center>';
+		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';
 		$dia = $dia+2;
 	} elseif ($ver == 'Sat'){
-		echo '<td colspan="4" bgcolor="gray" align=center>';
+		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';
 		$dia = $dia+1;
@@ -332,8 +334,6 @@ echo '</tr>';
 
 //linha dos números dos dias
 echo '<tr>';
-$final_de_semana = array('Sat','Sun');
-//perspectiva de 6 meses apartir da data de hoje(180 dias)
 for ($dia = 0; $dia <= $dias; $dia++) {
 	//cria uma data com a data de hoje + (24 horas*contador)
 	$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
@@ -343,11 +343,16 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	$bgColorDia = 'style="background-image: -webkit-gradient(linear, right top, left bottom, from(#ffdead), to(#f4e9bd));"';
 
 
-	if (in_array((date('D',$dataFinal)),$final_de_semana)){
+	if (date('D',$dataFinal) == 'Sat'){
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
-		echo '</td>';		
-		
+		echo '</td>';	
+		$dia = $dia+1;
+		}
+	else if (date('D',$dataFinal) == 'Sun'){	
+		echo '<td colspan="2" bgcolor="gray" align=center>';
+		echo '&nbsp;&nbsp;';
+		echo '</td>';
 	//imprime o numero do dia
 	} else {
 		echo '<td colspan="2" ',$bgColorDia,'>';
@@ -360,7 +365,6 @@ echo '</tr>';
 
 //linha dos M T
 echo '<tr>';
-$final_de_semana = array('Sat','Sun');
 for ($dia = 0; $dia <= $dias; $dia++) {
 	//cria uma data com a data de hoje + (24 horas*contador)
 	$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
@@ -373,11 +377,16 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	$bgColorT = 'style="background-image: -webkit-gradient(linear, right top, left bottom, from(#98fb98), to(#64cf64));"';
 
 
-	if (in_array((date('D',$dataFinal)),$final_de_semana)){
+	if (date('D',$dataFinal) == 'Sat'){
+		echo '<td colspan="2" bgcolor="gray" align=center>';
+		echo '&nbsp;&nbsp;';		
+		echo '</td>';	
+		$dia = $dia+1;
+		}
+	else if (date('D',$dataFinal) == 'Sun'){	
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';
-		
 	} else {
 		//imprime as 2 colunas Manha e Tarde
 		echo '<td id="tdTurnos" ',$bgColorM,'>';
@@ -430,15 +439,19 @@ foreach ($projectsPais as $project) {
 	//se o projeto não tiver filhos/netos, não precisa mesclar abaixo, ja pode imprimir os consultores
 	if ($mesclar == 0) {
 	//Caso1 - Projetos sem filhos
-	//Linha do consultor 1 dos projetos sem filhos
-	$final_de_semana = array('Sat','Sun');
+	//Linha do consultor 1 dos projetos sem filhos	
 	for ($dia = 0; $dia <= $dias; $dia++) {	
 		$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-		if (in_array((date('D',$dataFinal)),$final_de_semana)){
+		if (date('D',$dataFinal) == 'Sat'){
 		//se for fim de semana fica cinza
 			echo '<td colspan="2" bgcolor="gray" align=center>';
 			echo '&nbsp;&nbsp;';		
-			echo '</td>';		
+			echo '</td>';
+			$dia = $dia+1;	
+		}else if (date('D',$dataFinal) == 'Sun'){	
+			echo '<td colspan="2" bgcolor="gray" align=center>';
+			echo '&nbsp;&nbsp;';		
+			echo '</td>';			
 		} else {
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
@@ -467,11 +480,15 @@ foreach ($projectsPais as $project) {
 	
 	//Linha do consultor 2 dos projetos sem filhos
 	echo '<tr>';
-	$final_de_semana = array('Sat','Sun');
 	for ($dia = 0; $dia <= $dias; $dia++) {	
 		$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-		if (in_array((date('D',$dataFinal)),$final_de_semana)){
-		//se for fim de semana fica cinza
+		if (date('D',$dataFinal) == 'Sat'){
+			echo '<td colspan="2" bgcolor="gray" align=center>';
+			echo '&nbsp;&nbsp;';		
+			echo '</td>';	
+			$dia = $dia+1;
+		}
+		else if (date('D',$dataFinal) == 'Sun'){	
 			echo '<td colspan="2" bgcolor="gray" align=center>';
 			echo '&nbsp;&nbsp;';		
 			echo '</td>';		
@@ -503,14 +520,18 @@ foreach ($projectsPais as $project) {
 
 	//Linha do consultor 3 dos projetos sem filhos
 	echo '<tr>';
-	$final_de_semana = array('Sat','Sun');
 	for ($dia = 0; $dia <= $dias; $dia++) {	
 		$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-		if (in_array((date('D',$dataFinal)),$final_de_semana)){
-		//se for fim de semana fica cinza
+		if (date('D',$dataFinal) == 'Sat'){
 			echo '<td colspan="2" bgcolor="gray" align=center>';
 			echo '&nbsp;&nbsp;';		
-			echo '</td>';		
+			echo '</td>';	
+			$dia = $dia+1;
+		}
+		else if (date('D',$dataFinal) == 'Sun'){	
+			echo '<td colspan="2" bgcolor="gray" align=center>';
+			echo '&nbsp;&nbsp;';	
+			echo '</td>';
 		} else {
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
@@ -539,14 +560,18 @@ foreach ($projectsPais as $project) {
 	
 	//Linha do consultor 4 dos projetos sem filhos
 	echo '<tr>';
-	$final_de_semana = array('Sat','Sun');
 	for ($dia = 0; $dia <= $dias; $dia++) {	
 		$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-		if (in_array((date('D',$dataFinal)),$final_de_semana)){
-		//se for fim de semana fica cinza
+		if (date('D',$dataFinal) == 'Sat'){
 			echo '<td colspan="2" bgcolor="gray" align=center>';
 			echo '&nbsp;&nbsp;';		
-			echo '</td>';		
+			echo '</td>';	
+			$dia = $dia+1;
+		}
+		else if (date('D',$dataFinal) == 'Sun'){	
+			echo '<td colspan="2" bgcolor="gray" align=center>';
+			echo '&nbsp;&nbsp;';	
+			echo '</td>';
 		} else {
 			//valor da manha do dia
 			$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
@@ -604,13 +629,18 @@ foreach ($projectsPais as $project) {
 				if (($conta_netos2 == 4)and($check_conta_netos == 1)) {		
 				// Caso2 - Projetos com filhos e sem netos
 					//Linha do consultor 1 dos projetos com filhos e sem netos
-					$final_de_semana = array('Sat','Sun');
+					
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-						if (in_array((date('D',$dataFinal)),$final_de_semana)){
-						//se for fim de semana fica cinza
+						if (date('D',$dataFinal) == 'Sat'){
 							echo '<td colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
+							echo '</td>';	
+							$dia = $dia+1;
+						}
+						else if (date('D',$dataFinal) == 'Sun'){	
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';	
 							echo '</td>';		
 						} else {
 							//valor da manha do dia
@@ -639,15 +669,20 @@ foreach ($projectsPais as $project) {
 					echo '</tr>';
 	
 					//Linha do consultor 2 dos projetos com filhos e sem netos
-					echo '<tr>';
-					$final_de_semana = array('Sat','Sun');
+					echo '<tr>';					
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-						if (in_array((date('D',$dataFinal)),$final_de_semana)){
-						//se for fim de semana fica cinza
+						if (date('D',$dataFinal) == 'Sat'){
 							echo '<td colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
+							echo '</td>';	
+							$dia = $dia+1;
+						}
+						else if (date('D',$dataFinal) == 'Sun'){	
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';	
 							echo '</td>';		
+
 						} else {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
@@ -676,14 +711,20 @@ foreach ($projectsPais as $project) {
 
 					//Linha do consultor 3 dos projetos com filhos e sem netos
 					echo '<tr>';
-					$final_de_semana = array('Sat','Sun');
+
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-						if (in_array((date('D',$dataFinal)),$final_de_semana)){
-						//se for fim de semana fica cinza
+						if (date('D',$dataFinal) == 'Sat'){
 							echo '<td colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
+							echo '</td>';	
+							$dia = $dia+1;
+						}
+						else if (date('D',$dataFinal) == 'Sun'){	
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';	
 							echo '</td>';		
+
 						} else {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
@@ -711,15 +752,20 @@ foreach ($projectsPais as $project) {
 					echo '</tr>';
 	
 					//Linha do consultor 4 dos projetos com filhos e sem netos
-					echo '<tr>';
-					$final_de_semana = array('Sat','Sun');
+					echo '<tr>';					
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-						if (in_array((date('D',$dataFinal)),$final_de_semana)){
-						//se for fim de semana fica cinza
+						if (date('D',$dataFinal) == 'Sat'){
 							echo '<td colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
+							echo '</td>';	
+							$dia = $dia+1;
+						}
+						else if (date('D',$dataFinal) == 'Sun'){	
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';	
 							echo '</td>';		
+
 						} else {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
@@ -755,15 +801,20 @@ foreach ($projectsPais as $project) {
 							//echo '</td>';
 							
 							//Caso3 - Projetos com filhos e com netos
-							//Linha do consultor 1 dos projetos com filhos e com netos
-							$final_de_semana = array('Sat','Sun');
+							//Linha do consultor 1 dos projetos com filhos e com netos							
 							for ($dia = 0; $dia <= $dias; $dia++) {	
 								$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-								if (in_array((date('D',$dataFinal)),$final_de_semana)){
-								//se for fim de semana fica cinza
+								if (date('D',$dataFinal) == 'Sat'){
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
+									echo '</td>';	
+									$dia = $dia+1;
+								}
+								else if (date('D',$dataFinal) == 'Sun'){	
+									echo '<td colspan="2" bgcolor="gray" align=center>';
+									echo '&nbsp;&nbsp;';	
 									echo '</td>';		
+
 								} else {
 									//valor da manha do dia
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
@@ -792,14 +843,19 @@ foreach ($projectsPais as $project) {
 							
 							//Linha do consultor 2 dos projetos com filhos e com netos
 							echo '<tr>';
-							$final_de_semana = array('Sat','Sun');
 							for ($dia = 0; $dia <= $dias; $dia++) {	
 								$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-								if (in_array((date('D',$dataFinal)),$final_de_semana)){
-								//se for fim de semana fica cinza
+								if (date('D',$dataFinal) == 'Sat'){
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
+									echo '</td>';	
+									$dia = $dia+1;
+								}
+								else if (date('D',$dataFinal) == 'Sun'){	
+									echo '<td colspan="2" bgcolor="gray" align=center>';
+									echo '&nbsp;&nbsp;';	
 									echo '</td>';		
+
 								} else {
 									//valor da manha do dia
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
@@ -828,14 +884,19 @@ foreach ($projectsPais as $project) {
 
 							//Linha do consultor 3 dos projetos com filhos e com netos
 							echo '<tr>';
-							$final_de_semana = array('Sat','Sun');
 							for ($dia = 0; $dia <= $dias; $dia++) {	
 								$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-								if (in_array((date('D',$dataFinal)),$final_de_semana)){
-								//se for fim de semana fica cinza
+								if (date('D',$dataFinal) == 'Sat'){
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
+									echo '</td>';	
+									$dia = $dia+1;
+								}
+								else if (date('D',$dataFinal) == 'Sun'){	
+									echo '<td colspan="2" bgcolor="gray" align=center>';
+									echo '&nbsp;&nbsp;';	
 									echo '</td>';		
+
 								} else {
 									//valor da manha do dia
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
@@ -864,14 +925,20 @@ foreach ($projectsPais as $project) {
 							
 							//Linha do consultor 4 dos projetos com filhos e com netos
 							echo '<tr>';
-							$final_de_semana = array('Sat','Sun');
+
 							for ($dia = 0; $dia <= $dias; $dia++) {	
 								$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-								if (in_array((date('D',$dataFinal)),$final_de_semana)){
-								//se for fim de semana fica cinza
+								if (date('D',$dataFinal) == 'Sat'){
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
+									echo '</td>';	
+									$dia = $dia+1;
+								}
+								else if (date('D',$dataFinal) == 'Sun'){	
+									echo '<td colspan="2" bgcolor="gray" align=center>';
+									echo '&nbsp;&nbsp;';	
 									echo '</td>';		
+
 								} else {
 									//valor da manha do dia
 									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
