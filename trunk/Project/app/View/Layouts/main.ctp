@@ -27,7 +27,9 @@ echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/a
 <IMG id="logoAgenda" SRC="./img/logo.gif">
 
 <?php include 'includes/menu.php'; ?>
-<?php 
+<?php
+date_default_timezone_set('America/Recife');
+
 if( !isset($date_submit)){
 	$date_submit = date('d/m/Y'); 
 }
@@ -78,8 +80,6 @@ else{
 <table border = 2 align=left id='listaProjetosTabela'>
 
 <?php
-
-date_default_timezone_set('America/Recife');
 
 //linha dos meses
 
