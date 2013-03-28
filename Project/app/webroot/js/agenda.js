@@ -69,6 +69,36 @@ function limparUrlHome(url){
         return url;
 }
 
+
 		
 });
 
+function listConsultores (){
+		var url = window.location.toString();
+		url = limparUrlHome2(url);
+		$.get(url+'Home/AjaxListConsultants',null,
+				function(data) {   
+					$.fancybox(data);
+					$('.load').remove();
+			})
+}
+
+function ListConsultorNome(key){
+	var name =  $(key).val();
+	if (name != '') {
+		var url = window.location.toString();
+		url = limparUrlHome2(url);
+		$.get(url+"Home/AjaxListConsultantNome/"+name,null,
+				function(data) {   
+					$('#tabela-pesquisa').html(data);
+					$('.load').remove();
+			});
+	}
+}
+
+
+function limparUrlHome2(url){
+        n =  url.search('home');
+        url = url.slice(0,n);
+        return url;
+}
