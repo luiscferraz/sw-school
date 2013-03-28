@@ -12,7 +12,7 @@ class EntriesController extends AppController{
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
-		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));			
+		$this-> set ('id_consultor_logado', $this->Auth->user('consultant_id'));			
  	}
  	
  	public function add(){

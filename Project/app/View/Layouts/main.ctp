@@ -31,17 +31,18 @@ __________________
 <h2>
 
 <?php 
+date_default_timezone_set('America/Recife');
+
+
 //Calculando a hora atual para dizer "bom dia", "boa tarde" ou "boa noite".
 
-$horaAtual = date("G") - 4;
-if ($horaAtual >= 5) {
+$horaAtual = date("G");
+if ($horaAtual >= 5 AND $horaAtual < 12) {
 	$frase = 'Bom dia, '.$nome_usuario;
-	if ($horaAtual >= 12) {
-		$frase = 'Boa tarde, '.$nome_usuario;
-		if ($horaAtual >= 18 or $horaAtual < 5){
-			$frase = 'Boa noite, '.$nome_usuario;
-		}
-	}
+}elseif ($horaAtual >= 12 AND $horaAtual < 18) {
+	$frase = 'Boa tarde, '.$nome_usuario;
+}elseif ($horaAtual >= 18 or $horaAtual < 5){
+	$frase = 'Boa noite, '.$nome_usuario;
 }
 
 echo $frase; ?></h2>
@@ -51,7 +52,6 @@ echo $frase; ?></h2>
 
 <?php include 'includes/menu.php'; ?>
 <?php
-date_default_timezone_set('America/Recife');
 
 if( !isset($date_submit)){
 	$date_submit = date('d/m/Y'); 
