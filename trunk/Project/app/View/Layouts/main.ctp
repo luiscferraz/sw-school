@@ -77,14 +77,14 @@ else{
 
 
 <div id = 'div_tabela_projetos'>
-<table border = 2 align=left id='listaProjetosTabela'>
+<table class='zebra' align=left id='listaProjetosTabela'>
 
 <?php
 
 //linha dos meses
 
 echo '<tr>';
-echo '<td colspan="3" rowspan="3" align=center  bgcolor="White">';
+echo '<td colspan="3" rowspan="3" align=center  style="background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));">';
 echo 'Projetos:';
 echo '</td>';
 echo '<td align=center bgcolor="White">';
@@ -133,7 +133,7 @@ foreach ($projectsPais as $project) {
 	}
 	//nome do projeto atual no loop
 	echo '<tr>';
-	echo '<td bgcolor="Lavender" align=center nowrap colspan ="'.$mesclar_cols.'"  rowspan="'.$mesclar_rows.'">';
+	echo '<td style="background-image: -webkit-gradient(linear, left top, left bottom, from(#ddddfe), to(Lavender));" nowrap colspan ="'.$mesclar_cols.'"  rowspan="'.$mesclar_rows.'">';
 	echo $project['Project']['name'];
 	echo '</td>';
 	//se o projeto não tiver filhos/netos, não precisa mesclar abaixo, ja pode imprimir os consultores
@@ -181,7 +181,7 @@ foreach ($projectsPais as $project) {
 			}
 			//nome do projeto atual no loop
 			if ($project['Project']['id']==$projectf['Project']['parent_project_id']){
-				echo '<td bgcolor="LavenderBlush" align=center nowrap colspan="'.$mesclar_cols2.'" rowspan="'.$conta_netos2.'">';	
+				echo '<td style="background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe7d8), to(LavenderBlush));" nowrap colspan="'.$mesclar_cols2.'" rowspan="'.$conta_netos2.'">';	
 				echo $projectf['Project']['name'];
 				echo '</td>';
 				
@@ -210,7 +210,7 @@ foreach ($projectsPais as $project) {
 				} else {
 					foreach ($projectsNetos as $projectn) {				
 						if ($projectf['Project']['id']==$projectn['Project']['parent_project_id']){
-							echo '<td bgcolor="AliceBlue" align=center nowrap rowspan=4>';	
+							echo '<td style="background-image: -webkit-gradient(linear, left top, left bottom, from(#d3efe1), to(AliceBlue));" align=center nowrap rowspan=4>';	
 							echo $projectn['Project']['name'];
 							echo '</td>';
 							echo '<td align=center bgcolor="White">';
@@ -269,13 +269,15 @@ echo '<tr>';
 
 //perspectiva de 2 meses apartir da data de hoje(60 dias)
 for ($dia = 0; $dia <= $dias; $dia++) {
+	//string para background das td's
+	$bgColorMes = 'style="background-image: -webkit-gradient(linear, right top, left bottom, from(#fff8dc), to(#f4e9bd));"';
 	//cria uma data com a data de hoje + (24 horas*contador)
 	$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 
 	$ver = date('D',$dataFinal);
 	if ($ver == 'Mon'){
 		//se for Segunda-feira, mescla 10 colunas a direita com o nome do mes, depois 2 colunas cinzas (final de semana)
-		echo '<td colspan="10" align=center bgcolor="Cornsilk">';
+		echo '<td colspan="10" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="4" bgcolor="gray" align=center>';
@@ -283,7 +285,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '</td>';
 		$dia = $dia+6;
 	} elseif ($ver == 'Tue'){
-		echo '<td colspan="8" align=center bgcolor="Cornsilk">';
+		echo '<td colspan="8" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="4" bgcolor="gray" align=center>';
@@ -291,7 +293,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '</td>';
 		$dia = $dia+5;
 	} elseif ($ver == 'Wed'){
-		echo '<td colspan="6" align=center bgcolor="Cornsilk">';
+		echo '<td colspan="6" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="4" bgcolor="gray" align=center>';
@@ -299,7 +301,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '</td>';
 		$dia = $dia+4;
 	} elseif ($ver == 'Thu'){
-		echo '<td colspan="4" align=center bgcolor="Cornsilk">';
+		echo '<td colspan="4" ',$bgColorMes,'>';
 		echo date('M',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="4" bgcolor="gray" align=center>';
@@ -307,7 +309,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		echo '</td>';
 		$dia = $dia+3;
 	} elseif ($ver == 'Fri'){
-		echo '<td colspan="2" align=center bgcolor="Cornsilk">';
+		echo '<td colspan="2" ',$bgColorMes,'>';
 		echo date('M',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="4" bgcolor="gray" align=center>';
@@ -336,6 +338,11 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	//cria uma data com a data de hoje + (24 horas*contador)
 	$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 	//se for um final de semana não imprime o dia e imprime cinza
+
+	//string para background das td's
+	$bgColorDia = 'style="background-image: -webkit-gradient(linear, right top, left bottom, from(#ffdead), to(#f4e9bd));"';
+
+
 	if (in_array((date('D',$dataFinal)),$final_de_semana)){
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
@@ -343,7 +350,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		
 	//imprime o numero do dia
 	} else {
-		echo '<td colspan="2" align=center bgcolor="NavajoWhite">';
+		echo '<td colspan="2" ',$bgColorDia,'>';
 		echo date('d',$dataFinal);
 		echo '</td>';
 	}
@@ -358,6 +365,14 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	//cria uma data com a data de hoje + (24 horas*contador)
 	$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 	//se for um final de semana não imprime o dia e imprime cinza
+
+
+	//string para background das td's
+	$bgColorM = 'style="background-image: -webkit-gradient(linear, right top, left bottom, from(#40e0d0), to(#56beb4));"';
+	//string para background das td's
+	$bgColorT = 'style="background-image: -webkit-gradient(linear, right top, left bottom, from(#98fb98), to(#64cf64));"';
+
+
 	if (in_array((date('D',$dataFinal)),$final_de_semana)){
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
@@ -365,10 +380,10 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		
 	} else {
 		//imprime as 2 colunas Manha e Tarde
-		echo '<td align=center id="tdTurnos" bgcolor="Turquoise">';
+		echo '<td id="tdTurnos" ',$bgColorM,'>';
 		echo '&nbsp;M&nbsp;';			
 		echo '</td >';
-		echo '<td align=center id="tdTurnos" bgcolor="PaleGreen">';
+		echo '<td id="tdTurnos" ',$bgColorT,'>';
 		echo '&nbsp;T&nbsp;';		
 		echo '</td>';
 	}	
