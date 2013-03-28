@@ -35,11 +35,11 @@ __________________
 
 $horaAtual = date("G") - 4;
 if ($horaAtual >= 5) {
-	$frase = 'Bom dia, ';
+	$frase = 'Bom dia, '.$nome_usuario;
 	if ($horaAtual >= 12) {
-		$frase = 'Boa tarde, ';
+		$frase = 'Boa tarde, '.$nome_usuario;
 		if ($horaAtual >= 18 or $horaAtual < 5){
-			$frase = 'Boa noite, ';
+			$frase = 'Boa noite, '.$nome_usuario;
 		}
 	}
 }
