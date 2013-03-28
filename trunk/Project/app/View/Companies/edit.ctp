@@ -39,7 +39,7 @@
             <?php
                 echo $this->Form->input('Sponsor.id', array('type' => 'hidden'));
                 echo $this->Form->input('Sponsor.name', array('label' => 'Nome:'));
-                echo $this->Form->input('Sponsor.phone1', array('label' => 'Telefone:', 'id' => 'phone_sponsor1'));
+                echo $this->Form->input('Sponsor.phone1', array('label' => 'Telefone:', 'id' => 'phone_sponsor1', 'required'=>'required'));
                 echo $this->Form->input('Sponsor.phone2', array('label' => 'Celular: ', 'id'=>'phone_sponsor2'));
                 echo $this->Form->input('Sponsor.email', array('type' => 'email','label' => 'Email:'));
             ?>
