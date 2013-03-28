@@ -19,20 +19,16 @@
 	</head>
 <body> 
 
-<?php
-echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
 
-echo $this->Html->link("Pesquisar sigla", array('action' => 'listConsultores()'),array('class'=>'botao', 'id'=>'botao-pesquisar-consultor'));
-?>
-
-<input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
 <IMG id="logoAgenda" SRC="./img/logoAgenda.png">
 <h1>
 _______________________
 </h1>
 <h2>
+
 <?php 
-//
+//Calculando a hora atual para dizer "bom dia", "boa tarde" ou "boa noite".
+
 $horaAtual = date("G") - 4;
 if ($horaAtual >= 5) {
 	$frase = 'Bom dia, ';
@@ -44,7 +40,7 @@ if ($horaAtual >= 5) {
 	}
 }
 
-echo $frase ?></h2>
+echo $frase; ?></h2>
 
 
 
@@ -65,6 +61,12 @@ if( !isset($date_submit)){
 <form method="post" action="home">
 	<input class="botao" id="botao-hoje-data" type="submit" value="  Hoje  " />
 </form>
+<?php
+echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
+?>
+
+<input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
+
 <br>
 <?php 
 
