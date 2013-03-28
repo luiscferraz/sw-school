@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+	<title>Agenda SW School</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<?php echo $this->Html->css('reset'); ?>		
 		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>
@@ -19,10 +20,13 @@
 	</head>
 <body> 
 
+<?php
+echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
+?>
 
 <IMG id="logoAgenda" SRC="./img/logoAgenda.png">
 <h1>
-_______________________
+__________________
 </h1>
 <h2>
 
@@ -61,9 +65,6 @@ if( !isset($date_submit)){
 <form method="post" action="home">
 	<input class="botao" id="botao-hoje-data" type="submit" value="  Hoje  " />
 </form>
-<?php
-echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
-?>
 
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
 
