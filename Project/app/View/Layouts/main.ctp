@@ -21,12 +21,33 @@
 
 <?php
 echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
+
+echo $this->Html->link("Pesquisar sigla", array('action' => 'listConsultores()'),array('class'=>'botao', 'id'=>'botao-pesquisar-consultor'));
 ?>
+
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
+<IMG id="logoAgenda" SRC="./img/logoAgenda.png">
 <h1>
-		_______________ Agenda
+_______________________
 </h1>
-<IMG id="logoAgenda" SRC="./img/logo.gif">
+<h2>
+<?php 
+//
+$horaAtual = date("G") - 4;
+if ($horaAtual >= 5) {
+	$frase = 'Bom dia, ';
+	if ($horaAtual >= 12) {
+		$frase = 'Boa tarde, ';
+		if ($horaAtual >= 18 or $horaAtual < 5){
+			$frase = 'Boa noite, ';
+		}
+	}
+}
+
+echo $frase ?></h2>
+
+
+
 
 <?php include 'includes/menu.php'; ?>
 <?php
