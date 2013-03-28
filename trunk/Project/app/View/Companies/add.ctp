@@ -37,8 +37,8 @@
 			<legend class="legenda">Dados do Sponsor</legend>
 			<?php
 				echo $this->Form->input('Sponsor.name', array('label' => 'Nome:'));
-				echo $this->Form->input('Sponsor.phone1', array('label' => 'Telefone:', 'id' => 'phone1', 'required'=>'required'));
-				echo $this->Form->input('Sponsor.phone2', array('label' => 'Celular: ', 'id'=>'phone2'));
+				echo $this->Form->input('Sponsor.phone1', array('label' => 'Telefone:', 'id' => 'phone_sponsor', 'required'=>'required'));
+				echo $this->Form->input('Sponsor.phone2', array('label' => 'Celular: ', 'id'=>'phone_sepg'));
 				echo $this->Form->input('Sponsor.email', array('type' => 'email','label' => 'Email:'));
 			?>
 		</fieldset>
