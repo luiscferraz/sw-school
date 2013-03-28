@@ -14,7 +14,11 @@
  	public $validate = array(
     'cpf' => array(
         'rule'    => 'isUnique',
-        'message' => 'CPF ja existe'
+        'message' => 'CPF ja existe.'
+    ),
+    'email' => array(
+        'rule'    => 'isUnique',
+        'message' => 'E-mail ja Cadastrado'
     )
 );
  }
