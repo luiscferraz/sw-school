@@ -24,28 +24,15 @@
 echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
 ?>
 
+<IMG id="logoSW" SRC="./img/logo.gif">
 <IMG id="logoAgenda" SRC="./img/logoAgenda.png">
 <h1>
 __________________
 </h1>
+
 <h2>
-
-<?php 
-date_default_timezone_set('America/Recife');
-
-
-//Calculando a hora atual para dizer "bom dia", "boa tarde" ou "boa noite".
-
-$horaAtual = date("G");
-if ($horaAtual >= 5 AND $horaAtual < 12) {
-	$frase = 'Bom dia, '.$nome_usuario;
-}elseif ($horaAtual >= 12 AND $horaAtual < 18) {
-	$frase = 'Boa tarde, '.$nome_usuario;
-}elseif ($horaAtual >= 18 or $horaAtual < 5){
-	$frase = 'Boa noite, '.$nome_usuario;
-}
-
-echo $frase; ?></h2>
+Bem vindo(a), 
+<?php echo $nome_usuario ?></h2>
 
 
 
