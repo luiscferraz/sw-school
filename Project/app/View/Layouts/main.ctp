@@ -32,13 +32,14 @@ __________________
 
 <h2>
 Bem vindo(a), 
-<?php echo $nome_usuario ?></h2>
+<?php echo $nome_usuario.'!' ;?></h2>
 
 
 
 
 <?php include 'includes/menu.php'; ?>
 <?php
+date_default_timezone_set('America/Recife');
 
 if( !isset($date_submit)){
 	$date_submit = date('d/m/Y'); 
