@@ -2,11 +2,11 @@
 <h1>Período</h1>
 
 <form id="form_relatori_proj" method="post" action="">
-	<input type="hiden" value="<?php echo $idproject ?>" name="report[id]" style="display:none">
-	<input type="radio" checked name="report[time]" value="all" style="width:auto">Tudo</br>
-	<input type="radio" name="report[time]" value="date" style="width:auto">De : 
-	<input type="text" style="width:auto" name="report[dateInit]" value="<?php echo (date('d/m/Y')); ?>" class="date"> até <input type="text" value="<?php echo (date('d/m/Y')); ?>" name="report[dateEnd]" style="width:auto" class="date">
-	<input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
+  <input type="hiden" value="<?php echo $idproject ?>" name="report[id]" style="display:none">
+  <input type="radio" checked name="report[time]" value="all" style="width:auto">Tudo</br>
+  <input type="radio" name="report[time]" value="date" style="width:auto">De : 
+  <input type="text" style="width:auto" name="report[dateInit]" value="<?php echo (date('d/m/Y')); ?>" class="date"> até <input type="text" value="<?php echo (date('d/m/Y')); ?>" name="report[dateEnd]" style="width:auto" class="date">
+  <input class="botao" id="botao_relatorio_proj" type="submit" value="Aplicar" />
 </form>
 </div>
 <?php if ($filtersName == 'all') { ?>
@@ -93,19 +93,94 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
 <?php if ($filtersName == 'all') {  ?>        
    <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-    <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasAG['0']['balance_hours_a_group']; ?></td>
+    <td class="bordaTabela" id="cor_saldo" width="9%">
+      <?php 
+        $hsga = $horasAG['0']['balance_hours_a_group'];
+        if (empty($hsga)) {
+          echo "";
+        }
+        else{
+          $lensga = strlen($hsga);
+          $sssga = substr($hsga, -2);
+          $mmsga = substr($hsga, -4, -2);
+          $hhsga = substr($hsga, -$lensga, -4);
+          echo $hhsga . ":" . $mmsga . ":" . $sssga; 
+        }
+      ?>
+    </td>
     <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasAG['0']['hours_a_performed_group'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+    <?php
+      $hrga = $horasAG['0']['hours_a_performed_group'];
+      if (empty($hrga)) {
+         echo "";
+       }
+      else{
+        $lenrga=strlen($hrga);
+        $ssrga = substr($hrga, -2);
+        $mmrga = substr($hrga, -4, -2);
+        $hhrga = substr($hrga, -$lenrga, -4);
+        echo $hhrga . ":" . $mmrga . ":" . $ssrga;  
+      } 
+      
+      
+    ?>
+  </td>
   </tr>
   <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas Individuais</th>
-    <td class="bordaTabela" id="cor_saldo"><?php echo $horasAI['0']['balance_hours_a_individual']; ?></td>
+    <td class="bordaTabela" id="cor_saldo">
+      <?php 
+        $hsia = $horasAI['0']['balance_hours_a_individual'];
+        if (empty($hsia)) {
+          echo "";
+        }
+        else{
+          $lensia = strlen($hsia);
+          $sssia = substr($hsia, -2);
+          $mmsia = substr($hsia, -4, -2);
+          $hhsia = substr($hsia, -$lensia, -4);
+          echo $hhsia . ":" . $mmsia . ":" . $sssia;
+      
+        }
+      ?>
+    </td>
     <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasAI['0']['hours_a_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        $hria = $horasAI['0']['hours_a_performed_individual'];
+        if (empty($hria)) {
+          echo "";
+        }
+        else{
+          $lenria=strlen($hria);
+          $ssria = substr($hria, -2);
+          $mmria = substr($hria, -4, -2);
+          $hhria = substr($hria, -$lenria, -4);
+          echo $hhria . ":" . $mmria . ":" . $ssria;
+        }
+
+      ?>
+    </td>
   </tr>
   <tr>
     <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria A</th>
-    <td class="bordaTabela" id="cor_footer"><?php echo $horasAG['0']['hours_a_performed_group']+$horasAI['0']['hours_a_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_footer">
+      <?php 
+        $hsta = $horasAG['0']['hours_a_performed_group']+$horasAI['0']['hours_a_performed_individual'];
+        if (empty($hsta)) {
+          echo "";
+        }
+        else{
+          $lensta = strlen($hsta);
+          $sssta = substr($hsta, -2);
+          $mmsta = substr($hsta, -4, -2);
+          $hhsta = substr($hsta, -$lensta, -4);
+          echo $hhsta . ":" . $mmsta . ":" . $sssta;
+        }
+        
+      ?>
+    </td>
   </tr>
 </table>  
 </br>
@@ -166,19 +241,95 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
 ?>
     <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-    <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasBG['0']['balance_hours_b_group']; ?></td>
+    <td class="bordaTabela" id="cor_saldo" width="9%">
+      <?php 
+        $hsgb = $horasBG['0']['balance_hours_b_group'];
+        if (empty($hsgb)) {
+          echo "";
+        }
+        else{
+          $lensgb = strlen($hsgb);
+          $sssgb = substr($hsgb, -2);
+          $mmsgb = substr($hsgb, -4, -2);
+          $hhsgb = substr($hsgb, -$lensgb, -4);
+          echo $hhsgb . ":" . $mmsgb . ":" . $sssgb; 
+
+        } 
+      ?>
+    </td>
     <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasBG['0']['hours_b_performed_group'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        $hrgb = $horasBG['0']['hours_b_performed_group'];
+      if (empty($hrgb)) {
+         echo "";
+       }
+      else{
+        $lenrgb=strlen($hrgb);
+        $ssrgb = substr($hrgb, -2);
+        $mmrgb = substr($hrgb, -4, -2);
+        $hhrgb = substr($hrgb, -$lenrgb, -4);
+        echo $hhrgb . ":" . $mmrgb . ":" . $ssrgb;  
+      } 
+      
+      ?>
+    </td>
   </tr>
   <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas Individuais</th>
-    <td class="bordaTabela" id="cor_saldo"><?php echo $horasBI['0']['balance_hours_b_individual']; ?></td>
+    <td class="bordaTabela" id="cor_saldo">
+      <?php 
+        $hsib = $horasBI['0']['balance_hours_b_individual'];
+        if (empty($hsib)) {
+          echo "";
+          # code...
+        }
+        else{
+          $lensib = strlen($hsib);
+          $sssib = substr($hsib, -2);
+          $mmsib = substr($hsib, -4, -2);
+          $hhsib = substr($hsib, -$lensib, -4);
+          echo $hhsib . ":" . $mmsib . ":" . $sssib;
+      
+        } 
+    
+      ?>
+    </td>
     <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasBI['0']['hours_b_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        
+        $hrib = $horasBI['0']['hours_b_performed_individual'];
+        if (empty($hrib)) {
+          echo "";
+        }
+        else{
+          $lenrib=strlen($hrib);
+          $ssrib = substr($hrib, -2);
+          $mmrib = substr($hrib, -4, -2);
+          $hhrib = substr($hrib, -$lenrib, -4);
+          echo $hhrib . ":" . $mmrib . ":" . $ssrib;
+        }
+      ?>
+    </td>
   </tr>
   <tr>
     <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria B</th>
-    <td class="bordaTabela" id="cor_footer"><?php echo $horasBG['0']['hours_b_performed_group']+$horasBI['0']['hours_b_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_footer">
+      <?php 
+        $hstb = $horasBG['0']['hours_b_performed_group']+$horasBI['0']['hours_b_performed_individual'];
+        if (empty($hstb)) {
+          echo "";
+        }
+        else{
+          $lenstb = strlen($hstb);
+          $ssstb = substr($hstb, -2);
+          $mmstb = substr($hstb, -4, -2);
+          $hhstb = substr($hstb, -$lenstb, -4);
+          echo $hhstb . ":" . $mmstb . ":" . $ssstb;
+        }
+      ?>
+    </td>
   </tr>
 </table> 
 </br>   
@@ -233,19 +384,94 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
 
     <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-    <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasCG['0']['balance_hours_c_group']; ?></td>
+    <td class="bordaTabela" id="cor_saldo" width="9%">
+      <?php 
+        $hsgc = $horasCG['0']['balance_hours_c_group'];
+        if (empty($hsgc)) {
+          echo "";
+        }
+        else{
+          $lensgc = strlen($hsgc);
+          $sssgc = substr($hsgc, -2);
+          $mmsgc = substr($hsgc, -4, -2);
+          $hhsgc = substr($hsgc, -$lensgc, -4);
+          echo $hhsgc . ":" . $mmsgc . ":" . $sssgc; 
+
+        }
+      ?>
+    </td>
     <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasCG['0']['hours_c_performed_group'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        
+        $hrgc = $horasCG['0']['hours_c_performed_group'];
+      if (empty($hrgc)) {
+         echo "";
+       }
+      else{
+        $lenrgc = strlen($hrgc);
+        $ssrgc = substr($hrgc, -2);
+        $mmrgc = substr($hrgc, -4, -2);
+        $hhrgc = substr($hrgc, -$lenrgc, -4);
+        echo $hhrgc . ":" . $mmrgc . ":" . $ssrgc;  
+      } 
+      
+      ?>
+    </td>
   </tr>
   <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas Individuais</th>
-    <td class="bordaTabela" id="cor_saldo"><?php echo $horasCI['0']['balance_hours_c_individual']; ?></td>
+    <td class="bordaTabela" id="cor_saldo">
+      <?php 
+        $hsic = $horasCI['0']['balance_hours_c_individual'];
+        if (empty($hsic)) {
+          echo "";
+          # code...
+        }
+        else{
+          $lensic = strlen($hsic);
+          $sssic = substr($hsic, -2);
+          $mmsic = substr($hsic, -4, -2);
+          $hhsic = substr($hsic, -$lensic, -4);
+          echo $hhsic . ":" . $mmsic . ":" . $sssic;
+      
+        }  
+      ?>
+    </td>
     <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasCI['0']['hours_c_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        $hric = $horasCI['0']['hours_c_performed_individual'];
+        if (empty($hric)) {
+          echo "";
+        }
+        else{
+          $lenric=strlen($hric);
+          $ssric = substr($hric, -2);
+          $mmric = substr($hric, -4, -2);
+          $hhric = substr($hric, -$lenric, -4);
+          echo $hhric . ":" . $mmric . ":" . $ssric;
+        }
+      ?>
+    </td>
   </tr>
   <tr>
     <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria C</th>
-    <td class="bordaTabela" id="cor_footer"><?php echo $horasCG['0']['hours_c_performed_group']+$horasCI['0']['hours_c_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_footer">
+      <?php 
+        $hstc = $horasCG['0']['hours_c_performed_group']+$horasCI['0']['hours_c_performed_individual'];
+        if (empty($hstc)) {
+          echo "";
+        }
+        else{
+        $lenstc = strlen($hstc);
+        $ssstc = substr($hstc, -2);
+        $mmstc = substr($hstc, -4, -2);
+        $hhstc = substr($hstc, -$lenstc, -4);
+        echo $hhstc . ":" . $mmstc . ":" . $ssstc;
+      }
+      ?>
+    </td>
   </tr>
 </table> 
 
@@ -340,19 +566,89 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
 <?php if ($filtersName == 'date') {  ?>        
    <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-    <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasAG['0']['balance_hours_a_group']; ?></td>
+    <td class="bordaTabela" id="cor_saldo" width="9%">
+      <?php 
+        $hsga = $horasAG['0']['balance_hours_a_group'];
+        if (empty($hsga)) {
+          echo "";
+        }
+        else{
+          $lensga = strlen($hsga);
+          $sssga = substr($hsga, -2);
+          $mmsga = substr($hsga, -4, -2);
+          $hhsga = substr($hsga, -$lensga, -4);
+          echo $hhsga . ":" . $mmsga . ":" . $sssga; 
+        } 
+      ?>
+    </td>
     <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasAG['0']['hours_a_performed_group'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php
+      $hrga = $horasAG['0']['hours_a_performed_group'];
+      if (empty($hrga)) {
+         echo "";
+       }
+      else{
+        $lenrga=strlen($hrga);
+        $ssrga = substr($hrga, -2);
+        $mmrga = substr($hrga, -4, -2);
+        $hhrga = substr($hrga, -$lenrga, -4);
+        echo $hhrga . ":" . $mmrga . ":" . $ssrga;  
+      } 
+      ?>
+    </td>
   </tr>
   <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas Individuais</th>
-    <td class="bordaTabela" id="cor_saldo"><?php echo $horasAI['0']['balance_hours_a_individual']; ?></td>
+    <td class="bordaTabela" id="cor_saldo">
+      <?php 
+        $hsia = $horasAI['0']['balance_hours_a_individual'];
+        if (empty($hsia)) {
+          echo "";
+          # code...
+        }
+        else{
+          $lensia = strlen($hsia);
+          $sssia = substr($hsia, -2);
+          $mmsia = substr($hsia, -4, -2);
+          $hhsia = substr($hsia, -$lensia, -4);
+          echo $hhsia . ":" . $mmsia . ":" . $sssia;
+        } 
+      ?>
+    </td>
     <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasAI['0']['hours_a_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        $hria = $horasAI['0']['hours_a_performed_individual'];
+        if (empty($hria)) {
+          echo "";
+        }
+        else{
+          $lenria=strlen($hria);
+          $ssria = substr($hria, -2);
+          $mmria = substr($hria, -4, -2);
+          $hhria = substr($hria, -$lenria, -4);
+          echo $hhria . ":" . $mmria . ":" . $ssria;
+        }
+    ?></td>
   </tr>
   <tr>
     <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria A</th>
-    <td class="bordaTabela" id="cor_footer"><?php echo $horasAG['0']['hours_a_performed_group']+$horasAI['0']['hours_a_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_footer">
+      <?php 
+        $hsta = $horasAG['0']['hours_a_performed_group']+$horasAI['0']['hours_a_performed_individual'];
+        if (empty($hsta)) {
+          echo "";
+        }
+        else{
+          $lensta = strlen($hsta);
+          $sssta = substr($hsta, -2);
+          $mmsta = substr($hsta, -4, -2);
+          $hhsta = substr($hsta, -$lensta, -4);
+          echo $hhsta . ":" . $mmsta . ":" . $sssta;
+        }
+      ?>
+    </td>
   </tr>
 </table>  
 </br>
@@ -413,19 +709,92 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
 ?>
     <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-    <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasBG['0']['balance_hours_b_group']; ?></td>
+    <td class="bordaTabela" id="cor_saldo" width="9%">
+      <?php 
+        $hsgb = $horasBG['0']['balance_hours_b_group'];
+        if (empty($hsgb)) {
+          echo "";
+        }
+        else{
+          $lensgb = strlen($hsgb);
+          $sssgb = substr($hsgb, -2);
+          $mmsgb = substr($hsgb, -4, -2);
+          $hhsgb = substr($hsgb, -$lensgb, -4);
+          echo $hhsgb . ":" . $mmsgb . ":" . $sssgb; 
+
+        } 
+      ?>
+    </td>
     <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasBG['0']['hours_b_performed_group'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        $hrgb = $horasBG['0']['hours_b_performed_group'];
+        if (empty($hrgb)) {
+           echo "";
+         }
+        else{
+          $lenrgb=strlen($hrgb);
+          $ssrgb = substr($hrgb, -2);
+          $mmrgb = substr($hrgb, -4, -2);
+          $hhrgb = substr($hrgb, -$lenrgb, -4);
+          echo $hhrgb . ":" . $mmrgb . ":" . $ssrgb;  
+        } 
+      ?>
+    </td>
   </tr>
   <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas Individuais</th>
-    <td class="bordaTabela" id="cor_saldo"><?php echo $horasBI['0']['balance_hours_b_individual']; ?></td>
+    <td class="bordaTabela" id="cor_saldo">
+      <?php 
+        $hsib = $horasBI['0']['balance_hours_b_individual'];
+        if (empty($hsib)) {
+          echo "";
+          # code...
+        }
+        else{
+          $lensib = strlen($hsib);
+          $sssib = substr($hsib, -2);
+          $mmsib = substr($hsib, -4, -2);
+          $hhsib = substr($hsib, -$lensib, -4);
+          echo $hhsib . ":" . $mmsib . ":" . $sssib;
+      
+        }  
+      ?>
+    </td>
     <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasBI['0']['hours_b_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        $hrib = $horasBI['0']['hours_b_performed_individual'];
+        if (empty($hrib)) {
+          echo "";
+        }
+        else{
+          $lenrib=strlen($hrib);
+          $ssrib = substr($hrib, -2);
+          $mmrib = substr($hrib, -4, -2);
+          $hhrib = substr($hrib, -$lenrib, -4);
+          echo $hhrib . ":" . $mmrib . ":" . $ssrib;
+        }
+      ?>
+    </td>
   </tr>
   <tr>
     <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria B</th>
-    <td class="bordaTabela" id="cor_footer"><?php echo $horasBG['0']['hours_b_performed_group']+$horasBI['0']['hours_b_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_footer">
+      <?php 
+        $hstb = $horasBG['0']['hours_b_performed_group']+$horasBI['0']['hours_b_performed_individual'];
+        if (empty($hstb)) {
+          echo "";
+        }
+        else{
+          $lenstb = strlen($hstb);
+          $ssstb = substr($hstb, -2);
+          $mmstb = substr($hstb, -4, -2);
+          $hhstb = substr($hstb, -$lenstb, -4);
+          echo $hhstb . ":" . $mmstb . ":" . $ssstb;
+        }
+      ?>
+    </td>
   </tr>
 </table>  
 </br>  
@@ -480,19 +849,91 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
 
     <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas em Grupo</th>
-    <td class="bordaTabela" id="cor_saldo" width="9%"><?php echo $horasCG['0']['balance_hours_c_group']; ?></td>
+    <td class="bordaTabela" id="cor_saldo" width="9%">
+      <?php
+        $hsgc = $horasCG['0']['balance_hours_c_group'];
+        if (empty($hsgc)) {
+          echo "";
+        }
+        else{
+          $lensgc = strlen($hsgc);
+          $sssgc = substr($hsgc, -2);
+          $mmsgc = substr($hsgc, -4, -2);
+          $hhsgc = substr($hsgc, -$lensgc, -4);
+          echo $hhsgc . ":" . $mmsgc . ":" . $sssgc;
+        } 
+      ?>
+    </td>
     <th class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas em Grupo</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasCG['0']['hours_c_performed_group'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        $hrgc = $horasCG['0']['hours_c_performed_group'];
+        if (empty($hrgc)) {
+           echo "";
+         }
+        else{
+          $lenrgc = strlen($hrgc);
+          $ssrgc = substr($hrgc, -2);
+          $mmrgc = substr($hrgc, -4, -2);
+          $hhrgc = substr($hrgc, -$lenrgc, -4);
+          echo $hhrgc . ":" . $mmrgc . ":" . $ssrgc;  
+        } 
+      ?>
+    </td>
   </tr>
   <tr>
     <th class="bordaTabela" id="cor_saldo" colspan="2" scope="row">Saldo de Horas Individuais</th>
-    <td class="bordaTabela" id="cor_saldo"><?php echo $horasCI['0']['balance_hours_c_individual']; ?></td>
+    <td class="bordaTabela" id="cor_saldo">
+      <?php 
+        $hsic = $horasCI['0']['balance_hours_c_individual'];
+        if (empty($hsic)) {
+          echo "";
+          # code...
+        }
+        else{
+          $lensic = strlen($hsic);
+          $sssic = substr($hsic, -2);
+          $mmsic = substr($hsic, -4, -2);
+          $hhsic = substr($hsic, -$lensic, -4);
+          echo $hhsic . ":" . $mmsic . ":" . $sssic;
+      
+        }  
+      ?>
+    </td>
     <th  class="bordaTabela" id="cor_horas_real" colspan="3">Horas Realizadas Individuais</th>
-    <td class="bordaTabela" id="cor_horas_real"><?php echo $horasCI['0']['hours_c_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_horas_real">
+      <?php 
+        $hric = $horasCI['0']['hours_c_performed_individual'];
+        if (empty($hric)) {
+          echo "";
+        }
+        else{
+          $lenric=strlen($hric);
+          $ssric = substr($hric, -2);
+          $mmric = substr($hric, -4, -2);
+          $hhric = substr($hric, -$lenric, -4);
+          echo $hhric . ":" . $mmric . ":" . $ssric;
+        }
+      ?>
+    </td>
   </tr>
   <tr>
     <th  class="bordaTabela" id="cor_footer" colspan="6" scope="row">Total de Horas realizadas na Consultoria C</th>
-    <td class="bordaTabela" id="cor_footer"><?php echo $horasCG['0']['hours_c_performed_group']+$horasCI['0']['hours_c_performed_individual'];?></td>
+    <td class="bordaTabela" id="cor_footer">
+      <?php 
+        $hstc = $horasCG['0']['hours_c_performed_group']+$horasCI['0']['hours_c_performed_individual'];
+        if (empty($hstc)) {
+          echo "";
+        }
+        else{
+        $lenstc = strlen($hstc);
+        $ssstc = substr($hstc, -2);
+        $mmstc = substr($hstc, -4, -2);
+        $hhstc = substr($hstc, -$lenstc, -4);
+        echo $hhstc . ":" . $mmstc . ":" . $ssstc;
+      }
+      ?>
+    </td>
   </tr>
 </table> 
 
