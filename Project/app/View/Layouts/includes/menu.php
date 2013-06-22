@@ -6,7 +6,7 @@
 			<li><?php echo $this->Html->link('Consultores', array('action' =>'../consultants'));?></li>
 			<li><?php echo $this->Html->link('Empresas', array('action' =>'../companies'));?></li>
 			<li><?php echo $this->Html->link('Projetos', array('action' =>'../projects'));?></li>
-			<li><?php echo $this->Html->link('Atividades', array('action' =>'../activities'));?></li>
+			<li><?php #echo $this->Html->link('Atividades', array('action' =>'../activities'));?></li>
 			<li><?php echo $this->Html->link('Apontamentos', array('action' =>'../entries'));?></li>
 			<!-- <li><?php echo $this->Html->link('Relatórios', array('action' =>'../reports'));?></li> -->
 			<li><?php echo $this->Html->link('Sair', array('action' =>'../users/logout'));?></li>
