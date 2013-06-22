@@ -186,25 +186,25 @@ $(document).ready(function(){
         
 
 
-  <h2 id="AtividadesEmProjetoIndex2">
+  <!--<h2 id="AtividadesEmProjetoIndex2">
     Atividades - <?php echo $project['Project']['name']; ?> 
-  </h2>
+  </h2>-->
 
     <div class="AtividadesEmProjetoIndex2">
 
       <table  class="zebra" cellpadding="0" cellspacing="0">
-        <tr>
+        <!--<tr>
           <th>Descrição</th>
           <th class="responsive">Status</th>
           <th class="responsive">Data</th>
           <th class="actions">Visualizar Detalhadamente</th>
-        </tr>
+        </tr>-->
 
         <?php
           
           foreach ($activities as $activity){
             
-            if ($activity['Activity']['project_id']===$project['Project']['id']) {
+            /*if ($activity['Activity']['project_id']===$project['Project']['id']) {
               echo '<tr>';
               echo '<td class="descrição">';
 
@@ -231,7 +231,7 @@ $(document).ready(function(){
               echo $this->html->link(
                 $this->html->image("view.png", array('alt' => 'Ver')), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
               echo '</td>';
-                }
+                }*/
               ?>
             
 
