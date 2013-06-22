@@ -183,57 +183,16 @@ $(document).ready(function(){
         </table>
 
         
-        
-
-
-  <!--<h2 id="AtividadesEmProjetoIndex2">
-    Atividades - <?php echo $project['Project']['name']; ?> 
-  </h2>-->
 
     <div class="AtividadesEmProjetoIndex2">
 
       <table  class="zebra" cellpadding="0" cellspacing="0">
-        <!--<tr>
-          <th>Descrição</th>
-          <th class="responsive">Status</th>
-          <th class="responsive">Data</th>
-          <th class="actions">Visualizar Detalhadamente</th>
-        </tr>-->
-
+  
         <?php
           
           foreach ($activities as $activity){
             
-            /*if ($activity['Activity']['project_id']===$project['Project']['id']) {
-              echo '<tr>';
-              echo '<td class="descrição">';
-
-              if ($activity['Activity']['project_id']===$project['Project']['id']){
-
-                echo $activity['Activity']['description'];}
-
-                echo '</td>';
-                echo '<td class="status">';
-
-                if ($activity['Activity']['project_id']===$project['Project']['id']){
-                  echo $activity['Activity']['status'];
-                }
-
-                echo '</td>';
-                echo '<td class="data">';
-                if ($activity['Activity']['project_id']===$project['Project']['id']){
-                  echo $activity['Activity']['date'];
-                }
-                echo '</td>';
-
-              echo '<div class="actions">';
-              echo '<td>';
-              echo $this->html->link(
-                $this->html->image("view.png", array('alt' => 'Ver')), array('action' => '../activities/view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'));
-              echo '</td>';
-                }*/
               ?>
-            
 
           </div>
 <?php } ?>
