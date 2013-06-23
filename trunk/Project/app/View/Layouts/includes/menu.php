@@ -11,3 +11,4 @@
 			<li><?php echo $this->Html->link('Sair', array('action' =>'../users/logout'));?></li>
 		</ul>
 </div>
+<!-- teste-->
