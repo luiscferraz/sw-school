@@ -10973,3 +10973,33 @@
 2013-03-29 00:12:55 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 /home/emeson/Documentos/sw-school/Project/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-06-23 05:24:15 Error: [MissingControllerException] Controller class AtividadesController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:24:15 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:24:15 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:24:43 Error: [MissingControllerException] Controller class AtivityController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:24:43 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:24:43 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:24:46 Error: [MissingControllerException] Controller class AtivitysController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:24:46 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:24:46 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 05:25:22 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Nova pasta\sw-school\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
