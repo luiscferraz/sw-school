@@ -62,6 +62,8 @@ header('Content-Type: text/html; charset=UTF-8');
 					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
 
 					<a href="\Entries\add"><img src="..\img\clock.png" alt="Apontar" id="btnRelogio"></a>
+
+					<a href="\Entries"><img src="..\img\eye.png" alt="VisuzalizarApontamento" id="btnVisuzalizarApontamento"></a>
 					
 					
 					<!--<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input> -->
