@@ -2,29 +2,6 @@
 header('Content-Type: text/html; charset=UTF-8');
 ?>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-	<!-- Add jQuery library -->
-	<script type="text/javascript" src="../lib/jquery-1.10.1.min.js"></script>
-
-	<!-- Add mousewheel plugin (this is optional) -->
-	<script type="text/javascript" src="../lib/jquery.mousewheel-3.0.6.pack.js"></script>
-
-	<!-- Add fancyBox main JS and CSS files -->
-	<script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
-	<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
-
-	<!-- Add Button helper (this is optional) -->
-	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
-	<script type="text/javascript" src="../source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-
-	<!-- Add Thumbnail helper (this is optional) -->
-	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
-	<script type="text/javascript" src="../source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
-	<!-- Add Media helper (this is optional) -->
-	<script type="text/javascript" src="../source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
 	<script type="text/javascript">
 		$(document).ready(function() {
 			/*
@@ -263,9 +240,9 @@ header('Content-Type: text/html; charset=UTF-8');
 					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
 
 
-					<a class="fancybox fancybox.iframe" href="\Entries\add"><img src="..\img\clock.png" alt="Apontar" id="btnRelogio" /></a>
+					<a class="fancybox fancybox.iframe" href="/Entries/add"><img src="../img/clock.png" alt="Apontar" id="btnRelogio" /></a>
 
-					<a class="fancybox fancybox.iframe" href="\Entries"><img src="..\img\eye.png" alt="Visuzalizar-Apontamento" id="btnVisuzalizar-Apontamento" /></a>
+					<a class="fancybox fancybox.iframe" href="/Entries"><img src="../img/eye.png" alt="Visuzalizar-Apontamento" id="btnVisuzalizar-Apontamento" /></a>
 					
 					
 					<!--<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input> -->
