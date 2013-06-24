@@ -88,16 +88,19 @@ $(document).ready(function(){
         Projeto - <?php echo $project['Project']['name']; ?> 
         <span class="icon-action">
           <?php
-			if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){		  
-			echo $this->Html->link(
+      if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){     
+      echo $this->Html->link(
           $this->Html->image("delete.png", array("alt" => "Deletar", "title" => "Deletar Projeto")),
           array('action' => 'delete', $project['Project']['id']),
           array('escape'=>false),"Você quer excluir realmente ?");
-		  }
-		  ?>
+      }
+      ?>
         </span>
         
         <span class="icon-action"> 
+
+          <a href="./activities"><?php echo $this->Html->image("clock.png", array('alt' => 'Atividades','title' => 'Atividades'))?></a>
+
           <?php echo $this->Html->link(
           $this->Html->image("rel.png", array('alt' => 'Relatórios','title' => 'Relatórios')), array('action' => 'reports',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
           
@@ -109,19 +112,19 @@ $(document).ready(function(){
           ?>
 
           <?php 
-		  if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-		      echo $this->Html->link(
+      if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+          echo $this->Html->link(
           $this->Html->image("financial.png", array('alt' => 'Despesas','title' => 'Despesas')), array('action' => 'financial',$project['Project']['id']), array('escape'=>false, 'id'=>'link'));
-		  }
-		  ?>
+      }
+      ?>
 
           <?php 
-		  if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-		  echo $this->Html->link(
+      if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+      echo $this->Html->link(
           $this->Html->image("edit.png", array("alt" => "Editar","title" => "Editar Projeto")),'edit/'.$project['Project']['id'],
           array('escape'=>false));
-		  }
-		  ?>
+      }
+      ?>
 
 
         </span> 
