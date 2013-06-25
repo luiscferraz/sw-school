@@ -108,7 +108,7 @@
 	}
 	
 	public function edit($id = NULL){
-		$this->layout = 'base';
+		$this->layout = 'basemodal';
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
 		$this-> set ('projects',$projects);		
 		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
@@ -137,7 +137,7 @@
 
 		$this->Activity->id = $id;
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
-		$this->layout = 'base';
+		$this->layout = 'basemodal';
 		$Atividade =  $this->Activity->findById($id);
 		$this -> set ('consultor1', $this-> Nome_Consultor($Atividade['Activity']['consultant1_id']));
 		$this -> set ('consultor2', $this-> Nome_Consultor($Atividade['Activity']['consultant2_id']));
