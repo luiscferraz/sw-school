@@ -25,6 +25,7 @@
 
 .fancybox-opened {
     width: 90% !important;
+
     z-index: 1003;	
 }
 

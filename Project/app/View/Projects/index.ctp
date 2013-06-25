@@ -112,7 +112,7 @@ $(document).ready(function(){
         
         <span class="icon-action"> 
 
-          <a class="fancybox fancybox.iframe" href="./activities/index/<?php echo $project['Project']['id'] ?>"><?php echo $this->Html->image("clock.png", array('alt' => 'Atividades','title' => 'Atividades', 'id' => 'btnAtividades'))?></a>
+          <a class="fancybox fancybox.iframe" href="./activities/index/<?php echo $project['Project']['id'] ?>"><?php echo $this->Html->image("activity.png", array('alt' => 'Atividades','title' => 'Atividades', 'id' => 'btnAtividades'))?></a>
 
           <?php echo $this->Html->link(
           $this->Html->image("rel.png", array('alt' => 'Relatórios','title' => 'Relatórios')), array('action' => 'reports',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
