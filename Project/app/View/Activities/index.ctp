@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=UTF-8');
 ?>
 
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 		$(document).ready(function() {
 			/*
 			 *  Simple image gallery. Uses default settings
@@ -177,7 +177,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 
 		});
-	</script>
+	</script>-->
 	
 	<table class="zebra" id="tabela_atividades" cellpadding="0" cellspacing="0">
 		<tr>
@@ -240,9 +240,9 @@ header('Content-Type: text/html; charset=UTF-8');
 					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
 
 
-					<a class="fancybox fancybox.iframe" href="/Entries/add"><img src="../img/clock.png" alt="Apontar" id="btnRelogio" /></a>
+					<a href="entries/add"><?php echo $this->Html->image("clock.png",array('alt'=>'Apontar', 'id' => 'btnRelogio'));?></a>
 
-					<a class="fancybox fancybox.iframe" href="/Entries"><img src="../img/eye.png" alt="Visuzalizar-Apontamento" id="btnVisuzalizar-Apontamento" /></a>
+					<a href="entries"><?php echo $this->Html->image("eye.png",array('alt'=>'Visuzalizar-Apontamento', 'id' => 'btnVisuzalizar-Apontamento'));?></a>
 					
 					
 					<!--<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input> -->

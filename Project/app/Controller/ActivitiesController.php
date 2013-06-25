@@ -8,7 +8,7 @@
  	
  	public function index(){
 		$this->set('title_for_layout', 'Atividades');
- 		$this -> layout = 'index';
+ 		$this -> layout = 'basemodal';
  		$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
  		$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 		$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
