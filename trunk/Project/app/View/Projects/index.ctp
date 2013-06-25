@@ -28,6 +28,19 @@ $(document).ready(function(){
  
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+      /*
+       *  Simple image gallery. Uses default settings
+       */
+
+      $('.fancybox').fancybox({'frameWidth' : 600, 'autoDimensions' : false, 'width' : 600});
+      $.fancybox.update()
+
+
+    });
+  </script>
+
 
 
 <?php
@@ -99,7 +112,7 @@ $(document).ready(function(){
         
         <span class="icon-action"> 
 
-          <a href="./activities"><?php echo $this->Html->image("clock.png", array('alt' => 'Atividades','title' => 'Atividades'))?></a>
+          <a class="fancybox fancybox.iframe" href="./activities"><?php echo $this->Html->image("clock.png", array('alt' => 'Atividades','title' => 'Atividades', 'id' => 'btnAtividades'))?></a>
 
           <?php echo $this->Html->link(
           $this->Html->image("rel.png", array('alt' => 'Relatórios','title' => 'Relatórios')), array('action' => 'reports',$project['Project']['id']), array('escape'=>false, 'id'=>'link'))?>
