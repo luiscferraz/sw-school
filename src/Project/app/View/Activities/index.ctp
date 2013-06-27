@@ -178,7 +178,6 @@ header('Content-Type: text/html; charset=UTF-8');
 
 		});
 	</script>
-	
 	<table class="zebra" id="tabela_atividades" cellpadding="0" cellspacing="0">
 		<tr>
 
