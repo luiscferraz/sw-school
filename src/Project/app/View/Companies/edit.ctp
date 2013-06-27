@@ -11,6 +11,7 @@
                 echo $this->Form->input('id', array('type' => 'hidden'));
                 echo $this->Form->input('name', array('label' => 'Nome da empresa:', 'required'=>'required'));
                 echo $this->Form->input('acronym', array('label' => 'Sigla:', 'required'=>'required'));
+                echo $this->Form->input('fundation', array('label' => 'Data de Fundação:', 'id'=> 'fundation', 'required'=>'required' ));   
                 echo $this->Form->input('cnpj', array('label' => 'CNPJ:', 'id' => 'cnpj', 'onchange' => 'checkCnpj(this)'));	
                 echo $this->Form->input('phone1', array('label' => 'Telefone:', 'id' => 'phone1'));
                 echo $this->Form->input('phone2', array('label' => 'Telefone 2 (opcional):', 'id' => 'phone2'));

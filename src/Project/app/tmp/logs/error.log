@@ -11026,3 +11026,61 @@
 2013-06-25 03:55:41 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\xampp\htdocs\SW\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-06-27 00:52:12 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 01:22:31 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 02:49:50 Error: [MissingActionException] Action Consultants::ad() could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Controller\Scaffold.php(151): Scaffold->_scaffold(Object(CakeRequest))
+#1 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Controller\Controller.php(530): Scaffold->__construct(Object(ConsultantsController), Object(CakeRequest))
+#2 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Controller\Controller.php(489): Controller->_getScaffold(Object(CakeRequest))
+#3 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#4 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConsultantsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-27 03:14:24 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\View\Companies\add.ctp, line 14]
+2013-06-27 03:14:24 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Gera3d...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Gera3d...', 14, Array)
+#2 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Gera3d...', 14, Array)
+#3 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 03:14:25 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 03:14:25 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 14:13:31 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Model\Model.php(3164): ConnectionManager::getDataSource('default')
+#3 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Model\Model.php(1096): Model->setDataSource('default')
+#4 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Model\Model.php(3186): Model->setSource('users')
+#5 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Model\Model.php(1305): Model->getDataSource()
+#6 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#7 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\View\Helper\FormHelper.php(443): FormHelper->_introspectModel('User', 'fields')
+#8 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\View\Users\login.ctp(3): FormHelper->create('User')
+#9 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\View\View.php(923): include('C:\Users\Gera3d...')
+#10 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\View\View.php(886): View->_evaluate('C:\Users\Gera3d...', Array)
+#11 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\View\View.php(476): View->_render('C:\Users\Gera3d...')
+#12 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#13 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#14 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-06-27 14:13:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 14:13:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 21:27:17 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 21:47:36 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Gera3d6\Desktop\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
