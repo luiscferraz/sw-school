@@ -20,10 +20,6 @@
 	</head>
 <body> 
 
-<?php
-echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
-?>
-
 <IMG id="logoSW" SRC="./img/logo.gif">
 <IMG id="logoAgenda" SRC="./img/logoAgenda.png">
 <h1>
