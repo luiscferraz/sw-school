@@ -253,3 +253,8 @@ header('Content-Type: text/html; charset=UTF-8');
 		</tr>
 		<?php } ?>
 	</table>
+<br>
+<br>
+<?php
+echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
+?>
