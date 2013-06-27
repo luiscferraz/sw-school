@@ -619,6 +619,26 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	text-decoration: none;
 }
 
+@media only screen and(max-width:1330px){
+	#menuEsquerda{
+		width:300px;
+
+	}
+}
+@media only screen and(max-width:1200px){
+	#menuEsquerda{
+		width:200px;
+
+	}
+}
+@media only screen and(max-width:1100px){
+	#menuEsquerda{
+		width:100px;
+
+	}
+}
+
+
 #AtividadesEmProjetoIndex2 {
 	color: #5F9EA0;
 	text-align: left;
