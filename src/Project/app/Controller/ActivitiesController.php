@@ -47,7 +47,7 @@
 	}
 	
 	public function add(){
-	 	$this->layout = 'base';
+	 	$this->layout = 'basemodal';
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
 		$this-> set ('projects',$projects);		
 		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
