@@ -9,12 +9,22 @@
  	public function index($id = null){
  		 if ($id != null){
  		 	$this->set('title_for_layout', 'Atividades');
+ 		 	if (!$id) {
+            throw new NotFoundException(__('Invalid post'));
+	        }
+
+	 		$Projects =  $this->Activity->Project->findById($id);
+	 		
+	 		if (!$Projects) {
+	            throw new NotFoundException(__('Invalid post'));
+	        }
  			$this -> layout = 'basemodal';
  			$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1,'Activity.project_id =' => $id),'order'=>array('Project.name','Activity.description'))));
  			$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 			$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
 			$this-> set ('projects',$this->Activity->Project->find('all', array('conditions'=> array('Project.id =' => 'Activity.project_id'))));	
 			$this-> set ('tipo_usuario',$this->Auth->user('type'));		
+			$this ->set('project',$Projects);
  		 }		
  				 
  	}
