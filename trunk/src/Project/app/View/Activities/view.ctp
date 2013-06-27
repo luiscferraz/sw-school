@@ -1,3 +1,4 @@
+<a onClick="javascript:history.back()" target="_top" class="botao" alt="Voltar">Voltar</a>
 <h1 id="titulo">Atividade - <?php echo $activities['Activity']['id']; ?> 
 
 <?php 

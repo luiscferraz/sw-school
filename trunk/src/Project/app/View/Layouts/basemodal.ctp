@@ -30,7 +30,6 @@
 		
 		
 		<div class="conteudo">
-			<a href="javascript:history.back()" class="botao" alt="Voltar">Voltar</a>
 			<?php echo $this->fetch('content'); ?>
 		</div>
 	</body>
