@@ -25,7 +25,7 @@ class EntriesController extends AppController{
 		
 	 	if($this->request->is('post')){
 	 		if($this->Entry->saveAll($this->request->data)){
-	 			$this->Session->setFlash('O apontamento foi adicionado com sucesso.');
+	 			$this->Session->setFlash($this->flashSuccess('O apontamento foi adicionado com sucesso.'));
           		$this->redirect(array('action' => 'index'));
 	 		}
 	 		else{
@@ -57,7 +57,7 @@ class EntriesController extends AppController{
  	public function delete($id = NULL){
 		$this->Entry->id = $id;
 		if($this->Entry->saveField("removed", "true")){
-			$this->Session->setFlash('O apontamento foi removido com sucesso!');
+			$this->Session->setFlash($this->flashSuccess('O apontamento foi removido com sucesso!'));
 			$this->redirect(array('action' => 'index'));
 		}
 	}
@@ -65,7 +65,7 @@ class EntriesController extends AppController{
  	public function approve($id = NULL){
 		$this->Entry->id = $id;
 		if($this->Entry->saveField("approved",1)){
-			$this->Session->setFlash('O apontamento foi aprovado!');
+			$this->Session->setFlash($this->flashSuccess('O apontamento foi aprovado!'));
 			$this->redirect(array('action' => 'index'));
 		}
 	}
