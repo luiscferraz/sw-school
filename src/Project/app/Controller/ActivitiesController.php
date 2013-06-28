@@ -46,8 +46,9 @@
 	
 	}
 	
-	public function add(){
+	public function add($id){
 	 	$this->layout = 'basemodal';
+	 	$this-> set ('id',$id);
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
 		$this-> set ('projects',$projects);		
 		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
@@ -57,7 +58,7 @@
 	 		if ($this -> verifica($this->request->data)) {
 		 		if($this->Activity->saveAll($this->request->data)){
 		 			$this->Session->setFlash($this->flashSuccess('A atividade foi adicionada com sucesso.'));
-	          		$this->redirect(array('action' => 'index'));
+	          		$this->redirect(array('action' => '../activities/index/'.$id));
 		 		}
 		 		else{
 					$this->Session->setFlash($this->flashError('Erro ao cadastrar atividade!'));
