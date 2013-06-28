@@ -85,18 +85,18 @@ body {
 #botao_home {
 	color:#1fa0b7;
 	margin-left:-10px;
+	margin-top: -12px;
 	text-decoration:none;
 	font-size:40px;
 	width:530px;
 	background-color: #010101;
 	display:block;
-	padding:10px 10px 10px 20px;
 	border-radius: 0px 22px 22px 0px ;
 	-webkit-border-radius: 0px 22px 22px 0px ;
 	-moz-border-radius: 0px 22px 22px 0px ;
-	line-height: 50px;
-	padding-left:40px;
-	padding-bottom: 10px;
+	line-height: 38px;
+	padding-left:38px;
+	padding-bottom: 24px;
 }
 #botao_home_img{
 	margin-left:45px;
