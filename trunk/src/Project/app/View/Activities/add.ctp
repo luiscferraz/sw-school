@@ -28,8 +28,9 @@
     <div id="content">
         <div class="conteudo">
         <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
-		echo $this->Form->create('Activities', array('action' => 'add')); ?>
+        echo $this->Form->create('Activities', array('action' => 'add/'.$id)); ?>
             <fieldset id="Dados_projeto_pai">
+                <?php echo $this->Form->input('Activity.project_id', array('type'=>'hidden', 'value' => $id)); ?>
                 <?php echo $this->Form->input('Activity.description', array('label' => 'Descrição: ', 'id'=>'actvDesc', 'required' => 'required')); ?>        
                 <?php echo $this->Form->input('Activity.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
                 <?php echo $this->Form->input('Activity.status', array('options' => array("Planejada" => "Planejada", "Em desenvolvimento" => "Em desenvolvimento", "Concluida" => "Concluída", "Cancelada" => "Cancelada"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Status: ', 'id'=>'actvStatus')); ?><br>

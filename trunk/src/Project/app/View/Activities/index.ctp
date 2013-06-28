@@ -256,5 +256,6 @@ header('Content-Type: text/html; charset=UTF-8');
 <br>
 <br>
 <?php
-echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add'),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
+echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add/'.$project['Project']['id']),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
+
 ?>
