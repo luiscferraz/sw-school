@@ -7,7 +7,7 @@ class EntriesController extends AppController{
  	
  	public function index(){
 		$this->set('title_for_layout', 'Apontamento');
- 		$this -> layout = 'basemodal';
+ 		$this -> layout = 'basemodalint';
  		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1),'order'=>array('Activity.description','Consultant.name','Entry.type_consulting','Entry.hours_worked DESC','Entry.date DESC')))); 
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
@@ -16,7 +16,7 @@ class EntriesController extends AppController{
  	}
  	
  	public function add(){
-	 	$this->layout = 'basemodal';
+	 	$this->layout = 'basemodalint';
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));		 
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
@@ -71,7 +71,7 @@ class EntriesController extends AppController{
 	}
 	
 	public function edit($id = NULL){
-		$this->layout = 'basemodal';
+		$this->layout = 'basemodalint';
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
@@ -99,7 +99,7 @@ class EntriesController extends AppController{
 	public function view($id){
 
 		$this->Entry->id = $id;
-		$this->layout = 'basemodal';
+		$this->layout = 'basemodalint';
 		$Apontamento =  $this->Entry->findById($id);
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($Apontamento['Entry']['consultant_id']));
 		$this -> set ('nome_atividade', $this-> Nome_Atividade($Apontamento['Entry']['activity_id']));
