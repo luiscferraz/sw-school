@@ -162,7 +162,7 @@
 
 
 	public function Reports($id = null){
-		$this -> layout = 'base';
+		$this -> layout = 'basemodal';
 		$this -> set( 'idproject', $id);
 		$this -> set('filtersName', false);
 
