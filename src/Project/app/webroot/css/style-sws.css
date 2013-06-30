@@ -371,8 +371,9 @@ p span {
 }
 
 #dados_bancarios_add_consultor{
+	margin-top: -180px;
 	padding-left: 20px;
-	float: left;
+	float: right;
 	border-width: 30px;
 	width: 46%;
 	border: 30px;
@@ -580,6 +581,17 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
 
+}
+
+#dados_bancarios_add_empresa{
+	margin-top: -50px;
+	padding-left: 20px;
+	float: left;
+	border-width: 30px;
+	width: 46%;
+	border: 30px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
 }
 
 #integranteDefault, #integranteDefault2, #integranteDefault3{
