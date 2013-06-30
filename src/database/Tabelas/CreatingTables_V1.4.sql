@@ -1,4 +1,4 @@
-﻿SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=`TRADITIONAL`;
 
@@ -245,7 +245,7 @@ DROP TABLE IF EXISTS `swsdb`.`entries` ;
 
 CREATE  TABLE IF NOT EXISTS `swsdb`.`entries` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `date` VARCHAR(12) NOT NULL ,
+  `date` date NOT NULL ,
   `type_consulting` VARCHAR(1) NOT NULL,
   `type` ENUM('Individual', 'Grupo') NOT NULL ,
   `hours_worked` DOUBLE(4,1) NOT NULL ,
@@ -354,3 +354,79 @@ COLLATE = utf8_general_ci;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+/*Sprint 3:                                             */
+/*Criação da tabela para os dados bancários do consultor*/
+create table consultants_bank_infos(id int (11) primary key auto_increment,
+				    name_bank varchar(40), 
+			            number_agency varchar (15),
+				    number_account varchar(15),
+				    consultant_id int)
+				    engine = InnoDB;
+
+/*Chave estrangeira para ligar a tabela consultants_bank_infos a tabela consultants*/
+alter table consultants_bank_infos add foreign key (consultant_id) references consultants (id)
+on delete cascade
+on update cascade;
+
+
+
+
+/*Criação da tabela para os dados bancários da empresa*/
+create table companies_bank_infos (id int (11) primary key auto_increment,
+				   name_bank varchar(40), 
+			           number_agency  varchar(15),
+				   number_account varchar(15),
+				   company_id int)
+				   engine = InnoDB;
+
+/*Chave estrangeira para ligar a tabela companies_bank_info a tabela companies*/
+alter table companies_bank_infos add foreign key (company_id) references companies (id)
+on delete cascade
+on update cascade;
+
+
+/*Criação da tabela para os contatos da empresa*/
+
+create table companies_contacts (id int (11) primary key auto_increment,
+				 name varchar (50),
+				 email varchar (20),
+				 function varchar (25),
+			         telephone varchar (13),
+                                 company_id int)
+			         engine = InnoDB;
+
+/*Chave estrangeira para ligar a tabela companies_contacts a tabela companies*/
+
+alter table companies_contacts add foreign key (company_id) references companies (id)
+on delete cascade
+on update cascade;
+
+			
+				 
+
+
+/*Criação da tabela do dono da empresa*/
+
+create table owners (id int(11) primary key auto_increment,
+			 name varchar (45),
+		     email varchar(45),
+		     phone varchar (13),
+		     date varchar (12))
+		     engine = InnoDB;
+
+
+ 
+/*Adicionar campo data de fundação a tabela companies*/
+
+alter table companies add column fundation varchar (10);
+
+/*Adicionar campo id do dono da empresa a tabela companies*/
+ alter table companies add column owner_id int (11);
+
+/*Chave estrangeira para ligar a tabela companies a tabela owners*/
+
+alter table companies add foreign key (owner_id) references owners(id)
+on delete cascade
+on update cascade;
