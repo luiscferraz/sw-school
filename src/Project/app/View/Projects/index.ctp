@@ -116,25 +116,39 @@ $(document).ready(function(){
 
           <a class="fancybox fancybox.iframe" href="./Projects/reports/<?php echo $project['Project']['id'] ?>"><?php echo $this->Html->image("rel.png", array('alt' => 'Relatórios','title' => 'Relatórios', 'id' => 'btnRelatorio'))?></a>
           
-          <?php 
-          if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-          echo $this->Html->link(
-          $this->Html->image("consultor.png", array('alt' => 'Consultores Alocados','title' => 'Consultores Alocados')), array('action' => 'alocados',$project['Project']['id']), array('escape'=>false, 'id'=>'link'));
-          }
-          ?>
+         
 
           <?php 
       if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-          echo $this->Html->link(
-          $this->Html->image("financial.png", array('alt' => 'Despesas','title' => 'Despesas')), array('action' => 'financial',$project['Project']['id']), array('escape'=>false, 'id'=>'link'));
+
+        $idPrj = $project['Project']['id'];
+        echo ('<a class="fancybox fancybox.iframe" alt="Consultores Alocados" id="link" href="./Projects/alocados/"'.$idPrj.'">');
+        echo ('<img src="./img/consultor.png"  alt="Consultores Alocados" title="Consultores Alocados" id="btnalocados" >');
+        echo "</a>";
       }
       ?>
 
-          <?php 
+
+
+        <?php 
       if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-      echo $this->Html->link(
-          $this->Html->image("edit.png", array("alt" => "Editar","title" => "Editar Projeto")),'edit/'.$project['Project']['id'],
-          array('escape'=>false));
+
+        $idPrj = $project['Project']['id'];
+        echo ('<a class="fancybox fancybox.iframe" alt="Despesas" id="link" href="./Projects/financial/"'.$idPrj.'">');
+        echo ('<img src="./img/financial.png"  alt="Despesas" title="Despesas" id="btnFinancial" >');
+        echo "</a>";
+      }
+      ?>
+
+   
+
+      <?php 
+      if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+
+        $idPrj = $project['Project']['id'];
+        echo ('<a class="fancybox fancybox.iframe" alt="Editar" id="link" href="./Projects/edit/"'.$idPrj.'">');
+        echo ('<img src="./img/edit.png"  alt="Editar" title="Editar" id="btnEdit" >');
+        echo "</a>";
       }
       ?>
 

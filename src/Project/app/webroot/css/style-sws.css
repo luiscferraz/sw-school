@@ -594,9 +594,29 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 	background-color: #bcdae0;
 }
 
+#contato{
+	margin-top: 5px;
+	padding-left: 20px;
+	float: right;
+	border-width: 30px;
+	width: 46%;
+	border: 30px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
+}
+
+#contato2{
+	border-width: 30px;
+	width: 46%;
+	border: 30px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
+}
+
 #integranteDefault, #integranteDefault2, #integranteDefault3{
 	margin-left: 0%;
 }
+
 
 /* ===========PROJETOS===========*/
 
