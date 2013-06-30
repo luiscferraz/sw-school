@@ -4,6 +4,7 @@ class EntriesController extends AppController{
 	public $helpers = array ('Html','Form');
  	public $name = 'Entries';
  	var $scaffold;
+
  	
  	public function index(){
 		$this->set('title_for_layout', 'Apontamento');

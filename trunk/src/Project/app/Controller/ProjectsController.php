@@ -62,7 +62,7 @@
  	}
 	
 	public function edit($id = NULL){
-		$this->layout = 'base';
+		$this->layout = 'basemodal';
 		$this->Project->id = $id;
 		
 	
@@ -119,7 +119,7 @@
  	}
  	
  	public function alocados($id=null){
- 		$this -> layout = 'base';
+ 		$this -> layout = 'basemodal';
  		if($this->request->is('post')){
 	 			if($this->Project->saveAll($this->request->data)){
 	 				$this->Session->setFlash($this->flashSuccess('Projeto adicionado com sucesso.'));
@@ -288,7 +288,7 @@
 
 	//Finanças do projeto
  	public function financial($id =  null){
- 		$this -> layout = 'base';
+ 		$this -> layout = 'basemoda';
 
 		$this -> set ('financials', $this -> Project -> Expense -> find ('all', array( 'conditions' => array ('Expense.project_id =' => $id))));
 		$this -> set ('id', $id);

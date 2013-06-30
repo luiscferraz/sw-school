@@ -59,6 +59,7 @@ $('document').ready(function(){
 	$("#fundation").mask("99/99/9999");
 	$("#Owner_data").mask("99/99/9999");
 	$("#Owner_phone").mask("(99)9999-9999");
+	$("#Contact_phone").mask("(99)9999-9999");
 	
 
 
