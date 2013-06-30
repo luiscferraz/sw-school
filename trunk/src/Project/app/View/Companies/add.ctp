@@ -63,6 +63,16 @@
 				echo $this->Form->input('Sepg.email', array('type' => 'email','label' => 'Email:'));
 			?>
 		</fieldset>
+
+		<fieldset id="dadosDono">
+			<legend class="legenda">Dono da Empresa</legend>
+			<?php
+				echo $this->Form->input('Owner.name', array('label' => 'Nome:'));
+				echo $this->Form->input('Owner.data', array('label' => 'Data de Nascimento:', 'id' => 'Owner_data'));
+				echo $this->Form->input('Owner.email', array('type' => 'email','label' => 'Email:'));
+				echo $this->Form->input('Owner.phone', array('label' => 'Telefone: ', 'id'=>'Owner_phone'));				
+			?>
+		</fieldset>
 	
 		<?php 
 		echo $this->Form->end('Confirmar cadastro');

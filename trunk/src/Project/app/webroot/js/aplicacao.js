@@ -57,6 +57,8 @@ $('document').ready(function(){
 	$("#actvStartHour").mask("99:99");
 	$("#actvEndHour").mask("99:99");
 	$("#fundation").mask("99/99/9999");
+	$("#Owner_data").mask("99/99/9999");
+	$("#Owner_phone").mask("(99)9999-9999");
 	
 
 

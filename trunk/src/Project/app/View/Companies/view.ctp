@@ -24,6 +24,12 @@
 				echo 'CNPJ: ';
 				echo $company['Company']['cnpj'];
 			?></p>
+			<!--
+		<p><?php 
+				//echo 'Data de Fundação: ';
+				//echo $company['Company']['fundation'];
+			?></p>
+		-->
 		<p><?php 
 				echo 'Telefone 1: ';
 				echo $company['Company']['phone1'];
@@ -139,5 +145,30 @@
 			echo $company['Sepg']['email'];
 		?></p>
 	</div>
+
+	<!--
+	<div class='dadosDono'>
+		<h2 class="tituloCompanyView">Dono da Empresa</h2>
+		
+		<p><?php 
+			//echo 'Nome: ';
+			//echo $company['Owner']['name']; 
+		?></p>
+		<p><?php 
+			//echo 'Data de Nacimento: ';
+			//echo $company['Owner']['Owner_data'];
+		?></p>
+		<p><?php 
+			//echo 'Email: ';
+			//echo $company['Owner']['email'];
+		?></p>
+		<p><?php 
+			//echo 'Telefone: ';
+			//echo $company['Owner']['Owner_phone'];
+		?></p>
+		
+		
+	</div>
+	-->
 
 </div>
