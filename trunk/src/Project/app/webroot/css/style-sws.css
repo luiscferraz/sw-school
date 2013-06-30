@@ -370,6 +370,18 @@ p span {
 	background-color: #bcdae0;
 }
 
+#dados_bancarios_add_consultor{
+	padding-left: 20px;
+	float: left;
+	border-width: 30px;
+	width: 46%;
+	border: 30px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
+}
+
+
+
 /*========View=========*/
 
 #consultant{

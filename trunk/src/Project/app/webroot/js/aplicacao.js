@@ -56,7 +56,7 @@ $('document').ready(function(){
 	$("#hora").mask("99:99");
 	$("#actvStartHour").mask("99:99");
 	$("#actvEndHour").mask("99:99");
-	$("#fundation").mask("99/99/99");
+	$("#fundation").mask("99/99/9999");
 	
 
 

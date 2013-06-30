@@ -41,6 +41,19 @@
  
     </fieldset>
 
+    <fieldset id="dados_bancarios_add_consultor">
+					<legend class="legenda">Dados Bancários</legend>
+
+						<?php echo $this->Form->input('BankInfoConsultant.id', array('type' => 'hidden')); ?>
+						
+						<?php echo $this->Form->input('BankInfoConsultant.name_agency', array('label' => 'Nome do Banco: ','required'=>'required', 'id'=>'BankInfoConsultant.name_agency')); ?>
+				
+						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ','required'=>'required', 'id'=>'BankInfoConsultant.number_agency')); ?>
+
+						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ','required'=>'required', 'id'=>'BankInfoConsultant.number_account')); ?>
+											
+				</fieldset>
+
 			</div>
 			<?php echo $this->Form->end('Salvar Edição'); ?>
 		</form>
