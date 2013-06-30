@@ -73,6 +73,17 @@
 				echo $this->Form->input('Owner.phone', array('label' => 'Telefone: ', 'id'=>'Owner_phone'));				
 			?>
 		</fieldset>
+
+		 <fieldset id="dados_bancarios_add_empresa">
+					<legend class="legenda">Dados Bancários</legend>
+						
+						<?php echo $this->Form->input('BankInfoCompanies.name_agency', array('label' => 'Nome do Banco: ','required'=>'required', 'id'=>'BankInfoCompanies.name_agency')); ?>
+				
+						<?php echo $this->Form->input('BankInfoCompanies.number_agency', array('label' => 'Número da Agência: ','required'=>'required', 'id'=>'BankInfoCompanies.number_agency')); ?>
+
+						<?php echo $this->Form->input('BankInfoCompanies.number_account', array('label' => 'Número da Conta: ','required'=>'required', 'id'=>'BankInfoCompanies.number_account')); ?>
+											
+				</fieldset>
 	
 		<?php 
 		echo $this->Form->end('Confirmar cadastro');
