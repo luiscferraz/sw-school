@@ -14,6 +14,8 @@
 						<?php echo $this->Form->input('Consultant.phone2', array('label' => 'Celular: ', 'id'=>'phone2')); ?>
 						<?php echo $this->Form->input('Consultant.email', array('type' => 'email','label' => 'E-mail: ', 'id'=>'email')); ?>					
 				</fieldset>
+
+
 			</div>
 			<div class="right">
 				<fieldset id="enderecoAddConsultor">
@@ -37,6 +39,19 @@
             		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
  
     </fieldset>
+
+     <fieldset id="dados_bancarios_add_consultor">
+					<legend class="legenda">Dados Bancários</legend>
+						
+						<?php echo $this->Form->input('BankInfoConsultant.name_agency', array('label' => 'Nome do Banco: ','required'=>'required', 'id'=>'BankInfoConsultant.name_agency')); ?>
+				
+						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ','required'=>'required', 'id'=>'BankInfoConsultant.number_agency')); ?>
+
+						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ','required'=>'required', 'id'=>'BankInfoConsultant.number_account')); ?>
+											
+				</fieldset>
+
+   
 
 	
 			</div>
