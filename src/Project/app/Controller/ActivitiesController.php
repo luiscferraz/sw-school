@@ -112,16 +112,18 @@
 			return true;
 		}
 	}
-	public function delete($id = NULL){
+	public function delete($id = NULL, $id_projeto){
 		$this->Activity->id = $id;
 		if($this->Activity->saveField("removed", "true")){
 			$this->Session->setFlash($this -> flashSuccess('A atividade foi removida com sucesso!'));
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('action' => 'index/'.$id_projeto));
 		}
 	}
 	
-	public function edit($id = NULL){
+	public function edit($id = NULL, $id_projeto){
 		$this->layout = 'basemodal';
+		$this-> set ('id',$id);
+		$this-> set ('id_projeto',$id_projeto);		
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
 		$this-> set ('projects',$projects);		
 		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
@@ -131,15 +133,15 @@
 		if ($this->request->is('get')) {
 			$this->request->data = $this->Activity->read();
 		}
-		else{
+		else{			
 			$this->Activity->id = $id;
 			if ($this->Activity->saveAll($this->request->data)) {
 				
 				$this->Session->setFlash($this->flashSuccess('Atividade foi editada.'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'index/'.$id_projeto));
 			}
 			else {
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'index/'.$id_projeto));
 			}
 			
 		}
