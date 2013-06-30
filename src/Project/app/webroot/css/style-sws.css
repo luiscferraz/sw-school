@@ -570,6 +570,18 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
 
 }
 
+#dadosDono{
+	margin-top: -2px;
+	padding-left: 20px;
+	float: left;
+	border-width: 30px;
+	width: 46%;
+	border: 30px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
+
+}
+
 #integranteDefault, #integranteDefault2, #integranteDefault3{
 	margin-left: 0%;
 }
