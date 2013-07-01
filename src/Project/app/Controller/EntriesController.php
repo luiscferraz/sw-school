@@ -6,14 +6,16 @@ class EntriesController extends AppController{
  	var $scaffold;
 
  	
- 	public function index(){
-		$this->set('title_for_layout', 'Apontamento');
- 		$this -> layout = 'basemodalint';
- 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1),'order'=>array('entry.date DESC','Consultant.name','Entry.type_consulting','Entry.hours_worked DESC','Activity.description')))); 
-		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
-		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
-		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
-		$this-> set ('id_consultor_logado', $this->Auth->user('consultant_id'));			
+ 	public function index($id = null){
+ 		if ($id != null) {
+			$this->set('title_for_layout', 'Apontamento');
+	 		$this -> layout = 'basemodalint';
+	 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1, 'Entry.activity_id =' => $id),'order'=>array('entry.date DESC','Consultant.name','Entry.type_consulting','Entry.hours_worked DESC','Activity.description')))); 
+			$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
+			$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
+			$this-> set ('tipo_usuario',$this->Auth->user('type'));	
+			$this-> set ('id_consultor_logado', $this->Auth->user('consultant_id'));
+			}		
  	}
  	
  	public function add(){
