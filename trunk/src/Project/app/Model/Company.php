@@ -38,7 +38,14 @@ class Company extends AppModel {
       'BankInfoCompany' => array(
          'className' => 'BankInfoCompany',
          'foreignKey' => 'company_id',
-         'fields' => array('id', 'name_bank', 'number_agency','number_account', 'company_id'),
+         'fields' => array('id', 'name_bank', 'number_agency','number_account'),
+         'conditions' => array(),         
+         'dependent' => true
+      ),
+      'Owner' => array(
+         'className' => 'Owner',
+         'foreignKey' => 'id',
+         'fields' => array('id', 'name', 'email','phone', 'date'),
          'conditions' => array(),         
          'dependent' => true
       )
