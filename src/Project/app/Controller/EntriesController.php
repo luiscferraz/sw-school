@@ -15,6 +15,14 @@ class EntriesController extends AppController{
 			$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
 			$this-> set ('tipo_usuario',$this->Auth->user('type'));	
 			$this-> set ('id_consultor_logado', $this->Auth->user('consultant_id'));
+			$this ->set('activity',$this-> Nome_Atividade($id));
+			
+
+
+			$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
+			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+
+
 			}		
  	}
  	
@@ -55,6 +63,8 @@ class EntriesController extends AppController{
 			$name = $this->Entry->Activity->findById($id);
 			return $name['Activity']['description'];
  		 	}
+ 		
+ 		
 			
  	
  	public function delete($id = NULL){
@@ -107,6 +117,14 @@ class EntriesController extends AppController{
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($Apontamento['Entry']['consultant_id']));
 		$this -> set ('nome_atividade', $this-> Nome_Atividade($Apontamento['Entry']['activity_id']));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
+
+		//$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
+		//	$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+
+		
+
+
+
 		
 	    if ($this->request->is('get')) {
 	        $this->set('entries', $this->Entry->read());

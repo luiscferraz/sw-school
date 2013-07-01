@@ -11531,3 +11531,275 @@
 2013-07-01 19:56:19 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-07-01 22:31:00 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 63]
+2013-07-01 22:31:00 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 63, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Nadja\...', 63, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 22:31:01 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:31:01 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:33:58 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 63]
+2013-07-01 22:33:58 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 63, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Nadja\...', 63, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 22:33:58 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:33:58 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:40:21 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 17]
+2013-07-01 22:40:21 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 17, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Nadja\...', 17, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 22:40:22 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:40:22 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:53:20 Error: Fatal Error (4): syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE) in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 121]
+2013-07-01 22:53:20 Error: [FatalErrorException] syntax error, unexpected ',', expecting '&' or variable (T_VARIABLE)
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Nadja\...', 121)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Nadja\...', 121, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Nadja\...', 121, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 22:53:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:53:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:54:24 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 16]
+2013-07-01 22:54:24 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 22:54:24 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:54:24 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:55:56 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 16]
+2013-07-01 22:55:56 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 22:55:56 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:55:56 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:57:32 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 16]
+2013-07-01 22:57:32 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 22:57:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 22:57:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:00:06 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 16]
+2013-07-01 23:00:06 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 23:00:06 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:00:06 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:01:08 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 16]
+2013-07-01 23:01:08 Error: [FatalErrorException] Call to a member function findById() on a non-object
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\Nadja\...', 16, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 23:01:08 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:01:08 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:04:05 Error: [NotFoundException] Invalid post
+#0 [internal function]: EntriesController->index('36')
+#1 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EntriesController), Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-01 23:04:06 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:04:06 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:10:55 Error: [NotFoundException] Invalid post
+#0 [internal function]: EntriesController->index('36')
+#1 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EntriesController), Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-01 23:10:56 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:10:56 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:11:29 Error: [NotFoundException] Invalid post
+#0 [internal function]: EntriesController->index('36')
+#1 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EntriesController), Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-01 23:11:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:11:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:23:03 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:23:13 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:23:13 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:23:13 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:23:13 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:23:13 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:23:39 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:23:39 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:32:38 Error: Fatal Error (4): syntax error, unexpected 'view' (T_STRING) in [C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php, line 24]
+2013-07-01 23:32:38 Error: [FatalErrorException] syntax error, unexpected 'view' (T_STRING)
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\Nadja\...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\Nadja\...', 24, Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\Nadja\...', 24, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-01 23:32:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:32:38 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:46:24 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:47:33 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-01 23:47:33 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-02 00:03:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'projects.name' in 'field list'
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT projects...', Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT projects...', Array, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(538): DboSource->fetchAll('SELECT projects...')
+#4 [internal function]: DboSource->query('SELECT projects...')
+#5 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Model.php(3003): call_user_func_array(Array, Array)
+#6 C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php(121): Model->query('SELECT projects...')
+#7 [internal function]: EntriesController->view('22')
+#8 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EntriesController), Array)
+#9 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-02 00:03:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-02 00:03:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-02 00:06:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'projects.name' in 'field list'
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT projects...', Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT projects...', Array, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(538): DboSource->fetchAll('SELECT projects...')
+#4 [internal function]: DboSource->query('SELECT projects...')
+#5 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Model.php(3003): call_user_func_array(Array, Array)
+#6 C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php(121): Model->query('SELECT projects...')
+#7 [internal function]: EntriesController->view('22')
+#8 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EntriesController), Array)
+#9 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-02 00:06:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-02 00:06:29 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-02 00:14:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'activies.id' in 'where clause'
+#0 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT projects...', Array)
+#2 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT projects...', Array, Array)
+#3 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Datasource\DboSource.php(538): DboSource->fetchAll('SELECT projects...')
+#4 [internal function]: DboSource->query('SELECT projects...')
+#5 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Model\Model.php(3003): call_user_func_array(Array, Array)
+#6 C:\Users\Nadja\Desktop\sw\src\Project\app\Controller\EntriesController.php(121): Model->query('SELECT projects...')
+#7 [internal function]: EntriesController->view('22')
+#8 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EntriesController), Array)
+#9 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Nadja\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-02 00:14:12 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-02 00:14:12 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
