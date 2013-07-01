@@ -1,9 +1,13 @@
+<h1 id="titulo">Projeto - <?php echo $nome_projeto; ?> Atividade - <?php echo $activity; ?></h1>
+
+
+
 
 <div class="entry index">
 
 	<table  class="zebra" cellpadding="0" cellspacing="0">
 		<tr>
-			<th class="responsive">Atividade</th>
+			<th class="responsive">Observação</th>
 			<th class="responsive">Consultor</th>
 			<th>Tipo consultoria</th>
 			<th>Tipo</th>
@@ -28,8 +32,10 @@
 							
 		?>
 
+
+
 		<tr <?php echo $class; ?>>
-			<td class="atividade"><?php echo $entry['Activity']['description']; ?></td>
+			<td class="atividade"><?php echo $entry['Entry']['observations']; ?></td>
 			<td class="consultor"><?php echo $entry['Consultant']['name']; ?></td>
 			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
 			<td class="tipo"><?php echo $entry['Entry']['type']; ?></td>

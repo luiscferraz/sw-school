@@ -178,7 +178,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 		});
 	</script>
-	<h1 id="titulo"><a href="#" onClick="window.parent.$.fancybox.close();" alt="<?php echo $project['Project']['name'] ?>">Projeto - <?php echo $project['Project']['name'] ?></a></h1>
+	<h1 id="titulo"><a id="titulolink" href="#" onClick="window.parent.$.fancybox.close();" alt="<?php echo $project['Project']['name'] ?>">Projeto - <?php echo $project['Project']['name'] ?></a></h1>
 	<table class="zebra" id="tabela_atividades" cellpadding="0" cellspacing="0">
 		<tr>
 

@@ -1,4 +1,5 @@
 <h1 id="titulo">Apontamento - <?php echo $entries['Entry']['id']; ?> 
+<!--<?php //echo $nome_projeto; ?>-->
 	<?php 
 	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
 	
