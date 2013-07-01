@@ -244,7 +244,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 					<a href="../../entries/add"><?php echo $this->Html->image("clock.png",array('alt'=>'Apontar', 'title' => 'Apontar', 'id' => 'btnRelogio'));?></a>
 
-					<a href="../../entries"><?php echo $this->Html->image("eye.png",array('alt'=>'Visuzalizar Apontamento', 'title' => 'Visuzalizar Apontamento', 'id' => 'btnVisuzalizar-Apontamento'));?></a>
+					<a href="../../entries/index/<?php echo $activity['Activity']['id'] ?>"><?php echo $this->Html->image("eye.png",array('alt'=>'Visuzalizar Apontamento', 'title' => 'Visuzalizar Apontamento', 'id' => 'btnVisuzalizar-Apontamento'));?></a>
 					
 					
 					<!--<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input> -->
