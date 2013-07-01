@@ -68,7 +68,7 @@
 			<legend class="legenda">Dono da Empresa</legend>
 			<?php
 				echo $this->Form->input('Owner.name', array('label' => 'Nome:'));
-				echo $this->Form->input('Owner.date', array('label' => 'Data de Nascimento:', 'id' => 'Owner_data'));
+				echo $this->Form->input('Owner.date', array('label' => 'Data de Nascimento:', 'id' => 'Owner_date'));
 				echo $this->Form->input('Owner.email', array('type' => 'email','label' => 'Email:'));
 				echo $this->Form->input('Owner.phone', array('label' => 'Telefone: ', 'id'=>'Owner_phone'));				
 			?>
@@ -78,11 +78,11 @@
 					<legend class="legenda">Dados Bancários</legend>
 						
 						<?php 
-						echo $this->Form->input('BankInfoCompany.name_bank', array('label' => 'Nome do Banco: ','required'=>'required', 'id'=>'BankInfoCompanies.name_bank')); 
+						echo $this->Form->input('BankInfoCompany.name_bank', array('label' => 'Nome do Banco: ','required'=>'required', 'id'=>'BankInfoCompany.name_bank')); 
 				
-						echo $this->Form->input('BankInfoCompany.number_agency', array('label' => 'Número da Agência: ','required'=>'required', 'id'=>'BankInfoCompanies.number_agency'));
+						echo $this->Form->input('BankInfoCompany.number_agency', array('label' => 'Número da Agência: ','required'=>'required', 'id'=>'BankInfoCompany.number_agency'));
 
-						echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ','required'=>'required', 'id'=>'BankInfoCompanies.number_account')); 
+						echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ','required'=>'required', 'id'=>'BankInfoCompany.number_account')); 
 						
 						?>
 											
