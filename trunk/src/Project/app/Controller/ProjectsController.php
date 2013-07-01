@@ -288,7 +288,7 @@
 
 	//Finanças do projeto
  	public function financial($id =  null){
- 		$this -> layout = 'basemoda';
+ 		$this -> layout = 'basemodal';
 
 		$this -> set ('financials', $this -> Project -> Expense -> find ('all', array( 'conditions' => array ('Expense.project_id =' => $id))));
 		$this -> set ('id', $id);
