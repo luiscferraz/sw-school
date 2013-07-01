@@ -24,12 +24,12 @@
 				echo 'CNPJ: ';
 				echo $company['Company']['cnpj'];
 			?></p>
-			<!--
+			
 		<p><?php 
-				//echo 'Data de Fundação: ';
-				//echo $company['Company']['fundation'];
+				echo 'Data de Fundação: ';
+				echo $company['Company']['fundation'];
 			?></p>
-		-->
+		
 		<p><?php 
 				echo 'Telefone 1: ';
 				echo $company['Company']['phone1'];
@@ -146,29 +146,75 @@
 		?></p>
 	</div>
 
-	<!--
+	
 	<div class='dadosDono'>
 		<h2 class="tituloCompanyView">Dono da Empresa</h2>
 		
 		<p><?php 
-			//echo 'Nome: ';
-			//echo $company['Owner']['name']; 
+			echo 'Nome: ';
+			echo $company['Owner']['name']; 
 		?></p>
 		<p><?php 
-			//echo 'Data de Nacimento: ';
-			//echo $company['Owner']['Owner_data'];
+			echo 'Data de Nacimento: ';
+			echo $company['Owner']['date'];
 		?></p>
 		<p><?php 
-			//echo 'Email: ';
-			//echo $company['Owner']['email'];
+			echo 'Email: ';
+			echo $company['Owner']['email'];
 		?></p>
 		<p><?php 
-			//echo 'Telefone: ';
-			//echo $company['Owner']['Owner_phone'];
+			echo 'Telefone: ';
+			echo $company['Owner']['phone'];
 		?></p>
 		
 		
 	</div>
+
+	<div class='dadosBancariosempresa'>
+		<h2 class="tituloCompanyView">Dados Bancários</h2>
+		
+		<p><?php 
+			echo 'Nome do Banco: ';
+			echo $company['BankInfoCompany']['name_bank']; 
+		?></p>
+		<p><?php 
+			echo 'Número da Agência: ';
+			echo $company['BankInfoCompany']['number_agency'];
+		?></p>
+		<p><?php 
+			echo 'Número da Conta: ';
+			echo $company['BankInfoCompany']['number_account'];
+		?></p>
+		
+		
+		
+	</div>
+
+	<!--
+	<div class='contatos'>
+		<h2 class="tituloCompanyView">Contato</h2>
+		
+		<p><?php 
+			//echo 'Nome: ';
+			//echo $company['Contact']['name']; 
+		?></p>
+		<p><?php 
+			//echo 'Função: ';
+			//echo $company['Contact']['function'];
+		?></p>
+		<p><?php 
+			//echo 'Email: ';
+			//echo $company['Contact']['email'];
+		?></p>
+		<p><?php 
+			//echo 'Telefone: ';
+			//echo $company['Contact']['telephone'];
+		?></p>
+		
+		
+		
+	</div>
 	-->
+	
 
 </div>

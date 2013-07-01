@@ -401,6 +401,15 @@ p span {
 	margin-bottom: 50px;
 }
 
+#dadosBancarios {
+	float: right;
+	background: #bcdae0;
+	padding-left: 8px;
+	margin-top: 20px;
+	width: 40%;
+	margin-bottom: 50px;
+}
+
 #dados, #hora-view-atividades, #dados-view-atividades {
 	float: left;
 	background: #bcdae0;
@@ -474,7 +483,7 @@ div.dadosEndereco {
 	background-color: #bcdae0;
 }
 
-div.dadosSponsor, div.dadosFinancial, div.dadosSepg {
+div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBancariosempresa, div.contatos {
 	margin-top: 33px;
 	margin-left: 18%;
 	width: 62%;
