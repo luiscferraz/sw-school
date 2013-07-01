@@ -289,6 +289,8 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 		//se for Segunda-feira, mescla 10 colunas a direita com o nome do mes, depois 2 colunas cinzas (final de semana)
 		echo '<td colspan="10" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
+		echo '&nbsp;-&nbsp;';
+		echo date('Y',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
@@ -297,6 +299,8 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	} elseif ($ver == 'Tue'){
 		echo '<td colspan="8" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
+		echo '&nbsp;-&nbsp;';
+		echo date('Y',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
@@ -305,6 +309,8 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	} elseif ($ver == 'Wed'){
 		echo '<td colspan="6" ',$bgColorMes,'>';
 		echo date('F',$dataFinal);
+		echo '&nbsp;-&nbsp;';
+		echo date('Y',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
@@ -313,6 +319,8 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	} elseif ($ver == 'Thu'){
 		echo '<td colspan="4" ',$bgColorMes,'>';
 		echo date('M',$dataFinal);
+		echo '&nbsp;-&nbsp;';
+		echo date('Y',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
@@ -321,6 +329,8 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	} elseif ($ver == 'Fri'){
 		echo '<td colspan="2" ',$bgColorMes,'>';
 		echo date('M',$dataFinal);
+		echo '&nbsp;-&nbsp;';
+		echo date('Y',$dataFinal);
 		echo '</td>';
 		echo '<td colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
