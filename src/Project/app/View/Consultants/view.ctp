@@ -35,6 +35,16 @@
 	<p><span>Estado: </span><?php echo $consultant['Address']['state']; ?></p>
 </div>
 
+<div id="dadosBancarios">
+	<h2 id="titulodadosbancarios">Dados Bancários</h2>
+	<p><span>Nome do Banco: </span><?php echo $consultant['BankInfoConsultant']['name_bank']; ?></p>
+	<p><span>Número da Agência: </span><?php echo $consultant['BankInfoConsultant']['number_agency']; ?></p>
+	<p><span>Número da conta: </span><?php echo $consultant['BankInfoConsultant']['number_account']; ?></p>
+	
+</div>
+
+
+
 <div id='consultant'>
 	<?php echo $this->Html->image('consultant.jpg')?>
 </div>
