@@ -387,9 +387,10 @@ on delete cascade
 on update cascade;
 
 
+
 /*Criação da tabela para os contatos da empresa*/
 
-create table companies_contacts (id int (11) primary key auto_increment,
+create table companies_contacts1 (id int (11) primary key auto_increment,
 				 name varchar (50),
 				 email varchar (20),
 				 function varchar (25),
@@ -399,13 +400,62 @@ create table companies_contacts (id int (11) primary key auto_increment,
 
 /*Chave estrangeira para ligar a tabela companies_contacts a tabela companies*/
 
-alter table companies_contacts add foreign key (company_id) references companies (id)
+alter table companies_contacts1 add foreign key (company_id) references companies (id)
 on delete cascade
 on update cascade;
 
-			
-				 
 
+/*Criação da tabela para os contatos da empresa*/
+
+create table companies_contacts2 (id int (11) primary key auto_increment,
+				 name varchar (50),
+				 email varchar (20),
+				 function varchar (25),
+			         telephone varchar (13),
+                                 company_id int)
+			         engine = InnoDB;
+
+/*Chave estrangeira para ligar a tabela companies_contacts a tabela companies*/
+
+alter table companies_contacts2 add foreign key (company_id) references companies (id)
+on delete cascade
+on update cascade;
+
+
+/*Criação da tabela para os contatos da empresa*/
+
+create table companies_contacts3 (id int (11) primary key auto_increment,
+				 name varchar (50),
+				 email varchar (20),
+				 function varchar (25),
+			         telephone varchar (13),
+                                 company_id int)
+			         engine = InnoDB;
+
+/*Chave estrangeira para ligar a tabela companies_contacts a tabela companies*/
+
+alter table companies_contacts3 add foreign key (company_id) references companies (id)
+on delete cascade
+on update cascade;
+
+
+/*Criação da tabela para os contatos da empresa*/
+
+create table companies_contacts4 (id int (11) primary key auto_increment,
+				 name varchar (50),
+				 email varchar (20),
+				 function varchar (25),
+			         telephone varchar (13),
+                                 company_id int)
+			         engine = InnoDB;
+
+/*Chave estrangeira para ligar a tabela companies_contacts a tabela companies*/
+
+alter table companies_contacts4 add foreign key (company_id) references companies (id)
+on delete cascade
+on update cascade;
+		
+				 
 
 /*Criação da tabela do dono da empresa*/
 
