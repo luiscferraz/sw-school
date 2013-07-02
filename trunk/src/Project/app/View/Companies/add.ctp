@@ -91,34 +91,34 @@
 		<fieldset id="contato">
 			<legend class="legenda">Contatos</legend>
 			<?php
-				echo $this->Form->input('Contact.name', array('label' => 'Nome:'));
-				echo $this->Form->input('Contact.function', array('label' => 'Função:'));
-				echo $this->Form->input('Contact.email', array('type' => 'email','label' => 'Email:'));
-				echo $this->Form->input('Contact.telephone', array('label' => 'Telefone: ', 'id'=>'Contact_phone'));				
+				echo $this->Form->input('Contact1.name', array('label' => 'Nome:'));
+				echo $this->Form->input('Contact1.function', array('label' => 'Função:'));
+				echo $this->Form->input('Contact1.email', array('type' => 'email','label' => 'Email:'));
+				echo $this->Form->input('Contact1.telephone', array('label' => 'Telefone: ', 'id'=>'Contact_phone'));				
 			?>
 			<hr>
 			<?php
-				echo $this->Form->input('Contact.name', array('label' => 'Nome:'));
-				echo $this->Form->input('Contact.function', array('label' => 'Função:'));
-				echo $this->Form->input('Contact.email', array('type' => 'email','label' => 'Email:'));
-				echo $this->Form->input('Contact.telephone', array('label' => 'Telefone: ', 'id'=>'Contact_phone'));				
+				echo $this->Form->input('Contact2.name', array('label' => 'Nome:'));
+				echo $this->Form->input('Contact2.function', array('label' => 'Função:'));
+				echo $this->Form->input('Contact2.email', array('type' => 'email','label' => 'Email:'));
+				echo $this->Form->input('Contact2.telephone', array('label' => 'Telefone: ', 'id'=>'Contact_phone'));				
 			?>
 		</fieldset>
 
 		<fieldset id="contato2">
 			<legend class="legenda">Contatos</legend>
 			<?php
-				echo $this->Form->input('Contact.name', array('label' => 'Nome:'));
-				echo $this->Form->input('Contact.function', array('label' => 'Função:'));
-				echo $this->Form->input('Contact.email', array('type' => 'email','label' => 'Email:'));
-				echo $this->Form->input('Contact.telephone', array('label' => 'Telefone: ', 'id'=>'Contact_phone'));				
+				echo $this->Form->input('Contact3.name', array('label' => 'Nome:'));
+				echo $this->Form->input('Contact3.function', array('label' => 'Função:'));
+				echo $this->Form->input('Contact3.email', array('type' => 'email','label' => 'Email:'));
+				echo $this->Form->input('Contact3.telephone', array('label' => 'Telefone: ', 'id'=>'Contact_phone'));				
 			?>
 			<hr>
 			<?php
-				echo $this->Form->input('Contact.name', array('label' => 'Nome:'));
-				echo $this->Form->input('Contact.function', array('label' => 'Função:'));
-				echo $this->Form->input('Contact.email', array('type' => 'email','label' => 'Email:'));
-				echo $this->Form->input('Contact.telephone', array('label' => 'Telefone: ', 'id'=>'Contact_phone'));				
+				echo $this->Form->input('Contact4.name', array('label' => 'Nome:'));
+				echo $this->Form->input('Contact4.function', array('label' => 'Função:'));
+				echo $this->Form->input('Contact4.email', array('type' => 'email','label' => 'Email:'));
+				echo $this->Form->input('Contact4.telephone', array('label' => 'Telefone: ', 'id'=>'Contact_phone'));				
 			?>
 		</fieldset>
 	
