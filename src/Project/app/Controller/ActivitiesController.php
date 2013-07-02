@@ -121,7 +121,7 @@
 	}
 	
 	public function edit($id = NULL, $id_projeto){
-		$this->layout = 'basemodal';
+		$this->layout = 'basemodalint';
 		$this-> set ('id',$id);
 		$this-> set ('id_projeto',$id_projeto);		
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
@@ -152,7 +152,7 @@
 
 		$this->Activity->id = $id;
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
-		$this->layout = 'basemodal';
+		$this->layout = 'basemodalint';
 		$Atividade =  $this->Activity->findById($id);
 		$this -> set ('consultor1', $this-> Nome_Consultor($Atividade['Activity']['consultant1_id']));
 		$this -> set ('consultor2', $this-> Nome_Consultor($Atividade['Activity']['consultant2_id']));
