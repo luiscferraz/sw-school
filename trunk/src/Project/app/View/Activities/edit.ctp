@@ -1,4 +1,3 @@
-<a onClick="javascript:history.back()" target="_top" class="botao" alt="Voltar">Voltar</a>
 <?php 
     foreach ($projects as $project) {        
         $list_projects[$project['projects']['id']] =$project['projects']['name'];

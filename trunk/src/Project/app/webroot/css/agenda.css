@@ -51,7 +51,7 @@ body {
 	opacity:0.85;
 	/*alterado*/
 	padding:10px 0px 10px 0px;
-    margin-left: -500px;
+    margin-left: -505px;
 	position:fixed;
     height: 100%;
     border:2px solid #010101;
@@ -251,5 +251,21 @@ margin:0px 0px 0px 7%;
 td {
 	text-align: center;
     border: 1px solid #808080;
+    
+}
+
+
+.wrapper1, .wrapper2{width: auto; border: none 0px;
+overflow-x: scroll; overflow-y:hidden;}
+.wrapper1{height: 20px; }
+.wrapper2{height: auto; }
+.div1 {width:1000px; height: 20px; }
+.div2 {width:1000px; height: 200px; background-color: #88FF88;
+overflow: auto;}
+
+.zebra_td {
+	text-align: center;
+    border: 1px solid #808080;
+    height: 26px;
     
 }
