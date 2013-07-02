@@ -11803,3 +11803,12 @@
 2013-07-02 00:14:12 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-07-02 02:43:26 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-02 02:43:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-02 02:43:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Nadja\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

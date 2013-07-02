@@ -190,31 +190,82 @@
 		
 	</div>
 
-	<!--
+	
 	<div class='contatos'>
 		<h2 class="tituloCompanyView">Contato</h2>
 		
 		<p><?php 
-			//echo 'Nome: ';
-			//echo $company['Contact']['name']; 
+			echo 'Nome: ';
+			echo $company['Contact1']['name']; 
 		?></p>
 		<p><?php 
-			//echo 'Função: ';
-			//echo $company['Contact']['function'];
+			echo 'Função: ';
+			echo $company['Contact1']['function'];
 		?></p>
 		<p><?php 
-			//echo 'Email: ';
-			//echo $company['Contact']['email'];
+			echo 'Email: ';
+			echo $company['Contact1']['email'];
 		?></p>
 		<p><?php 
-			//echo 'Telefone: ';
-			//echo $company['Contact']['telephone'];
+			echo 'Telefone: ';
+			echo $company['Contact1']['telephone'];
+		?></p>
+
+		<p><?php 
+			echo 'Nome: ';
+			echo $company['Contact2']['name']; 
+		?></p>
+		<p><?php 
+			echo 'Função: ';
+			echo $company['Contact2']['function'];
+		?></p>
+		<p><?php 
+			echo 'Email: ';
+			echo $company['Contact2']['email'];
+		?></p>
+		<p><?php 
+			echo 'Telefone: ';
+			echo $company['Contact2']['telephone'];
+		?></p>
+
+		<p><?php 
+			echo 'Nome: ';
+			echo $company['Contact3']['name']; 
+		?></p>
+		<p><?php 
+			echo 'Função: ';
+			echo $company['Contact3']['function'];
+		?></p>
+		<p><?php 
+			echo 'Email: ';
+			echo $company['Contact3']['email'];
+		?></p>
+		<p><?php 
+			echo 'Telefone: ';
+			echo $company['Contact3']['telephone'];
+		?></p>
+
+		<p><?php 
+			echo 'Nome: ';
+			echo $company['Contact4']['name']; 
+		?></p>
+		<p><?php 
+			echo 'Função: ';
+			echo $company['Contact4']['function'];
+		?></p>
+		<p><?php 
+			echo 'Email: ';
+			echo $company['Contact4']['email'];
+		?></p>
+		<p><?php 
+			echo 'Telefone: ';
+			echo $company['Contact4']['telephone'];
 		?></p>
 		
 		
 		
 	</div>
-	-->
+	
 	
 
 </div>
