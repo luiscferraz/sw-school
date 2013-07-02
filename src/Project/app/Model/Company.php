@@ -48,7 +48,35 @@ class Company extends AppModel {
          'fields' => array('id', 'name', 'email','phone', 'date'),
          'conditions' => array(),         
          'dependent' => true
-      )
+      ),
+      'Contact1' => array(
+         'className' => 'Contact1',
+         'foreignKey' => 'company_id',
+         'fields' => array('id', 'name', 'email','function', 'telephone'),
+         'conditions' => array(),         
+         'dependent' => true
+      ),
+      'Contact2' => array(
+         'className' => 'Contact2',
+         'foreignKey' => 'company_id',
+         'fields' => array('id', 'name', 'email','function', 'telephone'),
+         'conditions' => array(),         
+         'dependent' => true
+      ),
+      'Contact3' => array(
+         'className' => 'Contact3',
+         'foreignKey' => 'company_id',
+         'fields' => array('id', 'name', 'email','function', 'telephone'),
+         'conditions' => array(),         
+         'dependent' => true
+      ),
+      'Contact4' => array(
+         'className' => 'Contact4',
+         'foreignKey' => 'company_id',
+         'fields' => array('id', 'name', 'email','function', 'telephone'),
+         'conditions' => array(),         
+         'dependent' => true
+      ),
    );
 
 }
