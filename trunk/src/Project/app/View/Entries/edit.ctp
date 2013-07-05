@@ -1,3 +1,6 @@
+<h1 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h1>
+<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
+<!--<h2 id="tituloatividade">Atividade - <?php //echo $activity; ?></h2>-->
 	
 <?php 
     foreach ($activities as $activity) {        

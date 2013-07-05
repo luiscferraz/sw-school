@@ -1,4 +1,5 @@
-<h1 id="titulo">Projeto - <?php echo $nome_projeto; ?> Atividade - <?php echo $activity; ?></h1>
+<h1 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h1>
+<h2 id="tituloatividade">Atividade - <?php echo $activity; ?></h2>
 
 
 

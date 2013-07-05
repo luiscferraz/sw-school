@@ -1,3 +1,5 @@
+<h1 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h1>
+<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
 <?php 
     foreach ($projects as $project) {        
         $list_projects[$project['projects']['id']] =$project['projects']['name'];

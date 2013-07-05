@@ -1,4 +1,7 @@
-<h1 id="titulo">Atividade - <?php echo $activities['Activity']['id']; ?> 
+<!--<h1 id="titulo">Atividade - <?php //echo $activities['Activity']['id']; ?> -->
+<h1 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h1>
+<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
+<!--<h2 id="tituloatividade">Atividade - <?php //echo $nome_atividade; ?></h2>-->
 
 <?php 
 	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){

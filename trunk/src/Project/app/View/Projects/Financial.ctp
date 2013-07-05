@@ -1,12 +1,16 @@
 
 <h1>Despesas</h1>
 
+<!--<h1 id="tituloprojeto">Projeto - <?php //echo $nome_projeto; ?> </h1>-->
+
+
     
 <fieldset id="dadosDespesas">
     <?php echo $this->Form->create('Project', array('action' => 'addfinancial')); ?>             
                 <?php echo $this->Form->input('Expense.description', array('type' => 'textarea', 'label' => 'Descrição: <br>','required'=>'required', 'id' => 'descricaoDespesa')); ?>
                 <?php echo $this->Form->input('Expense.value', array('label' => 'Valor :  <br>','required'=>'required', 'id' => 'selectValor')); ?>
                 <?php echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e' => 'Entrada', 's' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa')); ?>
+                <?php echo $this->Form->input('Expense.typeExpense', array('label' => 'Tipo de Despesa : <br>','options' => array('l' => 'Logística', 'a' => 'Alimentação', 'd' => 'Diversos' ), 'required'=>'required', 'id' => 'selectTipoDespesa')); ?>
                 <?php echo $this->Form->input('Expense.project_id', array('type'=> 'hidden', 'value'=> $id)); ?>
     <?php echo $this->Form->end('Salvar') 
 
@@ -36,6 +40,13 @@
 
 </fieldset>
 
+<fieldset class="despesasProjeto">
+
+    <label for="anexo">Anexar Nota Fiscal:</label><br>
+
+    <input type="file" name="anexar" value="Anexar">
+</fieldset>
+
 
 
 <table cellpadding="0" cellspacing="0" id="tabelaDespesas">
@@ -43,7 +54,7 @@
             <th>Descrição</th>
             <th>Valor</th>
             <th>Tipo</th>
-            <th>Excluir</th>
+            <th>Ações</th>
         </tr>
 
 
