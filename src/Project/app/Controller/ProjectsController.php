@@ -292,6 +292,11 @@
 
 		$this -> set ('financials', $this -> Project -> Expense -> find ('all', array( 'conditions' => array ('Expense.project_id =' => $id))));
 		$this -> set ('id', $id);
+
+		//$nome_projeto = $this->Financial->Company->query("SELECT companies.name FROM companies, financials WHERE financials.company_id = companies.id and financials.id = ".$id);	
+			//$this-> set ('nome_projeto', $nome_projeto[0]['companies']['name']);
+		
+		
  	}
 
 	public function addfinancial(){

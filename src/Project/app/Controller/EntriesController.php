@@ -18,6 +18,7 @@ class EntriesController extends AppController{
 			$this ->set('activity',$this-> Nome_Atividade($id));
 			
 
+ 
 
 			$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
 			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
@@ -91,6 +92,9 @@ class EntriesController extends AppController{
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));
 		$this->Entry->id = $id;
+
+		$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
+			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
 		
 		if ($this->request->is('get')) {
 			$this->request->data = $this->Entry->read();
@@ -106,7 +110,12 @@ class EntriesController extends AppController{
 				$this->redirect(array('action' => 'index'));
 			}
 			
-		}	   
+		}
+		$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
+			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+
+		$nome_atividade = $this->Entry->Activity->Project->query("SELECT activities.description FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
+			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);	   
 	}
 	
 	public function view($id){
@@ -116,10 +125,15 @@ class EntriesController extends AppController{
 		$Apontamento =  $this->Entry->findById($id);
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($Apontamento['Entry']['consultant_id']));
 		$this -> set ('nome_atividade', $this-> Nome_Atividade($Apontamento['Entry']['activity_id']));
-		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
+		$this-> set ('tipo_usuario',$this->Auth->user('type'));
+		//$this ->set('activity',$this-> Nome_Atividade($id));	
 
-		//$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
-		//	$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+
+		$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
+			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+
+		$nome_atividade = $this->Entry->Activity->Project->query("SELECT activities.description FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
+			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 
 		
 
