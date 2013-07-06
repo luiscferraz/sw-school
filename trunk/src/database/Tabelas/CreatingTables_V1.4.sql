@@ -480,3 +480,9 @@ alter table companies add column fundation varchar (10);
 alter table companies add foreign key (owner_id) references owners(id)
 on delete cascade
 on update cascade;
+
+/*Sprint 4:                                             */
+
+/*Alteração da sigla do ENUM de "s" para "d"*/
+
+alter table expenses modify type ENUM ("e,d");
