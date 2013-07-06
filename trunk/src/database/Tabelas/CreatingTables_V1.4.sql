@@ -486,3 +486,9 @@ on update cascade;
 /*Alteração da sigla do ENUM de "s" para "d"*/
 
 alter table expenses modify type ENUM ("e,d");
+
+
+/*Adicionar coluna para armazenar anexos */
+
+alter table expenses add column attachments blob;
+
