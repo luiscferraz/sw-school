@@ -266,7 +266,11 @@ overflow: auto;}
 
 .zebra_td {
 	text-align: center;
-    border: 1px solid #808080;
+    border-top: 1px solid #808080;
+    border-right: 1px solid #808080;
+    border-bottom: 0px;
+    border-left: 0px;
     height: 26px;
     
 }
+
