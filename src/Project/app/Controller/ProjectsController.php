@@ -302,6 +302,8 @@
 		$nome_projeto = $this->Project->query("SELECT projects.name FROM projects WHERE  projects.id = ".$id);
 		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
 		$this -> set ('tipo_usuario',$this-> Auth->user('type'));	
+		$this-> set ('id_consultor_logado', $this-> ID_Consultor_Logado($this->Auth->user('consultant_id')));
+		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
 			
 
 		
@@ -343,6 +345,27 @@
  		return $name['Company']['name'];
  		
  	}
+
+ 	private function Nome_Consultor_Logado($id){
+			$name = $this->Project->Consultant->findById($id);
+			if (!$name){
+			return '';
+			}
+			else{
+			return $name['Consultant']['name'];
+ 		 	}
+	}
+
+	private function ID_Consultor_Logado($id){
+			$name = $this->Project->Consultant->findById($id);
+			if (!$name){
+			return '';
+			}
+			else{
+			return $name['Consultant']['id'];
+ 		 	}
+	}
+
 
 
  	//Retornar em string nome do projeto pai

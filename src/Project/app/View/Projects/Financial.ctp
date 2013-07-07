@@ -7,7 +7,8 @@
 
     
 <fieldset id="dadosDespesas">
-    <?php echo $this->Form->create('Project', array('action' => 'addfinancial')); ?>             
+    <?php echo $this->Form->create('Project', array('action' => 'addfinancial')); ?>
+                <?php echo $this->Form->input('Expense.consultant_name', array('type'=>'hidden', 'value' => $nome_consultor_logado)); ?>
                 <?php echo $this->Form->input('Expense.description', array('type' => 'textarea', 'label' => 'Descrição: <br>','required'=>'required', 'id' => 'descricaoDespesa')); ?>
                 <?php echo $this->Form->input('Expense.value', array('label' => 'Valor :  <br>','required'=>'required', 'id' => 'selectValor')); ?>
                 
@@ -62,6 +63,7 @@
             <th>Descrição</th>
             <th>Valor</th>
             <th>Tipo</th>
+            <th>Autor</th>
             <th>Ações</th>
         </tr>
 
@@ -72,11 +74,12 @@
 
             if ($financial['Expense']['type'] == 'e') {
                 echo '<tr class="tr-entrada">';
-                    echo '<td>'.$financial['Expense']['description'].'</td>';
-                    echo '<td class="entrada">'.$financial['Expense']['value'].'</td>';
-                    echo '<td> Entrada </td>';
+                    echo '<td align="center">'.$financial['Expense']['description'].'</td>';
+                    echo '<td align="center" class="entrada">'.$financial['Expense']['value'].'</td>';
+                    echo '<td align="center"> Entrada </td>';
+                    echo '<td align="center">' .$financial['Expense']['consultant_name']. '</td>';
                     echo '<div>';
-                    echo '<td class="actions">';
+                    echo '<td align="center" class="actions">';
                     echo $this->Html->link(
                     $this->Html->image("delete.png", array('alt' => 'Ver')),
                     array('action' => 'deletefinancial', $financial['Expense']['id']),
@@ -86,11 +89,12 @@
             }
             else {
                  echo '<tr class="tr-saida">';
-                    echo '<td>'.$financial['Expense']['description'].'</td>';
-                    echo '<td class="saida">'.$financial['Expense']['value'].'</td>';
-                    echo '<td> Saida </td>';
+                    echo '<td align="center">'.$financial['Expense']['description'].'</td>';
+                    echo '<td align="center" class="saida">'.$financial['Expense']['value'].'</td>';
+                    echo '<td align="center"> Saida </td>';
+                    echo '<td align="center">' .$financial['Expense']['consultant_name']. '</td>';
                     echo '<div>';
-                    echo '<td class="actions">';
+                    echo '<td align="center" class="actions">';
                     echo $this->Html->link(
                     $this->Html->image("delete.png", array('alt' => 'Ver')),
                     array('action' => 'deletefinancial', $financial['Expense']['id']),
