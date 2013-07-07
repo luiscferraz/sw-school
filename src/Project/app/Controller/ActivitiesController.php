@@ -121,7 +121,7 @@
 	}
 	
 	public function edit($id = NULL, $id_projeto){
-		$this->layout = 'basemodalint';
+		$this->layout = 'basemodal';
 		$this-> set ('id',$id);
 		$this-> set ('id_projeto',$id_projeto);		
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
@@ -145,12 +145,6 @@
 			}
 			
 		}
-
-		$nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
-			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
-		
-		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
-			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);	
 	   
 	}
 	
@@ -158,7 +152,7 @@
 
 		$this->Activity->id = $id;
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
-		$this->layout = 'basemodalint';
+		$this->layout = 'basemodal';
 		$Atividade =  $this->Activity->findById($id);
 		$this -> set ('consultor1', $this-> Nome_Consultor($Atividade['Activity']['consultant1_id']));
 		$this -> set ('consultor2', $this-> Nome_Consultor($Atividade['Activity']['consultant2_id']));
@@ -170,16 +164,63 @@
 	    if ($this->request->is('get')) {
 	        $this->set('activities', $this->Activity->read());
 	    }
-
-	    $nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
-			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
-		
-		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
-			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);	
-
-
 	}
 
+
+	public function add2($id){
+	 	$this->layout = 'basemodal';
+	 	$this-> set ('id',$id);
+		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
+		$this-> set ('projects',$projects);		
+		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
+		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
+	 	$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
+	 	if($this->request->is('post')){
+	 		if ($this -> verifica($this->request->data)) {
+		 		if($this->Activity->saveAll($this->request->data)){
+		 			$this->Session->setFlash($this->flashSuccess('A atividade foi adicionada com sucesso.'));
+	          		$this->redirect(array('action' => '../activities/index/'.$id));
+		 		}
+		 		else{
+					$this->Session->setFlash($this->flashError('Erro ao cadastrar atividade!'));
+				}		
+			}		
+	 	}
+	 	else{
+	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
+		
+	 	}	 		
+	 	
+	 }
+
+
+	 public function edit2($id = NULL, $id_projeto){
+		$this->layout = 'basemodal';
+		$this-> set ('id',$id);
+		$this-> set ('id_projeto',$id_projeto);		
+		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
+		$this-> set ('projects',$projects);		
+		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
+		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
+		$this->Activity->id = $id;
+		
+		if ($this->request->is('get')) {
+			$this->request->data = $this->Activity->read();
+		}
+		else{			
+			$this->Activity->id = $id;
+			if ($this->Activity->saveAll($this->request->data)) {
+				
+				$this->Session->setFlash($this->flashSuccess('Atividade foi editada.'));
+				$this->redirect(array('action' => 'index/'.$id_projeto));
+			}
+			else {
+				$this->redirect(array('action' => 'index/'.$id_projeto));
+			}
+			
+		}
+	   
+	}
 
 
 	private function Nome_Consultor($id){

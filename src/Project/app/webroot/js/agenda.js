@@ -1,3 +1,23 @@
+﻿$(document).ready(function(){
+
+$(".slidingDiv").hide();
+$('.show').click(function(){
+var id = $(this).attr('id');
+$(".slidingDiv").hide();
+$("#div_"+id).slideToggle();
+});
+
+});
+$(document).ready(function() {
+/*
+* Simple image gallery. Uses default settings
+*/
+$('.fancybox').fancybox({'frameWidth' : 600, 'autoDimensions' : false, 'width' : 600});
+$.fancybox.update()
+});
+
+
+
 $('document').ready(function(){
 
 	//$('#tabela_agenda td').dblclick(function(){
