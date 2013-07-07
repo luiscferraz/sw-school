@@ -2,13 +2,19 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
+SHOW WARNINGS;
+DROP SCHEMA IF EXISTS `swsdb` ;
 CREATE SCHEMA IF NOT EXISTS `swsdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
+SHOW WARNINGS;
 USE `swsdb` ;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`activities`
+-- Table `activities`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
+DROP TABLE IF EXISTS `activities` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `activities` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `start_hours` TIME NOT NULL ,
   `end_hours` TIME NOT NULL ,
@@ -28,11 +34,15 @@ AUTO_INCREMENT = 41
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`consultants`
+-- Table `consultants`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants` (
+DROP TABLE IF EXISTS `consultants` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `consultants` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `cpf` VARCHAR(14) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
   `name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
@@ -42,44 +52,46 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants` (
   `phone2` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
   `email` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
   `removed` TINYINT(1) NOT NULL ,
-  PRIMARY KEY (`id`) ,
-  UNIQUE INDEX `acronym_UNIQUE` (`acronym` ASC) ,
-  UNIQUE INDEX `acronym_color_UNIQUE` (`acronym_color` ASC) ,
-  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) )
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 18
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
+SHOW WARNINGS;
+CREATE UNIQUE INDEX `acronym_UNIQUE` ON `consultants` (`acronym` ASC) ;
+
+SHOW WARNINGS;
+CREATE UNIQUE INDEX `acronym_color_UNIQUE` ON `consultants` (`acronym_color` ASC) ;
+
+SHOW WARNINGS;
+CREATE UNIQUE INDEX `cpf_UNIQUE` ON `consultants` (`cpf` ASC) ;
+
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`activities_consultants`
+-- Table `activities_consultants`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`activities_consultants` (
+DROP TABLE IF EXISTS `activities_consultants` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `activities_consultants` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `consultant_id` INT(11) NOT NULL ,
   `activity_id` INT(11) NOT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_activities_consultants_consultants` (`consultant_id` ASC) ,
-  INDEX `fk_activities_consultants_activities` (`activity_id` ASC) ,
-  CONSTRAINT `fk_activities_consultants_activities`
-    FOREIGN KEY (`activity_id` )
-    REFERENCES `swsdb`.`activities` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_activities_consultants_consultants`
-    FOREIGN KEY (`consultant_id` )
-    REFERENCES `swsdb`.`consultants` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`addresses`
+-- Table `addresses`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`addresses` (
+DROP TABLE IF EXISTS `addresses` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `addresses` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `address` VARCHAR(45) NULL DEFAULT NULL ,
   `number` VARCHAR(5) NULL DEFAULT NULL ,
@@ -95,11 +107,15 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`attachments`
+-- Table `attachments`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`attachments` (
+DROP TABLE IF EXISTS `attachments` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `attachments` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `activity_id` INT(11) NULL DEFAULT NULL ,
   `file_name` VARCHAR(20) NULL DEFAULT NULL ,
@@ -110,26 +126,15 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`attachments` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`owners`
+-- Table `companies`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`owners` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `phone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `date` VARCHAR(12) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
+DROP TABLE IF EXISTS `companies` ;
 
-
--- -----------------------------------------------------
--- Table `swsdb`.`companies`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`companies` (
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `companies` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `cnpj` VARCHAR(18) NULL DEFAULT NULL ,
   `name` VARCHAR(45) NOT NULL ,
@@ -138,157 +143,25 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`companies` (
   `phone2` VARCHAR(13) NULL DEFAULT NULL ,
   `logo` VARCHAR(45) NULL DEFAULT NULL ,
   `removed` TINYINT(1) NOT NULL ,
-  `fundation` VARCHAR(10) NULL DEFAULT NULL ,
-  `owner_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  UNIQUE INDEX `acronym_UNIQUE` (`acronym` ASC) ,
-  INDEX `owner_id` (`owner_id` ASC) ,
-  CONSTRAINT `companies_ibfk_1`
-    FOREIGN KEY (`owner_id` )
-    REFERENCES `swsdb`.`owners` (`id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
+CREATE UNIQUE INDEX `acronym_UNIQUE` ON `companies` (`acronym` ASC) ;
+
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`companies_bank_infos`
+-- Table `entries`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`companies_bank_infos` (
+DROP TABLE IF EXISTS `entries` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `entries` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name_bank` VARCHAR(40) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `number_agency` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `number_account` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `company_id` (`company_id` ASC) ,
-  CONSTRAINT `companies_bank_infos_ibfk_1`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-
--- -----------------------------------------------------
--- Table `swsdb`.`companies_contacts1`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`companies_contacts1` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `function` VARCHAR(25) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `telephone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `company_id` (`company_id` ASC) ,
-  CONSTRAINT `companies_contacts1_ibfk_1`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-
--- -----------------------------------------------------
--- Table `swsdb`.`companies_contacts2`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`companies_contacts2` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `function` VARCHAR(25) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `telephone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `company_id` (`company_id` ASC) ,
-  CONSTRAINT `companies_contacts2_ibfk_1`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-
--- -----------------------------------------------------
--- Table `swsdb`.`companies_contacts3`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`companies_contacts3` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `function` VARCHAR(25) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `telephone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `company_id` (`company_id` ASC) ,
-  CONSTRAINT `companies_contacts3_ibfk_1`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-
--- -----------------------------------------------------
--- Table `swsdb`.`companies_contacts4`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`companies_contacts4` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `function` VARCHAR(25) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `telephone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `company_id` (`company_id` ASC) ,
-  CONSTRAINT `companies_contacts4_ibfk_1`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-
--- -----------------------------------------------------
--- Table `swsdb`.`consultants_bank_infos`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants_bank_infos` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name_bank` VARCHAR(40) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `number_agency` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `number_account` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `consultant_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `consultant_id` (`consultant_id` ASC) ,
-  CONSTRAINT `consultants_bank_infos_ibfk_1`
-    FOREIGN KEY (`consultant_id` )
-    REFERENCES `swsdb`.`consultants` (`id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-
--- -----------------------------------------------------
--- Table `swsdb`.`entries`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`entries` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `date` DATE NOT NULL ,
+  `date` VARCHAR(12) NOT NULL ,
   `type_consulting` VARCHAR(1) NOT NULL ,
   `type` ENUM('Individual','Grupo') NOT NULL ,
   `hours_worked` DOUBLE(4,1) NOT NULL ,
@@ -297,27 +170,20 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`entries` (
   `activity_id` INT(11) NOT NULL ,
   `approved` TINYINT(1) NOT NULL ,
   `removed` TINYINT(1) NOT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_entries_consultants` (`consultant_id` ASC) ,
-  INDEX `fk_entries_activities` (`activity_id` ASC) ,
-  CONSTRAINT `fk_entries_activities`
-    FOREIGN KEY (`activity_id` )
-    REFERENCES `swsdb`.`activities` (`id` )
-    ON UPDATE CASCADE,
-  CONSTRAINT `fk_entries_consultants`
-    FOREIGN KEY (`consultant_id` )
-    REFERENCES `swsdb`.`consultants` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 21
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`projects`
+-- Table `projects`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`projects` (
+DROP TABLE IF EXISTS `projects` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `projects` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NOT NULL ,
   `description` VARCHAR(200) NULL DEFAULT NULL ,
@@ -332,75 +198,57 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`projects` (
   `parent_project_id` INT(11) NULL DEFAULT NULL ,
   `company_id` INT(11) NOT NULL ,
   `removed` TINYINT(1) NOT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_projects_consultants` (`consultant_id` ASC) ,
-  INDEX `fk_projects_projects` (`parent_project_id` ASC) ,
-  INDEX `fk_projects_companies` (`company_id` ASC) ,
-  CONSTRAINT `fk_projects_companies`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON UPDATE CASCADE,
-  CONSTRAINT `fk_projects_consultants`
-    FOREIGN KEY (`consultant_id` )
-    REFERENCES `swsdb`.`consultants` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE,
-  CONSTRAINT `fk_projects_projects`
-    FOREIGN KEY (`parent_project_id` )
-    REFERENCES `swsdb`.`projects` (`id` )
-    ON UPDATE CASCADE)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 26
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`expenses`
+-- Table `expenses`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`expenses` (
+DROP TABLE IF EXISTS `expenses` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `expenses` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `description` VARCHAR(100) NOT NULL ,
   `value` DECIMAL(16,2) NOT NULL ,
-  `type` ENUM('e,d') NULL DEFAULT NULL ,
+  `type` ENUM('e','s') NOT NULL ,
   `project_id` INT(11) NOT NULL ,
-  `attachments` BLOB NULL DEFAULT NULL ,
-  `type_expenses` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_expenses_projects` (`project_id` ASC) ,
-  CONSTRAINT `fk_expenses_projects`
-    FOREIGN KEY (`project_id` )
-    REFERENCES `swsdb`.`projects` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`financials`
+-- Table `financials`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`financials` (
+DROP TABLE IF EXISTS `financials` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `financials` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NULL DEFAULT NULL ,
   `phone1` VARCHAR(13) NULL DEFAULT NULL ,
   `phone2` VARCHAR(13) NULL DEFAULT NULL ,
   `email` VARCHAR(45) NULL DEFAULT NULL ,
   `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_financials_companies` (`company_id` ASC) ,
-  CONSTRAINT `fk_financials_companies`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`project_consultants`
+-- Table `project_consultants`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`project_consultants` (
+DROP TABLE IF EXISTS `project_consultants` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `project_consultants` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `project_id` INT(11) NOT NULL ,
   `consultant_id` INT(11) NOT NULL ,
@@ -410,69 +258,57 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`project_consultants` (
   `value_hour_a_group` DECIMAL(16,2) NULL DEFAULT NULL ,
   `value_hour_b_group` DECIMAL(16,2) NULL DEFAULT NULL ,
   `value_hour_c_group` DECIMAL(16,2) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_project_consultants_projects` (`project_id` ASC) ,
-  INDEX `fk_project_consultants_consultants` (`consultant_id` ASC) ,
-  CONSTRAINT `fk_project_consultants_consultants`
-    FOREIGN KEY (`consultant_id` )
-    REFERENCES `swsdb`.`consultants` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_project_consultants_projects`
-    FOREIGN KEY (`project_id` )
-    REFERENCES `swsdb`.`projects` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`sepgs`
+-- Table `sepgs`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`sepgs` (
+DROP TABLE IF EXISTS `sepgs` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `sepgs` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NULL DEFAULT NULL ,
   `phone1` VARCHAR(13) NULL DEFAULT NULL ,
   `phone2` VARCHAR(13) NULL DEFAULT NULL ,
   `email` VARCHAR(45) NULL DEFAULT NULL ,
   `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_sepgs_companies` (`company_id` ASC) ,
-  CONSTRAINT `fk_sepgs_companies`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`sponsors`
+-- Table `sponsors`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`sponsors` (
+DROP TABLE IF EXISTS `sponsors` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `sponsors` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NULL DEFAULT NULL ,
   `phone1` VARCHAR(13) NULL DEFAULT NULL ,
   `phone2` VARCHAR(13) NULL DEFAULT NULL ,
   `email` VARCHAR(45) NULL DEFAULT NULL ,
   `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_sponsors_companies` (`company_id` ASC) ,
-  CONSTRAINT `fk_sponsors_companies`
-    FOREIGN KEY (`company_id` )
-    REFERENCES `swsdb`.`companies` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `swsdb`.`users`
+-- Table `users`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `swsdb`.`users` (
+DROP TABLE IF EXISTS `users` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `users` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `username` VARCHAR(20) NOT NULL ,
   `password` VARCHAR(40) NOT NULL ,
@@ -483,6 +319,7 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 19
 DEFAULT CHARACTER SET = utf8;
 
+SHOW WARNINGS;
 USE `swsdb` ;
 
 
