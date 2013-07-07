@@ -83,6 +83,8 @@
 			}
 			
 		}
+		$nome_projeto = $this->Project->query("SELECT projects.name FROM projects WHERE  projects.id = ".$id);
+		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);	
 	}
 	
 	public function delete($id = NULL){
@@ -133,7 +135,9 @@
 	 		$this -> set('nameConsultants', $this->Project->Consultant->find('all'));
 	 		$this -> set('nameProject',$this->GetNameProjectFather($id));
 	 		$this -> set('id_projeto',$id);
- 		}	
+ 		}
+ 		$nome_projeto = $this->Project->query("SELECT projects.name FROM projects WHERE  projects.id = ".$id);
+		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);	
  	}
 
  	public function deleteconsultor($id){
@@ -177,6 +181,8 @@
 				$this -> ReportsDate($report['id'], $report['dateInit'], $report['dateEnd']);
 			}
 		}
+		$nome_projeto = $this->Project->query("SELECT projects.name FROM projects WHERE  projects.id = ".$id);
+		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);	
 	}
 
 	public function ReportsAll($idProject){
@@ -293,9 +299,10 @@
 		$this -> set ('financials', $this -> Project -> Expense -> find ('all', array( 'conditions' => array ('Expense.project_id =' => $id))));
 		$this -> set ('id', $id);
 
-		//$nome_projeto = $this->Financial->Company->query("SELECT companies.name FROM companies, financials WHERE financials.company_id = companies.id and financials.id = ".$id);	
-			//$this-> set ('nome_projeto', $nome_projeto[0]['companies']['name']);
-		
+		$nome_projeto = $this->Project->query("SELECT projects.name FROM projects WHERE  projects.id = ".$id);
+		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+			
+
 		
  	}
 

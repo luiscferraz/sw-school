@@ -18,6 +18,7 @@
                     ?>
 
     <h1>Editar Projeto</h1>
+    <h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
 
     <div id="conteudoAddProjeto">
         <?php echo $this->Form->create('Projects', array('action' => 'edit')); ?>

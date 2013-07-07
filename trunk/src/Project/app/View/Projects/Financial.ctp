@@ -1,5 +1,6 @@
 
 <h1>Despesas</h1>
+<h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
 
 <!--<h1 id="tituloprojeto">Projeto - <?php //echo $nome_projeto; ?> </h1>-->
 
