@@ -301,6 +301,7 @@
 
 		$nome_projeto = $this->Project->query("SELECT projects.name FROM projects WHERE  projects.id = ".$id);
 		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+		$this -> set ('tipo_usuario',$this-> Auth->user('type'));	
 			
 
 		
