@@ -137,7 +137,7 @@ $(document).ready(function(){
         $idPrj = $project['Project']['id'];
 		
 
-        echo '<a class="fancybox fancybox.iframe" alt="Despesas" id="link" href="./Projects/financial/'.$idPrj.'"><img src="./img/financial.png"  alt="Despesas" title="Despesas" id="btnFinancial" ></a>';
+        echo '<a class="fancybox fancybox.iframe" alt="Centro de Custos" id="link" href="./Projects/financial/'.$idPrj.'"><img src="./img/financial.png"  alt="Centro de Custos" title="Centro de Custos" id="btnFinancial" ></a>';
 
       }
       ?>        
