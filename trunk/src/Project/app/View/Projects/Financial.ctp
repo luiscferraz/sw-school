@@ -10,7 +10,14 @@
     <?php echo $this->Form->create('Project', array('action' => 'addfinancial')); ?>             
                 <?php echo $this->Form->input('Expense.description', array('type' => 'textarea', 'label' => 'Descrição: <br>','required'=>'required', 'id' => 'descricaoDespesa')); ?>
                 <?php echo $this->Form->input('Expense.value', array('label' => 'Valor :  <br>','required'=>'required', 'id' => 'selectValor')); ?>
-                <?php echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e' => 'Entrada', 's' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa')); ?>
+                
+                <!--CONDIÇÃO-->
+                <?php
+                if (in_array($tipo_usuario , array('cons_manager', 'cons'))){
+                  echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('s' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
+                }else{
+                    echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e' => 'Entrada', 's' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
+                }?>
                 <?php echo $this->Form->input('Expense.typeExpense', array('label' => 'Tipo de Despesa : <br>','options' => array('l' => 'Logística', 'a' => 'Alimentação', 'd' => 'Diversos' ), 'required'=>'required', 'id' => 'selectTipoDespesa')); ?>
                 <?php echo $this->Form->input('Expense.project_id', array('type'=> 'hidden', 'value'=> $id)); ?>
     <?php echo $this->Form->end('Salvar') 

@@ -133,7 +133,7 @@ $(document).ready(function(){
 
 
         <?php 
-      if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+      if (in_array($tipo_usuario , array('admin','cons_manager','cons', 'rel_manager'))){
         $idPrj = $project['Project']['id'];
 		
 
