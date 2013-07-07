@@ -1,5 +1,5 @@
 
-<h1>Despesas</h1>
+<h1>Centro de Custos</h1>
 <h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
 
 <!--<h1 id="tituloprojeto">Projeto - <?php //echo $nome_projeto; ?> </h1>-->
@@ -37,7 +37,7 @@
 
 <fieldset class="despesasProjeto">
 
-    <label for="totalSaida">Total Saída:</label><br>
+    <label for="totalSaida">Total Despesas:</label><br>
     <input  name="totalSaida" type="select" id="total-saida" disabled><br>
 
 </fieldset>
