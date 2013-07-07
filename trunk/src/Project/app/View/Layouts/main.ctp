@@ -1,3 +1,9 @@
+<?php
+foreach ($projects as $project) 
+{
+	$list_projects[$project['Project']['id']] =$project['Project']['name'];
+};
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html>
@@ -51,6 +57,8 @@ if( !isset($date_submit)){
 </form>
 
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
+
+<?php echo $this->Form->input('Project.id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projetos: <br>', 'id' => 'projects')); ?>
 
 <br>
 <?php 
