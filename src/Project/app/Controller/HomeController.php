@@ -13,7 +13,8 @@
 
                $this->layout =  'main';
 			   $this-> set ('tipo_usuario',$this->Auth->user('type'));			 		
-			   $this-> set ('nome_usuario',$this->Auth->user('username'));			 		
+			   $this-> set ('nome_usuario',$this->Auth->user('username'));		
+			    $this -> set ('projects', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1),'order'=>array('Project.name'))));	 		
 				$this -> set ('projectsPais', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id =' => null))));
 				$this -> set ('projectsFilhos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
 				$this -> set ('projectsNetos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
