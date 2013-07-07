@@ -1,5 +1,4 @@
-<h1 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h1>
-<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
+
 <?php 
     foreach ($projects as $project) {        
         $list_projects[$project['projects']['id']] =$project['projects']['name'];
@@ -18,6 +17,8 @@
 ?>
                 
 <h1>Editar Atividade</h1>
+<h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
+<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
 
         <?php  //provavelmente na view add, ou o equivalente para adicionar a pessoa
         echo $this->Form->create('Activities', array('action' => 'edit/'.$id.'/'.$id_projeto)); ?>

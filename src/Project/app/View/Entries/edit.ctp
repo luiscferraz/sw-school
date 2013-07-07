@@ -1,5 +1,4 @@
-<h1 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h1>
-<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
+
 <!--<h2 id="tituloatividade">Atividade - <?php //echo $activity; ?></h2>-->
 	
 <?php 
@@ -19,6 +18,8 @@
     }
 ?>	
 <h1>Editar Apontamento</h1>
+<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
+<h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
 
         <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
 		echo $this->Form->create('Entries', array('action' => 'edit')); ?>

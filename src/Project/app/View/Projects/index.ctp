@@ -118,39 +118,41 @@ $(document).ready(function(){
           
          
 
-          <?php 
-      if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
+       
 
+      <?php 
+      if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
         $idPrj = $project['Project']['id'];
-        echo ('<a class="fancybox fancybox.iframe" alt="Consultores Alocados" id="link" href="./Projects/alocados/"'.$idPrj.'">');
-        echo ('<img src="./img/consultor.png"  alt="Consultores Alocados" title="Consultores Alocados" id="btnalocados" >');
-        echo "</a>";
+		
+
+        echo '<a class="fancybox fancybox.iframe" alt="Consultores Alocados" id="link" href="./Projects/alocados/'.$idPrj.'"><img src="./img/consultor.png"  alt="Consultores Alocados" title="Consultores Alocados" id="btnalocados" ></a>';
+
       }
-      ?>
+      ?>        
 
 
 
         <?php 
       if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-
         $idPrj = $project['Project']['id'];
-        echo ('<a class="fancybox fancybox.iframe" alt="Despesas" id="link" href="./Projects/financial/"'.$idPrj.'">');
-        echo ('<img src="./img/financial.png"  alt="Despesas" title="Despesas" id="btnFinancial" >');
-        echo "</a>";
-      }
-      ?>
+		
 
-   
+        echo '<a class="fancybox fancybox.iframe" alt="Despesas" id="link" href="./Projects/financial/'.$idPrj.'"><img src="./img/financial.png"  alt="Despesas" title="Despesas" id="btnFinancial" ></a>';
+
+      }
+      ?>        
+
+
 
       <?php 
       if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-
         $idPrj = $project['Project']['id'];
-        echo ('<a class="fancybox fancybox.iframe" alt="Editar" id="link" href="./Projects/edit/"'.$idPrj.'">');
-        echo ('<img src="./img/edit.png"  alt="Editar" title="Editar" id="btnEdit" >');
-        echo "</a>";
+		
+
+        echo '<a class="fancybox fancybox.iframe" alt="Editar" id="link" href="./Projects/edit/'.$idPrj.'"><img src="./img/edit.png"  alt="Editar" title="Editar" id="btnEdit" ></a>';
+
       }
-      ?>
+      ?>        
 
 
         </span> 
