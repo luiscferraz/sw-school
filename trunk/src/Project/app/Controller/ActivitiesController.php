@@ -47,7 +47,7 @@
 	}
 	
 	public function add($id){
-	 	$this->layout = 'basemodal';
+	 	$this->layout = 'basemodalint';
 	 	$this-> set ('id',$id);
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
 		$this-> set ('projects',$projects);		
