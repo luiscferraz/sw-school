@@ -41,7 +41,7 @@
 
 
  	public function add(){
- 		$this->layout = 'base';
+ 		$this->layout = 'basemodalint';
  		
  		if($this->request->is('post')){
  			if ($this->exist($this->request->data['Project']['name'],$this->request->data['Project']['company_id'])){
