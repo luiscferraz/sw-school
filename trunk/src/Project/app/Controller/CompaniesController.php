@@ -15,7 +15,7 @@ class CompaniesController extends AppController {
 	
 	public function add(){
 		
-		$this -> layout = 'base';
+		$this -> layout = 'basemodalint';
 		if($this->request->is('post')){
 			if($this->Company->saveAll($this->request->data)){
 				$this->Session->setFlash($this->flashSuccess('Empresa cadastrada com sucesso!'));
