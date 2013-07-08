@@ -47,12 +47,10 @@
 	}
 	
 	public function add($id){
-	 	$this->layout = 'basemodalint';
+	 	$this->layout = 'basemodal';
 	 	$this-> set ('id',$id);
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
 		$this-> set ('projects',$projects);		
-		$nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects WHERE projects.id = ".$id);
-		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
 		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
 		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
 	 	$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
@@ -128,10 +126,6 @@
 		$this-> set ('id_projeto',$id_projeto);		
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
 		$this-> set ('projects',$projects);		
-		$nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);
-		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
-		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);
-		$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
 		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
 		$this->Activity->id = $id;
@@ -151,6 +145,11 @@
 			}
 			
 		}
+		$nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);		
+			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);		
+			
+		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);		
+			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 	   
 	}
 	
@@ -158,7 +157,7 @@
 
 		$this->Activity->id = $id;
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
-		$this->layout = 'basemodal';
+		$this->layout = 'basemodalint';
 		$Atividade =  $this->Activity->findById($id);
 		$this -> set ('consultor1', $this-> Nome_Consultor($Atividade['Activity']['consultant1_id']));
 		$this -> set ('consultor2', $this-> Nome_Consultor($Atividade['Activity']['consultant2_id']));
@@ -170,6 +169,12 @@
 	    if ($this->request->is('get')) {
 	        $this->set('activities', $this->Activity->read());
 	    }
+
+	    $nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
+			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+
+		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);					$this->Session->setFlash($this->flashSuccess('Atividade foi editada.'));
+			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 	}
 
 

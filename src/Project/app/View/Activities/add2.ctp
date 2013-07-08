@@ -13,7 +13,7 @@
     <div id="content">
         <div class="conteudo">
         <?php
-        echo $this->Form->create('Activities', array('action' => 'add2'.$id)); ?>
+        echo $this->Form->create('Activities', array('action' => 'add2/'.$id)); ?>
             <fieldset id="Dados_projeto_pai">
                 <?php echo $this->Form->input('Activity.project_id', array('type'=>'hidden', 'value' => $id)); ?>
                 <?php echo $this->Form->input('Activity.description', array('label' => 'Descrição: ', 'id'=>'actvDesc', 'required' => 'required')); ?> 
