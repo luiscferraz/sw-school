@@ -36,7 +36,7 @@
  	
  	public function add()
   {
-    $this -> layout = 'base';
+    $this -> layout = 'basemodalint';
     if($this->request->is('post'))
     {
       if ($this->verific($this->request->data)) {
