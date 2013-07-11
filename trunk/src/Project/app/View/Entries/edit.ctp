@@ -22,7 +22,7 @@
 <h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
 
         <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
-		echo $this->Form->create('Entries', array('action' => 'edit')); ?>
+		echo $this->Form->create('Entries', array('action' => 'edit/'.$id.'/'.$id_atividade)); ?>
          <fieldset id="Dados_projeto_pai">
 				<?php echo $this->Form->input('Entry.id', array('type'=>'hidden')); ?>
 				<?php //Se for um consultor logado, o apontamento automaticamente é no nome dele, se for admin, aparecerá uma lista de consultores

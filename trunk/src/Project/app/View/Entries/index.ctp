@@ -49,7 +49,7 @@
 
 					<?php 
 					if ((in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) or ($id_consultor_logado === $entry['Entry']['consultant_id'])){
-					echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $entry['Entry']['id']),
+					echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $entry['Entry']['id'],$entry['Entry']['activity_id']),
 					array('escape'=>false, 'id'=>'link'));
 					}
 					?>

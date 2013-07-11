@@ -84,17 +84,19 @@ class EntriesController extends AppController{
 		}
 	}
 	
-	public function edit($id = NULL){
+	public function edit($id = NULL, $id_atividade){
+		
+
+
 		$this->layout = 'basemodalint';
+		$this-> set ('id',$id);
+		$this-> set ('id_atividade',$id_atividade);
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));
 		$this->Entry->id = $id;
-
-		$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
-			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
 		
 		if ($this->request->is('get')) {
 			$this->request->data = $this->Entry->read();
@@ -104,10 +106,10 @@ class EntriesController extends AppController{
 			if ($this->Entry->saveAll($this->request->data)) {
 				
 				$this->Session->setFlash($this->flashSuccess('Atividade foi editada.'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'index/'.$id_atividade));
 			}
 			else {
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'index/'.$id_atividade));
 			}
 			
 		}
