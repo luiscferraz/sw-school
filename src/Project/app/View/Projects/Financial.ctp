@@ -14,10 +14,10 @@
                 
                 <!--CONDIÇÃO-->
                 <?php
-                if (in_array($tipo_usuario , array('cons_manager', 'cons'))){
-                  echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('s' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
+                if (in_array($tipo_usuario , array('fin_manager', 'admin'))){
+                  	echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e' => 'Entrada', 's' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
                 }else{
-                    echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e' => 'Entrada', 's' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
+                	echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('s' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
                 }?>
                 <?php echo $this->Form->input('Expense.typeExpense', array('label' => 'Tipo de Despesa : <br>','options' => array('l' => 'Logística', 'a' => 'Alimentação', 'd' => 'Diversos' ), 'required'=>'required', 'id' => 'selectTipoDespesa')); ?>
                 <?php echo $this->Form->input('Expense.project_id', array('type'=> 'hidden', 'value'=> $id)); ?>
@@ -49,11 +49,12 @@
 
 </fieldset>
 
+
 <fieldset class="despesasProjeto">
-
+	
     <label for="anexo">Anexar Nota Fiscal:</label><br>
-
     <input type="file" name="anexar" value="Anexar">
+    
 </fieldset>
 
 
