@@ -12166,3 +12166,117 @@
 2013-06-25 03:31:12 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-06-25 03:38:37 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:42:38 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:43:16 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:43:37 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:43:37 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:43:37 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:43:37 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:43:38 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:44:01 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:44:01 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:48:54 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:48:54 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:51:00 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:52:08 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:54:01 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:24:03 Error: Fatal Error (4): syntax error, unexpected '[' in [C:\xampp\htdocs\sw_quality\src\Project\app\Controller\EntriesController.php, line 31]
+2013-06-25 03:24:03 Error: [FatalErrorException] syntax error, unexpected '['
+#0 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 31, Array)
+#2 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 31, Array)
+#3 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-25 03:24:03 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:24:03 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:26:24 Error: Fatal Error (4): syntax error, unexpected '[' in [C:\xampp\htdocs\sw_quality\src\Project\app\Controller\EntriesController.php, line 31]
+2013-06-25 03:26:24 Error: [FatalErrorException] syntax error, unexpected '['
+#0 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 31, Array)
+#2 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 31, Array)
+#3 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-25 03:26:24 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:26:24 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:27:24 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:30:07 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:32:14 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:32:14 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:32:14 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:32:14 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:32:15 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:32:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:32:26 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:35:44 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [C:\xampp\htdocs\sw_quality\src\Project\app\Controller\EntriesController.php, line 41]
+2013-06-25 03:35:44 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+#0 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 41, Array)
+#2 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 41, Array)
+#3 C:\xampp\htdocs\sw_quality\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-25 03:35:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-25 03:35:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\xampp\htdocs\sw_quality\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

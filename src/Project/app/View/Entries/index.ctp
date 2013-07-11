@@ -56,7 +56,7 @@
 
 					<?php 
 					if ((in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) or ($id_consultor_logado === $entry['Entry']['consultant_id'])){
-					echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $entry['Entry']['id']),
+					echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $entry['Entry']['id'],$entry['Entry']['activity_id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do apontamento?");
 					}
 					?></td>
