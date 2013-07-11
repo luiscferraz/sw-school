@@ -14,7 +14,7 @@
     if (!isset($list_consultants)){
 		$list_consultants['none'] = 'Nenhuma Consultor Cadastrado';
     }
-?>	
+?>
 
 <h1>Cadastrar Apontamento</h1>
     <div id="content">

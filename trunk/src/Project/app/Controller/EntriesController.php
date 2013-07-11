@@ -68,11 +68,12 @@ class EntriesController extends AppController{
  		
 			
  	
- 	public function delete($id = NULL){
+ 	public function delete($id = NULL, $id_atividade){
 		$this->Entry->id = $id;
+		$this-> set ('id_atividade',$id_atividade);
 		if($this->Entry->saveField("removed", "true")){
 			$this->Session->setFlash($this->flashSuccess('O apontamento foi removido com sucesso!'));
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('action' => 'index/'.$id_atividade));
 		}
 	}
 
