@@ -339,6 +339,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`expenses` (
   `description` VARCHAR(100) NOT NULL ,
   `value` DECIMAL(16, 2) NOT NULL ,
   `type` ENUM('e', 's') NOT NULL ,
+  `typeExpense` VARCHAR(20) NOT NULL ,
   `project_id` INT NOT NULL ,
   `consultant_name` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) ,  
