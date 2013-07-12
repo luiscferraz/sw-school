@@ -291,7 +291,6 @@
 	}
 
 
-
 	//Finanças do projeto
  	public function financial($id =  null){
  		$this -> layout = 'basemodal';

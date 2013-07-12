@@ -67,6 +67,15 @@
             <th>Autor</th>
             <th>Ações</th>
         </tr>
+        <tr>
+        	<td></td>
+        	<td></td>
+        	<td></td>
+        	<td></td>
+        	<td>
+        		<a class="fancybox fancybox.iframe" href="./Attachments/index/"><?php echo $this->Html->image("attachment.png", array('alt' => 'Anexo','title' => 'Anexo', 'id' => 'btnAnexo'))?></a>
+        	</td>
+        </tr>
 
 
 <?php 

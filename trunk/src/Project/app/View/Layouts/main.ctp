@@ -9,6 +9,8 @@ foreach ($projects as $project)
 <html>
 	<head>
 	<title>Agenda SW School</title>
+	
+	
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<?php echo $this->Html->css('reset'); ?>		
 		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>
@@ -22,6 +24,8 @@ foreach ($projects as $project)
 		<?php echo $this->Html->script('agenda'); ?>	    
 	    <?php echo $this->Html->script('aplicacao'); ?>
 		<?php echo $this->Html->script('jquery.fancybox'); ?>
+
+		
 
 	</head>
 <body> 
@@ -49,12 +53,17 @@ if( !isset($date_submit)){
 }
 	?>
 
+ 
+
+
+
 <form method="post" action="home">
 	<input class="date" id="data-agenda" type="text" value=<?php echo $date_submit; ?> name="date_submit" maxlength="10" />
 	<input class="botao" id="botao-aplicar-data" type="submit" value=" Aplicar " />
 </form>
 <form method="post" action="home">
 	<input class="botao" id="botao-hoje-data" type="submit" value="  Hoje  " />
+	
 </form>
 
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
