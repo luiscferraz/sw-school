@@ -187,7 +187,9 @@
 	 	$this->layout = 'basemodalint';
 	 	$this-> set ('id',$id);
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
-		$this-> set ('projects',$projects);		
+		$this-> set ('projects',$projects);	
+		$nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects WHERE projects.id = ".$id);		
+		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);	
 		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
 		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
 	 	$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
@@ -205,9 +207,9 @@
 	 	else{
 	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
 		
-	 	}	 		
+	 	}	 	
 	 	
-	 }
+	}
 
 
 	 public function edit2($id = NULL, $id_projeto){
@@ -244,8 +246,9 @@
 			
 		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);		
 			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
-	   
 	}
+	   
+
 
 
 	private function Nome_Consultor($id){

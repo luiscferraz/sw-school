@@ -1089,6 +1089,38 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 	margin-top: 20px;
 }
 
+#Dados_projeto_pai2{
+	padding-left: 15px;
+	border-width: 30px;
+	float: left;
+	width: 46%;
+	border: 30px;
+	border-color: #bcdae0;
+	background-color: #bcdae0;
+	margin-left: 17%;
+	padding-bottom: 30px;
+	margin-top: 20px;
+}
+
+#Dados_projeto_pai3{
+	padding-left: 15px;
+	border-width: 30px;
+	float: left;
+	width: 14%;
+	border: 30px;
+	border-color: #bcdae0;
+	background-color: #bcdae0;
+	margin-left: 10px;
+	padding-bottom: 30px;
+	margin-top: 20px;
+
+}
+#botao_salvar{
+	width: 70%;
+	border-color:transparent;
+	padding-left: 16%;
+}
+
 #dadosApontamentos {
 	float: left;
 	background: #bcdae0;
