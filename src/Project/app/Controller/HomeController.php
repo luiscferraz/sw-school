@@ -8,14 +8,26 @@
  
  class HomeController extends AppController{
 
-        public function index () {
+       public function index ($id = null) {
 				
-
+			   if($this->request->is('post')) {
+        	   		$id = $this->request->data['Project']['id'];
+       
+        		}
                $this->layout =  'main';
 			   $this-> set ('tipo_usuario',$this->Auth->user('type'));			 		
 			   $this-> set ('nome_usuario',$this->Auth->user('username'));		
 			    $this -> set ('projects', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1),'order'=>array('Project.name'))));	 		
-				$this -> set ('projectsPais', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id =' => null))));
+				if($id == null){
+					$this -> set ('projectsPais', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id =' => null))));
+				}
+				else{
+			
+
+					$this -> set ('projectsPais', $this-> Home -> Project->find('all', array('conditions'=> array('Project.id'=>$id,'Project.removed !=' => 1))));
+
+				}
+
 				$this -> set ('projectsFilhos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
 				$this -> set ('projectsNetos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
 				if ($this -> request -> is('post')) {

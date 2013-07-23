@@ -67,7 +67,12 @@ if( !isset($date_submit)){
 </form>
 
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
-<?php echo $this->Form->input('Project.id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projetos:&nbsp;', 'id' => 'projects')); ?>
+<?php 
+
+	echo $this->Form->create('Projects',array('method'=>'post',array('controller'=>'home','action'=>'index')));
+	echo $this->Form->input('Project.id',array('options' =>  $list_projects,'type' => 'select', 'empty' => '--Selecione um projeto--','label' => '', 'id' => 'projects')); 
+	echo $this->Form->end('Buscar');
+	 ?>
 
 <br>
 <?php 
