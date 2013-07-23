@@ -15,7 +15,7 @@
                 <!--CONDIÇÃO-->
                 <?php
                 if (in_array($tipo_usuario , array('fin_manager', 'admin'))){
-                  	echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e' => 'Entrada', 's' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
+                  	echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e' => 'Entrada', 's' => 'Despesa' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
                 }else{
                 	echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('s' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
                 }?>
