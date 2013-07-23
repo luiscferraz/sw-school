@@ -27,8 +27,9 @@ class EntriesController extends AppController{
 			}		
  	}
  	
- 	public function add(){
+ 	public function add($id_projeto){
 	 	$this->layout = 'basemodalint';
+	 	$this-> set ('id_projeto',$id_projeto);
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));		 
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
@@ -38,7 +39,7 @@ class EntriesController extends AppController{
 	 	if($this->request->is('post')){
 	 		if($this->Entry->saveAll($this->request->data)){
 	 			$this->Session->setFlash($this->flashSuccess('O apontamento foi adicionado com sucesso.'));
-          		$this->redirect(array('action' => 'index'));
+          		$this->redirect(array('action' => '../activities/index/'.$id_projeto));
 	 		}
 	 		else{
 				$this->Session->setFlash($this->flashError('Erro ao cadastrar apontamento!'));

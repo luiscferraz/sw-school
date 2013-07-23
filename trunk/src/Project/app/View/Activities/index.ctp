@@ -241,7 +241,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 					<br>
 
-					<a href="../../entries/add"><?php echo $this->Html->image("clock.png",array('alt'=>'Apontar', 'title' => 'Apontar', 'id' => 'btnRelogio'));?></a>
+					<a href="../../entries/add/<?php echo $activity['Activity']['id']."/".$activity['Activity']['project_id'] ?>"><?php echo $this->Html->image("clock.png",array('alt'=>'Apontar', 'title' => 'Apontar', 'id' => 'btnRelogio'));?></a>
 
 					<a href="../../entries/index/<?php echo $activity['Activity']['id'] ?>"><?php echo $this->Html->image("eye.png",array('alt'=>'Visuzalizar Apontamento', 'title' => 'Visuzalizar Apontamento', 'id' => 'btnVisuzalizar-Apontamento'));?></a>
 					
