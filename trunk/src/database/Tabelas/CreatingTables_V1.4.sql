@@ -3,15 +3,10 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 SHOW WARNINGS;
-SHOW WARNINGS;
-
-
-SHOW WARNINGS;
 DROP SCHEMA IF EXISTS `swsdb` ;
 CREATE SCHEMA IF NOT EXISTS `swsdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
 SHOW WARNINGS;
 USE `swsdb` ;
-
 
 -- -----------------------------------------------------
 -- Table `activities`
@@ -26,7 +21,7 @@ CREATE  TABLE IF NOT EXISTS `activities` (
   `date` VARCHAR(10) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
   `observations` MEDIUMTEXT CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
   `description` VARCHAR(100) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
-  `status` ENUM('Planejada','Em desenvolvimento','ConcluÃ­da','Cancelada') CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
+  `status` ENUM('Planejada','Em desenvolvimento','Concluída','Cancelada') CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
   `project_id` INT(11) NOT NULL ,
   `consultant1_id` INT(11) NULL DEFAULT NULL ,
   `consultant2_id` INT(11) NULL DEFAULT NULL ,
@@ -35,7 +30,7 @@ CREATE  TABLE IF NOT EXISTS `activities` (
   `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 75
+AUTO_INCREMENT = 41
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
@@ -59,7 +54,7 @@ CREATE  TABLE IF NOT EXISTS `consultants` (
   `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 36
+AUTO_INCREMENT = 18
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
@@ -89,12 +84,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 SHOW WARNINGS;
-CREATE INDEX `fk_activities_consultants_consultants` ON `activities_consultants` (`consultant_id` ASC) ;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_activities_consultants_activities` ON `activities_consultants` (`activity_id` ASC) ;
-
-SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `addresses`
@@ -115,7 +104,7 @@ CREATE  TABLE IF NOT EXISTS `addresses` (
   `company_id` INT(11) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 12
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8;
 
 SHOW WARNINGS;
@@ -140,25 +129,6 @@ DEFAULT CHARACTER SET = utf8;
 SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `owners`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `owners` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `owners` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `phone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `date` VARCHAR(12) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
 -- Table `companies`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `companies` ;
@@ -173,155 +143,13 @@ CREATE  TABLE IF NOT EXISTS `companies` (
   `phone2` VARCHAR(13) NULL DEFAULT NULL ,
   `logo` VARCHAR(45) NULL DEFAULT NULL ,
   `removed` TINYINT(1) NOT NULL ,
-  `fundation` VARCHAR(10) NULL DEFAULT NULL ,
-  `owner_id` INT(11) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 11
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8;
 
 SHOW WARNINGS;
 CREATE UNIQUE INDEX `acronym_UNIQUE` ON `companies` (`acronym` ASC) ;
-
-SHOW WARNINGS;
-CREATE INDEX `owner_id` ON `companies` (`owner_id` ASC) ;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
--- Table `companies_bank_infos`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `companies_bank_infos` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `companies_bank_infos` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name_bank` VARCHAR(40) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `number_agency` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `number_account` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-SHOW WARNINGS;
-CREATE INDEX `company_id` ON `companies_bank_infos` (`company_id` ASC) ;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
--- Table `companies_contacts1`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `companies_contacts1` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `companies_contacts1` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `function` VARCHAR(25) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `telephone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-SHOW WARNINGS;
-CREATE INDEX `company_id` ON `companies_contacts1` (`company_id` ASC) ;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
--- Table `companies_contacts2`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `companies_contacts2` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `companies_contacts2` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `function` VARCHAR(25) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `telephone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-SHOW WARNINGS;
-CREATE INDEX `company_id` ON `companies_contacts2` (`company_id` ASC) ;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
--- Table `companies_contacts3`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `companies_contacts3` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `companies_contacts3` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `function` VARCHAR(25) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `telephone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-SHOW WARNINGS;
-CREATE INDEX `company_id` ON `companies_contacts3` (`company_id` ASC) ;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
--- Table `companies_contacts4`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `companies_contacts4` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `companies_contacts4` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `email` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `function` VARCHAR(25) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `telephone` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `company_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-SHOW WARNINGS;
-CREATE INDEX `company_id` ON `companies_contacts4` (`company_id` ASC) ;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
--- Table `consultants_bank_infos`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `consultants_bank_infos` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `consultants_bank_infos` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name_bank` VARCHAR(40) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `number_agency` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `number_account` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
-  `consultant_id` INT(11) NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB
-AUTO_INCREMENT = 2
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
-SHOW WARNINGS;
-CREATE INDEX `consultant_id` ON `consultants_bank_infos` (`consultant_id` ASC) ;
 
 SHOW WARNINGS;
 
@@ -333,7 +161,7 @@ DROP TABLE IF EXISTS `entries` ;
 SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `entries` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `date` DATE NOT NULL ,
+  `date` VARCHAR(12) NOT NULL ,
   `type_consulting` VARCHAR(1) NOT NULL ,
   `type` ENUM('Individual','Grupo') NOT NULL ,
   `hours_worked` DOUBLE(4,1) NOT NULL ,
@@ -344,14 +172,8 @@ CREATE  TABLE IF NOT EXISTS `entries` (
   `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 22
+AUTO_INCREMENT = 21
 DEFAULT CHARACTER SET = utf8;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_entries_consultants` ON `entries` (`consultant_id` ASC) ;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_entries_activities` ON `entries` (`activity_id` ASC) ;
 
 SHOW WARNINGS;
 
@@ -378,17 +200,8 @@ CREATE  TABLE IF NOT EXISTS `projects` (
   `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 51
+AUTO_INCREMENT = 26
 DEFAULT CHARACTER SET = utf8;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_projects_consultants` ON `projects` (`consultant_id` ASC) ;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_projects_projects` ON `projects` (`parent_project_id` ASC) ;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_projects_companies` ON `projects` (`company_id` ASC) ;
 
 SHOW WARNINGS;
 
@@ -403,15 +216,12 @@ CREATE  TABLE IF NOT EXISTS `expenses` (
   `description` VARCHAR(100) NOT NULL ,
   `value` DECIMAL(16,2) NOT NULL ,
   `type` ENUM('e','s') NOT NULL ,
+  `typeExpense` VARCHAR(20) NOT NULL ,
   `project_id` INT(11) NOT NULL ,
   `consultant_name` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 7
 DEFAULT CHARACTER SET = utf8;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_expenses_projects` ON `expenses` (`project_id` ASC) ;
 
 SHOW WARNINGS;
 
@@ -431,9 +241,6 @@ CREATE  TABLE IF NOT EXISTS `financials` (
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_financials_companies` ON `financials` (`company_id` ASC) ;
 
 SHOW WARNINGS;
 
@@ -458,12 +265,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 SHOW WARNINGS;
-CREATE INDEX `fk_project_consultants_projects` ON `project_consultants` (`project_id` ASC) ;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_project_consultants_consultants` ON `project_consultants` (`consultant_id` ASC) ;
-
-SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `sepgs`
@@ -481,9 +282,6 @@ CREATE  TABLE IF NOT EXISTS `sepgs` (
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-
-SHOW WARNINGS;
-CREATE INDEX `fk_sepgs_companies` ON `sepgs` (`company_id` ASC) ;
 
 SHOW WARNINGS;
 
@@ -505,9 +303,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 SHOW WARNINGS;
-CREATE INDEX `fk_sponsors_companies` ON `sponsors` (`company_id` ASC) ;
-
-SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `users`
@@ -523,10 +318,11 @@ CREATE  TABLE IF NOT EXISTS `users` (
   `consultant_id` INT(11) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`, `username`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 38
+AUTO_INCREMENT = 19
 DEFAULT CHARACTER SET = utf8;
 
 SHOW WARNINGS;
+USE `swsdb` ;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
