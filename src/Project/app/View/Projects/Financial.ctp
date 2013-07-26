@@ -3,6 +3,19 @@
 <h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
 
 <!--<h1 id="tituloprojeto">Projeto - <?php //echo $nome_projeto; ?> </h1>-->
+	<script language="JavaScript" type="text/javascript">
+function HandleBrowseClick()
+{
+    var fileinput = document.getElementById("anexar");
+    fileinput.click();
+}
+function Handlechange()
+{
+var fileinput = document.getElementById("anexar");
+var textinput = document.getElementById("filename");
+textinput.value = fileinput.value;
+}
+</script>
 
 
     
@@ -53,7 +66,8 @@
 <fieldset class="despesasProjeto">
 	
     <label for="anexo">Anexar Nota Fiscal:</label><br>
-    <input type="file" name="anexar" value="Anexar">
+    <input type="file" id="anexar" name="fileupload" style="display: none" onChange="Handlechange();"/>
+    <input type="button" value="anexar" id="fakeBrowse" onclick="HandleBrowseClick();"/>
     
 </fieldset>
 
