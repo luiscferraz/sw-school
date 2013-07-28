@@ -235,6 +235,12 @@ header('Content-Type: text/html; charset=UTF-8');
 						}
 					?>
 					
+					<?php 
+						if (in_array($tipo_usuario , array('admin'))){
+							echo $this->Html->link($this->Html->image("junk.png", array('alt' => 'Remover')), array('action' => 'eliminate', $activity['Activity']['id'], $activity['Activity']['project_id']),
+							array('escape'=>false, 'id'=>'link'), "Confirmar exclusão definitiva da atividade?");
+						}
+					?>
 					
 					
 					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
