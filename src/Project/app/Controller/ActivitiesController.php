@@ -121,6 +121,17 @@
 			$this->redirect(array('action' => 'index/'.$id_projeto));
 		}
 	}
+
+	public function eliminate($id = NULL, $id_projeto)
+{
+ 
+		if($this->Activity->delete($id))
+{
+   			$this->Session->setFlash('Atividade deletada');
+   			$this->redirect(array('action' => 'index/'.$id_projeto));
+}
+
+}
 	
 	public function edit($id = NULL, $id_projeto){
 		$this->layout = 'basemodalint';
