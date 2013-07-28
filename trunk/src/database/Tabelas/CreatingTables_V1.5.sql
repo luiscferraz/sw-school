@@ -15,7 +15,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
   `date` VARCHAR(10) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
   `observations` MEDIUMTEXT CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
   `description` VARCHAR(100) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
-  `status` ENUM('Planejada','Em desenvolvimento','Concluída','Cancelada') CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
+  `status` ENUM('Planejada','Em desenvolvimento','ConcluÃ­da','Cancelada') CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
   `project_id` INT(11) NOT NULL ,
   `consultant1_id` INT(11) NULL DEFAULT NULL ,
   `consultant2_id` INT(11) NULL DEFAULT NULL ,
@@ -24,7 +24,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
   `removed` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 41
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
@@ -47,7 +47,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants` (
   UNIQUE INDEX `acronym_color_UNIQUE` (`acronym_color` ASC) ,
   UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 18
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
@@ -92,7 +92,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`addresses` (
   `company_id` INT(11) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -149,7 +149,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`companies` (
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -310,7 +310,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`entries` (
     ON DELETE NO ACTION
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 21
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -346,13 +346,13 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`projects` (
     ON DELETE NO ACTION
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-/*AUTO_INCREMENT = 26*/
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
 -- Table `swsdb`.`expenses`
--- -----------------------------------------------------
+-- -----------------------------------------------------ent
 CREATE  TABLE IF NOT EXISTS `swsdb`.`expenses` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `description` VARCHAR(100) NOT NULL ,
@@ -476,7 +476,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`users` (
   `consultant_id` INT(11) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`, `username`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 19
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 USE `swsdb` ;
