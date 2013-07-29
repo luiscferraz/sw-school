@@ -361,6 +361,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`expenses` (
   `type` ENUM('e,d') NULL DEFAULT NULL ,
   `project_id` INT(11) NOT NULL ,
   `attachments` BLOB NULL DEFAULT NULL ,
+  `file` LONGBLOB NULL DEFAULT NULL ,
   `type_expenses` VARCHAR(45) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_expenses_projects` (`project_id` ASC) ,
