@@ -70,8 +70,8 @@
 	 	else{
 	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
 		
-	 	}	 	
-		
+	 	}			 	
+
 	 	
 	 }
 	 
@@ -81,7 +81,16 @@
 		//Hora final não pode ser menor que a hora inicial.
 		if ($data['Activity']['start_hours'] > $data['Activity']['end_hours']) {
 			$strerro = $strerro . 'Hora incial maior que a hora final.</br>';
-			
+			echo $strerro;
+
+			$ctr ++;
+
+		}
+		//Não é permitido que a hora inicial seja igual a hora final
+		elseif ($data['Activity']['start_hours'] == $data ['Activity']['end_hours']){
+			$strerro = $strerro . 'Hora inicial igual a hora final.</br>';
+			echo $strerro;
+
 			$ctr ++;
 		}
 
@@ -150,6 +159,7 @@
 		if ($this->request->is('get')) {
 			$this->request->data = $this->Activity->read();
 		}
+		
 		else{			
 			$this->Activity->id = $id;
 			if ($this->Activity->saveAll($this->request->data)) {
