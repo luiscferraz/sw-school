@@ -344,7 +344,7 @@ p span {
 }
 
 .actions{
-	width: 82px !important;
+	width: 85px !important;
 	padding-left: 5px;
 	padding-top: 15px;
 	text-align: center;
@@ -371,7 +371,7 @@ p span {
 }
 
 #dados_bancarios_add_consultor{
-	margin-top: -180px;
+	margin-top: -210px;
 	padding-left: 20px;
 	float: right;
 	border-width: 30px;
@@ -381,6 +381,16 @@ p span {
 	background-color: #bcdae0;
 }
 
+#dados_bancarios_edit_consultor{
+	margin-top: -345px;
+	padding-left: 20px;
+	float: right;
+	border-width: 30px;
+	width: 60%;
+	border: 30px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
+}
 
 
 /*========View=========*/

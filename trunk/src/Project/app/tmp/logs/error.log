@@ -12359,3 +12359,36 @@
 2013-07-27 02:23:39 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-07-30 01:02:02 Error: [NotFoundException] Invalid post
+#0 [internal function]: ConsultantsController->view()
+#1 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConsultantsController), Array)
+#2 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConsultantsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-30 01:02:02 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-30 01:02:02 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-30 01:15:32 Error: [NotFoundException] Invalid post
+#0 [internal function]: ConsultantsController->edit()
+#1 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConsultantsController), Array)
+#2 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConsultantsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-30 01:15:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-30 01:15:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-30 01:30:55 Error: [NotFoundException] Invalid post
+#0 [internal function]: ActivitiesController->index('activities', 'AjaxListFiles', '14')
+#1 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ActivitiesController), Array)
+#2 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ActivitiesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

@@ -219,31 +219,31 @@ header('Content-Type: text/html; charset=UTF-8');
 				<td>
 					<div class="actions">
 					<?php echo $this->Html->link(
-					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'))?>
+					$this->Html->image("view.png", array('alt' => 'Ver','title'=>'Visualizar')), array('action' => 'view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'))?>
 
 					<?php 
 						if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-							echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $activity['Activity']['id'], $activity['Activity']['project_id']),
+							echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar','title'=>'Editar')), array('action' => 'edit', $activity['Activity']['id'], $activity['Activity']['project_id']),
 							array('escape'=>false, 'id'=>'link'));
 						}
 					?>					
 					                							
 					<?php 
 						if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-							echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $activity['Activity']['id'], $activity['Activity']['project_id']),
+							echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover','title'=>'Excluir')), array('action' => 'delete', $activity['Activity']['id'], $activity['Activity']['project_id']),
 							array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da atividade?");
 						}
 					?>
-					
+					<br>
 					<?php 
 						if (in_array($tipo_usuario , array('admin'))){
-							echo $this->Html->link($this->Html->image("junk.png", array('alt' => 'Remover')), array('action' => 'eliminate', $activity['Activity']['id'], $activity['Activity']['project_id']),
+							echo $this->Html->link($this->Html->image("junk.png", array('alt' => 'Excluir Def','title'=>'Excluir Definitivamente')), array('action' => 'eliminate', $activity['Activity']['id'], $activity['Activity']['project_id']),
 							array('escape'=>false, 'id'=>'link'), "Confirmar exclusão definitiva da atividade?");
 						}
 					?>
 					
 					
-					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
+					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','title'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
 
 					<br>
 
