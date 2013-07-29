@@ -2,14 +2,6 @@
 <!--<h2 id="tituloatividade">Atividade - <?php //echo $activity; ?></h2>-->
 	
 <?php 
-    foreach ($activities as $activity) {        
-        $list_activities[$activity['Activity']['id']] ='Projeto: '.$activity['Project']['name'].' - Atividade: '.$activity['Activity']['description'];
-        };                    
-    if (!isset($list_activities)){
-		$list_activities['none'] = 'Nenhuma Atividade Cadastrada';
-    }
-?>		
-<?php 
     foreach ($consultants as $consultant) {        
         $list_consultants[$consultant['Consultant']['id']] =$consultant['Consultant']['name'];
         };                    
@@ -18,8 +10,8 @@
     }
 ?>
 <h1>Editar Apontamento</h1>
-<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
-<h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
+<h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
+<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
 
         <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
 		echo $this->Form->create('Entries', array('action' => 'edit/'.$id.'/'.$id_atividade)); ?>
@@ -37,7 +29,8 @@
                 <?php echo $this->Form->input('Entry.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
             </fieldset>
             <fieldset id="Dados_projeto_pai">
-				<?php echo $this->Form->input('Entry.activity_id', array('options' => $list_activities,'empty' => 'Selecione', 'type'=>'select','label' => 'Projeto/Atividade: ', 'id'=>'actvID')); ?><br>
+				
+
 				<?php echo $this->Form->input('Entry.type_consulting', array('options' => array("A"=>"A","B"=>"B", "C"=>"C"),'label' => 'Tipo de consultoria: ', 'id'=>'entryType')); ?> <br>
 				<?php echo $this->Form->input('Entry.type', array('options' => array("Individual" => "Individual", "Grupo" => "Grupo"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Tipo: ', 'id'=>'actvStatus')); ?><br>
                 <?php echo $this->Form->input('Entry.hours_worked', array('type'=>'text', 'label' => 'Horas Trabalhadas: ','required'=>'required', 'id'=>'entryHourWorked')); ?>
