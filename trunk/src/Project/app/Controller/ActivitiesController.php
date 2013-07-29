@@ -166,7 +166,7 @@
  
 		if($this->Activity->delete($id))
 {
-   			$this->Session->setFlash('Atividade deletada');
+			$this->Session->setFlash($this->flashSuccess('Atividade deletada!'));
    			$this->redirect(array('action' => 'index/'.$id_projeto));
 }
 

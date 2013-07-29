@@ -17,11 +17,13 @@
 ?>
 
 <h1>Cadastrar Apontamento</h1>
+<h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
+<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
     <div id="content">
         <div class="conteudo">
 
         <?php 
-		echo $this->Form->create('Entries', array('action' => 'add/'.$id_projeto)); ?>
+		echo $this->Form->create('Entries', array('action' => 'add/'.$id_atividade.'/'.$id_projeto)); ?>
             <fieldset id="Dados_projeto_pai">
 		<?php //Se for um consultor logado, o apontamento automaticamente é no nome dele, se for admin, aparecerá uma lista de consultores
 		if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
@@ -35,7 +37,10 @@
                 <?php echo $this->Form->input('Entry.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
             </fieldset>
             <fieldset id="Dados_projeto_pai">
-				<?php echo $this->Form->input('Entry.activity_id', array('options' => $list_activities,'empty' => 'Selecione', 'type'=>'select','label' => 'Projeto/Atividade: ', 'id'=>'actvID','required'=>'required')); ?><br>
+				<!--<?php echo $this->Form->input('Entry.activity_id', array('options' => $list_activities,'empty' => 'Selecione', 'type'=>'select','label' => 'Projeto/Atividade: ', 'id'=>'actvID','required'=>'required')); ?><br>-->
+
+                <!--<?php echo 'Projeto/Atividade: ', $nome_projeto, ' - ', $nome_atividade;?> <br>-->
+                <?php echo $this->Form->input('Entry.activity_id',array('type'=>'text','default'=>$id_atividade,'type'=>'hidden')); ?>
 
 				<?php echo $this->Form->input('Entry.type_consulting', array('options' => array("A"=>"A","B"=>"B", "C"=>"C"),'label' => 'Tipo de consultoria: ', 'id'=>'entryType')); ?> <br>
 				<?php echo $this->Form->input('Entry.type', array('options' => array("Individual" => "Individual", "Grupo" => "Grupo"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Tipo: ', 'id'=>'actvStatus', 'required' => 'required')); ?><br>

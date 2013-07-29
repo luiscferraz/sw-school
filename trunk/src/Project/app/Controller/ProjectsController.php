@@ -268,9 +268,12 @@
 	
 	public function AjaxAddConsultant($project_id = null,$consultant_id = null){
 		$this->layout = 'ajax';
+		$this->Session->setFlash($this->flashSuccess('Alocação concluída.'));
 		$this->Project->ProjectConsultant->query("INSERT INTO project_consultants  (project_id,consultant_id) VALUES ('" . $project_id . "', '" . $consultant_id. "')");
 		$query = $this->Project->ProjectConsultant->find('all',array('conditions'=> array('project_id =' => $project_id)));
+		
 		$this->set('retorno', $query);
+
 
 	}
 	public function AjaxEditConsultant($id,

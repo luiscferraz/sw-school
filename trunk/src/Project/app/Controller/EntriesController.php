@@ -27,15 +27,23 @@ class EntriesController extends AppController{
 			}		
  	}
  	
- 	public function add($id_projeto){
+ 	public function add($id_atividade,$id_projeto){
 	 	$this->layout = 'basemodalint';
 	 	$this-> set ('id_projeto',$id_projeto);
+	 	$this-> set ('id_atividade',$id_atividade);
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
 		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));		 
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));
+		$nome_projeto_atividade = $this->Entry->Activity->Project->query("SELECT projects.name, activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id_atividade);	
+		$this -> set('nome_projeto', $nome_projeto_atividade[0]['projects']['name']);
+		$this-> set ('nome_atividade', $nome_projeto_atividade[0]['activities']['description']);
 		
+
+
+
+
 	 	if($this->request->is('post')){
 	 		if($this->Entry->saveAll($this->request->data)){
 	 			$this->Session->setFlash($this->flashSuccess('O apontamento foi adicionado com sucesso.'));
