@@ -42,6 +42,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`consultants` (
   `phone2` VARCHAR(13) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
   `email` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
   `removed` TINYINT(1) NOT NULL ,
+  `photo` LONGBLOB NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) ,
   UNIQUE INDEX `acronym_UNIQUE` (`acronym` ASC) ,
   UNIQUE INDEX `acronym_color_UNIQUE` (`acronym_color` ASC) ,
