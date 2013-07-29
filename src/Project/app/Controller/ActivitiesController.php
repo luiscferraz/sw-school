@@ -80,14 +80,14 @@
 		$strerro = '';
 		//Hora final não pode ser menor que a hora inicial.
 		if ($data['Activity']['start_hours'] > $data['Activity']['end_hours']) {
-			$strerro = $strerro . 'Hora incial maior que a hora final.</br>';
+			$strerro = $strerro . 'A hora inicial não pode ser maior que a hora final.</br>';
 
 			$ctr ++;
 
 		}
 		//Não é permitido que a hora inicial seja igual a hora final
 		elseif ($data['Activity']['start_hours'] == $data ['Activity']['end_hours']){
-			$strerro = $strerro . 'Hora inicial igual a hora final.</br>';
+			$strerro = $strerro . 'A hora inicial não pode ser igual a hora final.</br>';
 			$ctr ++;
 		}
 
@@ -126,13 +126,13 @@
 		$strerro = '';
 		//Hora final não pode ser menor que a hora inicial.
 		if ($data['Activity']['start_hours'] > $data['Activity']['end_hours']) {
-			$strerro = $strerro . 'Hora incial maior que a hora final.</br>';
+			$strerro = $strerro . 'A hora inicial não pode ser maior que a hora final.</br>';
 
 			$ctr ++;
 		}
 		//Não é permitido que a hora inicial seja igual a hora final
 		elseif ($data['Activity']['start_hours'] == $data ['Activity']['end_hours']){
-			$strerro = $strerro . 'Hora inicial igual a hora final.</br>';
+			$strerro = $strerro . 'A hora inicial não pode ser igual a hora final.</br>';
 			$ctr ++;
 		}
 
