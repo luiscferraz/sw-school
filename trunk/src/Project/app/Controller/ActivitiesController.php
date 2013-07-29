@@ -81,7 +81,6 @@
 		//Hora final não pode ser menor que a hora inicial.
 		if ($data['Activity']['start_hours'] > $data['Activity']['end_hours']) {
 			$strerro = $strerro . 'Hora incial maior que a hora final.</br>';
-			echo $strerro;
 
 			$ctr ++;
 
@@ -89,8 +88,6 @@
 		//Não é permitido que a hora inicial seja igual a hora final
 		elseif ($data['Activity']['start_hours'] == $data ['Activity']['end_hours']){
 			$strerro = $strerro . 'Hora inicial igual a hora final.</br>';
-			echo $strerro;
-
 			$ctr ++;
 		}
 
@@ -123,6 +120,39 @@
 			return true;
 		}
 	}
+
+	public function verificaedit($data) {
+		$ctr = 0;
+		$strerro = '';
+		//Hora final não pode ser menor que a hora inicial.
+		if ($data['Activity']['start_hours'] > $data['Activity']['end_hours']) {
+			$strerro = $strerro . 'Hora incial maior que a hora final.</br>';
+
+			$ctr ++;
+		}
+		//Não é permitido que a hora inicial seja igual a hora final
+		elseif ($data['Activity']['start_hours'] == $data ['Activity']['end_hours']){
+			$strerro = $strerro . 'Hora inicial igual a hora final.</br>';
+			$ctr ++;
+		}
+
+		//Se a atividade for 'Em desenvolvimento'  a data não pode ser depois do dia do cadastramento.
+		if ($data['Activity']['status'] == 'Em desenvolvimento') {
+			$dt =  date('d').'/'.date('m').'/'.date('Y');
+			if ($data['Activity']['date'] > $dt) {
+				$ctr ++;
+				$strerro = $strerro . 'Status "Em desenvolvimento", com data inicial a começar.</br>';
+			};			
+		}
+		if ($ctr > 0) {
+			$this -> Session -> setFlash ($this -> flashError ($strerro));
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+
 	public function delete($id = NULL, $id_projeto){
 		$this->Activity->id = $id;
 		if($this->Activity->saveField("removed", "true")){
@@ -162,15 +192,18 @@
 		
 		else{			
 			$this->Activity->id = $id;
-			if ($this->Activity->saveAll($this->request->data)) {
+
+			if ($this -> verificaedit($this->request->data)){
+
+				if ($this->Activity->saveAll($this->request->data)) {
 				
-				$this->Session->setFlash($this->flashSuccess('Atividade foi editada.'));
-				$this->redirect(array('action' => 'index/'.$id_projeto));
+					$this->Session->setFlash($this->flashSuccess('Atividade foi editada.'));
+					$this->redirect(array('action' => 'index/'.$id_projeto));
+				}
+				else {
+					$this->redirect(array('action' => 'index/'.$id_projeto));
+				}
 			}
-			else {
-				$this->redirect(array('action' => 'index/'.$id_projeto));
-			}
-			
 		}
 		$nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);		
 			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);		
