@@ -2,6 +2,19 @@
 <h1>Cadastrar Consultor</h1>
 <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
 		echo $this->Form->create('Consultant', array('action' => 'add')); ?>
+<script language="JavaScript" type="text/javascript">
+function HandleBrowseClick()
+{
+    var fileinput = document.getElementById("foto");
+    fileinput.click();
+}
+function Handlechange()
+{
+var fileinput = document.getElementById("foto");
+var textinput = document.getElementById("filename");
+textinput.value = fileinput.value;
+}
+</script>
 			<div class="left">
 				<fieldset id="dados_pessoais">
 					<legend class="legenda">Dados Pessoais</legend>
@@ -37,6 +50,14 @@
         			<?php echo $this->Form->input('User.password', array('label' => 'Senha: <br>','required'=>'required', 'id' => 'senha')); ?>
         			<?php echo $this->Form->input('User.type', array('label' => 'Tipo de usuário: <br>', 'empty' => 'Selecione','required'=>'required', 'id' => 'tipousuario',
             		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
+       
+     
+
+
+       <input type="file" id="foto" name="fileupload" style="display: none" onChange="Handlechange();" action="Foto"/>
+    	<input type="button" value="Foto" id="fakeBrowse" onclick="HandleBrowseClick();"/>
+    
+        
  
     </fieldset>
 

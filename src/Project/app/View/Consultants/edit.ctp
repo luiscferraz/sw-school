@@ -2,6 +2,19 @@
 <h1>Editar Consultor</h1>
 
  <?php echo $this->Form->create('Consultant', array('action' => 'edit')); ?>
+ <script language="JavaScript" type="text/javascript">
+function HandleBrowseClick()
+{
+    var fileinput = document.getElementById("foto");
+    fileinput.click();
+}
+function Handlechange()
+{
+var fileinput = document.getElementById("foto");
+var textinput = document.getElementById("filename");
+textinput.value = fileinput.value;
+}
+</script>
  			<div class="left" >
 			<fieldset id="dados_pessoais">
 				<legend class="legenda">Dados Pessoais</legend>
@@ -39,9 +52,15 @@
         			<?php echo $this->Form->input('User.type', array('label' => 'Usuário: ','required'=>'required', 'empty' => 'Selecione', 'id' => 'tipousuario',
             		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
  
+ 	 
+	<?php echo $this->Html->image('consultant.jpg')?>
+		
+		<input type="file" id="foto" name="fileupload" style="display: none" onChange="Handlechange();" action="Foto"/>
+    	<input type="button" value="Foto" id="fakeBrowse" onclick="HandleBrowseClick();"/>
+
     </fieldset>
 
-    <fieldset id="dados_bancarios_add_consultor">
+    <fieldset id="dados_bancarios_edit_consultor">
 					<legend class="legenda">Dados Bancários</legend>
 
 						<?php echo $this->Form->input('BankInfoConsultant.id', array('type' => 'hidden')); ?>
