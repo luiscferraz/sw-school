@@ -1,7 +1,7 @@
 
 <h1>Cadastrar Consultor</h1>
 <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
-		echo $this->Form->create('Consultant', array('action' => 'add')); ?>
+		echo $this->Form->create('Consultant', array('action' => 'add','type'=>'file')); ?>
 <script language="JavaScript" type="text/javascript">
 function HandleBrowseClick()
 {
@@ -53,9 +53,7 @@ textinput.value = fileinput.value;
        
      
 
-
-       <input type="file" id="foto" name="fileupload" style="display: none" onChange="Handlechange();" action="Foto"/>
-    	<input type="button" value="Foto" id="fakeBrowse" onclick="HandleBrowseClick();"/>
+     	<?php echo $this->Form->input('foto',array('type'=>'file'));?>
     
         
  

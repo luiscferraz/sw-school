@@ -40,6 +40,7 @@
     if($this->request->is('post'))
     {
       if ($this->verific($this->request->data)) {
+      	$this->request->data['Consultant']['foto'] = $this->SaveImg($this->request->data['Consultant']['foto'],'foto');
         if($this->Consultant->saveAll($this->request->data))
         {
           $this->Session->setFlash($this->flashSuccess('O usuário foi adicionado.'));

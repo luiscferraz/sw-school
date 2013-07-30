@@ -32,6 +32,34 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+	/**
+     * SaveImg : Metodo para salvar as imagens no servidor
+     * @param File $File Arquivo carregado no formulario.
+     * @param String $pasta Pasta de localização para a imagem.
+     * @author Erick Haendel <erickhaendel@gmail.com>
+     * @return String Novo nome da imagem.
+     */
+    public function SaveImg($File,$pasta){
+        $dir =  'img/'.$pasta.'/';
+    
+        if ('' != $File['tmp_name']){
+            //Pegar a extasão do arquivo.
+            $tipo =  explode('/',$File['type']);
+            //Criar novo nome para a imagem.
+            $File['name'] = $_SERVER['REQUEST_TIME'].'.'.$tipo[1];
+            
+            if($tipo[0] == 'image'){
+                if(is_uploaded_file($File['tmp_name']) &&
+                        move_uploaded_file($File['tmp_name'], $dir.$File['name'])){
+                    return $File['name'];
+                }
+            }
+        }
+        else {
+            return false;
+        }
+    }
+
 	//funções para flash alerta,successo,
 	
 	public function flashSuccess($msg){
