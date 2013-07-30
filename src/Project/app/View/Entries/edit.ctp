@@ -29,8 +29,7 @@
                 <?php echo $this->Form->input('Entry.observations', array('type'=>'textarea','label' => 'Observações: ', 'id'=>'actvObs')); ?>
             </fieldset>
             <fieldset id="Dados_projeto_pai">
-				
-
+                <?php echo $this->Form->input('Entry.activity_id',array('type'=>'text','default'=>$id_atividade,'type'=>'hidden')); ?>
 				<?php echo $this->Form->input('Entry.type_consulting', array('options' => array("A"=>"A","B"=>"B", "C"=>"C"),'label' => 'Tipo de consultoria: ', 'id'=>'entryType')); ?> <br>
 				<?php echo $this->Form->input('Entry.type', array('options' => array("Individual" => "Individual", "Grupo" => "Grupo"), 'type'=>'select', 'empty' => 'Selecione', 'label' => 'Tipo: ', 'id'=>'actvStatus')); ?><br>
                 <?php echo $this->Form->input('Entry.hours_worked', array('type'=>'text', 'label' => 'Horas Trabalhadas: ','required'=>'required', 'id'=>'entryHourWorked')); ?>
