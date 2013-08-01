@@ -21,7 +21,7 @@
  	}
  	
  	public function view($id = null){
- 		 $this -> layout = 'base';
+ 		 $this -> layout = 'basemodalint';
 		 $this-> set ('tipo_usuario',$this->Auth->user('type'));	
  		 if (!$id) {
             throw new NotFoundException(__('Invalid post'));
