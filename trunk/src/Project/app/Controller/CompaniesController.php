@@ -72,7 +72,7 @@ class CompaniesController extends AppController {
 	public function view($id){
 
 		$this->Company->id = $id;
-		$this->layout = 'base';
+		$this->layout = 'basemodalint';
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
 		
 	    if ($this->request->is('get')) {
