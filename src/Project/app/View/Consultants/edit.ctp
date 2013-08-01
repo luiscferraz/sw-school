@@ -20,7 +20,7 @@ textinput.value = fileinput.value;
 				<legend class="legenda">Dados Pessoais</legend>
 					<?php echo $this->Form->input('Consultant.id', array('type' => 'hidden')); ?>
 					<?php echo $this->Form->input('Consultant.name', array('label' => 'Nome: ','placeholder'=>'', 'id'=>'name')); ?>
-					<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF: ','placeholder'=>'', 'id'=>'cpf')); ?>
+					<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF: ','placeholder'=>'', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
 					<?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym')); ?>
 					<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor: ', 'id'=>'acronym_color')); ?>
 						<?php echo $this->Form->input('Consultant.phone1', array('label' => 'Telefone: ' )); ?>
