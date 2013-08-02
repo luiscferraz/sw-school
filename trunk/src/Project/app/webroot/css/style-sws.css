@@ -386,7 +386,7 @@ p span {
 #dados_bancarios_add_consultor{
 	padding-left: 20px;
 	padding-bottom: 70px;
-	margin-top:-250px;
+	margin-top:0px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
