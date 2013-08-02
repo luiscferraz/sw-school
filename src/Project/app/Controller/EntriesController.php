@@ -1,4 +1,4 @@
-﻿<?php
+ <?php
 class EntriesController extends AppController{
 	
 	public $helpers = array ('Html','Form');
@@ -45,6 +45,7 @@ class EntriesController extends AppController{
 
 
 	 	if($this->request->is('post')){
+	 		if ($this -> verifica($this->request->data)) {
 	 		if($this->Entry->saveAll($this->request->data)){
 	 			$this->Session->setFlash($this->flashSuccess('O apontamento foi adicionado com sucesso.'));
           		$this->redirect(array('action' => '../activities/index/'.$id_projeto));
@@ -53,13 +54,23 @@ class EntriesController extends AppController{
 				$this->Session->setFlash($this->flashError('Erro ao cadastrar apontamento!'));
 			}				
 	 	}
+	 }
 	 	else{
 	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('O apontamento não foi adicionado. Tente novamente!')));			
 		
 	 	}
  	}
-	
+	    public function verifica($data) {
+ 		$data = $this->request->data['Entry']['date'];
+
+		list ($dia, $mes, $ano) = split ('[/.-]', $data);
+		$data_novo = $ano . '-' . $mes . '-' . $dia;
+
+		return $this->request->data['Entry']['date'] = $data_novo;
+
+ 	}
 	 	private function Nome_Consultor_Logado($id){
+
 			$name = $this->Entry->Consultant->findById($id);
 			if (!$name){
 			return '';
