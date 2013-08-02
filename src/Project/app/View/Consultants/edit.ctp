@@ -23,9 +23,9 @@ textinput.value = fileinput.value;
 					<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ','required'=>'required','placeholder'=>'', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
 					<?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym')); ?>
 					<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor: ', 'id'=>'acronym_color')); ?>
-						<?php echo $this->Form->input('Consultant.phone1', array('label' => 'Telefone: ' )); ?>
-					<?php echo $this->Form->input('Consultant.phone2', array('label' => 'Celular: ')); ?>
-					<?php echo $this->Form->input('Consultant.email', array('type' => 'email','label' => 'E-mail: ', 'id'=>'email')); ?>					
+						<?php echo $this->Form->input('Consultant.phone1', array('label' => 'Telefone <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required' )); ?>
+					<?php echo $this->Form->input('Consultant.phone2', array('label' => 'Celular <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required')); ?>
+					<?php echo $this->Form->input('Consultant.email', array('type' => 'email','label' => 'E-mail <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required', 'id'=>'email')); ?>					
 			</fieldset>
 			</div>
 			<div class="right">
