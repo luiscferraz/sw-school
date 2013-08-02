@@ -23,16 +23,16 @@
         echo $this->Form->create('Activities', array('action' => 'edit2/'.$id.'/'.$id_projeto)); ?>
             <fieldset id="Dados_projeto_pai2">
                 <?php echo $this->Form->input('Activity.id', array('type'=>'hidden')); ?>
-                 <?php echo $this->Form->input('Activity.description', array('label' => 'Descrição: ', 'id'=>'actvDescription')); ?> 
+                 <?php echo $this->Form->input('Activity.description', array('label' => 'Descrição: <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'actvDescription')); ?> 
                  <?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym')); ?>
 
                  <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />           
                
             </fieldset>
             <fieldset id="Dados_projeto_pai3">
-                <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial: ','required'=>'required', 'id'=>'actvStartHour')); ?>
-                <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final: ','required'=>'required', 'id'=>'actvEndHour')); ?>
-                <?php echo $this->Form->input('Activity.date', array('type'=>'text','label' => 'Data: ', 'id'=>'datepicker')); ?>
+                <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvStartHour')); ?>
+                <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvEndHour')); ?>
+                <?php echo $this->Form->input('Activity.date', array('type'=>'text','label' => 'Data <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'datepicker')); ?>
                 
             </fieldset>
             

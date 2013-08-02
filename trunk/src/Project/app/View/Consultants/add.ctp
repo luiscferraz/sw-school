@@ -19,13 +19,13 @@ textinput.value = fileinput.value;
 				<fieldset id="dados_pessoais">
 					<legend class="legenda">Dados Pessoais</legend>
 						
-						<?php echo $this->Form->input('Consultant.name', array('label' => 'Nome: ','required'=>'required', 'id'=>'name')); ?>
-						<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF: ', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
-						<?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ','required'=>'required', 'id'=>'acronym','onblur'=>'checkAcronym(this)')); ?>
-						<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor: ','required'=>'required', 'value'=>'#000000','id'=>'acronym_color','onblur'=>'checkColor(this)')); ?>
+						<?php echo $this->Form->input('Consultant.name', array('label' => 'Nome <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ','required'=>'required', 'id'=>'name')); ?>
+						<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF <sup title="Campo obrigatório" class="obrigatorio">*</sup>:  ', 'required'=>'required', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
+						<?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym','onblur'=>'checkAcronym(this)')); ?>
+						<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ','required'=>'required', 'value'=>'#000000','id'=>'acronym_color','onblur'=>'checkColor(this)')); ?>
 						<?php echo $this->Form->input('Consultant.phone1', array('label' => 'Telefone: ', 'id'=>'phone1')); ?>
-						<?php echo $this->Form->input('Consultant.phone2', array('label' => 'Celular: ', 'id'=>'phone2')); ?>
-						<?php echo $this->Form->input('Consultant.email', array('type' => 'email','label' => 'E-mail: ', 'id'=>'email')); ?>					
+						<?php echo $this->Form->input('Consultant.phone2', array('label' => 'Celular <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'phone2')); ?>
+						<?php echo $this->Form->input('Consultant.email', array('type' => 'email','label' => 'E-mail <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required', 'id'=>'email')); ?>					
 				</fieldset>
 
 
@@ -35,9 +35,9 @@ textinput.value = fileinput.value;
 					<legend class="legenda">Endereço</legend>
 
 
-						<?php echo $this->Form->input('Address.zip_code', array('label' => 'CEP: ', 'id'=>'zip_code')); ?>
+						<?php echo $this->Form->input('Address.zip_code', array('label' => 'CEP: ' , 'id'=>'zip_code')); ?>
 						<?php echo $this->Form->input('Address.address', array('label' => 'Endereço: ', 'id'=>'address')); ?>
-						<?php echo $this->Form->input('Address.number', array('label' => 'Número: ')); ?>
+						<?php echo $this->Form->input('Address.number', array('label' => 'Número: ' )); ?>
 						<?php echo $this->Form->input('Address.complement', array('label' => 'Complemento: ')); ?>
 						<?php echo $this->Form->input('Address.neighborhood', array('label' => 'Bairro: ','id'=>'neighborhood')); ?>
 						<?php echo $this->Form->input('Address.city', array('label' => 'Cidade: ', 'id'=>'city')); ?>
@@ -46,9 +46,9 @@ textinput.value = fileinput.value;
 						
     			<fieldset id='usuario'>
         			<legend>Usuário</legend>
-        			<?php echo $this->Form->input('User.username',array('label' => 'Nome de usuário: <br>', 'required'=>'required','id' => 'campo_usuario')); ?>
-        			<?php echo $this->Form->input('User.password', array('label' => 'Senha: <br>','required'=>'required', 'id' => 'senha')); ?>
-        			<?php echo $this->Form->input('User.type', array('label' => 'Tipo de usuário: <br>', 'empty' => 'Selecione','required'=>'required', 'id' => 'tipousuario',
+        			<?php echo $this->Form->input('User.username',array('label' => 'Nome de usuário <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'required'=>'required','id' => 'campo_usuario')); ?>
+        			<?php echo $this->Form->input('User.password', array('label' => 'Senha <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>','required'=>'required', 'id' => 'senha')); ?>
+        			<?php echo $this->Form->input('User.type', array('label' => 'Tipo de usuário <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'empty' => 'Selecione','required'=>'required', 'id' => 'tipousuario',
             		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
        
      
@@ -62,11 +62,11 @@ textinput.value = fileinput.value;
      <fieldset id="dados_bancarios_add_consultor">
 					<legend class="legenda">Dados Bancários</legend>
 						
-						<?php echo $this->Form->input('BankInfoConsultant.name_bank', array('label' => 'Nome do Banco: ','required'=>'required', 'id'=>'BankInfoConsultant.name_bank')); ?>
+						<?php echo $this->Form->input('BankInfoConsultant.name_bank', array('label' => 'Nome do Banco: ' , 'id'=>'BankInfoConsultant.name_bank')); ?>
 				
-						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ','required'=>'required', 'id'=>'BankInfoConsultant.number_agency')); ?>
+						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ' , 'id'=>'BankInfoConsultant.number_agency')); ?>
 
-						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ','required'=>'required', 'id'=>'BankInfoConsultant.number_account')); ?>
+						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ',  'id'=>'BankInfoConsultant.number_account')); ?>
 											
 				</fieldset>
 

@@ -16,11 +16,11 @@ textinput.value = fileinput.value;
 }
 </script>
  			<div class="left" >
-			<fieldset id="dados_pessoais">
+			<fieldset id="dados_pessoais_edit">
 				<legend class="legenda">Dados Pessoais</legend>
 					<?php echo $this->Form->input('Consultant.id', array('type' => 'hidden')); ?>
 					<?php echo $this->Form->input('Consultant.name', array('label' => 'Nome: ','placeholder'=>'', 'id'=>'name')); ?>
-					<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF: ','placeholder'=>'', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
+					<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ','required'=>'required','placeholder'=>'', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
 					<?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym')); ?>
 					<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor: ', 'id'=>'acronym_color')); ?>
 						<?php echo $this->Form->input('Consultant.phone1', array('label' => 'Telefone: ' )); ?>
@@ -42,7 +42,7 @@ textinput.value = fileinput.value;
 					
 			</fieldset>
 
-<fieldset id='usuario'>
+<fieldset id='usuario_edit'>
         			<legend>Usuário</legend>
 					<?php echo $this->Form->input('User.id', array('type' => 'hidden')); ?>
         			<?php echo $this->Form->input('User.username',array('label' => 'Usuário: ', 'id' => 'campo_usuario','required'=>'required')); ?>
