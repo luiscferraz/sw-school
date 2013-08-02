@@ -363,7 +363,7 @@ p span {
 
 #dados_pessoais_edit{
 	padding-left: 20px;
-	padding-bottom:35px;
+	padding-bottom:30px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -374,7 +374,7 @@ p span {
 
 #enderecoAddConsultor{
 	padding-left: 20px;
-	padding-bottom:40px;
+	padding-bottom:44px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -386,7 +386,7 @@ p span {
 #dados_bancarios_add_consultor{
 	padding-left: 20px;
 	padding-bottom: 70px;
-	margin-top:0px;
+	margin-top:-250px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -396,7 +396,7 @@ p span {
 }
 
 #dados_bancarios_edit_consultor{
-	margin-top: 0px;
+	margin-top: -360px;
 	padding-left: 20px;
 	padding-bottom:180px;
 	float: left;
@@ -474,7 +474,7 @@ p span {
 
 #usuario_edit{
 	padding-left: 20px;
-	padding-bottom:21px;
+	padding-bottom:25px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
