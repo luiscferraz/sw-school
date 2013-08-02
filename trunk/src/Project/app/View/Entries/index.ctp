@@ -41,7 +41,7 @@
 			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
 			<td class="tipo"><?php echo $entry['Entry']['type']; ?></td>
 			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
-			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
+			<td class="data"><?php echo implode('-', array_reverse(explode('-', $entry['Entry']['date']))); ?></td>
 			<div>
 				<td class="actions">
 					<?php echo $this->Html->link(
