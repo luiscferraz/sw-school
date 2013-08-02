@@ -25,10 +25,10 @@
             <fieldset id="dadosProjeto">
             <legend class="legenda">Dados</legend>
                         <?php echo $this->Form->input('Project.id', array('type'=>'hidden')); ?>
-                        <?php echo $this->Form->input('Project.name', array('label' => 'Sigla: ','required'=>'required', 'id'=>'nameProject')); ?>
-                        <?php echo $this->Form->input('Project.description', array('type'=>'textarea', 'label' => 'Descrição: ', 'id'=>'description')); ?>
-                        <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: <br>', 'id' => 'parent_project')); ?>
-                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa: <br>', 'id' => 'company', 'required'=>'required')); ?><br>
+                        <?php echo $this->Form->input('Project.name', array('label' => 'Sigla <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'nameProject')); ?>
+                        <?php echo $this->Form->input('Project.description', array('type'=>'textarea', 'label' => 'Descrição <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'description')); ?>
+                        <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: ' , 'id' => 'parent_project')); ?>
+                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'id' => 'company', 'required'=>'required')); ?><br>
             </fieldset>
 
             <fieldset id="horaGrupo">
