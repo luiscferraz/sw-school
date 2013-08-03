@@ -186,6 +186,10 @@ function checkHour(){
     endMinute = parseInt($(eEndHour).val().substring(3,5));
     startMinute = parseInt($(eStartHour).val().substring(3,5));
 
+    //
+    eStartHour.setCustomValidity("");
+    eEndHour.setCustomValidity("");
+
     // verifica se hora inicial é maior que hora final
     if (startHour > endHour) {
         //alert(startHour.toString() + endHour.toString());
