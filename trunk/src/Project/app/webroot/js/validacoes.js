@@ -162,15 +162,40 @@ function checkDate(DATE){
             else if ((month == 2) && ( (day > 29) || ( (day > 28) && ((year / 4.0) != parseInt(year / 4.0))))) {
                 DATE.setCustomValidity("Data inválida!");
             }
-
-            // Verifica se dia e mês estão com '00', e ano com '0000'
-            else if(day == 0 || month == 0 || year == 0){
-            	DATE.setCustomValidity("Data inválida!");
-        	}
-
-        	//Zera a mensagem, caso a data esteja preenchida corretamente
             else{
                 DATE.setCustomValidity("");
             }
-            
+};
+
+//Função de validação de horas inicial e final (específico para Atividades)
+function checkHour(){
+    eStartHour = document.getElementById("actvStartHour");
+    eEndHour = document.getElementById("actvEndHour");
+    startHour = parseFloat($(eStartHour).val().substring(0,2)) + (parseFloat($(eStartHour).val().substring(3,5))/60.0);
+    endHour = parseFloat($(eEndHour).val().substring(0,2)) + (parseFloat($(eEndHour).val().substring(3,5))/60.0);
+    endMinute = parseInt($(eEndHour).val().substring(3,5));
+    startMinute = parseInt($(eStartHour).val().substring(3,5));
+
+    // verifica se hora inicial é maior que hora final
+    if (startHour > endHour) {
+        //alert(startHour.toString() + endHour.toString());
+        eStartHour.setCustomValidity("Hora inicial não pode ser maior que a final!");
+    }
+    	// verifica hora inicial
+    	else if(startHour > 23.99 || startMinute >= 60 ){
+        //alert(startHour.toString() + endHour.toString());
+        eStartHour.setCustomValidity("Hora inválida!");
+    }
+    	// verifica hora final
+    	else if(endHour > 23.99 || endMinute >= 60 ){
+        //alert(startMinute.toString() + endMinute.toString());
+        eEndHour.setCustomValidity("Hora inválida!");
+    }
+    	// Apaga o valor da mensagem, caso as horas inicial e final informadas sejam válidas
+    	else{
+        //alert(startHour.toString() + endHour.toString());
+        eStartHour.setCustomValidity("");
+        eEndHour.setCustomValidity("");
+    }
+
 };
