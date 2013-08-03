@@ -16,7 +16,7 @@
                             $list_companies['none'] = 'Nenhuma Empresa Cadastrada';
                         }
                     ?>
-
+    <a href="../../Projects/index" class="botao" alt="Cancelar" onclick="parent.$.fancybox.close();"> Cancelar</a> 
     <h1>Editar Projeto</h1>
     <h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
 

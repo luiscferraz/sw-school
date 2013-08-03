@@ -1,4 +1,4 @@
-
+<a href="../../Consultants/index" class="botao" alt="Cancelar"> Cancelar </a>
 <h1>Editar Consultor</h1>
 
  <?php echo $this->Form->create('Consultant', array('action' => 'edit')); ?>
