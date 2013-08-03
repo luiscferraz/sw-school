@@ -140,3 +140,37 @@ function checkAcronym(src){
 
 
 //END Acronym
+
+function checkDate(DATE){
+            day = parseInt($(DATE).val().substring(0,2));
+            month = parseInt($(DATE).val().substring(3,5));
+            year = parseInt($(DATE).val().substring(6,10));
+
+            //alert(day.toString()+month.toString()+year.toString());
+
+            // verifica o dia valido para cada mes
+            if ((day > 30 && (  month == 4 || month == 6 || month == 9 || month == 11 )) || day > 31) {
+                DATE.setCustomValidity("Data inválida!");
+            }
+
+            // verifica se o mes e valido
+            else if ( month > 12 ) {
+                DATE.setCustomValidity("Data inválida!");
+            }
+
+            // verifica se e ano bissexto
+            else if ((month == 2) && ( (day > 29) || ( (day > 28) && ((year / 4.0) != parseInt(year / 4.0))))) {
+                DATE.setCustomValidity("Data inválida!");
+            }
+
+            // Verifica se dia e mês estão com '00', e ano com '0000'
+            else if(day == 0 || month == 0 || year == 0){
+            	DATE.setCustomValidity("Data inválida!");
+        	}
+
+        	//Zera a mensagem, caso a data esteja preenchida corretamente
+            else{
+                DATE.setCustomValidity("");
+            }
+            
+};
