@@ -11,7 +11,7 @@
 				echo $this->Form->input('cnpj', array('label' => 'CNPJ <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id' => 'cnpj',  'onblur' => 'checkCnpj(this)'));				
 				echo $this->Form->input('name', array('label' => 'Nome da empresa <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required'));
 				echo $this->Form->input('acronym', array('label' => 'Sigla <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required' ));
-				echo $this->Form->input('fundation', array('label' => 'Data de Fundação :', 'id'=> 'fundation' ));			
+				echo $this->Form->input('fundation', array('label' => 'Data de Fundação :', 'id'=> 'fundation', 'onblur' => 'checkDate(this)'));			
 				echo $this->Form->input('phone1', array('label' => 'Telefone <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id' => 'phone1'));
 				echo $this->Form->input('phone2', array('label' => 'Telefone 2 (opcional):', 'id' => 'phone2'));
 			?>
