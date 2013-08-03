@@ -9,6 +9,7 @@
 		$list_consultants['none'] = 'Nenhuma Consultor Cadastrado';
     }
 ?>
+<a href="../../../entries/index/<?php echo $id_atividade ?>" class="botao" alt="Cancelar">Cancelar </a>
 <h1>Editar Apontamento</h1>
 <h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
 <h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>

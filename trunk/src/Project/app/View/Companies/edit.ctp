@@ -1,4 +1,4 @@
-
+<a href="../../Companies/index/" class="botao" alt="Cancelar"> Cancelar</a> 
 <h1>Editar Empresa</h1>
 
 <div class="companies form">
