@@ -141,6 +141,7 @@ function checkAcronym(src){
 
 //END Acronym
 
+//Função de validação de datas
 function checkDate(DATE){
             day = parseInt($(DATE).val().substring(0,2));
             month = parseInt($(DATE).val().substring(3,5));
@@ -162,12 +163,21 @@ function checkDate(DATE){
             else if ((month == 2) && ( (day > 29) || ( (day > 28) && ((year / 4.0) != parseInt(year / 4.0))))) {
                 DATE.setCustomValidity("Data inválida!");
             }
+
+			// Verifica se dia e mês estão com '00', e ano com '0000'		
+	        else if(day == 0 || month == 0 || year == 0){		
+	        	DATE.setCustomValidity("Data inválida!");		
+	       	}
+
+	        //Zera a mensagem, caso a data esteja preenchida corretamente
             else{
                 DATE.setCustomValidity("");
             }
 };
+//Fim da função de validação de data
+//
 
-//Função de validação de horas inicial e final (específico para Atividades)
+//INICIO Função de validação de horas inicial e final (específico para Atividades)
 function checkHour(){
     eStartHour = document.getElementById("actvStartHour");
     eEndHour = document.getElementById("actvEndHour");
@@ -199,3 +209,4 @@ function checkHour(){
     }
 
 };
+//FIM Função de validação de horas inicial e final (específico para Atividades)
