@@ -56,7 +56,7 @@ function validaCnpj(cnpj){
     }
     var digito = dv1+""+dv2;
     if(dv == digito){ /*compara o dv digitado ao dv calculado*/
-        return true;
+        return false;
     }else{
         return true;
     }
@@ -103,8 +103,6 @@ function ValidaCpf(cpf) { //2012 - nao mexer daqui pra baixo, parte sagrada, so 
 } //fim da parte sagrada
 
 //END CPF
-
-
 
 //
 //=== Validação Cor
@@ -187,6 +185,10 @@ function checkHour(){
     endHour = parseFloat($(eEndHour).val().substring(0,2)) + (parseFloat($(eEndHour).val().substring(3,5))/60.0);
     endMinute = parseInt($(eEndHour).val().substring(3,5));
     startMinute = parseInt($(eStartHour).val().substring(3,5));
+
+    //		
+    eStartHour.setCustomValidity("");		
+    eEndHour.setCustomValidity("");
 
     // verifica se hora inicial é maior que hora final
     if (startHour > endHour) {
