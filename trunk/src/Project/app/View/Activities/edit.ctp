@@ -16,9 +16,9 @@
     }
 ?>
 <a href='../../index/<?php echo $id_projeto ?>' class="botao" alt="Cancelar"> Cancelar </a>             
-<h1>Editar Atividade</h1>
-<h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
-<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
+<h2>Editar Atividade</h2>
+<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
+<h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
 
         <?php  //provavelmente na view add, ou o equivalente para adicionar a pessoa
         echo $this->Form->create('Activities', array('action' => 'edit/'.$id.'/'.$id_projeto)); ?>
@@ -32,7 +32,7 @@
                 <?php echo $this->Form->input('Activity.consultant3_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 3: ', 'id'=>'actvID','class'=>'cosultant-atividade')); ?>
                 <?php echo $this->Form->input('Activity.consultant4_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 4: ', 'id'=>'actvID', 'class'=>'cosultant-atividade')); ?>
             </fieldset>
-            <fieldset id="Dados_projeto_pai">
+            <fieldset id="Dados_projeto_pai_2">
                 <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvStartHour', 'onblur' => 'checkHour()')); ?>
                 <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvEndHour', 'onblur' => 'checkHour()')); ?>
                 <?php echo $this->Form->input('Activity.date', array('type'=>'text','label' => 'Data <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required ' , 'id'=>'datepicker')); ?>

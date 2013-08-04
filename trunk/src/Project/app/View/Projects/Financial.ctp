@@ -1,6 +1,6 @@
 
-<h1>Centro de Custos</h1>
-<h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
+<h2>Centro de Custos</h2>
+<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
 
 <!--<h1 id="tituloprojeto">Projeto - <?php //echo $nome_projeto; ?> </h1>-->
 	<script language="JavaScript" type="text/javascript">

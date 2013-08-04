@@ -1,9 +1,9 @@
 
 
-<h1>Consultores Alocados </h1>
+<h2>Consultores Alocados </h2>
 <!--<h2 id="tituloprojeto">Projeto - <?php //echo $nome_projeto; ?> </h2>-->
 
-<h2>Projeto -  <?php echo $nameProject ?></h2>
+<h3>Projeto -  <?php echo $nameProject ?></h3>
 <div class="projectindex">
 	<input type="button" value="Alocar Consultor" id="bt-alocar-consultor"  onclick='listConsultores();' />
 	<table   class="zebra" cellpadding="0" cellspacing="0" id=" <?php echo $id_projeto; ?>">

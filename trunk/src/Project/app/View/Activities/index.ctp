@@ -178,7 +178,9 @@ header('Content-Type: text/html; charset=UTF-8');
 
 		});
 	</script>
-	<h1 id="titulo"><a id="titulolink" href="#" onClick="window.parent.$.fancybox.close();" alt="<?php echo $project['Project']['name'] ?>">Projeto - <?php echo $project['Project']['name'] ?></a></h1>
+	<?php echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add/'.$project['Project']['id']),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));?>
+	<h3 id="titulo"><a id="titulolink" href="#" onClick="window.parent.$.fancybox.close();" alt="<?php echo $project['Project']['name'] ?>">
+	Projeto - <?php echo $project['Project']['name'] ?></a></h3>
 	<table class="zebra" id="tabela_atividades" cellpadding="0" cellspacing="0">
 		<tr>
 
@@ -262,7 +264,5 @@ header('Content-Type: text/html; charset=UTF-8');
 	</table>
 <br>
 <br>
-<?php
-echo $this->Html->link("Cadastrar Atividade", array('action' => '../activities/add/'.$project['Project']['id']),array('class'=>'botao', 'id'=>'botao-cadastrar-atividade'));
 
-?>
+

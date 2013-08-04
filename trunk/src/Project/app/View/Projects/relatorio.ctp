@@ -1,5 +1,5 @@
 
-<h1>Relatório</h1>
+<h2>Relatório</h2>
 
 <table class="tabela-vazia zebra" cellpadding="0" cellspacing="0">
 

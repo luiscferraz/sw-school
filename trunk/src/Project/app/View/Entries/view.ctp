@@ -1,5 +1,6 @@
-<h1 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h1>
-<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
+<h2>Apontamentos</h2>
+<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
+<h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
 <!--<h2 id="tituloatividade">Atividade - <?php //echo $activity; ?></h2>-->
 
 	<?php 
@@ -13,25 +14,25 @@
 	echo '</span>';
 	}
 	?>
-</h1>
+<!--</h1>-->
 
 
 <div id="dados"> 
-	<h2 id="titulodados"> Informações </h2>
+	<h3 id="titulodados"> Informações </h3>
 	<p><span>Tipo consultoria: </span><?php echo $entries['Entry']['type_consulting']; ?></p>
 	<p><span>Tipo: </span><?php echo $entries['Entry']['type']; ?></p>
 	<p><span>Observações: </span><?php echo $entries['Entry']['observations']; ?></p>
 </div>
 
 <div id="dados">
-	<h2 id="titulodados">Horários</h2>
+	<h3 id="titulodados">Horários</h3>
 	<p><span>Horas trabalhadas: </span> <?php echo $entries['Entry']['hours_worked']; ?></p>
 	<p><span>Data: </span> <?php echo implode('-', array_reverse(explode('-', $entries['Entry']['date']))); ?></p>
 </div>
 
 
 <div id="dados"> 
-	<h2 id="titulodados"> Dados </h2>
+	<h3 id="titulodados"> Dados </h3>
 	<p><span>Consultor: </span><?php echo $nome_consultor_logado; ?></p>
 	<p><span>Atividade: </span><?php echo $nome_atividade; ?></p>
 </div>

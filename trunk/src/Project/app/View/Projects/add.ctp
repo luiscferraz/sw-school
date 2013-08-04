@@ -18,7 +18,7 @@
 
 
 
-    <h1>Cadastrar Projeto</h1>
+    <h2>Cadastrar Projeto</h2>
 
     <div id="conteudoAddProjeto">
         <?php echo $this->Form->create('Projects', array('action' => 'add')); ?>
