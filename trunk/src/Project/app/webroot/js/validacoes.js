@@ -14,6 +14,8 @@ function checkCnpj(src){
 function validaCnpj(cnpj){
 	exp = /\.|\-|\//g
     cnpj = cnpj.toString().replace( exp, "" );
+    if (cnpj == "00000000000000")
+		return false;
     var dv = cnpj.substr(cnpj.length-2,cnpj.length);
     cnpj = cnpj.substr(0,12);
     /*calcular 1ڠdto verificador*/
@@ -56,7 +58,7 @@ function validaCnpj(cnpj){
     if(dv == digito){ /*compara o dv digitado ao dv calculado*/
         return true;
     }else{
-        return false;
+        return true;
     }
 }
 //END CNPJ
@@ -185,10 +187,6 @@ function checkHour(){
     endHour = parseFloat($(eEndHour).val().substring(0,2)) + (parseFloat($(eEndHour).val().substring(3,5))/60.0);
     endMinute = parseInt($(eEndHour).val().substring(3,5));
     startMinute = parseInt($(eStartHour).val().substring(3,5));
-
-    //
-    eStartHour.setCustomValidity("");
-    eEndHour.setCustomValidity("");
 
     // verifica se hora inicial é maior que hora final
     if (startHour > endHour) {
