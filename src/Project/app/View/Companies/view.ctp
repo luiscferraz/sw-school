@@ -1,4 +1,4 @@
-<h1> Empresa - <?php echo $company['Company']['name']; ?>
+<h2> Empresa - <?php echo $company['Company']['name']; ?>
 
 <?php 
 	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
@@ -11,7 +11,7 @@
 	echo '</span>';
 	}
 	?>
-</h1>
+</h2>
 
 <div class="company view">
 	
@@ -76,7 +76,7 @@
 	</div>
 
 	<div class='dadosSponsor'>
-		<h2 class="tituloCompanyView">Sponsor</h2>
+		<h3 class="tituloCompanyView">Sponsor</h3>
 
 		<p><?php 
 			echo 'Nome: ';
@@ -101,7 +101,7 @@
 	</div>
 
 	<div class='dadosFinancial'>
-		<h2 class="tituloCompanyView">Financeiro</h2>
+		<h3 class="tituloCompanyView">Financeiro</h3>
 
 		<p><?php 
 			echo 'Nome: ';
@@ -126,7 +126,7 @@
 	</div>
 
 	<div class='dadosSepg'>
-		<h2 class="tituloCompanyView">SEPG</h2>
+		<h3 class="tituloCompanyView">SEPG</h3>
 		
 		<p><?php 
 			echo 'Nome: ';
@@ -148,7 +148,7 @@
 
 	
 	<div class='dadosDono'>
-		<h2 class="tituloCompanyView">Dono da Empresa</h2>
+		<h3 class="tituloCompanyView">Dono da Empresa</h3>
 		
 		<p><?php 
 			echo 'Nome: ';
@@ -171,7 +171,7 @@
 	</div>
 
 	<div class='dadosBancariosempresa'>
-		<h2 class="tituloCompanyView">Dados Bancários</h2>
+		<h3 class="tituloCompanyView">Dados Bancários</h3>
 		
 		<p><?php 
 			echo 'Nome do Banco: ';
@@ -192,7 +192,7 @@
 
 	
 	<div class='contatos'>
-		<h2 class="tituloCompanyView">Contato</h2>
+		<h3 class="tituloCompanyView">Contato</h3>
 		
 		<p><?php 
 			echo 'Nome: ';

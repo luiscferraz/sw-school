@@ -274,10 +274,10 @@ p span {
 }
 
 #bt-cadastrar{
-	 margin:-15px;
+	 margin:15px;
 	 float: right;
 	 padding:5px 5px;
-	 margin-right: 5px;
+	 margin-right: 50px;
 }
 
 #bt-cadastrar-projeto{
@@ -372,9 +372,10 @@ p span {
 	background-color: #bcdae0;
 }
 
+
 #enderecoAddConsultor{
 	padding-left: 20px;
-	padding-bottom:44px;
+	padding-bottom:66px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -384,9 +385,10 @@ p span {
 }
 
 #dados_bancarios_add_consultor{
+	margin-top: -247px;
 	padding-left: 20px;
 	padding-bottom: 70px;
-	margin-top:0px;
+	
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -408,6 +410,7 @@ p span {
 }
 
 
+
 /*========View=========*/
 
 #consultant{
@@ -422,17 +425,18 @@ p span {
 	background: #bcdae0;
 	padding-left: 8px;
 	margin-top: 20px;
-	width: 40%;
+	width: 37%;
 	margin-bottom: 50px;
 }
 
 #dadosBancarios {
-	float: right;
+	float: left;
 	background: #bcdae0;
 	padding-left: 8px;
 	margin-top: 20px;
-	width: 40%;
+	width: 37%;
 	margin-bottom: 50px;
+	margin-left: 200px;
 }
 
 #dados, #hora-view-atividades, #dados-view-atividades {
@@ -446,6 +450,13 @@ p span {
 
 #dados{
 	height: 398px;
+}
+
+@media only screen and(max-width:1200px){
+	#dados,#endereco,#dadosBancarios{
+		width: 320px;
+
+	}
 }
 
 #hora-view-atividades{
@@ -462,6 +473,8 @@ p span {
 }
 
 #usuario{
+
+	margin-right: 1px;
 	padding-left: 20px;
 	float: left;
 	border-width: 30px;
@@ -483,6 +496,24 @@ p span {
 	background-color: #bcdae0;
 
 }
+
+@media only screen and(max-width:1150px){
+	#enderecoAddConsultor, #dados_pessoais,#usuario,#dados_bancarios_add_consultor,#dados_pessoais_edit,#usuario_edit,#dados_bancarios_edit_consultor{
+		width: 390px;
+	}
+}
+
+@media only screen and(max-width:1100px){
+	#enderecoAddConsultor, #dados_pessoais,#usuario,#dados_bancarios_add_consultor,#dados_pessoais_edit,#usuario_edit,#dados_bancarios_edit_consultor{
+		width: 350px;
+	}
+}
+@media only screen and(max-width:950px){
+	#enderecoAddConsultor, #dados_pessoais,#usuario,#dados_bancarios_add_consultor,#dados_pessoais_edit,#usuario_edit,#dados_bancarios_edit_consultor{
+		width: 310px;
+	}
+}
+
 
 #campo_usuario{
 	width: 60%;
@@ -519,18 +550,20 @@ div.dadosEmpresa {
 	float: left;
 	width: 25%;
 	margin-left: 0%;
-	padding: 20px;
+	padding: 10px;
 	background-color: #bcdae0;
+	padding-bottom: 0px;
+	padding-top: 0px;
 }
 
 div.dadosEndereco {
 	margin-left: 30%;
 	width: 50%;
-	padding: 20px;
+	padding: 10px;
 	background-color: #bcdae0;
 }
 
-div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBancariosempresa, div.contatos {
+div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBancariosempresa, div.contatos {
 	margin-top: 33px;
 	margin-left: 18%;
 	width: 62%;
@@ -540,12 +573,29 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 	padding-left: 30px;
 	background-color: #bcdae0;
 }
+div.dadosSponsor{
+	margin-top: 70px;
+	margin-left: 18%;
+	width: 62%;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 10px;
+	padding-left: 30px;
+	background-color: #bcdae0;
 
-#integranteDefault,
+}
+
+#integranteDefault{
+	margin-left: 10%;
+	margin-top: 76px;
+	float: left;
+	position: absolute;
+
+}
 #integranteDefault2,
 #integranteDefault3 {
 	margin-left: 10%;
-	margin-top: 28px;
+	margin-top: 48px;
 	float: left;
 	position: absolute;
 }
@@ -586,7 +636,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 
 #dadosEmpresa{
 	padding-left: 20px;
-	padding-bottom:55px;
+	padding-bottom:30px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -595,16 +645,19 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 	background-color: #bcdae0;
 }
 
+
 #dadosEndereco{
 	padding-left: 20px;
 	padding-bottom:20px;
-	float: left;
+	float:left;
 	border-width: 30px;
 	width: 46%;
 	border: 30px;
 	border-color: #000;
 	background-color: #bcdae0;
+	margin-bottom: 0px;
 }
+
 
 #dadosSponsor{
 	margin-top: 0px;
@@ -617,12 +670,13 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 	background-color: #bcdae0;
 }
 
+
 #dadosFinanceiros{
 	padding-left: 20px;
 	padding-bottom:17px;
 	float: left;
 	border-width: 30px;
-	margin-top:-248px;
+	margin-top:-0px;
 	width: 46%;
 	border: 30px;
 	border-color: #000;
@@ -632,7 +686,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 #dadosSepg{
 	margin-top: 0px;
 	padding-left: 20px;
-	padding-bottom:15px;
+	padding-bottom:17px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -643,7 +697,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 }
 
 #dadosDono{
-	margin-top: -1px;
+	margin-top: -243px;
 	padding-left: 20px;
 	float: left;
 	border-width: 30px;
@@ -655,8 +709,9 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 }
 
 #dados_bancarios_add_empresa{
-	margin-top: 0px;
+	margin-top: -0px;
 	padding-left: 20px;
+	margin-right: 520px;
 	float: left;
 	border-width: 30px;
 	width: 46%;
@@ -666,30 +721,50 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 }
 
 #contato{
-	margin-top: 5px;
-	margin-right:14px;
-	padding-left: 20px;
-	padding-bottom:196px;
-	float: right;
+	padding-left:300px;
 	border-width: 30px;
-	width: 46%;
-	border: 30px;
-	border-color: #FFFFFF;
-	background-color: #bcdae0;
-}
-
-#contato2{
-	border-width: 30px;
-	margin-left:8px;
+	margin-left:3px;
 	padding-right:14px;
+	float:left;
+	width: 46%;
+	border: 30px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	border-color: #FFFFFF;
+	background-color: #bcdae0;
+}
+#contato2{
+	margin-top: -190px;
+	border-width: 30px;
+	margin-left:3px;
+	padding-left: 20px;
+	padding-right:14px;
+	float: left;
 	width: 46%;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
+	padding-bottom:196px;
 }
 
+@media only screen and(max-width:1150px){
+	#dadosEmpresa,#dadosEndereco,#dadosSponsor,#dadosFinanceiros,#dadosSepg,#dadosDono,#dados_bancarios_add_empresa,#contato,#contato2{
+		width: 390px;
+	}
+}
+
+@media only screen and(max-width:1100px){
+	#dadosEmpresa,#dadosEndereco,#dadosSponsor,#dadosFinanceiros,#dadosSepg,#dadosDono,#dados_bancarios_add_empresa,#contato,#contato2{
+		width: 350px;
+	}
+}
+@media only screen and(max-width:1000px){
+	#dadosEmpresa,#dadosEndereco,#dadosSponsor,#dadosFinanceiros,#dadosSepg,#dadosDono,#dados_bancarios_add_empresa,#contato,#contato2{
+		width: 310px;
+	}
+}
 #integranteDefault, #integranteDefault2, #integranteDefault3{
-	margin-left: 0%;
+	margin-left: -3%;
 }
 
 
@@ -952,7 +1027,7 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 	line-height: 25px;
 }
 
-#dadosProjeto, .despesasProjeto, #dadosDespesas{
+#dadosProjeto,.despesasProjeto, #dadosDespesas{
 	background-color: #bcdae0;
 	border-color: #bcdae0;
 	border: 0px;
@@ -960,6 +1035,18 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 	height: 390px;
 	padding-bottom: 3%;
 	float:left;
+}
+
+@media only screen and(max-width:1180px){
+	#dadosProjeto{
+		width: 320px;
+	}
+}
+
+@media only screen and(max-width:1130px){
+	#dadosProjeto{
+		width: 230px;
+	}
 }
 
 /*===========Despesas=============*/
@@ -1154,6 +1241,9 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 	padding-bottom: 30px;
 	margin-top: 20px;
 }
+
+
+
 
 #Dados_projeto_pai_2{
 	padding-left: 15px;
@@ -1387,3 +1477,8 @@ div.dadosSponsor, div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBan
 
 
 /* =============== FIM TABELAS ===============*/
+
+
+
+
+

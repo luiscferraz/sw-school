@@ -1,6 +1,6 @@
 <!--<h1 id="titulo">Atividade - <?php //echo $activities['Activity']['id']; ?> -->
-<h1 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h1>
-<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
+<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
+<h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
 <!--<h2 id="tituloatividade">Atividade - <?php //echo $nome_atividade; ?></h2>-->
 
 <?php 
@@ -15,11 +15,11 @@
 	}
 	?>
 	
-</h1>
+<!--</h1>-->
 
 
 <div id="dados-view-atividades"> 
-	<h2 id="titulodados"> Informações </h2>
+	<h3 id="titulodados"> Informações </h3>
 	<p><span>Descrição: </span><?php echo $activities['Activity']['description']; ?></p>
 	<p><span>Projeto: </span><?php echo $nome_projeto; ?></p>
 	<p><span>Status: </span><?php echo $activities['Activity']['status']; ?></p>
@@ -32,15 +32,15 @@
 </div>
 
 <div id="hora-view-atividades">
-	<h2 id="titulodados">Horários</h2>
+	<h3 id="titulodados">Horários</h3>
 	<p><span>Hora inicial: </span> <?php echo $activities['Activity']['start_hours']; ?></p>
 	<p><span>Hora final: </span> <?php echo $activities['Activity']['end_hours']; ?></p>
 	<p><span>Data: </span> <?php echo $activities['Activity']['date']; ?></p>
 </div>
 
-<h2 id="ApontamentosEmAtividades">
+<h3 id="ApontamentosEmAtividades">
 	Apontamentos 
-</h2>
+</h3>
 
 <div class="entry index">
 

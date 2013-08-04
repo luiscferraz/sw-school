@@ -1,7 +1,7 @@
 
 
 
-<h1 id="titulo">
+<h2 id="titulo">
 	Projeto - <?php echo $project['Project']['name']; ?> 
 	<?php 
 	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
@@ -14,11 +14,11 @@
 	echo '</span>';
 	}
 	?>
-</h1>
+</h2>
 
 <div> 
 	<fieldset id="dadosProjetoView">
-		<h2 id="titulodados"> Dados Projeto </h2>
+		<h3 id="titulodados"> Dados Projeto </h3>
 		<p><span>Sigla: </span> <?php echo $project['Project']['name']; ?></p>
 		<p><span>Descrição: </span><?php echo $project['Project']['description']; ?></p>	
 		<p><span>Projeto Pai: </span><?php echo $nameProjectFather; ?></p>
@@ -31,14 +31,14 @@
 	</fieldset>
 
 	<fieldset id="ViewhoraIndiv">
-		<h2 id="titulodados"> Hora Individual </h2>
+		<h3 id="titulodados"> Hora Individual </h3>
 		<p><span>Hora A: </span><?php echo $project['Project']['a_hours_individual']; ?>h</span></p>
 		<p><span>Hora B: </span><?php echo $project['Project']['b_hours_individual']; ?>h</p>
 		<p><span>Hora C: </span><?php echo $project['Project']['c_hours_individual']; ?>h</p>
 	</fieldset>
 
 	<fieldset id="ViewhoraGrupo">
-		<h2 id="titulodados"> Hora em grupo </h2>
+		<h3 id="titulodados"> Hora em grupo </h3>
 		<p><span>Hora A: </span><?php echo $project['Project']['a_hours_group']; ?>h</span></p>
 		<p><span>Hora B: </span><?php echo $project['Project']['b_hours_group']; ?>h</p>
 		<p><span>Hora C: </span><?php echo $project['Project']['c_hours_group']; ?>h</p>
@@ -49,7 +49,7 @@
 
 
 
-<h2 id="AtividadesEmProjetoPai">Atividades</h2>
+<h3 id="AtividadesEmProjetoPai">Atividades</h3>
 
 <div class="activity index">
 
@@ -93,7 +93,7 @@
 	
 </div>
 
-<h2 id="title-subproj-view">Sub-projetos </h2>
+<h3 id="title-subproj-view">Sub-projetos </h3>
 
 
 <div class="projectindex">

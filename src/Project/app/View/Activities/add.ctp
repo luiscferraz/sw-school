@@ -24,8 +24,8 @@
 	}
 ?>
 
-<h1>Cadastrar Atividade</h1>
-<h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
+<h2>Cadastrar Atividade</h2>
+<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
     <div id="content">
         <div class="conteudo">
         <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa

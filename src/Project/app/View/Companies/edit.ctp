@@ -1,5 +1,5 @@
 <a href="../../Companies/index/" class="botao" alt="Cancelar"> Cancelar</a> 
-<h1>Editar Empresa</h1>
+<h2>Editar Empresa</h2>
 
 <div class="companies form">
     <?php echo $this->Form->create('Company', array('action' => 'edit')); ?>
@@ -12,7 +12,7 @@
                 echo $this->Form->input('name', array('label' => 'Nome da empresa <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required'));
                 echo $this->Form->input('acronym', array('label' => 'Sigla <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required'));
                 echo $this->Form->input('fundation', array('label' => 'Data de Fundação: ', 'id'=> 'fundation', 'onblur' => 'checkDate(this)' , 'required'=>'required'));   
-                echo $this->Form->input('cnpj', array('label' => 'CNPJ <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id' => 'cnpj', 'onblur' => 'checkCnpj(this)'));	             
+                echo $this->Form->input('cnpj', array('label' => 'CNPJ <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id' => 'cnpj', 'onchange' => 'checkCnpj(this)'));	
                 echo $this->Form->input('phone1', array('label' => 'Telefone <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id' => 'phone1'));
                 echo $this->Form->input('phone2', array('label' => 'Telefone 2 (opcional):', 'id' => 'phone2'));
             ?>
@@ -28,7 +28,7 @@
                 echo $this->Form->input('Address.complement', array('label' => 'Complemento:'));
                 echo $this->Form->input('Address.neighborhood', array('label' => 'Bairro:', 'id' => 'neighborhood'));
                 echo $this->Form->input('Address.city', array('label' => 'Cidade:', 'id' => 'city'));
-                echo $this->Form->input('Address.state',array('options' => array("AC"=>"AC","AL"=>"AL","AP"=>"AP","AM"=>"AM","BA"=>"BA","CE"=>"CE","DF"=>"DF","ES"=>"ES","GO"=>"GO","MA"=>"MA","MG"=>"MG","MT"=>"MT","MS"=>"MS","PA"=>"PA","PB"=>"PB","PE"=>"PE","PI"=>"PI","PR"=>"PR","RJ"=>"RJ","RN"=>"RN","RO"=>"RO","RR"=>"RR","RS"=>"RS","SC"=>"SC","SE"=>"SE","SP"=>"SP","TO"=>"TO"),'type' => 'select', 'empty' => 'Selecione','label' => 'Estado: ', 'id' => 'state'));
+                echo $this->Form->input('Address.state',array('options' => array("AC"=>"AC","AL"=>"AL","AP"=>"AP","AM"=>"AM","BA"=>"BA","CE"=>"CE","DF"=>"DF","ES"=>"ES","GO"=>"GO","MA"=>"MA","MG"=>"MG","MT"=>"MT","MS"=>"MS","PA"=>"PA","PB"=>"PB","PE"=>"PE","PI"=>"PI","PR"=>"PR","RJ"=>"RJ","RN"=>"RN","RO"=>"RO","RR"=>"RR","RS"=>"RS","SC"=>"SC","SE"=>"SE","SP"=>"SP","TO"=>"TO"),'type' => 'select', 'empty' => 'Selecione','label' => 'Estado: ','style'=>'width: 260px', 'id' => 'state'));
                                 
             ?>
         </fieldset>

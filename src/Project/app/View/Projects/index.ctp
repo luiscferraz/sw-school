@@ -1,5 +1,5 @@
 ﻿
-<h1>Projetos</h1>
+<h2>Projetos</h2>
 
 <?php //só mostrar o botão cadastrar se for usuário admin
     if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){

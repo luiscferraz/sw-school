@@ -17,8 +17,8 @@
                         }
                     ?>
     <a href="../../Projects/index" class="botao" alt="Cancelar" onclick="parent.$.fancybox.close();"> Cancelar</a> 
-    <h1>Editar Projeto</h1>
-    <h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
+    <h2>Editar Projeto</h2>
+    <h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
 
     <div id="conteudoAddProjeto">
         <?php echo $this->Form->create('Projects', array('action' => 'edit')); ?>

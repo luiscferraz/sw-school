@@ -1,5 +1,5 @@
 <a href="../../Consultants/index" class="botao" alt="Cancelar"> Cancelar </a>
-<h1>Editar Consultor</h1>
+<h2>Editar Consultor</h2>
 
  <?php echo $this->Form->create('Consultant', array('action' => 'edit')); ?>
  <script language="JavaScript" type="text/javascript">
@@ -38,11 +38,11 @@ textinput.value = fileinput.value;
 					<?php echo $this->Form->input('Address.complement', array('label' => 'Complemento: ')); ?>
 					<?php echo $this->Form->input('Address.neighborhood', array('label' => 'Bairro: ','id'=>'neighborhood')); ?>
 					<?php echo $this->Form->input('Address.city', array('label' => 'Cidade: ', 'id'=>'city')); ?>
-					<?php echo $this->Form->input('Address.state', array('options' => array("AC"=>"AC","AL"=>"AL","AP"=>"AP","AM"=>"AM","BA"=>"BA","CE"=>"CE","DF"=>"DF","ES"=>"ES","GO"=>"GO","MA"=>"MA","MG"=>"MG","MT"=>"MT","MS"=>"MS","PA"=>"PA","PB"=>"PB","PE"=>"PE","PI"=>"PI","PR"=>"PR","RJ"=>"RJ","RN"=>"RN","RO"=>"RO","RR"=>"RR","RS"=>"RS","SC"=>"SC","SE"=>"SE","SP"=>"SP","TO"=>"TO"),'type' => 'select', 'empty' => 'Selecione','label' => 'Estado: ', 'id'=>'state')); ?>
+					<?php echo $this->Form->input('Address.state', array('options' => array("AC"=>"AC","AL"=>"AL","AP"=>"AP","AM"=>"AM","BA"=>"BA","CE"=>"CE","DF"=>"DF","ES"=>"ES","GO"=>"GO","MA"=>"MA","MG"=>"MG","MT"=>"MT","MS"=>"MS","PA"=>"PA","PB"=>"PB","PE"=>"PE","PI"=>"PI","PR"=>"PR","RJ"=>"RJ","RN"=>"RN","RO"=>"RO","RR"=>"RR","RS"=>"RS","SC"=>"SC","SE"=>"SE","SP"=>"SP","TO"=>"TO"),'type' => 'select', 'empty' => 'Selecione','label' => 'Estado: ','style'=>"width: 260px", 'id'=>'state')); ?>
 					
 			</fieldset>
 
-<fieldset id='usuario_edit'>
+			<fieldset id='usuario_edit'>
         			<legend>Usuário</legend>
 					<?php echo $this->Form->input('User.id', array('type' => 'hidden')); ?>
         			<?php echo $this->Form->input('User.username',array('label' => 'Usuário: ', 'id' => 'campo_usuario','required'=>'required')); ?>

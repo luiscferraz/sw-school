@@ -1,5 +1,5 @@
 
-<h1 id="titulo">Consultor - <?php echo $consultant['Consultant']['name']; ?> 
+<h2 id="titulo">Consultor - <?php echo $consultant['Consultant']['name']; ?> 
 <?php 
 	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
 	
@@ -11,10 +11,10 @@
 	echo '</span>';
 	}
 	?>
-</h1>
+</h2>
 
 <div id="dados"> 
-	<h2 id="titulodados"> Dados Pessoais </h2>
+	<h3 id="titulodados"> Dados Pessoais </h3>
 	<p><span>Nome: </span> <?php echo $consultant['Consultant']['name']; ?></p>
 	<p><span>CPF: </span><?php echo $consultant['Consultant']['cpf']; ?></p>
 	<p><span>Cor/Sigla: </span><spam id="colorview" style="background-color:<?php echo $consultant['Consultant']['acronym_color']; ?>"><?php echo $consultant['Consultant']['acronym']; ?></spam></p>
@@ -25,7 +25,7 @@
 
 
 <div id="endereco">
-	<h2 id="tituloendereco">Endereço</h2>
+	<h3 id="tituloendereco">Endereço</h3>
 	<p><span>Endereço: </span><?php echo $consultant['Address']['address']; ?></p>
 	<p><span>Número: </span><?php echo $consultant['Address']['number']; ?></p>
 	<p><span>Complemento: </span><?php echo $consultant['Address']['complement']; ?></p>
@@ -36,7 +36,7 @@
 </div>
 
 <div id="dadosBancarios">
-	<h2 id="titulodadosbancarios">Dados Bancários</h2>
+	<h3 id="titulodadosbancarios">Dados Bancários</h3>
 	<p><span>Nome do Banco: </span><?php echo $consultant['BankInfoConsultant']['name_bank']; ?></p>
 	<p><span>Número da Agência: </span><?php echo $consultant['BankInfoConsultant']['number_agency']; ?></p>
 	<p><span>Número da conta: </span><?php echo $consultant['BankInfoConsultant']['number_account']; ?></p>
@@ -49,7 +49,7 @@
 	<?php echo $this->Html->image('consultant.jpg')?>
 </div>
 
-<h2>Projetos</h2>
+<h3>Projetos</h3>
 
 <table id="tabela-projetos" cellpadding="0" cellspacing="0">
 		<tr>

@@ -15,9 +15,9 @@
     }
 ?>
                 
-<h1>Editar Atividade</h1>
-<h2 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h2>
-<h2 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h2>
+<h2>Editar Atividade</h2>
+<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
+<h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
 
         <?php  
         echo $this->Form->create('Activities', array('action' => 'edit2/'.$id.'/'.$id_projeto)); ?>
