@@ -71,7 +71,7 @@
 		?></p>
 	</div>
 
-	<div id='integranteDefault'>
+	<div id='integranteDefault' class="imagem">
 		<?php echo $this->Html->image('consultant-default.jpg')?>
 	</div>
 
@@ -96,7 +96,7 @@
 		?></p>
 	</div>
 
-	<div id='integranteDefault2'>
+	<div id='integranteDefault2' class="imagem">
 		<?php echo $this->Html->image('consultant-default.jpg')?>
 	</div>
 
@@ -121,7 +121,7 @@
 		?></p>
 	</div>
 
-	<div id='integranteDefault3'>
+	<div id='integranteDefault3' class="imagem">
 		<?php echo $this->Html->image('consultant-default.jpg')?>
 	</div>
 
