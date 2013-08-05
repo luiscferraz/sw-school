@@ -563,17 +563,18 @@ p span {
 
 div.dadosEmpresa {
 	float: left;
-	width: 25%;
+	width: 30%;
 	margin-left: 0%;
 	padding: 10px;
 	background-color: #bcdae0;
 	padding-bottom: 0px;
 	padding-top: 0px;
+	padding-left: 10px
 }
 
 div.dadosEndereco {
-	margin-left: 30%;
-	width: 50%;
+	margin-left: 33%;
+	width: 49%;
 	padding: 10px;
 	background-color: #bcdae0;
 }
@@ -589,7 +590,7 @@ div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBancariosempresa, div
 	background-color: #bcdae0;
 }
 div.dadosSponsor{
-	margin-top: 70px;
+	margin-top: 75px;
 	margin-left: 18%;
 	width: 62%;
 	padding-top: 1px;
@@ -597,31 +598,46 @@ div.dadosSponsor{
 	padding-right: 10px;
 	padding-left: 30px;
 	background-color: #bcdae0;
-
 }
-@media only screen and(max-width:910px){
-	#integranteDefault,#integranteDefault2,#integranteDefault3 {
-		display: none;
-	}
-	
 
-}
 
 #integranteDefault{
-	margin-left: 10%;
-	margin-top: 76px;
+	margin-left: -5%;
+	margin-top: 83px;
 	float: left;
 	position: absolute;
 
 }
 #integranteDefault2,
 #integranteDefault3 {
-	margin-left: 10%;
-	margin-top: 48px;
+	margin-left: -5%;
+	margin-top: 52px;
 	float: left;
 	position: absolute;
 }
+@media only screen and(max-width:926px){
+	div.dadosEmpresa {
+		position: left;
+		margin-left: 0px;
+		margin-bottom: 0px;
+		width: 63%;
+		padding: 10px;
+	}
+	div.dadosEndereco,div.dadosSponsor,div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBancariosempresa, div.contatos {
+		margin-top: 50px;
+		position: left;
+		margin-left: 0px;
+		margin-bottom: 30px;
+		width: 63%;
+		padding: 10px;
+	}
+}
+@media only screen and(max-width:926px){
+	#integranteDefault,#integranteDefault2,#integranteDefault3 {
+		display: none;
+	}
 
+}
 #botaoEditar{
 	 margin:-20px;
 	 float: right;
@@ -791,7 +807,7 @@ div.dadosSponsor{
 		width: 53%;
 		float: left;
 		margin-bottom: 10px;
-		margin-left: 115px;
+		margin-left: 0px;
 	}
 	#contato2,#dadosDono{
 		margin-top: 5px;
