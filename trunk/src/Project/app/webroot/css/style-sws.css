@@ -1214,7 +1214,7 @@ div.dadosSponsor{
 @media only screen and(max-width:590px){
 	#botoesGerenteConsultor{
 		height: 250px;
-		
+
 	}
 
 
@@ -1345,22 +1345,6 @@ div.dadosSponsor{
 	margin-top: 20px;
 }
 
-
-
-
-#Dados_projeto_pai_2{
-	padding-left: 15px;
-	border-width: 30px;
-	float: left;
-	width: 46%;
-	border: 30px;
-	border-color: #bcdae0;
-	background-color: #bcdae0;
-	margin-left: 450px;
-	padding-bottom: 30px;
-	margin-top: -465px;
-}
-
 #Dados_projeto_pai2{
 	padding-left: 15px;
 	border-width: 30px;
@@ -1387,6 +1371,7 @@ div.dadosSponsor{
 	margin-top: 20px;
 
 }
+
 #botao_salvar{
 	width: 70%;
 	border-color:transparent;
