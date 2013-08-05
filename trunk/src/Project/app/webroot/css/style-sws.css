@@ -1088,18 +1088,6 @@ div.dadosSponsor{
 	float:left;
 }
 
-@media only screen and(max-width:1180px){
-	#dadosProjeto{
-		width: 320px;
-	}
-}
-
-@media only screen and(max-width:1130px){
-	#dadosProjeto{
-		width: 230px;
-	}
-}
-
 /*===========Despesas=============*/
 
 .despesasProjeto{
@@ -1167,6 +1155,70 @@ div.dadosSponsor{
 	margin-left: 15px;
 }
 
+
+@media only screen and(max-width:1180px){
+	#dadosProjeto{
+		width: 320px;
+	}
+}
+
+@media only screen and(max-width:1130px){
+	#dadosProjeto{
+		width: 260px;
+	}
+}
+
+@media only screen and(max-width:900px){
+	#dadosProjeto{
+		background-color: #bcdae0;
+		border-color: #bcdae0;
+		border: 0px;
+		width: 60%;
+		height: 390px;
+		padding-bottom: 3%;
+		float:left;
+		margin-right: 200px;
+	}
+	#horaGrupo{
+		background-color: #bcdae0;
+		border-color: #bcdae0;
+		border: 0px;
+		width: 27%;
+		height: 25%;
+		float: left;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	#horaIndiv{
+		background-color: #bcdae0;
+		border-color: #bcdae0;
+		border: 0px;
+		width: 27%;
+		height: 25%;
+		float: left;
+		margin-right: -5px;
+		margin-left: 15px;
+	}
+
+	#botoesGerenteConsultor{
+		width: 60%;
+		height: 174px;
+		background-color: #bcdae0;
+		border-color: #bcdae0;
+		border: 0px;
+		float: left;
+		margin-left: 0px;
+	}
+
+}
+@media only screen and(max-width:590px){
+	#botoesGerenteConsultor{
+		height: 250px;
+		
+	}
+
+
+}
 .hora{
 	width: 40%;
 }
