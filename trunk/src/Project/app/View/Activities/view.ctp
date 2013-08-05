@@ -7,10 +7,10 @@
 	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
 	
 	echo '<span class="icon-action">';
-	echo $this->Html->link($this->Html->image("delete.png", array("alt" => "Deletar")),array('action' => 'delete', $activities['Activity']['id'],$activities['Activity']['project_id']),array('escape'=>false),"Você quer excluir realmente ?");
+	echo $this->Html->link($this->Html->image("delete.png", array("alt" => "Deletar", 'title' => 'Excluir')),array('action' => 'delete', $activities['Activity']['id'],$activities['Activity']['project_id']),array('escape'=>false),"Você quer excluir realmente ?");
 	echo '</span>';
 	echo '<span class="icon-action">'; 
-	echo $this->Html->link($this->Html->image("edit.png", array("alt" => "Editar")),array('action' => 'edit', $activities['Activity']['id'], $activities['Activity']['project_id']),array('escape'=>false));
+	echo $this->Html->link($this->Html->image("edit.png", array("alt" => "Editar", 'title' => 'Editar')),array('action' => 'edit', $activities['Activity']['id'], $activities['Activity']['project_id']),array('escape'=>false));
 	echo '</span>';
 	}
 	?>

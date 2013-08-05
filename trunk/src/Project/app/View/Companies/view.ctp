@@ -4,10 +4,10 @@
 	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
 	
 	echo '<span class="icon-action">';
-	echo $this->Html->link($this->Html->image("delete.png", array("alt" => "Deletar")),array('action' => 'delete', $company['Company']['id']),array('escape'=>false),"Você quer excluir realmente ?");
+	echo $this->Html->link($this->Html->image("delete.png", array("alt" => "Deletar", 'title' => 'Excluir')),array('action' => 'delete', $company['Company']['id']),array('escape'=>false),"Você quer excluir realmente ?");
 	echo '</span>';
 	echo '<span class="icon-action">'; 
-	echo $this->Html->link($this->Html->image("edit.png", array("alt" => "Editar")),'edit/'.$company['Company']['id'],array('escape'=>false));
+	echo $this->Html->link($this->Html->image("edit.png", array("alt" => "Editar", 'title' => 'Editar')),'edit/'.$company['Company']['id'],array('escape'=>false));
 	echo '</span>';
 	}
 	?>
