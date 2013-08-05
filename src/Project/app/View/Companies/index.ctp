@@ -35,18 +35,18 @@
 			<div>
 				<td class="actions">
 					<?php echo $this->Html->link(
-					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $company['Company']['id']), array('escape'=>false, 'id'=>'link'))?>
+					$this->Html->image("view.png", array('alt' => 'Ver', 'title' => 'Visualizar')), array('action' => 'view', $company['Company']['id']), array('escape'=>false, 'id'=>'link'))?>
 					
 					<?php 
 					if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-						echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $company['Company']['id']),
+						echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar', 'title' => 'Editar')), array('action' => 'edit', $company['Company']['id']),
 					array('escape'=>false, 'id'=>'link'));
 					}
 					?>
 
 					<?php 
 					if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){ 
-						echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $company['Company']['id']),
+						echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover', 'title' => 'Excluir')), array('action' => 'delete', $company['Company']['id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da empresa ". $company['Company']['name'] . "?");
 					}
 					?></td>
