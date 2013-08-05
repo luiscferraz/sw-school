@@ -599,6 +599,13 @@ div.dadosSponsor{
 	background-color: #bcdae0;
 
 }
+@media only screen and(max-width:910px){
+	#integranteDefault,#integranteDefault2,#integranteDefault3 {
+		display: none;
+	}
+	
+
+}
 
 #integranteDefault{
 	margin-left: 10%;
@@ -739,7 +746,7 @@ div.dadosSponsor{
 	padding-left:300px;
 	border-width: 30px;
 	margin-left:3px;
-	padding-right:14px;
+	padding-right:10px;
 	float:left;
 	width: 46%;
 	border: 30px;
@@ -752,7 +759,7 @@ div.dadosSponsor{
 	margin-top: -190px;
 	border-width: 30px;
 	margin-left:3px;
-	padding-left: 20px;
+	padding-left: 18px;
 	padding-right:14px;
 	float: left;
 	width: 46%;
@@ -778,6 +785,19 @@ div.dadosSponsor{
 		width: 310px;
 	}
 }
+
+@media only screen and(max-width:950px){
+	#dadosEmpresa,#dadosEndereco,#dadosSponsor,#dadosFinanceiros,#dadosSepg,#dadosDono,#dados_bancarios_add_empresa,#contato,#contato2{
+		width: 53%;
+		float: left;
+		margin-bottom: 10px;
+		margin-left: 115px;
+	}
+	#contato2,#dadosDono{
+		margin-top: 5px;
+	}
+}
+
 #integranteDefault, #integranteDefault2, #integranteDefault3{
 	margin-left: -3%;
 }
