@@ -459,6 +459,15 @@ p span {
 	}
 }
 
+@media only screen and(max-width:1100px){
+	#endereco{
+		margin-left: 200px;
+		margin-bottom: 20px;
+		float: left;
+
+	}
+}
+
 #hora-view-atividades{
 	width: 20% !important;
 	margin-left: 20px !important;
@@ -499,21 +508,27 @@ p span {
 
 @media only screen and(max-width:1150px){
 	#enderecoAddConsultor, #dados_pessoais,#usuario,#dados_bancarios_add_consultor,#dados_pessoais_edit,#usuario_edit,#dados_bancarios_edit_consultor{
-		width: 390px;
+		width: 370px;
 	}
 }
 
-@media only screen and(max-width:1100px){
+@media only screen and(max-width:1050px){
 	#enderecoAddConsultor, #dados_pessoais,#usuario,#dados_bancarios_add_consultor,#dados_pessoais_edit,#usuario_edit,#dados_bancarios_edit_consultor{
-		width: 350px;
-	}
-}
-@media only screen and(max-width:950px){
-	#enderecoAddConsultor, #dados_pessoais,#usuario,#dados_bancarios_add_consultor,#dados_pessoais_edit,#usuario_edit,#dados_bancarios_edit_consultor{
-		width: 310px;
+		width: 290px;
 	}
 }
 
+
+@media only screen and(max-width:1050px){
+	#dados_bancarios_add_consultor,#dados_bancarios_edit_consultor{
+		
+		float: left;
+		margin-top: 10px;
+		
+
+		
+	}
+}
 
 #campo_usuario{
 	width: 60%;
