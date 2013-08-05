@@ -45,18 +45,18 @@
 			<div>
 				<td class="actions">
 					<?php echo $this->Html->link(
-					$this->Html->image("view.png", array('alt' => 'Ver')), array('action' => 'view', $entry['Entry']['id']), array('escape'=>false, 'id'=>'link'))?>
+					$this->Html->image("view.png", array('alt' => 'Ver', 'title' => 'Visualizar')), array('action' => 'view', $entry['Entry']['id']), array('escape'=>false, 'id'=>'link'))?>
 
 					<?php 
 					if ((in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) or ($id_consultor_logado === $entry['Entry']['consultant_id'])){
-					echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar')), array('action' => 'edit', $entry['Entry']['id'],$entry['Entry']['activity_id']),
+					echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar', 'title' => 'Editar')), array('action' => 'edit', $entry['Entry']['id'],$entry['Entry']['activity_id']),
 					array('escape'=>false, 'id'=>'link'));
 					}
 					?>
 
 					<?php 
 					if ((in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) or ($id_consultor_logado === $entry['Entry']['consultant_id'])){
-					echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover')), array('action' => 'delete', $entry['Entry']['id'],$entry['Entry']['activity_id']),
+					echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover', 'title' => 'Excluir')), array('action' => 'delete', $entry['Entry']['id'],$entry['Entry']['activity_id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do apontamento?");
 					}
 					?></td>
@@ -66,7 +66,7 @@
 				if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) {
 						 if ($entry['Entry']['approved'] == 0) {
 						echo $this->Html->link(
-					$this->Html->image("okay.png", array('alt' => 'Aprovar')), array('action' => 'approve', $entry['Entry']['id']),
+					$this->Html->image("okay.png", array('alt' => 'Aprovar', 'title' => 'Aprovar')), array('action' => 'approve', $entry['Entry']['id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar aprovar apontamento?");
 						}else {
 						echo 'Aprovado';
