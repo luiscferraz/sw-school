@@ -80,19 +80,28 @@
 		</fieldset>
 
 		<fieldset id="dados_bancarios_add_empresa">
-					<legend class="legenda">Dados Bancários</legend>
+                    <legend class="legenda">Dados Bancários</legend>
 
-						<?php 
-						echo $this->Form->input('BankInfoCompany.id', array('type' => 'hidden')); 
-						
-						echo $this->Form->input('BankInfoCompany.name_bank', array('label' => 'Nome do Banco: ', 'id'=>'BankInfoCompany.name_bank')); 
-				
-						echo $this->Form->input('BankInfoCompany.number_agency', array('label' => 'Número da Agência: ', 'id'=>'BankInfoCompany.number_agency')); 
+                        <?php 
 
-						echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoCompany.number_account'));
-						?>
-											
-				</fieldset>
+                        echo $this->Form->input('BankInfoCompany.id', array('type' => 'hidden')); 
+                        
+                        echo $this->Form->input('BankInfoCompany.name_bank', array('label' => 'Nome do Banco: ', 'id'=>'BankInfoCompany.name_bank')); 
+                
+                        echo $this->Form->input('BankInfoCompany.number_agency', array('label' => 'Número da Agência: ', 'id'=>'BankInfoCompany.number_agency')); 
+
+if (empty($company['BankInfoCompany']['id'])) {
+
+    echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoCompany.number_account', 'onblur'=>'checkConta(this, document.getElementById("BankInfoCompany.number_agency"), 0)'));
+}
+ 
+else {
+    echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoCompany.number_account', 'onblur'=>'checkConta(this, document.getElementById("BankInfoCompany.number_agency"), '.$company['BankInfoCompany']['id'].')'));
+                        
+}                  
+  ?>
+                                            
+        </fieldset>
 
 		<fieldset id="contato">
 			<legend class="legenda">Contatos</legend>

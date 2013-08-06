@@ -14,7 +14,7 @@ class CompaniesController extends AppController {
 	}
 	
 	public function add(){
-		$this->set('title_for_layout', 'Empresas');
+		
 		$this -> layout = 'basemodalint';
 		if($this->request->is('post')){
 			if($this->Company->saveAll($this->request->data)){
@@ -30,12 +30,14 @@ class CompaniesController extends AppController {
 		}
 		
 	}
+	
 	public function edit($id = NULL){
-		$this->set('title_for_layout', 'Empresas');
 
 		$this->layout = 'base';
 
 		$this->Company->id = $id;
+
+
 
 		if (!$id) {
 			throw new NotFoundException(__('Invalid post'));
@@ -48,6 +50,7 @@ class CompaniesController extends AppController {
 		}
 
 		if ($this->request->is('get')) {
+		$this->set('company', $this->Company->read());
 			$this->request->data = $this->Company->read();
 			}
 			else {
@@ -86,6 +89,34 @@ class CompaniesController extends AppController {
 		$this -> layout = 'index';
 		$this->set('companies', $this->Company->find('all', array('conditions'=> array('Company.removed !=' => 1))));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));				
+	}
+
+
+	public function ajaxMsg($agencia=null, $conta=null, $id=null){
+   		$this->layout='ajax';
+
+
+   		if ($id <0){
+   			$achouConta  =  $this -> Company -> query ("SELECT * FROM companies_bank_infos WHERE number_account = '".$conta."' and number_agency = '".$agencia."'");
+			if (empty($achouConta)){
+				$this->set('mensagem','false');
+   			} 
+   			else {
+				$this->set('mensagem','true');
+			}
+   		}
+   		else{
+   			$achouConta = $this-> Company->query("SELECT * FROM companies_bank_infos WHERE number_account = '".$conta."' and number_agency = '".$agencia."' and id <> '".$id."'");
+   			if (empty($achouConta)){
+   				$this->set('mensagem', 'false');
+
+   			}
+   			else{
+   				$this->set('mensagem','true');
+   			}
+   		}
+
+
 	}
 
 }
