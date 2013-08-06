@@ -19,10 +19,10 @@ textinput.value = fileinput.value;
 			<fieldset id="dados_pessoais_edit">
 				<legend class="legenda">Dados Pessoais</legend>
 					<?php echo $this->Form->input('Consultant.id', array('type' => 'hidden')); ?>
-					<?php echo $this->Form->input('Consultant.name', array('label' => 'Nome: ','placeholder'=>'', 'id'=>'name')); ?>
+					<?php echo $this->Form->input('Consultant.name', array('label' => 'Nome <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ','required'=>'required','placeholder'=>'', 'id'=>'name')); ?>
 					<?php echo $this->Form->input('Consultant.cpf', array('label' => 'CPF <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ','required'=>'required','placeholder'=>'', 'id'=>'cpf','div'=>'div_cpf','onblur'=>'checkCPF(this)')); ?>
 					<?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym')); ?>
-					<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor: ', 'id'=>'acronym_color')); ?>
+					<?php echo $this->Form->input('Consultant.acronym_color', array('type'=> 'text','label' => 'Cor <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'id'=>'acronym_color')); ?>
 						<?php echo $this->Form->input('Consultant.phone1', array('label' => 'Telefone <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required' )); ?>
 					<?php echo $this->Form->input('Consultant.phone2', array('label' => 'Celular <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required')); ?>
 					<?php echo $this->Form->input('Consultant.email', array('type' => 'email','label' => 'E-mail <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required', 'id'=>'email')); ?>					
@@ -45,11 +45,11 @@ textinput.value = fileinput.value;
 			<fieldset id='usuario_edit'>
         			<legend>Usuário</legend>
 					<?php echo $this->Form->input('User.id', array('type' => 'hidden')); ?>
-        			<?php echo $this->Form->input('User.username',array('label' => 'Usuário: ', 'id' => 'campo_usuario','required'=>'required')); ?>
+        			<?php echo $this->Form->input('User.username',array('label' => 'Usuário <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'id' => 'campo_usuario','required'=>'required')); ?>
         			<p></p>
-        			<?php echo $this->Form->input('User.password', array('label' => 'Senha: ', 'id' => 'senha','required'=>'required')); ?>
+        			<?php echo $this->Form->input('User.password', array('label' => 'Senha <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'id' => 'senha','required'=>'required')); ?>
         			<p></p>
-        			<?php echo $this->Form->input('User.type', array('label' => 'Usuário: ','required'=>'required', 'empty' => 'Selecione', 'id' => 'tipousuario',
+        			<?php echo $this->Form->input('User.type', array('label' => 'Tipo de Usuário <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ','required'=>'required', 'empty' => 'Selecione', 'id' => 'tipousuario',
             		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
  
  	 
