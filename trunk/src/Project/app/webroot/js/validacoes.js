@@ -56,9 +56,9 @@ function validaCnpj(cnpj){
     }
     var digito = dv1+""+dv2;
     if(dv == digito){ /*compara o dv digitado ao dv calculado*/
-        return false;
-    }else{
         return true;
+    }else{
+        return false;
     }
 }
 //END CNPJ
