@@ -1,3 +1,4 @@
+<a href="../../Companies/index/" class="botao" alt="Voltar"> Voltar</a> 
 <h2> Empresa - <?php echo $company['Company']['name']; ?>
 
 <?php 

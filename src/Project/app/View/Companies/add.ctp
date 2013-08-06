@@ -1,3 +1,4 @@
+<a href="../../Companies/index/" class="botao" alt="Cancelar"> Cancelar</a> 
 <h2>Cadastrar Empresa</h2>
 
 <div class="companiesForm">
