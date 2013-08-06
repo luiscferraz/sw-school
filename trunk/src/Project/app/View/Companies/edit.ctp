@@ -90,15 +90,8 @@
                 
                         echo $this->Form->input('BankInfoCompany.number_agency', array('label' => 'Número da Agência: ', 'id'=>'BankInfoCompany.number_agency')); 
 
-if (empty($company['BankInfoCompany']['id'])) {
-
-    echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoCompany.number_account', 'onblur'=>'checkConta(this, document.getElementById("BankInfoCompany.number_agency"), 0)'));
-}
- 
-else {
-    echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoCompany.number_account', 'onblur'=>'checkConta(this, document.getElementById("BankInfoCompany.number_agency"), '.$company['BankInfoCompany']['id'].')'));
-                        
-}                  
+						echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoCompany.number_account')); 
+                  
   ?>
                                             
         </fieldset>

@@ -13,23 +13,22 @@ class CompaniesController extends AppController {
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));				
 	}
 	
-	public function add(){
-		
-		$this -> layout = 'basemodalint';
-		if($this->request->is('post')){
-			if($this->Company->saveAll($this->request->data)){
-				$this->Session->setFlash($this->flashSuccess('Empresa cadastrada com sucesso!'));
-				$this->redirect(array('action' => 'index'));
-			}
-			else{
-				$this->Session->setFlash($this->flashError('Erro ao cadastrar empresa!'));
-			}
-		}
-		else{			
-			$this->Session->setFlash($this->Session->setFlash($this->flashError('A empresa não foi cadastrada. Tente novamente!')));			
-		}
-		
-	}
+	public function add()
+  {
+    $this->set('title_for_layout', 'Empresas');
+    $this -> layout = 'basemodalint';
+    if($this->request->is('post'))
+    {
+      if ($this->verific($this->request->data)) {
+ 	
+        if($this->Company->saveAll($this->request->data))
+        {
+          $this->Session->setFlash($this->flashSuccess('A empresa foi adicionado.'));
+          $this->redirect(array('action' => 'index'));
+        }
+      } 
+    }
+  }
 	
 	public function edit($id = NULL){
 
@@ -50,17 +49,18 @@ class CompaniesController extends AppController {
 		}
 
 		if ($this->request->is('get')) {
-		$this->set('company', $this->Company->read());
 			$this->request->data = $this->Company->read();
 			}
 			else {
 				$this->Company->id = $id;
-
+				if ($this->verific2($this->request->data)) {
 				if ($this->Company->saveAll($this->request->data)) {
 					$this->Session->setFlash($this->flashSuccess('Empresa atualizada!'));
 					$this->redirect(array('action' => 'index'));
 					}
 				}
+				}
+				
 	}
 
 	
@@ -119,6 +119,41 @@ class CompaniesController extends AppController {
 
 	}
 
+   public function verific($data){
+      $ctr = 0;
+      $erro ='';
+      //Verificar se já existe Conta.
+     
+	  $achouConta  =  $this -> Company -> query ("SELECT * FROM companies_bank_infos WHERE number_account = '".$data['BankInfoCompany']['number_account']."' and number_agency = '".$data['BankInfoCompany']['number_agency']."'");
+      if (empty($achouConta)){} else { $ctr++; $erro = $erro . 'Esta conta nesta agência já existe no sistema.';};
+	  
+	  if ($ctr > 0) {
+        $this -> Session -> setFlash ($this -> flashError ($erro));
+        return false;
+      }
+      else {
+        return true;
+      }
+   }
+	
+  public function verific2($data){
+      $ctr = 0;
+      $erro ='';
+      //Verificar se já existe Conta.
+      
+	  $achouConta  =  $this -> Company -> query ("SELECT * FROM companies_bank_infos WHERE id <> '". $data['BankInfoCompany']['id']."' and number_account = '".$data['BankInfoCompany']['number_account']."' and number_agency = '".$data['BankInfoCompany']['number_agency']."'");
+      if (empty($achouConta)){} else { $ctr++; $erro = $erro . 'Esta conta nesta agência já existe no sistema.';};
+	  
+	  if ($ctr > 0) {
+        $this -> Session -> setFlash ($this -> flashError ($erro));
+        return false;
+      }
+      else {
+        return true;
+      }
+   }
+	
+	
 }
 
 
