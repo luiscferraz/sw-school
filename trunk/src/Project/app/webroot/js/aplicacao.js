@@ -192,6 +192,33 @@ function checkConta(src1, src2, src3){
 	
 };
 
+function validaConta(src1, src2,src3){
+	
+	conta = src1;
+	agencia = src2;
+	var conta1 = $(conta).val();
+	var agencia1 = $(agencia).val();
+
+	if (src3 > -1){
+		var funcao = "../";	
+	}else{
+		var funcao = "";
+	}
+	
+	
+	$.get(funcao+"testeConta/"+agencia1+"/"+conta1+"/"+src3,null,
+		function(data) {   
+			if(data == 'true'){
+				conta.setCustomValidity("Esta conta nesta agência já existe no sistema");
+			}
+			else {
+				conta.setCustomValidity("");
+			}
+	});	
+	
+};
+
+
 
 //Somar horas do projeto
 function SomarHorasProjeto(){

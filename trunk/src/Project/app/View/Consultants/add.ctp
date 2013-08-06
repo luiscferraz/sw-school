@@ -66,7 +66,7 @@ textinput.value = fileinput.value;
 				
 						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ' , 'id'=>'BankInfoConsultant.number_agency')); ?>
 
-						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ',  'id'=>'BankInfoConsultant.number_account')); ?>
+						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoConsultant.number_account', 'onblur'=>'validaConta(this, document.getElementById("BankInfoConsultant.number_agency"),-1)')); ?>
 											
 				</fieldset>
 
