@@ -1,0 +1,254 @@
+/* ===============ESTILOS GERAIS=============*/
+
+*{
+	font-family: Verdana !important;
+}
+
+h1 {
+	clear:both;
+    color: #688f90 !important; 
+    font-size: 30px;
+    font-family: helvetica !important;
+    padding:10px 0px 10px 0px;
+    font-weight: bold;
+    margin-top: -85px;
+    margin-bottom: 40px;
+	margin-right: 95px;
+	margin-left: 7%;
+    border-bottom: 9px double #688f90;
+}
+
+h2 {
+    color: gray; 
+    font-family: arial;
+    font-size: 18px;
+    font-style:italic;
+	padding-top: 14px;
+    padding-bottom: 10px;
+    margin-top: -6.5%;
+	margin-right: 7%;
+	margin-bottom: 2%;
+	float: right;
+}
+
+body {
+	margin:0px;
+	padding:0px;
+    font-family: Verdana;
+    background-image:url(../img/light_noise_diagonal.png);
+    line-height: 24px; 
+}
+
+
+/* ==================MENU PRINCIPAL===============*/
+
+
+#Menu_Home{
+	margin-top: -155px;
+	z-index:99999;
+    background-color: #010101;
+    width:500px;
+	opacity:0.85;
+	/*alterado*/
+	padding:10px 0px 10px 0px;
+    margin-left: -500px;
+	position:fixed;
+    height: 100%;
+    border:2px solid #010101;
+	/*end*/
+}
+#Menu_Home ul  {
+	margin-top:10px;
+	margin-left:170px;
+	padding-left:0px;
+}
+#Menu_Home ul li{
+	list-style:none;
+	color:#FFF;
+	opacity:1;
+}
+#Menu_Home ul li a{
+	text-decoration:none;
+	opacity:1 !important;
+	color:#000;
+	display:block;
+	padding:15px 0px 15px 100px;
+	margin-top:10px;
+	font-size:26px;
+	color:#FFF;
+	
+}
+#Menu_Home ul li a:hover {
+	background-color:#1fa0b7;
+}
+
+#botao_home {
+	color:#1fa0b7;
+	margin-left:-10px;
+	text-decoration:none;
+	font-size:40px;
+	width:530px;
+	background-color: #010101;
+	display:block;
+	padding:10px 10px 10px 20px;
+	border-radius: 0px 22px 22px 0px ;
+	-webkit-border-radius: 0px 22px 22px 0px ;
+	-moz-border-radius: 0px 22px 22px 0px ;
+	line-height: 50px;
+	padding-left:40px;
+	padding-bottom: 10px;
+}
+#botao_home_img{
+	margin-left:45px;
+	margin-bottom:15px;
+	margin-top: 5px;
+}
+
+#logoSw{
+	margin-left:230px;
+	margin-top: 5px;
+}
+
+
+/* ==================BOTÃO CADASTRAR ATIVIDADE===============*/
+#botao-cadastrar-atividade{
+        float: right;
+        padding:10px 5px;
+        margin: -4px;
+    }
+
+.botao, #botaoRestaurar{
+	 text-decoration:none;
+	 display: inline-block;
+ 	 padding: 15px 15px;
+  	 font:normal 14px/1.1em arial;
+  	 border:1px solid #d0d0d0;
+  	 border-top-color:#ececec;
+  	 border-bottom-color:#909090;
+  	 color:#333;
+  	 background:#ffff00;
+  	 background: -moz-linear-gradient(top, #fff 60%, #e7e7e7);
+  	 background: -webkit-linear-gradient(top, #fff 60%, #e7e7e7);
+	 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e7e7e7');
+  	 -moz-border-radius: 10px;
+  	 -webkit-border-radius: 10px;
+  	 -khtml-border-radius: 10px;
+  	 border-radius: 10px;
+  	 -moz-box-shadow: 0 2px 3px rgba(0,0,0,.2);
+  	 -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.2);
+}
+
+
+/* ==================BOTÃO APLICAR DATA===============*/
+
+#botao-aplicar-data, #botao-hoje-data{
+	margin: 0px;
+    float: left;
+    padding:10px 10px;
+	margin-left: 2%;
+	cursor : pointer;
+
+}
+
+#data-final-agenda {
+	border-radius: 4px 4px 4px 4px;
+	margin:3px;
+    float: left;
+    padding:10px 5px;
+	margin-left: 100px;
+
+}
+
+#data-agenda {
+	border-radius: 4px 4px 4px 4px;
+	/*margin:0px 0px 0px 7%;*/
+	margin-left: 7%;
+	padding:10px 12px;
+	width: 16%;
+    float: left;
+	text-align: center;
+}
+
+
+/* ==================BOTÃO PESQUISAR CONSULTOR===============*/	
+#botao-pesquisar-consultor{
+		cursor: pointer;
+        margin-right: 7%;
+        float: right;
+        padding:10px 5px;
+    }
+	
+/*label{
+	margin-left: 100px;
+
+}*/
+
+/*   Agenda */
+
+
+#calendar{
+	margin: 7%;
+	margin-top: 2% !important;
+	margin-bottom: 0px;
+}
+
+#calendar_selection{
+	margin-left: 10%;
+	margin-top: -2%;
+}
+
+#tabela_agenda{
+	float: center;
+}
+
+#div_tabela_agenda{
+margin:0px 7% 0px 15%; 
+overflow-x:scroll;
+left: 50%;
+}
+
+#div_tabela_projetos{
+margin:0px 0px 0px 7%; 
+}
+
+#tabela{
+	width: 10%;
+}
+ 
+.tabelaEditavel .celulaEmEdicao {
+    padding: 0;
+}
+ 
+.tabelaEditavel .celulaEmEdicao input[type=text]{
+    width:100%;
+    border:0;
+    background-color:rgb(255,253,210); 
+}
+
+#tdTurnos {
+	font-family: Courier !important;
+
+}
+
+#logoSW {
+	margin-left: 9%;
+	margin-bottom: 2.8%
+}
+
+#logoAgenda {
+	margin-top: 3%;
+	margin-left: -2%;
+	margin-bottom: 2%
+}
+
+.zebra {
+	border-spacing: 0px;
+	border-collapse: 0px;
+	border: 2px solid #655d5d;
+}
+
+td {
+	text-align: center;
+    border: 1px solid #808080;
+    
+}

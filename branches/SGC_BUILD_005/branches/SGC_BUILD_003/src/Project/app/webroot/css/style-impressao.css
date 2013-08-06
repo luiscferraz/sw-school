@@ -1,0 +1,61 @@
+body{
+  -webkit-print-color-adjust:exact;
+
+}
+
+table {
+	margin: 0px;
+	border:1px solid #000;
+}
+th {
+	font-size: 10px;
+}
+
+.conteudo {
+position: relative;
+width: 100%;
+left: 0%;
+margin-left: 0%;
+padding-bottom: 0px;
+margin-top: 0px;
+}
+.none {
+	display: none;
+}
+
+#botao_home, #Menu_Home { 
+	display : none 
+}
+
+.bordaTabela{
+	border:none;
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+	box-sizing: border-box ;
+}
+
+#cor_consultoria, #cor_horaGrupo, #cor_horaInd{
+	background-color: #191970;
+	color: #fff;
+}
+
+#nome_relatorio{
+	border-bottom:0px solid !important;
+}
+
+#cor_header, #cor_footer{
+	background: #93DB70;
+}
+
+#cor_horas_real{
+	background: #ccc;
+}
+
+.tabela_relatorio td{
+	background-color: #fff;
+	font-size: 10px;
+}
+
+#gerar_pdf{
+	display : none 
+}
