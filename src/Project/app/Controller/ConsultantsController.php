@@ -85,6 +85,7 @@
 	        throw new NotFoundException(__('Invalid post'));
 	    }
 		if ($this->request->is('get')) {
+    $this -> set('consultant', $this->Consultant->read());
 			$this->request->data = $this->Consultant->read();
 		} 
 		else {
@@ -231,6 +232,33 @@ else
    			$this->set('mensagem','true');
    		}
    }
+
+   public function testeConta($agencia = null,  $conta = null, $id = null){
+    $this->layout='ajax';
+
+      if ($id < 0){
+        $achouConta  =  $this -> Consultant -> query ("SELECT * FROM consultants_bank_infos WHERE number_account = '".$conta."' and number_agency = '".$agencia."'");
+        if (empty($achouConta)){
+        $this->set('mensagem','false');
+        } 
+        else {
+        $this->set('mensagem','true');
+
+        }
+      }
+      else{
+
+        $achouConta  =  $this -> Consultant -> query ("SELECT * FROM consultants_bank_infos WHERE number_account = '".$conta."' and number_agency = '".$agencia."' and id <> '".$id."'");
+        
+        if (empty($achouConta)){
+        $this->set('mensagem','false');
+        } 
+        else {
+        $this->set('mensagem','true');
+      }
+    }
+  }
+}
  	
- }
+
 ?>
