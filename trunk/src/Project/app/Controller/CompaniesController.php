@@ -14,7 +14,7 @@ class CompaniesController extends AppController {
 	}
 	
 	public function add(){
-		
+		$this->set('title_for_layout', 'Empresas');
 		$this -> layout = 'basemodalint';
 		if($this->request->is('post')){
 			if($this->Company->saveAll($this->request->data)){
@@ -31,6 +31,7 @@ class CompaniesController extends AppController {
 		
 	}
 	public function edit($id = NULL){
+		$this->set('title_for_layout', 'Empresas');
 
 		$this->layout = 'base';
 
@@ -70,7 +71,7 @@ class CompaniesController extends AppController {
 	
 
 	public function view($id){
-
+		$this->set('title_for_layout', 'Empresas');
 		$this->Company->id = $id;
 		$this->layout = 'basemodalint';
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
