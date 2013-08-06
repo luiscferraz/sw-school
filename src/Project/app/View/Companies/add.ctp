@@ -81,7 +81,7 @@
 				
 						echo $this->Form->input('BankInfoCompany.number_agency', array('label' => 'Número da Agência: ', 'id'=>'BankInfoCompany.number_agency'));
 
-						echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoCompany.number_account', 'onblur'=>'checkConta(this, document.getElementById("BankInfoCompany.number_agency"), -1)'));
+						echo $this->Form->input('BankInfoCompany.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoCompany.number_account'));
 						
 						?>
 											
