@@ -17,7 +17,7 @@
                     ?>
 
 
-
+    <a href="../projects#" class="botao" alt="Cancelar"> Cancelar</a>
     <h2>Cadastrar Projeto</h2>
 
     <div id="conteudoAddProjeto">

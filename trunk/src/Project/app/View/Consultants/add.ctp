@@ -1,4 +1,4 @@
-
+<a href="../../Consultants/index" class="botao" alt="Cancelar"> Cancelar </a>
 <h2>Cadastrar Consultor</h2>
 <?php //provavelmente na view add, ou o equivalente para adicionar a pessoa
 		echo $this->Form->create('Consultant', array('action' => 'add','type'=>'file')); ?>

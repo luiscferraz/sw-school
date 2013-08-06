@@ -1,4 +1,4 @@
-
+<a href="../../Consultants/index" class="botao" alt="Voltar"> Voltar </a>
 <h2 id="titulo">Consultor - <?php echo $consultant['Consultant']['name']; ?> 
 <?php 
 	if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
