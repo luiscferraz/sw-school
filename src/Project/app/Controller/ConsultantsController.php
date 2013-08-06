@@ -21,6 +21,7 @@
  	}
  	
  	public function view($id = null){
+    $this->set('title_for_layout', 'Consultores');
  		 $this -> layout = 'basemodalint';
 		 $this-> set ('tipo_usuario',$this->Auth->user('type'));	
  		 if (!$id) {
@@ -36,6 +37,7 @@
  	
  	public function add()
   {
+    $this->set('title_for_layout', 'Consultores');
     $this -> layout = 'basemodalint';
     if($this->request->is('post'))
     {
@@ -71,6 +73,7 @@
    }
    public function edit($id = NULL)
    {
+    $this->set('title_for_layout', 'Consultores');
 		$this->layout = 'base';
 		$this->Consultant->id = $id;
 		if (!$id) {

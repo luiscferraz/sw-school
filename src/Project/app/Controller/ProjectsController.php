@@ -41,6 +41,7 @@
 
 
  	public function add(){
+ 		$this->set('title_for_layout', 'Projetos');
  		$this->layout = 'basemodalint';
  		
  		if($this->request->is('post')){
@@ -62,6 +63,7 @@
  	}
 	
 	public function edit($id = NULL){
+		$this->set('title_for_layout', 'Projetos');
 		$this->layout = 'basemodal';
 		$this->Project->id = $id;
 		
@@ -100,6 +102,7 @@
  	
  	
  	public function view($id = null){
+ 		$this->set('title_for_layout', 'Projetos');
 		$this -> layout = 'base';
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
  		if (!$id) {
