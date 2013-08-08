@@ -230,10 +230,16 @@
 	        $this->set('activities', $this->Activity->read());
 	    }
 
+	    $id_projeto=$this->Activity->Project->query("SELECT activities.project_id FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);
+			$this-> set ('id_projeto', $id_projeto[0]['activities']['project_id']);
+		$id_atividade=$this->Activity->Project->query("SELECT activities.id FROM activities WHERE activities.id = ".$id);
+			$this-> set ('id_atividade', $id_atividade[0]['activities']['id']);
+
 	    $nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
 			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
 		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);					
 			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
+
 	}
 
 

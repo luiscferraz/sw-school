@@ -1,4 +1,5 @@
-<!--<h1 id="titulo">Atividade - <?php //echo $activities['Activity']['id']; ?> -->
+
+<a href='../index/<?php echo $id_projeto?> /<?php echo $id_atividade ?>' class="botao" alt="Voltar"> Voltar </a>   
 <h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
 <h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
 <!--<h2 id="tituloatividade">Atividade - <?php //echo $nome_atividade; ?></h2>-->

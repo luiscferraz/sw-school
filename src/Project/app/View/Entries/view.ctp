@@ -1,3 +1,4 @@
+<a href="../../entries/index/<?php echo $id_atividade ?>" class="botao" alt="Voltar">Voltar </a>
 <h2>Apontamentos</h2>
 <h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
 <h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
