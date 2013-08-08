@@ -23,7 +23,7 @@
 		$list_attachments['none'] = 'Nenhum anexo';
 	}
 ?>
-
+<a href='../../activities/index/<?php echo $id ?>' class="botao" alt="Cancelar"> Cancelar </a>   
 <h2>Cadastrar Atividade</h2>
 <h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
   

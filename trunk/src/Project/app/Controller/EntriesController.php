@@ -18,7 +18,9 @@ class EntriesController extends AppController{
 			$this ->set('activity',$this-> Nome_Atividade($id));
 			
 
- 
+ 			$id_projeto=$this->Entry->Activity->Project->query("SELECT activities.project_id FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);
+			$this-> set ('id_projeto', $id_projeto[0]['activities']['project_id']);
+		
 
 			$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
 			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
@@ -158,17 +160,14 @@ class EntriesController extends AppController{
 		$nome_atividade = $this->Entry->Activity->Project->query("SELECT activities.description FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
 			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 
-		
+		$id_atividade = $this->Entry->Activity->Project->query("SELECT entries.activity_id FROM projects, activities, entries WHERE activities.project_id = projects.id  and entries.activity_id = activities.id and entries.id = ".$id);
+			$this-> set ('id_atividade', $id_atividade[0]['entries']['activity_id']);
 
-
-
-		
 	    if ($this->request->is('get')) {
 	        $this->set('entries', $this->Entry->read());
-	    }
+	    }       
 	}	 	
 
 
- 	
 }
 ?>
