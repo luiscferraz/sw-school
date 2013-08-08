@@ -80,7 +80,10 @@ if( !isset($date_submit)){
 	
 	echo $this->Form->input('Project.id',array('options' =>  $list_projects,'type' => 'select', 'empty' => '--Selecione um projeto--','label' => '', 'id' => 'projects')); 
     	
- ?>
+ ?>		
+			
+<br>		
+<?php
 
 $dias = 60;
 $amp = 1; //0 <= amp <= 12
