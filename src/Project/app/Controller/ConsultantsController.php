@@ -62,8 +62,28 @@
       if (empty($email)){} else { $ctr++; $erro = $erro .'E-mail já existente.';};
       $username =  $this -> Consultant -> query ("SELECT * FROM `consultants` WHERE name = '". $data['User']['username']."'");
       if (empty($username)){} else { $ctr++; $erro = $erro . 'Nome de Usuário já existente.';};
+      $achouConta  =  $this -> Consultant -> query ("SELECT * FROM consultants_bank_infos WHERE number_account = '".$data['BankInfoConsultant']['number_account']."' and number_agency = '".$data['BankInfoConsultant']['number_agency']."'");
+      if (empty($achouConta)){} else { $ctr++; $erro = $erro . 'Esta conta nesta agência já existe no sistema.';};
 
       if ($ctr > 0) {
+        $this -> Session -> setFlash ($this -> flashError ($erro));
+        return false;
+      }
+      else {
+        return true;
+      }
+   }
+
+   public function verific2($data){
+      $ctr = 0;
+      $erro ='';
+      //Verificar se já existe Conta.
+      
+
+      $achouConta  =  $this -> Consultant -> query ("SELECT * FROM consultants_bank_infos WHERE id <> '". $data['BankInfoConsultant']['id']."' and number_account = '".$data['BankInfoConsultant']['number_account']."' and number_agency = '".$data['BankInfoConsultant']['number_agency']."'");
+      if (empty($achouConta)){} else { $ctr++; $erro = $erro . 'Esta conta nesta agência já existe no sistema.';};
+    
+    if ($ctr > 0) {
         $this -> Session -> setFlash ($this -> flashError ($erro));
         return false;
       }
@@ -90,10 +110,12 @@
 		} 
 		else {
 			$this->Consultant->id = $id;
-			if ($this->Consultant->saveAll($this->request->data)) {
+      if ($this->verific2($this->request->data)) {
+        if ($this->Consultant->saveAll($this->request->data)) {
 				
-				$this->Session->setFlash($this->flashSuccess('Consultor foi editado.'));
-				$this->redirect(array('action' => 'index'));
+				  $this->Session->setFlash($this->flashSuccess('Consultor foi editado.'));
+				  $this->redirect(array('action' => 'index'));
+        }
 			}
 		}
    }

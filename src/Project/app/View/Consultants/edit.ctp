@@ -69,13 +69,7 @@ textinput.value = fileinput.value;
 				
 						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ','required'=>'required', 'id'=>'BankInfoConsultant.number_agency')); ?>
 
-						<?php if ($consultant['BankInfoConsultant']['id']){
-
-                            echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoConsultant.number_account', 'onblur'=>'validaConta(this, document.getElementById("BankInfoConsultant.number_agency"), '.$consultant['BankInfoConsultant']['id'].')'));
-
-                        } else {
-                            echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoConsultant.number_account', 'onblur'=>'validaConta(this, document.getElementById("BankInfoConsultant.number_agency"), 0)'));
-                        } ?>
+						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoConsultant.number_account')); ?>
 											
 				</fieldset>
 
