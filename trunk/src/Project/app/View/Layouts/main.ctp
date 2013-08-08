@@ -67,15 +67,20 @@ if( !isset($date_submit)){
 </form>
 
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
-<?php 
+<form id = "ProjectsAddForm" method = "post" action = "home">
+	
 
-	echo $this->Form->create('Projects',array('method'=>'post',array('controller'=>'home','action'=>'index')));
+<div class = "submit">
+
+<input type="submit" value="Buscar" id="buscar" class="botao"/>
+</div
+
+
+<?php 
+	
 	echo $this->Form->input('Project.id',array('options' =>  $list_projects,'type' => 'select', 'empty' => '--Selecione um projeto--','label' => '', 'id' => 'projects')); 
-	echo $this->Form->end('Buscar');
-	 ?>
-
-<br>
-<?php 
+    	
+ ?>
 
 $dias = 60;
 $amp = 1; //0 <= amp <= 12
