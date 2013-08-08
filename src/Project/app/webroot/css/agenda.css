@@ -110,7 +110,7 @@ body {
 }
 
 
-/* ==================BOT√O CADASTRAR ATIVIDADE===============*/
+/* ==================BOT√ÉO CADASTRAR ATIVIDADE===============*/
 #botao-cadastrar-atividade{
         float: right;
         padding:10px 5px;
@@ -140,7 +140,7 @@ body {
 }
 
 
-/* ==================BOT√O APLICAR DATA===============*/
+/* ==================BOT√ÉO APLICAR DATA===============*/
 
 #botao-aplicar-data, #botao-hoje-data{
 	margin: 0px;
@@ -170,9 +170,14 @@ body {
     float: left;
 	text-align: center;
 }
+#buscar{
+		cursor: pointer;
+        margin-right: 12%;
+        float: right;
+        padding:10px 5px;
+}
 
-
-/* ==================BOT√O PESQUISAR CONSULTOR===============*/	
+/* ==================BOT√ÉO PESQUISAR CONSULTOR===============*/	
 #botao-pesquisar-consultor{
 		cursor: pointer;
         margin-right: 7%;
