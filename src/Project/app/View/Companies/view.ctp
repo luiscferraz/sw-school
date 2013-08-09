@@ -17,6 +17,8 @@
 <div class="company view">
 	
 	<div class='dadosEmpresa'>
+		<h3 class="tituloCompanyView">Dados da empresas</h3>
+
 		<p><?php 
 				echo 'Sigla: ';
 				echo $company['Company']['acronym'];
@@ -42,6 +44,7 @@
 	</div>
 
 	<div class='dadosEndereco'>
+		<h3 class="tituloCompanyView">Endereço</h3>
 		<p><?php 
 			echo 'Endereço: ';
 			echo $company['Address']['address']; 
