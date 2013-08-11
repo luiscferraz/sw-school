@@ -40,7 +40,7 @@ $('document').ready(function(){
 		flag = false;
 		$('#Menu_Home').animate({'margin-left':'-500px'});	
 	});
-	//endmenu
+	//end menu
 
 	
 	//Mascaras
@@ -60,14 +60,11 @@ $('document').ready(function(){
 	$("#Owner_data").mask("99/99/9999");
 	$("#Owner_phone").mask("(99)9999-9999");
 	$("#Contact_phone").mask("(99)9999-9999");
-	
+	$("#datepicker").mask("99/99/9999");
 
-
-
-	
-		
-	
 	//end mascaras
+
+
 
 	//Buscar Endereço ao digitar o CEP
 	$('#zip_code').keypress(function(){
