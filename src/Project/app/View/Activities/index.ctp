@@ -213,45 +213,45 @@ header('Content-Type: text/html; charset=UTF-8');
 
 		<tr <?php echo $class; ?>>
 
-			<td class="descrição"><?php echo $activity['Activity']['description']; ?></td>
-			<td class="status"><?php echo $activity['Activity']['status']; ?></td>
-			<td class="data"><?php echo $activity['Activity']['date']; ?></td>
+			<td class="descrição"><?php echo $activity['activities']['description']; ?></td>
+			<td class="status"><?php echo $activity['activities']['status']; ?></td>
+			<td class="data"><?php echo $activity['activities']['date']; ?></td>
 
 			
 				<td>
 					<div class="actions">
 					<?php echo $this->Html->link(
-					$this->Html->image("view.png", array('alt' => 'Ver','title'=>'Visualizar')), array('action' => 'view', $activity['Activity']['id']), array('escape'=>false, 'id'=>'link'))?>
+					$this->Html->image("view.png", array('alt' => 'Ver','title'=>'Visualizar')), array('action' => 'view', $activity['activities']['id']), array('escape'=>false, 'id'=>'link'))?>
 
 					<?php 
 						if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-							echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar','title'=>'Editar')), array('action' => 'edit', $activity['Activity']['id'], $activity['Activity']['project_id']),
+							echo $this->Html->link($this->Html->image("edit.png", array('alt' => 'Editar','title'=>'Editar')), array('action' => 'edit', $activity['activities']['id'], $activity['activities']['project_id']),
 							array('escape'=>false, 'id'=>'link'));
 						}
 					?>					
 					                							
 					<?php 
 						if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))){
-							echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover','title'=>'Excluir')), array('action' => 'delete', $activity['Activity']['id'], $activity['Activity']['project_id']),
+							echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover','title'=>'Excluir')), array('action' => 'delete', $activity['activities']['id'], $activity['activities']['project_id']),
 							array('escape'=>false, 'id'=>'link'), "Confirmar exclusão da atividade?");
 						}
 					?>
 					<br>
 					<?php 
 						if (in_array($tipo_usuario , array('admin'))){
-							echo $this->Html->link($this->Html->image("junk.png", array('alt' => 'Excluir Def','title'=>'Excluir Definitivamente')), array('action' => 'eliminate', $activity['Activity']['id'], $activity['Activity']['project_id']),
+							echo $this->Html->link($this->Html->image("junk.png", array('alt' => 'Excluir Def','title'=>'Excluir Definitivamente')), array('action' => 'eliminate', $activity['activities']['id'], $activity['activities']['project_id']),
 							array('escape'=>false, 'id'=>'link'), "Confirmar exclusão definitiva da atividade?");
 						}
 					?>
 					
 					
-					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','title'=>'Anexar','onClick'=>'ListAttachments('.$activity['Activity']['id'].')'));?>
+					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','title'=>'Anexar','onClick'=>'ListAttachments('.$activity['activities']['id'].')'));?>
 
 					<br>
 
-					<a href="../../entries/add/<?php echo $activity['Activity']['id']."/".$activity['Activity']['project_id'] ?>"><?php echo $this->Html->image("clock.png",array('alt'=>'Apontar', 'title' => 'Apontar', 'id' => 'btnRelogio'));?></a>
+					<a href="../../entries/add/<?php echo $activity['activities']['id']."/".$activity['activities']['project_id'] ?>"><?php echo $this->Html->image("clock.png",array('alt'=>'Apontar', 'title' => 'Apontar', 'id' => 'btnRelogio'));?></a>
 
-					<a href="../../entries/index/<?php echo $activity['Activity']['id'] ?>"><?php echo $this->Html->image("eye.png",array('alt'=>'Visualizar Apontamento', 'title' => 'Visualizar Apontamento', 'id' => 'btnVisuzalizar-Apontamento'));?></a>
+					<a href="../../entries/index/<?php echo $activity['activities']['id'] ?>"><?php echo $this->Html->image("eye.png",array('alt'=>'Visualizar Apontamento', 'title' => 'Visualizar Apontamento', 'id' => 'btnVisuzalizar-Apontamento'));?></a>
 					
 					
 					<!--<input id="botaoAnexo" type="button" value="Anexar" onClick='ListAttachments(<?php $attachment['Attachment']['activity_id'] ?>);' <img src="img/attachment.png" /></input> -->
@@ -264,5 +264,3 @@ header('Content-Type: text/html; charset=UTF-8');
 	</table>
 <br>
 <br>
-
-
