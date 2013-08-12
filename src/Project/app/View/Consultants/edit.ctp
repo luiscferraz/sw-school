@@ -65,9 +65,9 @@ textinput.value = fileinput.value;
 
 						<?php echo $this->Form->input('BankInfoConsultant.id', array('type' => 'hidden')); ?>
 						
-						<?php echo $this->Form->input('BankInfoConsultant.name_bank', array('label' => 'Nome do Banco: ','required'=>'required', 'id'=>'BankInfoConsultant.name_bank')); ?>
+						<?php echo $this->Form->input('BankInfoConsultant.name_bank', array('label' => 'Nome do Banco: ', 'id'=>'BankInfoConsultant.name_bank')); ?>
 				
-						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ','required'=>'required', 'id'=>'BankInfoConsultant.number_agency')); ?>
+						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ', 'id'=>'BankInfoConsultant.number_agency')); ?>
 
 						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoConsultant.number_account')); ?>
 											
