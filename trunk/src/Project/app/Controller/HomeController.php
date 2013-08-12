@@ -10,10 +10,9 @@
 
        public function index ($id = null) {
 				
-			   if($this->request->is('post')) {
+			   if(($this->request->is('post')) and (isset($this->request->data['Project']['id']))){
         	   		$id = $this->request->data['Project']['id'];
-       
-        		}
+            	}
                $this->layout =  'main';
 			   $this-> set ('tipo_usuario',$this->Auth->user('type'));			 		
 			   $this-> set ('nome_usuario',$this->Auth->user('username'));		
