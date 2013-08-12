@@ -170,12 +170,14 @@ body {
     float: left;
 	text-align: center;
 }
+
 #buscar{
 		cursor: pointer;
-        margin-right: 12%;
+        margin-right: 19%;
         float: right;
         padding:10px 5px;
 }
+
 
 /* ==================BOTÃO PESQUISAR CONSULTOR===============*/	
 #botao-pesquisar-consultor{
@@ -271,11 +273,12 @@ overflow: auto;}
 
 .zebra_td {
 	text-align: center;
-    border-top: 1px solid #808080;
-    border-right: 1px solid #808080;
-    border-bottom: 0px;
-    border-left: 0px;
+    border: 1px solid #808080;
     height: 26px;
     
 }
 
+.days a, .days a:visited, .days a:link, .days a:hover {
+	text-decoration: none;
+	color: #000;
+}

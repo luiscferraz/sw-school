@@ -14,32 +14,41 @@
         $list_consultants['none'] = 'Nenhum Consultor Cadastrado';
     }
 ?>
+<?php
+$consultant_id = 'Activity.consultant'. $consultant_id . '_id';
+?>
                 
-<h2>Editar Atividade</h2>
-<h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
-<h3 id="tituloatividade">Atividade - <?php echo $nome_atividade; ?></h3>
+<b>Projeto - <?php echo $nome_projeto; ?> <br>
+Atividade - <?php echo $nome_atividade; ?></b>
+<!--$id_projeto, $per, $dia, $mes, $ano, $sigla_consultor-->
 
+    <div id="content">
+        <div class="conteudo">
         <?php  
-        echo $this->Form->create('Activities', array('action' => 'edit2/'.$id.'/'.$id_projeto)); ?>
+        echo $this->Form->create('Activities', array('action' => 'edit/'.$id.'/'.$id_projeto)); ?>
             <fieldset id="Dados_projeto_pai2">
                 <?php echo $this->Form->input('Activity.id', array('type'=>'hidden')); ?>
-                 <?php echo $this->Form->input('Activity.description', array('label' => 'Descrição: <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'actvDescription')); ?> 
-                 <?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym')); ?>
+                 <?php echo $this->Form->input('Activity.description', array('label' => 'Descrição: ', 'id'=>'actvDescription')); ?> 
+                <?php echo $this->Form->input('Activity.consultant1_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 1 <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvID', 'class'=>'cosultant-atividade')); ?>
+                <?php echo $this->Form->input('Activity.consultant2_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 2: ', 'id'=>'actvID', 'class'=>'cosultant-atividade')); ?>
+                <?php echo $this->Form->input('Activity.consultant3_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 3: ', 'id'=>'actvID','class'=>'cosultant-atividade')); ?>
+                <?php echo $this->Form->input('Activity.consultant4_id', array('options' => $list_consultants,'empty' => 'Selecione', 'type'=>'select','label' => 'Consultor 4: ', 'id'=>'actvID', 'class'=>'cosultant-atividade')); ?>
+                 <!--< ?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym', 'default' => $sigla_consultor)); ?>
 
-                 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />           
+                 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />-->
                
-            </fieldset>
-            <fieldset id="Dados_projeto_pai3">
-                <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvStartHour', 'onblur' => 'checkHour()')); ?>
-                <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvEndHour', 'onblur' => 'checkHour()')); ?>
-                <?php echo $this->Form->input('Activity.date', array('type'=>'text','label' => 'Data <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'datepicker', 'onblur' => 'checkDate(this)')); ?>
+            
+                <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial: ','required'=>'required', 'id'=>'actvStartHour')); ?>
+                <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final: ','required'=>'required', 'id'=>'actvEndHour')); ?>
+                <?php echo $this->Form->input('Activity.date', array('type'=>'text','label' => 'Data: ', 'id'=>'datepicker')); ?>
                 
             </fieldset>
             
             <fieldset id="botao_salvar">
-                <?php echo $this->Form->end('Salvar Edição'); ?>
+                <?php echo $this->Form->end(array('label' => 'Salvar Edição', 'onclick' => 'parent.$.fancybox.close();')); ?>
             </fieldset>
-
+        </div>
+    </div>
 <script type="text/javascript">
 //Remover status indevidos
     var status = $("#actvStatus").val();

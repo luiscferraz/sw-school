@@ -16,14 +16,14 @@ foreach ($projects as $project)
 		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>
 		<?php echo $this->Html->css('tipsy'); ?>
 		<?php echo $this->Html->css('demo'); ?>		
-		<?php echo $this->Html->css('agenda'); ?>	
-		<?php echo $this->Html->css('jquery.fancybox'); ?>		
+		<?php echo $this->Html->css('agenda'); ?>		
+		<?php echo $this->Html->css('jquery.fancybox_agenda'); ?>		
 		<?php echo $this->Html->script('jquery-1.7.1.min'); ?>
 	    <?php echo $this->Html->script('jquery-ui-1.8rc3.custom.min'); ?>
 	    <?php echo $this->Html->script('jquery.tipsy'); ?>
 		<?php echo $this->Html->script('agenda'); ?>	    
 	    <?php echo $this->Html->script('aplicacao'); ?>
-		<?php echo $this->Html->script('jquery.fancybox'); ?>
+		<?php echo $this->Html->script('jquery.fancybox_agenda'); ?>
 
 		
 
@@ -360,12 +360,12 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	$ver = date('D',$dataFinal);
 	if ($ver == 'Mon'){
 		//se for Segunda-feira, mescla 10 colunas a direita com o nome do mes, depois 2 colunas cinzas (final de semana)
-		echo '<td colspan="10" ',$bgColorMes,'>';
+		echo '<td style="height:25px" colspan="10" ',$bgColorMes,'>';
 		echo date('<b>F',$dataFinal);
 		echo '&nbsp;-&nbsp;';
 		echo date('Y</b>',$dataFinal);
 		echo '</td>';
-		echo '<td colspan="2" bgcolor="gray" align=center>';
+		echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';
 		$dia = $dia+6;
@@ -435,7 +435,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 
 
 	if (date('D',$dataFinal) == 'Sat'){
-		echo '<td colspan="2" bgcolor="gray" align=center>';
+		echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';	
 		$dia = $dia+1;
@@ -469,7 +469,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 
 
 	if (date('D',$dataFinal) == 'Sat'){
-		echo '<td colspan="2" bgcolor="gray" align=center>';
+		echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 		echo '&nbsp;&nbsp;';		
 		echo '</td>';	
 		$dia = $dia+1;
@@ -536,7 +536,7 @@ foreach ($projectsPais as $project) {
 		for ($dia = 0; $dia <= $dias; $dia++) {	
 			$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 			if (date('D',$dataFinal) == 'Sat'){
-				echo '<td colspan="2" bgcolor="gray" align=center>';
+				echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 				echo '&nbsp;&nbsp;';		
 				echo '</td>';	
 				$dia = $dia+1;
@@ -567,6 +567,7 @@ foreach ($projectsPais as $project) {
 				$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
 				if (array_key_exists($idT, $arrayConsultor1)){
 					echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
+
 					$idX = $idT . '.' . $arrayConsultor1[$idT][0];
 					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
@@ -589,7 +590,7 @@ foreach ($projectsPais as $project) {
 		for ($dia = 0; $dia <= $dias; $dia++) {	
 			$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 			if (date('D',$dataFinal) == 'Sat'){
-				echo '<td colspan="2" bgcolor="gray" align=center>';
+				echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 				echo '&nbsp;&nbsp;';		
 				echo '</td>';	
 				$dia = $dia+1;
@@ -643,7 +644,7 @@ foreach ($projectsPais as $project) {
 		for ($dia = 0; $dia <= $dias; $dia++) {	
 			$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 			if (date('D',$dataFinal) == 'Sat'){
-				echo '<td colspan="2" bgcolor="gray" align=center>';
+				echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 				echo '&nbsp;&nbsp;';		
 				echo '</td>';	
 				$dia = $dia+1;
@@ -697,7 +698,7 @@ foreach ($projectsPais as $project) {
 		for ($dia = 0; $dia <= $dias; $dia++) {	
 			$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 			if (date('D',$dataFinal) == 'Sat'){
-				echo '<td colspan="2" bgcolor="gray" align=center>';
+				echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 				echo '&nbsp;&nbsp;';		
 				echo '</td>';	
 				$dia = $dia+1;
@@ -780,20 +781,20 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
 						}
 						else if (date('D',$dataFinal) == 'Sun'){	
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';	
 							echo '</td>';		
 						} else {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
 							if (array_key_exists($idM, $arrayConsultor1)){
-								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
+								echo '<td style="height:25px" align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor1[$idM][0];
 								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
@@ -802,7 +803,7 @@ foreach ($projectsPais as $project) {
 								echo '</a>';
 								echo '</td >';
 							}else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+								echo '<td style="height:25px" align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
 								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
 								echo '<span style="display: block;height:24px;;width:24px;"></span>';
 								echo '</a>';
@@ -811,8 +812,8 @@ foreach ($projectsPais as $project) {
 								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
 							if (array_key_exists($idT, $arrayConsultor1)){
-								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
-								$idX = $idT . '.' . $arrayConsultor3[$idT][0];
+								echo '<td style="height:25px" align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor1[$idT][0];
 								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idT][0];
@@ -820,7 +821,7 @@ foreach ($projectsPais as $project) {
 								echo '</a>';
 								echo '</td >';
 							}else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+								echo '<td style="height:25px" align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
 								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
 								echo '<span style="display: block;height:24px;;width:24px;"></span>';
 								echo '</a>';
@@ -835,7 +836,7 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -892,7 +893,7 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -948,7 +949,7 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -1007,7 +1008,7 @@ foreach ($projectsPais as $project) {
 						for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -1062,7 +1063,7 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -1119,7 +1120,7 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -1175,7 +1176,7 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -1240,7 +1241,7 @@ foreach ($projectsPais as $project) {
 						for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -1294,7 +1295,7 @@ foreach ($projectsPais as $project) {
 							for ($dia = 0; $dia <= $dias; $dia++) {	
 							$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 								if (date('D',$dataFinal) == 'Sat'){
-									echo '<td colspan="2" bgcolor="gray" align=center>';
+									echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
 									echo '</td>';	
 									$dia = $dia+1;
@@ -1352,7 +1353,7 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
@@ -1408,13 +1409,13 @@ foreach ($projectsPais as $project) {
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';		
 							echo '</td>';	
 							$dia = $dia+1;
 						}
 						else if (date('D',$dataFinal) == 'Sun'){	
-							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '<td style="height:25px" colspan="2" bgcolor="gray" align=center>';
 							echo '&nbsp;&nbsp;';	
 							echo '</td>';		
 

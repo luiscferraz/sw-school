@@ -132,11 +132,11 @@ function limparUrl(pag){
 //Abrir lista de consultores
 
 function listConsultores (){
-		$.get('../AjaxListConsultants',null,
-				function(data) {   
-					$.fancybox(data);
-					$('.load').remove();
-			})
+	$.get('../Home/AjaxListConsultants',null,
+		function(data) {   
+			$.fancybox(data);
+			$('.load').remove();
+		})
 }
 
 function salvar (obj) {
@@ -149,7 +149,7 @@ function salvar (obj) {
 	var grupoa = $('#'+id+' .grupo-a').children('textarea').val();
 	var grupob= $('#'+id+' .grupo-b').children('textarea').val();
 	var grupoc = $('#'+id+' .grupo-c').children('textarea').val();
-	$.get('../AjaxEditConsultant/'+classe+'/'+horaa+'/'+horab+'/'+horac+'/'+grupoa+'/'+grupob+'/'+grupoc,null,
+	$.get('../../Home/AjaxEditConsultant/'+classe+'/'+horaa+'/'+horab+'/'+horac+'/'+grupoa+'/'+grupob+'/'+grupoc,null,
 				function(data) {   
 					$('.load').remove();
 			})
