@@ -531,7 +531,7 @@ foreach ($projectsPais as $project) {
 	
 		//Caso1 - Projetos sem filhos
 		//AQUI VÃO TODOS OS PROJETOS PAIS
-		//Linha do consultor 1 dos projetos com filhos e sem netos
+		//Linha do consultor 1 dos projetos sem filhos e sem netos
 					
 		for ($dia = 0; $dia <= $dias; $dia++) {	
 			$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
@@ -549,27 +549,43 @@ foreach ($projectsPais as $project) {
 				$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
 				if (array_key_exists($idM, $arrayConsultor1)){
 					echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
+					$idX = $idM . '.' . $arrayConsultor1[$idM][0];
+					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor1[$idM][0];
+					echo '</div>';
+					echo '</a>';
 					echo '</td >';
 				}else {
-					echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
+					echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+					echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+					echo '<span style="display: block;height:24px;;width:24px;"></span>';
+					echo '</a>';
 					echo '</td >';
 				}
 					//valor da tarde do dia
 				$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
 				if (array_key_exists($idT, $arrayConsultor1)){
 					echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
+					$idX = $idT . '.' . $arrayConsultor1[$idT][0];
+					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor1[$idT][0];
+					echo '</div>';
+					echo '</a>';
 					echo '</td >';
 				}else {
-					echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
+					echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+					echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+					echo '<span style="display: block;height:24px;;width:24px;"></span>';
+					echo '</a>';
 					echo '</td >';
-					}
+				}
 			}	
 		}
 		echo '</tr>';
-		//Linha do consultor 2 dos projetos com filhos e sem netos
-		echo '<tr>';					
+		//Linha do consultor 2 dos projetos sem filhos e sem netos
+		echo '<tr>';
 		for ($dia = 0; $dia <= $dias; $dia++) {	
 			$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 			if (date('D',$dataFinal) == 'Sat'){
@@ -586,27 +602,43 @@ foreach ($projectsPais as $project) {
 				$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
 				if (array_key_exists($idM, $arrayConsultor2)){
 					echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
+					$idX = $idM . '.' . $arrayConsultor2[$idM][0];
+					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor2[$idM][0];
+					echo '</div>';
+					echo '</a>';
 					echo '</td >';
 				}else {
-					echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+					echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';
+					echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+					echo '<span style="display: block;height:24px;;width:24px;"></span>';
+					echo '</a>';
 					echo '</td >';
 				}
-				//valor da tarde do dia
+					//valor da tarde do dia
 				$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
-				if (array_key_exists($idT, $arrayConsultor2)){ 
+				if (array_key_exists($idT, $arrayConsultor2)){
 					echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
+					$idX = $idT . '.' . $arrayConsultor2[$idT][0];
+					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor2[$idT][0];
+					echo '</div>';
+					echo '</a>';
 					echo '</td >';
 				}else {
-					echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+					echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';
+					echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+					echo '<span style="display: block;height:24px;;width:24px;"></span>';
+					echo '</a>';
 					echo '</td >';
 				}
 			}	
 		}
 		echo '</tr>';
 		
-		//Linha do consultor 3 dos projetos com filhos e sem netos
+		//Linha do consultor 3 dos projetos sem filhos e sem netos
 		echo '<tr>';
 		for ($dia = 0; $dia <= $dias; $dia++) {	
 			$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
@@ -624,27 +656,43 @@ foreach ($projectsPais as $project) {
 				$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
 				if (array_key_exists($idM, $arrayConsultor3)){
 					echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
+					$idX = $idM . '.' . $arrayConsultor3[$idM][0];
+					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor3[$idM][0];
+					echo '</div>';
+					echo '</a>';
 					echo '</td >';
 				}else {
-					echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
+					echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+					echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+					echo '<span style="display: block;height:24px;;width:24px;"></span>';
+					echo '</a>';
 					echo '</td >';
 				}
-				//valor da tarde do dia
+					//valor da tarde do dia
 				$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
 				if (array_key_exists($idT, $arrayConsultor3)){
 					echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
+					$idX = $idT . '.' . $arrayConsultor3[$idT][0];
+					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor3[$idT][0];
+					echo '</div>';
+					echo '</a>';
 					echo '</td >';
 				}else {
-					echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
+					echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+					echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+					echo '<span style="display: block;height:24px;;width:24px;"></span>';
+					echo '</a>';
 					echo '</td >';
 				}
 			}	
 		}
 		echo '</tr>';
 	
-		//Linha do consultor 4 dos projetos com filhos e sem netos
+		//Linha do consultor 4 dos projetos sem filhos e sem netos
 		echo '<tr>';					
 		for ($dia = 0; $dia <= $dias; $dia++) {	
 			$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
@@ -662,20 +710,36 @@ foreach ($projectsPais as $project) {
 				$idM = (string)$project['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
 				if (array_key_exists($idM, $arrayConsultor4)){
 					echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
+					$idX = $idM . '.' . $arrayConsultor4[$idM][0];
+					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor4[$idM][0];
+					echo '</div>';
+					echo '</a>';
 					echo '</td >';
 				}else {
-					echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
+					echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';
+					echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+					echo '<span style="display: block;height:24px;;width:24px;"></span>';
+					echo '</a>';
 					echo '</td >';
 				}
-				//valor da tarde do dia
+					//valor da tarde do dia
 				$idT = (string)$project['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
 				if (array_key_exists($idT, $arrayConsultor4)){
 					echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
+					$idX = $idT . '.' . $arrayConsultor4[$idT][0];
+					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor4[$idT][0];
+					echo '</div>';
+					echo '</a>';
 					echo '</td >';
 				}else {
-					echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
+					echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';
+					echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+					echo '<span style="display: block;height:24px;;width:24px;"></span>';
+					echo '</a>';
 					echo '</td >';
 				}
 			}	
@@ -730,23 +794,38 @@ foreach ($projectsPais as $project) {
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
 							if (array_key_exists($idM, $arrayConsultor1)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor1[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
-								echo '</td >';}
-							
-							//valor da tarde do dia
+								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
 							if (array_key_exists($idT, $arrayConsultor1)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor3[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
-								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
@@ -771,23 +850,38 @@ foreach ($projectsPais as $project) {
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
 							if (array_key_exists($idM, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor2[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
-								echo '</td >';}
-							
-							//valor da tarde do dia
+								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
-							if (array_key_exists($idT, $arrayConsultor2)){ 
+							if (array_key_exists($idT, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor2[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
-								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
@@ -811,25 +905,40 @@ foreach ($projectsPais as $project) {
 						} else {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
-							if (array_key_exists($idM, $arrayConsultor3)){
+							if (array_key_exists($idM, $arrayConsultor1)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor3[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
-								echo '</td >';}
-							
-							//valor da tarde do dia
+								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
-							if (array_key_exists($idT, $arrayConsultor3)){
+							if (array_key_exists($idT, $arrayConsultor1)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor3[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
-								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
@@ -854,23 +963,38 @@ foreach ($projectsPais as $project) {
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
 							if (array_key_exists($idM, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor4[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
-								echo '</td >';}
-							
-							//valor da tarde do dia
+								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
 							if (array_key_exists($idT, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor4[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
-								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
@@ -878,6 +1002,8 @@ foreach ($projectsPais as $project) {
 			
 				} else {
 					//AQUI VÃO OS FILHOS DO PROJETOS COM FILHOS E NETOS
+
+					//Linha do consultor 1 dos projetos com filhos e com netos
 						for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 						if (date('D',$dataFinal) == 'Sat'){
@@ -893,30 +1019,45 @@ foreach ($projectsPais as $project) {
 						} else {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
-							if (array_key_exists($idM, $arrayConsultor1)){
+							if (array_key_exists($idM, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor1[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
-								echo '</td >';}
-							
-							//valor da tarde do dia
+								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
 							if (array_key_exists($idT, $arrayConsultor1)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor1[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
-								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
 	
-					//Linha do consultor 2 dos projetos com filhos e sem netos
+					//Linha do consultor 2 dos projetos com filhos e com netos
 					echo '<tr>';					
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
@@ -936,28 +1077,43 @@ foreach ($projectsPais as $project) {
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
 							if (array_key_exists($idM, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor2[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
-								echo '</td >';}
-							
-							//valor da tarde do dia
+								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
-							if (array_key_exists($idT, $arrayConsultor2)){ 
+							if (array_key_exists($idT, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor2[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
-								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
 
-					//Linha do consultor 3 dos projetos com filhos e sem netos
+					//Linha do consultor 3 dos projetos com filhos e com netos
 					echo '<tr>';
 
 					for ($dia = 0; $dia <= $dias; $dia++) {	
@@ -978,28 +1134,43 @@ foreach ($projectsPais as $project) {
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
 							if (array_key_exists($idM, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor3[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
-								echo '</td >';}
-							
-							//valor da tarde do dia
+								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
 							if (array_key_exists($idT, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor3[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
-								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
 	
-					//Linha do consultor 4 dos projetos com filhos e sem netos
+					//Linha do consultor 4 dos projetos com filhos e com netos
 					echo '<tr>';					
 					for ($dia = 0; $dia <= $dias; $dia++) {	
 						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
@@ -1019,27 +1190,42 @@ foreach ($projectsPais as $project) {
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
 							if (array_key_exists($idM, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor4[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
-								echo '</td >';}
-							
-							//valor da tarde do dia
+								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
 							if (array_key_exists($idT, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor4[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
 								echo '</td >';
 							}
-							else {
-								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
-								echo '</td >';}
 						}	
 					}
 					echo '</tr>';
-				//fim das linhas dos consultores dos projetos com filhos e sem netos
+				//fim das linhas dos consultores dos projetos com filhos e com netos
 
 					//AQUI VÃO OS NETOS DOS PROJETOS COM FILHOS E NETOS
 					foreach ($projectsNetos as $projectn) {				
@@ -1049,9 +1235,64 @@ foreach ($projectsPais as $project) {
 							//echo '</td>';
 							
 							//Caso3 - Projetos com filhos e com netos
-							//Linha do consultor 1 dos projetos com filhos e com netos							
+
+					//Linha do consultor 1 dos Netos
+						for ($dia = 0; $dia <= $dias; $dia++) {	
+						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
+						if (date('D',$dataFinal) == 'Sat'){
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';		
+							echo '</td>';	
+							$dia = $dia+1;
+						}
+						else if (date('D',$dataFinal) == 'Sun'){	
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';	
+							echo '</td>';		
+						} else {
+							//valor da manha do dia
+							$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
+							if (array_key_exists($idM, $arrayConsultor3)){
+								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor1[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
+								echo $arrayConsultor1[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
+								echo '</td >';
+							}
+								//valor da tarde do dia
+							$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
+							if (array_key_exists($idT, $arrayConsultor1)){
+								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor1[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
+								echo $arrayConsultor1[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
+								echo '</td >';
+							}
+						}	
+					}
+					echo '</tr>';
+							//Linha do consultor 2 dos netos
+							echo '<tr>';
 							for ($dia = 0; $dia <= $dias; $dia++) {	
-								$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
+							$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
 								if (date('D',$dataFinal) == 'Sat'){
 									echo '<td colspan="2" bgcolor="gray" align=center>';
 									echo '&nbsp;&nbsp;';		
@@ -1064,159 +1305,168 @@ foreach ($projectsPais as $project) {
 									echo '</td>';		
 
 								} else {
-									//valor da manha do dia
-									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.1';			
-									if (array_key_exists($idM, $arrayConsultor1)){
-										echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
-										echo $arrayConsultor1[$idM][0];
-										echo '</td >';
-									}
-									else {
-										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
-										echo '</td >';}
-									
-									//valor da tarde do dia
-									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.1';			
-									if (array_key_exists($idT, $arrayConsultor1)){
-										echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
-										echo $arrayConsultor1[$idT][0];
-										echo '</td >';
-									}
-									else {
-										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
-										echo '</td >';}
-								}	
+							//valor da manha do dia
+							$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
+							if (array_key_exists($idM, $arrayConsultor2)){
+								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor2[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
+								echo $arrayConsultor2[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
+								echo '</td >';
 							}
-							echo '</tr>';
+								//valor da tarde do dia
+							$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
+							if (array_key_exists($idT, $arrayConsultor2)){
+								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor2[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
+								echo $arrayConsultor2[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
+								echo '</td >';
+							}
+						}	
+					}
+					echo '</tr>';
+
 							
-							//Linha do consultor 2 dos projetos com filhos e com netos
-							echo '<tr>';
-							for ($dia = 0; $dia <= $dias; $dia++) {	
-								$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-								if (date('D',$dataFinal) == 'Sat'){
-									echo '<td colspan="2" bgcolor="gray" align=center>';
-									echo '&nbsp;&nbsp;';		
-									echo '</td>';	
-									$dia = $dia+1;
-								}
-								else if (date('D',$dataFinal) == 'Sun'){	
-									echo '<td colspan="2" bgcolor="gray" align=center>';
-									echo '&nbsp;&nbsp;';	
-									echo '</td>';		
+					//Linha do consultor 3 dos netos
+					echo '<tr>';
 
-								} else {
-									//valor da manha do dia
-									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.2';			
-									if (array_key_exists($idM, $arrayConsultor2)){
-										echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
-										echo $arrayConsultor2[$idM][0];
-										echo '</td >';
-									}
-									else {
-										echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
-										echo '</td >';}
-									
-									//valor da tarde do dia
-									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.2';			
-									if (array_key_exists($idT, $arrayConsultor2)){
-										echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
-										echo $arrayConsultor2[$idT][0];
-										echo '</td >';
-									}
-									else {
-										echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
-										echo '</td >';}
-								}	
+					for ($dia = 0; $dia <= $dias; $dia++) {	
+						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
+						if (date('D',$dataFinal) == 'Sat'){
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';		
+							echo '</td>';	
+							$dia = $dia+1;
+						}
+						else if (date('D',$dataFinal) == 'Sun'){	
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';	
+							echo '</td>';		
+
+						} else {
+							//valor da manha do dia
+							$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
+							if (array_key_exists($idM, $arrayConsultor3)){
+								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor3[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
+								echo $arrayConsultor3[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
+								echo '</td >';
 							}
-							echo '</tr>';
-
-							//Linha do consultor 3 dos projetos com filhos e com netos
-							echo '<tr>';
-							for ($dia = 0; $dia <= $dias; $dia++) {	
-								$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-								if (date('D',$dataFinal) == 'Sat'){
-									echo '<td colspan="2" bgcolor="gray" align=center>';
-									echo '&nbsp;&nbsp;';		
-									echo '</td>';	
-									$dia = $dia+1;
-								}
-								else if (date('D',$dataFinal) == 'Sun'){	
-									echo '<td colspan="2" bgcolor="gray" align=center>';
-									echo '&nbsp;&nbsp;';	
-									echo '</td>';		
-
-								} else {
-									//valor da manha do dia
-									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.3';			
-									if (array_key_exists($idM, $arrayConsultor3)){
-										echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
-										echo $arrayConsultor3[$idM][0];
-										echo '</td >';
-									}
-									else {
-										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idM.'">';		
-										echo '</td >';}
-									
-									//valor da tarde do dia
-									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
-									if (array_key_exists($idT, $arrayConsultor3)){
-										echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
-										echo $arrayConsultor3[$idT][0];
-										echo '</td >';
-									}
-									else {
-										echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';		
-										echo '</td >';}
-								}	
+								//valor da tarde do dia
+							$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.3';			
+							if (array_key_exists($idT, $arrayConsultor3)){
+								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor3[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
+								echo $arrayConsultor3[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="#E0EEE0" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
+								echo '</td >';
 							}
-							echo '</tr>';
+						}	
+					}
+					echo '</tr>';
 							
-							//Linha do consultor 4 dos projetos com filhos e com netos
-							echo '<tr>';
+					//Linha do consultor 4 dos netos
+					echo '<tr>';					
+					for ($dia = 0; $dia <= $dias; $dia++) {	
+						$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
+						if (date('D',$dataFinal) == 'Sat'){
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';		
+							echo '</td>';	
+							$dia = $dia+1;
+						}
+						else if (date('D',$dataFinal) == 'Sun'){	
+							echo '<td colspan="2" bgcolor="gray" align=center>';
+							echo '&nbsp;&nbsp;';	
+							echo '</td>';		
 
-							for ($dia = 0; $dia <= $dias; $dia++) {	
-								$dataFinal = mktime(24*$dia, 0, 0, $mes_inicial, $dia_inicial, $ano_inicial);
-								if (date('D',$dataFinal) == 'Sat'){
-									echo '<td colspan="2" bgcolor="gray" align=center>';
-									echo '&nbsp;&nbsp;';		
-									echo '</td>';	
-									$dia = $dia+1;
-								}
-								else if (date('D',$dataFinal) == 'Sun'){	
-									echo '<td colspan="2" bgcolor="gray" align=center>';
-									echo '&nbsp;&nbsp;';	
-									echo '</td>';		
-
-								} else {
-									//valor da manha do dia
-									$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
-									if (array_key_exists($idM, $arrayConsultor4)){
-										echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
-										echo $arrayConsultor4[$idM][0];
-										echo '</td >';
-									}
-									else {
-										echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';		
-										echo '</td >';}
-									
-									//valor da tarde do dia
-									$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
-									if (array_key_exists($idT, $arrayConsultor4)){
-										echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
-										echo $arrayConsultor4[$idT][0];
-										echo '</td >';
-									}
-									else {
-										echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';		
-										echo '</td >';}
-								}	
+						} else {
+							//valor da manha do dia
+							$idM = (string)$projectn['Project']['id'] . '.M.' . date('d/m/Y',$dataFinal) . '.4';			
+							if (array_key_exists($idM, $arrayConsultor4)){
+								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
+								$idX = $idM . '.' . $arrayConsultor4[$idM][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
+								echo $arrayConsultor4[$idM][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idM.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idM.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
+								echo '</td >';
 							}
-							echo '</tr>';
+								//valor da tarde do dia
+							$idT = (string)$projectn['Project']['id'] . '.T.' . date('d/m/Y',$dataFinal) . '.4';			
+							if (array_key_exists($idT, $arrayConsultor4)){
+								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
+								$idX = $idT . '.' . $arrayConsultor4[$idT][0];
+								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<div style="height:100%;width:100%">';
+								echo $arrayConsultor4[$idT][0];
+								echo '</div>';
+								echo '</a>';
+								echo '</td >';
+							}else {
+								echo '<td align=center bgcolor="White" class="days" id="'.$idT.'">';
+								echo '<a class="fancybox fancybox.iframe golinkadd" href="#" data-info="' . $idT.'">';
+								echo '<span style="display: block;height:24px;;width:24px;"></span>';
+								echo '</a>';
+								echo '</td >';
+							}
+						}	
+					}
+					echo '</tr>';
 							//fim das linhas dos consultores dos projetos com filhos e com netos
 						
-						}		
+						}	
+
 					}
+
+
 				}
+					
 			}
 		}
 	}
