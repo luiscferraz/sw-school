@@ -40,7 +40,7 @@ $('document').ready(function(){
 		flag = false;
 		$('#Menu_Home').animate({'margin-left':'-500px'});	
 	});
-	//end menu
+	//endmenu
 
 	
 	//Mascaras
@@ -60,11 +60,14 @@ $('document').ready(function(){
 	$("#Owner_data").mask("99/99/9999");
 	$("#Owner_phone").mask("(99)9999-9999");
 	$("#Contact_phone").mask("(99)9999-9999");
-	$("#datepicker").mask("99/99/9999");
+	
 
+
+
+	
+		
+	
 	//end mascaras
-
-
 
 	//Buscar Endereço ao digitar o CEP
 	$('#zip_code').keypress(function(){
@@ -149,6 +152,20 @@ setTimeout(
 		4000);
 
 //Checar se abreviação já é utilizada
+// function checkAcrony(src){
+// 	d = src;
+// 	var acronym = $(d).val();
+// 	$.get("ajaxMsg/"+acronym,null,
+// 		function(data) {   
+// 			if(data == 'true'){
+// 				d.setCustomValidity("Abreviação já utilizada");
+// 			}
+// 			else {
+// 				d.setCustomValidity("");
+// 			}
+// 	});
+// };
+
 function checkAcronym(src){
 	d = src;
 	var acronym = $(d).val();
@@ -162,11 +179,6 @@ function checkAcronym(src){
 			}
 	});
 };
-
-
-
-
-
 
 //Somar horas do projeto
 function SomarHorasProjeto(){

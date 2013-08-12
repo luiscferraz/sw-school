@@ -35,34 +35,75 @@ $('document').ready(function(){
     								});
 
 
-    $('.days').tipsy();
+    // $('.days').tipsy();
 
-    $('.days').dblclick(function () {
-        var conteudoOriginal = $(this).text();
-        var string = $(this).attr("id");
-        $(this).addClass("celulaEmEdicao");
-        $(this).html("<input type='text' value='" + conteudoOriginal + "' />");
-        $(this).children().first().focus();		
-        $(this).children().first().keypress(function (e) {
-            if (e.which == 13) {
-                var novoConteudo = $(this).val();
-                if (novoConteudo == '') {
-                    novoConteudo = 'NULO';
-                };
-				string = string+'.'+novoConteudo;							
-                //$(this).parent().text(novoConteudo);				
-                $(this).parent().removeClass("celulaEmEdicao");				
-				string = string.replace("/", "-");
-				string = string.replace("/", "-");				
-				tratar_string(string);	
-            }
-        });
-         
-    $(this).children().first().blur(function(){	
-        $(this).parent().text(conteudoOriginal);
-        $(this).parent().removeClass("celulaEmEdicao");
-    });	
+    // $('.days').dblclick(function () {
+    //     var conteudoOriginal = $(this).text();
+    //     var string = $(this).attr("id");
+    //     $(this).addClass("celulaEmEdicao");
+    //     $(this).html("<input type='text' value='" + conteudoOriginal + "' />");
+    //     $(this).children().first().focus();		
+    //     $(this).children().first().keypress(function (e) {
+    //         if (e.which == 13) {
+    //             var novoConteudo = $(this).val();
+    //             if (novoConteudo == '') {
+    //                 novoConteudo = 'NULO';
+    //             };
+				// string = string+'.'+novoConteudo;							
+    //             //$(this).parent().text(novoConteudo);				
+    //             $(this).parent().removeClass("celulaEmEdicao");				
+				// string = string.replace("/", "-");
+				// string = string.replace("/", "-");				
+				// tratar_string(string);	
+    //         }
+    //     });
+
+    // $(this).children().first().blur(function(){	
+    //     $(this).parent().text(conteudoOriginal);
+    //     $(this).parent().removeClass("celulaEmEdicao");
+    // });	
+    // });
+    $('.golinkadd').tipsy();
+    $('.golinkedit').tipsy();
+
+    $('.golinkadd').click(function () {
+        return false;
+    }).dblclick(function () {
+        var string = $(this).attr("data-info");
+        //alert($(this).attr('href'));
+        string = string.replace("/", "-");
+        string = string.replace("/", "-");
+        string = "./activities/add2/"+string
+        //alert(string);
+        $.fancybox({
+                    'type'          :   'iframe',
+                    'href'          :   string,
+                    onComplete : function(){ $('#fancybox-content').css({'width':'100%'})},
+                    afterClose : function () {window.location.reload();},
+                });
+        return false;
     });
+
+        $('.golinkedit').click(function () {
+        return false;
+    }).dblclick(function () {
+        var string = $(this).attr("data-info");
+        //alert($(this).attr('href'));
+        string = string.replace("/", "-");
+        string = string.replace("/", "-");
+        string = "./activities/edit2/"+string
+        //alert(string);
+        $.fancybox({
+                    'type'          :   'iframe',
+                    'href'          :   string,
+                    onComplete : function(){ $('#fancybox-content').css({'width':'100%'})},
+                    afterClose : function () {window.location.reload();},
+                });
+        return false;
+    });
+
+
+
 
  function tratar_string(string){
 		var url = window.location.toString();
@@ -93,14 +134,24 @@ function limparUrlHome(url){
 		
 });
 
+// function listConsultores (){
+// 		var url = window.location.toString();
+// 		url = limparUrlHome2(url);
+// 		$.get(url+'Home/AjaxListConsultants',null,
+// 				function(data) {   
+// 					$.fancybox(data);
+// 					$('.load').remove();
+// 			})
+// }
+
 function listConsultores (){
-		var url = window.location.toString();
-		url = limparUrlHome2(url);
-		$.get(url+'Home/AjaxListConsultants',null,
-				function(data) {   
-					$.fancybox(data);
-					$('.load').remove();
-			})
+        var url = window.location.toString();
+        url = limparUrlHome2(url);
+        $.get(url+'/Home/AjaxListConsultants',null,
+                function(data) {   
+                    $.fancybox(data);
+                    $('.load').remove();
+            })
 }
 
 function ListConsultorNome(key){

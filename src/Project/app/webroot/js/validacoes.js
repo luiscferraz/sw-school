@@ -14,8 +14,6 @@ function checkCnpj(src){
 function validaCnpj(cnpj){
 	exp = /\.|\-|\//g
     cnpj = cnpj.toString().replace( exp, "" );
-    if (cnpj == "00000000000000")
-		return false;
     var dv = cnpj.substr(cnpj.length-2,cnpj.length);
     cnpj = cnpj.substr(0,12);
     /*calcular 1ڠdto verificador*/
@@ -104,6 +102,8 @@ function ValidaCpf(cpf) { //2012 - nao mexer daqui pra baixo, parte sagrada, so 
 
 //END CPF
 
+
+
 //
 //=== Validação Cor
 function checkColor(src){
@@ -126,8 +126,10 @@ function checkColor(src){
 // === Validação Acronym
 function checkAcronym(src){
 	d = src;
+	alert(src);
 	var acronym = $(d).val();
-	$.get("ajaxMsg/"+acronym,null,
+	alert(acronym);
+	$.get("Home/ajaxMsg/"+acronym,null,
 		function(data) {   
 			if(data == 'true'){
 				d.setCustomValidity("Abreviação já utilizada");
@@ -140,77 +142,3 @@ function checkAcronym(src){
 
 
 //END Acronym
-
-//Função de validação de datas
-function checkDate(DATE){
-            day = parseInt($(DATE).val().substring(0,2));
-            month = parseInt($(DATE).val().substring(3,5));
-            year = parseInt($(DATE).val().substring(6,10));
-
-            //alert(day.toString()+month.toString()+year.toString());
-
-            // verifica o dia valido para cada mes
-            if ((day > 30 && (  month == 4 || month == 6 || month == 9 || month == 11 )) || day > 31) {
-                DATE.setCustomValidity("Data inválida!");
-            }
-
-            // verifica se o mes e valido
-            else if ( month > 12 ) {
-                DATE.setCustomValidity("Data inválida!");
-            }
-
-            // verifica se e ano bissexto
-            else if ((month == 2) && ( (day > 29) || ( (day > 28) && ((year / 4.0) != parseInt(year / 4.0))))) {
-                DATE.setCustomValidity("Data inválida!");
-            }
-
-			// Verifica se dia e mês estão com '00', e ano com '0000'		
-	        else if(day == 0 || month == 0 || year == 0){		
-	        	DATE.setCustomValidity("Data inválida!");		
-	       	}
-
-	        //Zera a mensagem, caso a data esteja preenchida corretamente
-            else{
-                DATE.setCustomValidity("");
-            }
-};
-//Fim da função de validação de data
-//
-
-//INICIO Função de validação de horas inicial e final (específico para Atividades)
-function checkHour(){
-    eStartHour = document.getElementById("actvStartHour");
-    eEndHour = document.getElementById("actvEndHour");
-    startHour = parseFloat($(eStartHour).val().substring(0,2)) + (parseFloat($(eStartHour).val().substring(3,5))/60.0);
-    endHour = parseFloat($(eEndHour).val().substring(0,2)) + (parseFloat($(eEndHour).val().substring(3,5))/60.0);
-    endMinute = parseInt($(eEndHour).val().substring(3,5));
-    startMinute = parseInt($(eStartHour).val().substring(3,5));
-
-    //		
-    eStartHour.setCustomValidity("");		
-    eEndHour.setCustomValidity("");
-
-    // verifica se hora inicial é maior que hora final
-    if (startHour > endHour) {
-        //alert(startHour.toString() + endHour.toString());
-        eStartHour.setCustomValidity("Hora inicial não pode ser maior que a final!");
-    }
-    	// verifica hora inicial
-    	else if(startHour > 23.99 || startMinute >= 60 ){
-        //alert(startHour.toString() + endHour.toString());
-        eStartHour.setCustomValidity("Hora inválida!");
-    }
-    	// verifica hora final
-    	else if(endHour > 23.99 || endMinute >= 60 ){
-        //alert(startMinute.toString() + endMinute.toString());
-        eEndHour.setCustomValidity("Hora inválida!");
-    }
-    	// Apaga o valor da mensagem, caso as horas inicial e final informadas sejam válidas
-    	else{
-        //alert(startHour.toString() + endHour.toString());
-        eStartHour.setCustomValidity("");
-        eEndHour.setCustomValidity("");
-    }
-
-};
-//FIM Função de validação de horas inicial e final (específico para Atividades)
