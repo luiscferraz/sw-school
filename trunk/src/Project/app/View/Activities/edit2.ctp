@@ -22,8 +22,7 @@ $consultant_id = 'Activity.consultant'. $consultant_id . '_id';
 Atividade - <?php echo $nome_atividade; ?></b>
 <!--$id_projeto, $per, $dia, $mes, $ano, $sigla_consultor-->
 
-    <div id="content">
-        <div class="conteudo">
+  
         <?php  
         echo $this->Form->create('Activities', array('action' => 'edit/'.$id.'/'.$id_projeto)); ?>
             <fieldset id="Dados_projeto_pai2">
@@ -47,8 +46,7 @@ Atividade - <?php echo $nome_atividade; ?></b>
             <fieldset id="botao_salvar">
                 <?php echo $this->Form->end(array('label' => 'Salvar Edição', 'onclick' => 'parent.$.fancybox.close();')); ?>
             </fieldset>
-        </div>
-    </div>
+    
 <script type="text/javascript">
 //Remover status indevidos
     var status = $("#actvStatus").val();

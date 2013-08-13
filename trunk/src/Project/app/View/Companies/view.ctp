@@ -17,7 +17,7 @@
 <div class="company view">
 	
 	<div class='dadosEmpresa'>
-		<h3 class="tituloCompanyView">Dados da empresas</h3>
+		<h3 class="tituloCompanyView">Dados da empresa</h3>
 
 		<p><?php 
 				echo 'Sigla: ';

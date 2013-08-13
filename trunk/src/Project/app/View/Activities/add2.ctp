@@ -16,6 +16,7 @@ $consultant_id = 'Activity.consultant'. $consultant_id . '_id';
 
 <b>Projeto - <?php echo $nome_projeto; ?> <br>
 Cadastrar Atividade</b>
+    
         <?php
         echo $this->Form->create('Activities', array('action' => 'add2/'.$id)); ?>
             <fieldset id="Dados_projeto_pai2">
@@ -39,4 +40,3 @@ Cadastrar Atividade</b>
                 <?php echo $this->Form->end(array('label' => 'Confirmar Cadastro', 'onclick' => 'parent.$.fancybox.close();')); ?>
             </fieldset>  
 
-     
