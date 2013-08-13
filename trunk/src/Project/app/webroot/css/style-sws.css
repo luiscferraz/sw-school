@@ -735,7 +735,7 @@ div.dadosSponsor{
 }
 
 #dadosDono{
-	margin-top: -243px;
+	margin-top: -0px;
 	padding-left: 20px;
 	float: left;
 	border-width: 30px;
@@ -772,7 +772,7 @@ div.dadosSponsor{
 	background-color: #bcdae0;
 }
 #contato2{
-	margin-top: -190px;
+	margin-top: -183px;
 	border-width: 30px;
 	margin-left:3px;
 	padding-left: 18px;
@@ -782,7 +782,7 @@ div.dadosSponsor{
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
-	padding-bottom:196px;
+	padding-bottom:193px;
 }
 
 @media only screen and(max-width:1150px){
