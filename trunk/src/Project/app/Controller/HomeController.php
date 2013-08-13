@@ -37,7 +37,7 @@
 				}
 
 				//Tuplas da posicao do consultor 1
-				$consultor1PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant1_id = consultants.id and activities.consultant1_id is not null');			
+				$consultor1PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant1_id = consultants.id and activities.removed != 1 and activities.consultant1_id is not null');			
 				$arrayConsultor1 = array();
 				foreach ($consultor1PadraoId as $consultor1) {
 							
@@ -61,7 +61,7 @@
 				$this -> set ('arrayConsultor1',$arrayConsultor1);
 				
 				//Tuplas da posicao do consultor 2
-				$consultor2PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant2_id = consultants.id and activities.consultant2_id is not null');			
+				$consultor2PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant2_id = consultants.id and activities.removed != 1 and activities.consultant2_id is not null');			
 				$arrayConsultor2 = array();				
 				foreach ($consultor2PadraoId as $consultor2) {
 							
@@ -85,7 +85,7 @@
 				$this -> set ('arrayConsultor2',$arrayConsultor2);
 				
 				//Tuplas da posicao do consultor 3
-				$consultor3PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant3_id = consultants.id and activities.consultant3_id is not null');			
+				$consultor3PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant3_id = consultants.id and activities.removed != 1 and activities.consultant3_id is not null');			
 				$arrayConsultor3 = array();
 				foreach ($consultor3PadraoId as $consultor3) {
 							
@@ -109,7 +109,7 @@
 				$this -> set ('arrayConsultor3',$arrayConsultor3);
 				
 				//Tuplas da posicao do consultor 4
-				$consultor4PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant4_id = consultants.id and activities.consultant4_id is not null');			
+				$consultor4PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant4_id = consultants.id and activities.removed != 1 and activities.consultant4_id is not null');			
 				$arrayConsultor4 = array();
 				foreach ($consultor4PadraoId as $consultor4) {
 							
