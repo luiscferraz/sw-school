@@ -132,7 +132,7 @@ function limparUrl(pag){
 //Abrir lista de consultores
 
 function listConsultores (){
-	$.get('../Home/AjaxListConsultants',null,
+	$.get('../AjaxListConsultants',null,
 		function(data) {   
 			$.fancybox(data);
 			$('.load').remove();
@@ -149,7 +149,7 @@ function salvar (obj) {
 	var grupoa = $('#'+id+' .grupo-a').children('textarea').val();
 	var grupob= $('#'+id+' .grupo-b').children('textarea').val();
 	var grupoc = $('#'+id+' .grupo-c').children('textarea').val();
-	$.get('../../Home/AjaxEditConsultant/'+classe+'/'+horaa+'/'+horab+'/'+horac+'/'+grupoa+'/'+grupob+'/'+grupoc,null,
+	$.get('../AjaxEditConsultant/'+classe+'/'+horaa+'/'+horab+'/'+horac+'/'+grupoa+'/'+grupob+'/'+grupoc,null,
 				function(data) {   
 					$('.load').remove();
 			})

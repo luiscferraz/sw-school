@@ -276,7 +276,7 @@
 	 		if ($this -> verifica($this->request->data)) {
 		 		if($this->Activity->saveAll($this->request->data)){
 		 			$this->Session->setFlash($this->flashSuccess('A atividade foi adicionada com sucesso.'));
-		 			sleep(5);
+		 			sleep(3);
 	          		//$this->redirect(array('action' => '../activities/index/'.$id));
 		 		}
 		 		else{
