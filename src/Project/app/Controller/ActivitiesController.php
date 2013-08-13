@@ -293,17 +293,19 @@
 
 
 	 public function edit2($idX){
+	 	echo $idX;
+	 	//1.M.18-07-2013.1.MS
 	 	list ($id_projeto, $per, $dia, $mes, $ano, $consultant_id, $sigla_consultor) = split ('[/.-]', $idX);
 		$this->layout = 'basemodal';
 	 	if ($per=="M"){
-	 		$this-> set ('act_ini', "08:00");
+	 		//$this-> set ('act_ini', "08:00");
 	 		$act_ini = "00:00:00";
-	 		$this-> set ('act_ter', "12:00");
+	 		//$this-> set ('act_ter', "12:00");
 	 		$act_ter = "12:59:00";
 	 	}elseif ($per=="T") {
-	 		$this-> set ('act_ini', "13:00");
+	 		//$this-> set ('act_ini', "13:00");
 	 		$act_ini = "12:59:00";
-	 		$this-> set ('act_ter', "17:00");
+	 		//$this-> set ('act_ter', "17:00");
 	 		$act_ter = "23:59:00";
 	 	}
 	 	$this-> set ('consultant_id', $consultant_id);
@@ -317,7 +319,7 @@
 	 	$this-> set ('sigla_consultor', $sigla_consultor);
 	 	$this-> set ('per', $per);
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');
-		$id = $this->Activity->Project->query("SELECT activities.id FROM activities WHERE activities.project_id =  '$id_projeto' AND activities.date = '$data' AND (activities.consultant1_id = '$id_consultor' OR activities.consultant2_id = '$id_consultor' OR activities.consultant3_id = '$id_consultor' OR activities.consultant4_id = '$id_consultor') AND activities.start_hours >= '$act_ini' AND activities.end_hours <= '$act_ter'");
+		$id = $this->Activity->Project->query("SELECT activities.id FROM activities WHERE activities.project_id =  '$id_projeto' AND activities.date = '$data' AND (activities.consultant1_id = '$id_consultor' OR activities.consultant2_id = '$id_consultor' OR activities.consultant3_id = '$id_consultor' OR activities.consultant4_id = '$id_consultor') AND activities.start_hours <= '$act_ter' AND activities.end_hours >= '$act_ini'");
 		$id = $id[0]["activities"]["id"];
 		$this-> set ('id',$id);	
 		$this-> set ('projects',$projects);	
