@@ -590,7 +590,7 @@ div.dadosFinancial, div.dadosSepg, div.dadosDono, div.dadosBancariosempresa, div
 	background-color: #bcdae0;
 }
 div.dadosSponsor{
-	margin-top: 75px;
+	margin-top: 120px;
 	margin-left: 18%;
 	width: 62%;
 	padding-top: 1px;
@@ -603,7 +603,7 @@ div.dadosSponsor{
 
 #integranteDefault{
 	margin-left: -5%;
-	margin-top: 83px;
+	margin-top: 140px;
 	float: left;
 	position: absolute;
 

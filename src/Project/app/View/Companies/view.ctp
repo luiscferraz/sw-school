@@ -44,7 +44,7 @@
 	</div>
 
 	<div class='dadosEndereco'>
-		<h3 class="tituloCompanyView">Endereço</h3>
+		<!--<h3 class="tituloCompanyView">Endereço</h3>-->
 		<p><?php 
 			echo 'Endereço: ';
 			echo $company['Address']['address']; 
