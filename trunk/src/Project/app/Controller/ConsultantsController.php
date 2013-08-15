@@ -62,7 +62,9 @@
       if (empty($email)){} else { $ctr++; $erro = $erro .'E-mail já existente.';};
       $username =  $this -> Consultant -> query ("SELECT * FROM `consultants` WHERE name = '". $data['User']['username']."'");
       if (empty($username)){} else { $ctr++; $erro = $erro . 'Nome de Usuário já existente.';};
-      $achouConta  =  $this -> Consultant -> query ("SELECT * FROM consultants_bank_infos WHERE number_account = '".$data['BankInfoConsultant']['number_account']."' and number_agency = '".$data['BankInfoConsultant']['number_agency']."'");
+
+      
+      $achouConta  =  $this -> Consultant -> query ("SELECT * FROM consultants_bank_infos WHERE ((number_account = '".$data['BankInfoConsultant']['number_account']."') and (number_account <> '')) and ((number_agency = '".$data['BankInfoConsultant']['number_agency']."') and (number_agency <> '')) ") ;
       if (empty($achouConta)){} else { $ctr++; $erro = $erro . 'Esta conta nesta agência já existe no sistema.';};
 
       if ($ctr > 0) {
@@ -79,8 +81,7 @@
       $erro ='';
       //Verificar se já existe Conta.
       
-
-      $achouConta  =  $this -> Consultant -> query ("SELECT * FROM consultants_bank_infos WHERE id <> '". $data['BankInfoConsultant']['id']."' and number_account = '".$data['BankInfoConsultant']['number_account']."' and number_agency = '".$data['BankInfoConsultant']['number_agency']."'");
+      $achouConta  =  $this -> Consultant -> query ("SELECT * FROM consultants_bank_infos WHERE id <> '".$data['BankInfoConsultant']['id']."' and ((number_account = '".$data['BankInfoConsultant']['number_account']."') and (number_account <> '')) and ((number_agency = '".$data['BankInfoConsultant']['number_agency']."') and (number_agency <> '')) ") ;
       if (empty($achouConta)){} else { $ctr++; $erro = $erro . 'Esta conta nesta agência já existe no sistema.';};
     
     if ($ctr > 0) {
