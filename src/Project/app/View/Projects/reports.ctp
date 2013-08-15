@@ -154,7 +154,7 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
       <td class="bordaTabela" scope="row"><?php echo $tb['activities']['id'] ?></td>
       <td class="bordaTabela" colspan="2"><?php echo $tb['activities']['description'] ?></td>
       <td class="bordaTabela" ><?php echo $tb['consultants']['name'] ?></td>
-      <td class="bordaTabela" ><?php echo $tb['activities']['date'] ?></td>
+      <td class="bordaTabela" ><?php echo $tb['activities']['start_date'] ?></td>
       <td class="bordaTabela" ><?php echo $tb['entries']['type'] ?></td>
       <td class="bordaTabela" ><?php echo $tb['entries']['hours_worked'] ?></td>
     </tr>
@@ -222,7 +222,7 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
     <td class="bordaTabela" scope="row"><?php echo $tc['activities']['id'] ?></td>
     <td class="bordaTabela" colspan="2"><?php echo $tc['activities']['description'] ?></td>
     <td class="bordaTabela" ><?php echo $tc['consultants']['name'] ?></td>
-    <td class="bordaTabela" ><?php echo $tc['activities']['date'] ?></td>
+    <td class="bordaTabela" ><?php echo $tc['activities']['start_date'] ?></td>
     <td class="bordaTabela" ><?php echo $tc['entries']['type'] ?></td>
     <td class="bordaTabela" ><?php echo $tc['entries']['hours_worked'] ?></td>
   </tr> 
@@ -401,7 +401,7 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
       <td class="bordaTabela" scope="row"><?php echo $tb['activities']['id'] ?></td>
       <td class="bordaTabela" colspan="2"><?php echo $tb['activities']['description'] ?></td>
       <td class="bordaTabela" ><?php echo $tb['consultants']['name'] ?></td>
-      <td class="bordaTabela" ><?php echo $tb['activities']['date'] ?></td>
+      <td class="bordaTabela" ><?php echo $tb['activities']['start_date'] ?></td>
       <td class="bordaTabela" ><?php echo $tb['entries']['type'] ?></td>
       <td class="bordaTabela" ><?php echo $tb['entries']['hours_worked'] ?></td>
     </tr>
@@ -469,7 +469,7 @@ $data = $dia.' de '.$mesnome[$mes].' de '.$ano; ?>
     <td class="bordaTabela" scope="row"><?php echo $tc['activities']['id'] ?></td>
     <td class="bordaTabela" colspan="2"><?php echo $tc['activities']['description'] ?></td>
     <td class="bordaTabela" ><?php echo $tc['consultants']['name'] ?></td>
-    <td class="bordaTabela" ><?php echo $tc['activities']['date'] ?></td>
+    <td class="bordaTabela" ><?php echo $tc['activities']['start_date'] ?></td>
     <td class="bordaTabela" ><?php echo $tc['entries']['type'] ?></td>
     <td class="bordaTabela" ><?php echo $tc['entries']['hours_worked'] ?></td>
   </tr> 

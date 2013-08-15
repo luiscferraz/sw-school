@@ -215,7 +215,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 			<td class="descrição"><?php echo $activity['activities']['description']; ?></td>
 			<td class="status"><?php echo $activity['activities']['status']; ?></td>
-			<td class="data"><?php echo $activity['activities']['date']; ?></td>
+			<td class="data"><?php echo $activity['activities']['start_date']; ?></td>
 
 			
 				<td>

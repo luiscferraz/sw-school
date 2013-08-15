@@ -208,7 +208,7 @@
  		$this->set('hours_B_group', $hours_B_group);
  		$this->set('hours_C_group', $hours_C_group);
 
- 		$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, activities.description AS activity_description,activities.date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id AND projects.id = '.$idProject.' ORDER BY consultants.id');
+ 		$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, activities.description AS activity_description,activities.start_date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id AND projects.id = '.$idProject.' ORDER BY consultants.id');
  		$this->set('hours_per_date', $hours_per_date);
 
 		$this -> set('filters', true);
@@ -237,7 +237,7 @@
  		$this->set('dateInit', $dateInit);
  		$this->set('dateEnd',  $dateEnd);
 
- 		$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, activities.description AS activity_description,activities.date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id AND projects.id = '.$idProject.' ORDER BY consultants.id');
+ 		$hours_per_date = $this->Project->query('SELECT consultants.id, consultants.name, projects.id AS project_id, activities.description AS activity_description,activities.start_date, entries.hours_worked FROM consultants, activities, entries, projects WHERE consultants.id = entries.consultant_id AND activities.id = entries.activity_id AND activities.project_id = projects.id AND projects.id = '.$idProject.' ORDER BY consultants.id');
  		$this->set('hours_per_date', $hours_per_date);
 
 		$this -> set('filters', true);

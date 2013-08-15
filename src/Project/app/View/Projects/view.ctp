@@ -75,7 +75,7 @@
 		<tr <?php echo $class; ?>>
 			<td class="descrição"><?php echo $activity['Activity']['description']; ?></td>
 			<td class="status"><?php echo $activity['Activity']['status']; ?></td>
-			<td class="data"><?php echo $activity['Activity']['date']; ?></td>
+			<td class="data"><?php echo $activity['Activity']['start_date']; ?></td>
 
 			<div class="actions">
 				<td>
