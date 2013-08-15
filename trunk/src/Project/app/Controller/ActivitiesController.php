@@ -20,8 +20,8 @@
 	        }
  			$this -> layout = 'basemodal';
  			//$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1,'Activity.project_id =' => $id),'order'=>array('Project.name','Activity.description'))));
- 			$activities = $this->Activity->query("select id, project_id, description, status, date from activities where removed != 1 and project_id = '".$id."' order by concat(substring(date,7,4) , substring(date,4,2), substring(date,1,2) ) DESC");
-	 			$this -> set ('activities',$activities);
+ 			$activities = $this->Activity->query("select id, project_id, description, status, start_date from activities where removed != 1 and project_id = '".$id."' order by concat(substring(start_date,7,4) , substring(start_date,4,2), substring(start_date,1,2) ) DESC");
+	 		$this -> set ('activities',$activities);
  			$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 			$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
 			$this-> set ('projects',$this->Activity->Project->find('all', array('conditions'=> array('Project.id =' => 'Activity.project_id'))));	
@@ -96,7 +96,7 @@
 		//Se a atividade for 'Em desenvolvimento'  a data não pode ser depois do dia do cadastramento.
 		if ($data['Activity']['status'] == 'Em desenvolvimento') {
 			$dt =  date('d').'/'.date('m').'/'.date('Y');
-			if ($data['Activity']['date'] > $dt) {
+			if ($data['Activity']['start_date'] > $dt) {
 				$ctr ++;
 				$strerro = $strerro . 'Status "Em desenvolvimento", com data inicial a começar.</br>';
 			};			
@@ -138,7 +138,7 @@
 		//Se a atividade for 'Em desenvolvimento'  a data não pode ser depois do dia do cadastramento.
 		if ($data['Activity']['status'] == 'Em desenvolvimento') {
 			$dt =  date('d').'/'.date('m').'/'.date('Y');
-			if ($data['Activity']['date'] > $dt) {
+			if ($data['Activity']['start_date'] > $dt) {
 				$ctr ++;
 				$strerro = $strerro . 'Status "Em desenvolvimento", com data inicial a começar.</br>';
 			};			
@@ -319,7 +319,7 @@
 	 	$this-> set ('sigla_consultor', $sigla_consultor);
 	 	$this-> set ('per', $per);
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');
-		$id = $this->Activity->Project->query("SELECT activities.id FROM activities WHERE activities.project_id =  '$id_projeto' AND activities.date = '$data' AND (activities.consultant1_id = '$id_consultor' OR activities.consultant2_id = '$id_consultor' OR activities.consultant3_id = '$id_consultor' OR activities.consultant4_id = '$id_consultor') AND activities.start_hours <= '$act_ter' AND activities.end_hours >= '$act_ini'");
+		$id = $this->Activity->Project->query("SELECT activities.id FROM activities WHERE activities.project_id =  '$id_projeto' AND activities.start_date = '$data' AND (activities.consultant1_id = '$id_consultor' OR activities.consultant2_id = '$id_consultor' OR activities.consultant3_id = '$id_consultor' OR activities.consultant4_id = '$id_consultor') AND activities.start_hours <= '$act_ter' AND activities.end_hours >= '$act_ini'");
 		$id = $id[0]["activities"]["id"];
 		$this-> set ('id',$id);	
 		$this-> set ('projects',$projects);	

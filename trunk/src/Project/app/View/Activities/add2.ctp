@@ -33,7 +33,7 @@ Cadastrar Atividade</b>
 
                 <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial: ','required'=>'required', 'id'=>'actvStartHour', 'default' => $act_ini)); ?>
                 <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final: ','required'=>'required', 'id'=>'actvEndHour', 'default' => $act_ter)); ?>
-                <?php echo $this->Form->input('Activity.date', array('type'=>'text','label' => 'Data: ', 'id'=>'datepicker', 'default' => $data)); ?>
+                <?php echo $this->Form->input('Activity.start_date', array('type'=>'text','label' => 'Data: ', 'id'=>'datepicker', 'default' => $data)); ?>
             </fieldset>
 
             <fieldset id="botao_salvar">

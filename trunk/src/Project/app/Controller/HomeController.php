@@ -37,13 +37,13 @@
 				}
 
 				//Tuplas da posicao do consultor 1
-				$consultor1PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant1_id = consultants.id and activities.removed != 1 and activities.consultant1_id is not null');			
+				$consultor1PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant1_id = consultants.id and activities.removed != 1 and activities.consultant1_id is not null');			
 				$arrayConsultor1 = array();
 				foreach ($consultor1PadraoId as $consultor1) {
 							
 					if ($consultor1['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
-						$padraoID = $consultor1['activities']['project_id'].'.M.'.$consultor1['activities']['date'].'.'.'1';
+						$padraoID = $consultor1['activities']['project_id'].'.M.'.$consultor1['activities']['start_date'].'.'.'1';
 						$nome = $consultor1['consultants']['name'];
 						$sigla = $consultor1['consultants']['acronym'];
 						$cor = $consultor1['consultants']['acronym_color'];
@@ -51,7 +51,7 @@
 					}
 					if ($consultor1['activities']['end_hours'] > '12:00:00'){
 						$mt = 'T';
-						$padraoID = $consultor1['activities']['project_id'].'.T.'.$consultor1['activities']['date'].'.'.'1';
+						$padraoID = $consultor1['activities']['project_id'].'.T.'.$consultor1['activities']['start_date'].'.'.'1';
 						$nome = $consultor1['consultants']['name'];
 						$sigla = $consultor1['consultants']['acronym'];
 						$cor = $consultor1['consultants']['acronym_color'];
@@ -61,13 +61,13 @@
 				$this -> set ('arrayConsultor1',$arrayConsultor1);
 				
 				//Tuplas da posicao do consultor 2
-				$consultor2PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant2_id = consultants.id and activities.removed != 1 and activities.consultant2_id is not null');			
+				$consultor2PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant2_id = consultants.id and activities.removed != 1 and activities.consultant2_id is not null');			
 				$arrayConsultor2 = array();				
 				foreach ($consultor2PadraoId as $consultor2) {
 							
 					if ($consultor2['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
-						$padraoID = $consultor2['activities']['project_id'].'.M.'.$consultor2['activities']['date'].'.'.'2';
+						$padraoID = $consultor2['activities']['project_id'].'.M.'.$consultor2['activities']['start_date'].'.'.'2';
 						$nome = $consultor2['consultants']['name'];
 						$sigla = $consultor2['consultants']['acronym'];
 						$cor = $consultor2['consultants']['acronym_color'];
@@ -75,7 +75,7 @@
 					}
 					if ($consultor2['activities']['end_hours'] > '12:00:00'){
 						$mt = 'T';
-						$padraoID = $consultor2['activities']['project_id'].'.T.'.$consultor2['activities']['date'].'.'.'2';
+						$padraoID = $consultor2['activities']['project_id'].'.T.'.$consultor2['activities']['start_date'].'.'.'2';
 						$nome = $consultor2['consultants']['name'];
 						$sigla = $consultor2['consultants']['acronym'];
 						$cor = $consultor2['consultants']['acronym_color'];
@@ -85,13 +85,13 @@
 				$this -> set ('arrayConsultor2',$arrayConsultor2);
 				
 				//Tuplas da posicao do consultor 3
-				$consultor3PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant3_id = consultants.id and activities.removed != 1 and activities.consultant3_id is not null');			
+				$consultor3PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant3_id = consultants.id and activities.removed != 1 and activities.consultant3_id is not null');			
 				$arrayConsultor3 = array();
 				foreach ($consultor3PadraoId as $consultor3) {
 							
 					if ($consultor3['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
-						$padraoID = $consultor3['activities']['project_id'].'.M.'.$consultor3['activities']['date'].'.'.'3';
+						$padraoID = $consultor3['activities']['project_id'].'.M.'.$consultor3['activities']['start_date'].'.'.'3';
 						$nome = $consultor3['consultants']['name'];
 						$sigla = $consultor3['consultants']['acronym'];
 						$cor = $consultor3['consultants']['acronym_color'];
@@ -99,7 +99,7 @@
 					}
 					if ($consultor3['activities']['end_hours'] > '12:00:00'){
 						$mt = 'T';
-						$padraoID = $consultor3['activities']['project_id'].'.T.'.$consultor3['activities']['date'].'.'.'3';
+						$padraoID = $consultor3['activities']['project_id'].'.T.'.$consultor3['activities']['start_date'].'.'.'3';
 						$nome = $consultor3['consultants']['name'];
 						$sigla = $consultor3['consultants']['acronym'];
 						$cor = $consultor3['consultants']['acronym_color'];
@@ -109,13 +109,13 @@
 				$this -> set ('arrayConsultor3',$arrayConsultor3);
 				
 				//Tuplas da posicao do consultor 4
-				$consultor4PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant4_id = consultants.id and activities.removed != 1 and activities.consultant4_id is not null');			
+				$consultor4PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant4_id = consultants.id and activities.removed != 1 and activities.consultant4_id is not null');			
 				$arrayConsultor4 = array();
 				foreach ($consultor4PadraoId as $consultor4) {
 							
 					if ($consultor4['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
-						$padraoID = $consultor4['activities']['project_id'].'.M.'.$consultor4['activities']['date'].'.'.'4';
+						$padraoID = $consultor4['activities']['project_id'].'.M.'.$consultor4['activities']['start_date'].'.'.'4';
 						$nome = $consultor4['consultants']['name'];
 						$sigla = $consultor4['consultants']['acronym'];
 						$cor = $consultor4['consultants']['acronym_color'];
@@ -123,7 +123,7 @@
 					}
 					if ($consultor4['activities']['end_hours'] > '12:00:00'){
 						$mt = 'T';
-						$padraoID = $consultor4['activities']['project_id'].'.T.'.$consultor4['activities']['date'].'.'.'4';
+						$padraoID = $consultor4['activities']['project_id'].'.T.'.$consultor4['activities']['start_date'].'.'.'4';
 						$nome = $consultor4['consultants']['name'];
 						$sigla = $consultor4['consultants']['acronym'];
 						$cor = $consultor4['consultants']['acronym_color'];
@@ -187,10 +187,10 @@
 	
 	private function insert_activity($projeto_id, $turno, $data, $consultor, $sigla){
 		if ($turno == 'M'){	
-			$this->Home->Activity->query("INSERT INTO `activities`(`description`,`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('-Indefinida-','08:00','12:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
+			$this->Home->Activity->query("INSERT INTO `activities`(`description`,`start_hours`, `end_hours`, `start_date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('-Indefinida-','08:00','12:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
 
 		}else{
-			$this->Home->Activity->query("INSERT INTO `activities`(`description`,`start_hours`, `end_hours`, `date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('-Indefinida-','13:00','17:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
+			$this->Home->Activity->query("INSERT INTO `activities`(`description`,`start_hours`, `end_hours`, `start_date`, `status`, `project_id`, `consultant".$consultor."_id`) VALUES ('-Indefinida-','13:00','17:00','".$data."','Planejada','".$projeto_id."','".$sigla."')");
 		}
 	}
 
@@ -205,7 +205,7 @@
         		$hours_end = '23:59';
         	}
 
-        	if ($this->Home->Activity->query('SELECT * FROM activities WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
+        	if ($this->Home->Activity->query('SELECT * FROM activities WHERE activities.start_date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
         		return TRUE;
         	}
         	else{
@@ -226,10 +226,10 @@
         	}
 
         	if (!$consultant_id) {
-        		$this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = NULL WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id);
+        		$this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = NULL WHERE activities.start_date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id);
         	}
         	else{
-        		$this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = '.$consultant_id.' WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id);
+        		$this->Home->Activity->query('UPDATE activities SET activities.consultant'.$number_consultant.'_id = '.$consultant_id.' WHERE activities.start_date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id);
         	}
 
         } 
@@ -245,7 +245,7 @@
         		$hours_end = '23:59';
         	}
 
-        	if ($this->Home->Activity->query('SELECT * FROM activities WHERE (activities.consultant1_id IS NOT NULL OR activities.consultant2_id IS NOT NULL OR activities.consultant3_id IS NOT NULL OR activities.consultant4_id IS NOT NULL) AND activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
+        	if ($this->Home->Activity->query('SELECT * FROM activities WHERE (activities.consultant1_id IS NOT NULL OR activities.consultant2_id IS NOT NULL OR activities.consultant3_id IS NOT NULL OR activities.consultant4_id IS NOT NULL) AND activities.start_date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
         		return TRUE;
         	}
         	else{
@@ -265,7 +265,7 @@
         		$hours_end = '23:59';
         	}
 
-        	if ($this->Home->Activity->query('DELETE FROM activities WHERE activities.date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
+        	if ($this->Home->Activity->query('DELETE FROM activities WHERE activities.start_date = "'.$date.'" AND activities.start_hours >= "'.$hours_initial.'" AND activities.end_hours <= "'.$hours_end.'" AND activities.project_id = '.$project_id)) {
         		return TRUE;
         	}
         	else{

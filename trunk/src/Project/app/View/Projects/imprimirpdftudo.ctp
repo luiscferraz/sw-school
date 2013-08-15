@@ -32,7 +32,7 @@
 	        <td class="bordaTabela" scope="row">'.$ta['activities']['id'] .'</td>
 	        <td class="bordaTabela" colspan="2">'. $ta['activities']['description'] .'</td>
 	        <td class="bordaTabela" >'. $ta['consultants']['name'] .'</td>
-	        <td class="bordaTabela" >'. $ta['activities']['date'] .'</td>
+	        <td class="bordaTabela" >'. $ta['activities']['start_date'] .'</td>
 	        <td class="bordaTabela" >'. $ta['entries']['type'] .'</td>
 	        <td class="bordaTabela" >'. $ta['entries']['hours_worked'] .'</td>
 	      </tr>';
@@ -93,7 +93,7 @@ if ($filtersName == 'all') {
       <td class="bordaTabela" scope="row">'.$tb['activities']['id'] .'</td>
       <td class="bordaTabela" colspan="2">'.$tb['activities']['description'] .'</td>
       <td class="bordaTabela" >'.$tb['consultants']['name'] .'</td>
-      <td class="bordaTabela" >'.$tb['activities']['date'] .'</td>
+      <td class="bordaTabela" >'.$tb['activities']['start_date'] .'</td>
       <td class="bordaTabela" >'.$tb['entries']['type'] .'</td>
       <td class="bordaTabela" >'.$tb['entries']['hours_worked'] .'</td>
     </tr>';
@@ -152,7 +152,7 @@ if ($filtersName == 'all') {
     <td class="bordaTabela" scope="row">'. $tc['activities']['id'].'</td>
     <td class="bordaTabela" colspan="2">'. $tc['activities']['description'].'</td>
     <td class="bordaTabela" >'. $tc['consultants']['name'].'</td>
-    <td class="bordaTabela" >'. $tc['activities']['date'].'</td>
+    <td class="bordaTabela" >'. $tc['activities']['start_date'].'</td>
     <td class="bordaTabela" >'. $tc['entries']['type'].'</td>
     <td class="bordaTabela" >'. $tc['entries']['hours_worked'].'</td>
   </tr> ';         
