@@ -186,7 +186,8 @@ header('Content-Type: text/html; charset=UTF-8');
 
 			<th>Descrição</th>
 			<th class="responsive">Status</th>
-			<th class="responsive">Data</th>
+			<th class="responsive">Data Inicial</th>
+			<th class="responsive">Data Final</th>
 			<th class="actions">Ações</th>
 		</tr>
 
@@ -216,6 +217,7 @@ header('Content-Type: text/html; charset=UTF-8');
 			<td class="descrição"><?php echo $activity['activities']['description']; ?></td>
 			<td class="status"><?php echo $activity['activities']['status']; ?></td>
 			<td class="data"><?php echo $activity['activities']['start_date']; ?></td>
+			<td class="data"><?php echo $activity['activities']['end_date']; ?></td>
 
 			
 				<td>

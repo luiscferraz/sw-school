@@ -36,7 +36,8 @@
 	<h3 id="titulodados">Horários</h3>
 	<p><span>Hora inicial: </span> <?php echo $activities['Activity']['start_hours']; ?></p>
 	<p><span>Hora final: </span> <?php echo $activities['Activity']['end_hours']; ?></p>
-	<p><span>Data: </span> <?php echo $activities['Activity']['start_date']; ?></p>
+	<p><span>Data Inicial: </span> <?php echo $activities['Activity']['start_date']; ?></p>
+	<p><span>Data Final: </span> <?php echo $activities['Activity']['end_date']; ?></p>
 </div>
 
 <h3 id="ApontamentosEmAtividades">
