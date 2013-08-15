@@ -722,7 +722,7 @@ div.dadosSponsor{
 }
 
 #dadosSepg{
-	margin-top: 0px;
+	margin-top:2px;
 	padding-left: 20px;
 	padding-bottom:17px;
 	float: left;
@@ -735,7 +735,7 @@ div.dadosSponsor{
 }
 
 #dadosDono{
-	margin-top: -0px;
+	margin-top: -244px;
 	padding-left: 20px;
 	float: left;
 	border-width: 30px;
@@ -772,7 +772,7 @@ div.dadosSponsor{
 	background-color: #bcdae0;
 }
 #contato2{
-	margin-top: -183px;
+	margin-top: -186px;
 	border-width: 30px;
 	margin-left:3px;
 	padding-left: 18px;
@@ -782,7 +782,7 @@ div.dadosSponsor{
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
-	padding-bottom:193px;
+	padding-bottom:195px;
 }
 
 @media only screen and(max-width:1150px){
