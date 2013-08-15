@@ -37,97 +37,97 @@
 				}
 
 				//Tuplas da posicao do consultor 1
-				$consultor1PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant1_id = consultants.id and activities.removed != 1 and activities.consultant1_id is not null');			
+				$consultor1PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, activities.description, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant1_id = consultants.id and activities.removed != 1 and activities.consultant1_id is not null');			
 				$arrayConsultor1 = array();
 				foreach ($consultor1PadraoId as $consultor1) {
 							
 					if ($consultor1['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
 						$padraoID = $consultor1['activities']['project_id'].'.M.'.$consultor1['activities']['start_date'].'.'.'1';
-						$nome = $consultor1['consultants']['name'];
+						$descricao = $consultor1['activities']['description'];
 						$sigla = $consultor1['consultants']['acronym'];
 						$cor = $consultor1['consultants']['acronym_color'];
-						$arrayConsultor1[$padraoID]=array($sigla,$cor,$nome);							
+						$arrayConsultor1[$padraoID]=array($sigla,$cor,$descricao);							
 					}
 					if ($consultor1['activities']['end_hours'] > '12:00:00'){
 						$mt = 'T';
 						$padraoID = $consultor1['activities']['project_id'].'.T.'.$consultor1['activities']['start_date'].'.'.'1';
-						$nome = $consultor1['consultants']['name'];
+						$descricao = $consultor1['activities']['description'];
 						$sigla = $consultor1['consultants']['acronym'];
 						$cor = $consultor1['consultants']['acronym_color'];
-						$arrayConsultor1[$padraoID]=array($sigla,$cor,$nome);								
+						$arrayConsultor1[$padraoID]=array($sigla,$cor,$descricao);								
 					}
 				}
 				$this -> set ('arrayConsultor1',$arrayConsultor1);
 				
 				//Tuplas da posicao do consultor 2
-				$consultor2PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant2_id = consultants.id and activities.removed != 1 and activities.consultant2_id is not null');			
+				$consultor2PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, activities.description, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant2_id = consultants.id and activities.removed != 1 and activities.consultant2_id is not null');			
 				$arrayConsultor2 = array();				
 				foreach ($consultor2PadraoId as $consultor2) {
 							
 					if ($consultor2['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
 						$padraoID = $consultor2['activities']['project_id'].'.M.'.$consultor2['activities']['start_date'].'.'.'2';
-						$nome = $consultor2['consultants']['name'];
+						$descricao = $consultor2['activities']['description'];
 						$sigla = $consultor2['consultants']['acronym'];
 						$cor = $consultor2['consultants']['acronym_color'];
-						$arrayConsultor2[$padraoID]=array($sigla,$cor,$nome);						
+						$arrayConsultor2[$padraoID]=array($sigla,$cor,$descricao);						
 					}
 					if ($consultor2['activities']['end_hours'] > '12:00:00'){
 						$mt = 'T';
 						$padraoID = $consultor2['activities']['project_id'].'.T.'.$consultor2['activities']['start_date'].'.'.'2';
-						$nome = $consultor2['consultants']['name'];
+						$descricao = $consultor2['activities']['description'];
 						$sigla = $consultor2['consultants']['acronym'];
 						$cor = $consultor2['consultants']['acronym_color'];
-						$arrayConsultor2[$padraoID]=array($sigla,$cor,$nome);							
+						$arrayConsultor2[$padraoID]=array($sigla,$cor,$descricao);							
 					}
 				}
 				$this -> set ('arrayConsultor2',$arrayConsultor2);
 				
 				//Tuplas da posicao do consultor 3
-				$consultor3PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant3_id = consultants.id and activities.removed != 1 and activities.consultant3_id is not null');			
+				$consultor3PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, activities.description, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant3_id = consultants.id and activities.removed != 1 and activities.consultant3_id is not null');			
 				$arrayConsultor3 = array();
 				foreach ($consultor3PadraoId as $consultor3) {
 							
 					if ($consultor3['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
 						$padraoID = $consultor3['activities']['project_id'].'.M.'.$consultor3['activities']['start_date'].'.'.'3';
-						$nome = $consultor3['consultants']['name'];
+						$descricao = $consultor3['activities']['description'];
 						$sigla = $consultor3['consultants']['acronym'];
 						$cor = $consultor3['consultants']['acronym_color'];
-						$arrayConsultor3[$padraoID]=array($sigla,$cor,$nome);						
+						$arrayConsultor3[$padraoID]=array($sigla,$cor,$descricao);						
 					}
 					if ($consultor3['activities']['end_hours'] > '12:00:00'){
 						$mt = 'T';
 						$padraoID = $consultor3['activities']['project_id'].'.T.'.$consultor3['activities']['start_date'].'.'.'3';
-						$nome = $consultor3['consultants']['name'];
+						$descricao = $consultor3['activities']['description'];
 						$sigla = $consultor3['consultants']['acronym'];
 						$cor = $consultor3['consultants']['acronym_color'];
-						$arrayConsultor3[$padraoID]=array($sigla,$cor,$nome);							
+						$arrayConsultor3[$padraoID]=array($sigla,$cor,$descricao);							
 					}
 				}
 				$this -> set ('arrayConsultor3',$arrayConsultor3);
 				
 				//Tuplas da posicao do consultor 4
-				$consultor4PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant4_id = consultants.id and activities.removed != 1 and activities.consultant4_id is not null');			
+				$consultor4PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, activities.description, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant4_id = consultants.id and activities.removed != 1 and activities.consultant4_id is not null');			
 				$arrayConsultor4 = array();
 				foreach ($consultor4PadraoId as $consultor4) {
 							
 					if ($consultor4['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
 						$padraoID = $consultor4['activities']['project_id'].'.M.'.$consultor4['activities']['start_date'].'.'.'4';
-						$nome = $consultor4['consultants']['name'];
+						$descricao = $consultor4['activities']['description'];
 						$sigla = $consultor4['consultants']['acronym'];
 						$cor = $consultor4['consultants']['acronym_color'];
-						$arrayConsultor4[$padraoID]=array($sigla,$cor,$nome);						
+						$arrayConsultor4[$padraoID]=array($sigla,$cor,$descricao);						
 					}
 					if ($consultor4['activities']['end_hours'] > '12:00:00'){
 						$mt = 'T';
 						$padraoID = $consultor4['activities']['project_id'].'.T.'.$consultor4['activities']['start_date'].'.'.'4';
-						$nome = $consultor4['consultants']['name'];
+						$descricao = $consultor4['activities']['description'];
 						$sigla = $consultor4['consultants']['acronym'];
 						$cor = $consultor4['consultants']['acronym_color'];
-						$arrayConsultor4[$padraoID]=array($sigla,$cor,$nome);								
+						$arrayConsultor4[$padraoID]=array($sigla,$cor,$descricao);								
 					}
 				}
 				$this -> set ('arrayConsultor4',$arrayConsultor4);
