@@ -67,8 +67,6 @@ $('document').ready(function(){
     $('.golinkedit').tipsy();
 
     $('.golinkadd').click(function () {
-        return false;
-    }).dblclick(function () {
         var string = $(this).attr("data-info");
         //alert($(this).attr('href'));
         string = string.replace("/", "-");
@@ -85,8 +83,6 @@ $('document').ready(function(){
     });
 
         $('.golinkedit').click(function () {
-        return false;
-    }).dblclick(function () {
         var string = $(this).attr("data-info");
         //alert($(this).attr('href'));
         string = string.replace("/", "-");
