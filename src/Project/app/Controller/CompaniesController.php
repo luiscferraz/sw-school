@@ -127,7 +127,8 @@ class CompaniesController extends AppController {
       $name  =  $this -> Company -> query ("SELECT * FROM `companies` WHERE acronym = '". $data['Company']['acronym']."'");
       if (empty($name)){} else { $ctr++; $erro = $erro .'Sigla já existente.';};
     
-	  $achouConta  =  $this -> Company -> query ("SELECT * FROM companies_bank_infos WHERE number_account = '".$data['BankInfoCompany']['number_account']."' and number_agency = '".$data['BankInfoCompany']['number_agency']."'");
+	 
+	  $achouConta  =  $this -> Company -> query ("SELECT * FROM companies_bank_infos WHERE ((number_account = '".$data['BankInfoCompany']['number_account']."') and (number_account <> '')) and ((number_agency = '".$data['BankInfoCompany']['number_agency']."') and (number_agency <> '')) ") ;
       if (empty($achouConta)){} else { $ctr++; $erro = $erro . 'Esta conta nesta agência já existe no sistema.';};
 	  
 	  if ($ctr > 0) {
@@ -146,7 +147,8 @@ class CompaniesController extends AppController {
        $name  =  $this -> Company -> query ("SELECT * FROM `companies` WHERE id <> '". $data['Company']['id']."' and acronym = '". $data['Company']['acronym']."'");
       if (empty($name)){} else { $ctr++; $erro = $erro .'Sigla já existente.';};
 
-	  $achouConta  =  $this -> Company -> query ("SELECT * FROM companies_bank_infos WHERE id <> '". $data['BankInfoCompany']['id']."' and number_account = '".$data['BankInfoCompany']['number_account']."' and number_agency = '".$data['BankInfoCompany']['number_agency']."'");
+     
+      $achouConta  =  $this -> Company -> query ("SELECT * FROM companies_bank_infos WHERE id <> '".$data['BankInfoCompany']['id']."' and ((number_account = '".$data['BankInfoCompany']['number_account']."') and (number_account <> '')) and ((number_agency = '".$data['BankInfoCompany']['number_agency']."') and (number_agency <> '')) ") ;
       if (empty($achouConta)){} else { $ctr++; $erro = $erro . 'Esta conta nesta agência já existe no sistema.';};
 	  
 	  if ($ctr > 0) {
