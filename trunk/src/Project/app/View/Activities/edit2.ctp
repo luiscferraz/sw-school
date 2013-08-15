@@ -39,7 +39,8 @@ Atividade - <?php echo $nome_atividade; ?></b>
             
                 <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial: ','required'=>'required', 'id'=>'actvStartHour')); ?>
                 <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final: ','required'=>'required', 'id'=>'actvEndHour')); ?>
-                <?php echo $this->Form->input('Activity.start_date', array('type'=>'text','label' => 'Data: ', 'id'=>'datepicker')); ?>
+                <?php echo $this->Form->input('Activity.start_date', array('type'=>'text','label' => 'Data Inicial: ', 'id'=>'datepicker')); ?>
+                <?php echo $this->Form->input('Activity.end_date', array('type'=>'text','label' => 'Data Final: ', 'id'=>'datepicker2')); ?>
                 
             </fieldset>
             
