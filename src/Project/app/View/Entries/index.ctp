@@ -55,12 +55,17 @@
 					}
 					?>
 
+					<a href="../add/<?php echo $id_atividade."/".$id_projeto ?>">   <?php echo $this->Html->image("clock.png",array('alt'=>'Apontar', 'title' => 'Apontar', 'id' => 'btnRelogio'));?></a>
+
 					<?php 
 					if ((in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) or ($id_consultor_logado === $entry['Entry']['consultant_id'])){
 					echo $this->Html->link($this->Html->image("delete.png", array('alt' => 'Remover', 'title' => 'Excluir')), array('action' => 'delete', $entry['Entry']['id'],$entry['Entry']['activity_id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar exclusão do apontamento?");
 					}
-					?></td>
+					?>
+					
+
+					</td>
 			</div>
 			<td class="actions"> 
 				<?php 
