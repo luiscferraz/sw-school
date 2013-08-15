@@ -10,10 +10,9 @@ USE `swsdb` ;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `swsdb`.`activities` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `start_hours` TIME NOT NULL ,
-  `end_hours` TIME NOT NULL ,
-  `start_date` VARCHAR(10) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
- `end_date` DATE NOT NULL , `observations` MEDIUMTEXT CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
+  `start_hours` TIME NOT NULL , `end_hours` TIME NOT NULL ,
+  `start_date` DATE NOT NULL , `end_date` DATE NOT NULL , 
+  `observations` MEDIUMTEXT CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
   `description` VARCHAR(100) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
   `status` ENUM('Planejada','Em desenvolvimento','Concluída','Cancelada') CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ,
   `project_id` INT(11) NOT NULL ,
