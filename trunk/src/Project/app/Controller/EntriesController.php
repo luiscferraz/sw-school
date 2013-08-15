@@ -20,8 +20,11 @@ class EntriesController extends AppController{
 
  			$id_projeto=$this->Entry->Activity->Project->query("SELECT activities.project_id FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);
 			$this-> set ('id_projeto', $id_projeto[0]['activities']['project_id']);
-		
 
+			$id_atividade=$this->Entry->Activity->Project->query("SELECT activities.id FROM projects,activities WHERE activities.project_id = projects.id and activities.id = ".$id);
+			$this-> set ('id_atividade', $id_atividade[0]['activities']['id']);
+			
+			
 			$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
 			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
 
