@@ -61,6 +61,8 @@ $('document').ready(function(){
 	$("#Owner_phone").mask("(99)9999-9999");
 	$("#Contact_phone").mask("(99)9999-9999");
 	$("#datepicker").mask("99/99/9999");
+	$("#datepicker2").mask("99/99/9999");
+	
 
 	
 	//end mascaras
@@ -109,6 +111,10 @@ $('document').ready(function(){
 	 //calendario no campo data na tela de atividades
 	$(function() {
 	$( "#datepicker" ).datepicker();
+	});
+	
+	$(function() {
+	$( "#datepicker2" ).datepicker();
 	});
 
 

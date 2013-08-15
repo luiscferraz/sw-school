@@ -43,7 +43,8 @@
             <fieldset id="Dados_projeto_pai">
                 <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvStartHour', 'onblur' => 'checkHour()')); ?>
                 <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvEndHour', 'onblur' => 'checkHour()')); ?>
-                <?php echo $this->Form->input('Activity.start_date', array('type'=>'text','label' => 'Data <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'datepicker', 'onblur' => 'checkDate(this)')); ?>
+                <?php echo $this->Form->input('Activity.start_date', array('type'=>'text','label' => 'Data Inicial<sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'datepicker', 'onblur' => 'checkDate(this)')); ?>
+                <?php echo $this->Form->input('Activity.end_date', array('type'=>'text','label' => 'Data Final <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'datepicker2', 'onblur' => 'checkDate(this)')); ?>
             </fieldset>
         
             <?php echo $this->Form->end('Confirmar Cadastro'); ?>
