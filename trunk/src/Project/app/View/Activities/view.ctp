@@ -36,8 +36,8 @@
 	<h3 id="titulodados">Horários</h3>
 	<p><span>Hora inicial: </span> <?php echo $activities['Activity']['start_hours']; ?></p>
 	<p><span>Hora final: </span> <?php echo $activities['Activity']['end_hours']; ?></p>
-	<p><span>Data Inicial: </span> <?php echo $activities['Activity']['start_date']; ?></p>
-	<p><span>Data Final: </span> <?php echo $activities['Activity']['end_date']; ?></p>
+	<p><span>Data Inicial: </span> <?php echo implode('/', array_reverse(explode('-', $activities['Activity']['start_date']))); ?></p>
+	<p><span>Data Final: </span> <?php echo implode('/', array_reverse(explode('-', $activities['Activity']['end_date']))); ?></p>
 </div>
 
 <h3 id="ApontamentosEmAtividades">
@@ -77,6 +77,7 @@
 			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
 			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
 			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
+			
 			<div>
 				<td class="actions">
 					<?php
