@@ -149,7 +149,7 @@ $(document).ready(function(){
         $idPrj = $project['Project']['id'];
 		
 
-        echo '<a class="fancybox fancybox.iframe" alt="Editar" id="link" href="./Projects/edit/'.$idPrj.'"><img src="./img/edit.png"  alt="Editar" title="Editar" id="btnEdit" ></a>';
+        echo '<a alt="Editar" id="link" href="./Projects/edit/'.$idPrj.'"><img src="./img/edit.png"  alt="Editar" title="Editar" id="btnEdit" ></a>';
 
       }
       ?>        
