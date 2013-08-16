@@ -360,7 +360,7 @@ for ($dia = 0; $dia <= $dias; $dia++) {
 	$ver = date('D',$dataFinal);
 	if ($ver == 'Mon'){
 		//se for Segunda-feira, mescla 10 colunas a direita com o nome do mes, depois 2 colunas cinzas (final de semana)
-		echo '<td bgcolor="White"style="height:25px" colspan="10" ',$bgColorMes,'>';
+		echo '<td style="background-image: -webkit-gradient(linear, right top, left bottom, from(#fff8dc), to(#f4e9bd));" style="height:25px" colspan="10" >';
 		echo date('<b>F',$dataFinal);
 		echo '&nbsp;-&nbsp;';
 		echo date('Y</b>',$dataFinal);
