@@ -15,6 +15,7 @@ class CompaniesController extends AppController {
 	
 	public function add()
   {
+  	if ($this->Auth->user('type') == 'admin'){
     $this->set('title_for_layout', 'Empresas');
     $this -> layout = 'basemodalint';
     if($this->request->is('post'))
@@ -28,9 +29,18 @@ class CompaniesController extends AppController {
         }
       } 
     }
+  }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
   }
+}
 	
 	public function edit($id = NULL){
+
+		if ($this->Auth->user('type') == 'admin'){
+    	if ($this->Company->query('SELECT id FROM companies where id = ' .$id. ' and removed = 0')){
 
 		$this->layout = 'base';
 
@@ -61,19 +71,40 @@ class CompaniesController extends AppController {
 				}
 				}
 				
-	}
+	}else {
+$this->Session->setFlash($this->flashError('Empresa inválida'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+ }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
 
 	
 	
 	public function delete($id = NULL){
+
+		if ($this->Auth->user('type') == 'admin'){
 		$this->Company->id = $id;
 		$this->Company->saveField('removed',1);
 		$this->Session->setFlash($this->flashSuccess('Empresa removida com sucesso!'));
 		$this->redirect('/Companies');
-	}
+	}else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
 	
 
 	public function view($id){
+
+		if ($this->Company->query('SELECT id FROM companies where id = ' .$id. ' and removed = 0')){
 		$this->set('title_for_layout', 'Empresas');
 		$this->Company->id = $id;
 		$this->layout = 'basemodalint';
@@ -82,7 +113,12 @@ class CompaniesController extends AppController {
 	    if ($this->request->is('get')) {
 	        $this->set('company', $this->Company->read());
 	    }
-	}
+	}else {
+$this->Session->setFlash($this->flashError('Empresa inválida'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+}
 	
 	public function report(){
 		$this->set('title_for_layout', 'Empresas');
