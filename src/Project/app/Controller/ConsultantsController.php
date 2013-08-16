@@ -21,6 +21,8 @@
  	}
  	
  	public function view($id = null){
+
+    if ($this->Consultant->query('SELECT id FROM consultants where id = ' .$id. ' and removed = 0')){
     $this->set('title_for_layout', 'Consultores');
  		 $this -> layout = 'basemodalint';
 		 $this-> set ('tipo_usuario',$this->Auth->user('type'));	
@@ -33,10 +35,16 @@
         }
         $this ->set('projects', $this->Consultant->ProjectConsultant->query('SELECT projects.id, projects.name, projects.description, projects.acronym FROM projects, project_consultants WHERE project_consultants.consultant_id = ' .$id. ' AND project_consultants.project_id = projects.id AND projects.removed != 1'));
         $this ->set('consultant',$consultant);
- 	}
+ 	}else {
+$this->Session->setFlash($this->flashError('Consultor inválido'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+}
  	
  	public function add()
   {
+    if ($this->Auth->user('type') == 'admin'){
     $this->set('title_for_layout', 'Consultores');
     $this -> layout = 'basemodalint';
     if($this->request->is('post'))
@@ -50,7 +58,13 @@
         }
       } 
     }
+  }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
   }
+}
 
    public function verific($data){
       $ctr = 0;
@@ -93,7 +107,9 @@
       }
    }
    public function edit($id = NULL)
-   {
+  {
+    if ($this->Auth->user('type') == 'admin'){
+    if ($this->Consultant->query('SELECT id FROM consultants where id = ' .$id. ' and removed = 0')){
     $this->set('title_for_layout', 'Consultores');
 		$this->layout = 'base';
 		$this->Consultant->id = $id;
@@ -118,16 +134,36 @@
 				  $this->redirect(array('action' => 'index'));
         }
 			}
-		}
-   }
+		} 
+   }else {
+$this->Session->setFlash($this->flashError('Consultor inválido'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+ }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
+
+
    public function delete($id = NULL)
    {
+    if ($this->Auth->user('type') == 'admin'){
 		$this->Consultant->id = $id;
 		if($this->Consultant->saveField("removed", "true")){
 			$this->Session->setFlash($this->flashSuccess('O consultor foi deletado!'));
 			$this->redirect(array('action' => 'index'));
 		}
-   }
+   }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
 
 
 
