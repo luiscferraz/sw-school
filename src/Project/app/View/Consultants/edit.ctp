@@ -27,6 +27,18 @@ textinput.value = fileinput.value;
 					<?php echo $this->Form->input('Consultant.phone2', array('label' => 'Celular <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required')); ?>
 					<?php echo $this->Form->input('Consultant.email', array('type' => 'email','label' => 'E-mail <sup title="Campo obrigatório" class="obrigatorio">*</sup>: ', 'required'=>'required', 'id'=>'email')); ?>					
 			</fieldset>
+			<fieldset id="dados_bancarios_edit_consultor">
+					<legend class="legenda">Dados Bancários</legend>
+
+						<?php echo $this->Form->input('BankInfoConsultant.id', array('type' => 'hidden')); ?>
+						
+						<?php echo $this->Form->input('BankInfoConsultant.name_bank', array('label' => 'Nome do Banco: ', 'id'=>'BankInfoConsultant.name_bank')); ?>
+				
+						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ', 'id'=>'BankInfoConsultant.number_agency')); ?>
+
+						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoConsultant.number_account')); ?>
+											
+				</fieldset>
 			</div>
 			<div class="right">
 			<fieldset id="enderecoAddConsultor">
@@ -53,25 +65,14 @@ textinput.value = fileinput.value;
             		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
  
  	 
-	<?php echo $this->Html->image('consultant.jpg')?>
+					<?php echo $this->Html->image('consultant.jpg')?>
 		
-		<input type="file" id="foto" name="fileupload" style="display: none" onChange="Handlechange();" action="Foto"/>
-    	<input type="button" value="Foto" id="fakeBrowse" onclick="HandleBrowseClick();"/>
+					<input type="file" id="foto" name="fileupload" style="display: none" onChange="Handlechange();" action="Foto"/>
+    				<input type="button" value="Foto" id="fakeBrowse" onclick="HandleBrowseClick();"/>
 
-    </fieldset>
+    		</fieldset>
 
-    <fieldset id="dados_bancarios_edit_consultor">
-					<legend class="legenda">Dados Bancários</legend>
-
-						<?php echo $this->Form->input('BankInfoConsultant.id', array('type' => 'hidden')); ?>
-						
-						<?php echo $this->Form->input('BankInfoConsultant.name_bank', array('label' => 'Nome do Banco: ', 'id'=>'BankInfoConsultant.name_bank')); ?>
-				
-						<?php echo $this->Form->input('BankInfoConsultant.number_agency', array('label' => 'Número da Agência: ', 'id'=>'BankInfoConsultant.number_agency')); ?>
-
-						<?php echo $this->Form->input('BankInfoConsultant.number_account', array('label' => 'Número da Conta: ', 'id'=>'BankInfoConsultant.number_account')); ?>
-											
-				</fieldset>
+    
 
 			</div>
 			<?php echo $this->Form->end('Salvar Edição'); ?>
