@@ -20,7 +20,7 @@
 	        }
  			$this -> layout = 'basemodal';
  			//$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1,'Activity.project_id =' => $id),'order'=>array('Project.name','Activity.description'))));
- 			$activities = $this->Activity->query("select id, project_id, description, status, start_date from activities where removed != 1 and project_id = '".$id."' order by concat(substring(start_date,7,4) , substring(start_date,4,2), substring(start_date,1,2) ) DESC");
+ 			$activities = $this->Activity->query("select id, project_id, description, status, start_date, end_date from activities where removed != 1 and project_id = '".$id."' order by end_date DESC");
 	 		$this -> set ('activities',$activities);
  			$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 			$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
@@ -59,6 +59,8 @@
 		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
 	 	$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 	 	if($this->request->is('post')){
+	 	   $this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
+	 	   $this->request->data['Activity']['end_date'] = $this -> inverteIngles1($this->request->data['Activity']['end_date']);
 	 		if ($this -> verifica($this->request->data)) {
 		 		if($this->Activity->saveAll($this->request->data)){
 		 			$this->Session->setFlash($this->flashSuccess('A atividade foi adicionada com sucesso.'));
@@ -73,10 +75,31 @@
 	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
 		
 	 	}			 	
-
-	 	
 	 }
-	 
+	    public function inverteIngles1($data) {
+ 		$dataAtividade = $this->request->data['Activity']['start_date'];
+		list ($dia, $mes, $ano) = split ('[-./]', $dataAtividade);
+		$data_trocada = $ano . '/' . $mes . '/' . $dia;
+		return $data_trocada;
+ 	}
+ 	    public function invertePortugues1($data) {
+ 		$dataAtividade = $this->request->data['Activity']['start_date'];
+		list ($dia, $mes, $ano) = split ('[-./]', $dataAtividade);
+		$data_trocada = $ano . '/' . $mes . '/' . $dia;
+		return $data_trocada;
+ 	}
+    public function inverteIngles2($data) {
+ 		$dataAtividade1 = $this->request->data['activity']['end_date'];
+		list ($dia, $mes, $ano) = split ('[-/-]', $dataAtividade1);
+		$data_trocada1 = $ano . '/' . $mes . '/' . $dia;
+		return $data_trocada1;
+ 	}
+ 	    public function invertePortugues2($data) {
+ 		$dataAtividade1 = $this->request->data['Activity']['end_date'];
+		list ($dia, $mes, $ano) = split ('[-./]', $dataAtividade1);
+		$data_trocada1 = $ano . '/' . $mes . '/' . $dia;
+		return $data_trocada1;
+ 	}
 	public function verifica($data) {
 		$ctr = 0;
 		$strerro = '';
@@ -187,11 +210,13 @@
 		
 		if ($this->request->is('get')) {
 			$this->request->data = $this->Activity->read();
+			$this->request->data['Activity']['start_date'] = $this -> invertePortugues1($this->request->data['Activity']['start_date']);
+			$this->request->data['Activity']['end_date'] = $this -> invertePortugues2($this->request->data['Activity']['end_date']);
 		}
-		
 		else{			
 			$this->Activity->id = $id;
-
+			$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
+            $this->request->data['Activity']['end_date'] = $this -> inverteIngles2($this->request->data['Activity']['end_date']);
 			if ($this -> verificaedit($this->request->data)){
 
 				if ($this->Activity->saveAll($this->request->data)) {

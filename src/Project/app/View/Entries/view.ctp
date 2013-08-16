@@ -28,7 +28,7 @@
 <div id="dados">
 	<h3 id="titulodados">Horários</h3>
 	<p><span>Horas trabalhadas: </span> <?php echo $entries['Entry']['hours_worked']; ?></p>
-	<p><span>Data: </span> <?php echo implode('-', array_reverse(explode('-', $entries['Entry']['date']))); ?></p>
+	<p><span>Data: </span> <?php echo implode('/', array_reverse(explode('-', $entries['Entry']['date']))); ?></p>
 </div>
 
 
