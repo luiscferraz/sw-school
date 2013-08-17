@@ -49,6 +49,8 @@
 	}
 	
 	public function add($id){
+
+		if ($this->Auth->user('type') == 'admin'){
 	 	$this->layout = 'basemodalint';
 	 	$this-> set ('id',$id);
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
@@ -75,7 +77,13 @@
 	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
 		
 	 	}			 	
-	 }
+	 }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
 	    public function inverteIngles1($data) {
  		$dataAtividade = $this->request->data['Activity']['start_date'];
 		list ($dia, $mes, $ano) = split ('[/.-]', $dataAtividade);
@@ -176,12 +184,19 @@
 	}
 
 	public function delete($id = NULL, $id_projeto){
+		if ($this->Auth->user('type') == 'admin'){
 		$this->Activity->id = $id;
 		if($this->Activity->saveField("removed", "true")){
 			$this->Session->setFlash($this -> flashSuccess('A atividade foi removida com sucesso!'));
 			$this->redirect(array('action' => 'index/'.$id_projeto));
 		}
-	}
+	}else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
 
 	public function eliminate($id = NULL, $id_projeto)
 {
@@ -195,6 +210,9 @@
 }
 	
 	public function edit($id = NULL, $id_projeto){
+
+		if ($this->Auth->user('type') == 'admin'){
+    	if ($this->Activity->query('SELECT id FROM activities where id = ' .$id. ' and removed = 0')){
 		$this->layout = 'basemodalint';
 		$this-> set ('id',$id);
 		$this-> set ('id_projeto',$id_projeto);		
@@ -235,10 +253,22 @@
 		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);		
 			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 	   
-	}
+	}else {
+$this->Session->setFlash($this->flashError('Atividade inválido'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+ }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
 	
 	public function view($id){
 
+		if ($this->Activity->query('SELECT id FROM activities where id = ' .$id. ' and removed = 0')){
 		$this->Activity->id = $id;
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
 		$this->layout = 'basemodalint';
@@ -264,7 +294,12 @@
 		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);					
 			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 
-	}
+	}else {
+$this->Session->setFlash($this->flashError('Atividade inválida'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+}
 
 
 	public function add2($idX){
