@@ -41,6 +41,7 @@
 
 
  	public function add(){
+ 		if ($this->Auth->user('type') == 'admin'){
  		$this->set('title_for_layout', 'Projetos');
  		$this->layout = 'basemodalint';
  		
@@ -60,9 +61,19 @@
  				$this-> set ('companies',$this->Project->Company->find('all', array('conditions'=> array('Company.removed !=' => 1))));
  				$this-> set ('projects',$this->Project->find('all', array('conditions'=> array('Project.removed !=' => 1))));
  		}
- 	}
+ 	}else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
 	
 	public function edit($id = NULL){
+
+
+		if ($this->Auth->user('type') == 'admin'){
+    	if ($this->Project->query('SELECT id FROM projects where id = ' .$id. ' and removed = 0')){
 		$this->set('title_for_layout', 'Projetos');
 		$this->layout = 'basemodal';
 		$this->Project->id = $id;
@@ -87,9 +98,21 @@
 		}
 		$nome_projeto = $this->Project->query("SELECT projects.name FROM projects WHERE  projects.id = ".$id);
 		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);	
-	}
+	}else {
+$this->Session->setFlash($this->flashError('Projeto inválido'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+ }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
 	
 	public function delete($id = NULL){
+		if ($this->Auth->user('type') == 'admin'){
 		$this->Project->id = $id;
 		if($this->Project->saveField("removed", "true")){
 			$this->Session->setFlash($this->flashSuccess('Projeto excluido com sucesso!'));
@@ -98,10 +121,18 @@
 		else {
 			$this->Session->setFlash($this->flashError('Erro ao excluir projeto.'));
 		}
-	}
+	}else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
  	
  	
  	public function view($id = null){
+
+    	if ($this->Project->query('SELECT id FROM projects where id = ' .$id. ' and removed = 0')){
  		$this->set('title_for_layout', 'Projetos');
 		$this -> layout = 'base';
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));	
@@ -121,7 +152,12 @@
         $this -> set('projects', $this->Project->find('all',array('conditions' =>array('Project.parent_project_id =' =>$id))));
 	$this -> set ('activities', $this-> Project-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1, 'Activity.project_id = ' => $id)))); 
         $this ->set('project',$Projects);
- 	}
+ 	}else {
+$this->Session->setFlash($this->flashError('Projeto inválido'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+}
  	
  	public function alocados($id=null){
  		$this -> layout = 'basemodal';
