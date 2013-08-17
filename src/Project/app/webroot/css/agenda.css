@@ -110,7 +110,7 @@ body {
 }
 
 
-/* ==================BOTÃO CADASTRAR ATIVIDADE===============*/
+/* ==================BOTÃO CADASTRAR ATIVIDADE ===============*/
 #botao-cadastrar-atividade{
         float: right;
         padding:10px 5px;
@@ -146,8 +146,8 @@ body {
 	margin: 0px;
     float: left;
     padding:10px 10px;
-	margin-left: 2%;
-	margin-right: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
 	cursor : pointer;
 
 }
@@ -173,7 +173,14 @@ body {
 
 #buscar{
 		cursor: pointer;
-        margin-right: 19%;
+        margin-right: 2%;
+        float: right;
+        padding:10px 5px;
+}
+	
+#cadastrar-atividade{
+		cursor: pointer;
+        margin-right: 2%;
         float: right;
         padding:10px 5px;
 }
