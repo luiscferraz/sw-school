@@ -1286,6 +1286,44 @@ div.dadosSponsor{
 	
 }
 
+#cadastro{
+	background-color: #bcdae0;
+	border: 0px;
+	width: 100%;
+	margin-bottom: 10px;
+	position: center;
+	padding-right: 2px;
+
+	
+}
+#projeto,#atividade,#consultor{
+	border: 0px;
+	width: 90px;
+	float: left;
+	background-color: #bcdae0;
+	font-size: 12px;
+}
+#data1{
+	border: 0px;
+	width: 75px;
+	float: left;
+	background-color: #bcdae0;
+	font-size: 12px;
+	padding-right: 2px;
+	padding-left: 2px;
+	margin-left: 12px;
+}
+#hora1{
+	border: 0px;
+	width: 75px;
+	float: left;
+	background-color: #bcdae0;
+	font-size: 12px;
+	padding-right: 2px;
+	padding-left: 2px;
+	margin-left: 12px;
+}
+
 
 #tabela_atividades{
 	width: 100%;
