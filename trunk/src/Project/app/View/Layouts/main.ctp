@@ -68,20 +68,19 @@ if( !isset($date_submit)){
 
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
 <form id = "ProjectsAddForm" method = "post" action = "home">
-	
+
+<a href="../../activities/add3" class="fancybox fancybox.iframe" ><input type="button" value="Cadastrar atividade" id="cadastrar-atividade" class="botao" ></a> 
 
 <div class = "submit">
-
 <input type="submit" value="Buscar" id="buscar" class="botao"/>
-</div
+</div>
 
 
-<?php 
+ <?php 
 	
 	echo $this->Form->input('Project.id',array('options' =>  $list_projects,'type' => 'select', 'empty' => '--Selecione um projeto--','label' => '', 'id' => 'projects')); 
     	
- ?>		
-			
+ ?> 
 <br>		
 <?php
 
