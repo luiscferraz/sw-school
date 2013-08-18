@@ -48,9 +48,9 @@
 	
 	}
 	
-	public function add($id){
+	public function add($id ){
 
-		if ($this->Auth->user('type') == 'admin'){
+
 	 	$this->layout = 'basemodalint';
 	 	$this-> set ('id',$id);
 		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
@@ -77,13 +77,8 @@
 	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
 		
 	 	}			 	
-	 }else {
-$this->Session->setFlash($this->flashError('Acesso restrito'));
-          $this->redirect(array('action' => 'index'));
+	 }
 
-
-  }
-}
 	    public function inverteIngles1($data) {
  		$dataAtividade = $this->request->data['Activity']['start_date'];
 		list ($dia, $mes, $ano) = split ('[/.-]', $dataAtividade);
@@ -200,13 +195,20 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 
 	public function eliminate($id = NULL, $id_projeto)
 {
- 
+
+		if ($this->Auth->user('type') == 'admin'){
 		if($this->Activity->delete($id))
 {
 			$this->Session->setFlash($this->flashSuccess('Atividade deletada!'));
    			$this->redirect(array('action' => 'index/'.$id_projeto));
 }
 
+}else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
 }
 	
 	public function edit($id = NULL, $id_projeto){
@@ -254,7 +256,7 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 	   
 	}else {
-$this->Session->setFlash($this->flashError('Atividade inválido'));
+$this->Session->setFlash($this->flashError('Atividade inválida'));
           $this->redirect(array('action' => 'index'));
 
   }
@@ -379,6 +381,7 @@ $this->Session->setFlash($this->flashError('Atividade inválida'));
  	}
 
 	 public function edit2($idX){
+
 	 	echo $idX;
 	 	//1.M.18-07-2013.1.MS
 	 	list ($id_projeto, $per, $dia, $mes, $ano, $consultant_id, $sigla_consultor) = split ('[/.-]', $idX);
