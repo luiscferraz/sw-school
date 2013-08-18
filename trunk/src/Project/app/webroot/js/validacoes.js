@@ -193,10 +193,10 @@ function checkHour(){
     eEndHour.setCustomValidity("");
 
     // verifica se hora inicial é maior que hora final
-    if (startHour > endHour) {
+    //if (startHour > endHour) {
         //alert(startHour.toString() + endHour.toString());
-        eStartHour.setCustomValidity("Hora inicial não pode ser maior que a final!");
-    }
+        //eStartHour.setCustomValidity("Hora inicial não pode ser maior que a final!");
+    //}
         // verifica hora inicial
         else if(startHour > 23.99 || startMinute >= 60 ){
         //alert(startHour.toString() + endHour.toString());
