@@ -115,12 +115,16 @@
 			$this->request->data['Activity']['end_date'] = $this -> inverteIngles2($this->request->data['Activity']['end_date']);
 		}
 
-		elseif ($data['Activity']['start_date'] = $data['Activity']['end_date']) {
+		elseif ($data['Activity']['start_date'] == $data['Activity']['end_date']) {
 			//Hora final não pode ser menor que a hora inicial.
 			if ($data['Activity']['start_hours'] > $data['Activity']['end_hours']) {
 				$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
 				$this->request->data['Activity']['end_date'] = $this -> inverteIngles2($this->request->data['Activity']['end_date']);
 				$strerro = $strerro . 'A hora inicial não pode ser maior que a hora final.</br>';
+				//$strerro = $strerro . ' +++++ ';
+				//$strerro = $strerro . $data['Activity']['start_date'];
+				//$strerro = $strerro . ' & ';
+				//$strerro = $strerro . $data['Activity']['end_date'];
 				$ctr ++;
 			}
 			//Hora inicial não pode ser igual a Hora final.
@@ -176,19 +180,24 @@
 		//Se a Data inicial for maior que a Data final, não permite cadastrar.
 		if ($data['Activity']['start_date'] > $data['Activity']['end_date']) {
 			$ctr ++;
-			$strerro = $strerro . 'Data Inicial maior que Data Final.</br>';
 			$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
 			$this->request->data['Activity']['end_date'] = $this -> inverteIngles2($this->request->data['Activity']['end_date']);
+			$strerro = $strerro . 'Data Inicial maior que Data Final.</br>';
 		}
 
-		elseif ($data['Activity']['start_date'] = $data['Activity']['end_date']) {
+		elseif ($data['Activity']['start_date'] == $data['Activity']['end_date']) {
 			//Hora final não pode ser menor que a hora inicial.
 			if ($data['Activity']['start_hours'] > $data['Activity']['end_hours']) {
 				$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
 				$this->request->data['Activity']['end_date'] = $this -> inverteIngles2($this->request->data['Activity']['end_date']);
 				$strerro = $strerro . 'A hora inicial não pode ser maior que a hora final.</br>';
+				$strerro = $strerro . ' +++++ ';
+				$strerro = $strerro . $data['Activity']['start_date'];
+				$strerro = $strerro . ' & ';
+				$strerro = $strerro . $data['Activity']['end_date'];	
 				$ctr ++;
 			}
+
 			//Não é permitido que a hora inicial seja igual a hora final
 			elseif ($data['Activity']['start_hours'] == $data ['Activity']['end_hours']){
 				$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
@@ -196,11 +205,8 @@
 				$strerro = $strerro . 'A hora inicial não pode ser igual a hora final.</br>';
 				$ctr ++;
 			};
-			
-				
-			};			
-		
 
+		};
 
 		//Se a atividade for 'Em desenvolvimento'  a data não pode ser depois do dia do cadastramento.
 		if ($data['Activity']['status'] == 'Em desenvolvimento') {
