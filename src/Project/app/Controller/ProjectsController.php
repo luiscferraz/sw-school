@@ -160,6 +160,9 @@ $this->Session->setFlash($this->flashError('Projeto inválido'));
 }
  	
  	public function alocados($id=null){
+ 		
+ 		if ($this->Auth->user('type') == 'admin'){
+    	if ($this->Project->query('SELECT id FROM projects where id = ' .$id. ' and removed = 0')){
  		$this -> layout = 'basemodal';
  		if($this->request->is('post')){
 	 			if($this->Project->saveAll($this->request->data)){
@@ -177,7 +180,19 @@ $this->Session->setFlash($this->flashError('Projeto inválido'));
  		}
  		$nome_projeto = $this->Project->query("SELECT projects.name FROM projects WHERE  projects.id = ".$id);
 		$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);	
- 	}
+ 	}else {
+$this->Session->setFlash($this->flashError('Projeto inválido'));
+          $this->redirect(array('action' => 'index'));
+
+  }
+ }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
+
 
  	public function deleteconsultor($id){
  		$pro = $this->Project->ProjectConsultant->findById($id);
