@@ -213,7 +213,6 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 	
 	public function edit($id = NULL, $id_projeto){
 
-		if ($this->Auth->user('type') == 'admin'){
     	if ($this->Activity->query('SELECT id FROM activities where id = ' .$id. ' and removed = 0')){
 		$this->layout = 'basemodalint';
 		$this-> set ('id',$id);
@@ -260,13 +259,7 @@ $this->Session->setFlash($this->flashError('Atividade inválida'));
           $this->redirect(array('action' => 'index'));
 
   }
- }else {
-$this->Session->setFlash($this->flashError('Acesso restrito'));
-          $this->redirect(array('action' => 'index'));
-
-
-  }
-}
+ }
 	
 	public function view($id){
 
