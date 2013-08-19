@@ -16,15 +16,15 @@ foreach ($projects as $project)
 		<?php echo $this->Html->css('smoothness/jquery-ui-1.8rc3.custom'); ?>
 		<?php echo $this->Html->css('tipsy'); ?>
 		<?php echo $this->Html->css('demo'); ?>		
-		<?php echo $this->Html->css('agenda'); ?>		
-		<?php echo $this->Html->css('jquery.fancybox_agenda'); ?>		
+		<?php echo $this->Html->css('agenda'); ?>	
+		<?php echo $this->Html->css('jquery.fancybox_agenda'); ?>	
 		<?php echo $this->Html->script('jquery-1.7.1.min'); ?>
 	    <?php echo $this->Html->script('jquery-ui-1.8rc3.custom.min'); ?>
 	    <?php echo $this->Html->script('jquery.tipsy'); ?>
 		<?php echo $this->Html->script('agenda'); ?>	    
 	    <?php echo $this->Html->script('aplicacao'); ?>
 		<?php echo $this->Html->script('jquery.fancybox_agenda'); ?>
-
+		
 		
 
 	</head>
@@ -69,7 +69,7 @@ if( !isset($date_submit)){
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
 <form id = "ProjectsAddForm" method = "post" action = "home">
 
-<a href="../../activities/add3" class="fancybox fancybox.iframe" ><input type="button" value="Cadastrar atividade" id="cadastrar-atividade" class="botao" ></a> 
+<a href="../../activities/add3" ><input type="button" value="Cadastrar atividade" id="cadastrar-atividade" class="botao" ></a> 
 
 <div class = "submit">
 <input type="submit" value="Buscar" id="buscar" class="botao"/>

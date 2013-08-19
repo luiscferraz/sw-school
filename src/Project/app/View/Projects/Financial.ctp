@@ -87,7 +87,7 @@ textinput.value = fileinput.value;
         	<td></td>
         	<td></td>
         	<td>
-        		<a class="fancybox fancybox.iframe" href="./Attachments/index/"><?php echo $this->Html->image("attachment.png", array('alt' => 'Anexo','title' => 'Anexo', 'id' => 'btnAnexo'))?></a>
+        		<!--<a class="fancybox fancybox.iframe" href="./Attachments/index/"><?php echo $this->Html->image("attachment.png", array('alt' => 'Anexo','title' => 'Anexo', 'id' => 'btnAnexo'))?></a>-->
         	</td>
         </tr>
 
