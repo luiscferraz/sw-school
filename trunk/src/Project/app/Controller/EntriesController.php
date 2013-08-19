@@ -105,11 +105,12 @@ class EntriesController extends AppController{
 		}
 	}
 
- 	public function approve($id = NULL){
+ 	public function approve($id = NULL, $id_atividade){
 		$this->Entry->id = $id;
+		$this-> set ('id_atividade',$id_atividade);
 		if($this->Entry->saveField("approved",1)){
 			$this->Session->setFlash($this->flashSuccess('O apontamento foi aprovado!'));
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('action' => 'index/'.$id_atividade));
 		}
 	}
 	
