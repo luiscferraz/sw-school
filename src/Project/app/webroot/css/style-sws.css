@@ -29,6 +29,15 @@ h1, h2, h3{
 	margin-left: 2px;
 	border-bottom:3px solid #5F9EA0;
 }
+h4{
+	clear:both;
+    color: #5F9EA0; 
+	padding-top: 4px;
+    padding-bottom: 5px;
+	margin-bottom: 10px;
+	margin-left: 2px;
+	border-bottom:3px solid #5F9EA0;
+}
 
 h2{
 	color: #5F9EA0; 
@@ -353,7 +362,7 @@ p span {
 #dados_pessoais{
 	padding-left: 20px;
 	border-width: 30px;
-	width: 520px;
+	width: 540px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
@@ -362,7 +371,7 @@ p span {
 #dados_pessoais_edit{
 	padding-left: 20px;
 	border-width: 30px;
-	width: 520px;
+	width: 540px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
@@ -372,18 +381,18 @@ p span {
 #enderecoAddConsultor{
 	padding-left: 20px;
 	border-width: 30px;
-	width: 520px;
+	width: 540px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
-	padding-bottom: 50px;
+	padding-bottom: 56px;
 }
 
 #dados_bancarios_add_consultor{
 	
 	padding-left: 20px;
 	border-width: 30px;
-	width: 520px;
+	width: 540px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
@@ -394,11 +403,11 @@ p span {
 	
 	padding-left: 20px;
 	border-width: 30px;
-	width: 520px;
+	width: 540px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
-	padding-bottom: 175px;
+	padding-bottom: 10px;
 }
 
 
@@ -478,20 +487,22 @@ p span {
 	margin-right: 1px;
 	padding-left: 20px;
 	border-width: 30px;
-	width: 520px;
+	width: 540px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
+	padding-bottom: 53px;
 
 }
 
 #usuario_edit{
 	padding-left: 20px;
 	border-width: 30px;
-	width: 520px;
+	width: 540px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
+	padding-bottom: 40px;
 
 }
 
@@ -678,7 +689,7 @@ div.dadosSponsor{
 	padding-left: 20px;
 	padding-bottom:30px;
 	border-width: 30px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	border-color: #000;
 	background-color: #bcdae0;
@@ -689,7 +700,7 @@ div.dadosSponsor{
 	padding-left: 20px;
 	padding-bottom:20px;
 	border-width: 30px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	border-color: #000;
 	background-color: #bcdae0;
@@ -700,7 +711,7 @@ div.dadosSponsor{
 #dadosSponsor{
 	padding-left: 20px;
 	border-width: 30px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	border-color: #000;
 	background-color: #bcdae0;
@@ -711,7 +722,7 @@ div.dadosSponsor{
 	padding-left: 20px;
 	padding-bottom:17px;
 	border-width: 30px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	border-color: #000;
 	background-color: #bcdae0;
@@ -722,7 +733,7 @@ div.dadosSponsor{
 	padding-left: 20px;
 	padding-bottom:17px;
 	border-width: 30px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
@@ -733,7 +744,7 @@ div.dadosSponsor{
 	
 	padding-left: 20px;
 	border-width: 30px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
@@ -744,7 +755,7 @@ div.dadosSponsor{
 	
 	padding-left: 20px;
 	border-width: 30px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
@@ -754,7 +765,7 @@ div.dadosSponsor{
 	padding-left:300px;
 	border-width: 30px;
 	padding-right:10px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	padding-left: 20px;
 	padding-bottom: 10px;
@@ -766,14 +777,14 @@ div.dadosSponsor{
 	border-width: 30px;
 	padding-left: 18px;
 	padding-right:14px;
-	width: 530px;
+	width: 550px;
 	border: 30px;
 	border-color: #FFFFFF;
 	background-color: #bcdae0;
 	padding-bottom:193px;
 }
 
-@media only screen and(max-width:1450px){
+@media only screen and(max-width:1400px){
 	#dadosEmpresa,#dadosEndereco,#dadosSponsor,#dadosFinanceiros,#dadosSepg,#dadosDono,#dados_bancarios_add_empresa,#contato,#contato2{
 		width: 480px;
 	}
@@ -1366,7 +1377,7 @@ div.dadosSponsor{
 	padding-left: 15px;
 	border-width: 30px;
 	float: left;
-	width: 46%;
+	width: 40%;
 	border: 30px;
 	border-color: #bcdae0;
 	background-color: #bcdae0;
