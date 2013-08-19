@@ -50,19 +50,7 @@
                      <span id="total-de-horas">Total de horas : <p style= display:inline></p> </span><br>
             </fieldset>           
 
-            <fieldset id="botoesGerenteConsultor">
-                <legend>Gerente e Consultores</legend>
-                    <div id="botaoGerente">
-                            <label>Gerente de relacionamento:</label>
-                            <input id="bt-add-gerente" type="button" value="Selecionar Gerente" onclick='ListGerentes()'> 
-                    </div>
-                    <div>
-                        <label>Consultores:</label>
-                        <input id="bt-add-consultores" type="button" value="Selecionar Consultores">
-                    </div>  
-            </fieldset>
-
-            
+                   
             
         	<?php echo $this->Form->end('Confirmar Cadastro'); ?>
     </div>

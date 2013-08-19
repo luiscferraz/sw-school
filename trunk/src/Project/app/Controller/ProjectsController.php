@@ -73,8 +73,9 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 
 
 		if ($this->Auth->user('type') == 'admin'){
-    	if ($this->Project->query('SELECT id FROM projects where id = ' .$id. ' and removed = 0')){
+    	if ($this->Project->query('SELECT id FROM projects where id = '.$id.' and removed = 0')){
 		$this->set('title_for_layout', 'Projetos');
+		$this->set('id', $id);
 		$this->layout = 'basemodal';
 		$this->Project->id = $id;
 		

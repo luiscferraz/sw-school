@@ -232,7 +232,8 @@
 	}
 
 	public function delete($id = NULL, $id_projeto){
-		if ($this->Auth->user('type') == 'admin'){
+
+		if (($this->Auth->user('type') == 'admin') or ($this->Auth->user('type') == 'cons_manager'))  {
 		$this->Activity->id = $id;
 		if($this->Activity->saveField("removed", "true")){
 			$this->Session->setFlash($this -> flashSuccess('A atividade foi removida com sucesso!'));
@@ -266,6 +267,7 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 	
 	public function edit($id = NULL, $id_projeto){
 
+		if (($this->Auth->user('type') == 'admin') or ($this->Auth->user('type') == 'cons_manager'))  {
     	if ($this->Activity->query('SELECT id FROM activities where id = ' .$id. ' and removed = 0')){
 		$this->layout = 'basemodalint';
 		$this-> set ('id',$id);
@@ -312,7 +314,14 @@ $this->Session->setFlash($this->flashError('Atividade inválida'));
           $this->redirect(array('action' => 'index'));
 
   }
- }
+ }else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}
+	
 	
 	public function view($id){
 
@@ -427,6 +436,7 @@ $this->Session->setFlash($this->flashError('Atividade inválida'));
 
 	 public function edit2($idX){
 
+	 	//if (($this->Auth->user('type') == 'admin') or ($this->Auth->user('type') == 'cons_manager'))  {
 	 	//1.M.18-07-2013.1.MS
 	 	list ($id_projeto, $per, $dia, $mes, $ano, $consultant_id, $sigla_consultor) = split ('[/.-]', $idX);
 		$this->layout = 'basemodal';
@@ -491,6 +501,14 @@ $this->Session->setFlash($this->flashError('Atividade inválida'));
 		$nome_atividade = $this->Activity->Project->query("SELECT activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);		
 			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);
 	}
+	/**else {
+$this->Session->setFlash($this->flashError('Acesso restrito'));
+          $this->redirect(array('action' => 'index'));
+
+
+  }
+}**/
+	
 
 	public function add3(){
 	 	$this->layout = 'basemodalint';
