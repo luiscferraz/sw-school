@@ -14,8 +14,8 @@ $consultant_id = 'Activity.consultant'. $consultant_id . '_id';
 ?>
 
 
-<b>Projeto - <?php echo $nome_projeto; ?> <br>
-Cadastrar Atividade</b>
+<H4>Projeto - <?php echo $nome_projeto; ?></H4> 
+<H4>Cadastrar Atividade</H4>
     
         <?php
         echo $this->Form->create('Activities', array('action' => 'add2/'.$id)); ?>

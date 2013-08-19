@@ -18,8 +18,8 @@
 $consultant_id = 'Activity.consultant'. $consultant_id . '_id';
 ?>
                 
-<b>Projeto - <?php echo $nome_projeto; ?> <br>
-Atividade - <?php echo $nome_atividade; ?></b>
+<h4>Projeto - <?php echo $nome_projeto; ?> </h4>
+<h4>Atividade - <?php echo $nome_atividade; ?></h4>
 <!--$id_projeto, $per, $dia, $mes, $ano, $sigla_consultor-->
 
   

@@ -246,7 +246,7 @@ header('Content-Type: text/html; charset=UTF-8');
 					?>
 					
 					
-					<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','title'=>'Anexar','onClick'=>'ListAttachments('.$activity['activities']['id'].')'));?>
+					<!--<?php echo $this->Html->image("attachment.png",array('alt'=>'Anexar','title'=>'Anexar','onClick'=>'ListAttachments('.$activity['activities']['id'].')'));?>-->
 
 					<br>
 
