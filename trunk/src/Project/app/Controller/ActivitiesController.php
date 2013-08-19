@@ -141,7 +141,7 @@
 
 
 		//Se a atividade for 'Em desenvolvimento'  a data não pode ser depois do dia do cadastramento.
-		if ($data['Activity']['status'] == 'Em desenvolvimento') {
+		if (($data['Activity']['status'] == 'Em desenvolvimento') and ($ctr == 0))  {
 			$dt =  date('Y').'-'.date('m').'-'.date('d');
 			if ($data['Activity']['start_date'] > $dt) {
 				$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
@@ -191,10 +191,10 @@
 				$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
 				$this->request->data['Activity']['end_date'] = $this -> inverteIngles2($this->request->data['Activity']['end_date']);
 				$strerro = $strerro . 'A hora inicial não pode ser maior que a hora final.</br>';
-				$strerro = $strerro . ' +++++ ';
-				$strerro = $strerro . $data['Activity']['start_date'];
-				$strerro = $strerro . ' & ';
-				$strerro = $strerro . $data['Activity']['end_date'];	
+				//$strerro = $strerro . ' +++++ ';
+				//$strerro = $strerro . $data['Activity']['start_date'];
+				//$strerro = $strerro . ' & ';
+				//$strerro = $strerro . $data['Activity']['end_date'];	
 				$ctr ++;
 			}
 
@@ -209,7 +209,7 @@
 		};
 
 		//Se a atividade for 'Em desenvolvimento'  a data não pode ser depois do dia do cadastramento.
-		if ($data['Activity']['status'] == 'Em desenvolvimento') {
+		if (($data['Activity']['status'] == 'Em desenvolvimento') and ($ctr == 0))  {
 			$dt =  date('Y').'-'.date('m').'-'.date('d');
 			if ($data['Activity']['start_date'] > $dt) {
 				$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
