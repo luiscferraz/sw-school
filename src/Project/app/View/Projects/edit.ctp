@@ -21,14 +21,14 @@
     <h3 id="tituloprojeto">Projeto - <?php echo $nome_projeto; ?> </h3>
 
     <div id="conteudoAddProjeto">
-        <?php echo $this->Form->create('Projects', array('action' => 'edit')); ?>
+        <?php echo $this->Form->create('Projects', array('action' => 'edit/'.$id)); ?>
             <fieldset id="dadosProjeto">
             <legend class="legenda">Dados</legend>
                         <?php echo $this->Form->input('Project.id', array('type'=>'hidden')); ?>
-                        <?php echo $this->Form->input('Project.name', array('label' => 'Sigla <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'nameProject')); ?>
+                        <?php echo $this->Form->input('Project.name', array('label' => 'Nome <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'nameProject')); ?>
                         <?php echo $this->Form->input('Project.description', array('type'=>'textarea', 'label' => 'Descrição <sup title="Campo obrigatório" class="obrigatorio">*</sup>:', 'required'=>'required', 'id'=>'description')); ?>
                         <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: ' , 'id' => 'parent_project')); ?>
-                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'id' => 'company', 'required'=>'required')); ?><br>
+                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Empresa <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'id' => 'company', 'required'=>'required')); ?><br>
             </fieldset>
 
             <fieldset id="horaGrupo">
@@ -48,17 +48,7 @@
             </fieldset>           
 
             
-         <fieldset id="botoesGerenteConsultor">
-                <legend>Gerente e Consultores</legend>
-                    <div id="botaoGerente">
-                            <label>Gerente de relacionamento:</label>
-                            <input id="bt-add-gerente" type="button" value="Selecionar Gerente" onclick='ListGerentes();'> 
-                    </div>
-                    <div>
-                        <label>Consultores: </label>
-                        <input id="bt-add-consultores" type="button" value="Selecionar Consultores">
-                   </div>  
-            </fieldset>
+       
             
             <?php echo $this->Form->end('Atualizar'); ?>
     </div>
