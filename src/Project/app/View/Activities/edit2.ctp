@@ -35,12 +35,11 @@ $consultant_id = 'Activity.consultant'. $consultant_id . '_id';
                  <!--< ?php echo $this->Form->input('Consultant.acronym', array('label' => 'Abreviação do Nome: ', 'id'=>'acronym', 'default' => $sigla_consultor)); ?>
 
                  <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />-->
-               
-            
-                <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text','label' => 'Hora Inicial: ','required'=>'required', 'id'=>'actvStartHour')); ?>
-                <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final: ','required'=>'required', 'id'=>'actvEndHour')); ?>
-                <?php echo $this->Form->input('Activity.start_date', array('type'=>'text','label' => 'Data Inicial: ', 'id'=>'datepicker')); ?>
-                <?php echo $this->Form->input('Activity.end_date', array('type'=>'text','label' => 'Data Final: ', 'id'=>'datepicker2')); ?>
+                 
+                <?php echo $this->Form->input('Activity.start_hours', array('type'=>'text', 'label' => 'Hora Inicial <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvStartHour', 'onblur' => 'checkHour()')); ?>
+                <?php echo $this->Form->input('Activity.end_hours', array('type'=>'text', 'label' => 'Hora Final <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required', 'id'=>'actvEndHour', 'onblur' => 'checkHour()')); ?>
+                <?php echo $this->Form->input('Activity.start_date', array('type'=>'text', 'label' => 'Data Inicial <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required ' , 'id'=>'datepicker', 'onblur' => 'checkDate(this)')); ?>
+                <?php echo $this->Form->input('Activity.end_date', array('type'=>'text', 'label' => 'Data Final <sup title="Campo obrigatório" class="obrigatorio">*</sup>:','required'=>'required ' , 'id'=>'datepicker2', 'onblur' => 'checkDate(this)')); ?>
                 
             </fieldset>
             
