@@ -21,10 +21,7 @@
 					$this -> set ('projectsPais', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id =' => null))));
 				}
 				else{
-			
-
 					$this -> set ('projectsPais', $this-> Home -> Project->find('all', array('conditions'=> array('Project.id'=>$id,'Project.removed !=' => 1))));
-
 				}
 
 				$this -> set ('projectsFilhos', $this-> Home -> Project->find('all', array('conditions'=> array('Project.removed !=' => 1, 'Project.parent_project_id !=' => null))));
@@ -40,7 +37,7 @@
 				$consultor1PadraoId = $this->Home->Activity->query('select activities.project_id, activities.start_hours, activities.end_hours, activities.start_date, activities.description, consultants.name, consultants.acronym, consultants.acronym_color from consultants, activities where activities.status = "Planejada" and activities.consultant1_id = consultants.id and activities.removed != 1 and activities.consultant1_id is not null');			
 				$arrayConsultor1 = array();
 				foreach ($consultor1PadraoId as $consultor1) {
-							
+					
 					if ($consultor1['activities']['start_hours'] < '12:00:00'){
 						$mt = 'M';
 						$padraoID = $consultor1['activities']['project_id'].'.M.'.$consultor1['activities']['start_date'].'.'.'1';
