@@ -72,7 +72,7 @@
 				if (in_array($tipo_usuario , array('admin','cons_manager','rel_manager'))) {
 						 if ($entry['Entry']['approved'] == 0) {
 						echo $this->Html->link(
-					$this->Html->image("okay.png", array('alt' => 'Aprovar', 'title' => 'Aprovar')), array('action' => 'approve', $entry['Entry']['id']),
+					$this->Html->image("okay.png", array('alt' => 'Aprovar', 'title' => 'Aprovar')), array('action' => 'approve', $entry['Entry']['id'],$entry['Entry']['activity_id']),
 					array('escape'=>false, 'id'=>'link'), "Confirmar aprovar apontamento?");
 						}else {
 						echo 'Aprovado';
