@@ -352,7 +352,7 @@ $this->Session->setFlash($this->flashError('Atividade inválida'));
 
 	public function add2($idX){
 		//1.T.16-07-2013.1
-		list ($id, $per, $dia, $mes, $ano, $consultant_id) = split ('[/.-]', $idX);
+		list ($id, $per, $ano, $mes, $dia, $consultant_id) = split ('[/.-]', $idX);
 	 	$this->layout = 'basemodal';
 	 	$this-> set('consultant_id', $consultant_id);
 	 	$this-> set ('idX', $idX);
@@ -428,7 +428,6 @@ $this->Session->setFlash($this->flashError('Atividade inválida'));
 
 	 public function edit2($idX){
 
-	 	echo $idX;
 	 	//1.M.18-07-2013.1.MS
 	 	list ($id_projeto, $per, $dia, $mes, $ano, $consultant_id, $sigla_consultor) = split ('[/.-]', $idX);
 		$this->layout = 'basemodal';
