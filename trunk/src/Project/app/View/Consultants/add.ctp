@@ -61,7 +61,7 @@ textinput.value = fileinput.value;
         			<?php echo $this->Form->input('User.type', array('label' => 'Tipo de usuário <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'empty' => 'Selecione','required'=>'required', 'id' => 'tipousuario',
             		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
 
-     				<?php echo $this->Form->input('foto',array('type'=>'file'));?>
+     				<!--<?php echo $this->Form->input('foto',array('type'=>'file'));?>-->
     			</fieldset>
 
    

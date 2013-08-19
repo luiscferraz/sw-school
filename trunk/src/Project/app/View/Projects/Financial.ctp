@@ -63,13 +63,13 @@ textinput.value = fileinput.value;
 </fieldset>
 
 
-<fieldset class="despesasProjeto">
+<!--<fieldset class="despesasProjeto">
 	
     <label for="anexo">Anexar Nota Fiscal:</label><br>
     <input type="file" id="anexar" name="fileupload" style="display: none" onChange="Handlechange();"/>
     <input type="button" value="anexar" id="fakeBrowse" onclick="HandleBrowseClick();"/>
     
-</fieldset>
+</fieldset>-->
 
 
 

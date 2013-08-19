@@ -65,10 +65,10 @@ textinput.value = fileinput.value;
             		'options' => array('cons' => 'Consultor', 'cons_manager' => 'Gerente de consultoria', 'fin_manager' => 'Gerente financeiro',  'rel_manager' => 'Gerente de relacionamento', 'admin' => 'Admin'))); ?>
  
  	 
-					<?php echo $this->Html->image('consultant.jpg')?>
+					<!--<?php echo $this->Html->image('consultant.jpg')?>
 		
 					<input type="file" id="foto" name="fileupload" style="display: none" onChange="Handlechange();" action="Foto"/>
-    				<input type="button" value="Foto" id="fakeBrowse" onclick="HandleBrowseClick();"/>
+    				<input type="button" value="Foto" id="fakeBrowse" onclick="HandleBrowseClick();"/>-->
 
     		</fieldset>
 
