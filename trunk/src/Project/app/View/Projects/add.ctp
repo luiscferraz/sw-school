@@ -24,10 +24,10 @@
         <?php echo $this->Form->create('Projects', array('action' => 'add')); ?>
             <fieldset id="dadosProjeto">
             <legend class="legenda">Dados</legend>
-                        <?php echo $this->Form->input('Project.name', array('label' => 'Sigla <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>','required'=>'required', 'id'=>'nameProject')); ?>
+                        <?php echo $this->Form->input('Project.name', array('label' => 'Nome <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>','required'=>'required', 'id'=>'nameProject')); ?>
                         <?php echo $this->Form->input('Project.description', array('type'=>'textarea', 'label' => 'Descrição <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'id'=>'description')); ?>
                         <?php echo $this->Form->input('Project.parent_project_id',array('options' => $list_projects,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Pai: <br>', 'id' => 'parent_project')); ?>
-                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Projeto Empresa <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'id' => 'company', 'required'=>'required')); ?>
+                        <?php echo $this->Form->input('Project.company_id',array('options' => $list_companies,'type' => 'select', 'empty' => 'Selecione','label' => 'Empresa <sup title="Campo obrigatório" class="obrigatorio">*</sup>: <br>', 'id' => 'company', 'required'=>'required')); ?>
                         <?php echo $this -> Html -> link ('Nova Empresa', array('action'=> '../companies/add'),array( 'target' => '_blank','onclick'=>'addCompanies()', 'id'=>'btNovaEmpresa')) ?>
                         <a id='btAtualizarEmpr' href="#" onclick="attCompanies()" >Atualizar Empresas </a>
                     
