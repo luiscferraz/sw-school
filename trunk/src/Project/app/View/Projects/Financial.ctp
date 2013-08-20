@@ -28,7 +28,7 @@ textinput.value = fileinput.value;
                 <!--CONDIÇÃO-->
                 <?php
                 if (in_array($tipo_usuario , array('fin_manager', 'admin'))){
-                  	echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e' => 'Entrada', 's' => 'Despesa' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
+                  	echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('e,d' => 'Entrada', 's' => 'Despesa' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
                 }else{
                 	echo $this->Form->input('Expense.type', array('label' => 'Tipo : <br>','options' => array('s' => 'Saida' ), 'required'=>'required', 'id' => 'selectTipoDespesa'));
                 }?>
@@ -96,7 +96,7 @@ textinput.value = fileinput.value;
 
     foreach ($financials as $financial) {
 
-            if ($financial['Expense']['type'] == 'e') {
+            if ($financial['Expense']['type'] == 'e,d') {
                 echo '<tr class="tr-entrada">';
                     echo '<td align="center">'.$financial['Expense']['description'].'</td>';
                     echo '<td align="center" class="entrada">'.$financial['Expense']['value'].'</td>';
