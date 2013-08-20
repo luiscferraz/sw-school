@@ -78,7 +78,7 @@ textinput.value = fileinput.value;
             <th>Descrição</th>
             <th>Valor</th>
             <th>Tipo</th>
-            <th>Autor</th>
+            <!--<th>Autor</th>-->
             <th>Ações</th>
         </tr>
         <tr>
@@ -101,7 +101,7 @@ textinput.value = fileinput.value;
                     echo '<td align="center">'.$financial['Expense']['description'].'</td>';
                     echo '<td align="center" class="entrada">'.$financial['Expense']['value'].'</td>';
                     echo '<td align="center"> Entrada </td>';
-                    echo '<td align="center">' .$financial['Expense']['consultant_name']. '</td>';
+                    /*echo '<td align="center">' .$financial['Expense']['consultant_name']. '</td>';*/
                     echo '<div>';
                     echo '<td align="center" class="actions">';
                     echo $this->Html->link(
@@ -116,7 +116,7 @@ textinput.value = fileinput.value;
                     echo '<td align="center">'.$financial['Expense']['description'].'</td>';
                     echo '<td align="center" class="saida">'.$financial['Expense']['value'].'</td>';
                     echo '<td align="center"> Saida </td>';
-                    echo '<td align="center">' .$financial['Expense']['consultant_name']. '</td>';
+                    /*echo '<td align="center">' .$financial['Expense']['consultant_name']. '</td>';*/
                     echo '<div>';
                     echo '<td align="center" class="actions">';
                     echo $this->Html->link(
