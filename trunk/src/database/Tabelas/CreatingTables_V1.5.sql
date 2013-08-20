@@ -357,7 +357,7 @@ CREATE  TABLE IF NOT EXISTS `swsdb`.`expenses` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `description` VARCHAR(100) NOT NULL ,
   `value` DECIMAL(16,2) NOT NULL ,
-  `type` ENUM('e,d') NULL DEFAULT NULL ,
+  `type` ENUM('e','s') NULL DEFAULT NULL ,
   `project_id` INT(11) NOT NULL ,
   `attachments` BLOB NULL DEFAULT NULL ,
   `file` LONGBLOB NULL DEFAULT NULL ,
