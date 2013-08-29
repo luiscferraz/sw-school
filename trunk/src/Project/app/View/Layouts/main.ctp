@@ -549,7 +549,7 @@ foreach ($projectsPais as $project) {
 				if (array_key_exists($idM, $arrayConsultor1)){
 					echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 					$idX = $idM . '.' . $arrayConsultor1[$idM][0];
-					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor1[$idM][0];
 					echo '</div>';
@@ -568,7 +568,7 @@ foreach ($projectsPais as $project) {
 					echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
 
 					$idX = $idT . '.' . $arrayConsultor1[$idT][0];
-					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor1[$idT][0];
 					echo '</div>';
@@ -603,7 +603,7 @@ foreach ($projectsPais as $project) {
 				if (array_key_exists($idM, $arrayConsultor2)){
 					echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
 					$idX = $idM . '.' . $arrayConsultor2[$idM][0];
-					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor2[$idM][0];
 					echo '</div>';
@@ -621,7 +621,7 @@ foreach ($projectsPais as $project) {
 				if (array_key_exists($idT, $arrayConsultor2)){
 					echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
 					$idX = $idT . '.' . $arrayConsultor2[$idT][0];
-					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor2[$idT][0];
 					echo '</div>';
@@ -657,7 +657,7 @@ foreach ($projectsPais as $project) {
 				if (array_key_exists($idM, $arrayConsultor3)){
 					echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
 					$idX = $idM . '.' . $arrayConsultor3[$idM][0];
-					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor3[$idM][0];
 					echo '</div>';
@@ -675,7 +675,7 @@ foreach ($projectsPais as $project) {
 				if (array_key_exists($idT, $arrayConsultor3)){
 					echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
 					$idX = $idT . '.' . $arrayConsultor3[$idT][0];
-					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor3[$idT][0];
 					echo '</div>';
@@ -711,7 +711,7 @@ foreach ($projectsPais as $project) {
 				if (array_key_exists($idM, $arrayConsultor4)){
 					echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
 					$idX = $idM . '.' . $arrayConsultor4[$idM][0];
-					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor4[$idM][0];
 					echo '</div>';
@@ -729,7 +729,7 @@ foreach ($projectsPais as $project) {
 				if (array_key_exists($idT, $arrayConsultor4)){
 					echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
 					$idX = $idT . '.' . $arrayConsultor4[$idT][0];
-					echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+					echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 					echo '<div style="height:100%;width:100%">';
 					echo $arrayConsultor4[$idT][0];
 					echo '</div>';
@@ -795,7 +795,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor1)){
 								echo '<td style="height:25px" align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor1[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idM][0];
 								echo '</div>';
@@ -813,7 +813,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor1)){
 								echo '<td style="height:25px" align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor1[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idT][0];
 								echo '</div>';
@@ -851,7 +851,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor2[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idM][0];
 								echo '</div>';
@@ -869,7 +869,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor2[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idT][0];
 								echo '</div>';
@@ -905,10 +905,10 @@ foreach ($projectsPais as $project) {
 						} else {
 							//valor da manha do dia
 							$idM = (string)$projectf['Project']['id'] . '.M.' . date('Y-m-d',$dataFinal) . '.3';			
-							if (array_key_exists($idM, $arrayConsultor1)){
+							if (array_key_exists($idM, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor3[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idM][0];
 								echo '</div>';
@@ -923,10 +923,10 @@ foreach ($projectsPais as $project) {
 							}
 								//valor da tarde do dia
 							$idT = (string)$projectf['Project']['id'] . '.T.' . date('Y-m-d',$dataFinal) . '.3';			
-							if (array_key_exists($idT, $arrayConsultor1)){
+							if (array_key_exists($idT, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor3[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idT][0];
 								echo '</div>';
@@ -964,7 +964,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor4[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idM][0];
 								echo '</div>';
@@ -982,7 +982,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor4[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idT][0];
 								echo '</div>';
@@ -1022,7 +1022,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor1[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idM][0];
 								echo '</div>';
@@ -1040,7 +1040,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor1)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor1[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idT][0];
 								echo '</div>';
@@ -1078,7 +1078,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor2[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idM][0];
 								echo '</div>';
@@ -1096,7 +1096,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor2[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idT][0];
 								echo '</div>';
@@ -1135,7 +1135,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor3[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idM][0];
 								echo '</div>';
@@ -1153,7 +1153,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor3[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idT][0];
 								echo '</div>';
@@ -1191,7 +1191,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor4[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idM][0];
 								echo '</div>';
@@ -1209,7 +1209,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor4[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idT][0];
 								echo '</div>';
@@ -1255,7 +1255,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor1[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idM][0];
 								echo '</div>';
@@ -1273,7 +1273,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor1)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idT][1].'" title="'.$arrayConsultor1[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor1[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor1[$idT][0];
 								echo '</div>';
@@ -1310,7 +1310,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idM][1].'" title="'.$arrayConsultor2[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor2[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idM][0];
 								echo '</div>';
@@ -1328,7 +1328,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor2)){
 								echo '<td align=center bgcolor="'.$arrayConsultor2[$idT][1].'" title="'.$arrayConsultor2[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor2[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor2[$idT][0];
 								echo '</div>';
@@ -1368,7 +1368,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idM][1].'" title="'.$arrayConsultor3[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor3[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idM][0];
 								echo '</div>';
@@ -1386,7 +1386,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor3)){
 								echo '<td align=center bgcolor="'.$arrayConsultor3[$idT][1].'" title="'.$arrayConsultor3[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor3[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor3[$idT][0];
 								echo '</div>';
@@ -1424,7 +1424,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idM, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idM][1].'" title="'.$arrayConsultor4[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor4[$idM][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idM][0];
 								echo '</div>';
@@ -1442,7 +1442,7 @@ foreach ($projectsPais as $project) {
 							if (array_key_exists($idT, $arrayConsultor4)){
 								echo '<td align=center bgcolor="'.$arrayConsultor4[$idT][1].'" title="'.$arrayConsultor4[$idT][2].'" class="days" id="'.$idT.'">';
 								$idX = $idT . '.' . $arrayConsultor4[$idT][0];
-								echo '<a class="fancybox fancybox.iframe golinkedit" href="#" data-info="'. $idX . '">';
+								echo '<a class="fancybox fancybox.iframe golinkindex" href="#" data-info="'. $idX . '">';
 								echo '<div style="height:100%;width:100%">';
 								echo $arrayConsultor4[$idT][0];
 								echo '</div>';

@@ -65,6 +65,7 @@ $('document').ready(function(){
     // });
     $('.golinkadd').tipsy();
     $('.golinkedit').tipsy();
+    $('.golinkindex').tipsy();
 
     $('.golinkadd').click(function () {
         var string = $(this).attr("data-info");
@@ -98,6 +99,22 @@ $('document').ready(function(){
         return false;
     });
 
+
+    $('.golinkindex').click(function () {
+        var string = $(this).attr("data-info");
+        //alert($(this).attr('href'));
+        string = string.replace("/", "-");
+        string = string.replace("/", "-");
+        string = "./activities/index2/"+string
+        //alert(string);
+        $.fancybox({
+                    'type'          :   'iframe',
+                    'href'          :   string,
+                    onComplete : function(){ $('#fancybox-content').css({'width':'100%'})},
+                    afterClose : function () {window.location.reload();},
+                });
+        return false;
+    });
 
 
 
