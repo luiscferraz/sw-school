@@ -212,9 +212,9 @@ header('Content-Type: text/html; charset=UTF-8');
 
 		<tr <?php echo $class; ?>>
 
-			<td></td>
-			<td></td>
-			<td></td>
+			<td class="descrição"><?php echo $activity['activities']['description']; ?></td>
+			<td class="consultores"><?php echo $activity['activities']['consultant1_id'].$activity['activities']['consultant2_id'].$activity['activities']['consultant3_id'].$activity['activities']['consultant4_id']; ?></td>
+			<td class="periodo"><?php echo 'De: '.$activity['activities']['start_hours'].' '.$activity['activities']['start_date'].' à '.$activity['activities']['end_hours'].' '.$activity['activities']['end_date']; ?></td>
          
 	
 				<td>
