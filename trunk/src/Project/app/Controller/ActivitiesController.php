@@ -32,8 +32,13 @@
  	}
 
  	public function index2($id = null){
+		//1.M.18-07-2013.1.MS
+		
  		 if ($id != null){
- 		 	$this->set('title_for_layout', 'Atividades');
+			
+			list ($id_projeto, $per, $ano, $mes, $dia, $consultant_id) = split ('[/.-]', $id);
+ 		 	
+			$this->set('title_for_layout', 'Atividades');
  		 	if (!$id) {
             throw new NotFoundException(__('Invalid post'));
 	        }
@@ -45,8 +50,28 @@
 	        }
  			$this -> layout = 'basemodal';
  			//$this -> set ('activities', $this-> Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1,'Activity.project_id =' => $id),'order'=>array('Project.name','Activity.description'))));
- 			$activities = $this->Activity->query("select id, project_id, description, status, start_date, end_date from activities where removed != 1 and project_id = '".$id."' order by end_date DESC");
-	 		$this -> set ('activities',$activities);
+ 			//r
+			$activities = $this->Activity->query("select id, project_id, description, status, start_date, end_date, start_hours, end_hours, consultant1_id, consultant2_id, consultant3_id, consultant4_id from activities where removed != 1 and project_id = '".$id_projeto."' and '".$ano.'/'.$mes.'/'.$dia."' between start_date and end_date order by end_date DESC");
+	 		$count = count($activities);
+			for ($i = 0; $i < $count; $i++) {
+			list ($ano, $mes, $dia) = split ('[/.-]', $activities[$i]['activities']['start_date']);
+			$activities[$i]['activities']['start_date'] = $dia . '-' . $mes . '-' . $ano;
+			list ($ano, $mes, $dia) = split ('[/.-]', $activities[$i]['activities']['end_date']);
+			$activities[$i]['activities']['end_date'] = $dia . '-' . $mes . '-' . $ano;	
+			$activities[$i]['activities']['consultant1_id'] = $this-> Sigla_Consultor($activities[$i]['activities']['consultant1_id']);	
+			if ($activities[$i]['activities']['consultant2_id']){
+			$activities[$i]['activities']['consultant2_id'] = ', '.$this-> Sigla_Consultor($activities[$i]['activities']['consultant2_id']);
+			}
+			if ($activities[$i]['activities']['consultant3_id']){
+			$activities[$i]['activities']['consultant3_id'] = ', '.$this-> Sigla_Consultor($activities[$i]['activities']['consultant3_id']);
+			}
+			if ($activities[$i]['activities']['consultant4_id']){
+			$activities[$i]['activities']['consultant4_id'] = ', '.$this-> Sigla_Consultor($activities[$i]['activities']['consultant4_id']);
+			}
+			
+			}
+			//r
+			$this -> set ('activities',$activities);
  			$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
 			$this -> set ('entries', $this-> Activity-> Entry-> find('all', array('conditions'=> array('Entry.removed !=' => 1))));
 			$this-> set ('projects',$this->Activity->Project->find('all', array('conditions'=> array('Project.id =' => 'Activity.project_id'))));	
@@ -565,6 +590,14 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 	 }
 	   
 
+	private function Sigla_Consultor($id){
+		$sigla = $this->Activity->Consultant->findById($id);
+			if ($sigla){
+				return $sigla['Consultant']['acronym'];
+ 		 	}else{
+				return '';
+			}
+		}   
 
 
 	private function Nome_Consultor($id){
