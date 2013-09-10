@@ -10,13 +10,12 @@ class EntriesController extends AppController{
  		if ($id != null) {
 			$this->set('title_for_layout', 'Apontamento');
 	 		$this -> layout = 'basemodalint';
-	 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1, 'Entry.activity_id =' => $id),'order'=>array('entry.date DESC','Consultant.name','Entry.type_consulting','Entry.hours_worked DESC','Activity.description')))); 
+	 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1, 'Entry.activity_id =' => $id),'order'=>array('entry.date DESC','Consultant.name','Entry.type_consulting','Entry.hours_worked DESC','Activity.description'))));
 			$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
 			$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
 			$this-> set ('tipo_usuario',$this->Auth->user('type'));	
 			$this-> set ('id_consultor_logado', $this->Auth->user('consultant_id'));
 			$this ->set('activity',$this-> Nome_Atividade($id));
-			
 
  			$id_projeto=$this->Entry->Activity->Project->query("SELECT activities.project_id FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);
 			$this-> set ('id_projeto', $id_projeto[0]['activities']['project_id']);
@@ -36,35 +35,42 @@ class EntriesController extends AppController{
 	 	$this->layout = 'basemodalint';
 	 	$this-> set ('id_projeto',$id_projeto);
 	 	$this-> set ('id_atividade',$id_atividade);
+		$data_atividade = $this->Entry->Activity->query("SELECT start_date, end_date FROM activities WHERE activities.id = ".$id_atividade);
 		$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.removed !=' => 1),'order'=>array('Project.name','Activity.description'))));
-		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));		 
+		$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.removed !=' => 1))));
+
 		$this-> set ('id_consultor_logado',$this->Auth->user('consultant_id'));
 		$this -> set ('nome_consultor_logado', $this-> Nome_Consultor_Logado($this->Auth->user('consultant_id')));
 		$this-> set ('tipo_usuario',$this->Auth->user('type'));
 		$nome_projeto_atividade = $this->Entry->Activity->Project->query("SELECT projects.name, activities.description FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id_atividade);	
 		$this -> set('nome_projeto', $nome_projeto_atividade[0]['projects']['name']);
 		$this-> set ('nome_atividade', $nome_projeto_atividade[0]['activities']['description']);
-		
-
-
-
 
 	 	if($this->request->is('post')){
-	 		 $this->request->data['Entry']['date'] = $this -> inverteIngles($this->request->data['Entry']['date']);
-	 		if($this->Entry->saveAll($this->request->data)){
-	 			$this->Session->setFlash($this->flashSuccess('O apontamento foi adicionado com sucesso.'));
-          		$this->redirect(array('action' => '../activities/index/'.$id_projeto));
-	 		}
+	 		$this->request->data['Entry']['date'] = $this -> inverteIngles($this->request->data['Entry']['date']);
+			if ($this -> verifica_entries($this->request->data, $data_atividade[0]['activities']['start_date'],$data_atividade[0]['activities']['end_date'])) {
+				if($this->Entry->saveAll($this->request->data)){
+	 				$this->Session->setFlash($this->flashSuccess('O apontamento foi adicionado com sucesso.'));
+          			$this->redirect(array('action' => '../activities/index/'.$id_projeto));
+	 			}
+
 	 		else{
 				$this->Session->setFlash($this->flashError('Erro ao cadastrar apontamento!'));
-			}				
-	 	
+			}
+		}
+
+		else{
+				$this->Session->setFlash($this->flashError('Data do Apontamento está fora do período proposto para a atividade. Solicite a correção do prazo ao Administrador!'));
+			}
 	 }
 	 	else{
-	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('O apontamento não foi adicionado. Tente novamente!')));			
-		
+	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('O apontamento não foi adicionado. Tente novamente!')));
+
 	 	}
  	}
+
+
+
 	    public function inverteIngles($data) {
  		$dataApontamento = $this->request->data['Entry']['date'];
 		list ($dia, $mes, $ano) = split ('[/.-]', $dataApontamento);
@@ -144,7 +150,7 @@ class EntriesController extends AppController{
 			else {
 				$this->redirect(array('action' => 'index/'.$id_atividade));
 			}
-			
+
 		}
 		$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
 			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
@@ -152,7 +158,7 @@ class EntriesController extends AppController{
 		$nome_atividade = $this->Entry->Activity->Project->query("SELECT activities.description FROM projects, activities, entries WHERE activities.project_id = projects.id and entries.activity_id = activities.id and entries.id = ".$id);	
 			$this-> set ('nome_atividade', $nome_atividade[0]['activities']['description']);	   
 	}
-	
+
 	public function view($id){
 
 		$this->Entry->id = $id;
@@ -175,8 +181,21 @@ class EntriesController extends AppController{
 
 	    if ($this->request->is('get')) {
 	        $this->set('entries', $this->Entry->read());
-	    }       
-	}	 	
+	    }
+	}
+
+
+	public function verifica_entries($data, $data_inicial_atividade, $data_final_atividade) {
+	
+		//Data do apontamento não pode estar fora do período proposto para a atividade.
+		if ((($data['Entry']['date']) > $data_final_atividade) or (($data['Entry']['date']) < $data_inicial_atividade)) {
+			return false;
+		} else { 
+			return true;
+		}
+	}
+
+
 
 
 }
