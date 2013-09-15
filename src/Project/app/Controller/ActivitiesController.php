@@ -588,6 +588,30 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 		
 	 	}			 	
 	 }
+
+	 public function projetos (){
+		$this->layout = 'branco';
+		$arrayProjetos = array();
+		$projetos = $this->Activity->query("select id, name from projects where removed <>1");
+		
+		foreach ($projetos as $projeto) {
+			$arrayProjetos[$projeto['projects']['id']] = $projeto['projects']['name'];
+			
+		}
+		echo json_encode($arrayProjetos);
+	}
+
+	public function consultores (){
+		$this->layout = 'branco';
+		$arrayConsultores = array();
+		$consultores = $this->Activity->query("select id, name from consultants where removed <>1");
+		
+		foreach ($consultores as $consultor) {
+			$arrayConsultores[$consultor['consultants']['id']] = $consultor['consultants']['name'];
+			
+		}
+		echo json_encode($arrayConsultores);
+	}
 	   
 
 	private function Sigla_Consultor($id){

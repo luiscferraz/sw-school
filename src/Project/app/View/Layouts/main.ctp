@@ -69,7 +69,7 @@ if( !isset($date_submit)){
 <input type="button" value="Pesquisar sigla" id="botao-pesquisar-consultor"  class='botao' onclick='listConsultores();' />
 <form id = "ProjectsAddForm" method = "post" action = "home">
 
-<!--<a href="../../activities/add3" ><input type="button" value="Cadastrar atividade" id="cadastrar-atividade" class="botao" ></a> -->
+<a href="../../activities/add3" ><input type="button" value="Atividades" id="cadastrar-atividade" class="botao" ></a> 
 
 <div class = "submit">
 <input type="submit" value="Buscar" id="buscar" class="botao"/>
