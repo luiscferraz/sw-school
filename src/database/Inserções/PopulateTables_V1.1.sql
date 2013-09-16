@@ -127,7 +127,9 @@ INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `start_date`
 (45, '10:00:00', '16:00:00', '2013/08/26', '2013/08/30', 'Teste 4', 'Teste 4', 'Planejada',1 , 10, 9, NULL, NULL, 0),
 (46, '09:00:00', '14:00:00', '2013/08/19', '2013/08/23', 'Teste 5', 'Teste 5', 'Planejada', 4, 15, 14, 6, 3, 0),
 (47, '10:00:00', '16:00:00', '2013/08/26', '2013/08/30', 'Teste 6', 'Teste 6', 'Planejada', 1 , 3, 6, 10, 16, 0),
-(48, '11:00:00', '16:00:00', '2013/09/02', '2013/09/06', 'Teste 7', 'Teste 7', 'Planejada', 1 , 5, 7, 10, 12, 0);
+(48, '11:00:00', '16:00:00', '2013/09/02', '2013/09/06', 'Teste 7', 'Teste 7', 'Planejada', 1 , 5, 7, 10, 12, 0),
+(49, '09:00:00', '15:00:00', '2013/02/11', '2013/02/15', 'Funcionais', 'Levantamento de Requisitos F', 'Em desenvolvimento', 4, 3, 12, 11, NULL, 0),
+(50, '10:00:00', '16:00:00', '2013/04/23', '2013/04/30', 'Nao funcionais', 'Levantamento de Requisitos NF', 'Em desenvolvimento', 4, 3, 11, NULL, NULL, 0);
 
 INSERT INTO `swsdb`.`entries` (`date`, `type_consulting`, `type`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approved`, `removed`) VALUES
 ( 20130703 , 'A', 'Individual', '10', 'A qualidade estava excelente', 11, 1, 1, 0),
@@ -180,4 +182,10 @@ INSERT INTO `swsdb`.`entries` (`date`, `type_consulting`, `type`, `hours_worked`
 ( 20130902 , 'C', 'Individual', '2', 'Problema operacional nao verificado', 17, 37, 0, 0),
 ( 20130813 , 'A', 'Grupo', '3', 'Problema operacional corrigido', 15, 27, 1, 0),
 ( 20130814 , 'C', 'Individual', '4', 'Problema operacional pendente', 10, 28, 0, 0),
-( 20130806 , 'C', 'Individual', '8', 'Problema operacional corrigido', 9, 22, 1, 0);
+( 20130806 , 'C', 'Individual', '8', 'Problema operacional corrigido', 9, 22, 1, 0),
+( 20130211 , 'B', 'Individual', '2', 'Requisitos analisados', 3, 49, 0, 0),
+( 20130212 , 'A', 'Individual', '3', 'Analise de User stories', 12, 49, 1, 0),
+( 20130214 , 'C', 'Individual', '4', 'Remocao de ambiguidades', 11, 49, 0, 0),
+( 20130424 , 'B', 'Individual', '4', 'Criacao das regras', 3, 50, 0, 0),
+( 20130429 , 'C', 'Individual', '2', 'Feedback de cliente', 11, 50, 0, 0);
+
