@@ -561,9 +561,11 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 	
 
 	public function add3(){
+		$this->set('title_for_layout', 'Cadastrar Atividades');	
 	 	$this->layout = 'basemodalint';
 	 	//$this-> set ('id',$id);
-		$projects = $this->Activity->Project->query('select * from projects where id not in (select parent_project_id from projects where parent_project_id is not null) order by name');			
+		$projects = $this->Activity->Project->query('select * from projects order by name');	
+
 		$this-> set ('projects',$projects);	
 		//$nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects WHERE projects.id = ".$id);		
 		//$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);	
@@ -573,15 +575,17 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 	 	if($this->request->is('post')){
 	 	   //$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
 	 	  // $this->request->data['Activity']['end_date'] = $this -> inverteIngles2($this->request->data['Activity']['end_date']);
-	 		if ($this -> verifica($this->request->data)) {
+	 		//if ($this -> verifica($this->request->data)) {
 		 		if($this->Activity->saveAll($this->request->data["Activity"])){
 		 			$this->Session->setFlash($this->flashSuccess('A atividade foi adicionada com sucesso.'));
-	          		$this->redirect(array('action' => '../../home'));
+		 			$this->redirect(array('action' => '../../home'));
+		 			
+
 		 		}
 		 		else{
 					$this->Session->setFlash($this->flashError('Erro ao cadastrar atividade!'));
 				}		
-			}		
+			//}		
 	 	}
 	 	else{
 	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			

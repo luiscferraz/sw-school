@@ -24,7 +24,7 @@ $(function() {
 
         $.ajax({
         async: false,
-        url: "http://localhost/activities/projetos", //URL que puxa os dados
+        url: limparUrl("projetos"), //URL que puxa os dados
         dataType: "json", //Tipo de Retorno
         success: function(json){ //Se ocorrer tudo certo
         var options = "";
@@ -37,7 +37,7 @@ $(function() {
 });
         $.ajax({
         async: false,
-        url: "http://localhost/activities/consultores", //URL que puxa os dados
+        url: limparUrl("consultores"), //URL que puxa os dados
         dataType: "json", //Tipo de Retorno
         success: function(json){ //Se ocorrer tudo certo
         var options = "";
@@ -48,7 +48,13 @@ $(function() {
         }
 
                 
-});     
+});   
+function limparUrl(pag){
+    var url = window.location.toString();
+    n =  url.search('add3');
+    url = url.slice(0,n);
+    return url+pag;
+}  
         $(document).ready(function() {
         $("input.hasDatepicker").live("click", function() {
         $(this)
@@ -153,10 +159,10 @@ $(function() {
                 <?php echo $this->Form->input('Activity.0.end_hours', array('type'=>'text', 'label' => '',/*'required'=>'required', */'id'=>'actvEndHour', 'onblur' => 'checkHour()')); ?>
                 </fieldset>
                 <fieldset class="data1">
-                <?php echo $this->Form->input('Activity.0.start_date', array('type'=>'text','label' => '', /*'required'=>'required', */'class'=>'datepick', 'onblur' => 'checkDate(this)')); ?>
+                <?php echo $this->Form->input('Activity.0.start_date', array('type'=>'text','label' => '', /*'required'=>'required', */'id'=>'datepicker', 'onblur' => 'checkDate(this)')); ?>
                 </fieldset>
                 <fieldset class="data1">
-                <?php echo $this->Form->input('Activity.0.end_date', array('type'=>'text','label' => '', /*'required'=>'required', */'class'=>'datepick', 'onblur' => 'checkDate(this)')); ?>
+                <?php echo $this->Form->input('Activity.0.end_date', array('type'=>'text','label' => '', /*'required'=>'required', */'id'=>'datepicker2', 'onblur' => 'checkDate(this)')); ?>
                 </fieldset>
             </fieldset>   
     </div>
