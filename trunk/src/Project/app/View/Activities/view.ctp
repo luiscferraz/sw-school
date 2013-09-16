@@ -50,7 +50,7 @@
 		<tr>
 			<th class="responsive">Atividade</th>
 			<th class="responsive">Consultor</th>
-			<th>Tipo</th>
+			<th class="responsive">Tipo</th>
 			<th class="responsive">Horas Trabalhadas</th>
 			<th class="responsive">Data</th>			
 			<th class="actions">Visualizar Detalhadamente</th>
@@ -72,21 +72,21 @@
 		?>
 
 		<tr <?php echo $class; ?>>
-			<td class="atividade"><?php echo $entry['Activity']['description']; ?></td>
-			<td class="consultor"><?php echo $entry['Consultant']['name']; ?></td>
-			<td class="tipo"><?php echo $entry['Entry']['type_consulting']; ?></td>
-			<td class="horas trabalhadas"><?php echo $entry['Entry']['hours_worked']; ?></td>
-			<td class="data"><?php echo $entry['Entry']['date']; ?></td>
+			<td class="responsive"><?php echo $entry['Activity']['description']; ?></td>
+			<th class="responsive"><?php echo $entry['Consultant']['name']; ?></th>
+			<th class="responsive"><?php echo $entry['Entry']['type_consulting']; ?></th>
+			<th class="responsive"><?php echo $entry['Entry']['hours_worked']; ?></th>
+			<th class="responsive"><?php echo implode('/', array_reverse(explode('-', $entry['Entry']['date']))); ?></th>
 			
 			<div>
-				<td class="actions">
+				<th class="responsive">
 					<?php
 						if ($entry['Entry']['activity_id']===$activities['Activity']['id']) {
 							echo $this->html->link(
 							$this->html->image("view.png", array('alt' => 'Ver')), array('action' => '../entries/view', $entry['Entry']['id']), array('escape'=>false, 'id'=>'link'));
 					}
 					?>
-				</td>
+				</th>
 			</div>
 		</tr>
 		<?php } ?>
