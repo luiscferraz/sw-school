@@ -93,7 +93,7 @@ function deleteGerente(){
 
 //gif para carregamento ajax
 $(document).ajaxStart(function() {
-	   $('body').append('<img src="'+limparUrl('img/loading.gif')+'" class="load">');
+	   //$('body').append('<img src="'+limparUrl('img/loading.gif')+'" class="load">');
 });
 
 //evitar erros de url ajax

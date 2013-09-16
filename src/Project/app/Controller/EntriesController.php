@@ -222,8 +222,303 @@ class EntriesController extends AppController{
 		}
 	}
 
+	public function reports(){
+	$this->set('title_for_layout', 'Relatório de apontamento');
+	$this -> layout = 'base';
+	
+	if ($this -> request -> is('post')) {
+					if (array_key_exists('rel', $_POST)) {
+						$rel =  $_POST['rel'];
+						$this -> set('rel', $rel);
+					}
+					
+					if (array_key_exists('data_inicial', $_POST)) {
+						$data_inicial =  $_POST['data_inicial'];
+						$this -> set('data_inicial', $data_inicial);
+					}
+					if (array_key_exists('data_final', $_POST)) {
+						$data_final =  $_POST['data_final'];
+						$this -> set('data_final', $data_final);
+					}
+					if (array_key_exists('tipo_consultoria', $_POST)) {
+						$tipo_consultoria =  $_POST['tipo_consultoria'];
+						$this -> set('tipo_consultoria', $tipo_consultoria);
+					}
+					if (array_key_exists('tipo', $_POST)) {
+						$tipo =  $_POST['tipo'];
+						$this -> set('tipo', $tipo);
+					}
+				
+	list ($dia, $mes, $ano) = split ('[/.-]',  $data_inicial);
+	$data_inicial = $ano . '-' . $mes . '-' . $dia;
+	list ($dia, $mes, $ano) = split ('[/.-]',  $data_final);
+	$data_final = $ano . '-' . $mes . '-' . $dia;	
+	
+	//$data_inicial = '2013-01-01';
+	//$data_final = '2013-10-31';
+	//$tipo_consultoria = 'A';
+	//$tipo = 'Individual';
+	$pesquisa = $this->Entry->query("select projects.name, consultants.name, entries.date, entries.type_consulting, entries.hours_worked from consultants, projects, activities, entries 
+								where entries.consultant_id = consultants.id and projects.id = activities.project_id and entries.activity_id = activities.id
+								and entries.type_consulting = '".$tipo_consultoria."' and type = '".$tipo."'
+								and entries.date between '".$data_inicial."' and '".$data_final."'
+								order by projects.name, consultants.name");
+								
+	$resultado = Array();
+	//vamos montar um array de 4 dimensoes (array(array(array(array))))
+	//o formato sera: 
+	//Array [ projeto1 [numero_consultores, meses [horas_mes1, horas_mes2, horas_mes_x, total_horas] consultores [consultor1 [horas_mes1, horas_mes2, horas_mes_x, total_horas] ,consultor2 [horas_mes1, horas_mes2, horas_mes_x, total_horas], ...]]
+	//		  projeto2 [numero_consultores, meses [horas_mes1, horas_mes2, horas_mes_x, total_horas] consultores [consultor1 [horas_mes1, horas_mes2, horas_mes_x, total_horas] ,consultor2 [horas_mes1, horas_mes2, horas_mes_x, total_horas], ...]]
+	
+	
+	$vetorData1 = explode("-", $data_inicial);
+	$vetorData1[0] = (int)$vetorData1[0];
+	$vetorData1[1] = (int)$vetorData1[1];
+	$vetorData1[2] = (int)$vetorData1[2];
+	$vetorData2 = explode("-", $data_final);
+	$vetorData2[0] = (int)$vetorData2[0];
+	$vetorData2[1] = (int)$vetorData2[1];
+	$vetorData2[2] = (int)$vetorData2[2];
+	$vetorData = Array();
+	$CheckVetorData = False;
+	while ($CheckVetorData == False) {
+		$vetorData[$vetorData1[0].'-'.$vetorData1[1]] = 0;
+		if (($vetorData1[0] == $vetorData2[0]) and ($vetorData1[1] == $vetorData2[1])) {
+			$CheckVetorData = True;
+		}
+		
+		if ($vetorData1[1] == '12') {
+			$vetorData1[1] = '1';
+			$vetorData1[0] = $vetorData1[0] + 1;
+			}
+		else {
+			$vetorData1[1] = $vetorData1[1] + 1;
+		}
+    }
+	$vetorData['Total'] = 0;
+	$this-> set ('vetorData', $vetorData);
+	$total_geral = 0;
+	
+	if ($rel == 'Projeto') {
+	
+	foreach ($pesquisa as $projeto){
+	
+		if (!(array_key_exists($projeto['projects']['name'], $resultado))){	
+			$resultado[$projeto['projects']['name']] = Array();
+			$resultado[$projeto['projects']['name']]['numero_consultores'] = 1;
+			$resultado[$projeto['projects']['name']]['meses'] = $vetorData;
+			$resultado[$projeto['projects']['name']]['consultores'] = Array();
+			$resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']] = $vetorData;
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];
+			$resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']]['Total'] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['meses']['Total'] =  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+		} else {
+			if (!(array_key_exists($projeto['consultants']['name'], $resultado[$projeto['projects']['name']]['consultores']))){		
+			$resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']] = $vetorData;
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];			
+			$resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['projects']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']]['Total'] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['meses']['Total'] = $resultado[$projeto['projects']['name']]['meses']['Total'] +  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['numero_consultores'] = $resultado[$projeto['projects']['name']]['numero_consultores'] + 1;
+			}
+			else {
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];
+			$resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['projects']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']]['Total'] =  $resultado[$projeto['projects']['name']]['consultores'][$projeto['consultants']['name']]['Total'] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['projects']['name']]['meses']['Total'] = $resultado[$projeto['projects']['name']]['meses']['Total'] +  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+			}
+		}
+	}
+	
+	} else {
+	foreach ($pesquisa as $projeto){
+	
+		if (!(array_key_exists($projeto['consultants']['name'], $resultado))){	
+			$resultado[$projeto['consultants']['name']] = Array();
+			$resultado[$projeto['consultants']['name']]['numero_projetos'] = 1;
+			$resultado[$projeto['consultants']['name']]['meses'] = $vetorData;
+			$resultado[$projeto['consultants']['name']]['projetos'] = Array();
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']] = $vetorData;
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']]['Total'] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses']['Total'] =  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+		} else {
+			if (!(array_key_exists($projeto['projects']['name'], $resultado[$projeto['consultants']['name']]['projetos']))){		
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']] = $vetorData;
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];			
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']]['Total'] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses']['Total'] = $resultado[$projeto['consultants']['name']]['meses']['Total'] +  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['numero_projetos'] = $resultado[$projeto['consultants']['name']]['numero_projetos'] + 1;
+			}
+			else {
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']]['Total'] =  $resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']]['Total'] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses']['Total'] = $resultado[$projeto['consultants']['name']]['meses']['Total'] +  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+			}
+		}
+	}
+	
+	
+	}
+	
+	$this-> set ('total_geral', $total_geral);
+	$this-> set ('resultado', $resultado);
+	$this -> set('tabela', True);
+	} else {
+	$this -> set('tabela', False);
+}
+}
 
+	public function reports2(){
+	$this->set('title_for_layout', 'Relatório de apontamento');
+	$this -> layout = 'base';
+	
+	if ($this -> request -> is('post')) {
+					if (array_key_exists('data_inicial', $_POST)) {
+						$data_inicial =  $_POST['data_inicial'];
+						$this -> set('data_inicial', $data_inicial);
+					}
+					if (array_key_exists('data_final', $_POST)) {
+						$data_final =  $_POST['data_final'];
+						$this -> set('data_final', $data_final);
+					}
+					if (array_key_exists('tipo_consultoria', $_POST)) {
+						$tipo_consultoria =  $_POST['tipo_consultoria'];
+						$this -> set('tipo_consultoria', $tipo_consultoria);
+					}
+					if (array_key_exists('tipo', $_POST)) {
+						$tipo =  $_POST['tipo'];
+						$this -> set('tipo', $tipo);
+					}
+				
+	list ($dia, $mes, $ano) = split ('[/.-]',  $data_inicial);
+	$data_inicial = $ano . '-' . $mes . '-' . $dia;
+	list ($dia, $mes, $ano) = split ('[/.-]',  $data_final);
+	$data_final = $ano . '-' . $mes . '-' . $dia;	
+	
+	//$data_inicial = '2013-01-01';
+	//$data_final = '2013-10-31';
+	//$tipo_consultoria = 'A';
+	//$tipo = 'Individual';
+	$pesquisa = $this->Entry->query("select projects.name, consultants.name, entries.date, entries.type_consulting, entries.hours_worked from consultants, projects, activities, entries 
+								where entries.consultant_id = consultants.id and projects.id = activities.project_id and entries.activity_id = activities.id
+								and entries.type_consulting = '".$tipo_consultoria."' and type = '".$tipo."'
+								and entries.date between '".$data_inicial."' and '".$data_final."'
+								order by consultants.name, projects.name");
+								
+	$resultado = Array();
+	//vamos montar um array de 4 dimensoes (array(array(array(array))))
+	//o formato sera: 
+	//Array [ projeto1 [numero_consultores, meses [horas_mes1, horas_mes2, horas_mes_x, total_horas] consultores [consultor1 [horas_mes1, horas_mes2, horas_mes_x, total_horas] ,consultor2 [horas_mes1, horas_mes2, horas_mes_x, total_horas], ...]]
+	//		  projeto2 [numero_consultores, meses [horas_mes1, horas_mes2, horas_mes_x, total_horas] consultores [consultor1 [horas_mes1, horas_mes2, horas_mes_x, total_horas] ,consultor2 [horas_mes1, horas_mes2, horas_mes_x, total_horas], ...]]
+	
+	
+	$vetorData1 = explode("-", $data_inicial);
+	$vetorData1[0] = (int)$vetorData1[0];
+	$vetorData1[1] = (int)$vetorData1[1];
+	$vetorData1[2] = (int)$vetorData1[2];
+	$vetorData2 = explode("-", $data_final);
+	$vetorData2[0] = (int)$vetorData2[0];
+	$vetorData2[1] = (int)$vetorData2[1];
+	$vetorData2[2] = (int)$vetorData2[2];
+	$vetorData = Array();
+	$CheckVetorData = False;
+	while ($CheckVetorData == False) {
+		$vetorData[$vetorData1[0].'-'.$vetorData1[1]] = 0;
+		if (($vetorData1[0] == $vetorData2[0]) and ($vetorData1[1] == $vetorData2[1])) {
+			$CheckVetorData = True;
+		}
+		
+		if ($vetorData1[1] == '12') {
+			$vetorData1[1] = '1';
+			$vetorData1[0] = $vetorData1[0] + 1;
+			}
+		else {
+			$vetorData1[1] = $vetorData1[1] + 1;
+		}
+    }
+	$vetorData['Total'] = 0;
+	$this-> set ('vetorData', $vetorData);
+	$total_geral = 0;
+	foreach ($pesquisa as $projeto){
+	
+		if (!(array_key_exists($projeto['consultants']['name'], $resultado))){	
+			$resultado[$projeto['consultants']['name']] = Array();
+			$resultado[$projeto['consultants']['name']]['numero_projetos'] = 1;
+			$resultado[$projeto['consultants']['name']]['meses'] = $vetorData;
+			$resultado[$projeto['consultants']['name']]['projetos'] = Array();
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']] = $vetorData;
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']]['Total'] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses']['Total'] =  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+		} else {
+			if (!(array_key_exists($projeto['projects']['name'], $resultado[$projeto['consultants']['name']]['projetos']))){		
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']] = $vetorData;
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];			
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']]['Total'] =   $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses']['Total'] = $resultado[$projeto['consultants']['name']]['meses']['Total'] +  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['numero_projetos'] = $resultado[$projeto['consultants']['name']]['numero_projetos'] + 1;
+			}
+			else {
+			$data_pesquisa = explode("-", $projeto['entries']['date']);
+			$data_pesquisa[0] = (int)$data_pesquisa[0];
+			$data_pesquisa[1] = (int)$data_pesquisa[1];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] = $resultado[$projeto['consultants']['name']]['meses'][$data_pesquisa[0].'-'.$data_pesquisa[1]] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']]['Total'] =  $resultado[$projeto['consultants']['name']]['projetos'][$projeto['projects']['name']]['Total'] + $projeto['entries']['hours_worked'];
+			$resultado[$projeto['consultants']['name']]['meses']['Total'] = $resultado[$projeto['consultants']['name']]['meses']['Total'] +  $projeto['entries']['hours_worked'];
+			$total_geral = $total_geral + $projeto['entries']['hours_worked'];
+			}
+		}
+	}
+	$this-> set ('total_geral', $total_geral);
+	$this-> set ('resultado', $resultado);
+	$this -> set('tabela', True);
+	} else {
+	$this -> set('tabela', False);
+}
+}
 
 
 }
 ?>
+
+
