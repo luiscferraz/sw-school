@@ -119,7 +119,17 @@ INSERT INTO `swsdb`.`activities` (`id`, `start_hours`, `end_hours`, `start_date`
 (37, '10:00:00', '12:00:00', '2013/09/20', '2013/09/20', 'Definicao de arquitetura', 'Definicao de arquitetura', 'Planejada', 7, 12, 11, 10, NULL, 0),
 (38, '09:00:00', '10:00:00', '2013/09/30', '2013/09/30', 'Criacao de relatorios periodicos', 'Gerar Relatorio Periodico', 'Planejada', 11, 1, 3, 4, NULL, 0),
 (39, '10:00:00', '14:00:00', '2013/10/11', '2013/10/11', 'Teste', 'Teste', 'Planejada', 12, 15, 1, NULL, NULL, 0),
-(40, '14:00:00', '18:00:00', '2013/10/11' , '2013/10/11', 'Teste', 'Teste', 'Planejada', 9, 15, 1, NULL, NULL, 0);
+(40, '14:00:00', '18:00:00', '2013/10/11' , '2013/10/11', 'Teste', 'Teste', 'Planejada', 9, 15, 1, NULL, NULL, 0),
+(41, '08:00:00', '17:00:00', '2013/08/19', '2013/08/22', 'Teste 2', 'Teste 2', 'Concluida', 9, 11, 10, NULL, NULL, 0),
+(42, '09:00:00', '14:00:00', '2013/08/19', '2013/08/23', 'Criar pre-apontamento', 'Criar pre-apontamento', 'Planejada', 4, 10, 9, NULL, NULL, 0),
+(43, '09:00:00', '14:00:00', '2013/09/04', '2013/09/06', 'Relatorio de horas por projeto', 'Relatorio de horas por projeto', 'Planejada', 18, 12, 8, NULL, NULL, 0),
+(44, '08:00:00', '15:00:00', '2013/08/26', '2013/08/30', 'Teste 3', 'Teste 3', 'Planejada', 2, 10, 9, NULL, NULL, 0),
+(45, '10:00:00', '16:00:00', '2013/08/26', '2013/08/30', 'Teste 4', 'Teste 4', 'Planejada',1 , 10, 9, NULL, NULL, 0),
+(46, '09:00:00', '14:00:00', '2013/08/19', '2013/08/23', 'Teste 5', 'Teste 5', 'Planejada', 4, 15, 14, 6, 3, 0),
+(47, '10:00:00', '16:00:00', '2013/08/26', '2013/08/30', 'Teste 6', 'Teste 6', 'Planejada', 1 , 3, 6, 10, 16, 0),
+(48, '11:00:00', '16:00:00', '2013/09/02', '2013/09/06', 'Teste 7', 'Teste 7', 'Planejada', 1 , 5, 7, 10, 12, 0)
+
+;
 
 INSERT INTO `swsdb`.`entries` (`date`, `type_consulting`, `type`, `hours_worked`, `observations`, `consultant_id`, `activity_id`, `approved`, `removed`) VALUES
 ( 20130110 , 'A', 'Individual', '10', 'A qualidade estava excelente', 11, 1, 0, 0),
