@@ -72,7 +72,7 @@
 		?>
 
 		<tr <?php echo $class; ?>>
-			<td class="responsive"><?php echo $entry['Activity']['description']; ?></td>
+			<th class="responsive"><?php echo $entry['Activity']['description']; ?></th>
 			<th class="responsive"><?php echo $entry['Consultant']['name']; ?></th>
 			<th class="responsive"><?php echo $entry['Entry']['type_consulting']; ?></th>
 			<th class="responsive"><?php echo $entry['Entry']['hours_worked']; ?></th>
