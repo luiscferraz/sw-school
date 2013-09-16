@@ -1252,7 +1252,7 @@ foreach ($projectsPais as $project) {
 						} else {
 							//valor da manha do dia
 							$idM = (string)$projectn['Project']['id'] . '.M.' . date('Y-m-d',$dataFinal) . '.1';			
-							if (array_key_exists($idM, $arrayConsultor3)){
+							if (array_key_exists($idM, $arrayConsultor1)){
 								echo '<td align=center bgcolor="'.$arrayConsultor1[$idM][1].'" title="'.$arrayConsultor1[$idM][2].'" class="days" id="'.$idM.'">';
 								$idX = $idM . '.' . $arrayConsultor1[$idM][0];
 								echo '<a class="fancybox fancybox.iframe golinkindex2" href="#" data-info="'. $idX . '">';
