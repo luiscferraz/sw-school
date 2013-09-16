@@ -223,6 +223,55 @@
 		}
 	}
 
+	public function verifica2($data) {
+		$ctr = 0;
+		$strerro = '';
+
+		
+		list ($dia, $mes, $ano) = split ('[/.-]', $data['start_date']);
+				$data['start_date'] = $ano . '-' . $mes . '-' . $dia;
+				list ($dia, $mes, $ano) = split ('[/.-]', $data['end_date']);
+				$data['end_date'] = $ano . '-' . $mes . '-' . $dia;
+		
+		//Data final não pode ser menor que Data inicial.
+		if ($data['start_date'] > $data['end_date']) {
+			
+		
+			$ctr ++;
+			$strerro = $strerro . 'Data Inicial maior que Data Final.</br>';
+		}
+
+		elseif ($data['start_date'] == $data['end_date']) {
+			//Hora final não pode ser menor que a hora inicial.
+			if ($data['start_hours'] > $data['end_hours']) {
+				$strerro = $strerro . 'A hora inicial não pode ser maior que a hora final.</br>';
+				//$strerro = $strerro . ' +++++ ';
+				//$strerro = $strerro . $data['start_date'];
+				//$strerro = $strerro . ' & ';
+				//$strerro = $strerro . $data['end_date'];
+				$ctr ++;
+			}
+			//Hora inicial não pode ser igual a Hora final.
+			elseif ($data['start_hours'] == $data ['end_hours']){
+				$strerro = $strerro . 'A hora inicial não pode ser igual a hora final.</br>';
+				$ctr ++;
+			};
+			
+				
+			};			
+		
+
+		if ($ctr > 0) {
+			$this -> Session -> setFlash ($this -> flashError ($strerro));
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	
+	
+	
 	public function verificaedit($data) {
 		$ctr = 0;
 		$strerro = '';
@@ -563,40 +612,48 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 	public function add3(){
 		$this->set('title_for_layout', 'Cadastrar Atividades');	
 	 	$this->layout = 'basemodalint';
-	 	//$this-> set ('id',$id);
 		$projects = $this->Activity->Project->query('select * from projects order by name');	
-
-		$this-> set ('projects',$projects);	
-		//$nome_projeto = $this->Activity->Project->query("SELECT projects.name FROM projects WHERE projects.id = ".$id);		
-		//$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);	
-		//$this-> set ('projects',$this->Activity->Project->find('all'), array('conditions'=> array('Project.removed !=' => 1)));
+		$this-> set ('projects',$projects);
 		$this-> set ('consultants',$this->Activity->Consultant->find('all'), array('conditions'=> array('Consultant.removed !=' => 1)));
 	 	$this -> set('attachments', $this->Activity->Attachment->find('all'), array('conditions'=>array('Attachment.removed !=' => 1)));
-	 	if($this->request->is('post')){
-	 	   //$this->request->data['Activity']['start_date'] = $this -> inverteIngles1($this->request->data['Activity']['start_date']);
-	 	  // $this->request->data['Activity']['end_date'] = $this -> inverteIngles2($this->request->data['Activity']['end_date']);
-	 		//if ($this -> verifica($this->request->data)) {
+	 	
+		if($this->request->is('post')){
+			$verificou = True;
+			for ($a = 0; $a < (count($this->request->data['Activity'])); $a++){
+				if (!($this -> verifica2($this->request->data['Activity'][$a]))){
+					$verificou = False;
+				}
+			}
+							
+			if ($verificou == True){
+			for ($a = 0; $a < (count($this->request->data['Activity'])); $a++){
+				list ($dia, $mes, $ano) = split ('[/.-]', $this->request->data['Activity'][$a]['start_date']);
+				$this->request->data['Activity'][$a]['start_date'] = $ano . '-' . $mes . '-' . $dia;
+				list ($dia, $mes, $ano) = split ('[/.-]', $this->request->data['Activity'][$a]['end_date']);
+				$this->request->data['Activity'][$a]['end_date'] = $ano . '-' . $mes . '-' . $dia;
+				
+			}
 		 		if($this->Activity->saveAll($this->request->data["Activity"])){
-		 			$this->Session->setFlash($this->flashSuccess('A atividade foi adicionada com sucesso.'));
+		 			//$this->Session->setFlash($this->flashSuccess('A atividade foi adicionada com sucesso.'));
 		 			$this->redirect(array('action' => '../../home'));
-		 			
-
 		 		}
-		 		else{
+				else
+				{
 					$this->Session->setFlash($this->flashError('Erro ao cadastrar atividade!'));
-				}		
-			//}		
-	 	}
+				}
+			}//else{
+				//$this->Session->setFlash($this->flashError('A data inicial não pode ser maior que a data final!'));
+				//}			
+			}
 	 	else{
 	 		$this->Session->setFlash($this->Session->setFlash($this->flashError('A atividade não foi adicionada. Tente novamente!')));			
-		
-	 	}			 	
+			}			 	
 	 }
 
 	 public function projetos (){
 		$this->layout = 'branco';
 		$arrayProjetos = array();
-		$projetos = $this->Activity->query("select id, name from projects where removed <>1");
+		$projetos = $this->Activity->query("select id, name from projects where removed <>1 order by name");
 		
 		foreach ($projetos as $projeto) {
 			$arrayProjetos[$projeto['projects']['id']] = $projeto['projects']['name'];
@@ -608,7 +665,7 @@ $this->Session->setFlash($this->flashError('Acesso restrito'));
 	public function consultores (){
 		$this->layout = 'branco';
 		$arrayConsultores = array();
-		$consultores = $this->Activity->query("select id, name from consultants where removed <>1");
+		$consultores = $this->Activity->query("select id, name from consultants where removed <>1 order by name");
 		
 		foreach ($consultores as $consultor) {
 			$arrayConsultores[$consultor['consultants']['id']] = $consultor['consultants']['name'];
