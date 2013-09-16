@@ -53,13 +53,14 @@ $('document').ready(function(){
 	$("#phone_financial").mask("(99)9999-9999");
 	$("#phone_sponsor").mask("(99)9999-9999");
 	$("#phone_sepg").mask("(99)9999-9999");		
-	$(".actvStartHour").mask("99:99");
-	$(".actvEndHour").mask("99:99");
+	$("#actvStartHour").mask("99:99");
+	$("#actvEndHour").mask("99:99");
 	$("#fundation").mask("99/99/9999");
 	$("#Owner_data").mask("99/99/9999");
 	$("#Owner_phone").mask("(99)9999-9999");
 	$("#Contact_phone").mask("(99)9999-9999");
 	$("#datepicker").mask("99/99/9999");
+	$("#datepicker2").mask("99/99/9999");
 	
 
 	
@@ -107,9 +108,28 @@ $('document').ready(function(){
 	 
 
 	 //calendario no campo data na tela de atividades
+	 
+	 $(function() {
+        $( "#datepicker" ).datepicker();
+        });
+        
+     $(function() {
+        $( "#datepicker2" ).datepicker();
+        });
+	
+	/*$('.datepick').each(function(){
+    $(this).datepicker();
+	});
 	$('.datepick').each(function(){
     $(this).datepicker();
 	});
+	
+	$('.horaI').each(function(){
+    $(this).actvStartHour();
+	});
+	$('.horaF').each(function(){
+    $(this).actvEndHour();
+	});*/
 	
 	//Somando as horas das finanças do projeto
 	var totalentrada = 0;
