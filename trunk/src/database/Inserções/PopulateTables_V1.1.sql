@@ -20,7 +20,7 @@ INSERT INTO `swsdb`.`users` (`username`, `password`, `type`, `consultant_id`) VA
 -- A senha e o nome do consultor
 
 INSERT INTO `swsdb`.`consultants` (`cpf`,`name`,`acronym`,`acronym_color`,`phone1`,`phone2`,`email`, `removed`) VALUES 
-('041.542.248-59','Rose Farrell Keller','RF','#ffbdbd','(81)5071-4315','(81)1414-1780','dictum.placerat@consequatdolorvitae.edu', 0),
+('041.542.248-59','Rose Farrell Keller','RK','#ffbdbd','(81)5071-4315','(81)1414-1780','dictum.placerat@consequatdolorvitae.edu', 0),
 ('501.556.822-37','Mia Snyder Jennings','MS','#c8d41e','(81)2551-0791','(81)8979-3850','fermentum.fermentum.arcu@non.ca', 0),
 ('912.683.647-54','Armand Mckay Grimes','AM','#1ec8d4','(81)7877-5995','(81)8998-2956','erat@arcuVestibulumante.edu', 0),
 ('729.557.640-19','Demetria Salas Montgomery','DS','#ab753a','(81)7204-2015','(81)2503-2971','eu@augue.com', 0),
@@ -133,8 +133,8 @@ INSERT INTO `swsdb`.`entries` (`date`, `type_consulting`, `type`, `hours_worked`
 ( 20130703 , 'A', 'Individual', '10', 'A qualidade estava excelente', 11, 1, 1, 0),
 ( 20130704 , 'C', 'Individual', '5', 'Apos estudo foi atestado que o custo ficaria muito alto para a distancia entre os pontos, o melhor seria utilizar cabo utp', 3, 2, 1, 0),
 ( 20130705 , 'B', 'Grupo','10', 'Inviabilidade tecnica', 2, 2, 1, 0),
-( 20130708 , 'C', 'Individual', '12', 'Alto custo', 14, 3  1, 0),
-( 20130703 , 'A', 'Individual', '07', 'Viabialidade de custo', 3, 1, 1, 0),
+( 20130708 , 'C', 'Individual', '12', 'Alto custo', 14, 3, 1, 0),
+( 20130703 , 'A', 'Individual', '7', 'Viabilidade de custo', 3, 1, 1, 0),
 ( 20130703 , 'C', 'Grupo', '8', 'Alto custo' , 13, 1, 1, 0),
 ( 20130704 , 'C', 'Individual', '9', 'Alto custo', 15, 2, 1, 0),
 ( 20130709 , 'A', 'Grupo', '8', 'A qualidade estava excelente', 4, 4, 1, 0),
