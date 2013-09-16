@@ -87,6 +87,7 @@ class EntriesController extends AppController{
 		}
 
 		else{
+				$this->request->data['Entry']['date'] = $this -> inverteIngles($this->request->datadata['Entry']['date']);
 				$this->Session->setFlash($this->flashError('Data do Apontamento está fora do período proposto para a atividade. Solicite a correção do prazo ao Administrador!'));
 			}
 	 }
