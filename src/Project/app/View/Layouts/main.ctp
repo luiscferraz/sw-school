@@ -78,7 +78,7 @@ if( !isset($date_submit)){
 
  <?php 
 	
-	echo $this->Form->input('Project.id',array('options' =>  $list_projects,'type' => 'select', 'empty' => '--Selecione um projeto--','label' => '', 'id' => 'projects')); 
+	echo $this->Form->input('Project.id',array('options' =>  $list_projects, 'style'=>'width: 15%','type' => 'select', 'empty' => '--Selecione um projeto--','label' => '', 'id' => 'projects')); 
     	
  ?> 
 <br>		
