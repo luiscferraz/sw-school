@@ -30,6 +30,33 @@ class EntriesController extends AppController{
 
 			}		
  	}
+
+
+ 	public function backindex($id = null){
+ 		if ($id != null) {
+			$this->set('title_for_layout', 'Apontamento');
+	 		$this -> layout = 'basemodalint';
+	 		$this -> set ('entries', $this-> Entry->find('all', array('conditions'=> array('Entry.removed !=' => 1, 'Entry.activity_id =' => $id),'order'=>array('entry.date DESC','Consultant.name','Entry.type_consulting','Entry.hours_worked DESC','Activity.description')))); 
+			$this-> set ('consultants',$this->Entry->Consultant->find('all', array('conditions'=> array('Consultant.id =' => 'Entry.consultant_id'))));		 
+			$this-> set ('activities',$this->Entry->Activity->find('all', array('conditions'=> array('Activity.id =' => 'Entry.activity_id'))));	
+			$this-> set ('tipo_usuario',$this->Auth->user('type'));	
+			$this-> set ('id_consultor_logado', $this->Auth->user('consultant_id'));
+			$this ->set('activity',$this-> Nome_Atividade($id));
+			
+
+ 			$id_projeto=$this->Entry->Activity->Project->query("SELECT activities.project_id FROM projects, activities WHERE           activities.project_id = projects.id and activities.id = ".$id);
+			$this-> set ('id_projeto', $id_projeto[0]['activities']['project_id']);
+
+			$id_atividade=$this->Entry->Activity->Project->query("SELECT activities.id FROM projects,activities WHERE activities.project_id = projects.id and activities.id = ".$id);
+			$this-> set ('id_atividade', $id_atividade[0]['activities']['id']);
+			
+			
+			$nome_projeto = $this->Entry->Activity->Project->query("SELECT projects.name FROM projects, activities WHERE activities.project_id = projects.id and activities.id = ".$id);	
+			$this-> set ('nome_projeto', $nome_projeto[0]['projects']['name']);
+
+
+			}		
+ 	}
  	
  	public function add($id_atividade,$id_projeto){
 	 	$this->layout = 'basemodalint';

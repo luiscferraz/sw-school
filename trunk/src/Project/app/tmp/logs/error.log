@@ -12960,3 +12960,56 @@
 2013-08-31 05:04:33 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-09-03 03:15:15 Error: Fatal Error (64): Cannot redeclare ActivitiesController::index2() in [C:\Users\Larissa\Desktop\sw\src\Project\app\Controller\ActivitiesController.php, line 462]
+2013-09-03 03:15:15 Error: [FatalErrorException] Cannot redeclare ActivitiesController::index2()
+#0 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\Users\Lariss...', 462)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\Users\Lariss...', 462, Array)
+#2 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\Users\Lariss...', 462, Array)
+#3 C:\Users\Larissa\Desktop\sw\src\Project\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-03 03:15:16 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 03:15:16 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 04:54:01 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 04:54:19 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 04:54:19 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 04:54:19 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 04:54:19 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 04:54:21 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 04:54:29 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 05:12:09 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-03 05:26:33 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-16 04:43:31 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-16 04:58:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-16 05:02:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-16 05:07:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 C:\Users\Larissa\Desktop\sw\src\Project\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

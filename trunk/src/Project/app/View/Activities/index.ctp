@@ -252,6 +252,8 @@ header('Content-Type: text/html; charset=UTF-8');
 
 					<a href="../../entries/add/<?php echo $activity['activities']['id']."/".$activity['activities']['project_id'] ?>"><?php echo $this->Html->image("clock.png",array('alt'=>'Apontar', 'title' => 'Apontar', 'id' => 'btnRelogio'));?></a>
 
+					<a href="../../entries/backindex/<?php echo $activity['activities']['id'] ?>"><?php echo $this->Html->image("backtime.png",array('alt'=>'Pre Apontamento', 'title' => 'Pre Apontamento', 'id' => 'btnVisuzalizar-Apontamento'));?></a>
+
 					<a href="../../entries/index/<?php echo $activity['activities']['id'] ?>"><?php echo $this->Html->image("eye.png",array('alt'=>'Visualizar Apontamento', 'title' => 'Visualizar Apontamento', 'id' => 'btnVisuzalizar-Apontamento'));?></a>
 					
 					
